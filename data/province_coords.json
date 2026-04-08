@@ -1,0 +1,499 @@
+{
+  "province": [
+    {
+      "nome": "Torino",
+      "codice_istat": "001",
+      "regione": "Piemonte",
+      "lat": 45.0703,
+      "lon": 7.6869,
+      "popolazione": 2247780,
+      "cluster": "NW_Industrial"
+    },
+    {
+      "nome": "Vercelli",
+      "codice_istat": "002",
+      "regione": "Piemonte",
+      "lat": 45.3204,
+      "lon": 8.4183,
+      "popolazione": 172277,
+      "cluster": "NW_Rural"
+    },
+    {
+      "nome": "Novara",
+      "codice_istat": "003",
+      "regione": "Piemonte",
+      "lat": 45.4468,
+      "lon": 8.6218,
+      "popolazione": 370243,
+      "cluster": "NW_Industrial"
+    },
+    {
+      "nome": "Cuneo",
+      "codice_istat": "004",
+      "regione": "Piemonte",
+      "lat": 44.3841,
+      "lon": 7.5425,
+      "popolazione": 590000,
+      "cluster": "NW_Alpine"
+    },
+    {
+      "nome": "Asti",
+      "codice_istat": "005",
+      "regione": "Piemonte",
+      "lat": 44.9003,
+      "lon": 8.2064,
+      "popolazione": 218000,
+      "cluster": "NW_Rural"
+    },
+    {
+      "nome": "Alessandria",
+      "codice_istat": "006",
+      "regione": "Piemonte",
+      "lat": 44.9124,
+      "lon": 8.6151,
+      "popolazione": 427000,
+      "cluster": "NW_Industrial"
+    },
+    {
+      "nome": "Biella",
+      "codice_istat": "096",
+      "regione": "Piemonte",
+      "lat": 45.5667,
+      "lon": 8.0583,
+      "popolazione": 177000,
+      "cluster": "NW_Industrial"
+    },
+    {
+      "nome": "Verbano-Cusio-Ossola",
+      "codice_istat": "103",
+      "regione": "Piemonte",
+      "lat": 45.9237,
+      "lon": 8.5523,
+      "popolazione": 159000,
+      "cluster": "NW_Alpine"
+    },
+    {
+      "nome": "Aosta",
+      "codice_istat": "007",
+      "regione": "Valle d'Aosta",
+      "lat": 45.7369,
+      "lon": 7.32,
+      "popolazione": 128000,
+      "cluster": "Alpine_Extreme"
+    },
+    {
+      "nome": "Varese",
+      "codice_istat": "012",
+      "regione": "Lombardia",
+      "lat": 45.8206,
+      "lon": 8.8257,
+      "popolazione": 889000,
+      "cluster": "NW_Industrial"
+    },
+    {
+      "nome": "Como",
+      "codice_istat": "013",
+      "regione": "Lombardia",
+      "lat": 45.808,
+      "lon": 9.0852,
+      "popolazione": 599000,
+      "cluster": "NW_Industrial"
+    },
+    {
+      "nome": "Sondrio",
+      "codice_istat": "014",
+      "regione": "Lombardia",
+      "lat": 46.1699,
+      "lon": 9.8714,
+      "popolazione": 181000,
+      "cluster": "Alpine_Extreme"
+    },
+    {
+      "nome": "Milano",
+      "codice_istat": "015",
+      "regione": "Lombardia",
+      "lat": 45.4654,
+      "lon": 9.1859,
+      "popolazione": 3250000,
+      "cluster": "Metro_Hub"
+    },
+    {
+      "nome": "Bergamo",
+      "codice_istat": "016",
+      "regione": "Lombardia",
+      "lat": 45.6983,
+      "lon": 9.6773,
+      "popolazione": 1114000,
+      "cluster": "NE_Industrial"
+    },
+    {
+      "nome": "Brescia",
+      "codice_istat": "017",
+      "regione": "Lombardia",
+      "lat": 45.5416,
+      "lon": 10.2118,
+      "popolazione": 1265000,
+      "cluster": "NE_Industrial"
+    },
+    {
+      "nome": "Pavia",
+      "codice_istat": "018",
+      "regione": "Lombardia",
+      "lat": 45.1847,
+      "lon": 9.1582,
+      "popolazione": 548000,
+      "cluster": "Po_Valley"
+    },
+    {
+      "nome": "Cremona",
+      "codice_istat": "019",
+      "regione": "Lombardia",
+      "lat": 45.1333,
+      "lon": 10.022,
+      "popolazione": 358000,
+      "cluster": "Po_Valley"
+    },
+    {
+      "nome": "Mantova",
+      "codice_istat": "020",
+      "regione": "Lombardia",
+      "lat": 45.1564,
+      "lon": 10.7914,
+      "popolazione": 412000,
+      "cluster": "Po_Valley"
+    },
+    {
+      "nome": "Lecco",
+      "codice_istat": "097",
+      "regione": "Lombardia",
+      "lat": 45.8566,
+      "lon": 9.3966,
+      "popolazione": 337000,
+      "cluster": "NW_Alpine"
+    },
+    {
+      "nome": "Lodi",
+      "codice_istat": "098",
+      "regione": "Lombardia",
+      "lat": 45.3142,
+      "lon": 9.5034,
+      "popolazione": 229000,
+      "cluster": "Po_Valley"
+    },
+    {
+      "nome": "Monza e Brianza",
+      "codice_istat": "108",
+      "regione": "Lombardia",
+      "lat": 45.5845,
+      "lon": 9.2744,
+      "popolazione": 873000,
+      "cluster": "Metro_Hub"
+    },
+    {
+      "nome": "Bolzano",
+      "codice_istat": "021",
+      "regione": "Trentino-Alto Adige",
+      "lat": 46.4983,
+      "lon": 11.3548,
+      "popolazione": 534000,
+      "cluster": "Alpine_Extreme"
+    },
+    {
+      "nome": "Trento",
+      "codice_istat": "022",
+      "regione": "Trentino-Alto Adige",
+      "lat": 46.0748,
+      "lon": 11.1217,
+      "popolazione": 541000,
+      "cluster": "Alpine_Extreme"
+    },
+    {
+      "nome": "Verona",
+      "codice_istat": "023",
+      "regione": "Veneto",
+      "lat": 45.4384,
+      "lon": 10.9916,
+      "popolazione": 926000,
+      "cluster": "NE_Industrial"
+    },
+    {
+      "nome": "Vicenza",
+      "codice_istat": "024",
+      "regione": "Veneto",
+      "lat": 45.5455,
+      "lon": 11.5354,
+      "popolazione": 859000,
+      "cluster": "NE_Industrial"
+    },
+    {
+      "nome": "Belluno",
+      "codice_istat": "025",
+      "regione": "Veneto",
+      "lat": 46.142,
+      "lon": 12.2163,
+      "popolazione": 206000,
+      "cluster": "Alpine_Extreme"
+    },
+    {
+      "nome": "Treviso",
+      "codice_istat": "026",
+      "regione": "Veneto",
+      "lat": 45.6669,
+      "lon": 12.2427,
+      "popolazione": 891000,
+      "cluster": "NE_Industrial"
+    },
+    {
+      "nome": "Venezia",
+      "codice_istat": "027",
+      "regione": "Veneto",
+      "lat": 45.4408,
+      "lon": 12.3155,
+      "popolazione": 849000,
+      "cluster": "Coastal_NE"
+    },
+    {
+      "nome": "Padova",
+      "codice_istat": "028",
+      "regione": "Veneto",
+      "lat": 45.4065,
+      "lon": 11.8768,
+      "popolazione": 937000,
+      "cluster": "NE_Industrial"
+    },
+    {
+      "nome": "Rovigo",
+      "codice_istat": "029",
+      "regione": "Veneto",
+      "lat": 45.0684,
+      "lon": 11.79,
+      "popolazione": 246000,
+      "cluster": "Po_Valley"
+    },
+    {
+      "nome": "Pordenone",
+      "codice_istat": "093",
+      "regione": "Friuli-Venezia Giulia",
+      "lat": 45.9564,
+      "lon": 12.6615,
+      "popolazione": 312000,
+      "cluster": "NE_Industrial"
+    },
+    {
+      "nome": "Udine",
+      "codice_istat": "030",
+      "regione": "Friuli-Venezia Giulia",
+      "lat": 46.0637,
+      "lon": 13.2356,
+      "popolazione": 533000,
+      "cluster": "NE_Industrial"
+    },
+    {
+      "nome": "Gorizia",
+      "codice_istat": "031",
+      "regione": "Friuli-Venezia Giulia",
+      "lat": 45.9399,
+      "lon": 13.6219,
+      "popolazione": 141000,
+      "cluster": "NE_Border"
+    },
+    {
+      "nome": "Trieste",
+      "codice_istat": "032",
+      "regione": "Friuli-Venezia Giulia",
+      "lat": 45.6495,
+      "lon": 13.7768,
+      "popolazione": 233000,
+      "cluster": "Coastal_NE"
+    },
+    {
+      "nome": "Imperia",
+      "codice_istat": "008",
+      "regione": "Liguria",
+      "lat": 43.8891,
+      "lon": 8.0304,
+      "popolazione": 215000,
+      "cluster": "Coastal_NW"
+    },
+    {
+      "nome": "Savona",
+      "codice_istat": "009",
+      "regione": "Liguria",
+      "lat": 44.3069,
+      "lon": 8.4814,
+      "popolazione": 277000,
+      "cluster": "Coastal_NW"
+    },
+    {
+      "nome": "Genova",
+      "codice_istat": "010",
+      "regione": "Liguria",
+      "lat": 44.4056,
+      "lon": 8.9463,
+      "popolazione": 841000,
+      "cluster": "Metro_Hub"
+    },
+    {
+      "nome": "La Spezia",
+      "codice_istat": "011",
+      "regione": "Liguria",
+      "lat": 44.1024,
+      "lon": 9.824,
+      "popolazione": 220000,
+      "cluster": "Coastal_NW"
+    },
+    {
+      "nome": "Piacenza",
+      "codice_istat": "033",
+      "regione": "Emilia-Romagna",
+      "lat": 45.0522,
+      "lon": 9.693,
+      "popolazione": 286000,
+      "cluster": "Po_Valley"
+    },
+    {
+      "nome": "Parma",
+      "codice_istat": "034",
+      "regione": "Emilia-Romagna",
+      "lat": 44.8015,
+      "lon": 10.328,
+      "popolazione": 449000,
+      "cluster": "Po_Valley"
+    },
+    {
+      "nome": "Reggio Emilia",
+      "codice_istat": "035",
+      "regione": "Emilia-Romagna",
+      "lat": 44.6989,
+      "lon": 10.6297,
+      "popolazione": 535000,
+      "cluster": "Po_Valley"
+    },
+    {
+      "nome": "Modena",
+      "codice_istat": "036",
+      "regione": "Emilia-Romagna",
+      "lat": 44.6471,
+      "lon": 10.9252,
+      "popolazione": 706000,
+      "cluster": "Po_Valley"
+    },
+    {
+      "nome": "Bologna",
+      "codice_istat": "037",
+      "regione": "Emilia-Romagna",
+      "lat": 44.4949,
+      "lon": 11.3426,
+      "popolazione": 1015000,
+      "cluster": "Metro_Hub"
+    },
+    {
+      "nome": "Ferrara",
+      "codice_istat": "038",
+      "regione": "Emilia-Romagna",
+      "lat": 44.8381,
+      "lon": 11.6197,
+      "popolazione": 352000,
+      "cluster": "Po_Valley"
+    },
+    {
+      "nome": "Ravenna",
+      "codice_istat": "039",
+      "regione": "Emilia-Romagna",
+      "lat": 44.4184,
+      "lon": 12.2035,
+      "popolazione": 394000,
+      "cluster": "Coastal_NE"
+    },
+    {
+      "nome": "Forlì-Cesena",
+      "codice_istat": "040",
+      "regione": "Emilia-Romagna",
+      "lat": 44.2227,
+      "lon": 12.0407,
+      "popolazione": 397000,
+      "cluster": "Apennine_NE"
+    },
+    {
+      "nome": "Rimini",
+      "codice_istat": "099",
+      "regione": "Emilia-Romagna",
+      "lat": 44.0595,
+      "lon": 12.5653,
+      "popolazione": 340000,
+      "cluster": "Coastal_NE"
+    },
+    {
+      "nome": "München",
+      "codice_istat": "DE-MUC",
+      "regione": "Bayern",
+      "lat": 48.1351,
+      "lon": 11.582,
+      "popolazione": 1488000,
+      "cluster": "DE_Alpine"
+    },
+    {
+      "nome": "Hamburg",
+      "codice_istat": "DE-HAM",
+      "regione": "Hamburg",
+      "lat": 53.5753,
+      "lon": 10.0153,
+      "popolazione": 1841000,
+      "cluster": "DE_Coastal"
+    },
+    {
+      "nome": "Berlin",
+      "codice_istat": "DE-BER",
+      "regione": "Berlin",
+      "lat": 52.52,
+      "lon": 13.405,
+      "popolazione": 3645000,
+      "cluster": "DE_Metro"
+    },
+    {
+      "nome": "Frankfurt",
+      "codice_istat": "DE-FRA",
+      "regione": "Hessen",
+      "lat": 50.1109,
+      "lon": 8.6821,
+      "popolazione": 753000,
+      "cluster": "DE_Industrial"
+    },
+    {
+      "nome": "Stuttgart",
+      "codice_istat": "DE-STU",
+      "regione": "Baden-Württemberg",
+      "lat": 48.7758,
+      "lon": 9.1829,
+      "popolazione": 634000,
+      "cluster": "DE_Industrial"
+    },
+    {
+      "nome": "Köln",
+      "codice_istat": "DE-CGN",
+      "regione": "Nordrhein-Westfalen",
+      "lat": 50.9333,
+      "lon": 6.95,
+      "popolazione": 1084000,
+      "cluster": "DE_Industrial"
+    },
+    {
+      "nome": "Düsseldorf",
+      "codice_istat": "DE-DUS",
+      "regione": "Nordrhein-Westfalen",
+      "lat": 51.2217,
+      "lon": 6.7762,
+      "popolazione": 619000,
+      "cluster": "DE_Industrial"
+    },
+    {
+      "nome": "Nürnberg",
+      "codice_istat": "DE-NUE",
+      "regione": "Bayern",
+      "lat": 49.4521,
+      "lon": 11.0767,
+      "popolazione": 518000,
+      "cluster": "DE_Industrial"
+    }
+  ]
+}

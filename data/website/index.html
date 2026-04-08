@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WeatherArb — Local Weather Intelligence, Worldwide</title>
+<meta name="description" content="WeatherArb detects weather anomalies across Europe and recommends the right products before demand spikes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f1117;
+    --paper: #f5f3ee;
+    --storm: #1a3a5c;
+    --electric: #2563eb;
+    --amber: #d97706;
+    --mist: #e8e5de;
+    --text-muted: #6b6560;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); min-height: 100vh; overflow-x: hidden; }
+
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 48px; border-bottom: 1px solid var(--mist);
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(245,243,238,0.92); backdrop-filter: blur(12px);
+  }
+  .logo { font-family: 'Instrument Serif', serif; font-size: 22px; letter-spacing: -0.5px; display: flex; align-items: center; gap: 10px; }
+  .logo-icon { width: 32px; height: 32px; background: var(--storm); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+  .nav-tag { font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
+
+  .ticker-wrap { background: var(--storm); color: white; overflow: hidden; padding: 12px 0; font-size: 13px; font-weight: 500; letter-spacing: 0.5px; }
+  .ticker { display: flex; animation: scroll 40s linear infinite; white-space: nowrap; }
+  .ticker span { padding: 0 48px; opacity: 0.85; }
+  .ticker span strong { opacity: 1; color: #93c5fd; }
+  @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  .hero { padding: 80px 48px 60px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .hero-text h1 { font-family: 'Instrument Serif', serif; font-size: clamp(38px, 5vw, 64px); line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 24px; }
+  .hero-text h1 em { font-style: italic; color: var(--electric); }
+  .hero-text p { font-size: 17px; color: var(--text-muted); line-height: 1.7; max-width: 440px; margin-bottom: 36px; }
+  .hero-stats { display: flex; gap: 32px; }
+  .stat-num { font-family: 'Instrument Serif', serif; font-size: 32px; letter-spacing: -1px; color: var(--storm); }
+  .stat-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; }
+
+  .signal-panel { background: white; border-radius: 20px; padding: 32px; box-shadow: 0 4px 40px rgba(0,0,0,0.08); border: 1px solid var(--mist); }
+  .signal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+  .signal-label { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
+  .live-dot { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #16a34a; font-weight: 500; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: #16a34a; animation: pulse-dot 2s infinite; }
+  @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .signal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .signal-item { background: var(--paper); border-radius: 12px; padding: 16px; border: 1px solid var(--mist); transition: border-color 0.2s; }
+  .signal-item.hot { border-color: #fbbf24; background: #fffbeb; }
+  .signal-province { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+  .signal-event { font-size: 11px; color: var(--text-muted); margin-bottom: 8px; }
+  .signal-score { font-family: 'Instrument Serif', serif; font-size: 22px; color: var(--storm); }
+  .signal-score small { font-size: 12px; color: var(--text-muted); font-family: 'DM Sans', sans-serif; }
+  .signal-badge { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 4px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-top: 6px; }
+  .badge-unusual { background: #fef3c7; color: #92400e; }
+  .badge-extreme { background: #fee2e2; color: #991b1b; }
+  .badge-normal { background: #f1f5f9; color: #64748b; }
+
+  .regions-section { max-width: 1200px; margin: 0 auto; padding: 60px 48px; }
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 32px; display: flex; align-items: center; gap: 12px; }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--mist); }
+
+  .countries-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+  .country-card { background: white; border-radius: 16px; padding: 24px; border: 1px solid var(--mist); text-decoration: none; color: inherit; transition: all 0.25s; position: relative; overflow: hidden; }
+  .country-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--electric); opacity: 0; transition: opacity 0.25s; }
+  .country-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+  .country-card:hover::before { opacity: 1; }
+  .country-flag { font-size: 32px; margin-bottom: 12px; display: block; }
+  .country-card h3 { font-family: 'Instrument Serif', serif; font-size: 20px; margin-bottom: 6px; }
+  .country-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  .country-status { margin-top: 12px; font-size: 11px; font-weight: 600; letter-spacing: 1px; }
+  .status-active { color: #16a34a; }
+  .status-soon { color: var(--amber); }
+
+  .regions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .region-card { background: white; border-radius: 16px; padding: 28px; border: 1px solid var(--mist); text-decoration: none; color: inherit; transition: all 0.25s; position: relative; overflow: hidden; }
+  .region-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--electric); opacity: 0; transition: opacity 0.25s; }
+  .region-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+  .region-card:hover::before { opacity: 1; }
+  .region-icon { font-size: 28px; margin-bottom: 16px; display: block; }
+  .region-card h3 { font-family: 'Instrument Serif', serif; font-size: 22px; margin-bottom: 8px; }
+  .region-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .region-provinces { margin-top: 16px; font-size: 12px; color: var(--electric); font-weight: 500; }
+
+  .how-section { background: var(--storm); color: white; padding: 80px 48px; }
+  .how-inner { max-width: 1200px; margin: 0 auto; }
+  .how-inner .section-label { color: rgba(255,255,255,0.4); }
+  .how-inner .section-label::after { background: rgba(255,255,255,0.1); }
+  .how-title { font-family: 'Instrument Serif', serif; font-size: clamp(28px, 4vw, 48px); margin-bottom: 48px; letter-spacing: -1px; max-width: 600px; }
+  .how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+  .step-num { font-family: 'Instrument Serif', serif; font-size: 48px; color: rgba(255,255,255,0.15); line-height: 1; margin-bottom: 16px; }
+  .step h4 { font-size: 15px; font-weight: 500; margin-bottom: 8px; }
+  .step p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+  footer { border-top: 1px solid var(--mist); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--text-muted); max-width: 1200px; margin: 0 auto; }
+  footer a { color: var(--electric); text-decoration: none; }
+
+  .fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn 0.6s forwards; }
+  @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .hero { grid-template-columns: 1fr; padding: 40px 20px; gap: 32px; }
+    .countries-grid { grid-template-columns: 1fr 1fr; }
+    .regions-grid { grid-template-columns: 1fr; }
+    .how-steps { grid-template-columns: 1fr 1fr; }
+    .regions-section, .how-section { padding: 40px 20px; }
+    footer { flex-direction: column; gap: 12px; padding: 24px 20px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <div class="logo-icon">⛈</div>
+    WeatherArb
+  </div>
+  <div class="nav-tag">Global Weather Intelligence</div>
+</nav>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>🇮🇹 <strong>Trento</strong> — Heat_Wave Z=+1.55 — Cooling_Comfort active</span>
+    <span>🇩🇪 <strong>München</strong> — Heavy_Rain Z=+2.1 — Home_Maintenance active</span>
+    <span>🇪🇸 <strong>Valencia</strong> — Heat_Wave Z=+2.8 — EXTREME — Cooling_Comfort</span>
+    <span>🇫🇷 <strong>Lyon</strong> — Storm Z=+1.9 — Emergency_Prep active</span>
+    <span>🇬🇧 <strong>Manchester</strong> — Heavy_Rain Z=+1.6 — Home_Maintenance</span>
+    <span>🇮🇹 <strong>Sondrio</strong> — Heat_Wave Z=+2.01 — EXTREME</span>
+    <span>🇩🇪 <strong>Hamburg</strong> — Storm Z=+1.4 — UNUSUAL</span>
+    <span>🇮🇹 <strong>Trento</strong> — Heat_Wave Z=+1.55 — Cooling_Comfort active</span>
+    <span>🇩🇪 <strong>München</strong> — Heavy_Rain Z=+2.1 — Home_Maintenance active</span>
+    <span>🇪🇸 <strong>Valencia</strong> — Heat_Wave Z=+2.8 — EXTREME — Cooling_Comfort</span>
+    <span>🇫🇷 <strong>Lyon</strong> — Storm Z=+1.9 — Emergency_Prep active</span>
+    <span>🇬🇧 <strong>Manchester</strong> — Heavy_Rain Z=+1.6 — Home_Maintenance</span>
+    <span>🇮🇹 <strong>Sondrio</strong> — Heat_Wave Z=+2.01 — EXTREME</span>
+    <span>🇩🇪 <strong>Hamburg</strong> — Storm Z=+1.4 — UNUSUAL</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-text fade-in">
+    <h1>Weather signals.<br><em>Precise advice.</em><br>Anywhere in Europe.</h1>
+    <p>WeatherArb monitors hundreds of cities across Europe, detecting anomalies before they peak — then recommends the right products to the right people at the right time.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Countries</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">200+</div>
+        <div class="stat-label">Cities</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">72h</div>
+        <div class="stat-label">Lead time</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="signal-panel fade-in delay-2">
+    <div class="signal-header">
+      <div class="signal-label">Live Signals — Europe</div>
+      <div class="live-dot"><div class="dot"></div> Live</div>
+    </div>
+    <div class="signal-grid">
+      <div class="signal-item hot">
+        <div class="signal-province">🇪🇸 Valencia</div>
+        <div class="signal-event">Heat_Wave · Coastal</div>
+        <div class="signal-score">8.4 <small>/ 10</small></div>
+        <span class="signal-badge badge-extreme">Extreme</span>
+      </div>
+      <div class="signal-item hot">
+        <div class="signal-province">🇩🇪 München</div>
+        <div class="signal-event">Heavy_Rain · Alpine</div>
+        <div class="signal-score">7.2 <small>/ 10</small></div>
+        <span class="signal-badge badge-unusual">Unusual</span>
+      </div>
+      <div class="signal-item hot">
+        <div class="signal-province">🇮🇹 Trento</div>
+        <div class="signal-event">Heat_Wave · Alpine</div>
+        <div class="signal-score">6.58 <small>/ 10</small></div>
+        <span class="signal-badge badge-unusual">Unusual</span>
+      </div>
+      <div class="signal-item">
+        <div class="signal-province">🇫🇷 Lyon</div>
+        <div class="signal-event">Storm · Rhône Valley</div>
+        <div class="signal-score">6.1 <small>/ 10</small></div>
+        <span class="signal-badge badge-unusual">Unusual</span>
+      </div>
+    </div>
+    <div style="font-size:11px;color:var(--text-muted);text-align:center">
+      Updated hourly · ERA5 + OpenWeatherMap · 6 countries
+    </div>
+  </div>
+</div>
+
+<div class="regions-section">
+  <div class="section-label">Markets — Active & Coming Soon</div>
+  <div class="countries-grid">
+    <a href="/it/" class="country-card fade-in">
+      <span class="country-flag">🇮🇹</span>
+      <h3>Italy</h3>
+      <p>47 provinces. Northern Italy fully monitored.</p>
+      <div class="country-status status-active">✅ ACTIVE</div>
+    </a>
+    <div class="country-card fade-in delay-1">
+      <span class="country-flag">🇩🇪</span>
+      <h3>Germany</h3>
+      <p>16 states. Alpine south to North Sea coast.</p>
+      <div class="country-status status-soon">🔜 COMING SOON</div>
+    </div>
+    <div class="country-card fade-in delay-2">
+      <span class="country-flag">🇪🇸</span>
+      <h3>Spain</h3>
+      <p>50 provinces. Mediterranean heat & Atlantic storms.</p>
+      <div class="country-status status-soon">🔜 COMING SOON</div>
+    </div>
+    <div class="country-card fade-in delay-3">
+      <span class="country-flag">🇫🇷</span>
+      <h3>France</h3>
+      <p>96 departments. From Alps to Atlantic coast.</p>
+      <div class="country-status status-soon">🔜 COMING SOON</div>
+    </div>
+  </div>
+
+  <div class="section-label">Italy — Live Now</div>
+  <div class="regions-grid">
+    <a href="/it/trento/" class="region-card fade-in">
+      <span class="region-icon">🏔️</span>
+      <h3>Trentino-Alto Adige</h3>
+      <p>Alpine weather intelligence — heat waves, snowfall and seasonal anomalies.</p>
+      <div class="region-provinces">Trento · Bolzano · Sondrio →</div>
+    </a>
+    <a href="/it/vicenza/" class="region-card fade-in delay-1">
+      <span class="region-icon">🌊</span>
+      <h3>Veneto</h3>
+      <p>Flooding, persistent rain and humidity solutions for the industrial Northeast.</p>
+      <div class="region-provinces">Vicenza · Venezia · Padova →</div>
+    </a>
+    <a href="/it/milano/" class="region-card fade-in delay-2">
+      <span class="region-icon">🏙️</span>
+      <h3>Lombardia</h3>
+      <p>Urban weather preparedness for Milan, Bergamo, Brescia and the Po Valley.</p>
+      <div class="region-provinces">Milano · Bergamo · Brescia →</div>
+    </a>
+  </div>
+</div>
+
+
+  <!-- INTELLIGENCE REPORTS -->
+  <div class="regions-section" style="background:white;padding:60px 48px;max-width:100%">
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="section-label">Latest Intelligence Reports</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <a href="/news/2026-04-06-vicenza-heavy-rain/" style="text-decoration:none;color:inherit;background:var(--paper);border-radius:16px;padding:24px;border:1px solid var(--mist);display:block">
+          <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#ef4444;margin-bottom:12px">🇮🇹 CRITICAL · Heavy Rain</div>
+          <div style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.3;margin-bottom:12px;color:#0f1117">Heavy Rain anomalo a Vicenza: analisi WeatherArb del 06/04/2026</div>
+          <div style="font-size:13px;color:#6b7280;margin-bottom:16px;line-height:1.6">Piogge Intense a Vicenza: Analisi e Consigli per i Residenti  Vicenza sta attualmente affrontando una fase di piogge consistenti,...</div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:12px;color:#2563eb;font-weight:500">Leggi report →</span>
+            <span style="font-size:11px;color:#9ca3af">2026-04-06</span>
+          </div>
+        </a>
+        <a href="/news/2026-04-06-trento-heat-wave/" style="text-decoration:none;color:inherit;background:var(--paper);border-radius:16px;padding:24px;border:1px solid var(--mist);display:block">
+          <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#ef4444;margin-bottom:12px">🇮🇹 CRITICAL · Heat Wave</div>
+          <div style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.3;margin-bottom:12px;color:#0f1117">Heat Wave anomalo a Trento: analisi WeatherArb del 06/04/2026</div>
+          <div style="font-size:13px;color:#6b7280;margin-bottom:16px;line-height:1.6">Trento Sperimenta Ondata di Calore Anomala: Temperature Ben Oltre la Media Storica  Trento sta vivendo un prolungato periodo di ca...</div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:12px;color:#2563eb;font-weight:500">Leggi report →</span>
+            <span style="font-size:11px;color:#9ca3af">2026-04-06</span>
+          </div>
+        </a>
+        <a href="/news/2026-04-06-munchen-heat-wave/" style="text-decoration:none;color:inherit;background:var(--paper);border-radius:16px;padding:24px;border:1px solid var(--mist);display:block">
+          <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#ef4444;margin-bottom:12px">🇩🇪 CRITICAL · Heat Wave</div>
+          <div style="font-family:'Instrument Serif',serif;font-size:18px;line-height:1.3;margin-bottom:12px;color:#0f1117">Heat Wave anomalo a München: analisi WeatherArb del 06/04/2026</div>
+          <div style="font-size:13px;color:#6b7280;margin-bottom:16px;line-height:1.6">Ondata di Calore a Monaco: Temperature Notevolmente Sopra la Media Storica  Monaco di Baviera sta vivendo un periodo caratterizzat...</div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:12px;color:#2563eb;font-weight:500">Leggi report →</span>
+            <span style="font-size:11px;color:#9ca3af">2026-04-06</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+<!-- END INTELLIGENCE REPORTS -->
+<div class="how-section">
+  <div class="how-inner">
+    <div class="section-label">How it works</div>
+    <h2 class="how-title">From weather anomaly to the right product recommendation — anywhere in Europe.</h2>
+    <div class="how-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h4>Signal Detection</h4>
+        <p>ERA5 historical baselines vs OWM 72h forecasts. Z-Score calculated per city, per season.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h4>Anomaly Scoring</h4>
+        <p>Statistical outliers ranked by arbitrage potential — population density, lead time, confidence.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h4>Local Content</h4>
+        <p>Guides written in local language and tone. Munich sounds different from Milan. Always.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h4>Timed Delivery</h4>
+        <p>Content published 24-72h before peak. Products recommended before demand spikes prices.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>© 2026 WeatherArb.com — Weather intelligence for local decisions</span>
+  <span>
+    <a href="https://www.amazon.it" rel="nofollow">Amazon affiliate participant</a> ·
+    <a href="/privacy">Privacy</a>
+  </span>
+</footer>
+<script>
+// Aggiungi link Open Data al nav
+document.querySelector('nav').innerHTML += '<a href="/open.html" style="font-size:13px;color:#2563eb;text-decoration:none;font-weight:500">API & Newsletter →</a>';
+</script>
+
+</body>
+</html>

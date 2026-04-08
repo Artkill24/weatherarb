@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>WeatherArb Widget</title>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0f1117;color:white;font-family:sans-serif;padding:16px;border-radius:12px;width:260px}.h{font-size:11px;opacity:.6;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}.p{font-size:22px;font-weight:700;margin-bottom:4px}.e{font-size:12px;opacity:.6;margin-bottom:12px}.g{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.s{background:rgba(255,255,255,.08);border-radius:8px;padding:8px;text-align:center}.sv{font-size:18px;font-weight:700}.sl{font-size:9px;opacity:.5;text-transform:uppercase;margin-top:2px}.f{font-size:10px;opacity:.4;margin-top:12px;display:flex;justify-content:space-between}.fa{color:#60a5fa}</style>
+</head><body>
+<div class="h">⛈ WeatherArb · Live</div>
+<div class="p" id="p">Loading...</div>
+<div class="e" id="e">Fetching...</div>
+<div class="g">
+<div class="s"><div class="sv" id="z">—</div><div class="sl">Z-Score</div></div>
+<div class="s"><div class="sv" id="s">—</div><div class="sl">Score</div></div>
+<div class="s"><div class="sv" id="a">—</div><div class="sl">Level</div></div>
+</div>
+<div class="f"><span id="t">ERA5+OWM</span><a class="fa" href="https://weatherarb.com" target="_blank">weatherarb.com</a></div>
+<script>
+var P=new URLSearchParams(location.search).get('p')||'Vicenza';
+fetch('https://weatherarb.com/api/v1/widget/'+P)
+.then(function(r){return r.json()}).then(function(d){
+document.getElementById('p').textContent=d.p||P;
+document.getElementById('e').textContent=d.e||'Weather Signal';
+document.getElementById('z').textContent=(d.z>=0?'+':'')+Number(d.z||0).toFixed(1);
+document.getElementById('s').textContent=Number(d.s||0).toFixed(1);
+document.getElementById('a').textContent=d.a||'—';
+document.getElementById('t').textContent=d.t||'';
+}).catch(function(){document.getElementById('p').textContent=P});
+</script>
+</body></html>

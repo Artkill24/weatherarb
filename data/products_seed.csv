@@ -1,0 +1,13 @@
+id,categoria,nome,descrizione_semantica,evento_primario,evento_secondario,amazon_tag,asin,prezzo_medio,commissione_pct,urgency_tier
+P001,Deumidificatori,De'Longhi Tasciugo DEXD216F,Deumidificatore 16L giorno display digitale silenzioso ruote timer muffa umidità cantina garage,Heavy_Rain,Flooding_Risk,weatherarb0f-21,B07HGFBXT8,189.99,4.0,HIGH
+P002,Deumidificatori,Olimpia Splendid Aquaria Slim 10P,Deumidificatore 10L tanica estraibile timer 24h filtro antipolvere fino 45m3 muffa,Heavy_Rain,Flooding_Risk,weatherarb0f-21,B0C9XXXXX1_CERCA,149.99,4.0,HIGH
+P003,Deumidificatori,Pro Breeze 12L Display Digitale,Deumidificatore 12L display digitale sleep drenaggio continuo asciugatura biancheria timer,Heavy_Rain,Flooding_Risk,weatherarb0f-21,B08XXXXX12_CERCA,159.99,4.0,HIGH
+P004,Deumidificatori,COMFEE MDDN-10DEN7,Deumidificatore 10L filtro lavabile ruote piroettanti R290 ecologico fino 16m2,Heavy_Rain,Flooding_Risk,weatherarb0f-21,B0BXXXXX10_CERCA,129.99,4.0,HIGH
+P005,Ventilatori,Rowenta Silence Extreme VU5640,Ventilatore piantana 4 velocità turbo boost 80m3/min modalità notte silenzioso oscillante,Heat_Wave,High_Temp_Anomaly,weatherarb0f-21,B01891LZBY,89.99,5.0,HIGH
+P006,Ventilatori,Dreo Ventilatore Tower Silenzioso,Ventilatore tower DC silenzioso 9 velocità oscillazione 120 gradi timer telecomando,Heat_Wave,High_Temp_Anomaly,weatherarb0f-21,B09XXXXX06_CERCA,79.99,5.0,HIGH
+P007,Condizionatori,Olimpia Splendid Dolceclima Slim 8,Condizionatore portatile 8000 BTU raffrescamento deumidificazione ventilazione ruote digitale,Heat_Wave,High_Temp_Anomaly,weatherarb0f-21,B08XXXXX07_CERCA,399.99,3.5,MEDIUM
+P008,Condizionatori,De'Longhi Pinguino Compact ES72,Condizionatore portatile 8300 BTU R290 ecologico timer 24h modalità notturna silenzioso,Heat_Wave,High_Temp_Anomaly,weatherarb0f-21,B09XXXXX08_CERCA,369.99,3.5,MEDIUM
+P009,Purificatori aria,Winix Zero Pro HEPA,Purificatore aria HEPA H14 carboni attivi PlasmaWave sensore qualità aria fino 99m2,Pollen_High,Fog_Dense,weatherarb0f-21,B08XXXXX09_CERCA,229.99,4.5,HIGH
+P010,Impermeabili,Columbia Watertight II Uomo,Giacca impermeabile omologata pioggia cuciture sigillate packable leggera outdoor lavoro,Heavy_Rain,Storm,weatherarb0f-21,B07XXXXX10_CERCA,79.99,6.0,MEDIUM
+P011,Catene neve,König CB-4 Catene Neve,Catene neve omologate montaggio rapido senza sollevare veicolo borsa custodia inclusa,Snowfall,Ice_Risk,weatherarb0f-21,B000UNKGGU,69.99,5.0,CRITICAL
+P012,Catene neve,Thule CS-10 Catene Tessili,Catene tessili neve facile montaggio compatibili pneumatici larghi SUV silenziose,Snowfall,Ice_Risk,weatherarb0f-21,B09XXXXX12_CERCA,89.99,5.0,CRITICAL
