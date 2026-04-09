@@ -469,3 +469,19 @@ def clear_cache():
     _pulse_cache.clear()
     _last_refresh = None
     return {"status": "cache_cleared", "timestamp": datetime.utcnow().isoformat()}
+
+@app.get("/admin/debug/{provincia}")
+def debug_provincia(provincia: str):
+    key = provincia.lower()
+    if key not in _province_index:
+        raise HTTPException(404, "Not found")
+    prov = _province_index[key]
+    from core.ingestor import build_historical_baseline
+    b = build_historical_baseline(prov)
+    return {
+        "provincia": prov['nome'],
+        "avg_temp_c": b.avg_temp_c,
+        "std_temp_c": b.std_temp_c,
+        "avg_rain_mm": b.avg_rain_mm_day,
+        "std_rain_mm": b.std_rain_mm_day,
+    }
