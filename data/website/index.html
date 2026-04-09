@@ -347,6 +347,128 @@
   document.addEventListener('DOMContentLoaded',loadReports);
   </script>
   <!-- END INTELLIGENCE REPORTS DYNAMIC -->
+
+<!-- LIVE MAP SECTION -->
+<div style="background:#0f1117;padding:60px 0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 48px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px">
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px">LIVE NETWORK</div>
+        <div style="font-family:'Instrument Serif',serif;font-size:32px;color:white;letter-spacing:-0.5px">55 città monitorate in tempo reale</div>
+      </div>
+      <div style="display:flex;gap:16px;font-size:12px">
+        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.5)"><span style="width:10px;height:10px;border-radius:50%;background:#ef4444;display:inline-block"></span>CRITICAL</span>
+        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.5)"><span style="width:10px;height:10px;border-radius:50%;background:#f97316;display:inline-block"></span>EXTREME</span>
+        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.5)"><span style="width:10px;height:10px;border-radius:50%;background:#eab308;display:inline-block"></span>UNUSUAL</span>
+        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.5)"><span style="width:10px;height:10px;border-radius:50%;background:#3b82f6;display:inline-block"></span>NORMAL</span>
+      </div>
+    </div>
+    <div id="wa-map" style="height:460px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.1)"></div>
+  </div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+  .leaflet-container { background: #1a2744 !important; }
+  .wa-pulse-marker { border-radius: 50%; border: 2px solid rgba(255,255,255,.6); cursor: pointer; }
+  @keyframes wa-pulse-anim {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239,68,68,.7); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(239,68,68,0); }
+    100% { transform: scale(1); }
+  }
+  .wa-pulse-critical { background: #ef4444; animation: wa-pulse-anim 1.5s infinite; }
+  .wa-pulse-extreme { background: #f97316; animation: wa-pulse-anim 2s infinite; }
+  .wa-pulse-unusual { background: #eab308; }
+  .wa-pulse-normal { background: #3b82f6; }
+  .leaflet-popup-content-wrapper { background: #1a3a5c; color: white; border: none; border-radius: 12px; }
+  .leaflet-popup-tip { background: #1a3a5c; }
+  .leaflet-popup-close-button { color: white !important; }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var map = L.map('wa-map', {
+    center: [46.5, 10.5],
+    zoom: 6,
+    zoomControl: true,
+    attributionControl: false,
+    scrollWheelZoom: false
+  });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    maxZoom: 10, minZoom: 5
+  }).addTo(map);
+
+  var provinces = [
+    {n:"Torino",la:45.07,lo:7.69,r:"Piemonte"},{n:"Aosta",la:45.74,lo:7.32,r:"Valle d'Aosta"},
+    {n:"Milano",la:45.46,lo:9.19,r:"Lombardia"},{n:"Varese",la:45.82,lo:8.83,r:"Lombardia"},
+    {n:"Como",la:45.81,lo:9.09,r:"Lombardia"},{n:"Bergamo",la:45.70,lo:9.68,r:"Lombardia"},
+    {n:"Brescia",la:45.54,lo:10.22,r:"Lombardia"},{n:"Sondrio",la:46.17,lo:9.87,r:"Lombardia"},
+    {n:"Trento",la:46.07,lo:11.12,r:"Trentino"},{n:"Bolzano",la:46.50,lo:11.36,r:"Alto Adige"},
+    {n:"Vicenza",la:45.55,lo:11.55,r:"Veneto"},{n:"Verona",la:45.44,lo:10.99,r:"Veneto"},
+    {n:"Venezia",la:45.44,lo:12.33,r:"Veneto"},{n:"Padova",la:45.41,lo:11.88,r:"Veneto"},
+    {n:"Treviso",la:45.67,lo:12.24,r:"Veneto"},{n:"Belluno",la:46.14,lo:12.22,r:"Veneto"},
+    {n:"Rovigo",la:45.07,lo:11.79,r:"Veneto"},{n:"Udine",la:46.06,lo:13.24,r:"FVG"},
+    {n:"Trieste",la:45.65,lo:13.78,r:"FVG"},{n:"Pordenone",la:45.96,lo:12.66,r:"FVG"},
+    {n:"Gorizia",la:45.94,lo:13.62,r:"FVG"},{n:"Genova",la:44.41,lo:8.93,r:"Liguria"},
+    {n:"Bologna",la:44.49,lo:11.34,r:"Emilia-Romagna"},{n:"Parma",la:44.80,lo:10.33,r:"Emilia-Romagna"},
+    {n:"Modena",la:44.65,lo:10.92,r:"Emilia-Romagna"},{n:"Ferrara",la:44.84,lo:11.62,r:"Emilia-Romagna"},
+    {n:"Biella",la:45.56,lo:8.05,r:"Piemonte"},{n:"Novara",la:45.45,lo:8.62,r:"Piemonte"},
+    {n:"Vercelli",la:45.32,lo:8.42,r:"Piemonte"},{n:"Cuneo",la:44.39,lo:7.55,r:"Piemonte"},
+    {n:"Asti",la:44.90,lo:8.21,r:"Piemonte"},{n:"München",la:48.14,lo:11.58,r:"Bayern"},
+    {n:"Hamburg",la:53.58,lo:10.02,r:"Hamburg"},{n:"Berlin",la:52.52,lo:13.40,r:"Berlin"},
+    {n:"Frankfurt",la:50.11,lo:8.68,r:"Hessen"},{n:"Stuttgart",la:48.78,lo:9.18,r:"Baden-W."},
+    {n:"Köln",la:50.94,lo:6.96,r:"NRW"},{n:"Düsseldorf",la:51.22,lo:6.78,r:"NRW"},
+    {n:"Nürnberg",la:49.45,lo:11.08,r:"Bayern"}
+  ];
+
+  function getLevel(z) {
+    var a = Math.abs(z||0);
+    if(a>=3) return 'critical';
+    if(a>=2) return 'extreme';
+    if(a>=1) return 'unusual';
+    return 'normal';
+  }
+
+  function addMarkers(data) {
+    var cache = {};
+    if(data && data.data) {
+      data.data.forEach(function(d){ if(d.province) cache[d.province.toLowerCase()] = d; });
+    }
+
+    provinces.forEach(function(p) {
+      var d = cache[p.n.toLowerCase()];
+      var z = d ? (d.z_score||0) : 0;
+      var level = getLevel(z);
+      var size = level==='critical'?16:level==='extreme'?13:level==='unusual'?11:8;
+
+      var icon = L.divIcon({
+        className: '',
+        html: '<div class="wa-pulse-marker wa-pulse-'+level+'" style="width:'+size+'px;height:'+size+'px"></div>',
+        iconSize: [size, size],
+        iconAnchor: [size/2, size/2]
+      });
+
+      var zText = z!==0 ? (z>=0?'+':'')+z.toFixed(2) : '—';
+      var popup = '<div style="padding:4px 0"><strong style="font-size:15px">'+p.n+'</strong><br>'
+        +'<span style="opacity:.7;font-size:12px">'+p.r+'</span><br>'
+        +'<div style="display:flex;gap:16px;margin-top:8px">'
+        +'<div><div style="opacity:.6;font-size:10px">Z-SCORE</div><div style="font-size:18px;font-weight:700">'+zText+'</div></div>'
+        +(d?'<div><div style="opacity:.6;font-size:10px">LEVEL</div><div style="font-size:13px;font-weight:600">'+(d.anomaly_level||'—')+'</div></div>':'')
+        +'</div>'
+        +'<a href="/it/'+p.n.toLowerCase().replace(/ /g,'-')+'/" style="display:block;margin-top:10px;background:#2563eb;color:white;padding:6px 12px;border-radius:6px;text-align:center;font-size:12px;text-decoration:none">Vai all'analisi →</a>'
+        +'</div>';
+
+      L.marker([p.la, p.lo], {icon:icon}).addTo(map).bindPopup(popup);
+    });
+  }
+
+  fetch('https://api.weatherarb.com/api/v1/europe/top?limit=55')
+    .then(function(r){return r.json()})
+    .then(function(d){ addMarkers(d); })
+    .catch(function(){ addMarkers({}); });
+});
+</script>
+<!-- END LIVE MAP -->
 <div class="how-section">
   <div class="how-inner">
     <div class="section-label">How it works</div>
