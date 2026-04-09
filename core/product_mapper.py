@@ -21,6 +21,9 @@ class ProductMapper:
     """
 
     def __init__(self, use_chroma: bool = True):
+        import os
+        if os.getenv('USE_CHROMA', 'true').lower() == 'false':
+            use_chroma = False
         self.use_chroma = use_chroma
         self.collection = None
         self.products_df = self._load_csv()
