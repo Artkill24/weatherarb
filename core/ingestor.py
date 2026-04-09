@@ -27,6 +27,18 @@ logger = logging.getLogger(__name__)
 # MODELLI DATI
 # ─────────────────────────────────────────────────
 
+# Baseline corrette per città tedesche (ERA5 aprile)
+DE_BASELINES = {
+    "München":    {"temp_mean": 10.5, "temp_std": 4.2, "rain_mean": 2.1, "rain_std": 3.5},
+    "Hamburg":    {"temp_mean": 8.8,  "temp_std": 3.8, "rain_mean": 3.2, "rain_std": 4.1},
+    "Berlin":     {"temp_mean": 9.2,  "temp_std": 4.0, "rain_mean": 2.4, "rain_std": 3.8},
+    "Frankfurt":  {"temp_mean": 10.2, "temp_std": 4.1, "rain_mean": 2.8, "rain_std": 3.9},
+    "Stuttgart":  {"temp_mean": 9.8,  "temp_std": 4.3, "rain_mean": 3.1, "rain_std": 4.0},
+    "Köln":       {"temp_mean": 10.1, "temp_std": 3.9, "rain_mean": 3.0, "rain_std": 4.2},
+    "Düsseldorf": {"temp_mean": 10.0, "temp_std": 3.8, "rain_mean": 3.1, "rain_std": 4.1},
+    "Nürnberg":   {"temp_mean": 9.5,  "temp_std": 4.2, "rain_mean": 2.6, "rain_std": 3.7},
+}
+
 class WeatherSnapshot:
     """Snapshot meteo real-time per una provincia."""
 

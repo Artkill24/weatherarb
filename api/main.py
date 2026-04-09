@@ -462,3 +462,10 @@ def pulse_nearby(lat: float, lon: float, radius_km: float = 100):
         "score": arb.get("score", 0),
         "vertical": pulse.get("action_plan", {}).get("recommended_vertical", ""),
     }
+
+@app.post("/admin/clear-cache")
+def clear_cache():
+    global _pulse_cache, _last_refresh
+    _pulse_cache.clear()
+    _last_refresh = None
+    return {"status": "cache_cleared", "timestamp": datetime.utcnow().isoformat()}
