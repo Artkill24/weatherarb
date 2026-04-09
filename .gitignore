@@ -7,7 +7,6 @@ data/era5_cache/
 data/ledger.db
 data/governor.db
 data/newsletter_subscribers.csv
-data/blog_posts/
 logs/
 *.zip
 .cdsapirc
