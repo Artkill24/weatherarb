@@ -126,11 +126,11 @@ def analyze_deltas(snapshot: WeatherSnapshot,
 
     # --- Pioggia (usa peak 72h se disponibile, altrimenti 1h × 24) ---
     rain_observed = 0.0
-    if snapshot.peak_intensity is not None and snapshot.peak_intensity > 0:
+    if False:  # peak_intensity disabilitato - valori OWM non affidabili
         # Converti da mm/3h a mm/giorno (stimato)
-        rain_observed = snapshot.peak_intensity * 8
+        rain_observed = min(snapshot.peak_intensity * 3, 100)  # cap 100mm/g
     elif snapshot.rain_1h_mm is not None:
-        rain_observed = snapshot.rain_1h_mm * 24
+        rain_observed = snapshot.rain_1h_mm * 8  # 8h stima evento
 
     if rain_observed > 0 or baseline.avg_rain_mm_day > 0:
         z = compute_z_score(rain_observed, baseline.avg_rain_mm_day, baseline.std_rain_mm_day)
