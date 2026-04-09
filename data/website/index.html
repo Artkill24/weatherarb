@@ -348,52 +348,64 @@
   </script>
   <!-- END INTELLIGENCE REPORTS DYNAMIC -->
 
-<!-- LIVE MAP SVG -->
+<!-- LIVE MAP STADIA -->
 <div style="background:#0f1117;padding:60px 0">
   <div style="max-width:1200px;margin:0 auto;padding:0 48px">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;flex-wrap:wrap;gap:16px">
       <div>
         <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px">LIVE NETWORK</div>
         <div style="font-family:'Instrument Serif',serif;font-size:32px;color:white;letter-spacing:-0.5px">55 città monitorate in tempo reale</div>
       </div>
-      <div style="display:flex;gap:16px;font-size:12px">
-        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.5)"><span style="width:10px;height:10px;border-radius:50%;background:#ef4444;display:inline-block"></span>CRITICAL</span>
-        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.5)"><span style="width:10px;height:10px;border-radius:50%;background:#f97316;display:inline-block"></span>EXTREME</span>
-        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.5)"><span style="width:10px;height:10px;border-radius:50%;background:#eab308;display:inline-block"></span>UNUSUAL</span>
-        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.5)"><span style="width:10px;height:10px;border-radius:50%;background:#3b82f6;display:inline-block"></span>NORMAL</span>
+      <div style="display:flex;gap:16px;font-size:12px;flex-wrap:wrap">
+        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.6)"><span style="width:10px;height:10px;border-radius:50%;background:#ef4444;display:inline-block;box-shadow:0 0 8px #ef4444"></span>CRITICAL</span>
+        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.6)"><span style="width:10px;height:10px;border-radius:50%;background:#f97316;display:inline-block"></span>EXTREME</span>
+        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.6)"><span style="width:10px;height:10px;border-radius:50%;background:#eab308;display:inline-block"></span>UNUSUAL</span>
+        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.6)"><span style="width:10px;height:10px;border-radius:50%;background:#3b82f6;display:inline-block"></span>NORMAL</span>
       </div>
     </div>
-    <div style="background:#111827;border-radius:16px;border:1px solid rgba(255,255,255,.1);overflow:hidden;position:relative">
-      <svg id="wa-map-svg" viewBox="0 0 900 500" style="width:100%;display:block">
-        <!-- Sfondo -->
-        <rect width="900" height="500" fill="#111827"/>
-        <!-- Griglia leggera -->
-        <line x1="0" y1="250" x2="900" y2="250" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
-        <line x1="450" y1="0" x2="450" y2="500" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
-        <!-- Labels paesi -->
-        <text x="300" y="380" fill="rgba(255,255,255,.08)" font-size="48" font-family="serif" font-weight="bold">IT</text>
-        <text x="600" y="120" fill="rgba(255,255,255,.08)" font-size="48" font-family="serif" font-weight="bold">DE</text>
-      </svg>
-      <!-- Tooltip -->
-      <div id="map-tooltip" style="display:none;position:absolute;background:#1a3a5c;color:white;padding:12px 16px;border-radius:10px;font-size:13px;pointer-events:none;z-index:10;min-width:160px;box-shadow:0 4px 20px rgba(0,0,0,.5)"></div>
-    </div>
+    <div id="wa-map" style="height:480px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.1)"></div>
   </div>
 </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
-@keyframes wa-pulse { 0%,100%{opacity:1;r:6} 50%{opacity:.6;r:9} }
-@keyframes wa-pulse-s { 0%,100%{opacity:.4;r:10} 50%{opacity:0;r:16} }
-.wa-dot-critical { animation: wa-pulse 1.5s infinite; }
-.wa-dot-critical-ring { animation: wa-pulse-s 1.5s infinite; }
-.wa-dot-extreme { animation: wa-pulse 2s infinite; }
+.leaflet-container{background:#0f1117!important}
+.leaflet-popup-content-wrapper{background:#1a3a5c;color:white;border:none;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.leaflet-popup-tip{background:#1a3a5c}
+.leaflet-popup-close-button{color:rgba(255,255,255,.7)!important;font-size:18px!important}
+@keyframes wa-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.7;transform:scale(1.3)}}
+@keyframes wa-ring{0%{opacity:.8;transform:scale(1)}100%{opacity:0;transform:scale(2.5)}}
+.wa-dot{border-radius:50%;cursor:pointer;transition:transform .2s}
+.wa-dot:hover{transform:scale(1.5)!important}
+.wa-dot-critical{animation:wa-pulse 1.5s infinite}
+.wa-dot-extreme{animation:wa-pulse 2s infinite}
+.wa-ring{border-radius:50%;position:absolute;animation:wa-ring 1.5s infinite;pointer-events:none}
 </style>
 <script>
-(function(){
-  // Coordinate mappate su SVG viewBox 900x500
-  // lat 44-54 → y 400-50, lon 5-16 → x 50-850 (IT+DE)
-  function latToY(lat){ return 500 - ((lat-43)/(55-43))*460; }
-  function lonToX(lon){ return ((lon-4)/(17-4))*860 + 20; }
+document.addEventListener('DOMContentLoaded',function(){
+  var map=L.map('wa-map',{
+    center:[48,10],zoom:5,
+    zoomControl:true,attributionControl:false,
+    scrollWheelZoom:false
+  });
 
-  var cities = [
+  // Stadia Maps — domain auth (weatherarb.com registrato)
+  L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',{
+    maxZoom:14,minZoom:4
+  }).addTo(map);
+
+  var colors={critical:'#ef4444',extreme:'#f97316',unusual:'#eab308',normal:'#3b82f6'};
+  var sizes={critical:14,extreme:11,unusual:9,normal:7};
+
+  function getLevel(z){
+    var a=Math.abs(z||0);
+    if(a>=3)return 'critical';
+    if(a>=2)return 'extreme';
+    if(a>=1)return 'unusual';
+    return 'normal';
+  }
+
+  var cities=[
     {n:"Torino",la:45.07,lo:7.69},{n:"Aosta",la:45.74,lo:7.32},
     {n:"Milano",la:45.46,lo:9.19},{n:"Varese",la:45.82,lo:8.83},
     {n:"Como",la:45.81,lo:9.09},{n:"Bergamo",la:45.70,lo:9.68},
@@ -401,101 +413,72 @@
     {n:"Trento",la:46.07,lo:11.12},{n:"Bolzano",la:46.50,lo:11.36},
     {n:"Vicenza",la:45.55,lo:11.55},{n:"Verona",la:45.44,lo:10.99},
     {n:"Venezia",la:45.44,lo:12.33},{n:"Padova",la:45.41,lo:11.88},
-    {n:"Treviso",la:45.67,lo:12.24},{n:"Udine",la:46.06,lo:13.24},
-    {n:"Trieste",la:45.65,lo:13.78},{n:"Genova",la:44.41,lo:8.93},
+    {n:"Treviso",la:45.67,lo:12.24},{n:"Belluno",la:46.14,lo:12.22},
+    {n:"Rovigo",la:45.07,lo:11.79},{n:"Udine",la:46.06,lo:13.24},
+    {n:"Trieste",la:45.65,lo:13.78},{n:"Pordenone",la:45.96,lo:12.66},
+    {n:"Gorizia",la:45.94,lo:13.62},{n:"Genova",la:44.41,lo:8.93},
     {n:"Bologna",la:44.49,lo:11.34},{n:"Parma",la:44.80,lo:10.33},
-    {n:"Modena",la:44.65,lo:10.92},{n:"Biella",la:45.56,lo:8.05},
-    {n:"Novara",la:45.45,lo:8.62},{n:"Vercelli",la:45.32,lo:8.42},
-    {n:"Cuneo",la:44.39,lo:7.55},{n:"Asti",la:44.90,lo:8.21},
-    {n:"Alessandria",la:44.91,lo:8.62},{n:"Pavia",la:45.19,lo:9.16},
-    {n:"Lodi",la:45.31,lo:9.50},{n:"Cremona",la:45.13,lo:10.03},
-    {n:"Mantova",la:45.16,lo:10.79},{n:"Lecco",la:45.86,lo:9.40},
+    {n:"Modena",la:44.65,lo:10.92},{n:"Ferrara",la:44.84,lo:11.62},
+    {n:"Rimini",la:44.06,lo:12.57},{n:"Ravenna",la:44.42,lo:12.20},
+    {n:"Biella",la:45.56,lo:8.05},{n:"Novara",la:45.45,lo:8.62},
+    {n:"Vercelli",la:45.32,lo:8.42},{n:"Cuneo",la:44.39,lo:7.55},
+    {n:"Asti",la:44.90,lo:8.21},{n:"Alessandria",la:44.91,lo:8.62},
+    {n:"Pavia",la:45.19,lo:9.16},{n:"Lodi",la:45.31,lo:9.50},
+    {n:"Cremona",la:45.13,lo:10.03},{n:"Mantova",la:45.16,lo:10.79},
+    {n:"Lecco",la:45.86,lo:9.40},{n:"Monza",la:45.58,lo:9.27},
+    {n:"Imperia",la:43.89,lo:8.03},{n:"Savona",la:44.31,lo:8.48},
+    {n:"La Spezia",la:44.10,lo:9.82},{n:"Piacenza",la:45.05,lo:9.69},
+    {n:"Reggio Emilia",la:44.70,lo:10.63},{n:"Forlì",la:44.22,lo:12.04},
     {n:"München",la:48.14,lo:11.58},{n:"Hamburg",la:53.58,lo:10.02},
     {n:"Berlin",la:52.52,lo:13.40},{n:"Frankfurt",la:50.11,lo:8.68},
     {n:"Stuttgart",la:48.78,lo:9.18},{n:"Köln",la:50.94,lo:6.96},
     {n:"Düsseldorf",la:51.22,lo:6.78},{n:"Nürnberg",la:49.45,lo:11.08}
   ];
 
-  var colors = {critical:'#ef4444',extreme:'#f97316',unusual:'#eab308',normal:'#3b82f6'};
-
-  function getLevel(z){
-    var a=Math.abs(z||0);
-    if(a>=3) return 'critical';
-    if(a>=2) return 'extreme';
-    if(a>=1) return 'unusual';
-    return 'normal';
-  }
-
-  function renderMap(apiData){
-    var svg = document.getElementById('wa-map-svg');
-    var cache = {};
-    if(apiData && apiData.data){
-      apiData.data.forEach(function(d){ if(d.province) cache[d.province.toLowerCase()]=d; });
+  function addMarkers(apiData){
+    var cache={};
+    if(apiData&&apiData.data){
+      apiData.data.forEach(function(d){if(d.province)cache[d.province.toLowerCase()]=d;});
     }
 
-    var tooltip = document.getElementById('map-tooltip');
-    var svgRect = null;
-
     cities.forEach(function(c){
-      var d = cache[c.n.toLowerCase()];
-      var z = d ? (d.z_score||0) : 0;
-      var level = getLevel(z);
-      var color = colors[level];
-      var x = lonToX(c.lo);
-      var y = latToY(c.la);
-      var r = level==='critical'?7:level==='extreme'?6:5;
+      var d=cache[c.n.toLowerCase()];
+      var z=d?(d.z_score||0):0;
+      var level=getLevel(z);
+      var color=colors[level];
+      var size=sizes[level];
 
-      // Anello pulsante per critical/extreme
-      if(level==='critical'||level==='extreme'){
-        var ring = document.createElementNS('http://www.w3.org/2000/svg','circle');
-        ring.setAttribute('cx',x); ring.setAttribute('cy',y); ring.setAttribute('r',r+4);
-        ring.setAttribute('fill','none'); ring.setAttribute('stroke',color);
-        ring.setAttribute('stroke-width','1.5'); ring.setAttribute('opacity','0.5');
-        ring.style.animation = 'wa-pulse-s '+(level==='critical'?'1.5':'2')+'s infinite';
-        svg.appendChild(ring);
-      }
+      var html='<div style="position:relative;width:'+size+'px;height:'+size+'px">'
+        +(level==='critical'||level==='extreme'?'<div class="wa-ring" style="width:'+size+'px;height:'+size+'px;border:2px solid '+color+';top:0;left:0"></div>':'')
+        +'<div class="wa-dot wa-dot-'+level+'" style="width:'+size+'px;height:'+size+'px;background:'+color+';border:1.5px solid rgba(255,255,255,.4);box-shadow:0 0 '+(level==='critical'?12:6)+'px '+color+'"></div>'
+        +'</div>';
 
-      var dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
-      dot.setAttribute('cx',x); dot.setAttribute('cy',y); dot.setAttribute('r',r);
-      dot.setAttribute('fill',color); dot.style.cursor='pointer';
-      if(level==='critical') dot.style.animation='wa-pulse 1.5s infinite';
-      else if(level==='extreme') dot.style.animation='wa-pulse 2s infinite';
+      var icon=L.divIcon({className:'',html:html,iconSize:[size,size],iconAnchor:[size/2,size/2]});
 
-      dot.addEventListener('mouseenter',function(e){
-        if(!svgRect) svgRect = svg.getBoundingClientRect();
-        var svgW = svgRect.width, svgH = svgRect.height;
-        var px = (x/900)*svgW + svgRect.left - document.getElementById('wa-map-svg').closest('div').getBoundingClientRect().left;
-        var py = (y/500)*svgH;
-        tooltip.style.display='block';
-        tooltip.style.left=(px+12)+'px';
-        tooltip.style.top=(py-20)+'px';
-        var zText = z!==0?(z>=0?'+':'')+z.toFixed(2):'—';
-        tooltip.innerHTML='<strong style="font-size:14px">'+c.n+'</strong>'
-          +(d?'<br><span style="color:'+color+';font-weight:600">'+d.anomaly_level+'</span>':'')
-          +'<br><span style="opacity:.7">Z-Score: </span><strong>'+zText+'</strong>'
-          +(d&&d.score?'<br><span style="opacity:.7">Score: </span><strong>'+Number(d.score).toFixed(1)+'/10</strong>':'')
-          +'<br><a href="/it/'+c.n.toLowerCase().replace(/[^a-z]/g,'-')+'/" style="color:#60a5fa;font-size:12px">Analisi →</a>';
-      });
-      dot.addEventListener('mouseleave',function(){ tooltip.style.display='none'; });
-      svg.appendChild(dot);
+      var zText=z!==0?(z>=0?'+':'')+z.toFixed(2):'—';
+      var slug=c.n.toLowerCase().replace(/[àáâ]/g,'a').replace(/[èéê]/g,'e').replace(/[ùúû]/g,'u').replace(/[^a-z0-9]/g,'-').replace(/-+/g,'-');
+      var popup='<div style="padding:4px">'
+        +'<div style="font-family:Instrument Serif,serif;font-size:17px;margin-bottom:4px">'+c.n+'</div>'
+        +'<div style="display:flex;gap:16px;margin:10px 0">'
+        +'<div><div style="opacity:.6;font-size:10px;text-transform:uppercase">Z-Score</div><div style="font-size:20px;font-weight:700;color:'+color+'">'+zText+'</div></div>'
+        +(d?'<div><div style="opacity:.6;font-size:10px;text-transform:uppercase">Livello</div><div style="font-size:13px;font-weight:600">'+d.anomaly_level+'</div></div>':'')
+        +(d&&d.score?'<div><div style="opacity:.6;font-size:10px;text-transform:uppercase">Score</div><div style="font-size:13px;font-weight:600">'+Number(d.score).toFixed(1)+'/10</div></div>':'')
+        +'</div>'
+        +(d&&d.event_type?'<div style="opacity:.7;font-size:12px;margin-bottom:10px">'+d.event_type.replace(/_/g,' ')+'</div>':'')
+        +'<a href="/it/'+slug+'/" style="display:block;background:#2563eb;color:white;padding:7px 14px;border-radius:8px;text-align:center;font-size:12px;font-weight:500;text-decoration:none">Vai all'analisi →</a>'
+        +'</div>';
 
-      // Label città
-      var txt = document.createElementNS('http://www.w3.org/2000/svg','text');
-      txt.setAttribute('x',x+r+3); txt.setAttribute('y',y+4);
-      txt.setAttribute('fill','rgba(255,255,255,.55)'); txt.setAttribute('font-size','9');
-      txt.setAttribute('font-family','DM Sans,sans-serif');
-      txt.textContent=c.n;
-      svg.appendChild(txt);
+      L.marker([c.la,c.lo],{icon:icon}).addTo(map).bindPopup(popup,{maxWidth:220});
     });
   }
 
-  fetch('https://api.weatherarb.com/api/v1/europe/top?limit=55')
+  fetch('https://api.weatherarb.com/api/v1/europe/top?limit=60')
     .then(function(r){return r.json()})
-    .then(function(d){ renderMap(d); })
-    .catch(function(){ renderMap({}); });
-})();
+    .then(function(d){addMarkers(d);})
+    .catch(function(){addMarkers({});});
+});
 </script>
-<!-- END LIVE MAP SVG -->
+<!-- END LIVE MAP STADIA -->
 <div class="how-section">
   <div class="how-inner">
     <div class="section-label">How it works</div>
