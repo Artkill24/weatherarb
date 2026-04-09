@@ -1,0 +1,89 @@
+{
+  "last_updated": "2026-04-09T00:19:43.319177",
+  "reports": [
+    {
+      "title": "Heat Wave anomalo a Como: analisi WeatherArb del 08/04/2026",
+      "slug": "2026-04-08-como-heat-wave",
+      "date": "2026-04-08",
+      "provincia": "Como",
+      "regione": "Lombardia",
+      "evento": "Heat Wave",
+      "z_score": 3.79,
+      "score": 7.68,
+      "anomaly_level": "CRITICAL",
+      "excerpt": "Anomalia meteo a Como. Z-Score +3.79, livello CRITICAL. Analisi tecnica e consigli pratici.",
+      "url": "/news/2026-04-08-como-heat-wave/",
+      "is_live": true
+    },
+    {
+      "title": "Heat Wave anomalo a Varese: analisi WeatherArb del 08/04/2026",
+      "slug": "2026-04-08-varese-heat-wave",
+      "date": "2026-04-08",
+      "provincia": "Varese",
+      "regione": "Lombardia",
+      "evento": "Heat Wave",
+      "z_score": 3.44,
+      "score": 7.74,
+      "anomaly_level": "CRITICAL",
+      "excerpt": "Anomalia meteo a Varese. Z-Score +3.44, livello CRITICAL. Analisi tecnica e consigli pratici.",
+      "url": "/news/2026-04-08-varese-heat-wave/",
+      "is_live": true
+    },
+    {
+      "title": "Heat Wave anomalo a Aosta: analisi WeatherArb del 08/04/2026",
+      "slug": "2026-04-08-aosta-heat-wave",
+      "date": "2026-04-08",
+      "provincia": "Aosta",
+      "regione": "Valle d'Aosta",
+      "evento": "Heat Wave",
+      "z_score": 5.41,
+      "score": 7.18,
+      "anomaly_level": "CRITICAL",
+      "excerpt": "Anomalia meteo a Aosta. Z-Score +5.41, livello CRITICAL. Analisi tecnica e consigli pratici.",
+      "url": "/news/2026-04-08-aosta-heat-wave/",
+      "is_live": true
+    },
+    {
+      "title": "Heat Wave anomalo a Verbano-Cusio-Ossola: analisi WeatherArb del 08/04/2026",
+      "slug": "2026-04-08-verbano-cusio-ossola-heat-wave",
+      "date": "2026-04-08",
+      "provincia": "Verbano-Cusio-Ossola",
+      "regione": "Piemonte",
+      "evento": "Heat Wave",
+      "z_score": 4.02,
+      "score": 7.98,
+      "anomaly_level": "CRITICAL",
+      "excerpt": "Anomalia meteo a Verbano-Cusio-Ossola. Z-Score +4.02, livello CRITICAL. Analisi tecnica e consigli pratici.",
+      "url": "/news/2026-04-08-verbano-cusio-ossola-heat-wave/",
+      "is_live": true
+    },
+    {
+      "title": "Heat Wave anomalo a Biella: analisi WeatherArb del 08/04/2026",
+      "slug": "2026-04-08-biella-heat-wave",
+      "date": "2026-04-08",
+      "provincia": "Biella",
+      "regione": "Piemonte",
+      "evento": "Heat Wave",
+      "z_score": 4.03,
+      "score": 8.25,
+      "anomaly_level": "CRITICAL",
+      "excerpt": "Anomalia meteo a Biella. Z-Score +4.03, livello CRITICAL. Analisi tecnica e consigli pratici.",
+      "url": "/news/2026-04-08-biella-heat-wave/",
+      "is_live": true
+    },
+    {
+      "title": "Heat Wave anomalo a Asti: analisi WeatherArb del 08/04/2026",
+      "slug": "2026-04-08-asti-heat-wave",
+      "date": "2026-04-08",
+      "provincia": "Asti",
+      "regione": "Piemonte",
+      "evento": "Heat Wave",
+      "z_score": 4.62,
+      "score": 7.35,
+      "anomaly_level": "CRITICAL",
+      "excerpt": "Anomalia meteo a Asti. Z-Score +4.62, livello CRITICAL. Analisi tecnica e consigli pratici.",
+      "url": "/news/2026-04-08-asti-heat-wave/",
+      "is_live": true
+    }
+  ]
+}

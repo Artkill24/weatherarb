@@ -1,5 +1,108 @@
 <!DOCTYPE html>
 <html><head><meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/it/">
-<title>WeatherArb Open Data</title>
-</head><body>Redirecting...</body></html>
+<title>WeatherArb — API & Open Data</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f1117;--paper:#f5f3ee;--storm:#1a3a5c;--electric:#2563eb;--mist:#e8e5de;--muted:#6b6560}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:1px solid var(--mist);background:rgba(245,243,238,.95)}
+.logo{font-family:'Instrument Serif',serif;font-size:20px;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
+.logo-icon{width:28px;height:28px;background:var(--storm);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px}
+.hero{max-width:800px;margin:0 auto;padding:60px 24px 40px;text-align:center}
+h1{font-family:'Instrument Serif',serif;font-size:clamp(32px,5vw,52px);margin-bottom:16px;letter-spacing:-1px}
+.sub{font-size:18px;color:var(--muted);max-width:560px;margin:0 auto 40px;line-height:1.6}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto;padding:0 24px 60px}
+.card{background:white;border-radius:16px;padding:32px;border:1px solid var(--mist)}
+.card h2{font-family:'Instrument Serif',serif;font-size:24px;margin-bottom:8px}
+.tag{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--electric);margin-bottom:16px}
+.card p{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px}
+.endpoint{background:var(--paper);border-radius:8px;padding:12px 16px;font-family:monospace;font-size:12px;margin-bottom:8px;border:1px solid var(--mist);word-break:break-all}
+.method{color:var(--electric);font-weight:600;margin-right:8px}
+.code{background:#0f1117;color:#e2e8f0;border-radius:8px;padding:16px;font-family:monospace;font-size:12px;overflow-x:auto;margin-top:12px;line-height:1.6}
+.nl-form{display:flex;flex-direction:column;gap:12px}
+.nl-form input,.nl-form select{padding:12px 16px;border:1px solid var(--mist);border-radius:8px;font-size:15px;background:var(--paper)}
+.nl-form button{padding:13px;background:var(--storm);color:white;border:none;border-radius:8px;font-size:15px;cursor:pointer}
+#nl-ok{display:none;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:16px;color:#166534;font-size:14px}
+.tg-link{display:inline-block;background:#0088cc;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:500}
+@media(max-width:640px){.cards{grid-template-columns:1fr}nav{padding:16px 20px}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo"><div class="logo-icon">⛈</div>WeatherArb</a>
+  <span style="font-size:11px;color:var(--muted);letter-spacing:2px;text-transform:uppercase">Open Data</span>
+</nav>
+<div class="hero">
+  <h1>Weather Intelligence,<br><em style="color:var(--electric)">open to everyone.</em></h1>
+  <p class="sub">Free API, embeddable widget, and Telegram alerts. No account required.</p>
+</div>
+<div class="cards">
+
+<div class="card">
+  <div class="tag">📬 Newsletter</div>
+  <h2>Weekly Anomaly Digest</h2>
+  <p>Top 5 weather anomalies across Europe every Monday. Z-Score data and province rankings.</p>
+  <div class="nl-form">
+    <input type="email" id="nl-email" placeholder="your@email.com">
+    <select id="nl-prov">
+      <option value="">All Europe</option>
+      <option value="Vicenza">Vicenza, IT</option>
+      <option value="Trento">Trento, IT</option>
+      <option value="Milano">Milano, IT</option>
+      <option value="München">München, DE</option>
+    </select>
+    <button onclick="subscribe()">Subscribe — Free</button>
+  </div>
+  <div id="nl-ok">✅ Subscribed! First digest arrives Monday.</div>
+</div>
+
+<div class="card">
+  <div class="tag">🔌 Public API</div>
+  <h2>Weather Anomaly API</h2>
+  <p>Free, no auth required. JSON with Z-Score, anomaly level, signal score.</p>
+  <div class="endpoint"><span class="method">GET</span>weatherarb-production.up.railway.app/api/v1/pulse/{city}</div>
+  <div class="endpoint"><span class="method">GET</span>weatherarb-production.up.railway.app/api/v1/europe/top</div>
+  <div class="code">curl https://weatherarb-production.up.railway.app/api/v1/pulse/vicenza
+
+→ {"province":"Vicenza","weather":{"z_score":-0.53,"anomaly_level":"NORMAL"},"signal":{"score":4.9}}</div>
+</div>
+
+<div class="card">
+  <div class="tag">📊 Embed Widget</div>
+  <h2>Add to Your Site</h2>
+  <p>One iframe. Live anomaly data. Auto-updates hourly.</p>
+  <div style="background:#0f1117;border-radius:12px;padding:20px;text-align:center;margin:16px 0">
+    <iframe src="/widget.html?p=Vicenza" width="240" height="160" frameborder="0" style="border-radius:8px"></iframe>
+  </div>
+  <div class="endpoint">&lt;iframe src="https://weatherarb.com/widget.html?p=Vicenza" width="260" height="180" frameborder="0"&gt;&lt;/iframe&gt;</div>
+</div>
+
+<div class="card">
+  <div class="tag">⚡ Real-time Alerts</div>
+  <h2>Telegram Channel</h2>
+  <p>Push notifications when score ≥ 7.0. 55 cities across Italy and Germany.</p>
+  <div style="text-align:center;padding:20px 0">
+    <div style="font-size:48px;margin-bottom:12px">📡</div>
+    <a href="https://t.me/weatherarb_alerts" target="_blank" class="tg-link">Join @weatherarb_alerts</a>
+  </div>
+  <div style="display:flex;justify-content:space-around;font-size:13px;color:var(--muted);text-align:center;margin-top:16px">
+    <div><strong style="color:var(--ink);display:block;font-size:20px">55</strong>Cities</div>
+    <div><strong style="color:var(--ink);display:block;font-size:20px">7.0</strong>Threshold</div>
+    <div><strong style="color:var(--ink);display:block;font-size:20px">1h</strong>Refresh</div>
+  </div>
+</div>
+
+</div>
+<script>
+async function subscribe(){
+  const email=document.getElementById('nl-email').value;
+  const prov=document.getElementById('nl-prov').value;
+  if(!email||!email.includes('@')){alert('Enter a valid email');return}
+  try{
+    await fetch('https://weatherarb-production.up.railway.app/api/newsletter/subscribe?email='+encodeURIComponent(email)+'&provincia='+encodeURIComponent(prov),{method:'POST'});
+  }catch(e){}
+  document.querySelector('.nl-form').style.display='none';
+  document.getElementById('nl-ok').style.display='block';
+}
+</script>
+</body></html>

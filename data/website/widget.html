@@ -13,7 +13,7 @@
 <div class="f"><span id="t">ERA5+OWM</span><a class="fa" href="https://weatherarb.com" target="_blank">weatherarb.com</a></div>
 <script>
 var P=new URLSearchParams(location.search).get('p')||'Vicenza';
-fetch('https://weatherarb.com/api/v1/widget/'+P)
+fetch('https://weatherarb.comhttps://weatherarb-production.up.railway.app/api/v1/widget/'+P)
 .then(function(r){return r.json()}).then(function(d){
 document.getElementById('p').textContent=d.p||P;
 document.getElementById('e').textContent=d.e||'Weather Signal';

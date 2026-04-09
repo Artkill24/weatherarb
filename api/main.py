@@ -388,3 +388,27 @@ def api_docs():
         },
         "example": "curl https://weatherarb.com/api/v1/pulse/vicenza",
     }
+
+# ── LATEST REPORTS ENDPOINT ─────────────────────────────────────────
+import glob as _glob
+
+@app.get("/pulse/reports/latest")
+def get_latest_reports(limit: int = 6):
+    articles = []
+    for f in sorted(_glob.glob("data/blog_posts/*.json"), reverse=True)[:limit]:
+        try:
+            d = json.load(open(f))
+            articles.append({
+                "title": d.get("title",""),
+                "slug": d.get("slug",""),
+                "date": d.get("timestamp","")[:10],
+                "provincia": d.get("provincia",""),
+                "evento": d.get("evento",""),
+                "z_score": d.get("z_score", 0),
+                "score": d.get("score", 0),
+                "anomaly_level": d.get("anomaly_level",""),
+                "excerpt": d.get("meta_description","")[:140],
+                "url": f"/news/{d.get('slug')}/",
+            })
+        except: pass
+    return {"last_updated": datetime.utcnow().isoformat(), "count": len(articles), "reports": articles}
