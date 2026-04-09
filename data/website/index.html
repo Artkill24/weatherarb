@@ -394,8 +394,14 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollWheelZoom: false
   });
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    maxZoom: 10, minZoom: 5
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 10, minZoom: 4,
+    opacity: 0.4
+  }).addTo(map);
+
+  // Overlay scuro
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+    maxZoom: 10, opacity: 0.85
   }).addTo(map);
 
   var provinces = [
