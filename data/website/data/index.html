@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WeatherArb — Live Data Dashboard</title>
+<meta name="description" content="Real-time weather anomaly data for 65 European cities. Z-Score vs ERA5-Land historical baseline.">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080c12;
+  --surface: #0f1520;
+  --border: rgba(255,255,255,.07);
+  --text: #e2e8f0;
+  --muted: #64748b;
+  --electric: #3b82f6;
+  --green: #10b981;
+  --critical: #ef4444;
+  --extreme: #f97316;
+  --unusual: #eab308;
+  --normal: #3b82f6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+/* NAV */
+nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 32px; border-bottom: 1px solid var(--border);
+  background: rgba(8,12,18,.9); backdrop-filter: blur(12px);
+  position: sticky; top: 0; z-index: 100;
+}
+.logo { font-family: 'Instrument Serif', serif; font-size: 18px; color: white;
+  display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.logo-icon { width: 26px; height: 26px; background: #1a3a5c; border-radius: 5px;
+  display: flex; align-items: center; justify-content: center; font-size: 13px; }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-links a { color: var(--muted); font-size: 13px; text-decoration: none; }
+.nav-links a:hover { color: white; }
+.nav-links a.active { color: var(--electric); }
+
+/* HEADER */
+.page-header { padding: 40px 32px 24px; border-bottom: 1px solid var(--border); }
+.page-header h1 { font-family: 'Instrument Serif', serif; font-size: 36px; margin-bottom: 8px; }
+.page-header p { color: var(--muted); font-size: 14px; max-width: 600px; line-height: 1.6; }
+.header-meta { display: flex; align-items: center; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+.live-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--green); font-weight: 500; }
+.live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: blink 2s infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+.stat-pill { background: var(--surface); border: 1px solid var(--border); border-radius: 20px;
+  padding: 4px 14px; font-size: 12px; color: var(--muted); }
+.stat-pill span { color: white; font-weight: 500; }
+
+/* CONTROLS */
+.controls { padding: 20px 32px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+  border-bottom: 1px solid var(--border); }
+.filter-group { display: flex; gap: 6px; }
+.filter-btn { padding: 6px 14px; border: 1px solid var(--border); border-radius: 6px;
+  background: transparent; color: var(--muted); font-size: 12px; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; transition: all .2s; }
+.filter-btn:hover, .filter-btn.active { background: var(--electric); border-color: var(--electric); color: white; }
+.filter-btn.critical.active { background: var(--critical); border-color: var(--critical); }
+.filter-btn.extreme.active { background: var(--extreme); border-color: var(--extreme); }
+.filter-btn.unusual.active { background: var(--unusual); border-color: var(--unusual); color: #111; }
+.search-box { margin-left: auto; }
+.search-box input { background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+  padding: 6px 14px; color: white; font-size: 13px; font-family: 'DM Sans', sans-serif;
+  outline: none; width: 200px; }
+.search-box input:focus { border-color: var(--electric); }
+.search-box input::placeholder { color: var(--muted); }
+
+/* TABLE */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead { position: sticky; top: 57px; z-index: 10; }
+th { padding: 12px 16px; text-align: left; font-size: 10px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted);
+  background: var(--surface); border-bottom: 1px solid var(--border); cursor: pointer;
+  white-space: nowrap; user-select: none; }
+th:hover { color: white; }
+th .sort-icon { opacity: .4; margin-left: 4px; }
+th.sorted .sort-icon { opacity: 1; color: var(--electric); }
+td { padding: 11px 16px; border-bottom: 1px solid rgba(255,255,255,.04); vertical-align: middle; }
+tr:hover td { background: rgba(255,255,255,.02); }
+tr.critical-row td { border-left: 3px solid var(--critical); }
+tr.extreme-row td { border-left: 3px solid var(--extreme); }
+tr.unusual-row td { border-left: 3px solid var(--unusual); }
+tr.normal-row td { border-left: 3px solid transparent; }
+
+.city-cell { display: flex; align-items: center; gap: 10px; }
+.city-flag { font-size: 16px; }
+.city-name { font-weight: 500; color: white; }
+.city-region { font-size: 11px; color: var(--muted); }
+
+.badge { display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 10px;
+  font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.badge-critical { background: rgba(239,68,68,.15); color: #ef4444; border: 1px solid rgba(239,68,68,.3); }
+.badge-extreme  { background: rgba(249,115,22,.15); color: #f97316; border: 1px solid rgba(249,115,22,.3); }
+.badge-unusual  { background: rgba(234,179,8,.15);  color: #eab308; border: 1px solid rgba(234,179,8,.3); }
+.badge-normal   { background: rgba(59,130,246,.1);  color: #3b82f6; border: 1px solid rgba(59,130,246,.2); }
+
+.mono { font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+.z-positive { color: #f97316; }
+.z-negative { color: #3b82f6; }
+.z-critical { color: #ef4444; font-weight: 600; }
+
+.pulse-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+.pulse-dot.critical { background: var(--critical); box-shadow: 0 0 6px var(--critical); animation: blink 1.5s infinite; }
+.pulse-dot.extreme  { background: var(--extreme); animation: blink 2s infinite; }
+.pulse-dot.unusual  { background: var(--unusual); }
+.pulse-dot.normal   { background: var(--normal); }
+
+.action-btn { padding: 4px 12px; border: 1px solid var(--border); border-radius: 5px;
+  background: transparent; color: var(--muted); font-size: 11px; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; text-decoration: none; display: inline-block;
+  transition: all .2s; }
+.action-btn:hover { border-color: var(--electric); color: var(--electric); }
+
+/* SKELETON */
+.skeleton { background: linear-gradient(90deg, var(--surface) 25%, rgba(255,255,255,.04) 50%, var(--surface) 75%);
+  background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 4px; }
+@keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+/* FOOTER */
+.data-footer { padding: 20px 32px; border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 12px; color: var(--muted); flex-wrap: wrap; gap: 12px; }
+.data-footer a { color: var(--electric); text-decoration: none; }
+
+/* SUMMARY CARDS */
+.summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+  padding: 20px 32px; border-bottom: 1px solid var(--border); }
+.s-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 16px 20px; }
+.s-card .s-val { font-family: 'Instrument Serif', serif; font-size: 32px; margin-bottom: 4px; }
+.s-card .s-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+.s-card.critical .s-val { color: var(--critical); }
+.s-card.extreme  .s-val { color: var(--extreme); }
+.s-card.unusual  .s-val { color: var(--unusual); }
+.s-card.normal   .s-val { color: var(--electric); }
+
+@media (max-width: 768px) {
+  .summary { grid-template-columns: 1fr 1fr; }
+  .controls { padding: 12px 16px; }
+  td, th { padding: 10px 10px; }
+  .search-box { margin-left: 0; width: 100%; }
+  .search-box input { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo"><div class="logo-icon">⛈</div>WeatherArb</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/data/" class="active">Data</a>
+    <a href="/map.html">Map</a>
+    <a href="/open.html">API</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Live Weather Intelligence</h1>
+  <p>Real-time anomaly detection across 65 European cities. Z-Score computed against ERA5-Land 2000–2024 seasonal baselines.</p>
+  <div class="header-meta">
+    <div class="live-badge"><div class="live-dot"></div> Live · Updates every hour</div>
+    <div class="stat-pill">Source: <span>ERA5-Land ECMWF + OpenWeatherMap</span></div>
+    <div class="stat-pill">Cities: <span id="total-cities">—</span></div>
+    <div class="stat-pill">Last update: <span id="last-update">—</span></div>
+  </div>
+</div>
+
+<div class="summary">
+  <div class="s-card critical">
+    <div class="s-val" id="count-critical">—</div>
+    <div class="s-label">🔴 Critical (Z≥3)</div>
+  </div>
+  <div class="s-card extreme">
+    <div class="s-val" id="count-extreme">—</div>
+    <div class="s-label">🟠 Extreme (Z≥2)</div>
+  </div>
+  <div class="s-card unusual">
+    <div class="s-val" id="count-unusual">—</div>
+    <div class="s-label">🟡 Unusual (Z≥1)</div>
+  </div>
+  <div class="s-card normal">
+    <div class="s-val" id="count-normal">—</div>
+    <div class="s-label">🔵 Normal</div>
+  </div>
+</div>
+
+<div class="controls">
+  <div class="filter-group" id="country-filters">
+    <button class="filter-btn active" onclick="filterCountry('all',this)">All</button>
+    <button class="filter-btn" onclick="filterCountry('IT',this)">🇮🇹 Italy</button>
+    <button class="filter-btn" onclick="filterCountry('DE',this)">🇩🇪 Germany</button>
+    <button class="filter-btn" onclick="filterCountry('ES',this)">🇪🇸 Spain</button>
+    <button class="filter-btn" onclick="filterCountry('FR',this)">🇫🇷 France</button>
+  </div>
+  <div class="filter-group">
+    <button class="filter-btn critical" onclick="filterLevel('CRITICAL',this)">Critical</button>
+    <button class="filter-btn extreme"  onclick="filterLevel('EXTREME',this)">Extreme</button>
+    <button class="filter-btn unusual"  onclick="filterLevel('UNUSUAL',this)">Unusual</button>
+  </div>
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Search city..." oninput="filterSearch(this.value)">
+  </div>
+</div>
+
+<div class="table-wrap">
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th onclick="sortBy('province')">City <span class="sort-icon">↕</span></th>
+        <th onclick="sortBy('z_score')" class="sorted">Z-Score <span class="sort-icon">↓</span></th>
+        <th onclick="sortBy('anomaly_level')">Level <span class="sort-icon">↕</span></th>
+        <th onclick="sortBy('score')">Signal <span class="sort-icon">↕</span></th>
+        <th onclick="sortBy('event_type')">Event <span class="sort-icon">↕</span></th>
+        <th>Temp</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="data-body">
+      <!-- Skeleton rows -->
+      <tr><td colspan="7" style="padding:40px;text-align:center;color:var(--muted)">
+        <div style="font-size:24px;margin-bottom:8px">⏳</div>
+        Loading weather data...
+      </td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="data-footer">
+  <span>WeatherArb · Independent Weather Intelligence · <a href="/open.html">Free API</a></span>
+  <span>Data: ERA5-Land ECMWF + OpenWeatherMap · <a href="/about.html">Methodology</a></span>
+</div>
+
+<script>
+var allData = [];
+var activeCountry = 'all';
+var activeLevel = null;
+var sortField = 'z_score';
+var sortAsc = false;
+
+var FLAGS = { IT:'🇮🇹', DE:'🇩🇪', ES:'🇪🇸', FR:'🇫🇷', UK:'🇬🇧' };
+var COUNTRY_MAP = {
+  // IT provinces
+  'torino':'IT','aosta':'IT','milano':'IT','varese':'IT','como':'IT','bergamo':'IT',
+  'brescia':'IT','sondrio':'IT','trento':'IT','bolzano':'IT','vicenza':'IT','verona':'IT',
+  'venezia':'IT','padova':'IT','treviso':'IT','belluno':'IT','udine':'IT','trieste':'IT',
+  'genova':'IT','bologna':'IT','parma':'IT','modena':'IT','ferrara':'IT','biella':'IT',
+  'novara':'IT','vercelli':'IT','cuneo':'IT','asti':'IT','alessandria':'IT','pavia':'IT',
+  'lodi':'IT','cremona':'IT','mantova':'IT','lecco':'IT','monza':'IT','imperia':'IT',
+  'savona':'IT','la spezia':'IT','piacenza':'IT','reggio emilia':'IT','rimini':'IT',
+  'ravenna':'IT','pordenone':'IT','gorizia':'IT','rovigo':'IT','verbano':'IT',
+  // DE
+  'münchen':'DE','hamburg':'DE','berlin':'DE','frankfurt':'DE','stuttgart':'DE',
+  'köln':'DE','düsseldorf':'DE','nürnberg':'DE',
+  // ES
+  'madrid':'ES','barcelona':'ES','valencia':'ES','sevilla':'ES','bilbao':'ES',
+  // FR
+  'paris':'FR','lyon':'FR','marseille':'FR','bordeaux':'FR','nice':'FR',
+};
+
+function getCountry(province) {
+  return COUNTRY_MAP[province.toLowerCase()] || 'IT';
+}
+
+function getFlag(province) {
+  return FLAGS[getCountry(province)] || '🌍';
+}
+
+function getSlug(province) {
+  return province.toLowerCase()
+    .replace(/[àáâ]/g,'a').replace(/[èéê]/g,'e')
+    .replace(/[ùúû]/g,'u').replace(/ü/g,'u')
+    .replace(/ö/g,'o').replace(/ä/g,'a')
+    .replace(/[^a-z0-9]/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
+}
+
+function getLandingUrl(province) {
+  var country = getCountry(province).toLowerCase();
+  var slug = getSlug(province);
+  return '/' + country + '/' + slug + '/';
+}
+
+function zClass(z, level) {
+  if (level === 'CRITICAL') return 'z-critical';
+  if (z > 0) return 'z-positive';
+  if (z < 0) return 'z-negative';
+  return '';
+}
+
+function render() {
+  var data = allData.filter(function(d) {
+    if (activeCountry !== 'all' && getCountry(d.province) !== activeCountry) return false;
+    if (activeLevel && d.anomaly_level !== activeLevel) return false;
+    return true;
+  });
+
+  var search = document.getElementById('search-input').value.toLowerCase();
+  if (search) {
+    data = data.filter(function(d) {
+      return d.province.toLowerCase().includes(search) ||
+             (d.event_type||'').toLowerCase().includes(search);
+    });
+  }
+
+  // Sort
+  data.sort(function(a, b) {
+    var av = a[sortField] || 0, bv = b[sortField] || 0;
+    if (typeof av === 'string') av = av.toLowerCase();
+    if (typeof bv === 'string') bv = bv.toLowerCase();
+    if (sortField === 'z_score') { av = Math.abs(av); bv = Math.abs(bv); }
+    return sortAsc ? (av > bv ? 1 : -1) : (av < bv ? 1 : -1);
+  });
+
+  var tbody = document.getElementById('data-body');
+  if (!data.length) {
+    tbody.innerHTML = '<tr><td colspan="7" style="padding:32px;text-align:center;color:var(--muted)">No data matching filters</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = data.map(function(d) {
+    var z = d.z_score || 0;
+    var level = d.anomaly_level || 'NORMAL';
+    var zText = (z >= 0 ? '+' : '') + z.toFixed(2);
+    var flag = getFlag(d.province);
+    var country = getCountry(d.province);
+    var url = getLandingUrl(d.province);
+    var event = (d.event_type || '—').replace(/_/g,' ');
+    var score = d.score ? d.score.toFixed(1) : '—';
+    var temp = d.temperature_c ? d.temperature_c.toFixed(1) + '°C' : '—';
+    var levelLower = level.toLowerCase();
+
+    return '<tr class="' + levelLower + '-row">' +
+      '<td><div class="city-cell">' +
+        '<span class="pulse-dot ' + levelLower + '"></span>' +
+        '<span class="city-flag">' + flag + '</span>' +
+        '<div><div class="city-name">' + d.province + '</div>' +
+        '<div class="city-region">' + country + '</div></div></div></td>' +
+      '<td class="mono ' + zClass(z, level) + '">' + zText + '</td>' +
+      '<td><span class="badge badge-' + levelLower + '">' + level + '</span></td>' +
+      '<td class="mono">' + score + '/10</td>' +
+      '<td style="color:var(--muted)">' + event + '</td>' +
+      '<td class="mono">' + temp + '</td>' +
+      '<td><a href="' + url + '" class="action-btn">View →</a></td>' +
+    '</tr>';
+  }).join('');
+}
+
+function updateSummary() {
+  var counts = {CRITICAL:0, EXTREME:0, UNUSUAL:0, NORMAL:0};
+  allData.forEach(function(d) { counts[d.anomaly_level] = (counts[d.anomaly_level]||0) + 1; });
+  document.getElementById('count-critical').textContent = counts.CRITICAL || 0;
+  document.getElementById('count-extreme').textContent  = counts.EXTREME  || 0;
+  document.getElementById('count-unusual').textContent  = counts.UNUSUAL  || 0;
+  document.getElementById('count-normal').textContent   = counts.NORMAL   || 0;
+  document.getElementById('total-cities').textContent = allData.length;
+}
+
+function sortBy(field) {
+  if (sortField === field) sortAsc = !sortAsc;
+  else { sortField = field; sortAsc = false; }
+  document.querySelectorAll('th').forEach(function(th) { th.classList.remove('sorted'); });
+  event.target.closest('th').classList.add('sorted');
+  render();
+}
+
+function filterCountry(country, btn) {
+  activeCountry = country;
+  document.querySelectorAll('#country-filters .filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  render();
+}
+
+function filterLevel(level, btn) {
+  if (activeLevel === level) {
+    activeLevel = null;
+    btn.classList.remove('active');
+  } else {
+    activeLevel = level;
+    document.querySelectorAll('.filter-btn.critical, .filter-btn.extreme, .filter-btn.unusual').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+  }
+  render();
+}
+
+function filterSearch(val) { render(); }
+
+async function loadData() {
+  try {
+    var r = await fetch('https://api.weatherarb.com/api/v1/europe/top?limit=65');
+    var d = await r.json();
+    if (!d.data) return;
+
+    // Fetch temperature for each city
+    allData = d.data.map(function(city) {
+      return {
+        province: city.province,
+        region: city.region || '',
+        z_score: city.z_score || 0,
+        anomaly_level: city.anomaly_level || 'NORMAL',
+        score: city.score || 0,
+        event_type: city.event_type || '',
+        temperature_c: null,
+      };
+    });
+
+    document.getElementById('last-update').textContent = new Date().toLocaleTimeString();
+    updateSummary();
+    render();
+
+    // Load temp details in background
+    allData.forEach(async function(city, i) {
+      try {
+        var slug = getSlug(city.province);
+        var pr = await fetch('https://api.weatherarb.com/api/v1/widget/' + slug);
+        var pd = await pr.json();
+        if (pd.z !== undefined) {
+          allData[i].temperature_c = pd.t ? null : null; // widget doesn't have temp
+        }
+      } catch(e) {}
+    });
+
+  } catch(e) {
+    document.getElementById('data-body').innerHTML =
+      '<tr><td colspan="7" style="padding:32px;text-align:center;color:#ef4444">⚠️ Unable to load data. <a href="/open.html" style="color:#3b82f6">Check API status</a></td></tr>';
+  }
+}
+
+loadData();
+setInterval(loadData, 5 * 60 * 1000); // refresh every 5 min
+</script>
+</body>
+</html>
