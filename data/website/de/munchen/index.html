@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wetter-Anomalie München — ERA5 Analyse | WeatherArb</title>
+<meta name="description" content="Echtzeit-Wetterüberwachung für München (Bayern). Z-Score vs ERA5-Land Historial. Statistische Analyse von Wetteranomalien.">
+<link rel="canonical" href="https://weatherarb.com/de/munchen/">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f1117;--paper:#f5f3ee;--storm:#1a3a5c;--electric:#2563eb;--mist:#e8e5de;--muted:#6b6560}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:1px solid var(--mist);background:rgba(245,243,238,.95);position:sticky;top:0;z-index:100}
+.logo{font-family:'Instrument Serif',serif;font-size:20px;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
+.logo-icon{width:28px;height:28px;background:var(--storm);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px}
+.hero-bar{background:var(--storm);color:white;padding:20px 48px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.badge{background:rgba(255,255,255,.12);border-radius:8px;padding:10px 16px;text-align:center;min-width:80px}
+.badge strong{display:block;font-family:'Instrument Serif',serif;font-size:22px}
+.badge span{font-size:10px;opacity:.7;text-transform:uppercase;letter-spacing:1px}
+.container{max-width:800px;margin:0 auto;padding:48px 24px}
+.tag{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--electric);margin-bottom:16px}
+h1{font-family:'Instrument Serif',serif;font-size:clamp(28px,4vw,42px);line-height:1.2;margin-bottom:12px}
+.byline{font-size:13px;color:var(--muted);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--mist)}
+.data-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}
+.data-card{background:white;border:1px solid var(--mist);border-radius:12px;padding:20px;text-align:center}
+.data-card .val{font-family:'Instrument Serif',serif;font-size:28px;color:var(--storm);margin-bottom:4px}
+.data-card .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.info-box{background:#eff6ff;border-left:4px solid var(--electric);padding:16px 20px;border-radius:0 8px 8px 0;margin:24px 0}
+.info-box p{font-size:14px;color:#1e40af;margin:0;line-height:1.6}
+.body-text p{font-size:16px;line-height:1.75;margin-bottom:18px}
+footer{text-align:center;font-size:12px;color:var(--muted);padding:32px;border-top:1px solid var(--mist);margin-top:48px}
+@media(max-width:600px){nav{padding:16px 20px}.hero-bar{padding:16px 20px}.data-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo"><div class="logo-icon">⛈</div>WeatherArb</a>
+  <a href="/de/" style="font-size:12px;color:var(--muted);text-decoration:none">← Deutschland</a>
+</nav>
+<div class="hero-bar" id="hero-bar">
+  <div style="flex:1">
+    <div style="font-size:11px;opacity:.6;margin-bottom:4px;text-transform:uppercase;letter-spacing:1px">🇩🇪 Aktive Überwachung</div>
+    <div style="font-size:18px;font-weight:500">München, Bayern</div>
+  </div>
+  <div class="badge" id="badge-temp"><strong>—</strong><span>Temperatur</span></div>
+  <div class="badge" id="badge-zscore"><strong>—</strong><span>Z-Score</span></div>
+  <div class="badge" id="badge-level"><strong>—</strong><span>Niveau</span></div>
+</div>
+<div class="container">
+  <div class="tag">📍 München · Bayern · Deutschland</div>
+  <h1>Wetter-Anomalie Analyse<br>München</h1>
+  <div class="byline">WeatherArb Intelligence · ERA5-Land ECMWF + OpenWeatherMap · Stündliche Aktualisierung</div>
+  <div class="data-grid">
+    <div class="data-card"><div class="val" id="val-zscore">—</div><div class="lbl">Z-Score</div></div>
+    <div class="data-card"><div class="val" id="val-score">—</div><div class="lbl">Signal Score</div></div>
+    <div class="data-card"><div class="val" id="val-event">—</div><div class="lbl">Ereignis</div></div>
+  </div>
+  <div class="info-box">
+    <p><strong>Methodik:</strong> Der Z-Score misst die statistische Abweichung vom ERA5-Land-Mittelwert 2000–2024 für München in dieser Jahreszeit. Z &gt; 2.0 = EXTREME · Z &gt; 3.0 = CRITICAL.</p>
+  </div>
+  <div class="body-text">
+    <p>WeatherArb überwacht München (Bayern) in Echtzeit und vergleicht aktuelle Bedingungen mit 24 Jahren ERA5-Land-Historikdaten des Europäischen Zentrums für mittelfristige Wettervorhersage (EZMW).</p>
+    <p>Das System erkennt statistisch signifikante Anomalien automatisch und sendet Alerts über <a href="https://t.me/weatherarb_alerts" style="color:var(--electric)">Telegram @weatherarb_alerts</a> wenn das Signal 7.0/10 überschreitet.</p>
+    <p>Koordinaten: 48.14°N, 11.58°E · Bevölkerung: 1.488.000 · Cluster: DE_Alpine.</p>
+  </div>
+  <a href="/de/" style="display:inline-block;margin-top:32px;color:var(--electric);font-size:14px;font-weight:500;text-decoration:none">← Alle deutschen Städte</a>
+</div>
+<footer>WeatherArb.com · Independent Weather Intelligence · ERA5-Land ECMWF + OpenWeatherMap</footer>
+<script>
+(function(){
+  var slug = 'munchen';
+  fetch('https://api.weatherarb.com/api/v1/pulse/' + slug)
+  .then(function(r){return r.json();})
+  .then(function(d){
+    if(!d.weather) return;
+    var z=d.weather.z_score||0, temp=d.weather.temperature_c;
+    var level=d.weather.anomaly_level||'MONITORING';
+    var evento=(d.weather.event_type||'').replace(/_/g,' ');
+    var score=d.signal&&d.signal.score?d.signal.score:0;
+    var colors={CRITICAL:'#7f1d1d',EXTREME:'#7c2d12',UNUSUAL:'#1a3a5c',NORMAL:'#1a3a5c'};
+    document.getElementById('badge-temp').innerHTML='<strong>'+(temp?temp.toFixed(1)+'°C':'—')+'</strong><span>Temperatur</span>';
+    document.getElementById('badge-zscore').innerHTML='<strong>'+(z>=0?'+':'')+z.toFixed(2)+'</strong><span>Z-Score</span>';
+    document.getElementById('badge-level').innerHTML='<strong>'+level+'</strong><span>Niveau</span>';
+    document.getElementById('val-zscore').textContent=(z>=0?'+':'')+z.toFixed(2);
+    document.getElementById('val-score').textContent=score.toFixed(1)+'/10';
+    document.getElementById('val-event').textContent=evento||'Clear';
+    document.getElementById('hero-bar').style.background=colors[level]||'#1a3a5c';
+  }).catch(function(){});
+})();
+</script>
+</body>
+</html>

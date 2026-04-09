@@ -494,6 +494,96 @@
       "lon": 11.0767,
       "popolazione": 518000,
       "cluster": "DE_Industrial"
+    },
+    {
+      "nome": "Madrid",
+      "codice_istat": "ES-MAD",
+      "regione": "Comunidad de Madrid",
+      "lat": 40.42,
+      "lon": -3.7,
+      "popolazione": 3300000,
+      "cluster": "ES_Metro"
+    },
+    {
+      "nome": "Barcelona",
+      "codice_istat": "ES-BCN",
+      "regione": "Cataluña",
+      "lat": 41.39,
+      "lon": 2.17,
+      "popolazione": 1636000,
+      "cluster": "ES_Coastal"
+    },
+    {
+      "nome": "Valencia",
+      "codice_istat": "ES-VLC",
+      "regione": "Comunitat Valenciana",
+      "lat": 39.47,
+      "lon": -0.38,
+      "popolazione": 794000,
+      "cluster": "ES_Coastal"
+    },
+    {
+      "nome": "Sevilla",
+      "codice_istat": "ES-SVQ",
+      "regione": "Andalucía",
+      "lat": 37.39,
+      "lon": -5.98,
+      "popolazione": 688000,
+      "cluster": "ES_South"
+    },
+    {
+      "nome": "Bilbao",
+      "codice_istat": "ES-BIO",
+      "regione": "País Vasco",
+      "lat": 43.26,
+      "lon": -2.93,
+      "popolazione": 346000,
+      "cluster": "ES_Coastal"
+    },
+    {
+      "nome": "Paris",
+      "codice_istat": "FR-PAR",
+      "regione": "Île-de-France",
+      "lat": 48.86,
+      "lon": 2.35,
+      "popolazione": 2148000,
+      "cluster": "FR_Metro"
+    },
+    {
+      "nome": "Lyon",
+      "codice_istat": "FR-LYO",
+      "regione": "Auvergne-Rhône-Alpes",
+      "lat": 45.75,
+      "lon": 4.83,
+      "popolazione": 513000,
+      "cluster": "FR_Metro"
+    },
+    {
+      "nome": "Marseille",
+      "codice_istat": "FR-MRS",
+      "regione": "Provence-Alpes",
+      "lat": 43.3,
+      "lon": 5.37,
+      "popolazione": 861000,
+      "cluster": "FR_Coastal"
+    },
+    {
+      "nome": "Bordeaux",
+      "codice_istat": "FR-BDX",
+      "regione": "Nouvelle-Aquitaine",
+      "lat": 44.84,
+      "lon": -0.58,
+      "popolazione": 254000,
+      "cluster": "FR_Coastal"
+    },
+    {
+      "nome": "Nice",
+      "codice_istat": "FR-NCE",
+      "regione": "Provence-Alpes",
+      "lat": 43.71,
+      "lon": 7.26,
+      "popolazione": 342000,
+      "cluster": "FR_Coastal"
     }
   ]
 }
