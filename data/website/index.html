@@ -394,14 +394,11 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollWheelZoom: false
   });
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 10, minZoom: 4,
-    opacity: 0.4
-  }).addTo(map);
-
-  // Overlay scuro
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-    maxZoom: 10, opacity: 0.85
+  L.tileLayer('https://api.maptiler.com/maps/dataviz-dark/{z}/{x}/{y}.png?key=ff55f9fb-392e-4434-8ef8-4a561d885164', {
+    maxZoom: 12, minZoom: 4,
+    tileSize: 512,
+    zoomOffset: -1,
+    attribution: '© MapTiler'
   }).addTo(map);
 
   var provinces = [
