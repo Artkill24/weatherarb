@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '0 */6 * * *'  # Ogni 6 ore automaticamente
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 jobs:
@@ -19,19 +19,18 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests python-slugify google-genai jinja2
+        run: pip install requests python-slugify
 
       - name: Generate latest content
         env:
           OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          python3 tools/auto_publish.py
+        run: python3 tools/auto_publish.py
 
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: green-sunset-1aff
-          directory: data/website
+      - name: Deploy via Wrangler
+        run: |
+          npm install -g wrangler
+          wrangler pages deploy data/website --project-name=green-sunset-1aff --commit-dirty=true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
