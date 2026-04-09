@@ -10,26 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-
-      - name: Install dependencies
-        run: pip install requests python-slugify
-
-      - name: Generate latest content
+      - run: pip install requests python-slugify
+      - name: Generate content
         env:
           OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python3 tools/auto_publish.py
-
-      - name: Commit and push updated content
+      - name: Push changes
         run: |
-          git config user.email "action@github.com"
+          git config user.email "bot@weatherarb.com"
           git config user.name "WeatherArb Bot"
-          git add data/website/data/
-          git add data/website/sitemap.xml
-          git diff --staged --quiet || git commit -m "Auto-update content $(date -u +%Y-%m-%d-%H%M)"
+          git add data/website/data/ data/website/sitemap.xml || true
+          git diff --staged --quiet || git commit -m "Auto-update $(date -u +%Y-%m-%dT%H:%M)"
           git push
