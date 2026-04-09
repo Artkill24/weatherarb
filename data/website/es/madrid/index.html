@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anomalía meteorológica Madrid | WeatherArb</title>
+<meta name="description" content="WeatherArb — Monitorización en tiempo real Madrid (Comunidad de Madrid). Z-Score ERA5-Land.">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;background:#f5f3ee;color:#0f1117}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:1px solid #e8e5de;background:rgba(245,243,238,.95);position:sticky;top:0;z-index:100}
+.logo{font-family:'Instrument Serif',serif;font-size:20px;display:flex;align-items:center;gap:8px;text-decoration:none;color:#0f1117}
+.logo-icon{width:28px;height:28px;background:#1a3a5c;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px}
+.hero{background:#1a3a5c;color:white;padding:20px 48px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.badge{background:rgba(255,255,255,.12);border-radius:8px;padding:10px 16px;text-align:center}
+.badge strong{display:block;font-family:'Instrument Serif',serif;font-size:22px}
+.badge span{font-size:10px;opacity:.7;text-transform:uppercase;letter-spacing:1px}
+.container{max-width:800px;margin:0 auto;padding:48px 24px}
+h1{font-family:'Instrument Serif',serif;font-size:36px;margin-bottom:12px}
+.data-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}
+.dc{background:white;border:1px solid #e8e5de;border-radius:12px;padding:20px;text-align:center}
+.dc .v{font-family:'Instrument Serif',serif;font-size:28px;color:#1a3a5c;margin-bottom:4px}
+.dc .l{font-size:11px;color:#6b6560;text-transform:uppercase;letter-spacing:1px}
+footer{text-align:center;font-size:12px;color:#6b6560;padding:32px;border-top:1px solid #e8e5de;margin-top:48px}</style>
+</head><body>
+<nav><a href="/" class="logo"><div class="logo-icon">⛈</div>WeatherArb</a>
+<a href="/es/" style="font-size:12px;color:#6b6560;text-decoration:none">← España</a></nav>
+<div class="hero" id="hero">
+  <div style="flex:1"><div style="font-size:11px;opacity:.6;margin-bottom:4px;text-transform:uppercase;letter-spacing:1px">🇪🇸 Monitorización en tiempo real</div>
+  <div style="font-size:18px;font-weight:500">Madrid, Comunidad de Madrid</div></div>
+  <div class="badge" id="b-temp"><strong>—</strong><span>Temp</span></div>
+  <div class="badge" id="b-z"><strong>—</strong><span>Z-Score</span></div>
+  <div class="badge" id="b-l"><strong>—</strong><span>Level</span></div>
+</div>
+<div class="container">
+  <h1>Anomalía meteorológica — Madrid</h1>
+  <p style="font-size:13px;color:#6b6560;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid #e8e5de">WeatherArb · ERA5-Land ECMWF + OpenWeatherMap · Monitorización en tiempo real</p>
+  <div class="data-grid">
+    <div class="dc"><div class="v" id="v-z">—</div><div class="l">Z-Score</div></div>
+    <div class="dc"><div class="v" id="v-s">—</div><div class="l">Score</div></div>
+    <div class="dc"><div class="v" id="v-e">—</div><div class="l">Event</div></div>
+  </div>
+  <p style="font-size:16px;line-height:1.75">WeatherArb monitore Madrid (Comunidad de Madrid) en temps réel, en comparant les conditions actuelles avec 24 ans de données historiques ERA5-Land du Centre européen de prévision météorologique (CEPMMT).</p>
+</div>
+<footer>WeatherArb.com · Independent Weather Intelligence</footer>
+<script>
+fetch('https://api.weatherarb.com/api/v1/pulse/madrid')
+.then(r=>r.json()).then(d=>{
+  if(!d.weather)return;
+  var z=d.weather.z_score||0,t=d.weather.temperature_c,l=d.weather.anomaly_level||'—',e=(d.weather.event_type||'').replace(/_/g,' ');
+  var s=d.signal&&d.signal.score?d.signal.score:0;
+  var c={CRITICAL:'#7f1d1d',EXTREME:'#7c2d12',UNUSUAL:'#1a3a5c',NORMAL:'#1a3a5c'};
+  document.getElementById('b-temp').innerHTML='<strong>'+(t?t.toFixed(1)+'°C':'—')+'</strong><span>Temp</span>';
+  document.getElementById('b-z').innerHTML='<strong>'+(z>=0?'+':'')+z.toFixed(2)+'</strong><span>Z-Score</span>';
+  document.getElementById('b-l').innerHTML='<strong>'+l+'</strong><span>Level</span>';
+  document.getElementById('v-z').textContent=(z>=0?'+':'')+z.toFixed(2);
+  document.getElementById('v-s').textContent=s.toFixed(1)+'/10';
+  document.getElementById('v-e').textContent=e||'Clear';
+  document.getElementById('hero').style.background=c[l]||'#1a3a5c';
+}).catch(()=>{});
+</script>
+</body></html>
