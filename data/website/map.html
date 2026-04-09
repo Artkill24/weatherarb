@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>WeatherArb — Live Weather Map Europe</title>
+<script src="//unpkg.com/maplibre-gl@5.0.1/dist/maplibre-gl.js"></script>
+<link href="//unpkg.com/maplibre-gl@5.0.1/dist/maplibre-gl.css" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', sans-serif; background: #0f1117; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+nav {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px;
+  background: linear-gradient(180deg, rgba(15,17,23,.95) 0%, transparent 100%);
+}
+.logo { font-family: Georgia, serif; font-size: 18px; color: white;
+  display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.logo-icon { width: 28px; height: 28px; background: #1a3a5c;
+  border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+
+.legend {
+  position: absolute; bottom: 32px; left: 24px; z-index: 10;
+  background: rgba(15,17,23,.85); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 12px; padding: 14px 18px;
+  backdrop-filter: blur(12px);
+}
+.legend-title { font-size: 10px; color: rgba(255,255,255,.5);
+  text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+.legend-item { display: flex; align-items: center; gap: 8px;
+  color: rgba(255,255,255,.7); font-size: 12px; margin-bottom: 6px; }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+.geo-card {
+  position: absolute; top: 72px; right: 16px; z-index: 10;
+  background: rgba(15,17,23,.9); border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px; padding: 16px 20px; min-width: 220px;
+  backdrop-filter: blur(12px); display: none;
+}
+.geo-card .city { font-family: Georgia, serif; font-size: 18px; color: white; margin-bottom: 4px; }
+.geo-card .desc { font-size: 12px; color: rgba(255,255,255,.5); margin-bottom: 12px; }
+.geo-stats { display: flex; gap: 16px; margin-bottom: 12px; }
+.geo-stat .val { font-size: 22px; font-weight: 700; color: white; }
+.geo-stat .lbl { font-size: 10px; color: rgba(255,255,255,.4); text-transform: uppercase; }
+.geo-btn { display: block; background: #2563eb; color: white;
+  padding: 8px 14px; border-radius: 8px; text-align: center;
+  text-decoration: none; font-size: 12px; font-weight: 500; }
+
+@keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.4);opacity:.7} }
+.dot-critical { animation: pulse 1.5s infinite; }
+.dot-extreme { animation: pulse 2s infinite; }
+
+.maplibregl-popup-content {
+  background: #1e293b !important; color: white !important;
+  border-radius: 12px !important; padding: 14px 16px !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,.6) !important;
+  border: 1px solid rgba(255,255,255,.1) !important;
+  min-width: 180px;
+}
+.maplibregl-popup-tip { border-top-color: #1e293b !important; }
+.maplibregl-popup-close-button { color: rgba(255,255,255,.6) !important; font-size: 16px !important; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-icon">⛈</div>
+    WeatherArb
+  </a>
+  <div style="display:flex;gap:16px;align-items:center">
+    <a href="/" style="color:rgba(255,255,255,.6);font-size:13px;text-decoration:none">← Homepage</a>
+    <span id="live-badge" style="display:flex;align-items:center;gap:6px;font-size:12px;color:#16a34a">
+      <span style="width:7px;height:7px;border-radius:50%;background:#16a34a;animation:pulse 2s infinite;display:inline-block"></span>
+      Live
+    </span>
+  </div>
+</nav>
+
+<div id="map"></div>
+
+<div class="legend">
+  <div class="legend-title">Anomaly Level</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#ef4444;box-shadow:0 0 8px #ef4444"></div>CRITICAL (Z≥3)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f97316"></div>EXTREME (Z≥2)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#eab308"></div>UNUSUAL (Z≥1)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div>NORMAL</div>
+  <div style="margin-top:10px;font-size:10px;color:rgba(255,255,255,.3)">ERA5-Land + OpenWeatherMap</div>
+</div>
+
+<div class="geo-card" id="geo-card">
+  <div class="city" id="gc-city">—</div>
+  <div class="desc" id="gc-desc">Caricamento...</div>
+  <div class="geo-stats">
+    <div class="geo-stat"><div class="val" id="gc-temp">—</div><div class="lbl">Temp</div></div>
+    <div class="geo-stat"><div class="val" id="gc-z">—</div><div class="lbl">Z-Score</div></div>
+    <div class="geo-stat"><div class="val" id="gc-level">—</div><div class="lbl">Livello</div></div>
+  </div>
+  <a class="geo-btn" id="gc-link" href="#">Analisi completa →</a>
+</div>
+
+<script>
+var map = new maplibregl.Map({
+  container: 'map',
+  style: 'https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json',
+  center: [10.5, 47.5],
+  zoom: 5,
+  scrollZoom: true
+});
+
+map.addControl(new maplibregl.NavigationControl(), 'bottom-right');
+
+var colors = {critical:'#ef4444', extreme:'#f97316', unusual:'#eab308', normal:'#3b82f6'};
+var sizes = {critical:18, extreme:14, unusual:11, normal:8};
+
+function getLevel(z){
+  var a = Math.abs(z||0);
+  if(a>=3) return 'critical';
+  if(a>=2) return 'extreme';
+  if(a>=1) return 'unusual';
+  return 'normal';
+}
+
+function makeSlug(name){
+  return name.toLowerCase()
+    .replace(/[àáâ]/g,'a').replace(/[èéê]/g,'e')
+    .replace(/[ùúû]/g,'u').replace(/ü/g,'u')
+    .replace(/ö/g,'o').replace(/ä/g,'a')
+    .replace(/[^a-z0-9]/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
+}
+
+var cities = [
+  {n:"Torino",la:45.07,lo:7.69},{n:"Aosta",la:45.74,lo:7.32},
+  {n:"Milano",la:45.46,lo:9.19},{n:"Varese",la:45.82,lo:8.83},
+  {n:"Como",la:45.81,lo:9.09},{n:"Bergamo",la:45.70,lo:9.68},
+  {n:"Brescia",la:45.54,lo:10.22},{n:"Sondrio",la:46.17,lo:9.87},
+  {n:"Trento",la:46.07,lo:11.12},{n:"Bolzano",la:46.50,lo:11.36},
+  {n:"Vicenza",la:45.55,lo:11.55},{n:"Verona",la:45.44,lo:10.99},
+  {n:"Venezia",la:45.44,lo:12.33},{n:"Padova",la:45.41,lo:11.88},
+  {n:"Treviso",la:45.67,lo:12.24},{n:"Belluno",la:46.14,lo:12.22},
+  {n:"Udine",la:46.06,lo:13.24},{n:"Trieste",la:45.65,lo:13.78},
+  {n:"Genova",la:44.41,lo:8.93},{n:"Bologna",la:44.49,lo:11.34},
+  {n:"Parma",la:44.80,lo:10.33},{n:"Modena",la:44.65,lo:10.92},
+  {n:"Ferrara",la:44.84,lo:11.62},{n:"Biella",la:45.56,lo:8.05},
+  {n:"Novara",la:45.45,lo:8.62},{n:"Vercelli",la:45.32,lo:8.42},
+  {n:"Cuneo",la:44.39,lo:7.55},{n:"Asti",la:44.90,lo:8.21},
+  {n:"Alessandria",la:44.91,lo:8.62},{n:"Pavia",la:45.19,lo:9.16},
+  {n:"Lodi",la:45.31,lo:9.50},{n:"Cremona",la:45.13,lo:10.03},
+  {n:"Mantova",la:45.16,lo:10.79},{n:"Lecco",la:45.86,lo:9.40},
+  {n:"München",la:48.14,lo:11.58},{n:"Hamburg",la:53.58,lo:10.02},
+  {n:"Berlin",la:52.52,lo:13.40},{n:"Frankfurt",la:50.11,lo:8.68},
+  {n:"Stuttgart",la:48.78,lo:9.18},{n:"Köln",la:50.94,lo:6.96},
+  {n:"Düsseldorf",la:51.22,lo:6.78},{n:"Nürnberg",la:49.45,lo:11.08}
+];
+
+function addMarkers(cache){
+  cities.forEach(function(c){
+    var d = cache[c.n.toLowerCase()];
+    var z = d ? (d.z_score||0) : 0;
+    var level = getLevel(z);
+    var color = colors[level];
+    var size = sizes[level];
+    var slug = makeSlug(c.n);
+
+    var el = document.createElement('div');
+    el.style.cssText = 'width:'+size+'px;height:'+size+'px;border-radius:50%;'
+      +'background:'+color+';border:2px solid rgba(255,255,255,.5);cursor:pointer;'
+      +'box-shadow:0 0 '+(level==='critical'?12:4)+'px '+color;
+    if(level==='critical') el.className='dot-critical';
+    else if(level==='extreme') el.className='dot-extreme';
+
+    var zText = z!==0 ? (z>=0?'+':'')+z.toFixed(2) : '—';
+    var popupHtml = '<div style="font-family:Georgia,serif;font-size:16px;margin-bottom:8px">'+c.n+'</div>'
+      +'<div style="display:flex;gap:14px;margin-bottom:10px">'
+      +'<div><div style="font-size:10px;opacity:.5;text-transform:uppercase">Z-Score</div>'
+      +'<div style="font-size:20px;font-weight:700;color:'+color+'">'+zText+'</div></div>'
+      +(d?'<div><div style="font-size:10px;opacity:.5;text-transform:uppercase">Livello</div>'
+        +'<div style="font-size:13px;font-weight:600;color:'+color+'">'+d.anomaly_level+'</div></div>':'')
+      +(d&&d.score?'<div><div style="font-size:10px;opacity:.5;text-transform:uppercase">Score</div>'
+        +'<div style="font-size:13px;font-weight:600">'+Number(d.score).toFixed(1)+'/10</div></div>':'')
+      +'</div>'
+      +(d&&d.event_type?'<div style="font-size:12px;opacity:.6;margin-bottom:10px">'+d.event_type.replace(/_/g,' ')+'</div>':'')
+      +'<a href="/it/'+slug+'/" style="display:block;background:#2563eb;color:white;padding:8px;'
+      +'border-radius:8px;text-align:center;font-size:12px;text-decoration:none">Analisi completa →</a>';
+
+    new maplibregl.Marker({element:el})
+      .setLngLat([c.lo, c.la])
+      .setPopup(new maplibregl.Popup({offset:size/2+2, closeButton:true}).setHTML(popupHtml))
+      .addTo(map);
+  });
+}
+
+// Load data
+fetch('https://api.weatherarb.com/api/v1/europe/top?limit=60')
+  .then(function(r){return r.json();})
+  .then(function(d){
+    var cache = {};
+    if(d&&d.data) d.data.forEach(function(x){if(x.province)cache[x.province.toLowerCase()]=x;});
+    addMarkers(cache);
+  })
+  .catch(function(){addMarkers({});});
+
+// Geo card
+if(navigator.geolocation){
+  navigator.geolocation.getCurrentPosition(function(pos){
+    fetch('https://api.weatherarb.com/api/v1/pulse/nearby?lat='+pos.coords.latitude+'&lon='+pos.coords.longitude)
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(!d.province) return;
+      var card = document.getElementById('geo-card');
+      card.style.display='block';
+      document.getElementById('gc-city').textContent = d.province+' ('+d.distance_km+'km)';
+      var z = d.z_score||0;
+      var level = getLevel(z);
+      var color = colors[level];
+      var rain = d.precipitation||0;
+      document.getElementById('gc-desc').textContent = rain>0.5 ? '🌧️ Pioggia '+rain.toFixed(1)+'mm/h' : (d.event_type||'Monitoraggio attivo').replace(/_/g,' ');
+      document.getElementById('gc-temp').textContent = d.temperature_c?d.temperature_c.toFixed(1)+'°':'—';
+      var zEl = document.getElementById('gc-z');
+      zEl.textContent = (z>=0?'+':'')+z.toFixed(2);
+      zEl.style.color = color;
+      var lEl = document.getElementById('gc-level');
+      lEl.textContent = d.anomaly_level||'—';
+      lEl.style.color = color;
+      document.getElementById('gc-link').href = '/it/'+makeSlug(d.province)+'/';
+    }).catch(function(){});
+  }, null, {timeout:5000});
+}
+</script>
+</body>
+</html>
