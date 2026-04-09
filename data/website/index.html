@@ -147,6 +147,41 @@
   </div>
 </div>
 
+<!-- GEO WIDGET -->
+<div id="geo-banner" style="display:none;background:#1a3a5c;color:white;padding:16px 48px;font-size:14px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div>
+      <span style="opacity:.7;font-size:11px;text-transform:uppercase;letter-spacing:1px">📍 La tua area</span>
+      <span id="geo-province" style="font-weight:600;margin-left:8px">—</span>
+      <span id="geo-dist" style="opacity:.6;font-size:12px;margin-left:6px"></span>
+    </div>
+    <div style="display:flex;gap:24px;align-items:center">
+      <div><span style="opacity:.6;font-size:11px">Z-SCORE</span><span id="geo-z" style="font-weight:700;font-size:18px;margin-left:8px">—</span></div>
+      <div><span style="opacity:.6;font-size:11px">LIVELLO</span><span id="geo-level" style="font-weight:700;margin-left:8px">—</span></div>
+      <a id="geo-link" href="#" style="background:rgba(255,255,255,.15);color:white;padding:8px 16px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:500">Vedi analisi →</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  if(!navigator.geolocation) return;
+  navigator.geolocation.getCurrentPosition(function(pos){
+    var lat=pos.coords.latitude, lon=pos.coords.longitude;
+    fetch('https://api.weatherarb.com/api/v1/pulse/nearby?lat='+lat+'&lon='+lon)
+    .then(function(r){return r.json()})
+    .then(function(d){
+      if(!d.province) return;
+      document.getElementById('geo-banner').style.display='block';
+      document.getElementById('geo-province').textContent=d.province;
+      document.getElementById('geo-dist').textContent='('+d.distance_km+'km)';
+      document.getElementById('geo-z').textContent=(d.z_score>=0?'+':'')+Number(d.z_score).toFixed(2);
+      document.getElementById('geo-level').textContent=d.anomaly_level||'—';
+      document.getElementById('geo-link').href='/it/'+d.slug+'/';
+    }).catch(function(){});
+  }, function(){}, {timeout:5000});
+})();
+</script>
+<!-- END GEO WIDGET -->
 <div class="hero">
   <div class="hero-text fade-in">
     <h1>Weather signals.<br><em>Precise advice.</em><br>Anywhere in Europe.</h1>
