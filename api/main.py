@@ -412,3 +412,53 @@ def get_latest_reports(limit: int = 6):
             })
         except: pass
     return {"last_updated": datetime.utcnow().isoformat(), "count": len(articles), "reports": articles}
+
+# ── NEARBY PULSE ────────────────────────────────────────────────────
+import math
+
+def haversine_km(lat1, lon1, lat2, lon2):
+    R = 6371
+    dlat = math.radians(lat2 - lat1)
+    dlon = math.radians(lon2 - lon1)
+    a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon/2)**2
+    return R * 2 * math.asin(math.sqrt(a))
+
+@app.get("/api/v1/pulse/nearby")
+def pulse_nearby(lat: float, lon: float, radius_km: float = 100):
+    """Trova il segnale più vicino alle coordinate utente."""
+    closest = None
+    min_dist = float('inf')
+
+    for prov in _province_index.values():
+        dist = haversine_km(lat, lon, prov['lat'], prov['lon'])
+        if dist < min_dist:
+            min_dist = dist
+            closest = prov
+
+    if not closest or min_dist > radius_km:
+        return {"status": "no_data_nearby", "distance_km": min_dist}
+
+    key = closest['nome'].lower()
+    if key not in _pulse_cache:
+        _refresh_provincia(key)
+
+    pulse = _pulse_cache.get(key, {})
+    trig = pulse.get("weather_trigger", {})
+    arb = pulse.get("arbitrage_score", {})
+
+    slug = closest['nome'].lower()
+    slug = slug.replace(' ','-').replace("'",'-')
+
+    return {
+        "province": closest['nome'],
+        "region": closest.get('regione',''),
+        "distance_km": round(min_dist, 1),
+        "slug": slug,
+        "z_score": trig.get("z_score", 0),
+        "anomaly_level": trig.get("anomaly_level", "NORMAL"),
+        "event_type": trig.get("type", ""),
+        "temperature_c": trig.get("current_temp_c"),
+        "precipitation": trig.get("rain_1h_mm", 0),
+        "score": arb.get("score", 0),
+        "vertical": pulse.get("action_plan", {}).get("recommended_vertical", ""),
+    }
