@@ -1,0 +1,74 @@
+{
+  "1": {
+    "temp_mean": 0.96,
+    "temp_std": 3.66,
+    "rain_mean": 1.19,
+    "rain_std": 0.95
+  },
+  "2": {
+    "temp_mean": 2.3,
+    "temp_std": 4.37,
+    "rain_mean": 1.77,
+    "rain_std": 1.42
+  },
+  "3": {
+    "temp_mean": 6.55,
+    "temp_std": 4.02,
+    "rain_mean": 1.84,
+    "rain_std": 1.47
+  },
+  "4": {
+    "temp_mean": 10.77,
+    "temp_std": 3.77,
+    "rain_mean": 2.76,
+    "rain_std": 2.21
+  },
+  "5": {
+    "temp_mean": 15.02,
+    "temp_std": 3.47,
+    "rain_mean": 3.49,
+    "rain_std": 2.79
+  },
+  "6": {
+    "temp_mean": 19.49,
+    "temp_std": 4.1,
+    "rain_mean": 2.73,
+    "rain_std": 2.18
+  },
+  "7": {
+    "temp_mean": 21.59,
+    "temp_std": 3.11,
+    "rain_mean": 2.2,
+    "rain_std": 1.76
+  },
+  "8": {
+    "temp_mean": 21.02,
+    "temp_std": 3.45,
+    "rain_mean": 2.51,
+    "rain_std": 2.01
+  },
+  "9": {
+    "temp_mean": 16.71,
+    "temp_std": 3.47,
+    "rain_mean": 2.34,
+    "rain_std": 1.87
+  },
+  "10": {
+    "temp_mean": 11.78,
+    "temp_std": 3.52,
+    "rain_mean": 2.59,
+    "rain_std": 2.07
+  },
+  "11": {
+    "temp_mean": 6.3,
+    "temp_std": 3.29,
+    "rain_mean": 4.15,
+    "rain_std": 3.32
+  },
+  "12": {
+    "temp_mean": 1.9,
+    "temp_std": 3.5,
+    "rain_mean": 1.87,
+    "rain_std": 1.5
+  }
+}
