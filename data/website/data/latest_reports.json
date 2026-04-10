@@ -1,6 +1,84 @@
 {
-  "last_updated": "2026-04-10T18:42:11.737878",
+  "last_updated": "2026-04-10T19:59:51.931586",
   "reports": [
+    {
+      "slug": "2026-04-10-manchester-heavy-rain",
+      "title": "Manchester: Piogge Estreme e Anomalia Critica (+8.49 Z-Score)",
+      "excerpt": "Manchester sta affrontando un evento di piogge torrenziali di portata eccezionale, con un Z-Score di +8.49 che indica una deviazione critica dalle medie storiche e gravi impatti attesi.",
+      "provincia": "Manchester",
+      "evento": "Heavy_Rain",
+      "date": "2026-04-10",
+      "z_score": 8.49,
+      "score": 7.02,
+      "anomaly_level": "CRITICAL",
+      "url": "/news/2026-04-10-manchester-heavy-rain/",
+      "is_live": true
+    },
+    {
+      "slug": "2026-04-10-glasgow-clear",
+      "title": "Glasgow: Anomalia Climatica Estrema Sotto un Cielo Ingannevolmente Sereno",
+      "excerpt": "Analisi professionale dell'anomalia climatica critica a Glasgow: uno Z-Score di +3.94 indica una deviazione eccezionale dalle norme storiche, nonostante i cieli sereni. Livello CRITICAL, score 8.5/10. Impatti potenziali significativi richiedono monitoraggio e adattamento.",
+      "provincia": "Glasgow",
+      "evento": "Clear",
+      "date": "2026-04-10",
+      "z_score": 3.94,
+      "score": 8.51,
+      "anomaly_level": "CRITICAL",
+      "url": "/news/2026-04-10-glasgow-clear/",
+      "is_live": true
+    },
+    {
+      "slug": "2026-04-10-bilbao-heat-wave",
+      "title": "Bilbao: Allerta Massima per Onda di Calore Critica (+3.52 Z-Score)",
+      "excerpt": "Bilbao sta affrontando un'ondata di calore estrema, classificata come CRITICAL con un Z-Score di +3.52. Questo evento eccezionale richiede massima attenzione per i suoi gravi impatti sulla salute e sulla vita quotidiana.",
+      "provincia": "Bilbao",
+      "evento": "Heat_Wave",
+      "date": "2026-04-10",
+      "z_score": 3.52,
+      "score": 7.8,
+      "anomaly_level": "CRITICAL",
+      "url": "/news/2026-04-10-bilbao-heat-wave/",
+      "is_live": true
+    },
+    {
+      "slug": "2026-04-10-leeds-clear",
+      "title": "Anomalia Termica Critica a Leeds: Un Evento Climatico Raro",
+      "excerpt": "Leeds sta affrontando un'anomalia termica senza precedenti, con uno Z-Score di +3.15 che indica condizioni critiche. Questo evento, di estrema rarità statistica, richiede un'attenzione immediata per i suoi potenziali impatti sulla salute pubblica e sulle infrastrutture.",
+      "provincia": "Leeds",
+      "evento": "Clear",
+      "date": "2026-04-10",
+      "z_score": 3.15,
+      "score": 7.07,
+      "anomaly_level": "CRITICAL",
+      "url": "/news/2026-04-10-leeds-clear/",
+      "is_live": true
+    },
+    {
+      "slug": "2026-04-10-sondrio-heat-wave",
+      "title": "Ondata di Calore Critica a Sondrio: Anomalia Senza Precedenti",
+      "excerpt": "Sondrio è colpita da un'ondata di calore critica, con uno Z-Score di +3.12 che indica un'anomalia termica senza precedenti. Le conseguenze sulla salute, agricoltura e risorse idriche sono severe, richiedendo massima attenzione e misure preventive.",
+      "provincia": "Sondrio",
+      "evento": "Heat_Wave",
+      "date": "2026-04-10",
+      "z_score": 3.12,
+      "score": 8.36,
+      "anomaly_level": "CRITICAL",
+      "url": "/news/2026-04-10-sondrio-heat-wave/",
+      "is_live": true
+    },
+    {
+      "slug": "2026-04-10-bolzano-heat-wave",
+      "title": "Bolzano: Ondata di Calore Critica, Anomalia Z-Score +3.02",
+      "excerpt": "Bolzano è attualmente sotto l'influenza di un'ondata di calore di intensità eccezionale, classificata come CRITICAL. L'analisi approfondita dei dati meteorologici rivela uno Z-Score di +3.02, indicando una deviazione standard di oltre tre volte rispetto alla media storica. Questo evento di estrema rarità statistica solleva serie preoccupazioni per la salute pubblica, l'agricoltura e l'ambiente locale.",
+      "provincia": "Bolzano",
+      "evento": "Heat_Wave",
+      "date": "2026-04-10",
+      "z_score": 3.02,
+      "score": 8.44,
+      "anomaly_level": "CRITICAL",
+      "url": "/news/2026-04-10-bolzano-heat-wave/",
+      "is_live": true
+    },
     {
       "title": "Heat Wave anomalo a Verbano-Cusio-Ossola: analisi WeatherArb del 10/04/2026",
       "slug": "2026-04-10-verbano-cusio-ossola-heat-wave",
@@ -108,18 +186,6 @@
       "anomaly_level": "EXTREME",
       "excerpt": "Anomalia meteo a Biella. Z-Score +4.03, livello EXTREME. Analisi tecnica e consigli pratici.",
       "url": "/news/2026-04-09-biella-heat-wave/"
-    },
-    {
-      "title": "Heat Wave anomalo a Aosta: analisi WeatherArb del 09/04/2026",
-      "slug": "2026-04-09-aosta-heat-wave",
-      "date": "2026-04-09",
-      "provincia": "Aosta",
-      "evento": "Heat Wave",
-      "z_score": 5.41,
-      "score": 8.27,
-      "anomaly_level": "CRITICAL",
-      "excerpt": "Anomalia meteo a Aosta. Z-Score +5.41, livello CRITICAL. Analisi tecnica e consigli pratici.",
-      "url": "/news/2026-04-09-aosta-heat-wave/"
     }
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "slug": "2026-04-10-sondrio-heat-wave",
+  "title": "Ondata di Calore Critica a Sondrio: Anomalia Senza Precedenti",
+  "excerpt": "Sondrio è colpita da un'ondata di calore critica, con uno Z-Score di +3.12 che indica un'anomalia termica senza precedenti. Le conseguenze sulla salute, agricoltura e risorse idriche sono severe, richiedendo massima attenzione e misure preventive.",
+  "content": "Sondrio è attualmente sotto l'assedio di un'ondata di calore di intensità eccezionale, che sta mettendo a dura prova la resistenza del territorio e della sua popolazione. Le condizioni attuali segnalano un'anomalia climatica di livello critico, richiedendo massima attenzione e prontezza d'azione.\n\nL'analisi dei dati meteorologici rivela uno Z-Score di +3.12, indicando una deviazione estremamente significativa rispetto alla baseline climatica ERA5-Land. Questo valore posiziona l'attuale episodio tra gli eventi più estremi registrati per la regione di Sondrio, configurando un'anomalia termica di proporzioni quasi inedite nel contesto storico recente. Il livello di anomalia è classificato come 'CRITICAL', corroborato da uno score complessivo di 8.4/10, che sottintende una persistenza e un'intensità del fenomeno ben oltre la media stagionale, con potenziali superamenti di record di temperatura.\n\nLe conseguenze di un'ondata di calore di tale entità sono molteplici e severe. Si prevedono impatti significativi sulla salute pubblica, con particolare rischio per le fasce più vulnerabili (anziani, bambini, persone con patologie preesistenti) a causa dello stress termico e della disidratazione. In ambito agricolo, le colture tipiche della Valtellina, come la vite e altre colture specializzate, potrebbero subire danni ingenti, compromettendo i raccolti. Non sono da sottovalutare gli effetti sulle risorse idriche, con un possibile calo dei livelli dei fiumi e un aumento della siccità, e sull'incremento della domanda energetica per il raffrescamento, che potrebbe mettere sotto stress la rete elettrica. Aumenta inoltre il rischio di incendi boschivi, data la vegetazione secca e le alte temperature.\n\nL'ondata di calore che sta interessando Sondrio rappresenta un evento meteorologico di portata eccezionale che richiede una gestione proattiva e coordinata. È fondamentale monitorare costantemente l'evoluzione della situazione e attuare tutte le misure preventive e mitigative necessarie per proteggere la salute pubblica e le risorse del territorio in questi giorni critici.",
+  "provincia": "Sondrio",
+  "evento": "Heat_Wave",
+  "date": "2026-04-10",
+  "z_score": 3.12,
+  "score": 8.36,
+  "anomaly_level": "CRITICAL",
+  "url": "/news/2026-04-10-sondrio-heat-wave/"
+}

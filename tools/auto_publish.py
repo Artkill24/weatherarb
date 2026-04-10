@@ -63,7 +63,7 @@ Struttura:
 Rispondi SOLO con JSON:
 {{"title": "...", "content": "...", "excerpt": "..."}}"""
 
-        resp = client.models.generate_content(model='gemini-2.0-flash', contents=prompt)
+        resp = client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
         text = resp.text.strip()
         if text.startswith('```'):
             text = text.split('```')[1]
