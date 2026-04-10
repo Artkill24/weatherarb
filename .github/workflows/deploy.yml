@@ -1,28 +1,36 @@
-name: Update Content
-
+name: WeatherArb Auto-Publish
 on:
   schedule:
     - cron: '0 */6 * * *'
   workflow_dispatch:
 
 jobs:
-  update:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - run: pip install requests python-slugify
-      - name: Generate content
+
+      - name: Install dependencies
+        run: |
+          pip install requests google-genai python-slugify
+
+      - name: Generate articles + update data
         env:
           OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
         run: python3 tools/auto_publish.py
+
       - name: Push changes
         run: |
           git config user.email "bot@weatherarb.com"
           git config user.name "WeatherArb Bot"
-          git add data/website/data/ data/website/sitemap.xml || true
-          git diff --staged --quiet || git commit -m "Auto-update $(date -u +%Y-%m-%dT%H:%M)"
+          git add data/ || true
+          git diff --staged --quiet || git commit -m "Auto-publish $(date -u +%Y-%m-%dT%H:%M)"
           git push
