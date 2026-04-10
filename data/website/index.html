@@ -3,618 +3,692 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WeatherArb — Local Weather Intelligence, Worldwide</title>
-<meta name="description" content="WeatherArb detects weather anomalies across Europe and recommends the right products before demand spikes.">
+<title>WeatherArb — European Weather Intelligence</title>
+<meta name="description" content="Real-time weather anomaly detection across 65 European cities. Z-Score vs ERA5-Land + NASA POWER baselines. Free API.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --ink: #0f1117;
-    --paper: #f5f3ee;
-    --storm: #1a3a5c;
-    --electric: #2563eb;
-    --amber: #d97706;
-    --mist: #e8e5de;
-    --text-muted: #6b6560;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); min-height: 100vh; overflow-x: hidden; }
+:root {
+  --ink:#0f1117; --paper:#f5f3ee; --storm:#1a3a5c; --electric:#2563eb;
+  --mist:#e8e5de; --muted:#6b6560; --green:#16a34a;
+  --critical:#ef4444; --extreme:#f97316; --unusual:#d97706;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
 
-  nav {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 20px 48px; border-bottom: 1px solid var(--mist);
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(245,243,238,0.92); backdrop-filter: blur(12px);
-  }
-  .logo { font-family: 'Instrument Serif', serif; font-size: 22px; letter-spacing: -0.5px; display: flex; align-items: center; gap: 10px; }
-  .logo-icon { width: 32px; height: 32px; background: var(--storm); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
-  .nav-tag { font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
+/* NAV */
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 48px;border-bottom:1px solid var(--mist);position:sticky;top:0;z-index:100;background:rgba(245,243,238,.95);backdrop-filter:blur(16px)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo-icon{width:30px;height:30px;background:var(--storm);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px}
+.logo-text{font-family:'Instrument Serif',serif;font-size:20px;letter-spacing:-.5px}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{padding:7px 14px;border-radius:7px;font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:all .15s}
+.nav-links a:hover{background:var(--mist);color:var(--ink)}
+.nav-links a.active{background:var(--storm);color:white}
+.nav-links a.cta{background:var(--electric);color:white}
+.nav-links a.cta:hover{opacity:.9;background:var(--electric)}
 
-  .ticker-wrap { background: var(--storm); color: white; overflow: hidden; padding: 12px 0; font-size: 13px; font-weight: 500; letter-spacing: 0.5px; }
-  .ticker { display: flex; animation: scroll 40s linear infinite; white-space: nowrap; }
-  .ticker span { padding: 0 48px; opacity: 0.85; }
-  .ticker span strong { opacity: 1; color: #93c5fd; }
-  @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+/* TICKER */
+.ticker-wrap{background:var(--storm);color:white;overflow:hidden;padding:10px 0;font-size:12px;font-weight:500;letter-spacing:.5px}
+.ticker{display:flex;animation:ticker 50s linear infinite;white-space:nowrap}
+.ticker span{padding:0 40px;opacity:.8}
+.ticker span strong{opacity:1;color:#93c5fd}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-  .hero { padding: 80px 48px 60px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-  .hero-text h1 { font-family: 'Instrument Serif', serif; font-size: clamp(38px, 5vw, 64px); line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 24px; }
-  .hero-text h1 em { font-style: italic; color: var(--electric); }
-  .hero-text p { font-size: 17px; color: var(--text-muted); line-height: 1.7; max-width: 440px; margin-bottom: 36px; }
-  .hero-stats { display: flex; gap: 32px; }
-  .stat-num { font-family: 'Instrument Serif', serif; font-size: 32px; letter-spacing: -1px; color: var(--storm); }
-  .stat-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; }
+/* GEO BAR */
+#geo-bar{display:none;background:linear-gradient(135deg,#1a3a5c,#0d2a4a);border-bottom:1px solid rgba(255,255,255,.08)}
+.geo-inner{max-width:1200px;margin:0 auto;padding:14px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.geo-left{display:flex;align-items:center;gap:14px}
+.geo-icon{font-size:36px;line-height:1}
+.geo-city{font-size:16px;font-weight:600;color:white}
+.geo-desc{font-size:12px;color:rgba(255,255,255,.55);margin-top:2px}
+.geo-right{display:flex;align-items:center;gap:20px}
+.geo-stat{text-align:center}
+.geo-stat-val{font-family:'Instrument Serif',serif;font-size:26px;color:white;line-height:1}
+.geo-stat-lbl{font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+.geo-divider{width:1px;height:32px;background:rgba(255,255,255,.12)}
+.geo-btn{background:rgba(255,255,255,.12);color:white;padding:9px 16px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:500;border:1px solid rgba(255,255,255,.18);white-space:nowrap;transition:all .15s}
+.geo-btn:hover{background:rgba(255,255,255,.2)}
 
-  .signal-panel { background: white; border-radius: 20px; padding: 32px; box-shadow: 0 4px 40px rgba(0,0,0,0.08); border: 1px solid var(--mist); }
-  .signal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
-  .signal-label { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
-  .live-dot { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #16a34a; font-weight: 500; }
-  .dot { width: 7px; height: 7px; border-radius: 50%; background: #16a34a; animation: pulse-dot 2s infinite; }
-  @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-  .signal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
-  .signal-item { background: var(--paper); border-radius: 12px; padding: 16px; border: 1px solid var(--mist); transition: border-color 0.2s; }
-  .signal-item.hot { border-color: #fbbf24; background: #fffbeb; }
-  .signal-province { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
-  .signal-event { font-size: 11px; color: var(--text-muted); margin-bottom: 8px; }
-  .signal-score { font-family: 'Instrument Serif', serif; font-size: 22px; color: var(--storm); }
-  .signal-score small { font-size: 12px; color: var(--text-muted); font-family: 'DM Sans', sans-serif; }
-  .signal-badge { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 4px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-top: 6px; }
-  .badge-unusual { background: #fef3c7; color: #92400e; }
-  .badge-extreme { background: #fee2e2; color: #991b1b; }
-  .badge-normal { background: #f1f5f9; color: #64748b; }
+/* HERO */
+.hero{max-width:1200px;margin:0 auto;padding:72px 48px 56px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero h1{font-family:'Instrument Serif',serif;font-size:clamp(40px,5vw,68px);line-height:1.08;letter-spacing:-2px;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--electric)}
+.hero p{font-size:16px;color:var(--muted);line-height:1.75;max-width:420px;margin-bottom:32px}
+.hero-stats{display:flex;gap:28px;margin-bottom:32px}
+.stat-num{font-family:'Instrument Serif',serif;font-size:36px;letter-spacing:-1px;color:var(--storm)}
+.stat-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:2px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--electric);color:white;border-radius:10px;text-decoration:none;font-size:14px;font-weight:500;transition:opacity .15s}
+.btn-primary:hover{opacity:.9}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:transparent;color:var(--ink);border-radius:10px;text-decoration:none;font-size:14px;font-weight:500;border:1.5px solid var(--mist);transition:all .15s}
+.btn-secondary:hover{border-color:var(--storm);color:var(--storm)}
 
-  .regions-section { max-width: 1200px; margin: 0 auto; padding: 60px 48px; }
-  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 32px; display: flex; align-items: center; gap: 12px; }
-  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--mist); }
+/* SIGNAL PANEL */
+.signal-panel{background:white;border-radius:20px;padding:28px;box-shadow:0 4px 40px rgba(0,0,0,.07);border:1px solid var(--mist)}
+.sp-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.sp-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.live-dot{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--green);font-weight:500}
+.live-dot::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--green);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.sp-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.signal-card{background:var(--paper);border-radius:12px;padding:16px;border:1px solid var(--mist);transition:all .2s}
+.signal-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.07)}
+.sc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.sc-city{font-size:14px;font-weight:600}
+.sc-region{font-size:11px;color:var(--muted);margin-top:1px}
+.sc-badge{font-size:9px;font-weight:700;letter-spacing:1px;padding:3px 8px;border-radius:4px;text-transform:uppercase}
+.badge-critical{background:rgba(239,68,68,.1);color:#ef4444}
+.badge-extreme{background:rgba(249,115,22,.1);color:#f97316}
+.badge-unusual{background:rgba(217,119,6,.1);color:#d97706}
+.badge-normal{background:rgba(37,99,235,.08);color:#2563eb}
+.sc-score{font-family:'Instrument Serif',serif;font-size:28px;margin-bottom:2px}
+.sc-event{font-size:11px;color:var(--muted)}
+.sp-footer{text-align:center;margin-top:16px;font-size:11px;color:var(--muted)}
 
-  .countries-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
-  .country-card { background: white; border-radius: 16px; padding: 24px; border: 1px solid var(--mist); text-decoration: none; color: inherit; transition: all 0.25s; position: relative; overflow: hidden; }
-  .country-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--electric); opacity: 0; transition: opacity 0.25s; }
-  .country-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
-  .country-card:hover::before { opacity: 1; }
-  .country-flag { font-size: 32px; margin-bottom: 12px; display: block; }
-  .country-card h3 { font-family: 'Instrument Serif', serif; font-size: 20px; margin-bottom: 6px; }
-  .country-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
-  .country-status { margin-top: 12px; font-size: 11px; font-weight: 600; letter-spacing: 1px; }
-  .status-active { color: #16a34a; }
-  .status-soon { color: var(--amber); }
+/* SECTIONS */
+.section{padding:64px 48px;max-width:1200px;margin:0 auto}
+.section-tag{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.section-title{font-family:'Instrument Serif',serif;font-size:clamp(28px,3vw,40px);letter-spacing:-1px;margin-bottom:8px}
+.section-sub{font-size:15px;color:var(--muted);line-height:1.6;max-width:560px}
 
-  .regions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .region-card { background: white; border-radius: 16px; padding: 28px; border: 1px solid var(--mist); text-decoration: none; color: inherit; transition: all 0.25s; position: relative; overflow: hidden; }
-  .region-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--electric); opacity: 0; transition: opacity 0.25s; }
-  .region-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
-  .region-card:hover::before { opacity: 1; }
-  .region-icon { font-size: 28px; margin-bottom: 16px; display: block; }
-  .region-card h3 { font-family: 'Instrument Serif', serif; font-size: 22px; margin-bottom: 8px; }
-  .region-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
-  .region-provinces { margin-top: 16px; font-size: 12px; color: var(--electric); font-weight: 500; }
+/* DARK SECTIONS */
+.dark-section{background:#0f1117;color:white}
+.dark-section .section-tag{color:rgba(255,255,255,.35)}
+.dark-section .section-title{color:white}
+.dark-section .section-sub{color:rgba(255,255,255,.5)}
 
-  .how-section { background: var(--storm); color: white; padding: 80px 48px; }
-  .how-inner { max-width: 1200px; margin: 0 auto; }
-  .how-inner .section-label { color: rgba(255,255,255,0.4); }
-  .how-inner .section-label::after { background: rgba(255,255,255,0.1); }
-  .how-title { font-family: 'Instrument Serif', serif; font-size: clamp(28px, 4vw, 48px); margin-bottom: 48px; letter-spacing: -1px; max-width: 600px; }
-  .how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
-  .step-num { font-family: 'Instrument Serif', serif; font-size: 48px; color: rgba(255,255,255,0.15); line-height: 1; margin-bottom: 16px; }
-  .step h4 { font-size: 15px; font-weight: 500; margin-bottom: 8px; }
-  .step p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+/* MAP */
+#wa-map-svg{width:100%;display:block;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+@keyframes wa-pulse{0%,100%{opacity:1}50%{opacity:.4}}
+@keyframes wa-ring{0%{opacity:.6}100%{opacity:0;r:18}}
 
-  footer { border-top: 1px solid var(--mist); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--text-muted); max-width: 1200px; margin: 0 auto; }
-  footer a { color: var(--electric); text-decoration: none; }
+/* MARKETS */
+.markets-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+.market-card{background:white;border:1px solid var(--mist);border-radius:14px;padding:24px}
+.market-flag{font-size:28px;margin-bottom:12px}
+.market-country{font-family:'Instrument Serif',serif;font-size:22px;margin-bottom:4px}
+.market-desc{font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:16px}
+.market-status{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:6px}
+.status-active{color:var(--green)}
+.status-soon{color:var(--muted)}
 
-  .fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn 0.6s forwards; }
-  @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
-  .delay-1 { animation-delay: 0.1s; }
-  .delay-2 { animation-delay: 0.2s; }
-  .delay-3 { animation-delay: 0.3s; }
+/* ARTICLES */
+.articles-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px}
+#reports-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.article-card{background:white;border-radius:16px;padding:24px;border:1px solid var(--mist);display:flex;flex-direction:column;justify-content:space-between;min-height:180px;position:relative;transition:all .2s;text-decoration:none;color:inherit}
+.article-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.09)}
+.article-live{position:absolute;top:14px;right:14px;background:var(--critical);color:white;font-size:9px;padding:2px 8px;border-radius:4px;font-weight:700;letter-spacing:1px;animation:blink 1.5s infinite}
+.article-tag{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.article-title{font-family:'Instrument Serif',serif;font-size:17px;line-height:1.3;margin-bottom:8px}
+.article-excerpt{font-size:12px;color:var(--muted);line-height:1.5}
+.article-footer{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:12px;border-top:1px solid var(--mist)}
+.article-link{font-size:12px;color:var(--electric);font-weight:500}
+.article-meta{display:flex;gap:10px;font-size:12px;color:var(--muted)}
 
-  @media (max-width: 768px) {
-    nav { padding: 16px 20px; }
-    .hero { grid-template-columns: 1fr; padding: 40px 20px; gap: 32px; }
-    .countries-grid { grid-template-columns: 1fr 1fr; }
-    .regions-grid { grid-template-columns: 1fr; }
-    .how-steps { grid-template-columns: 1fr 1fr; }
-    .regions-section, .how-section { padding: 40px 20px; }
-    footer { flex-direction: column; gap: 12px; padding: 24px 20px; text-align: center; }
-  }
+/* HOW IT WORKS */
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.how-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:28px}
+.how-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.25);margin-bottom:16px}
+.how-icon{font-size:28px;margin-bottom:12px}
+.how-title{font-size:16px;font-weight:600;color:white;margin-bottom:8px}
+.how-text{font-size:13px;color:rgba(255,255,255,.45);line-height:1.6}
+
+/* API SECTION */
+.api-box{background:#080c12;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:20px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.8;overflow-x:auto}
+.api-kw{color:#93c5fd}
+.api-str{color:#86efac}
+.api-num{color:#fca5a5}
+.api-cmt{color:#475569}
+
+/* FOOTER */
+footer{background:var(--ink);color:rgba(255,255,255,.4);padding:40px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;font-size:12px}
+footer a{color:rgba(255,255,255,.5);text-decoration:none}
+footer a:hover{color:white}
+.footer-logo{font-family:'Instrument Serif',serif;font-size:18px;color:white;display:flex;align-items:center;gap:8px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:32px}
+  .markets-grid{grid-template-columns:1fr 1fr}
+  #reports-grid{grid-template-columns:1fr}
+  .how-grid{grid-template-columns:1fr}
+  nav{padding:14px 20px}
+  .nav-links a span{display:none}
+  .section{padding:40px 20px}
+}
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="logo">
+  <a href="/" class="logo">
     <div class="logo-icon">⛈</div>
-    WeatherArb
+    <span class="logo-text">WeatherArb</span>
+  </a>
+  <div class="nav-links">
+    <a href="/" class="active">Home</a>
+    <a href="/data/">Data</a>
+    <a href="/map.html">Map</a>
+    <a href="/alerts.html">Alerts</a>
+    <a href="/api.html">API</a>
+    <a href="/news/" class="cta">Reports</a>
   </div>
-  <div style="display:flex;align-items:center;gap:24px"><a href="/map.html" style="font-size:13px;color:#2563eb;font-weight:500;text-decoration:none">🗺 Live Map</a><a href="/open.html" style="font-size:13px;color:#2563eb;font-weight:500;text-decoration:none">API & Newsletter →</a></div>
 </nav>
 
+<!-- TICKER -->
 <div class="ticker-wrap">
-  <div class="ticker">
-    <span>🇮🇹 <strong>Trento</strong> — Heat_Wave Z=+1.55 — Cooling_Comfort active</span>
-    <span>🇩🇪 <strong>München</strong> — Heavy_Rain Z=+2.1 — Home_Maintenance active</span>
-    <span>🇪🇸 <strong>Valencia</strong> — Heat_Wave Z=+2.8 — EXTREME — Cooling_Comfort</span>
-    <span>🇫🇷 <strong>Lyon</strong> — Storm Z=+1.9 — Emergency_Prep active</span>
-    <span>🇬🇧 <strong>Manchester</strong> — Heavy_Rain Z=+1.6 — Home_Maintenance</span>
-    <span>🇮🇹 <strong>Sondrio</strong> — Heat_Wave Z=+2.01 — EXTREME</span>
-    <span>🇩🇪 <strong>Hamburg</strong> — Storm Z=+1.4 — UNUSUAL</span>
-    <span>🇮🇹 <strong>Trento</strong> — Heat_Wave Z=+1.55 — Cooling_Comfort active</span>
-    <span>🇩🇪 <strong>München</strong> — Heavy_Rain Z=+2.1 — Home_Maintenance active</span>
-    <span>🇪🇸 <strong>Valencia</strong> — Heat_Wave Z=+2.8 — EXTREME — Cooling_Comfort</span>
-    <span>🇫🇷 <strong>Lyon</strong> — Storm Z=+1.9 — Emergency_Prep active</span>
-    <span>🇬🇧 <strong>Manchester</strong> — Heavy_Rain Z=+1.6 — Home_Maintenance</span>
-    <span>🇮🇹 <strong>Sondrio</strong> — Heat_Wave Z=+2.01 — EXTREME</span>
-    <span>🇩🇪 <strong>Hamburg</strong> — Storm Z=+1.4 — UNUSUAL</span>
+  <div class="ticker" id="ticker-inner">
+    <span>Loading signals...</span>
+    <span>Loading signals...</span>
   </div>
 </div>
 
-<!-- GEO WIDGET -->
-<div id="geo-banner" style="display:none;background:#1a3a5c;color:white;padding:16px 48px;font-size:14px">
-  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
-    <div>
-      <span style="opacity:.7;font-size:11px;text-transform:uppercase;letter-spacing:1px">📍 La tua area</span>
-      <span id="geo-province" style="font-weight:600;margin-left:8px">—</span>
-      <span id="geo-dist" style="opacity:.6;font-size:12px;margin-left:6px"></span>
+<!-- GEO BAR -->
+<div id="geo-bar">
+  <div class="geo-inner">
+    <div class="geo-left">
+      <div class="geo-icon" id="geo-icon">⛅</div>
+      <div>
+        <div class="geo-city" id="geo-city">—</div>
+        <div class="geo-desc" id="geo-desc">Detecting your location...</div>
+      </div>
     </div>
-    <div style="display:flex;gap:24px;align-items:center">
-      <div><span style="opacity:.6;font-size:11px">Z-SCORE</span><span id="geo-z" style="font-weight:700;font-size:18px;margin-left:8px">—</span></div>
-      <div><span style="opacity:.6;font-size:11px">LIVELLO</span><span id="geo-level" style="font-weight:700;margin-left:8px">—</span></div>
-      <a id="geo-link" href="#" style="background:rgba(255,255,255,.15);color:white;padding:8px 16px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:500">Vedi analisi →</a>
+    <div class="geo-right">
+      <div class="geo-stat"><div class="geo-stat-val" id="geo-temp">—</div><div class="geo-stat-lbl">Temp</div></div>
+      <div class="geo-divider"></div>
+      <div class="geo-stat"><div class="geo-stat-val" id="geo-z">—</div><div class="geo-stat-lbl">Z-Score</div></div>
+      <div class="geo-divider"></div>
+      <div class="geo-stat"><div class="geo-stat-val" id="geo-level" style="font-size:14px;font-weight:600">—</div><div class="geo-stat-lbl">Level</div></div>
+      <a class="geo-btn" id="geo-link" href="#">Full analysis →</a>
     </div>
   </div>
 </div>
-<script>
-(function(){
-  if(!navigator.geolocation) return;
-  navigator.geolocation.getCurrentPosition(function(pos){
-    var lat=pos.coords.latitude, lon=pos.coords.longitude;
-    fetch('https://api.weatherarb.com/api/v1/pulse/nearby?lat='+lat+'&lon='+lon)
-    .then(function(r){return r.json()})
-    .then(function(d){
-      if(!d.province) return;
-      document.getElementById('geo-banner').style.display='block';
-      document.getElementById('geo-province').textContent=d.province;
-      document.getElementById('geo-dist').textContent='('+d.distance_km+'km)';
-      document.getElementById('geo-z').textContent=(d.z_score>=0?'+':'')+Number(d.z_score).toFixed(2);
-      document.getElementById('geo-level').textContent=d.anomaly_level||'—';
-      document.getElementById('geo-link').href='/it/'+d.slug+'/';
-    }).catch(function(){});
-  }, function(){}, {timeout:5000});
-})();
-</script>
-<!-- END GEO WIDGET -->
+
+<!-- HERO -->
 <div class="hero">
-  <div class="hero-text fade-in">
+  <div class="hero-text">
     <h1>Weather signals.<br><em>Real anomaly data.</em><br>Anywhere in Europe.</h1>
     <p>WeatherArb monitors 65 cities across Europe, detecting statistical anomalies in real-time using ERA5-Land baselines and NASA POWER climatology.</p>
     <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">4</div>
-        <div class="stat-label">Countries</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">65</div>
-        <div class="stat-label">Cities</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">72h</div>
-        <div class="stat-label">Lead time</div>
-      </div>
+      <div><div class="stat-num">65</div><div class="stat-lbl">Cities</div></div>
+      <div><div class="stat-num">4</div><div class="stat-lbl">Countries</div></div>
+      <div><div class="stat-num">72h</div><div class="stat-lbl">Lead time</div></div>
+    </div>
+    <div class="hero-actions">
+      <a href="/data/" class="btn-primary">📊 Live Dashboard</a>
+      <a href="/map.html" class="btn-secondary">🗺 Open Map</a>
+      <a href="/api.html" class="btn-secondary">⚡ Free API</a>
     </div>
   </div>
+  <div class="signal-panel">
+    <div class="sp-header">
+      <span class="sp-label">Live Signals — Europe</span>
+      <span class="live-dot">Live</span>
+    </div>
+    <div class="sp-grid" id="signal-grid">
+      <div style="grid-column:span 2;text-align:center;padding:24px;color:var(--muted);font-size:13px">Loading signals...</div>
+    </div>
+    <div class="sp-footer">Updated hourly · ERA5-Land + NASA POWER + OpenWeatherMap</div>
+  </div>
+</div>
 
-  <div class="signal-panel fade-in delay-2">
-    <div class="signal-header">
-      <div class="signal-label">Live Signals — Europe</div>
-      <div class="live-dot"><div class="dot"></div> Live</div>
+<!-- MARKETS -->
+<div style="background:white;border-top:1px solid var(--mist);border-bottom:1px solid var(--mist);padding:56px 0">
+  <div class="section" style="padding-top:0;padding-bottom:0">
+    <div class="section-tag">Coverage</div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:28px">
+      <div class="section-title">Active Markets</div>
+      <a href="/data/" style="font-size:13px;color:var(--electric);font-weight:500;text-decoration:none">View all 65 cities →</a>
     </div>
-    <div class="signal-grid">
-      <div class="signal-item hot">
-        <div class="signal-province">🇪🇸 Valencia</div>
-        <div class="signal-event">Heat_Wave · Coastal</div>
-        <div class="signal-score">8.4 <small>/ 10</small></div>
-        <span class="signal-badge badge-extreme">Extreme</span>
+    <div class="markets-grid">
+      <div class="market-card">
+        <div class="market-flag">🇮🇹</div>
+        <div class="market-country">Italy</div>
+        <div class="market-desc">47 provinces. Northern Italy fully monitored. Alpine, Po Valley, Adriatic clusters.</div>
+        <div class="market-status status-active">✅ Active · <a href="/it/" style="color:var(--electric);text-decoration:none;font-weight:400">Browse provinces →</a></div>
       </div>
-      <div class="signal-item hot">
-        <div class="signal-province">🇩🇪 München</div>
-        <div class="signal-event">Heavy_Rain · Alpine</div>
-        <div class="signal-score">7.2 <small>/ 10</small></div>
-        <span class="signal-badge badge-unusual">Unusual</span>
+      <div class="market-card">
+        <div class="market-flag">🇩🇪</div>
+        <div class="market-country">Germany</div>
+        <div class="market-desc">8 major cities. From Alpine Bavaria to North Sea Hamburg. Industrial corridor.</div>
+        <div class="market-status status-active">✅ Active · <a href="/de/" style="color:var(--electric);text-decoration:none;font-weight:400">Browse cities →</a></div>
       </div>
-      <div class="signal-item hot">
-        <div class="signal-province">🇮🇹 Trento</div>
-        <div class="signal-event">Heat_Wave · Alpine</div>
-        <div class="signal-score">6.58 <small>/ 10</small></div>
-        <span class="signal-badge badge-unusual">Unusual</span>
+      <div class="market-card">
+        <div class="market-flag">🇪🇸</div>
+        <div class="market-country">Spain</div>
+        <div class="market-desc">5 cities. Mediterranean heat, Atlantic storms, Basque maritime climate.</div>
+        <div class="market-status status-active">✅ Active · <a href="/es/" style="color:var(--electric);text-decoration:none;font-weight:400">Browse cities →</a></div>
       </div>
-      <div class="signal-item">
-        <div class="signal-province">🇫🇷 Lyon</div>
-        <div class="signal-event">Storm · Rhône Valley</div>
-        <div class="signal-score">6.1 <small>/ 10</small></div>
-        <span class="signal-badge badge-unusual">Unusual</span>
+      <div class="market-card">
+        <div class="market-flag">🇫🇷</div>
+        <div class="market-country">France</div>
+        <div class="market-desc">5 cities. From Île-de-France to Mediterranean Provence and Atlantic coast.</div>
+        <div class="market-status status-active">✅ Active · <a href="/fr/" style="color:var(--electric);text-decoration:none;font-weight:400">Browse cities →</a></div>
       </div>
-    </div>
-    <div style="font-size:11px;color:var(--text-muted);text-align:center">
-      Updated hourly · ERA5-Land + NASA POWER + OpenWeatherMap
     </div>
   </div>
 </div>
 
-<div class="regions-section">
-  <div class="section-label">Markets — Active & Coming Soon</div>
-  <div class="countries-grid">
-    <a href="/it/" class="country-card fade-in">
-      <span class="country-flag">🇮🇹</span>
-      <h3>Italy</h3>
-      <p>47 provinces. Northern Italy fully monitored.</p>
-      <div class="country-status status-active">✅ ACTIVE</div>
-    </a>
-    <div class="country-card fade-in delay-1">
-      <span class="country-flag">🇩🇪</span>
-      <h3>Germany</h3>
-      <p>16 states. Alpine south to North Sea coast.</p>
-      <div class="country-status status-active">✅ ACTIVE</div>
-    </div>
-    <div class="country-card fade-in delay-2">
-      <span class="country-flag">🇪🇸</span>
-      <h3>Spain</h3>
-      <p>50 provinces. Mediterranean heat & Atlantic storms.</p>
-      <div class="country-status status-soon">🔜 COMING SOON</div>
-    </div>
-    <div class="country-card fade-in delay-3">
-      <span class="country-flag">🇫🇷</span>
-      <h3>France</h3>
-      <p>96 departments. From Alps to Atlantic coast.</p>
-      <div class="country-status status-soon">🔜 COMING SOON</div>
-    </div>
-  </div>
-
-  <div class="section-label">Italy — Live Now</div>
-  <div class="regions-grid">
-    <a href="/it/trento/" class="region-card fade-in">
-      <span class="region-icon">🏔️</span>
-      <h3>Trentino-Alto Adige</h3>
-      <p>Alpine weather intelligence — heat waves, snowfall and seasonal anomalies.</p>
-      <div class="region-provinces">Trento · Bolzano · Sondrio →</div>
-    </a>
-    <a href="/it/vicenza/" class="region-card fade-in delay-1">
-      <span class="region-icon">🌊</span>
-      <h3>Veneto</h3>
-      <p>Flooding, persistent rain and humidity solutions for the industrial Northeast.</p>
-      <div class="region-provinces">Vicenza · Venezia · Padova →</div>
-    </a>
-    <a href="/it/milano/" class="region-card fade-in delay-2">
-      <span class="region-icon">🏙️</span>
-      <h3>Lombardia</h3>
-      <p>Urban weather preparedness for Milan, Bergamo, Brescia and the Po Valley.</p>
-      <div class="region-provinces">Milano · Bergamo · Brescia →</div>
-    </a>
-  </div>
-</div>
-
-
-  
-  <!-- INTELLIGENCE REPORTS DYNAMIC -->
-  <div style="background:white;padding:60px 48px;max-width:100%">
-    <div style="max-width:1200px;margin:0 auto">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px">
-        <div>
-          <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#6b6560;margin-bottom:8px">LATEST INTELLIGENCE REPORTS</div>
-          <div style="font-size:14px;color:#6b6560">Real-time anomaly analysis from the WeatherArb network</div>
-        </div>
-        <a href="/news/" style="font-size:13px;color:#2563eb;font-weight:500;text-decoration:none">View archive →</a>
-      </div>
-      <!-- GEO METEO WIDGET -->
-      <div id="geo-meteo-bar" style="display:none;background:linear-gradient(135deg,#1a3a5c,#0f2744);border-radius:16px;padding:20px 28px;margin-bottom:28px;color:white">
-        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
-          <div style="display:flex;align-items:center;gap:16px">
-            <div id="gm-icon" style="font-size:40px;line-height:1">⛅</div>
-            <div>
-              <div style="font-size:11px;opacity:.5;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px">📍 La tua posizione ora</div>
-              <div style="font-size:18px;font-weight:600" id="gm-city">—</div>
-              <div style="font-size:13px;opacity:.7;margin-top:2px" id="gm-desc">Caricamento...</div>
-            </div>
-          </div>
-          <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
-            <div style="text-align:center">
-              <div style="font-size:32px;font-weight:700;font-family:Georgia,serif" id="gm-temp">—</div>
-              <div style="font-size:10px;opacity:.5;text-transform:uppercase">Temp</div>
-            </div>
-            <div style="width:1px;height:36px;background:rgba(255,255,255,.15)"></div>
-            <div style="text-align:center">
-              <div style="font-size:32px;font-weight:700;font-family:Georgia,serif" id="gm-z">—</div>
-              <div style="font-size:10px;opacity:.5;text-transform:uppercase">Z-Score</div>
-            </div>
-            <div style="width:1px;height:36px;background:rgba(255,255,255,.15)"></div>
-            <div style="text-align:center">
-              <div style="font-size:15px;font-weight:600" id="gm-level">—</div>
-              <div style="font-size:10px;opacity:.5;text-transform:uppercase">Livello</div>
-            </div>
-            <a id="gm-link" href="#" style="background:rgba(255,255,255,.15);color:white;padding:10px 18px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;border:1px solid rgba(255,255,255,.2)">Analisi →</a>
-          </div>
-        </div>
-      </div>
-
-      <div id="reports-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
-        <div style="background:#f5f3ee;border-radius:16px;height:200px;animation:pulse 2s infinite"></div>
-        <div style="background:#f5f3ee;border-radius:16px;height:200px;animation:pulse 2s infinite;animation-delay:.1s"></div>
-        <div style="background:#f5f3ee;border-radius:16px;height:200px;animation:pulse 2s infinite;animation-delay:.2s"></div>
-      </div>
-    </div>
-  </div>
-  <style>
-    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-  </style>
-  <script>
-  async function loadReports(){
-    try{
-      const r=await fetch('/data/latest_reports.json');
-      const d=await r.json();
-      const g=document.getElementById('reports-grid');
-      const colors={'CRITICAL':'#ef4444','EXTREME':'#f97316','UNUSUAL':'#f59e0b','NORMAL':'#94a3b8'};
-      g.innerHTML=d.reports.map(a=>`
-        <a href="${a.url}" style="text-decoration:none;color:inherit;background:#f5f3ee;border-radius:16px;padding:24px;border:1px solid #e8e5de;display:flex;flex-direction:column;justify-content:space-between;min-height:180px;position:relative;transition:all .2s"
-           onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,0,0,.1)'"
-           onmouseout="this.style.transform='';this.style.boxShadow=''">
-          ${a.is_live?'<div style="position:absolute;top:16px;right:16px;background:#ef4444;color:white;font-size:9px;padding:2px 8px;border-radius:4px;font-weight:700;letter-spacing:1px;animation:pulse 1.5s infinite">LIVE</div>':''}
-          <div>
-            <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:${colors[a.anomaly_level]||'#f59e0b'};margin-bottom:10px">
-              ${a.provincia} · ${(a.evento||'').replace(/_/g,' ')}
-            </div>
-            <div style="font-family:'Instrument Serif',serif;font-size:17px;line-height:1.3;color:#0f1117;margin-bottom:10px">
-              ${a.title.slice(0,70)}${a.title.length>70?'...':''}
-            </div>
-            <div style="font-size:12px;color:#6b6560;line-height:1.5">${a.excerpt.slice(0,100)}...</div>
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:12px;border-top:1px solid #e8e5de">
-            <span style="font-size:12px;color:#2563eb;font-weight:500">Read report →</span>
-            <div style="display:flex;gap:12px;font-size:12px;color:#6b6560">
-              <span>Z=${(a.z_score>=0?'+':'')+Number(a.z_score).toFixed(1)}</span>
-              <span>${Number(a.score).toFixed(1)}/10</span>
-            </div>
-          </div>
-        </a>`).join('');
-    }catch(e){console.error(e)}
-  }
-  // Carica subito senza aspettare DOMContentLoaded
-  loadReports();
-
-  // GEO METEO WIDGET
-  (function(){
-    var ICONS = {
-      Heat_Wave:'🌡️', Heavy_Rain:'🌧️', Storm:'⛈️', Snow:'❄️',
-      Fog:'🌫️', Wind:'💨', Cold_Snap:'🥶', Clear:'☀️', Cloudy:'⛅'
-    };
-    var LEVEL_COLORS = {CRITICAL:'#ef4444',EXTREME:'#f97316',UNUSUAL:'#eab308',NORMAL:'#60a5fa'};
-
-    function getIcon(event, temp){
-      if(!event) return temp>25?'☀️':temp>15?'⛅':'🌥️';
-      for(var k in ICONS){ if(event.includes(k)) return ICONS[k]; }
-      return temp>25?'☀️':temp>15?'⛅':'🌥️';
-    }
-
-    if(!navigator.geolocation) return;
-    navigator.geolocation.getCurrentPosition(function(pos){
-      fetch('https://api.weatherarb.com/api/v1/pulse/nearby?lat='+pos.coords.latitude+'&lon='+pos.coords.longitude)
-      .then(function(r){return r.json();})
-      .then(function(d){
-        if(!d.province) return;
-        var bar = document.getElementById('geo-meteo-bar');
-        bar.style.display = 'block';
-        var z = d.z_score||0;
-        var level = d.anomaly_level||'NORMAL';
-        var temp = d.temperature_c;
-        var rain = d.precipitation||0;
-        var event = d.event_type||'';
-        var color = LEVEL_COLORS[level]||'#60a5fa';
-
-        document.getElementById('gm-icon').textContent = getIcon(event, temp||15);
-        document.getElementById('gm-city').textContent = d.province+' ('+d.distance_km+'km)';
-
-        var desc = rain>5?'🌧️ Pioggia intensa '+rain.toFixed(1)+'mm/h':
-                   rain>0.5?'🌦️ Pioggia '+rain.toFixed(1)+'mm/h':
-                   event?event.replace(/_/g,' '):
-                   (temp||0)>25?'☀️ Caldo, cielo sereno':(temp||0)>15?'⛅ Temperatura mite':'🌥️ Coperto';
-        document.getElementById('gm-desc').textContent = desc;
-
-        var tempEl = document.getElementById('gm-temp');
-        tempEl.textContent = temp?temp.toFixed(1)+'°C':'—';
-        tempEl.style.color = (temp||0)>30?'#f97316':(temp||0)<5?'#93c5fd':'white';
-
-        var zEl = document.getElementById('gm-z');
-        zEl.textContent = (z>=0?'+':'')+z.toFixed(2);
-        zEl.style.color = color;
-
-        var lEl = document.getElementById('gm-level');
-        lEl.textContent = level;
-        lEl.style.color = color;
-
-        // Sfondo dinamico
-        if(rain>3) bar.style.background='linear-gradient(135deg,#1e3a5c,#0d2137)';
-        else if((temp||0)>28) bar.style.background='linear-gradient(135deg,#7c2d12,#1a1a2e)';
-        else if(level==='CRITICAL') bar.style.background='linear-gradient(135deg,#7f1d1d,#0f1117)';
-
-        var slug = d.province.toLowerCase()
-          .replace(/[àáâ]/g,'a').replace(/[èéê]/g,'e')
-          .replace(/[ùúû]/g,'u').replace(/ü/g,'u')
-          .replace(/[^a-z0-9]/g,'-').replace(/-+/g,'-');
-        document.getElementById('gm-link').href='/it/'+slug+'/';
-      }).catch(function(){});
-    }, null, {timeout:6000});
-  })();
-  </script>
-  <!-- END INTELLIGENCE REPORTS DYNAMIC -->
-
-<!-- LIVE MAP STADIA -->
-<div style="background:#0f1117;padding:60px 0">
-  <div style="max-width:1200px;margin:0 auto;padding:0 48px">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;flex-wrap:wrap;gap:16px">
+<!-- LIVE MAP -->
+<div class="dark-section" style="padding:64px 0">
+  <div class="section" style="padding-top:0;padding-bottom:0">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:28px">
       <div>
-        <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px">LIVE NETWORK</div>
-        <div style="font-family:'Instrument Serif',serif;font-size:32px;color:white;letter-spacing:-0.5px">55 città monitorate in tempo reale</div><a href="/map.html" style="display:inline-block;margin-top:8px;font-size:13px;color:#60a5fa;text-decoration:none">Apri mappa fullscreen →</a>
+        <div class="section-tag">Live Network</div>
+        <div class="section-title">65 cities monitored in real-time</div>
       </div>
-      <div style="display:flex;gap:16px;font-size:12px;flex-wrap:wrap">
-        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.6)"><span style="width:10px;height:10px;border-radius:50%;background:#ef4444;display:inline-block;box-shadow:0 0 8px #ef4444"></span>CRITICAL</span>
-        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.6)"><span style="width:10px;height:10px;border-radius:50%;background:#f97316;display:inline-block"></span>EXTREME</span>
-        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.6)"><span style="width:10px;height:10px;border-radius:50%;background:#eab308;display:inline-block"></span>UNUSUAL</span>
-        <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.6)"><span style="width:10px;height:10px;border-radius:50%;background:#3b82f6;display:inline-block"></span>NORMAL</span>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <span style="display:flex;align-items:center;gap:5px;font-size:11px;color:rgba(255,255,255,.45)"><span style="width:8px;height:8px;border-radius:50%;background:#ef4444;display:inline-block;box-shadow:0 0 6px #ef4444"></span>Critical</span>
+        <span style="display:flex;align-items:center;gap:5px;font-size:11px;color:rgba(255,255,255,.45)"><span style="width:8px;height:8px;border-radius:50%;background:#f97316;display:inline-block"></span>Extreme</span>
+        <span style="display:flex;align-items:center;gap:5px;font-size:11px;color:rgba(255,255,255,.45)"><span style="width:8px;height:8px;border-radius:50%;background:#eab308;display:inline-block"></span>Unusual</span>
+        <span style="display:flex;align-items:center;gap:5px;font-size:11px;color:rgba(255,255,255,.45)"><span style="width:8px;height:8px;border-radius:50%;background:#3b82f6;display:inline-block"></span>Normal</span>
+        <a href="/map.html" style="font-size:12px;color:#60a5fa;text-decoration:none">Fullscreen map →</a>
       </div>
     </div>
-    <div id="wa-map" style="height:480px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.1)"></div>
+    <div style="background:#111827;border-radius:16px;border:1px solid rgba(255,255,255,.07);overflow:hidden;position:relative">
+      <svg id="wa-map-svg" viewBox="0 0 900 500" style="width:100%;display:block">
+        <rect width="900" height="500" fill="#111827"/>
+        <text x="240" y="430" fill="rgba(255,255,255,.04)" font-size="80" font-family="serif" font-weight="bold">IT</text>
+        <text x="610" y="170" fill="rgba(255,255,255,.04)" font-size="80" font-family="serif" font-weight="bold">DE</text>
+        <text x="60" y="430" fill="rgba(255,255,255,.04)" font-size="60" font-family="serif" font-weight="bold">ES</text>
+        <text x="140" y="290" fill="rgba(255,255,255,.04)" font-size="60" font-family="serif" font-weight="bold">FR</text>
+      </svg>
+      <div id="map-tooltip" style="display:none;position:absolute;background:#1e293b;color:white;padding:14px 18px;border-radius:12px;font-size:13px;pointer-events:none;z-index:10;min-width:180px;box-shadow:0 8px 32px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.1)"></div>
+    </div>
   </div>
 </div>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<style>
-.leaflet-container{background:#0f1117!important}
-.leaflet-popup-content-wrapper{background:#1a3a5c;color:white;border:none;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.5)}
-.leaflet-popup-tip{background:#1a3a5c}
-.leaflet-popup-close-button{color:rgba(255,255,255,.7)!important;font-size:18px!important}
-@keyframes wa-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.7;transform:scale(1.3)}}
-@keyframes wa-ring{0%{opacity:.8;transform:scale(1)}100%{opacity:0;transform:scale(2.5)}}
-.wa-dot{border-radius:50%;cursor:pointer;transition:transform .2s}
-.wa-dot:hover{transform:scale(1.5)!important}
-.wa-dot-critical{animation:wa-pulse 1.5s infinite}
-.wa-dot-extreme{animation:wa-pulse 2s infinite}
-.wa-ring{border-radius:50%;position:absolute;animation:wa-ring 1.5s infinite;pointer-events:none}
-</style>
-<script>
-document.addEventListener('DOMContentLoaded',function(){
-  var map=L.map('wa-map',{
-    center:[48,10],zoom:5,
-    zoomControl:true,attributionControl:false,
-    scrollWheelZoom:false
-  });
 
-  // Stadia Maps — domain auth (weatherarb.com registrato)
-  L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',{
-    maxZoom:14,minZoom:4
-  }).addTo(map);
-
-  var colors={critical:'#ef4444',extreme:'#f97316',unusual:'#eab308',normal:'#3b82f6'};
-  var sizes={critical:14,extreme:11,unusual:9,normal:7};
-
-  function getLevel(z){
-    var a=Math.abs(z||0);
-    if(a>=3)return 'critical';
-    if(a>=2)return 'extreme';
-    if(a>=1)return 'unusual';
-    return 'normal';
-  }
-
-  var cities=[
-    {n:"Torino",la:45.07,lo:7.69},{n:"Aosta",la:45.74,lo:7.32},
-    {n:"Milano",la:45.46,lo:9.19},{n:"Varese",la:45.82,lo:8.83},
-    {n:"Como",la:45.81,lo:9.09},{n:"Bergamo",la:45.70,lo:9.68},
-    {n:"Brescia",la:45.54,lo:10.22},{n:"Sondrio",la:46.17,lo:9.87},
-    {n:"Trento",la:46.07,lo:11.12},{n:"Bolzano",la:46.50,lo:11.36},
-    {n:"Vicenza",la:45.55,lo:11.55},{n:"Verona",la:45.44,lo:10.99},
-    {n:"Venezia",la:45.44,lo:12.33},{n:"Padova",la:45.41,lo:11.88},
-    {n:"Treviso",la:45.67,lo:12.24},{n:"Belluno",la:46.14,lo:12.22},
-    {n:"Rovigo",la:45.07,lo:11.79},{n:"Udine",la:46.06,lo:13.24},
-    {n:"Trieste",la:45.65,lo:13.78},{n:"Pordenone",la:45.96,lo:12.66},
-    {n:"Gorizia",la:45.94,lo:13.62},{n:"Genova",la:44.41,lo:8.93},
-    {n:"Bologna",la:44.49,lo:11.34},{n:"Parma",la:44.80,lo:10.33},
-    {n:"Modena",la:44.65,lo:10.92},{n:"Ferrara",la:44.84,lo:11.62},
-    {n:"Rimini",la:44.06,lo:12.57},{n:"Ravenna",la:44.42,lo:12.20},
-    {n:"Biella",la:45.56,lo:8.05},{n:"Novara",la:45.45,lo:8.62},
-    {n:"Vercelli",la:45.32,lo:8.42},{n:"Cuneo",la:44.39,lo:7.55},
-    {n:"Asti",la:44.90,lo:8.21},{n:"Alessandria",la:44.91,lo:8.62},
-    {n:"Pavia",la:45.19,lo:9.16},{n:"Lodi",la:45.31,lo:9.50},
-    {n:"Cremona",la:45.13,lo:10.03},{n:"Mantova",la:45.16,lo:10.79},
-    {n:"Lecco",la:45.86,lo:9.40},{n:"Monza",la:45.58,lo:9.27},
-    {n:"Imperia",la:43.89,lo:8.03},{n:"Savona",la:44.31,lo:8.48},
-    {n:"La Spezia",la:44.10,lo:9.82},{n:"Piacenza",la:45.05,lo:9.69},
-    {n:"Reggio Emilia",la:44.70,lo:10.63},{n:"Forlì",la:44.22,lo:12.04},
-    {n:"München",la:48.14,lo:11.58},{n:"Hamburg",la:53.58,lo:10.02},
-    {n:"Berlin",la:52.52,lo:13.40},{n:"Frankfurt",la:50.11,lo:8.68},
-    {n:"Stuttgart",la:48.78,lo:9.18},{n:"Köln",la:50.94,lo:6.96},
-    {n:"Düsseldorf",la:51.22,lo:6.78},{n:"Nürnberg",la:49.45,lo:11.08}
-  ];
-
-  function addMarkers(apiData){
-    var cache={};
-    if(apiData&&apiData.data){
-      apiData.data.forEach(function(d){if(d.province)cache[d.province.toLowerCase()]=d;});
-    }
-
-    cities.forEach(function(c){
-      var d=cache[c.n.toLowerCase()];
-      var z=d?(d.z_score||0):0;
-      var level=getLevel(z);
-      var color=colors[level];
-      var size=sizes[level];
-
-      var html='<div style="position:relative;width:'+size+'px;height:'+size+'px">'
-        +(level==='critical'||level==='extreme'?'<div class="wa-ring" style="width:'+size+'px;height:'+size+'px;border:2px solid '+color+';top:0;left:0"></div>':'')
-        +'<div class="wa-dot wa-dot-'+level+'" style="width:'+size+'px;height:'+size+'px;background:'+color+';border:1.5px solid rgba(255,255,255,.4);box-shadow:0 0 '+(level==='critical'?12:6)+'px '+color+'"></div>'
-        +'</div>';
-
-      var icon=L.divIcon({className:'',html:html,iconSize:[size,size],iconAnchor:[size/2,size/2]});
-
-      var zText=z!==0?(z>=0?'+':'')+z.toFixed(2):'—';
-      var slug=c.n.toLowerCase().replace(/[àáâ]/g,'a').replace(/[èéê]/g,'e').replace(/[ùúû]/g,'u').replace(/[^a-z0-9]/g,'-').replace(/-+/g,'-');
-      var popup='<div style="padding:4px">'
-        +'<div style="font-family:Instrument Serif,serif;font-size:17px;margin-bottom:4px">'+c.n+'</div>'
-        +'<div style="display:flex;gap:16px;margin:10px 0">'
-        +'<div><div style="opacity:.6;font-size:10px;text-transform:uppercase">Z-Score</div><div style="font-size:20px;font-weight:700;color:'+color+'">'+zText+'</div></div>'
-        +(d?'<div><div style="opacity:.6;font-size:10px;text-transform:uppercase">Livello</div><div style="font-size:13px;font-weight:600">'+d.anomaly_level+'</div></div>':'')
-        +(d&&d.score?'<div><div style="opacity:.6;font-size:10px;text-transform:uppercase">Score</div><div style="font-size:13px;font-weight:600">'+Number(d.score).toFixed(1)+'/10</div></div>':'')
-        +'</div>'
-        +(d&&d.event_type?'<div style="opacity:.7;font-size:12px;margin-bottom:10px">'+d.event_type.replace(/_/g,' ')+'</div>':'')
-        +'<a href="/it/'+slug+'/" style="display:block;background:#2563eb;color:white;padding:7px 14px;border-radius:8px;text-align:center;font-size:12px;font-weight:500;text-decoration:none">Vai all'analisi →</a>'
-        +'</div>';
-
-      L.marker([c.la,c.lo],{icon:icon}).addTo(map).bindPopup(popup,{maxWidth:220});
-    });
-  }
-
-  fetch('https://api.weatherarb.com/api/v1/europe/top?limit=60')
-    .then(function(r){return r.json()})
-    .then(function(d){addMarkers(d);})
-    .catch(function(){addMarkers({});});
-});
-</script>
-<!-- END LIVE MAP STADIA -->
-<div class="how-section">
-  <div class="how-inner">
-    <div class="section-label">How it works</div>
-    <h2 class="how-title">From weather anomaly to the right product recommendation — anywhere in Europe.</h2>
-    <div class="how-steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <h4>Signal Detection</h4>
-        <p>ERA5 historical baselines vs OWM 72h forecasts. Z-Score calculated per city, per season.</p>
+<!-- ARTICLES -->
+<div style="padding:64px 0;background:var(--paper)">
+  <div class="section" style="padding-top:0;padding-bottom:0">
+    <div class="articles-header">
+      <div>
+        <div class="section-tag">Intelligence Reports</div>
+        <div class="section-title">Latest anomaly analysis</div>
+        <div class="section-sub" style="margin-top:8px">Real-time Gemini-generated reports for active anomalies across Europe.</div>
       </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <h4>Anomaly Scoring</h4>
-        <p>Statistical outliers ranked by arbitrage potential — population density, lead time, confidence.</p>
+      <a href="/news/" style="font-size:13px;color:var(--electric);font-weight:500;text-decoration:none;white-space:nowrap">View archive →</a>
+    </div>
+    <!-- GEO METEO CARD sopra gli articoli -->
+    <div id="geo-meteo-card" style="display:none;background:linear-gradient(135deg,#1a3a5c,#0f2744);border-radius:16px;padding:20px 28px;margin-bottom:28px;color:white">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+        <div style="display:flex;align-items:center;gap:16px">
+          <div id="gmc-icon" style="font-size:36px">⛅</div>
+          <div>
+            <div style="font-size:11px;opacity:.5;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px">📍 La tua posizione</div>
+            <div style="font-size:17px;font-weight:600" id="gmc-city">—</div>
+            <div style="font-size:12px;opacity:.6;margin-top:2px" id="gmc-desc">Rilevamento in corso...</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+          <div style="text-align:center"><div style="font-family:'Instrument Serif',serif;font-size:28px;font-weight:700" id="gmc-temp">—</div><div style="font-size:9px;opacity:.4;text-transform:uppercase;letter-spacing:1px">Temperatura</div></div>
+          <div style="width:1px;height:32px;background:rgba(255,255,255,.12)"></div>
+          <div style="text-align:center"><div style="font-family:'Instrument Serif',serif;font-size:28px;font-weight:700" id="gmc-z">—</div><div style="font-size:9px;opacity:.4;text-transform:uppercase;letter-spacing:1px">Z-Score</div></div>
+          <div style="width:1px;height:32px;background:rgba(255,255,255,.12)"></div>
+          <div style="text-align:center"><div style="font-size:14px;font-weight:600" id="gmc-level">—</div><div style="font-size:9px;opacity:.4;text-transform:uppercase;letter-spacing:1px">Livello</div></div>
+          <a id="gmc-link" href="#" style="background:rgba(255,255,255,.14);color:white;padding:9px 16px;border-radius:8px;text-decoration:none;font-size:12px;font-weight:500;border:1px solid rgba(255,255,255,.2)">Analisi →</a>
+        </div>
       </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <h4>Local Content</h4>
-        <p>Guides written in local language and tone. Munich sounds different from Milan. Always.</p>
+    </div>
+    <div id="reports-grid">
+      <div style="grid-column:span 3;text-align:center;padding:40px;color:var(--muted);font-size:14px">Loading reports...</div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="dark-section" style="padding:64px 0">
+  <div class="section" style="padding-top:0;padding-bottom:0">
+    <div class="section-tag">Methodology</div>
+    <div class="section-title" style="margin-bottom:8px">How WeatherArb works</div>
+    <div class="section-sub">Statistical weather anomaly detection built on 24 years of climatological data.</div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">01</div>
+        <div class="how-icon">🛰️</div>
+        <div class="how-title">ERA5-Land + NASA POWER Baseline</div>
+        <div class="how-text">We compute monthly climatological averages from ERA5-Land ECMWF (2000–2024) and validate with NASA POWER satellite data for each city's exact coordinates.</div>
       </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <h4>Timed Delivery</h4>
-        <p>Content published 24-72h before peak. Products recommended before demand spikes prices.</p>
+      <div class="how-card">
+        <div class="how-num">02</div>
+        <div class="how-icon">📊</div>
+        <div class="how-title">Real-time Z-Score Analysis</div>
+        <div class="how-text">Every hour, OpenWeatherMap live conditions are compared against the seasonal baseline. Z-Score = (current − historical_mean) / std_deviation. Values above ±2.0 trigger alerts.</div>
+      </div>
+      <div class="how-card">
+        <div class="how-num">03</div>
+        <div class="how-icon">📡</div>
+        <div class="how-title">Free API + Telegram Alerts</div>
+        <div class="how-text">All data is publicly accessible via our free REST API. Subscribe to Telegram alerts for your city. No registration, no API key required for the free tier.</div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- API PREVIEW -->
+<div style="background:white;padding:64px 0;border-top:1px solid var(--mist)">
+  <div class="section" style="padding-top:0;padding-bottom:0">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">
+      <div>
+        <div class="section-tag">Free API</div>
+        <div class="section-title">Weather intelligence for developers</div>
+        <div class="section-sub" style="margin-top:12px;margin-bottom:28px">No auth required. JSON responses with Z-Score, anomaly level, temperature, and signal score for all 65 cities. 100 requests/day free.</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="/api.html" class="btn-primary">API Reference →</a>
+          <a href="/alerts.html" class="btn-secondary">📬 Get Alerts</a>
+        </div>
+      </div>
+      <div>
+        <div class="api-box">
+<span class="api-cmt"># No setup needed</span>
+<span class="api-kw">curl</span> https://api.weatherarb.com/api/v1/pulse/milano
+
+{
+  <span class="api-str">"province"</span>: <span class="api-str">"Milano"</span>,
+  <span class="api-str">"weather"</span>: {
+    <span class="api-str">"z_score"</span>: <span class="api-num" id="api-z">—</span>,
+    <span class="api-str">"anomaly_level"</span>: <span class="api-str" id="api-level">—</span>,
+    <span class="api-str">"event_type"</span>: <span class="api-str" id="api-event">—</span>
+  },
+  <span class="api-str">"signal"</span>: { <span class="api-str">"score"</span>: <span class="api-num" id="api-score">—</span> }
+}
+        </div>
+        <div style="margin-top:12px;font-size:12px;color:var(--muted);text-align:right">Live data · <a href="/data/" style="color:var(--electric);text-decoration:none">see all 65 cities →</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
-  <span>© 2026 WeatherArb.com — Weather intelligence for local decisions</span>
-  <span>
-    <a href="https://www.amazon.it" rel="nofollow">Amazon affiliate participant</a> ·
-    <a href="/privacy">Privacy</a>
-  </span>
+  <div>
+    <div class="footer-logo"><div class="logo-icon" style="width:24px;height:24px;font-size:12px">⛈</div>WeatherArb</div>
+    <div style="margin-top:8px">Independent weather intelligence · ERA5-Land + NASA POWER + OpenWeatherMap</div>
+  </div>
+  <div style="display:flex;gap:24px;flex-wrap:wrap">
+    <a href="/data/">Data Dashboard</a>
+    <a href="/map.html">Live Map</a>
+    <a href="/api.html">API Docs</a>
+    <a href="/alerts.html">Alerts</a>
+    <a href="/news/">Reports</a>
+    <a href="/about.html">Methodology</a>
+    <a href="https://t.me/weatherarb_alerts">Telegram</a>
+  </div>
 </footer>
-<script>
-// Aggiungi link Open Data al nav
-document.querySelector('nav').innerHTML += '<a href="/open.html" style="font-size:13px;color:#2563eb;text-decoration:none;font-weight:500">API & Newsletter →</a>';
-</script>
 
+<script>
+var LEVEL_COLORS = {CRITICAL:'#ef4444',EXTREME:'#f97316',UNUSUAL:'#d97706',NORMAL:'#2563eb'};
+var FLAGS = {};
+['torino','aosta','milano','varese','como','bergamo','brescia','sondrio','trento','bolzano',
+ 'vicenza','verona','venezia','padova','treviso','belluno','udine','trieste','gorizia',
+ 'pordenone','genova','bologna','parma','modena','ferrara','biella','novara','vercelli',
+ 'cuneo','asti','alessandria','pavia','lodi','cremona','mantova','lecco','imperia',
+ 'savona','piacenza','rimini','ravenna','rovigo','verbano-cusio-ossola','monza']
+ .forEach(function(c){FLAGS[c]='🇮🇹';});
+['münchen','hamburg','berlin','frankfurt','stuttgart','köln','düsseldorf','nürnberg']
+ .forEach(function(c){FLAGS[c]='🇩🇪';});
+['madrid','barcelona','valencia','sevilla','bilbao'].forEach(function(c){FLAGS[c]='🇪🇸';});
+['paris','lyon','marseille','bordeaux','nice'].forEach(function(c){FLAGS[c]='🇫🇷';});
+
+function makeSlug(n){
+  return n.toLowerCase()
+    .replace(/[àáâ]/g,'a').replace(/[èéê]/g,'e').replace(/[ùúû]/g,'u')
+    .replace(/ü/g,'u').replace(/ö/g,'o').replace(/ä/g,'a')
+    .replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+}
+function getCountry(n){
+  var k=n.toLowerCase();
+  if(FLAGS[k]==='🇩🇪') return 'de';
+  if(FLAGS[k]==='🇪🇸') return 'es';
+  if(FLAGS[k]==='🇫🇷') return 'fr';
+  return 'it';
+}
+
+// TICKER
+async function loadTicker(){
+  try{
+    var r=await fetch('https://api.weatherarb.com/api/v1/europe/top?limit=20');
+    var d=await r.json();
+    if(!d.data) return;
+    var items=d.data.filter(function(x){return x.anomaly_level!=='NORMAL';}).map(function(x){
+      var f=FLAGS[x.province.toLowerCase()]||'🌍';
+      var z=(x.z_score>=0?'+':'')+Number(x.z_score).toFixed(2);
+      return '<span>'+f+' <strong>'+x.province+'</strong> — '+(x.event_type||'').replace(/_/g,' ')+' Z='+z+' — '+x.anomaly_level+'</span>';
+    });
+    if(items.length){
+      var html=items.join('')+items.join('');
+      document.getElementById('ticker-inner').innerHTML=html;
+    }
+  }catch(e){}
+}
+
+// SIGNAL PANEL
+async function loadSignals(){
+  try{
+    var r=await fetch('https://api.weatherarb.com/api/v1/europe/top?limit=4');
+    var d=await r.json();
+    if(!d.data||!d.data.length) return;
+    var grid=document.getElementById('signal-grid');
+    grid.innerHTML=d.data.slice(0,4).map(function(x){
+      var color=LEVEL_COLORS[x.anomaly_level]||'#2563eb';
+      var f=FLAGS[x.province.toLowerCase()]||'🌍';
+      var z=(x.z_score>=0?'+':'')+Number(x.z_score).toFixed(2);
+      var lv=x.anomaly_level.toLowerCase();
+      return '<a href="/'+getCountry(x.province)+'/'+makeSlug(x.province)+'/" style="text-decoration:none">'
+        +'<div class="signal-card">'
+        +'<div class="sc-top"><div><div class="sc-city">'+f+' '+x.province+'</div>'
+        +'<div class="sc-region">'+(x.event_type||'').replace(/_/g,' ')+'</div></div>'
+        +'<span class="sc-badge badge-'+lv+'">'+x.anomaly_level+'</span></div>'
+        +'<div class="sc-score" style="color:'+color+'">'+Number(x.score||0).toFixed(1)+' <span style="font-size:14px;color:var(--muted)">/10</span></div>'
+        +'<div class="sc-event" style="color:'+color+'">Z = '+z+'</div>'
+        +'</div></a>';
+    }).join('');
+  }catch(e){}
+}
+
+// MAP
+function latY(lat){return 500-((lat-43)/(56-43))*460;}
+function lonX(lon){return ((lon-4)/(17-4))*860+20;}
+var cities=[
+  {n:"Torino",la:45.07,lo:7.69},{n:"Aosta",la:45.74,lo:7.32},
+  {n:"Milano",la:45.46,lo:9.19},{n:"Varese",la:45.82,lo:8.83},
+  {n:"Como",la:45.81,lo:9.09},{n:"Bergamo",la:45.70,lo:9.68},
+  {n:"Brescia",la:45.54,lo:10.22},{n:"Sondrio",la:46.17,lo:9.87},
+  {n:"Trento",la:46.07,lo:11.12},{n:"Bolzano",la:46.50,lo:11.36},
+  {n:"Vicenza",la:45.55,lo:11.55},{n:"Verona",la:45.44,lo:10.99},
+  {n:"Venezia",la:45.44,lo:12.33},{n:"Padova",la:45.41,lo:11.88},
+  {n:"Treviso",la:45.67,lo:12.24},{n:"Udine",la:46.06,lo:13.24},
+  {n:"Trieste",la:45.65,lo:13.78},{n:"Genova",la:44.41,lo:8.93},
+  {n:"Bologna",la:44.49,lo:11.34},{n:"Parma",la:44.80,lo:10.33},
+  {n:"Biella",la:45.56,lo:8.05},{n:"Novara",la:45.45,lo:8.62},
+  {n:"Vercelli",la:45.32,lo:8.42},{n:"Cuneo",la:44.39,lo:7.55},
+  {n:"Asti",la:44.90,lo:8.21},{n:"Alessandria",la:44.91,lo:8.62},
+  {n:"Pavia",la:45.19,lo:9.16},{n:"Cremona",la:45.13,lo:10.03},
+  {n:"Mantova",la:45.16,lo:10.79},{n:"Lecco",la:45.86,lo:9.40},
+  {n:"München",la:48.14,lo:11.58},{n:"Hamburg",la:53.58,lo:10.02},
+  {n:"Berlin",la:52.52,lo:13.40},{n:"Frankfurt",la:50.11,lo:8.68},
+  {n:"Stuttgart",la:48.78,lo:9.18},{n:"Köln",la:50.94,lo:6.96},
+  {n:"Düsseldorf",la:51.22,lo:6.78},{n:"Nürnberg",la:49.45,lo:11.08},
+  {n:"Madrid",la:40.42,lo:-3.70},{n:"Barcelona",la:41.39,lo:2.17},
+  {n:"Valencia",la:39.47,lo:-0.38},{n:"Paris",la:48.86,lo:2.35},
+  {n:"Lyon",la:45.75,lo:4.83},{n:"Marseille",la:43.30,lo:5.37},
+];
+
+var mapColors={critical:'#ef4444',extreme:'#f97316',unusual:'#eab308',normal:'#3b82f6'};
+function getLevel(z){var a=Math.abs(z||0);if(a>=3)return 'critical';if(a>=2)return 'extreme';if(a>=1)return 'unusual';return 'normal';}
+
+function renderMap(cache){
+  var svg=document.getElementById('wa-map-svg');
+  var tip=document.getElementById('map-tooltip');
+  var svgBox=null;
+  cities.forEach(function(c){
+    var d=cache[c.n.toLowerCase()];
+    var z=d?(d.z_score||0):0;
+    var level=getLevel(z);
+    var color=mapColors[level];
+    var r=level==='critical'?8:level==='extreme'?7:level==='unusual'?5:4;
+    var x=lonX(c.lo),y=latY(c.la);
+    if(level==='critical'||level==='extreme'){
+      var ring=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      ring.setAttribute('cx',x);ring.setAttribute('cy',y);ring.setAttribute('r',r+5);
+      ring.setAttribute('fill','none');ring.setAttribute('stroke',color);
+      ring.setAttribute('stroke-width','1.5');ring.setAttribute('opacity','0');
+      ring.style.animation='wa-ring '+(level==='critical'?'1.5':'2')+'s ease-out infinite';
+      svg.appendChild(ring);
+    }
+    var dot=document.createElementNS('http://www.w3.org/2000/svg','circle');
+    dot.setAttribute('cx',x);dot.setAttribute('cy',y);dot.setAttribute('r',r);
+    dot.setAttribute('fill',color);dot.style.cursor='pointer';
+    dot.style.filter='drop-shadow(0 0 '+(level==='critical'?5:3)+'px '+color+')';
+    if(level==='critical') dot.style.animation='wa-pulse 1.5s infinite';
+    var zText=z!==0?(z>=0?'+':'')+z.toFixed(2):'—';
+    var slug=makeSlug(c.n);
+    var country=getCountry(c.n);
+    dot.addEventListener('mouseenter',function(e){
+      if(!svgBox) svgBox=svg.getBoundingClientRect();
+      var cont=svg.closest('div');var cb=cont.getBoundingClientRect();
+      var px=(x/900)*svgBox.width+(svgBox.left-cb.left);
+      var py=(y/500)*svgBox.height;
+      tip.style.display='block';
+      tip.style.left=Math.min(px+12,svgBox.width-200)+'px';
+      tip.style.top=Math.max(py-20,8)+'px';
+      tip.innerHTML='<div style="font-family:Instrument Serif,serif;font-size:15px;margin-bottom:8px">'+c.n+'</div>'
+        +'<div style="display:flex;gap:12px;margin-bottom:8px">'
+        +'<div><div style="opacity:.4;font-size:9px;text-transform:uppercase">Z-Score</div><div style="font-size:18px;font-weight:700;color:'+color+'">'+zText+'</div></div>'
+        +(d?'<div><div style="opacity:.4;font-size:9px;text-transform:uppercase">Level</div><div style="font-size:12px;font-weight:600;color:'+color+'">'+d.anomaly_level+'</div></div>':'')
+        +'</div>'
+        +'<a href="/'+country+'/'+slug+'/" style="display:block;background:#2563eb;color:white;padding:6px;border-radius:6px;text-align:center;font-size:11px;text-decoration:none">View →</a>';
+    });
+    dot.addEventListener('mouseleave',function(){tip.style.display='none';});
+    svg.appendChild(dot);
+    var txt=document.createElementNS('http://www.w3.org/2000/svg','text');
+    txt.setAttribute('x',x+r+3);txt.setAttribute('y',y+4);
+    txt.setAttribute('fill','rgba(255,255,255,.35)');txt.setAttribute('font-size','8');
+    txt.setAttribute('font-family','DM Sans,sans-serif');txt.textContent=c.n;
+    svg.appendChild(txt);
+  });
+}
+
+// ARTICLES
+async function loadReports(){
+  try{
+    var r=await fetch('/data/latest_reports.json');
+    var d=await r.json();
+    var g=document.getElementById('reports-grid');
+    var colors={CRITICAL:'#ef4444',EXTREME:'#f97316',UNUSUAL:'#d97706',NORMAL:'#94a3b8'};
+    g.innerHTML=d.reports.slice(0,9).map(function(a){
+      var color=colors[a.anomaly_level]||'#d97706';
+      return '<a href="'+a.url+'" class="article-card">'
+        +(a.is_live?'<div class="article-live">LIVE</div>':'')
+        +'<div>'
+        +'<div class="article-tag" style="color:'+color+'">'+a.provincia+' · '+(a.evento||'').replace(/_/g,' ')+'</div>'
+        +'<div class="article-title">'+a.title.slice(0,68)+(a.title.length>68?'...':'')+'</div>'
+        +'<div class="article-excerpt">'+a.excerpt.slice(0,100)+'...</div>'
+        +'</div>'
+        +'<div class="article-footer">'
+        +'<span class="article-link">Read report →</span>'
+        +'<div class="article-meta"><span>Z='+(a.z_score>=0?'+':'')+Number(a.z_score).toFixed(1)+'</span><span>'+Number(a.score).toFixed(1)+'/10</span></div>'
+        +'</div>'
+        +'</a>';
+    }).join('');
+  }catch(e){console.error(e);}
+}
+
+// API PREVIEW
+async function loadApiPreview(){
+  try{
+    var r=await fetch('https://api.weatherarb.com/api/v1/pulse/milano');
+    var d=await r.json();
+    if(d.weather){
+      document.getElementById('api-z').textContent=(d.weather.z_score>=0?'+':'')+Number(d.weather.z_score).toFixed(2);
+      document.getElementById('api-level').textContent='"'+d.weather.anomaly_level+'"';
+      document.getElementById('api-event').textContent='"'+(d.weather.event_type||'Clear')+'"';
+      document.getElementById('api-score').textContent=Number(d.signal&&d.signal.score?d.signal.score:0).toFixed(1);
+    }
+  }catch(e){}
+}
+
+// GEO WEATHER
+function loadGeo(){
+  if(!navigator.geolocation) return;
+  navigator.geolocation.getCurrentPosition(function(pos){
+    fetch('https://api.weatherarb.com/api/v1/pulse/nearby?lat='+pos.coords.latitude+'&lon='+pos.coords.longitude)
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(!d.province) return;
+      var z=d.z_score||0;
+      var level=d.anomaly_level||'NORMAL';
+      var temp=d.temperature_c;
+      var rain=d.precipitation||0;
+      var event=d.event_type||'';
+      var color=LEVEL_COLORS[level]||'#60a5fa';
+
+      // Icons
+      var icon=rain>5?'🌧️':rain>0.5?'🌦️':event.includes('Heat')?'🌡️':event.includes('Snow')?'❄️':event.includes('Storm')?'⛈️':(temp||0)>25?'☀️':(temp||0)>15?'⛅':'🌥️';
+      var desc=rain>5?'Pioggia intensa '+rain.toFixed(1)+'mm/h':rain>0.5?'Pioggia '+rain.toFixed(1)+'mm/h':event?event.replace(/_/g,' '):(temp||0)>25?'☀️ Caldo, cielo sereno':'Monitoraggio attivo';
+      var slug=makeSlug(d.province);
+      var country=getCountry(d.province);
+
+      // GEO BAR
+      document.getElementById('geo-bar').style.display='block';
+      document.getElementById('geo-icon').textContent=icon;
+      document.getElementById('geo-city').textContent=d.province+' ('+d.distance_km+'km)';
+      document.getElementById('geo-desc').textContent=desc;
+      document.getElementById('geo-temp').textContent=temp?temp.toFixed(1)+'°C':'—';
+      var gz=document.getElementById('geo-z');
+      gz.textContent=(z>=0?'+':'')+z.toFixed(2);
+      gz.style.color=color;
+      var gl=document.getElementById('geo-level');
+      gl.textContent=level;
+      gl.style.color=color;
+      document.getElementById('geo-link').href='/'+country+'/'+slug+'/';
+
+      // GEO METEO CARD
+      document.getElementById('geo-meteo-card').style.display='block';
+      document.getElementById('gmc-icon').textContent=icon;
+      document.getElementById('gmc-city').textContent=d.province+' ('+d.distance_km+'km da te)';
+      document.getElementById('gmc-desc').textContent=desc;
+      var gt=document.getElementById('gmc-temp');
+      gt.textContent=temp?temp.toFixed(1)+'°C':'—';
+      gt.style.color=(temp||0)>30?'#f97316':(temp||0)<5?'#93c5fd':'white';
+      var gz2=document.getElementById('gmc-z');
+      gz2.textContent=(z>=0?'+':'')+z.toFixed(2);
+      gz2.style.color=color;
+      var gl2=document.getElementById('gmc-level');
+      gl2.textContent=level;
+      gl2.style.color=color;
+      document.getElementById('gmc-link').href='/'+country+'/'+slug+'/';
+
+      // Dynamic bg
+      var card=document.getElementById('geo-meteo-card');
+      if(rain>3) card.style.background='linear-gradient(135deg,#1e3a5c,#0d2137)';
+      else if((temp||0)>28) card.style.background='linear-gradient(135deg,#7c2d12,#1a1a2e)';
+      else if(level==='CRITICAL') card.style.background='linear-gradient(135deg,#7f1d1d,#0f1117)';
+    }).catch(function(){});
+  },null,{timeout:6000});
+}
+
+// INIT
+loadTicker();
+loadSignals();
+loadReports();
+loadApiPreview();
+loadGeo();
+
+// Load map data
+fetch('https://api.weatherarb.com/api/v1/europe/top?limit=65')
+.then(function(r){return r.json();})
+.then(function(d){
+  var cache={};
+  if(d&&d.data) d.data.forEach(function(x){if(x.province)cache[x.province.toLowerCase()]=x;});
+  renderMap(cache);
+}).catch(function(){renderMap({});});
+
+setInterval(loadSignals, 5*60*1000);
+setInterval(loadTicker, 10*60*1000);
+</script>
 </body>
 </html>
