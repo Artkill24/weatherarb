@@ -303,6 +303,37 @@
         </div>
         <a href="/news/" style="font-size:13px;color:#2563eb;font-weight:500;text-decoration:none">View archive →</a>
       </div>
+      <!-- GEO METEO WIDGET -->
+      <div id="geo-meteo-bar" style="display:none;background:linear-gradient(135deg,#1a3a5c,#0f2744);border-radius:16px;padding:20px 28px;margin-bottom:28px;color:white">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+          <div style="display:flex;align-items:center;gap:16px">
+            <div id="gm-icon" style="font-size:40px;line-height:1">⛅</div>
+            <div>
+              <div style="font-size:11px;opacity:.5;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px">📍 La tua posizione ora</div>
+              <div style="font-size:18px;font-weight:600" id="gm-city">—</div>
+              <div style="font-size:13px;opacity:.7;margin-top:2px" id="gm-desc">Caricamento...</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+            <div style="text-align:center">
+              <div style="font-size:32px;font-weight:700;font-family:Georgia,serif" id="gm-temp">—</div>
+              <div style="font-size:10px;opacity:.5;text-transform:uppercase">Temp</div>
+            </div>
+            <div style="width:1px;height:36px;background:rgba(255,255,255,.15)"></div>
+            <div style="text-align:center">
+              <div style="font-size:32px;font-weight:700;font-family:Georgia,serif" id="gm-z">—</div>
+              <div style="font-size:10px;opacity:.5;text-transform:uppercase">Z-Score</div>
+            </div>
+            <div style="width:1px;height:36px;background:rgba(255,255,255,.15)"></div>
+            <div style="text-align:center">
+              <div style="font-size:15px;font-weight:600" id="gm-level">—</div>
+              <div style="font-size:10px;opacity:.5;text-transform:uppercase">Livello</div>
+            </div>
+            <a id="gm-link" href="#" style="background:rgba(255,255,255,.15);color:white;padding:10px 18px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;border:1px solid rgba(255,255,255,.2)">Analisi →</a>
+          </div>
+        </div>
+      </div>
+
       <div id="reports-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
         <div style="background:#f5f3ee;border-radius:16px;height:200px;animation:pulse 2s infinite"></div>
         <div style="background:#f5f3ee;border-radius:16px;height:200px;animation:pulse 2s infinite;animation-delay:.1s"></div>
@@ -344,7 +375,72 @@
         </a>`).join('');
     }catch(e){console.error(e)}
   }
-  document.addEventListener('DOMContentLoaded',loadReports);
+  // Carica subito senza aspettare DOMContentLoaded
+  loadReports();
+
+  // GEO METEO WIDGET
+  (function(){
+    var ICONS = {
+      Heat_Wave:'🌡️', Heavy_Rain:'🌧️', Storm:'⛈️', Snow:'❄️',
+      Fog:'🌫️', Wind:'💨', Cold_Snap:'🥶', Clear:'☀️', Cloudy:'⛅'
+    };
+    var LEVEL_COLORS = {CRITICAL:'#ef4444',EXTREME:'#f97316',UNUSUAL:'#eab308',NORMAL:'#60a5fa'};
+
+    function getIcon(event, temp){
+      if(!event) return temp>25?'☀️':temp>15?'⛅':'🌥️';
+      for(var k in ICONS){ if(event.includes(k)) return ICONS[k]; }
+      return temp>25?'☀️':temp>15?'⛅':'🌥️';
+    }
+
+    if(!navigator.geolocation) return;
+    navigator.geolocation.getCurrentPosition(function(pos){
+      fetch('https://api.weatherarb.com/api/v1/pulse/nearby?lat='+pos.coords.latitude+'&lon='+pos.coords.longitude)
+      .then(function(r){return r.json();})
+      .then(function(d){
+        if(!d.province) return;
+        var bar = document.getElementById('geo-meteo-bar');
+        bar.style.display = 'block';
+        var z = d.z_score||0;
+        var level = d.anomaly_level||'NORMAL';
+        var temp = d.temperature_c;
+        var rain = d.precipitation||0;
+        var event = d.event_type||'';
+        var color = LEVEL_COLORS[level]||'#60a5fa';
+
+        document.getElementById('gm-icon').textContent = getIcon(event, temp||15);
+        document.getElementById('gm-city').textContent = d.province+' ('+d.distance_km+'km)';
+
+        var desc = rain>5?'🌧️ Pioggia intensa '+rain.toFixed(1)+'mm/h':
+                   rain>0.5?'🌦️ Pioggia '+rain.toFixed(1)+'mm/h':
+                   event?event.replace(/_/g,' '):
+                   (temp||0)>25?'☀️ Caldo, cielo sereno':(temp||0)>15?'⛅ Temperatura mite':'🌥️ Coperto';
+        document.getElementById('gm-desc').textContent = desc;
+
+        var tempEl = document.getElementById('gm-temp');
+        tempEl.textContent = temp?temp.toFixed(1)+'°C':'—';
+        tempEl.style.color = (temp||0)>30?'#f97316':(temp||0)<5?'#93c5fd':'white';
+
+        var zEl = document.getElementById('gm-z');
+        zEl.textContent = (z>=0?'+':'')+z.toFixed(2);
+        zEl.style.color = color;
+
+        var lEl = document.getElementById('gm-level');
+        lEl.textContent = level;
+        lEl.style.color = color;
+
+        // Sfondo dinamico
+        if(rain>3) bar.style.background='linear-gradient(135deg,#1e3a5c,#0d2137)';
+        else if((temp||0)>28) bar.style.background='linear-gradient(135deg,#7c2d12,#1a1a2e)';
+        else if(level==='CRITICAL') bar.style.background='linear-gradient(135deg,#7f1d1d,#0f1117)';
+
+        var slug = d.province.toLowerCase()
+          .replace(/[àáâ]/g,'a').replace(/[èéê]/g,'e')
+          .replace(/[ùúû]/g,'u').replace(/ü/g,'u')
+          .replace(/[^a-z0-9]/g,'-').replace(/-+/g,'-');
+        document.getElementById('gm-link').href='/it/'+slug+'/';
+      }).catch(function(){});
+    }, null, {timeout:6000});
+  })();
   </script>
   <!-- END INTELLIGENCE REPORTS DYNAMIC -->
 
