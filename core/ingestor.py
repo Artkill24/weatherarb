@@ -6,6 +6,7 @@ Produce dati normalizzati pronti per il DeltaCalculator.
 
 import json
 import logging
+from datetime import datetime
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -21,6 +22,13 @@ from config import (
 )
 
 logger = logging.getLogger(__name__)
+
+try:
+    from core.nasa_baseline import enrich_baseline_object
+    NASA_AVAILABLE = True
+except Exception:
+    NASA_AVAILABLE = False
+
 
 
 # ─────────────────────────────────────────────────
@@ -381,5 +389,19 @@ def build_historical_baseline(provincia: Dict) -> HistoricalBaseline:
     # Percentili approssimati (media + 1.65σ ≈ P95)
     bl.p95_rain_mm = bl.avg_rain_mm_day + 1.65 * bl.std_rain_mm_day
     bl.p95_temp_c = bl.avg_temp_c + 1.65 * bl.std_temp_c
+
+    # NASA POWER enrichment
+    try:
+        from core.nasa_baseline import get_monthly_baseline
+        nasa = get_monthly_baseline(provincia["lat"], provincia["lon"], provincia["nome"], month)
+        if nasa and nasa.get("temp_mean"):
+            bl.avg_temp_c = nasa["temp_mean"]
+            bl.std_temp_c = max(nasa["temp_std"], 1.5)
+            bl.avg_rain_mm_day = nasa.get("rain_mean", bl.avg_rain_mm_day)
+            bl.std_rain_mm_day = max(nasa.get("rain_std", bl.std_rain_mm_day), 0.5)
+            bl.p95_temp_c = bl.avg_temp_c + 1.65 * bl.std_temp_c
+            bl.p95_rain_mm = bl.avg_rain_mm_day + 1.65 * bl.std_rain_mm_day
+    except Exception:
+        pass
 
     return bl
