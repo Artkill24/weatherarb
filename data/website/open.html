@@ -60,9 +60,9 @@ h1{font-family:'Instrument Serif',serif;font-size:clamp(32px,5vw,52px);margin-bo
   <div class="tag">🔌 Public API</div>
   <h2>Weather Anomaly API</h2>
   <p>Free, no auth required. JSON with Z-Score, anomaly level, signal score.</p>
-  <div class="endpoint"><span class="method">GET</span>weatherarb-production.up.railway.app/api/v1/pulse/{city}</div>
-  <div class="endpoint"><span class="method">GET</span>weatherarb-production.up.railway.app/api/v1/europe/top</div>
-  <div class="code">curl https://weatherarb-production.up.railway.app/api/v1/pulse/vicenza
+  <div class="endpoint"><span class="method">GET</span>api.weatherarb.com/api/v1/pulse/{city}</div>
+  <div class="endpoint"><span class="method">GET</span>api.weatherarb.com/api/v1/europe/top</div>
+  <div class="code">curl https://api.weatherarb.com/api/v1/pulse/vicenza
 
 → {"province":"Vicenza","weather":{"z_score":-0.53,"anomaly_level":"NORMAL"},"signal":{"score":4.9}}</div>
 </div>
@@ -99,7 +99,7 @@ async function subscribe(){
   const prov=document.getElementById('nl-prov').value;
   if(!email||!email.includes('@')){alert('Enter a valid email');return}
   try{
-    await fetch('https://weatherarb-production.up.railway.app/api/newsletter/subscribe?email='+encodeURIComponent(email)+'&provincia='+encodeURIComponent(prov),{method:'POST'});
+    await fetch('https://api.weatherarb.com/api/newsletter/subscribe?email='+encodeURIComponent(email)+'&provincia='+encodeURIComponent(prov),{method:'POST'});
   }catch(e){}
   document.querySelector('.nl-form').style.display='none';
   document.getElementById('nl-ok').style.display='block';
