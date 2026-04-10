@@ -443,3 +443,12 @@ def _budget_strategy(score: float, phase: str) -> str:
     if score >= SCORE_THRESHOLD_ACTIONABLE:
         return "TEST_BUDGET_VALIDATE"
     return "HOLD"
+
+def estimate_impact_horizon(z_score: float, score: float) -> dict:
+    if z_score > 3.0 or score > 8.5:
+        return {"hours": 0, "label": "IMMEDIATO", "status": "critical"}
+    if score >= 7.0:
+        # Stima lineare: 10 score -> 0h, 7 score -> 24h
+        h = max(6, int(24 * (1 - (score - 7) / 3)))
+        return {"hours": h, "label": f"{h} ore", "status": "warning"}
+    return {"hours": None, "label": "Stabile", "status": "nominal"}

@@ -350,12 +350,54 @@ async function loadData(){
     }).join('');
 
     // Simulated 7-day chart
+    
+    // Update Horizon logic
+    var hBox = document.getElementById('horizon-box');
+    var hStat = document.getElementById('horizon-status');
+    var hClock = document.getElementById('horizon-clock');
+    var hAdv = document.getElementById('horizon-advice');
+    
+    if(lv === 'CRITICAL' || z > 3.0) {
+      hBox.style.borderLeftColor = '#ef4444'; hClock.style.color = '#ef4444';
+      hStat.innerText = 'Impatto Immediato'; hClock.innerText = '00h';
+      hAdv.innerText = 'Anomalia in corso. Attivare misure di mitigazione ora.';
+    } else if(sc >= 7.0) {
+      hBox.style.borderLeftColor = '#f97316'; hClock.style.color = '#f97316';
+      var hrs = Math.round(24 * (1 - (sc-7)/3) + 6);
+      hStat.innerText = 'Preparazione Necessaria'; hClock.innerText = hrs + 'h';
+      hAdv.innerText = 'Finestra utile per la messa in sicurezza dei beni.';
+    } else {
+      hStat.innerText = 'Situazione Nominale'; hClock.innerText = '--';
+      hAdv.innerText = 'Nessuna anomalia critica prevista nelle prossime 72 ore.';
+    }
+
     drawChart(temp||15, avgTemp||12, z);
 
   }catch(e){console.error(e);}
 }
 
-function drawChart(currentTemp, baselineTemp, z){
+function 
+    // Update Horizon logic
+    var hBox = document.getElementById('horizon-box');
+    var hStat = document.getElementById('horizon-status');
+    var hClock = document.getElementById('horizon-clock');
+    var hAdv = document.getElementById('horizon-advice');
+    
+    if(lv === 'CRITICAL' || z > 3.0) {
+      hBox.style.borderLeftColor = '#ef4444'; hClock.style.color = '#ef4444';
+      hStat.innerText = 'Impatto Immediato'; hClock.innerText = '00h';
+      hAdv.innerText = 'Anomalia in corso. Attivare misure di mitigazione ora.';
+    } else if(sc >= 7.0) {
+      hBox.style.borderLeftColor = '#f97316'; hClock.style.color = '#f97316';
+      var hrs = Math.round(24 * (1 - (sc-7)/3) + 6);
+      hStat.innerText = 'Preparazione Necessaria'; hClock.innerText = hrs + 'h';
+      hAdv.innerText = 'Finestra utile per la messa in sicurezza dei beni.';
+    } else {
+      hStat.innerText = 'Situazione Nominale'; hClock.innerText = '--';
+      hAdv.innerText = 'Nessuna anomalia critica prevista nelle prossime 72 ore.';
+    }
+
+    drawChart(currentTemp, baselineTemp, z){
   var svg = document.getElementById('temp-chart');
   var labels = document.getElementById('chart-labels');
   var days = ['Lun','Mar','Mer','Gio','Ven','Sab','Dom'];
