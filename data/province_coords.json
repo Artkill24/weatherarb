@@ -584,6 +584,510 @@
       "lon": 7.26,
       "popolazione": 342000,
       "cluster": "FR_Coastal"
+    },
+    {
+      "nome": "Stockholm",
+      "lat": 59.3293,
+      "lon": 18.0686,
+      "country": "SE",
+      "cluster": "SE_Metro",
+      "popolazione": 975000,
+      "lang": "sv"
+    },
+    {
+      "nome": "Göteborg",
+      "lat": 57.7089,
+      "lon": 11.9746,
+      "country": "SE",
+      "cluster": "SE_Industrial",
+      "popolazione": 580000,
+      "lang": "sv"
+    },
+    {
+      "nome": "Malmö",
+      "lat": 55.605,
+      "lon": 13.0038,
+      "country": "SE",
+      "cluster": "SE_Coastal",
+      "popolazione": 350000,
+      "lang": "sv"
+    },
+    {
+      "nome": "Uppsala",
+      "lat": 59.8586,
+      "lon": 17.6389,
+      "country": "SE",
+      "cluster": "SE_University",
+      "popolazione": 230000,
+      "lang": "sv"
+    },
+    {
+      "nome": "Västerås",
+      "lat": 59.6162,
+      "lon": 16.5528,
+      "country": "SE",
+      "cluster": "SE_Industrial",
+      "popolazione": 150000,
+      "lang": "sv"
+    },
+    {
+      "nome": "Örebro",
+      "lat": 59.2741,
+      "lon": 15.2066,
+      "country": "SE",
+      "cluster": "SE_Industrial",
+      "popolazione": 155000,
+      "lang": "sv"
+    },
+    {
+      "nome": "Linköping",
+      "lat": 58.4108,
+      "lon": 15.6214,
+      "country": "SE",
+      "cluster": "SE_Industrial",
+      "popolazione": 165000,
+      "lang": "sv"
+    },
+    {
+      "nome": "Helsingborg",
+      "lat": 56.0465,
+      "lon": 12.6945,
+      "country": "SE",
+      "cluster": "SE_Coastal",
+      "popolazione": 145000,
+      "lang": "sv"
+    },
+    {
+      "nome": "Jönköping",
+      "lat": 57.7826,
+      "lon": 14.1618,
+      "country": "SE",
+      "cluster": "SE_Industrial",
+      "popolazione": 140000,
+      "lang": "sv"
+    },
+    {
+      "nome": "Umeå",
+      "lat": 63.8258,
+      "lon": 20.263,
+      "country": "SE",
+      "cluster": "SE_North",
+      "popolazione": 130000,
+      "lang": "sv"
+    },
+    {
+      "nome": "London",
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "country": "GB",
+      "cluster": "GB_Metro",
+      "popolazione": 9000000,
+      "lang": "en"
+    },
+    {
+      "nome": "Manchester",
+      "lat": 53.4808,
+      "lon": -2.2426,
+      "country": "GB",
+      "cluster": "GB_Industrial",
+      "popolazione": 553000,
+      "lang": "en"
+    },
+    {
+      "nome": "Birmingham",
+      "lat": 52.4862,
+      "lon": -1.8904,
+      "country": "GB",
+      "cluster": "GB_Industrial",
+      "popolazione": 1140000,
+      "lang": "en"
+    },
+    {
+      "nome": "Edinburgh",
+      "lat": 55.9533,
+      "lon": -3.1883,
+      "country": "GB",
+      "cluster": "GB_Metro",
+      "popolazione": 530000,
+      "lang": "en"
+    },
+    {
+      "nome": "Glasgow",
+      "lat": 55.8642,
+      "lon": -4.2518,
+      "country": "GB",
+      "cluster": "GB_Industrial",
+      "popolazione": 630000,
+      "lang": "en"
+    },
+    {
+      "nome": "Leeds",
+      "lat": 53.8008,
+      "lon": -1.5491,
+      "country": "GB",
+      "cluster": "GB_Industrial",
+      "popolazione": 793000,
+      "lang": "en"
+    },
+    {
+      "nome": "Bristol",
+      "lat": 51.4545,
+      "lon": -2.5879,
+      "country": "GB",
+      "cluster": "GB_Coastal",
+      "popolazione": 470000,
+      "lang": "en"
+    },
+    {
+      "nome": "Cardiff",
+      "lat": 51.4816,
+      "lon": -3.1791,
+      "country": "GB",
+      "cluster": "GB_Coastal",
+      "popolazione": 370000,
+      "lang": "en"
+    },
+    {
+      "nome": "Liverpool",
+      "lat": 53.4084,
+      "lon": -2.9916,
+      "country": "GB",
+      "cluster": "GB_Coastal",
+      "popolazione": 498000,
+      "lang": "en"
+    },
+    {
+      "nome": "Sheffield",
+      "lat": 53.3811,
+      "lon": -1.4701,
+      "country": "GB",
+      "cluster": "GB_Industrial",
+      "popolazione": 584000,
+      "lang": "en"
+    },
+    {
+      "nome": "Amsterdam",
+      "lat": 52.3676,
+      "lon": 4.9041,
+      "country": "NL",
+      "cluster": "NL_Metro",
+      "popolazione": 921000,
+      "lang": "nl"
+    },
+    {
+      "nome": "Rotterdam",
+      "lat": 51.9244,
+      "lon": 4.4777,
+      "country": "NL",
+      "cluster": "NL_Industrial",
+      "popolazione": 651000,
+      "lang": "nl"
+    },
+    {
+      "nome": "Den Haag",
+      "lat": 52.0705,
+      "lon": 4.3007,
+      "country": "NL",
+      "cluster": "NL_Metro",
+      "popolazione": 545000,
+      "lang": "nl"
+    },
+    {
+      "nome": "Utrecht",
+      "lat": 52.0907,
+      "lon": 5.1214,
+      "country": "NL",
+      "cluster": "NL_University",
+      "popolazione": 361000,
+      "lang": "nl"
+    },
+    {
+      "nome": "Eindhoven",
+      "lat": 51.4416,
+      "lon": 5.4697,
+      "country": "NL",
+      "cluster": "NL_Industrial",
+      "popolazione": 234000,
+      "lang": "nl"
+    },
+    {
+      "nome": "Groningen",
+      "lat": 53.2194,
+      "lon": 6.5665,
+      "country": "NL",
+      "cluster": "NL_North",
+      "popolazione": 233000,
+      "lang": "nl"
+    },
+    {
+      "nome": "Warszawa",
+      "lat": 52.2297,
+      "lon": 21.0122,
+      "country": "PL",
+      "cluster": "PL_Metro",
+      "popolazione": 1800000,
+      "lang": "pl"
+    },
+    {
+      "nome": "Kraków",
+      "lat": 50.0647,
+      "lon": 19.945,
+      "country": "PL",
+      "cluster": "PL_Metro",
+      "popolazione": 780000,
+      "lang": "pl"
+    },
+    {
+      "nome": "Wrocław",
+      "lat": 51.1079,
+      "lon": 17.0385,
+      "country": "PL",
+      "cluster": "PL_Industrial",
+      "popolazione": 643000,
+      "lang": "pl"
+    },
+    {
+      "nome": "Poznań",
+      "lat": 52.4064,
+      "lon": 16.9252,
+      "country": "PL",
+      "cluster": "PL_Industrial",
+      "popolazione": 541000,
+      "lang": "pl"
+    },
+    {
+      "nome": "Gdańsk",
+      "lat": 54.352,
+      "lon": 18.6466,
+      "country": "PL",
+      "cluster": "PL_Coastal",
+      "popolazione": 486000,
+      "lang": "pl"
+    },
+    {
+      "nome": "Łódź",
+      "lat": 51.7592,
+      "lon": 19.456,
+      "country": "PL",
+      "cluster": "PL_Industrial",
+      "popolazione": 672000,
+      "lang": "pl"
+    },
+    {
+      "nome": "Wien",
+      "lat": 48.2082,
+      "lon": 16.3738,
+      "country": "AT",
+      "cluster": "AT_Metro",
+      "popolazione": 1900000,
+      "lang": "de"
+    },
+    {
+      "nome": "Graz",
+      "lat": 47.0707,
+      "lon": 15.4395,
+      "country": "AT",
+      "cluster": "AT_Industrial",
+      "popolazione": 291000,
+      "lang": "de"
+    },
+    {
+      "nome": "Linz",
+      "lat": 48.3069,
+      "lon": 14.2858,
+      "country": "AT",
+      "cluster": "AT_Industrial",
+      "popolazione": 205000,
+      "lang": "de"
+    },
+    {
+      "nome": "Salzburg",
+      "lat": 47.8095,
+      "lon": 13.055,
+      "country": "AT",
+      "cluster": "AT_Alpine",
+      "popolazione": 155000,
+      "lang": "de"
+    },
+    {
+      "nome": "Innsbruck",
+      "lat": 47.2692,
+      "lon": 11.4041,
+      "country": "AT",
+      "cluster": "AT_Alpine",
+      "popolazione": 132000,
+      "lang": "de"
+    },
+    {
+      "nome": "Zürich",
+      "lat": 47.3769,
+      "lon": 8.5417,
+      "country": "CH",
+      "cluster": "CH_Metro",
+      "popolazione": 435000,
+      "lang": "de"
+    },
+    {
+      "nome": "Genève",
+      "lat": 46.2044,
+      "lon": 6.1432,
+      "country": "CH",
+      "cluster": "CH_Metro",
+      "popolazione": 203000,
+      "lang": "fr"
+    },
+    {
+      "nome": "Basel",
+      "lat": 47.5596,
+      "lon": 7.5886,
+      "country": "CH",
+      "cluster": "CH_Industrial",
+      "popolazione": 178000,
+      "lang": "de"
+    },
+    {
+      "nome": "Bern",
+      "lat": 46.948,
+      "lon": 7.4474,
+      "country": "CH",
+      "cluster": "CH_Metro",
+      "popolazione": 134000,
+      "lang": "de"
+    },
+    {
+      "nome": "Lausanne",
+      "lat": 46.5197,
+      "lon": 6.6323,
+      "country": "CH",
+      "cluster": "CH_Metro",
+      "popolazione": 140000,
+      "lang": "fr"
+    },
+    {
+      "nome": "Bruxelles",
+      "lat": 50.8503,
+      "lon": 4.3517,
+      "country": "BE",
+      "cluster": "BE_Metro",
+      "popolazione": 1200000,
+      "lang": "fr"
+    },
+    {
+      "nome": "Antwerpen",
+      "lat": 51.2194,
+      "lon": 4.4025,
+      "country": "BE",
+      "cluster": "BE_Industrial",
+      "popolazione": 530000,
+      "lang": "nl"
+    },
+    {
+      "nome": "Gent",
+      "lat": 51.0543,
+      "lon": 3.7174,
+      "country": "BE",
+      "cluster": "BE_Industrial",
+      "popolazione": 262000,
+      "lang": "nl"
+    },
+    {
+      "nome": "Liège",
+      "lat": 50.6326,
+      "lon": 5.5797,
+      "country": "BE",
+      "cluster": "BE_Industrial",
+      "popolazione": 197000,
+      "lang": "fr"
+    },
+    {
+      "nome": "Lisboa",
+      "lat": 38.7223,
+      "lon": -9.1393,
+      "country": "PT",
+      "cluster": "PT_Metro",
+      "popolazione": 545000,
+      "lang": "pt"
+    },
+    {
+      "nome": "Porto",
+      "lat": 41.1579,
+      "lon": -8.6291,
+      "country": "PT",
+      "cluster": "PT_Metro",
+      "popolazione": 237000,
+      "lang": "pt"
+    },
+    {
+      "nome": "Braga",
+      "lat": 41.5454,
+      "lon": -8.4265,
+      "country": "PT",
+      "cluster": "PT_Industrial",
+      "popolazione": 193000,
+      "lang": "pt"
+    },
+    {
+      "nome": "København",
+      "lat": 55.6761,
+      "lon": 12.5683,
+      "country": "DK",
+      "cluster": "DK_Metro",
+      "popolazione": 794000,
+      "lang": "da"
+    },
+    {
+      "nome": "Aarhus",
+      "lat": 56.1629,
+      "lon": 10.2039,
+      "country": "DK",
+      "cluster": "DK_Industrial",
+      "popolazione": 285000,
+      "lang": "da"
+    },
+    {
+      "nome": "Odense",
+      "lat": 55.4038,
+      "lon": 10.4024,
+      "country": "DK",
+      "cluster": "DK_Industrial",
+      "popolazione": 180000,
+      "lang": "da"
+    },
+    {
+      "nome": "Oslo",
+      "lat": 59.9139,
+      "lon": 10.7522,
+      "country": "NO",
+      "cluster": "NO_Metro",
+      "popolazione": 693000,
+      "lang": "no"
+    },
+    {
+      "nome": "Bergen",
+      "lat": 60.3913,
+      "lon": 5.3221,
+      "country": "NO",
+      "cluster": "NO_Coastal",
+      "popolazione": 285000,
+      "lang": "no"
+    },
+    {
+      "nome": "Trondheim",
+      "lat": 63.4305,
+      "lon": 10.3951,
+      "country": "NO",
+      "cluster": "NO_Industrial",
+      "popolazione": 207000,
+      "lang": "no"
+    },
+    {
+      "nome": "Stavanger",
+      "lat": 58.97,
+      "lon": 5.7331,
+      "country": "NO",
+      "cluster": "NO_Coastal",
+      "popolazione": 145000,
+      "lang": "no"
     }
   ]
 }
