@@ -1,0 +1,78 @@
+{
+  "SE": [
+    {"city": "Stockholm", "slug": "stockholm", "lat": 59.3293, "lon": 18.0686, "country": "SE", "lang": "sv", "population": 975000, "cluster": "SE_Metro"},
+    {"city": "Göteborg", "slug": "goteborg", "lat": 57.7089, "lon": 11.9746, "country": "SE", "lang": "sv", "population": 580000, "cluster": "SE_Industrial"},
+    {"city": "Malmö", "slug": "malmo", "lat": 55.6050, "lon": 13.0038, "country": "SE", "lang": "sv", "population": 350000, "cluster": "SE_Coastal"},
+    {"city": "Uppsala", "slug": "uppsala", "lat": 59.8586, "lon": 17.6389, "country": "SE", "lang": "sv", "population": 230000, "cluster": "SE_University"},
+    {"city": "Västerås", "slug": "vasteras", "lat": 59.6162, "lon": 16.5528, "country": "SE", "lang": "sv", "population": 150000, "cluster": "SE_Industrial"},
+    {"city": "Örebro", "slug": "orebro", "lat": 59.2741, "lon": 15.2066, "country": "SE", "lang": "sv", "population": 155000, "cluster": "SE_Industrial"},
+    {"city": "Linköping", "slug": "linkoping", "lat": 58.4108, "lon": 15.6214, "country": "SE", "lang": "sv", "population": 165000, "cluster": "SE_Industrial"},
+    {"city": "Helsingborg", "slug": "helsingborg", "lat": 56.0465, "lon": 12.6945, "country": "SE", "lang": "sv", "population": 145000, "cluster": "SE_Coastal"},
+    {"city": "Jönköping", "slug": "jonkoping", "lat": 57.7826, "lon": 14.1618, "country": "SE", "lang": "sv", "population": 140000, "cluster": "SE_Industrial"},
+    {"city": "Umeå", "slug": "umea", "lat": 63.8258, "lon": 20.2630, "country": "SE", "lang": "sv", "population": 130000, "cluster": "SE_North"}
+  ],
+  "GB": [
+    {"city": "London", "slug": "london", "lat": 51.5074, "lon": -0.1278, "country": "GB", "lang": "en", "population": 9000000, "cluster": "GB_Metro"},
+    {"city": "Manchester", "slug": "manchester", "lat": 53.4808, "lon": -2.2426, "country": "GB", "lang": "en", "population": 553000, "cluster": "GB_Industrial"},
+    {"city": "Birmingham", "slug": "birmingham", "lat": 52.4862, "lon": -1.8904, "country": "GB", "lang": "en", "population": 1140000, "cluster": "GB_Industrial"},
+    {"city": "Edinburgh", "slug": "edinburgh", "lat": 55.9533, "lon": -3.1883, "country": "GB", "lang": "en", "population": 530000, "cluster": "GB_Metro"},
+    {"city": "Glasgow", "slug": "glasgow", "lat": 55.8642, "lon": -4.2518, "country": "GB", "lang": "en", "population": 630000, "cluster": "GB_Industrial"},
+    {"city": "Leeds", "slug": "leeds", "lat": 53.8008, "lon": -1.5491, "country": "GB", "lang": "en", "population": 793000, "cluster": "GB_Industrial"},
+    {"city": "Bristol", "slug": "bristol", "lat": 51.4545, "lon": -2.5879, "country": "GB", "lang": "en", "population": 470000, "cluster": "GB_Coastal"},
+    {"city": "Cardiff", "slug": "cardiff", "lat": 51.4816, "lon": -3.1791, "country": "GB", "lang": "en", "population": 370000, "cluster": "GB_Coastal"},
+    {"city": "Liverpool", "slug": "liverpool", "lat": 53.4084, "lon": -2.9916, "country": "GB", "lang": "en", "population": 498000, "cluster": "GB_Coastal"},
+    {"city": "Sheffield", "slug": "sheffield", "lat": 53.3811, "lon": -1.4701, "country": "GB", "lang": "en", "population": 584000, "cluster": "GB_Industrial"}
+  ],
+  "NL": [
+    {"city": "Amsterdam", "slug": "amsterdam", "lat": 52.3676, "lon": 4.9041, "country": "NL", "lang": "nl", "population": 921000, "cluster": "NL_Metro"},
+    {"city": "Rotterdam", "slug": "rotterdam", "lat": 51.9244, "lon": 4.4777, "country": "NL", "lang": "nl", "population": 651000, "cluster": "NL_Industrial"},
+    {"city": "Den Haag", "slug": "den-haag", "lat": 52.0705, "lon": 4.3007, "country": "NL", "lang": "nl", "population": 545000, "cluster": "NL_Metro"},
+    {"city": "Utrecht", "slug": "utrecht", "lat": 52.0907, "lon": 5.1214, "country": "NL", "lang": "nl", "population": 361000, "cluster": "NL_University"},
+    {"city": "Eindhoven", "slug": "eindhoven", "lat": 51.4416, "lon": 5.4697, "country": "NL", "lang": "nl", "population": 234000, "cluster": "NL_Industrial"},
+    {"city": "Groningen", "slug": "groningen", "lat": 53.2194, "lon": 6.5665, "country": "NL", "lang": "nl", "population": 233000, "cluster": "NL_North"}
+  ],
+  "PL": [
+    {"city": "Warszawa", "slug": "warszawa", "lat": 52.2297, "lon": 21.0122, "country": "PL", "lang": "pl", "population": 1800000, "cluster": "PL_Metro"},
+    {"city": "Kraków", "slug": "krakow", "lat": 50.0647, "lon": 19.9450, "country": "PL", "lang": "pl", "population": 780000, "cluster": "PL_Metro"},
+    {"city": "Wrocław", "slug": "wroclaw", "lat": 51.1079, "lon": 17.0385, "country": "PL", "lang": "pl", "population": 643000, "cluster": "PL_Industrial"},
+    {"city": "Poznań", "slug": "poznan", "lat": 52.4064, "lon": 16.9252, "country": "PL", "lang": "pl", "population": 541000, "cluster": "PL_Industrial"},
+    {"city": "Gdańsk", "slug": "gdansk", "lat": 54.3520, "lon": 18.6466, "country": "PL", "lang": "pl", "population": 486000, "cluster": "PL_Coastal"},
+    {"city": "Łódź", "slug": "lodz", "lat": 51.7592, "lon": 19.4560, "country": "PL", "lang": "pl", "population": 672000, "cluster": "PL_Industrial"}
+  ],
+  "AT": [
+    {"city": "Wien", "slug": "wien", "lat": 48.2082, "lon": 16.3738, "country": "AT", "lang": "de", "population": 1900000, "cluster": "AT_Metro"},
+    {"city": "Graz", "slug": "graz", "lat": 47.0707, "lon": 15.4395, "country": "AT", "lang": "de", "population": 291000, "cluster": "AT_Industrial"},
+    {"city": "Linz", "slug": "linz", "lat": 48.3069, "lon": 14.2858, "country": "AT", "lang": "de", "population": 205000, "cluster": "AT_Industrial"},
+    {"city": "Salzburg", "slug": "salzburg", "lat": 47.8095, "lon": 13.0550, "country": "AT", "lang": "de", "population": 155000, "cluster": "AT_Alpine"},
+    {"city": "Innsbruck", "slug": "innsbruck", "lat": 47.2692, "lon": 11.4041, "country": "AT", "lang": "de", "population": 132000, "cluster": "AT_Alpine"}
+  ],
+  "CH": [
+    {"city": "Zürich", "slug": "zurich", "lat": 47.3769, "lon": 8.5417, "country": "CH", "lang": "de", "population": 435000, "cluster": "CH_Metro"},
+    {"city": "Genève", "slug": "geneve", "lat": 46.2044, "lon": 6.1432, "country": "CH", "lang": "fr", "population": 203000, "cluster": "CH_Metro"},
+    {"city": "Basel", "slug": "basel", "lat": 47.5596, "lon": 7.5886, "country": "CH", "lang": "de", "population": 178000, "cluster": "CH_Industrial"},
+    {"city": "Bern", "slug": "bern", "lat": 46.9480, "lon": 7.4474, "country": "CH", "lang": "de", "population": 134000, "cluster": "CH_Metro"},
+    {"city": "Lausanne", "slug": "lausanne", "lat": 46.5197, "lon": 6.6323, "country": "CH", "lang": "fr", "population": 140000, "cluster": "CH_Metro"}
+  ],
+  "BE": [
+    {"city": "Bruxelles", "slug": "bruxelles", "lat": 50.8503, "lon": 4.3517, "country": "BE", "lang": "fr", "population": 1200000, "cluster": "BE_Metro"},
+    {"city": "Antwerpen", "slug": "antwerpen", "lat": 51.2194, "lon": 4.4025, "country": "BE", "lang": "nl", "population": 530000, "cluster": "BE_Industrial"},
+    {"city": "Gent", "slug": "gent", "lat": 51.0543, "lon": 3.7174, "country": "BE", "lang": "nl", "population": 262000, "cluster": "BE_Industrial"},
+    {"city": "Liège", "slug": "liege", "lat": 50.6326, "lon": 5.5797, "country": "BE", "lang": "fr", "population": 197000, "cluster": "BE_Industrial"}
+  ],
+  "PT": [
+    {"city": "Lisboa", "slug": "lisboa", "lat": 38.7223, "lon": -9.1393, "country": "PT", "lang": "pt", "population": 545000, "cluster": "PT_Metro"},
+    {"city": "Porto", "slug": "porto", "lat": 41.1579, "lon": -8.6291, "country": "PT", "lang": "pt", "population": 237000, "cluster": "PT_Metro"},
+    {"city": "Braga", "slug": "braga", "lat": 41.5454, "lon": -8.4265, "country": "PT", "lang": "pt", "population": 193000, "cluster": "PT_Industrial"}
+  ],
+  "DK": [
+    {"city": "København", "slug": "kobenhavn", "lat": 55.6761, "lon": 12.5683, "country": "DK", "lang": "da", "population": 794000, "cluster": "DK_Metro"},
+    {"city": "Aarhus", "slug": "aarhus", "lat": 56.1629, "lon": 10.2039, "country": "DK", "lang": "da", "population": 285000, "cluster": "DK_Industrial"},
+    {"city": "Odense", "slug": "odense", "lat": 55.4038, "lon": 10.4024, "country": "DK", "lang": "da", "population": 180000, "cluster": "DK_Industrial"}
+  ],
+  "NO": [
+    {"city": "Oslo", "slug": "oslo", "lat": 59.9139, "lon": 10.7522, "country": "NO", "lang": "no", "population": 693000, "cluster": "NO_Metro"},
+    {"city": "Bergen", "slug": "bergen", "lat": 60.3913, "lon": 5.3221, "country": "NO", "lang": "no", "population": 285000, "cluster": "NO_Coastal"},
+    {"city": "Trondheim", "slug": "trondheim", "lat": 63.4305, "lon": 10.3951, "country": "NO", "lang": "no", "population": 207000, "cluster": "NO_Industrial"},
+    {"city": "Stavanger", "slug": "stavanger", "lat": 58.9700, "lon": 5.7331, "country": "NO", "lang": "no", "population": 145000, "cluster": "NO_Coastal"}
+  ]
+}

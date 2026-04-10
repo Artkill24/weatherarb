@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pogoda Gdańsk — Monitoring Anomalii | WeatherArb</title>
+  <meta name="description" content="Monitoring anomalii pogodowych w czasie rzeczywistym w Gdańsk. Analiza Z-Score oparta na 25 latach historycznych danych klimatycznych.">
+  <meta property="og:title" content="Pogoda Gdańsk — Monitoring Anomalii | WeatherArb">
+  <meta property="og:description" content="Monitoring anomalii pogodowych w czasie rzeczywistym w Gdańsk. Analiza Z-Score oparta na 25 latach historycznych danych klimatycznych.">
+  <link rel="canonical" href="https://weatherarb.com/pl/gdansk/">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header>
+    <a href="/" class="logo">⚡ WeatherArb</a>
+    <nav>
+      <a href="/data/">Dane Live</a>
+      <a href="/map.html">Mapa</a>
+      <a href="/alerts.html">Alerty</a>
+    </nav>
+  </header>
+
+  <main class="city-page">
+    <div class="city-hero">
+      <h1>Anomalie Pogodowe w Gdańsk — Live Z-Score</h1>
+      <p class="city-subtitle">Monitoring klimatu na żywo · Z-Score · NASA POWER + ERA5</p>
+    </div>
+
+    <div class="pulse-widget" id="pulse-gdansk">
+      <div class="pulse-loading">Ładowanie danych pogodowych...</div>
+    </div>
+
+    <section class="city-info">
+      <h2>Dane Pogodowe Live</h2>
+      <div class="metrics-grid" id="metrics-gdansk">
+        <!-- Popolato via JS da API -->
+      </div>
+    </section>
+
+    <section class="city-context">
+      <h2>O WeatherArb</h2>
+      <p>WeatherArb monitoruje anomalie pogodowe w czasie rzeczywistym w 6 polskich miastach, używając analizy Z-Score opartej na 25 latach danych historycznych.</p>
+    </section>
+
+    <section class="city-articles" id="articles-gdansk">
+      <h2>Najnowsze Raporty</h2>
+      <!-- Articoli dinamici da latest_reports.json -->
+    </section>
+  </main>
+
+  <footer>
+    <p>Dane aktualizowane co godzinę · WeatherArb European Weather Intelligence</p>
+    <p><a href="/api.html">API</a> · <a href="/about.html">Metodologia</a> · <a href="/alerts.html">Subskrybuj</a></p>
+  </footer>
+
+  <script>
+    const CITY_SLUG = "gdansk";
+    const COUNTRY = "PL";
+    const API_BASE = "https://api.weatherarb.com";
+
+    async function loadPulse() {
+      try {
+        const r = await fetch(`${API_BASE}/api/v1/pulse/${CITY_SLUG}`);
+        const d = await r.json();
+        document.getElementById(`pulse-${CITY_SLUG}`).innerHTML = renderPulse(d);
+        document.getElementById(`metrics-${CITY_SLUG}`).innerHTML = renderMetrics(d);
+      } catch(e) {
+        document.getElementById(`pulse-${CITY_SLUG}`).innerHTML = '<p class="error">Nie można załadować danych. Spróbuj ponownie.</p>';
+      }
+    }
+
+    function renderPulse(d) {
+      const level = d.anomaly_level || 'NORMAL';
+      const score = d.z_score?.toFixed(2) || '–';
+      const cls = level.toLowerCase();
+      return `<div class="pulse-card ${cls}">
+        <span class="pulse-level">${level}</span>
+        <span class="pulse-score">Z: ${score}</span>
+        <span class="pulse-temp">${d.temperature?.toFixed(1) || '–'}°C</span>
+      </div>`;
+    }
+
+    function renderMetrics(d) {
+      return `
+        <div class="metric"><label>Z-Score</label><value>${d.z_score?.toFixed(2) || '–'}</value></div>
+        <div class="metric"><label>Temp</label><value>${d.temperature?.toFixed(1) || '–'}°C</value></div>
+        <div class="metric"><label>Humidity</label><value>${d.humidity || '–'}%</value></div>
+        <div class="metric"><label>Level</label><value>${d.anomaly_level || 'NORMAL'}</value></div>
+      `;
+    }
+
+    // Carica articoli recenti per questa città
+    async function loadArticles() {
+      try {
+        const r = await fetch('/data/latest_reports.json');
+        const articles = await r.json();
+        const cityArticles = articles.filter(a =>
+          a.city?.toLowerCase() === CITY_SLUG.toLowerCase() ||
+          a.country === COUNTRY
+        ).slice(0, 3);
+        if (cityArticles.length > 0) {
+          document.getElementById(`articles-${CITY_SLUG}`).querySelector('h2').insertAdjacentHTML(
+            'afterend',
+            cityArticles.map(a => `
+              <article class="article-card">
+                <h3><a href="/news/${a.slug}/">${a.title}</a></h3>
+                <time>${new Date(a.date).toLocaleDateString()}</time>
+              </article>
+            `).join('')
+          );
+        }
+      } catch(e) {}
+    }
+
+    loadPulse();
+    loadArticles();
+    setInterval(loadPulse, 60000); // refresh ogni minuto
+  </script>
+</body>
+</html>

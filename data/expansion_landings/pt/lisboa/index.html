@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tempo Lisboa — Monitorização de Anomalias | WeatherArb</title>
+  <meta name="description" content="Monitorização em tempo real de anomalias meteorológicas em Lisboa. Análise Z-Score baseada em 25 anos de dados climáticos históricos.">
+  <meta property="og:title" content="Tempo Lisboa — Monitorização de Anomalias | WeatherArb">
+  <meta property="og:description" content="Monitorização em tempo real de anomalias meteorológicas em Lisboa. Análise Z-Score baseada em 25 anos de dados climáticos históricos.">
+  <link rel="canonical" href="https://weatherarb.com/pt/lisboa/">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header>
+    <a href="/" class="logo">⚡ WeatherArb</a>
+    <nav>
+      <a href="/data/">Dados Live</a>
+      <a href="/map.html">Mapa</a>
+      <a href="/alerts.html">Alertas</a>
+    </nav>
+  </header>
+
+  <main class="city-page">
+    <div class="city-hero">
+      <h1>Anomalias Meteorológicas em Lisboa — Z-Score Live</h1>
+      <p class="city-subtitle">Monitorização climática live · Z-Score · NASA POWER + ERA5</p>
+    </div>
+
+    <div class="pulse-widget" id="pulse-lisboa">
+      <div class="pulse-loading">A carregar dados meteorológicos...</div>
+    </div>
+
+    <section class="city-info">
+      <h2>Dados Meteorológicos em Direto</h2>
+      <div class="metrics-grid" id="metrics-lisboa">
+        <!-- Popolato via JS da API -->
+      </div>
+    </section>
+
+    <section class="city-context">
+      <h2>Sobre WeatherArb</h2>
+      <p>WeatherArb monitoriza anomalias meteorológicas em tempo real em 3 cidades portuguesas, usando análise Z-Score baseada em 25 anos de dados históricos.</p>
+    </section>
+
+    <section class="city-articles" id="articles-lisboa">
+      <h2>Últimos Relatórios</h2>
+      <!-- Articoli dinamici da latest_reports.json -->
+    </section>
+  </main>
+
+  <footer>
+    <p>Dados atualizados de hora em hora · WeatherArb European Weather Intelligence</p>
+    <p><a href="/api.html">API</a> · <a href="/about.html">Metodologia</a> · <a href="/alerts.html">Subscrever</a></p>
+  </footer>
+
+  <script>
+    const CITY_SLUG = "lisboa";
+    const COUNTRY = "PT";
+    const API_BASE = "https://api.weatherarb.com";
+
+    async function loadPulse() {
+      try {
+        const r = await fetch(`${API_BASE}/api/v1/pulse/${CITY_SLUG}`);
+        const d = await r.json();
+        document.getElementById(`pulse-${CITY_SLUG}`).innerHTML = renderPulse(d);
+        document.getElementById(`metrics-${CITY_SLUG}`).innerHTML = renderMetrics(d);
+      } catch(e) {
+        document.getElementById(`pulse-${CITY_SLUG}`).innerHTML = '<p class="error">Não foi possível carregar os dados. Tente novamente.</p>';
+      }
+    }
+
+    function renderPulse(d) {
+      const level = d.anomaly_level || 'NORMAL';
+      const score = d.z_score?.toFixed(2) || '–';
+      const cls = level.toLowerCase();
+      return `<div class="pulse-card ${cls}">
+        <span class="pulse-level">${level}</span>
+        <span class="pulse-score">Z: ${score}</span>
+        <span class="pulse-temp">${d.temperature?.toFixed(1) || '–'}°C</span>
+      </div>`;
+    }
+
+    function renderMetrics(d) {
+      return `
+        <div class="metric"><label>Z-Score</label><value>${d.z_score?.toFixed(2) || '–'}</value></div>
+        <div class="metric"><label>Temp</label><value>${d.temperature?.toFixed(1) || '–'}°C</value></div>
+        <div class="metric"><label>Humidity</label><value>${d.humidity || '–'}%</value></div>
+        <div class="metric"><label>Level</label><value>${d.anomaly_level || 'NORMAL'}</value></div>
+      `;
+    }
+
+    // Carica articoli recenti per questa città
+    async function loadArticles() {
+      try {
+        const r = await fetch('/data/latest_reports.json');
+        const articles = await r.json();
+        const cityArticles = articles.filter(a =>
+          a.city?.toLowerCase() === CITY_SLUG.toLowerCase() ||
+          a.country === COUNTRY
+        ).slice(0, 3);
+        if (cityArticles.length > 0) {
+          document.getElementById(`articles-${CITY_SLUG}`).querySelector('h2').insertAdjacentHTML(
+            'afterend',
+            cityArticles.map(a => `
+              <article class="article-card">
+                <h3><a href="/news/${a.slug}/">${a.title}</a></h3>
+                <time>${new Date(a.date).toLocaleDateString()}</time>
+              </article>
+            `).join('')
+          );
+        }
+      } catch(e) {}
+    }
+
+    loadPulse();
+    loadArticles();
+    setInterval(loadPulse, 60000); // refresh ogni minuto
+  </script>
+</body>
+</html>

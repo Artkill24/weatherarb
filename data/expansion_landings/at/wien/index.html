@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wetter Wien — Anomalie-Monitoring | WeatherArb</title>
+  <meta name="description" content="Echtzeit-Überwachung von Wetteranomalien in Wien. Z-Score-Analyse basierend auf 25 Jahren historischer Klimadaten.">
+  <meta property="og:title" content="Wetter Wien — Anomalie-Monitoring | WeatherArb">
+  <meta property="og:description" content="Echtzeit-Überwachung von Wetteranomalien in Wien. Z-Score-Analyse basierend auf 25 Jahren historischer Klimadaten.">
+  <link rel="canonical" href="https://weatherarb.com/at/wien/">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header>
+    <a href="/" class="logo">⚡ WeatherArb</a>
+    <nav>
+      <a href="/data/">Live Daten</a>
+      <a href="/map.html">Karte</a>
+      <a href="/alerts.html">Warnungen</a>
+    </nav>
+  </header>
+
+  <main class="city-page">
+    <div class="city-hero">
+      <h1>Wetteranomalien in Wien — Live Z-Score</h1>
+      <p class="city-subtitle">Live Klimaüberwachung · Z-Score · NASA POWER + ERA5</p>
+    </div>
+
+    <div class="pulse-widget" id="pulse-wien">
+      <div class="pulse-loading">Wetterdaten werden geladen...</div>
+    </div>
+
+    <section class="city-info">
+      <h2>Live Wetterdaten</h2>
+      <div class="metrics-grid" id="metrics-wien">
+        <!-- Popolato via JS da API -->
+      </div>
+    </section>
+
+    <section class="city-context">
+      <h2>Über WeatherArb</h2>
+      <p>WeatherArb überwacht Wetteranomalien in Echtzeit in deutschen, österreichischen und Schweizer Städten mittels Z-Score-Analyse auf Basis von 25 Jahren historischer Daten.</p>
+    </section>
+
+    <section class="city-articles" id="articles-wien">
+      <h2>Aktuelle Berichte</h2>
+      <!-- Articoli dinamici da latest_reports.json -->
+    </section>
+  </main>
+
+  <footer>
+    <p>Daten stündlich aktualisiert · WeatherArb European Weather Intelligence</p>
+    <p><a href="/api.html">API</a> · <a href="/about.html">Methodik</a> · <a href="/alerts.html">Abonnieren</a></p>
+  </footer>
+
+  <script>
+    const CITY_SLUG = "wien";
+    const COUNTRY = "AT";
+    const API_BASE = "https://api.weatherarb.com";
+
+    async function loadPulse() {
+      try {
+        const r = await fetch(`${API_BASE}/api/v1/pulse/${CITY_SLUG}`);
+        const d = await r.json();
+        document.getElementById(`pulse-${CITY_SLUG}`).innerHTML = renderPulse(d);
+        document.getElementById(`metrics-${CITY_SLUG}`).innerHTML = renderMetrics(d);
+      } catch(e) {
+        document.getElementById(`pulse-${CITY_SLUG}`).innerHTML = '<p class="error">Daten konnten nicht geladen werden. Bitte erneut versuchen.</p>';
+      }
+    }
+
+    function renderPulse(d) {
+      const level = d.anomaly_level || 'NORMAL';
+      const score = d.z_score?.toFixed(2) || '–';
+      const cls = level.toLowerCase();
+      return `<div class="pulse-card ${cls}">
+        <span class="pulse-level">${level}</span>
+        <span class="pulse-score">Z: ${score}</span>
+        <span class="pulse-temp">${d.temperature?.toFixed(1) || '–'}°C</span>
+      </div>`;
+    }
+
+    function renderMetrics(d) {
+      return `
+        <div class="metric"><label>Z-Score</label><value>${d.z_score?.toFixed(2) || '–'}</value></div>
+        <div class="metric"><label>Temp</label><value>${d.temperature?.toFixed(1) || '–'}°C</value></div>
+        <div class="metric"><label>Humidity</label><value>${d.humidity || '–'}%</value></div>
+        <div class="metric"><label>Level</label><value>${d.anomaly_level || 'NORMAL'}</value></div>
+      `;
+    }
+
+    // Carica articoli recenti per questa città
+    async function loadArticles() {
+      try {
+        const r = await fetch('/data/latest_reports.json');
+        const articles = await r.json();
+        const cityArticles = articles.filter(a =>
+          a.city?.toLowerCase() === CITY_SLUG.toLowerCase() ||
+          a.country === COUNTRY
+        ).slice(0, 3);
+        if (cityArticles.length > 0) {
+          document.getElementById(`articles-${CITY_SLUG}`).querySelector('h2').insertAdjacentHTML(
+            'afterend',
+            cityArticles.map(a => `
+              <article class="article-card">
+                <h3><a href="/news/${a.slug}/">${a.title}</a></h3>
+                <time>${new Date(a.date).toLocaleDateString()}</time>
+              </article>
+            `).join('')
+          );
+        }
+      } catch(e) {}
+    }
+
+    loadPulse();
+    loadArticles();
+    setInterval(loadPulse, 60000); // refresh ogni minuto
+  </script>
+</body>
+</html>

@@ -162,7 +162,6 @@ CLUSTER_ROI_MULTIPLIER = {
     "Apennine_NE": 0.90,
     "NE_Border": 1.0,
 }
-AMAZON_ASSOCIATE_TAG = "meteoguida-21"  # Cambia con il tuo tag reale
 
 # Cluster tedeschi
 CLUSTER_ROI_MULTIPLIER.update({
@@ -172,10 +171,4 @@ CLUSTER_ROI_MULTIPLIER.update({
     "DE_Coastal": 1.1,
 })
 
-AMAZON_TAGS = {
-    "IT": "weatherarb0f-21",
-    "DE": "weatherarb-21",
-    "ES": "weatherarb04-21",
-    "FR": "weatherarb08-21",
-    "UK": "weatherarb048-21",
-}
+
