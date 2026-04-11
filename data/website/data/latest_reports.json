@@ -1,6 +1,58 @@
 {
-  "last_updated": "2026-04-11T12:40:55.195102",
+  "last_updated": "2026-04-11T18:35:11.576075",
   "reports": [
+    {
+      "slug": "2026-04-11-bordeaux-heavy-rain",
+      "title": "Bordeaux: Piogge Estreme, Anomalia Critica del +19.83 Z-Score",
+      "excerpt": "Bordeaux sta affrontando un evento di piogge estreme di portata eccezionale. Le attuali condizioni idrometeorologiche segnalano un'anomalia critica, con implicazioni significative per la città e la regione circostante.",
+      "provincia": "Bordeaux",
+      "evento": "Heavy_Rain",
+      "date": "2026-04-11",
+      "z_score": 19.83,
+      "score": 6.92,
+      "anomaly_level": "CRITICAL",
+      "url": "/news/2026-04-11-bordeaux-heavy-rain/",
+      "is_live": true
+    },
+    {
+      "slug": "2026-04-11-marseille-heat-wave",
+      "title": "Ondata di Calore Estrema su Marsiglia: Anomalia Critica",
+      "excerpt": "Marsiglia sta affrontando un'ondata di calore di eccezionale intensità, con uno Z-Score di +3.01 che indica un'anomalia critica e pone seri rischi per la salute e l'ambiente.",
+      "provincia": "Marseille",
+      "evento": "Heat_Wave",
+      "date": "2026-04-11",
+      "z_score": 3.01,
+      "score": 8.59,
+      "anomaly_level": "CRITICAL",
+      "url": "/news/2026-04-11-marseille-heat-wave/",
+      "is_live": true
+    },
+    {
+      "slug": "2026-04-11-paris-light-rain",
+      "title": "Parigi: Pioggia Leggera, Anomalia Idrologica Estrema",
+      "excerpt": "Parigi sta vivendo un evento di pioggia leggera che, nonostante l'intensità modesta, si rivela un'anomalia idrologica estrema. Con uno Z-Score di +2.75, l'accumulo di precipitazioni è eccezionalmente elevato rispetto alla norma storica, con implicazioni pratiche per la città e il suo ambiente.",
+      "provincia": "Paris",
+      "evento": "Light_Rain",
+      "date": "2026-04-11",
+      "z_score": 2.75,
+      "score": 8.59,
+      "anomaly_level": "EXTREME",
+      "url": "/news/2026-04-11-paris-light-rain/",
+      "is_live": true
+    },
+    {
+      "slug": "2026-04-11-lyon-heat-wave",
+      "title": "Ondata di Calore Estrema a Lione: Analisi e Impatti",
+      "excerpt": "Lione sta affrontando un'ondata di calore di eccezionale intensità, classificata come 'EXTREME'. Con un Z-Score di +2.70, l'evento indica una deviazione termica significativa rispetto alla baseline, posizionandosi tra i più rari e severi. Si prevedono impatti critici su salute pubblica, infrastrutture e agricoltura.",
+      "provincia": "Lyon",
+      "evento": "Heat_Wave",
+      "date": "2026-04-11",
+      "z_score": 2.7,
+      "score": 6.66,
+      "anomaly_level": "EXTREME",
+      "url": "/news/2026-04-11-lyon-heat-wave/",
+      "is_live": true
+    },
     {
       "slug": "2026-04-11-manchester-clear",
       "title": "Manchester: Anomalia Rara di Cieli Sereni Persistenti",
@@ -139,54 +191,6 @@
       "anomaly_level": "EXTREME",
       "excerpt": "Anomalia meteo a Biella. Z-Score +2.03, livello EXTREME. Analisi tecnica e consigli pratici.",
       "url": "/news/2026-04-10-biella-heat-wave/"
-    },
-    {
-      "title": "Heat Wave anomalo a Aosta: analisi WeatherArb del 10/04/2026",
-      "slug": "2026-04-10-aosta-heat-wave",
-      "date": "2026-04-10",
-      "provincia": "Aosta",
-      "evento": "Heat Wave",
-      "z_score": 4.98,
-      "score": 7.8,
-      "anomaly_level": "CRITICAL",
-      "excerpt": "Anomalia meteo a Aosta. Z-Score +4.98, livello CRITICAL. Analisi tecnica e consigli pratici.",
-      "url": "/news/2026-04-10-aosta-heat-wave/"
-    },
-    {
-      "title": "Heat Wave anomalo a Varese: analisi WeatherArb del 09/04/2026",
-      "slug": "2026-04-09-varese-heat-wave",
-      "date": "2026-04-09",
-      "provincia": "Varese",
-      "evento": "Heat Wave",
-      "z_score": 3.44,
-      "score": 8.83,
-      "anomaly_level": "CRITICAL",
-      "excerpt": "Anomalia meteo a Varese. Z-Score +3.44, livello CRITICAL. Analisi tecnica e consigli pratici.",
-      "url": "/news/2026-04-09-varese-heat-wave/"
-    },
-    {
-      "title": "Heat Wave anomalo a Torino: analisi WeatherArb del 09/04/2026",
-      "slug": "2026-04-09-torino-heat-wave",
-      "date": "2026-04-09",
-      "provincia": "Torino",
-      "evento": "Heat Wave",
-      "z_score": 4.55,
-      "score": 8.96,
-      "anomaly_level": "CRITICAL",
-      "excerpt": "Anomalia meteo a Torino. Z-Score +4.55, livello CRITICAL. Analisi tecnica e consigli pratici.",
-      "url": "/news/2026-04-09-torino-heat-wave/"
-    },
-    {
-      "title": "Heat Wave anomalo a Como: analisi WeatherArb del 09/04/2026",
-      "slug": "2026-04-09-como-heat-wave",
-      "date": "2026-04-09",
-      "provincia": "Como",
-      "evento": "Heat Wave",
-      "z_score": 3.79,
-      "score": 8.78,
-      "anomaly_level": "CRITICAL",
-      "excerpt": "Anomalia meteo a Como. Z-Score +3.79, livello CRITICAL. Analisi tecnica e consigli pratici.",
-      "url": "/news/2026-04-09-como-heat-wave/"
     }
   ]
 }
