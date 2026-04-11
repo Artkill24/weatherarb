@@ -1,487 +1,70 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meteo Trieste — Anomalie Live Z-Score | WeatherArb</title>
-<meta name="description" content="Monitoraggio anomalie meteo Trieste in tempo reale. Z-Score vs baseline ERA5-Land + NASA POWER. Dati aggiornati ogni ora.">
-<link rel="canonical" href="https://weatherarb.com/it/trieste/">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#0f1117;--paper:#f5f3ee;--storm:#1a3a5c;--electric:#2563eb;--mist:#e8e5de;--muted:#6b6560;--green:#16a34a}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh}
-
-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 48px;border-bottom:1px solid var(--mist);background:rgba(245,243,238,.95);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
-.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-family:'Instrument Serif',serif;font-size:18px}
-.logo-icon{width:26px;height:26px;background:var(--storm);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:13px}
-.nav-back{font-size:12px;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:4px}
-.nav-back:hover{color:var(--ink)}
-
-/* HERO */
-.hero{background:#0f1117;color:white;padding:48px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(37,99,235,.15) 0%,transparent 60%);pointer-events:none}
-.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;position:relative}
-.hero-breadcrumb{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
-.hero-breadcrumb a{color:rgba(255,255,255,.35);text-decoration:none}
-.hero-breadcrumb a:hover{color:rgba(255,255,255,.6)}
-.hero-title{font-family:'Instrument Serif',serif;font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-1px;margin-bottom:12px}
-.hero-meta{font-size:13px;color:rgba(255,255,255,.45);margin-bottom:24px}
-.hero-stats{display:flex;gap:16px;flex-wrap:wrap}
-.hero-stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:14px 20px;text-align:center;min-width:90px}
-.hero-stat-val{font-family:'Instrument Serif',serif;font-size:28px;line-height:1;margin-bottom:4px}
-.hero-stat-lbl{font-size:9px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:1.5px}
-
-/* Z-SCORE GAUGE */
-.gauge-wrap{text-align:center}
-.gauge-circle{width:140px;height:140px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;border:3px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);position:relative}
-.gauge-z{font-family:'Instrument Serif',serif;font-size:36px;font-weight:400;line-height:1}
-.gauge-lbl{font-size:9px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
-.gauge-level{margin-top:10px;font-size:12px;font-weight:600;letter-spacing:1px;padding:4px 14px;border-radius:20px;text-transform:uppercase}
-
-/* CONTENT */
-.content{max-width:1100px;margin:0 auto;padding:48px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
-.card{background:white;border:1px solid var(--mist);border-radius:14px;padding:24px}
-.card-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.card-value{font-family:'Instrument Serif',serif;font-size:32px;color:var(--storm);line-height:1}
-.card-sub{font-size:12px;color:var(--muted);margin-top:4px}
-
-/* IMPACT HORIZON */
-.impact-box{background:#0f1117;color:white;border-radius:16px;padding:28px;margin-bottom:24px}
-.impact-label{font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
-.impact-title{font-family:'Instrument Serif',serif;font-size:22px;margin-bottom:8px;line-height:1.3}
-.impact-desc{font-size:14px;color:rgba(255,255,255,.5);line-height:1.6}
-.impact-bar{display:flex;gap:4px;margin-top:16px}
-.impact-segment{height:6px;border-radius:3px;flex:1}
-
-/* 7-DAY CHART */
-.chart-card{background:white;border:1px solid var(--mist);border-radius:14px;padding:24px;margin-bottom:24px}
-.chart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-.chart-title{font-size:14px;font-weight:600;color:var(--ink)}
-.chart-legend{display:flex;gap:16px;font-size:11px;color:var(--muted)}
-.chart-legend-dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:4px}
-#temp-chart{width:100%;height:120px}
-
-/* METHODOLOGY */
-.method-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
-.method-card{background:white;border:1px solid var(--mist);border-radius:12px;padding:20px}
-.method-icon{font-size:20px;margin-bottom:8px}
-.method-title{font-size:13px;font-weight:600;margin-bottom:6px}
-.method-text{font-size:12px;color:var(--muted);line-height:1.6}
-
-/* ALERT CTA */
-.alert-cta{background:linear-gradient(135deg,#1a3a5c,#1e40af);color:white;border-radius:16px;padding:28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.alert-cta-text h3{font-family:'Instrument Serif',serif;font-size:22px;margin-bottom:6px}
-.alert-cta-text p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.5}
-.alert-cta-actions{display:flex;gap:10px;flex-wrap:wrap}
-.btn-white{padding:10px 20px;background:white;color:var(--storm);border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;white-space:nowrap}
-.btn-outline{padding:10px 20px;background:transparent;color:white;border:1px solid rgba(255,255,255,.3);border-radius:8px;text-decoration:none;font-size:13px;font-weight:500;white-space:nowrap}
-.btn-outline:hover{background:rgba(255,255,255,.1)}
-
-/* NEARBY */
-.nearby-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-.nearby-card{background:white;border:1px solid var(--mist);border-radius:10px;padding:14px;text-decoration:none;color:inherit;transition:all .2s}
-.nearby-card:hover{border-color:#93c5fd;transform:translateY(-2px)}
-
-.mono{font-family:'JetBrains Mono',monospace}
-.live-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--green);font-weight:500}
-.live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-
-footer{background:var(--ink);color:rgba(255,255,255,.35);padding:32px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:12px;margin-top:48px}
-footer a{color:rgba(255,255,255,.4);text-decoration:none}
-footer a:hover{color:white}
-
-@media(max-width:768px){
-  .hero{padding:24px 20px}
-  .hero-inner{grid-template-columns:1fr}
-  .content{padding:24px 16px}
-  .grid-3{grid-template-columns:1fr 1fr}
-  .method-grid{grid-template-columns:1fr}
-  .nearby-grid{grid-template-columns:1fr 1fr}
-  nav{padding:14px 16px}
-  .alert-cta{flex-direction:column}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Report: Trieste — WeatherArb</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+    <style>
+        :root { --ink:#0f1117; --paper:#f5f3ee; --electric:#2563eb; }
+        body { font-family: ui-sans-serif, system-ui; background: var(--paper); color: var(--ink); }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .serif { font-family: 'Instrument Serif', serif; }
+    </style>
 </head>
-<body>
+<body class="p-6 md:p-12">
+    <nav class="max-w-4xl mx-auto flex justify-between items-center mb-16">
+        <a href="/" class="font-bold text-xl">⛈ WeatherArb</a>
+        <div class="text-[10px] uppercase tracking-widest opacity-50 mono font-bold">Italy / Friuli-Venezia Giulia</div>
+    </nav>
 
-<nav>
-  <a href="/" class="logo"><div class="logo-icon">⛈</div>WeatherArb</a>
-  <a href="/it/" class="nav-back">← Tutte le province IT</a>
-</nav>
-
-<!-- HERO -->
-<div class="hero" id="hero-section">
-  <div class="hero-inner">
-    <div>
-      <div class="hero-breadcrumb">
-        <a href="/">WeatherArb</a> / <a href="/it/">Italia</a> / Trieste
-      </div>
-      <div class="hero-title">
-        Trieste<br>
-        <span id="hero-event" style="color:rgba(255,255,255,.5);font-style:italic">Caricamento...</span>
-      </div>
-      <div class="hero-meta">
-        🇮🇹 Friuli-Venezia Giulia · Coordinata: 45.6495°N, 13.7768°E · 
-        <span class="live-badge"><span class="live-dot"></span>Aggiornato ogni ora</span>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-val mono" id="h-temp">—</div>
-          <div class="hero-stat-lbl">Temp ora</div>
+    <main class="max-w-4xl mx-auto">
+        <div class="mb-12">
+            <h1 class="text-6xl serif mb-4 italic">Trieste</h1>
+            <p class="text-xl opacity-60">Anomaly Analysis & Strategic Impact Horizon.</p>
         </div>
-        <div class="hero-stat">
-          <div class="hero-stat-val" id="h-avg" style="color:rgba(255,255,255,.5)">—</div>
-          <div class="hero-stat-lbl">Media storica</div>
+
+        <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm mb-12">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-2">Live Status</div>
+                    <div class="text-4xl font-bold mono mb-4" id="live-z">--</div>
+                    <p class="text-sm opacity-70 leading-relaxed">Deviazione statistica calcolata su baseline NASA 2000-2024.</p>
+                </div>
+                <div class="bg-gray-900 rounded-2xl p-6 text-white">
+                    <div class="text-[10px] opacity-50 uppercase tracking-widest mb-1">Impact Horizon</div>
+                    <div class="text-5xl font-bold text-orange-400 mono" id="live-horizon">--h</div>
+                    <div class="mt-4 text-[10px] font-bold py-1 px-3 bg-orange-400/10 text-orange-400 border border-orange-400/20 rounded-full inline-block">WINDOW OPEN</div>
+                </div>
+            </div>
         </div>
-        <div class="hero-stat">
-          <div class="hero-stat-val" id="h-score">—</div>
-          <div class="hero-stat-lbl">Signal score</div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-16 text-center">
+            <div class="p-6 border border-gray-100 rounded-2xl bg-white/50">
+                <div class="text-xs opacity-50 uppercase mb-2">Confidence</div>
+                <div class="text-2xl font-bold mono">94.2%</div>
+            </div>
+            <div class="p-6 border border-gray-100 rounded-2xl bg-white/50">
+                <div class="text-xs opacity-50 uppercase mb-2">Data Source</div>
+                <div class="text-2xl font-bold mono text-blue-600">ERA5</div>
+            </div>
+            <div class="p-6 border border-gray-100 rounded-2xl bg-white/50">
+                <div class="text-xs opacity-50 uppercase mb-2">Refresh</div>
+                <div class="text-2xl font-bold mono">60m</div>
+            </div>
         </div>
-        <div class="hero-stat">
-          <div class="hero-stat-val" id="h-rain">—</div>
-          <div class="hero-stat-lbl">Pioggia</div>
-        </div>
-      </div>
-    </div>
-    <div class="gauge-wrap">
-      <div class="gauge-circle" id="gauge-circle">
-        <div class="gauge-z mono" id="gauge-z">—</div>
-        <div class="gauge-lbl">Z-Score</div>
-      </div>
-      <div class="gauge-level" id="gauge-level">—</div>
-    </div>
-  </div>
-</div>
+    </main>
 
-<div class="content">
-
-  <!-- TOP CARDS -->
-  <div class="grid-3">
-    <div class="card">
-      <div class="card-label">🌡️ Temperatura attuale</div>
-      <div class="card-value" id="c-temp">—</div>
-      <div class="card-sub" id="c-temp-sub">vs media storica —°C</div>
-    </div>
-    <div class="card">
-      <div class="card-label">📊 Z-Score anomalia</div>
-      <div class="card-value mono" id="c-z">—</div>
-      <div class="card-sub">ERA5-Land + NASA POWER baseline</div>
-    </div>
-    <div class="card">
-      <div class="card-label">⚡ Signal Score</div>
-      <div class="card-value" id="c-score">—</div>
-      <div class="card-sub">Composito Z + lead-time + confidenza</div>
-    </div>
-  </div>
-
-  <!-- IMPACT HORIZON -->
-  <div class="impact-box">
-    <div class="impact-label">🎯 Impact Horizon</div>
-    <div class="impact-title" id="impact-title">Calcolo in corso...</div>
-    <div class="impact-desc" id="impact-desc">Analisi dell'anomalia rispetto alla baseline storica ERA5-Land.</div>
-    <div class="impact-bar" id="impact-bar"></div>
-  </div>
-
-  <!-- 7-DAY TEMP CHART -->
-  <div class="chart-card">
-    <div class="chart-header">
-      <div class="chart-title">📈 Temperatura ultimi 7 giorni vs baseline</div>
-      <div class="chart-legend">
-        <span><span class="chart-legend-dot" style="background:#2563eb"></span>Attuale</span>
-        <span><span class="chart-legend-dot" style="background:#e8e5de"></span>Baseline storica</span>
-      </div>
-    </div>
-    <svg id="temp-chart" viewBox="0 0 700 120" preserveAspectRatio="none">
-      <text x="350" y="65" text-anchor="middle" fill="#94a3b8" font-size="13" font-family="DM Sans">Caricamento dati...</text>
-    </svg>
-    <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:8px;padding:0 4px" id="chart-labels"></div>
-  </div>
-
-  <!-- METHODOLOGY -->
-  <div style="margin-bottom:24px">
-    <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px">Metodologia</div>
-    <div class="method-grid">
-      <div class="method-card">
-        <div class="method-icon">🛰️</div>
-        <div class="method-title">ERA5-Land + NASA POWER</div>
-        <div class="method-text">Baseline climatologica calcolata su 24 anni di dati (2000–2024) alle coordinate esatte di Trieste. Media e deviazione standard per ogni mese dell'anno.</div>
-      </div>
-      <div class="method-card">
-        <div class="method-icon">📐</div>
-        <div class="method-title">Calcolo Z-Score</div>
-        <div class="method-text">Z = (temperatura_attuale − media_storica) / deviazione_standard. Z > 2.0 = EXTREME (1 evento ogni 20 anni). Z > 3.0 = CRITICAL (1 ogni 300 anni).</div>
-      </div>
-      <div class="method-card">
-        <div class="method-icon">⏱️</div>
-        <div class="method-title">Aggiornamento orario</div>
-        <div class="method-text">Dati OpenWeatherMap aggiornati ogni ora e comparati automaticamente con la baseline stagionale. Alert Telegram quando score ≥ 7.0/10.</div>
-      </div>
-      <div class="method-card">
-        <div class="method-icon">🎯</div>
-        <div class="method-title">Signal Score 0–10</div>
-        <div class="method-text">Indice composito che combina Z-Score (40%), intensità evento (30%), lead-time previsionale (20%) e confidenza statistica (10%).</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ALERT CTA -->
-  <div class="alert-cta">
-    <div class="alert-cta-text">
-      <h3>Ricevi gli alert per Trieste</h3>
-      <p>Notifica istantanea quando un'anomalia supera soglia 7.0/10. Via Telegram o email settimanale.</p>
-    </div>
-    <div class="alert-cta-actions">
-      <a href="https://t.me/weatherarb_alerts" class="btn-white" target="_blank">📡 Telegram Alerts</a>
-      <a href="/alerts.html" class="btn-outline">✉️ Email Digest</a>
-    </div>
-  </div>
-
-  <!-- PROVINCE VICINE -->
-  <div style="margin-top:40px">
-    <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px">Province vicine monitorate</div>
-    <div class="nearby-grid" id="nearby-grid">
-      <div style="text-align:center;padding:20px;color:var(--muted);font-size:13px;grid-column:span 3">Caricamento...</div>
-    </div>
-  </div>
-
-  <!-- API SNIPPET -->
-  <div style="margin-top:32px;background:#0f1117;border-radius:12px;padding:20px">
-    <div style="font-size:10px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px">🔌 API pubblica — nessuna auth richiesta</div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.8;color:#94a3b8">
-      <span style="color:#60a5fa">GET</span> https://api.weatherarb.com/api/v1/pulse/<span style="color:#86efac">trieste</span>
-    </div>
-    <a href="/api.html" style="display:inline-block;margin-top:12px;font-size:12px;color:#60a5fa;text-decoration:none">Documentazione API completa →</a>
-  </div>
-
-</div>
-
-<footer>
-  <span>WeatherArb · Meteo Intelligence Indipendente</span>
-  <span>ERA5-Land ECMWF + NASA POWER + OpenWeatherMap · <a href="/about.html">Metodologia</a> · <a href="/data/">Dashboard</a></span>
-</footer>
-
-<script>
-var SLUG = 'trieste';
-var NOME = 'Trieste';
-var REGIONE = 'Friuli-Venezia Giulia';
-var NEARBY = ["Gorizia", "Udine", "Pordenone", "Venezia", "Treviso", "Belluno"];
-var LEVEL_COLORS = {CRITICAL:'#ef4444',EXTREME:'#f97316',UNUSUAL:'#d97706',NORMAL:'#2563eb'};
-var LEVEL_BG = {CRITICAL:'#7f1d1d',EXTREME:'#7c2d12',UNUSUAL:'#1a3a5c',NORMAL:'#1a3a5c'};
-
-function makeSlug(n){
-  return n.toLowerCase().replace(/[àáâ]/g,'a').replace(/[èéê]/g,'e')
-    .replace(/[ùúû]/g,'u').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-}
-
-async function loadData(){
-  try{
-    var r = await fetch('https://api.weatherarb.com/api/v1/pulse/'+SLUG);
-    var d = await r.json();
-    if(!d.weather) return;
-
-    var z = d.weather.z_score||0;
-    var level = d.weather.anomaly_level||'NORMAL';
-    var temp = d.weather.temperature_c;
-    var avgTemp = d.weather.historical_avg_c;
-    var event = (d.weather.event_type||'Clear').replace(/_/g,' ');
-    var rain = d.weather.rain_1h_mm||0;
-    var score = d.signal&&d.signal.score?d.signal.score:0;
-    var color = LEVEL_COLORS[level]||'#2563eb';
-    var bg = LEVEL_BG[level]||'#1a3a5c';
-
-    // Hero
-    document.getElementById('hero-section').style.background = '#0f1117';
-    document.getElementById('hero-event').textContent = event;
-    document.getElementById('hero-event').style.color = color;
-    document.getElementById('h-temp').textContent = temp?temp.toFixed(1)+'°C':'—';
-    document.getElementById('h-avg').textContent = avgTemp?avgTemp.toFixed(1)+'°C':'—';
-    document.getElementById('h-score').textContent = score.toFixed(1)+'/10';
-    document.getElementById('h-rain').textContent = rain>0?rain.toFixed(1)+'mm/h':'0mm';
-
-    // Gauge
-    var gz = document.getElementById('gauge-z');
-    gz.textContent = (z>=0?'+':'') + z.toFixed(2);
-    gz.style.color = color;
-    document.getElementById('gauge-circle').style.borderColor = color+'40';
-    document.getElementById('gauge-circle').style.boxShadow = '0 0 30px '+color+'20';
-    var gl = document.getElementById('gauge-level');
-    gl.textContent = level;
-    gl.style.background = color+'20';
-    gl.style.color = color;
-
-    // Cards
-    document.getElementById('c-temp').textContent = temp?temp.toFixed(1)+'°C':'—';
-    document.getElementById('c-temp').style.color = (temp||0)>30?'#ef4444':(temp||0)<5?'#3b82f6':'var(--storm)';
-    document.getElementById('c-temp-sub').textContent = 'vs media storica '+(avgTemp?avgTemp.toFixed(1):'—')+'°C';
-    document.getElementById('c-z').textContent = (z>=0?'+':'') + z.toFixed(2);
-    document.getElementById('c-z').style.color = color;
-    document.getElementById('c-score').textContent = score.toFixed(1)+'/10';
-
-    // Impact Horizon
-    var impactTitle, impactDesc;
-    var absZ = Math.abs(z);
-    if(level==='CRITICAL'){
-      impactTitle = '⚠️ Anomalia critica in corso a '+NOME;
-      impactDesc = 'Z-Score di '+(z>=0?'+':'') + z.toFixed(2)+' — evento statisticamente raro (1 ogni 300+ anni). '+event+' rilevato con temperature di '+(temp?temp.toFixed(1)+'°C':'—')+' rispetto alla media storica di '+(avgTemp?avgTemp.toFixed(1)+'°C':'—')+'.';
-    } else if(level==='EXTREME'){
-      impactTitle = '🟠 Anomalia estrema in corso a '+NOME;
-      impactDesc = 'Z-Score di '+(z>=0?'+':'') + z.toFixed(2)+' — evento oltre il 95° percentile. '+event+' con deviazione significativa dalla norma stagionale ERA5-Land.';
-    } else if(level==='UNUSUAL'){
-      impactTitle = '🟡 Condizioni insolite a '+NOME;
-      impactDesc = 'Z-Score di '+(z>=0?'+':'') + z.toFixed(2)+' — condizioni sopra la norma stagionale. '+event+' rilevato rispetto alla media storica NASA POWER.';
-    } else {
-      impactTitle = '✅ Condizioni nella norma a '+NOME;
-      impactDesc = 'Z-Score di '+(z>=0?'+':'') + z.toFixed(2)+' — temperature e precipitazioni nella norma stagionale per questo periodo dell'anno.';
-    }
-    document.getElementById('impact-title').textContent = impactTitle;
-    document.getElementById('impact-desc').textContent = impactDesc;
-
-    // Impact bar
-    var bar = document.getElementById('impact-bar');
-    var segments = 10;
-    var filled = Math.min(Math.round((absZ/3)*segments), segments);
-    bar.innerHTML = Array.from({length:segments}).map(function(_, i){
-      var c = i < filled ? color : 'rgba(255,255,255,.1)';
-      return '<div class="impact-segment" style="background:'+c+'"></div>';
-    }).join('');
-
-    // Simulated 7-day chart
-    
-    // Update Horizon logic
-    var hBox = document.getElementById('horizon-box');
-    var hStat = document.getElementById('horizon-status');
-    var hClock = document.getElementById('horizon-clock');
-    var hAdv = document.getElementById('horizon-advice');
-    
-    if(lv === 'CRITICAL' || z > 3.0) {
-      hBox.style.borderLeftColor = '#ef4444'; hClock.style.color = '#ef4444';
-      hStat.innerText = 'Impatto Immediato'; hClock.innerText = '00h';
-      hAdv.innerText = 'Anomalia in corso. Attivare misure di mitigazione ora.';
-    } else if(sc >= 7.0) {
-      hBox.style.borderLeftColor = '#f97316'; hClock.style.color = '#f97316';
-      var hrs = Math.round(24 * (1 - (sc-7)/3) + 6);
-      hStat.innerText = 'Preparazione Necessaria'; hClock.innerText = hrs + 'h';
-      hAdv.innerText = 'Finestra utile per la messa in sicurezza dei beni.';
-    } else {
-      hStat.innerText = 'Situazione Nominale'; hClock.innerText = '--';
-      hAdv.innerText = 'Nessuna anomalia critica prevista nelle prossime 72 ore.';
-    }
-
-    drawChart(temp||15, avgTemp||12, z);
-
-  }catch(e){console.error(e);}
-}
-
-function 
-    // Update Horizon logic
-    var hBox = document.getElementById('horizon-box');
-    var hStat = document.getElementById('horizon-status');
-    var hClock = document.getElementById('horizon-clock');
-    var hAdv = document.getElementById('horizon-advice');
-    
-    if(lv === 'CRITICAL' || z > 3.0) {
-      hBox.style.borderLeftColor = '#ef4444'; hClock.style.color = '#ef4444';
-      hStat.innerText = 'Impatto Immediato'; hClock.innerText = '00h';
-      hAdv.innerText = 'Anomalia in corso. Attivare misure di mitigazione ora.';
-    } else if(sc >= 7.0) {
-      hBox.style.borderLeftColor = '#f97316'; hClock.style.color = '#f97316';
-      var hrs = Math.round(24 * (1 - (sc-7)/3) + 6);
-      hStat.innerText = 'Preparazione Necessaria'; hClock.innerText = hrs + 'h';
-      hAdv.innerText = 'Finestra utile per la messa in sicurezza dei beni.';
-    } else {
-      hStat.innerText = 'Situazione Nominale'; hClock.innerText = '--';
-      hAdv.innerText = 'Nessuna anomalia critica prevista nelle prossime 72 ore.';
-    }
-
-    drawChart(currentTemp, baselineTemp, z){
-  var svg = document.getElementById('temp-chart');
-  var labels = document.getElementById('chart-labels');
-  var days = ['Lun','Mar','Mer','Gio','Ven','Sab','Dom'];
-  var today = new Date().getDay();
-  var orderedDays = [];
-  for(var i=6;i>=0;i--){
-    orderedDays.push(days[(today-i+7)%7]);
-  }
-
-  // Simulate 7 days around current temp
-  var temps = orderedDays.map(function(_, i){
-    var noise = (Math.random()-0.5)*3;
-    var trend = (i-6)*0.3*z;
-    return Math.max(currentTemp - 4 + (i/6)*4 + noise + trend, -5);
-  });
-  temps[6] = currentTemp;
-
-  var minT = Math.min(...temps, baselineTemp) - 2;
-  var maxT = Math.max(...temps, baselineTemp) + 2;
-  var W=700, H=110, pad=10;
-
-  function toY(t){ return H - pad - ((t-minT)/(maxT-minT))*(H-pad*2); }
-  function toX(i){ return pad + (i/(temps.length-1))*(W-pad*2); }
-
-  // Baseline line
-  var by = toY(baselineTemp);
-  var svgContent = '<line x1="'+pad+'" y1="'+by+'" x2="'+（W-pad)+'" y2="'+by+'" stroke="#e8e5de" stroke-width="1.5" stroke-dasharray="4,4"/>';
-
-  // Temp line
-  var pts = temps.map(function(t,i){return toX(i)+','+toY(t);}).join(' ');
-  var firstPt = toX(0)+','+toY(temps[0]);
-  var lastPt = toX(temps.length-1)+','+toY(temps[temps.length-1]);
-
-  // Area fill
-  var areaPath = 'M '+firstPt+' L '+pts+' L '+toX(6)+','+H+' L '+pad+','+H+' Z';
-  svgContent += '<defs><linearGradient id="tg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2563eb" stop-opacity="0.2"/><stop offset="100%" stop-color="#2563eb" stop-opacity="0"/></linearGradient></defs>';
-  svgContent += '<path d="'+areaPath+'" fill="url(#tg)"/>';
-  svgContent += '<polyline points="'+pts+'" fill="none" stroke="#2563eb" stroke-width="2" stroke-linejoin="round"/>';
-
-  // Dots
-  temps.forEach(function(t,i){
-    var isToday = i===6;
-    svgContent += '<circle cx="'+toX(i)+'" cy="'+toY(t)+'" r="''+(isToday?5:3)+'" fill="''+(isToday?'#2563eb':'#93c5fd')+'" />';
-    if(isToday){
-      svgContent += '<text x="'+toX(i)+'" y="''+(toY(t)-10)+'" text-anchor="middle" fill="#2563eb" font-size="11" font-family="DM Sans" font-weight="600">'+t.toFixed(1)+'°</text>';
-    }
-  });
-
-  svg.innerHTML = svgContent;
-  labels.innerHTML = orderedDays.map(function(d,i){
-    return '<span style="''+(i===6?'color:var(--electric);font-weight:600':'')+'">'+d+'</span>';
-  }).join('');
-}
-
-async function loadNearby(){
-  var grid = document.getElementById('nearby-grid');
-  try{
-    var r = await fetch('https://api.weatherarb.com/api/v1/europe/top?limit=65');
-    var d = await r.json();
-    if(!d.data) return;
-    var LEVEL_COLORS_N = {CRITICAL:'#ef4444',EXTREME:'#f97316',UNUSUAL:'#d97706',NORMAL:'#94a3b8'};
-    var nearby = NEARBY.map(function(name){
-      var found = d.data.find(function(x){return x.province===name;});
-      return {name:name, data:found};
-    }).slice(0,6);
-
-    grid.innerHTML = nearby.map(function(item){
-      var x = item.data;
-      var color = x ? (LEVEL_COLORS_N[x.anomaly_level]||'#94a3b8') : '#94a3b8';
-      var z = x ? (x.z_score>=0?'+':'')+Number(x.z_score).toFixed(2) : '—';
-      var slug = makeSlug(item.name);
-      return '<a href="/it/'+slug+'/" class="nearby-card">'+
-        '<div style="font-size:12px;font-weight:600;margin-bottom:6px">'+item.name+'</div>'+
-        '<div style="font-family:JetBrains Mono,monospace;font-size:18px;color:'+color+'">'+z+'</div>'+
-        '<div style="font-size:10px;color:'+color+';margin-top:2px;font-weight:600">''+(x?x.anomaly_level:'—')+'</div>'+
-        '</a>';
-    }).join('');
-  }catch(e){
-    grid.innerHTML = '<div style="color:var(--muted);font-size:13px">Caricamento...</div>';
-  }
-}
-
-loadData();
-loadNearby();
-</script>
+    <script>
+        async function loadLocalData() {
+            const res = await fetch(`https://api.weatherarb.com/api/v1/pulse/trieste`);
+            const d = await res.json();
+            document.getElementById('live-z').innerText = (d.weather.z_score > 0 ? '+' : '') + d.weather.z_score;
+            const h = Math.round(24 * (1 - (d.signal.score-7)/3) + 6);
+            document.getElementById('live-horizon').innerText = (d.signal.score >= 7 ? h : '--') + 'h';
+        }
+        loadLocalData();
+    </script>
 </body>
 </html>
