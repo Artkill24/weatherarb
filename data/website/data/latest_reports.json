@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-04-10T19:59:51.931586",
+  "last_updated": "2026-04-11T12:40:55.195102",
   "reports": [
+    {
+      "slug": "2026-04-11-manchester-clear",
+      "title": "Manchester: Anomalia Rara di Cieli Sereni Persistenti",
+      "excerpt": "Manchester sta vivendo un periodo di condizioni meteo notevolmente atipiche. L'evento di \"Clear\" (cielo sereno) si distingue per la sua persistenza e intensità, rappresentando un'anomalia significativa per la regione.",
+      "provincia": "Manchester",
+      "evento": "Clear",
+      "date": "2026-04-11",
+      "z_score": 2.75,
+      "score": 6.73,
+      "anomaly_level": "EXTREME",
+      "url": "/news/2026-04-11-manchester-clear/",
+      "is_live": true
+    },
     {
       "slug": "2026-04-10-manchester-heavy-rain",
       "title": "Manchester: Piogge Estreme e Anomalia Critica (+8.49 Z-Score)",
@@ -174,18 +187,6 @@
       "anomaly_level": "CRITICAL",
       "excerpt": "Anomalia meteo a Como. Z-Score +3.79, livello CRITICAL. Analisi tecnica e consigli pratici.",
       "url": "/news/2026-04-09-como-heat-wave/"
-    },
-    {
-      "title": "Heat Wave anomalo a Biella: analisi WeatherArb del 09/04/2026",
-      "slug": "2026-04-09-biella-heat-wave",
-      "date": "2026-04-09",
-      "provincia": "Biella",
-      "evento": "Heat Wave",
-      "z_score": 4.03,
-      "score": 8.57,
-      "anomaly_level": "EXTREME",
-      "excerpt": "Anomalia meteo a Biella. Z-Score +4.03, livello EXTREME. Analisi tecnica e consigli pratici.",
-      "url": "/news/2026-04-09-biella-heat-wave/"
     }
   ]
 }
