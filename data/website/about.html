@@ -1,64 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About WeatherArb — Independent Weather Intelligence</title>
-<meta name="description" content="WeatherArb uses ERA5-Land reanalysis and real-time OpenWeatherMap data to detect statistical weather anomalies across Europe before they peak.">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Scientific Methodology | WeatherArb Intelligence</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#0f1117;--paper:#f5f3ee;--storm:#1a3a5c;--electric:#2563eb;--mist:#e8e5de;--muted:#6b6560}
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}
-nav{display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:1px solid var(--mist);background:rgba(245,243,238,.95);position:sticky;top:0;z-index:100}
-.logo{font-family:'Instrument Serif',serif;font-size:20px;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
-.logo-icon{width:28px;height:28px;background:var(--storm);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px}
-.container{max-width:720px;margin:0 auto;padding:60px 24px}
-h1{font-family:'Instrument Serif',serif;font-size:44px;margin-bottom:16px;letter-spacing:-1px}
-h2{font-family:'Instrument Serif',serif;font-size:28px;margin:40px 0 16px;color:var(--storm)}
-p{font-size:16px;line-height:1.75;color:#2d2d2d;margin-bottom:16px}
-.hero-tag{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--electric);margin-bottom:16px}
-.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0}
-.stat{background:white;border-radius:12px;padding:20px;text-align:center;border:1px solid var(--mist)}
-.stat-n{font-family:'Instrument Serif',serif;font-size:36px;color:var(--storm)}
-.stat-l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
-.method-box{background:var(--storm);color:white;border-radius:16px;padding:28px;margin:32px 0}
-.method-box p{color:rgba(255,255,255,.8);margin-bottom:0}
-.method-box strong{color:white}
-footer{text-align:center;font-size:12px;color:var(--muted);padding:32px;border-top:1px solid var(--mist);margin-top:48px}
+    body { background: #f5f3ee; color: #0f1117; font-family: 'DM Sans', sans-serif; }
+    .serif { font-family: 'Instrument Serif', serif; }
 </style>
 </head>
-<body>
-<nav>
-  <a href="/" class="logo"><div class="logo-icon">⛈</div>WeatherArb</a>
-  <span style="font-size:11px;color:var(--muted);letter-spacing:2px;text-transform:uppercase">About</span>
-</nav>
-<div class="container">
-  <div class="hero-tag">Independent Weather Intelligence</div>
-  <h1>We detect anomalies.<br>Before they peak.</h1>
-  <p>WeatherArb is an independent weather intelligence platform that uses statistical analysis to identify significant deviations from historical climate norms — 24 to 72 hours before they impact local populations.</p>
-  <p>We are not traditional meteorologists. We are climate data analysts focused on translating raw atmospheric data into actionable local intelligence.</p>
+<body class="p-6 md:p-20">
+    <div class="max-w-3xl mx-auto">
+        <a href="/" class="text-xs font-bold tracking-widest text-blue-600 uppercase mb-12 block">← Back to Terminal</a>
+        <h1 class="text-6xl serif mb-8 leading-tight">Come misuriamo <br>l'impossibile.</h1>
+        <p class="text-xl text-gray-500 mb-12 leading-relaxed">WeatherArb non è un sito di previsioni. È un motore di rilevamento anomalie che usa la statistica climatica per identificare eventi fuori scala.</p>
+        
+        <div class="space-y-20">
+            <section>
+                <div class="text-[10px] font-bold tracking-widest text-blue-600 uppercase mb-4">01. Baseline Climatologica</div>
+                <h2 class="text-3xl serif mb-4 text-blue-900">NASA POWER (2000—2024)</h2>
+                <p class="leading-relaxed opacity-80">Per ognuna delle 121 città, interroghiamo le coordinate esatte. Calcoliamo la media e la deviazione standard stagionale su un archivio di 24 anni. Questo ci dà il "battito nominale" di ogni provincia.</p>
+            </section>
 
-  <div class="stat-grid">
-    <div class="stat"><div class="stat-n">55</div><div class="stat-l">Cities monitored</div></div>
-    <div class="stat"><div class="stat-n">24yr</div><div class="stat-l">ERA5 baseline</div></div>
-    <div class="stat"><div class="stat-n">1h</div><div class="stat-l">Update frequency</div></div>
-  </div>
+            <section class="bg-blue-900 text-white p-10 rounded-[40px] shadow-2xl">
+                <div class="text-[10px] font-bold tracking-widest opacity-50 uppercase mb-4">02. La Formula</div>
+                <h2 class="text-4xl serif mb-6 italic">Z-Score = (Obs − Mean) / StdDev</h2>
+                <p class="opacity-70 leading-relaxed mb-6">Quando il valore attuale (OWM Live) si allontana dalla media storica, calcoliamo quante "deviazioni standard" lo separano dalla normalità. Uno Z-Score sopra 3.0 significa un evento che capita statisticamente una volta ogni 300 anni.</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white/10 p-4 rounded-2xl border border-white/10">
+                        <div class="text-2xl font-bold">+2.0</div>
+                        <div class="text-[10px] opacity-50">UNUSUAL (Top 5%)</div>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-2xl border border-white/10">
+                        <div class="text-2xl font-bold">+3.5</div>
+                        <div class="text-[10px] opacity-50">CRITICAL (Top 0.1%)</div>
+                    </div>
+                </div>
+            </section>
 
-  <h2>Methodology</h2>
-  <div class="method-box">
-    <p>Using the <strong>Nano-Pulse Engine</strong>, we continuously cross-reference <strong>ERA5-Land reanalysis data</strong> from the European Centre for Medium-Range Weather Forecasts (ECMWF) with real-time OpenWeatherMap forecasts.</p>
-    <p style="margin-top:12px">Each city receives a <strong>Z-Score</strong> — a statistical measure of how far current conditions deviate from the 2000–2024 seasonal baseline. Events scoring above Z=2.0 are classified as EXTREME; above Z=3.0 as CRITICAL.</p>
-  </div>
+            <section>
+                <div class="text-[10px] font-bold tracking-widest text-blue-600 uppercase mb-4">03. Predictive Horizon</div>
+                <h2 class="text-3xl serif mb-4 text-blue-900">Timing logistico</h2>
+                <p class="leading-relaxed opacity-80">Analizzando la pendenza di crescita dello Z-Score, il nostro Impact Engine stima il momento della saturazione. Questo permette alle aziende di avere una finestra di preparazione precisa, misurata in ore.</p>
+            </section>
+        </div>
 
-  <h2>Data Sources</h2>
-  <p><strong>ERA5-Land</strong> — Copernicus Climate Change Service (C3S), ECMWF. Spatial resolution ~9km, covering 1940–present. Used for historical baseline computation.</p>
-  <p><strong>OpenWeatherMap</strong> — Real-time observations and 72-hour forecasts. Used for current condition detection and peak prediction.</p>
-
-  <h2>Coverage</h2>
-  <p>Currently monitoring <strong>47 provinces in Northern Italy</strong> and <strong>8 major German cities</strong>. Expansion to Spain and France in progress. All signals are published openly via our <a href="/open.html" style="color:var(--electric)">free API</a>.</p>
-
-  <h2>Contact</h2>
-  <p>For data partnerships, B2B intelligence subscriptions, or media inquiries: <a href="mailto:contact@weatherarb.com" style="color:var(--electric)">contact@weatherarb.com</a></p>
-  <p>GitHub: <a href="https://github.com/Artkill24/weatherarb" style="color:var(--electric)">github.com/Artkill24/weatherarb</a></p>
-</div>
-<footer>WeatherArb.com · Independent Weather Intelligence · ERA5-Land ECMWF + OpenWeatherMap</footer>
-</body></html>
+        <footer class="mt-20 pt-12 border-t border-gray-200 text-center text-xs text-gray-400">
+            WeatherArb Intelligence Agency — Pure Data, No Hype.
+        </footer>
+    </div>
+</body>
+</html>
