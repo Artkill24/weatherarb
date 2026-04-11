@@ -1,70 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeatherArb — Intelligence Terminal</title>
+    <title>WeatherArb — Climate Intelligence Terminal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #05070a; --accent: #00f2ff; }
-        body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: #8f9bb3; }
+        :root { --bg: #030508; --terminal: #0a0f16; --accent: #00f2ff; --alert: #ff0044; }
+        body { background-color: var(--bg); color: #94a3b8; font-family: 'JetBrains Mono', monospace; }
         .serif { font-family: 'Instrument Serif', serif; }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .terminal-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; }
-        .terminal-card:hover { border-color: var(--accent); box-shadow: 0 0 20px rgba(0,242,255,0.1); }
-        #wa-map { height: 400px; border-radius: 20px; filter: grayscale(1) invert(1) contrast(1.2); }
+        .terminal-border { border: 1px solid rgba(0, 242, 255, 0.1); }
+        .glow-blue { text-shadow: 0 0 10px rgba(0, 242, 255, 0.5); color: var(--accent); }
+        #wa-map { height: 500px; filter: grayscale(1) invert(1) opacity(0.8); }
+        .scanline { width: 100%; height: 2px; background: rgba(0, 242, 255, 0.1); position: absolute; animation: scan 4s linear infinite; }
+        @keyframes scan { from { top: 0; } to { top: 100%; } }
     </style>
 </head>
-<body class="p-4 md:p-8">
-    <nav class="max-w-7xl mx-auto flex justify-between items-center mb-12 border-b border-white/5 pb-6">
-        <a href="/" class="text-2xl font-bold text-white serif tracking-tight">⛈ WeatherArb<span class="text-cyan-400">.</span></a>
-        <div class="space-x-8 mono text-[10px] uppercase tracking-widest">
-            <a href="/data/" class="hover:text-cyan-400">Terminal</a>
-            <a href="/map.html" class="hover:text-cyan-400">Global Map</a>
-            <a href="/open.html" class="text-cyan-400 border border-cyan-400/30 px-3 py-1 rounded">Get API</a>
+<body class="antialiased">
+
+    <nav class="border-b border-white/5 bg-black/50 backdrop-blur-xl sticky top-0 z-50 p-5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-white serif tracking-tighter">⛈ WeatherArb<span class="glow-blue">.</span></a>
+            <div class="flex gap-8 text-[10px] uppercase tracking-[0.3em] font-bold">
+                <a href="/data/" class="hover:text-cyan-400 transition-colors">Terminal</a>
+                <a href="/map.html" class="hover:text-cyan-400 transition-colors">Global Map</a>
+                <a href="/open.html" class="text-cyan-400 px-3 py-1 border border-cyan-400/20 rounded-md">Request API</a>
+            </div>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8">
-        <div class="lg:col-span-2 space-y-8">
-            <div class="terminal-card p-10 rounded-[32px]">
-                <h1 class="text-6xl text-white serif leading-none mb-6 italic">Climate Intel<br><span class="text-cyan-400">Stream.</span></h1>
-                <p class="text-lg opacity-60 max-w-md mb-8">Analisi statistica in tempo reale su 121 nodi europei. Baseline NASA POWER 2000-2024.</p>
-                <div class="flex gap-12 border-t border-white/5 pt-8">
-                    <div><div class="text-2xl text-white mono font-bold">121</div><div class="text-[10px] uppercase tracking-tighter opacity-40">Active Nodes</div></div>
-                    <div><div class="text-2xl text-white mono font-bold">14</div><div class="text-[10px] uppercase tracking-tighter opacity-40">Countries</div></div>
-                    <div><div class="text-2xl text-cyan-400 mono font-bold">NASA</div><div class="text-[10px] uppercase tracking-tighter opacity-40">Data Integrity</div></div>
+    <main class="max-w-7xl mx-auto px-6 py-12 space-y-12">
+        
+        <div class="grid lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-8 space-y-8">
+                <div class="bg-gradient-to-br from-gray-900 to-black p-12 rounded-[40px] border border-white/5 relative overflow-hidden">
+                    <div class="scanline"></div>
+                    <div class="relative z-10">
+                        <div class="text-cyan-500 text-[10px] font-bold tracking-[0.5em] uppercase mb-6">Autonomous Surveillance System</div>
+                        <h1 class="text-7xl text-white serif leading-none mb-8 italic">Predicting the <br><span class="glow-blue">Anomalous.</span></h1>
+                        <p class="text-lg opacity-60 max-w-lg leading-relaxed">Intelligence climatica distribuita su 121 nodi europei. Calcoliamo la deviazione statistica (Z-Score) in tempo reale per anticipare rischi sistemici.</p>
+                    </div>
+                </div>
+
+                <div class="bg-black rounded-[40px] p-2 border border-white/5 overflow-hidden shadow-2xl">
+                    <div id="wa-map"></div>
                 </div>
             </div>
 
-            <div class="terminal-card p-2 rounded-[32px] overflow-hidden">
-                <div id="wa-map"></div>
+            <div class="lg:col-span-4 space-y-6">
+                <div class="flex justify-between items-center px-2">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-white">Live Intelligence Feed</h2>
+                    <div class="flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-red-500 rounded-full animate-ping"></span>
+                        <span class="text-[9px] font-bold text-red-500 uppercase">Live</span>
+                    </div>
+                </div>
+                <div id="reports-feed" class="space-y-4">
+                    <div class="p-8 bg-white/5 rounded-3xl animate-pulse"></div>
+                    <div class="p-8 bg-white/5 rounded-3xl animate-pulse"></div>
+                </div>
+                <a href="/news/" class="block text-center py-4 rounded-2xl border border-white/5 text-[10px] uppercase font-bold tracking-widest hover:bg-white/5 transition-all">View Full Archive</a>
             </div>
         </div>
 
-        <div class="space-y-6">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="mono text-xs font-bold text-white tracking-widest uppercase">Latest Signals</h2>
-                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+        <section class="bg-cyan-500 p-1 rounded-[40px] transform hover:scale-[1.01] transition-transform">
+            <div class="bg-black rounded-[39px] px-12 py-16 text-center">
+                <h2 class="text-5xl text-white serif mb-6 italic">Porta l'Intelligence sul tuo Terminale.</h2>
+                <p class="text-lg opacity-60 mb-10 max-w-2xl mx-auto">Offriamo dati grezzi e widget personalizzati per logistica e retail. Il nostro Viral Widget è gratuito e integrabile in 10 secondi.</p>
+                <a href="/open.html" class="bg-cyan-500 text-black px-10 py-4 rounded-2xl font-bold uppercase text-xs tracking-widest hover:bg-white transition-colors">Get Started</a>
             </div>
-            <div id="reports-feed" class="space-y-4">
-                </div>
-            <a href="/news/" class="block text-center p-4 border border-white/5 rounded-2xl text-xs mono hover:bg-white/5 transition-all uppercase tracking-widest">Access Archive</a>
-        </div>
+        </section>
     </main>
+
+    <footer class="p-12 border-t border-white/5 text-center">
+        <p class="text-[10px] uppercase tracking-widest opacity-30 italic">WeatherArb Agency © 2026 — Pure Data Climatology — NASA POWER Connection Stable</p>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
     <script>
-        async function loadFeed() {
+        async function hydrate() {
             try {
                 const res = await fetch('/data/latest_reports.json');
                 const data = await res.json();
                 document.getElementById('reports-feed').innerHTML = data.reports.slice(0, 5).map(r => `
-                    <a href="${r.url}" class="block terminal-card p-6 rounded-2xl group">
-                        <div class="text-[10px] mono text-cyan-400 mb-2 uppercase tracking-tighter">${r.provincia} // Z-SCORE ${r.z_score}</div>
-                        <div class="text-white font-medium group-hover:text-cyan-400 transition-colors">${r.title}</div>
+                    <a href="${r.url}" class="block p-6 rounded-3xl bg-white/[0.03] border border-white/5 hover:border-cyan-500/50 transition-all group">
+                        <div class="text-[9px] font-bold text-cyan-500 mb-2 uppercase tracking-tighter">${r.provincia} // Z-SCORE ${r.z_score}</div>
+                        <div class="text-white font-medium group-hover:text-cyan-400 transition-colors serif text-xl">${r.title}</div>
                     </a>
                 `).join('');
             } catch(e) { console.error(e); }
@@ -78,12 +101,12 @@
                     d.data.forEach(p => {
                         if (p.lat && p.lon) {
                             var col = p.anomaly_level === 'CRITICAL' ? '#ff0044' : '#00f2ff';
-                            L.circleMarker([p.lat, p.lon], { radius: 5, color: col, fillOpacity: 0.8 }).addTo(map);
+                            L.circleMarker([p.lat, p.lon], { radius: 5, color: col, fillColor: col, fillOpacity: 0.8 }).addTo(map);
                         }
                     });
                 });
         }
-        window.onload = () => { loadFeed(); initMap(); };
+        window.onload = () => { hydrate(); initMap(); };
     </script>
 </body>
 </html>
