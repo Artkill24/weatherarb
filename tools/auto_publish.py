@@ -1,242 +1,426 @@
+#!/usr/bin/env python3
 """
-WeatherArb Auto-Publisher
-Eseguito da GitHub Actions ogni 6h.
-1. Fetch top anomalie dall'API Railway
-2. Genera articoli Gemini per EXTREME/CRITICAL
-3. Aggiorna latest_reports.json + sitemap
+WeatherArb — Auto Publisher
+Genera articoli Gemini per anomalie EXTREME/CRITICAL e pulisce i vecchi
+Eseguito da GitHub Actions ogni 6h
 """
-import sys, os, requests, json
-from datetime import datetime
+
+import json
+import os
+import re
+import sys
+import logging
+from datetime import datetime, timedelta
 from pathlib import Path
+from unicodedata import normalize
 
-sys.path.insert(0, '.')
+import requests
 
-# Gemini
-GEMINI_KEY = os.getenv('GEMINI_API_KEY','')
-API_BASE = 'https://api.weatherarb.com'
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+log = logging.getLogger(__name__)
 
-def get_top_anomalies(limit=20):
+# ─── CONFIG ─────────────────────────────────────────────────────────────────
+API_BASE        = os.getenv("API_BASE", "https://api.weatherarb.com")
+GEMINI_API_KEY  = os.getenv("GEMINI_API_KEY", "")
+GEMINI_MODEL    = "gemini-2.5-flash-preview-04-17"
+SCORE_THRESHOLD = float(os.getenv("SCORE_THRESHOLD", "6.0"))
+MAX_ARTICLES    = int(os.getenv("MAX_ARTICLES", "6"))      # per run
+KEEP_DAYS       = int(os.getenv("KEEP_DAYS", "30"))        # articoli più vecchi vengono eliminati
+MAX_TOTAL       = int(os.getenv("MAX_TOTAL", "50"))        # max articoli totali nel sito
+
+BLOG_DIR    = Path("data/blog_posts")
+NEWS_DIR    = Path("data/website/news")
+REPORTS_JSON = Path("data/website/data/latest_reports.json")
+SITEMAP     = Path("data/website/sitemap.xml")
+
+BLOG_DIR.mkdir(parents=True, exist_ok=True)
+NEWS_DIR.mkdir(parents=True, exist_ok=True)
+REPORTS_JSON.parent.mkdir(parents=True, exist_ok=True)
+
+# ─── HELPERS ────────────────────────────────────────────────────────────────
+def slugify(text: str) -> str:
+    s = normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")
+    s = re.sub(r"[^\w\s-]", "", s).strip().lower()
+    return re.sub(r"[\s_]+", "-", s)
+
+def today_str() -> str:
+    return datetime.utcnow().strftime("%Y-%m-%d")
+
+# ─── STEP 1: Fetch top anomalie ─────────────────────────────────────────────
+def fetch_top_signals() -> list:
     try:
-        r = requests.get(f'{API_BASE}/api/v1/europe/top?limit={limit}', timeout=15)
-        return r.json().get('data', [])
+        r = requests.get(f"{API_BASE}/api/v1/europe/top?limit=50", timeout=15)
+        r.raise_for_status()
+        data = r.json()
+        signals = data.get("reports") or data.get("data") or []
+        filtered = [s for s in signals if (s.get("score") or 0) >= SCORE_THRESHOLD]
+        log.info(f"Fetched {len(signals)} signals, {len(filtered)} above threshold {SCORE_THRESHOLD}")
+        return filtered[:MAX_ARTICLES]
     except Exception as e:
-        print(f"❌ API error: {e}")
+        log.error(f"Failed to fetch signals: {e}")
         return []
 
-def make_slug(nome, event, date):
-    slug_name = nome.lower()
-    for a,b in [('ü','u'),('ö','o'),('ä','a'),('à','a'),('è','e'),('ù','u'),(' ','-'),("'",'')]:
-        slug_name = slug_name.replace(a,b)
-    slug_event = event.lower().replace('_','-')
-    return f"{date}-{slug_name}-{slug_event}"
-
-def generate_article_gemini(item, provinces_data):
-    if not GEMINI_KEY:
+# ─── STEP 2: Genera articolo con Gemini ─────────────────────────────────────
+def generate_article(signal: dict) -> dict | None:
+    if not GEMINI_API_KEY:
+        log.warning("GEMINI_API_KEY non impostata — skip generazione")
         return None
-    try:
-        from google import genai
-        client = genai.Client(api_key=GEMINI_KEY)
-        
-        nome = item['province']
-        z = item.get('z_score', 0)
-        event = item.get('event_type', 'anomalia')
-        temp = item.get('temperature_c', '—')
-        level = item.get('anomaly_level', 'UNUSUAL')
-        score = item.get('score', 0)
-        
-        prompt = f"""Sei un meteorologo esperto. Scrivi un articolo di analisi meteo professionale in italiano.
 
-Città: {nome}
-Evento: {event.replace('_',' ')}
-Z-Score: {z:+.2f} (deviazione dalla baseline ERA5-Land)
-Temperatura attuale: {temp}°C
-Livello anomalia: {level}
-Score: {score:.1f}/10
+    city     = signal.get("location") or signal.get("province", "—")
+    country  = signal.get("country", "Europe")
+    zscore   = signal.get("z_score", 0)
+    score    = signal.get("score", 0)
+    vertical = (signal.get("vertical") or signal.get("event_type") or "anomalia meteo").replace("_", " ")
+    level    = signal.get("anomaly_level", "EXTREME")
+    sign     = "+" if zscore >= 0 else ""
+
+    prompt = f"""Sei un analista meteorologico senior di WeatherArb, un'agenzia indipendente di weather intelligence.
+
+Scrivi un articolo giornalistico in italiano di circa 250 parole su questa anomalia:
+
+Città: {city} ({country})
+Evento: {vertical}
+Z-Score: {sign}{zscore:.2f} (deviazione dalla media storica NASA POWER 25 anni)
+Score WeatherArb: {score:.1f}/10
+Livello: {level}
 
 Struttura:
-- Titolo breve (max 80 caratteri)
-- Paragrafo introduttivo (2-3 frasi)
-- Analisi tecnica (Z-Score, confronto storico)
-- Impatto pratico
-- Conclusione
+- Titolo accattivante e informativo (max 80 caratteri)
+- Lead di 2 frasi che spiega l'anomalia in termini semplici
+- Corpo: cosa significa questo Z-Score, perché è significativo statisticamente, impatti pratici attesi
+- Conclusione: finestra temporale di monitoraggio
 
-Rispondi SOLO con JSON:
-{{"title": "...", "content": "...", "excerpt": "..."}}"""
+Tono: scientifico ma accessibile, autorevole, zero allarmismo.
+NON menzionare prodotti, negozi, acquisti o affiliazioni.
+Rispondi SOLO con JSON valido in questo formato esatto:
+{{"title": "...", "lead": "...", "body": "...", "conclusion": "..."}}"""
 
-        resp = client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
-        text = resp.text.strip()
-        if text.startswith('```'):
-            text = text.split('```')[1]
-            if text.startswith('json'):
-                text = text[4:]
-        return json.loads(text.strip())
+    try:
+        r = requests.post(
+            f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}",
+            json={"contents": [{"parts": [{"text": prompt}]}],
+                  "generationConfig": {"temperature": 0.7, "maxOutputTokens": 800}},
+            timeout=30
+        )
+        r.raise_for_status()
+        raw = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+        # Strip markdown fences
+        raw = re.sub(r"```json\s*|\s*```", "", raw).strip()
+        content = json.loads(raw)
+        return content
     except Exception as e:
-        print(f"  Gemini error: {e}")
+        log.error(f"Gemini error for {city}: {e}")
         return None
 
-def load_provinces():
-    try:
-        data = json.load(open('data/province_coords.json'))
-        return {p['nome'].lower(): p for p in data['province']}
-    except:
-        return {}
+# ─── STEP 3: Salva articolo ──────────────────────────────────────────────────
+def save_article(signal: dict, content: dict) -> dict | None:
+    city     = signal.get("location") or signal.get("province", "unknown")
+    vertical = (signal.get("vertical") or signal.get("event_type") or "anomalia").replace("_", "-").lower()
+    zscore   = signal.get("z_score", 0)
+    score    = signal.get("score", 0)
+    cc       = signal.get("country_code", "it")
+    date     = today_str()
+    slug     = f"{date}-{slugify(city)}-{slugify(vertical)}"
 
-def update_latest_reports(articles, max_items=15):
-    path = Path('data/website/data/latest_reports.json')
-    existing = []
-    if path.exists():
-        try:
-            existing = json.load(open(path)).get('reports', [])
-        except:
-            pass
-    
-    # Aggiungi nuovi in cima
-    all_reports = articles + [r for r in existing if r['slug'] not in {a['slug'] for a in articles}]
-    all_reports = all_reports[:max_items]
-    
-    json.dump({
-        'last_updated': datetime.utcnow().isoformat(),
-        'reports': all_reports
-    }, open(path, 'w'), ensure_ascii=False, indent=2)
-    print(f"✅ latest_reports.json aggiornato: {len(all_reports)} articoli")
+    # Evita duplicati: stesso slug già pubblicato oggi
+    if (BLOG_DIR / f"{slug}.json").exists():
+        log.info(f"Skip duplicate: {slug}")
+        return None
 
-def create_article_html(item, article_data, slug):
-    nome = item['province']
-    z = item.get('z_score', 0)
-    event = item.get('event_type', '').replace('_',' ')
-    level = item.get('anomaly_level', 'UNUSUAL')
-    score = item.get('score', 0)
-    temp = item.get('temperature_c', '—')
-    date_str = datetime.now().strftime('%d/%m/%Y')
-    
-    colors = {'CRITICAL':'#ef4444','EXTREME':'#f97316','UNUSUAL':'#d97706','NORMAL':'#2563eb'}
-    color = colors.get(level, '#d97706')
-    
-    html = f'''<!DOCTYPE html>
+    meta = {
+        "slug": slug,
+        "title": content.get("title", f"{vertical.title()} a {city}"),
+        "lead": content.get("lead", ""),
+        "body": content.get("body", ""),
+        "conclusion": content.get("conclusion", ""),
+        "location": city,
+        "country_code": cc,
+        "vertical": vertical,
+        "z_score": round(zscore, 2),
+        "score": round(score, 2),
+        "anomaly_level": signal.get("anomaly_level", "EXTREME"),
+        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "date": date,
+    }
+
+    # Salva JSON blog post
+    (BLOG_DIR / f"{slug}.json").write_text(
+        json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    # Genera pagina HTML
+    html = build_article_html(meta)
+    article_dir = NEWS_DIR / slug
+    article_dir.mkdir(parents=True, exist_ok=True)
+    (article_dir / "index.html").write_text(html, encoding="utf-8")
+
+    log.info(f"✅ Pubblicato: {slug}")
+    return meta
+
+def build_article_html(meta: dict) -> str:
+    city = meta["location"]
+    cc   = meta["country_code"]
+    slug_city = slugify(city)
+    z    = meta["z_score"]
+    sign = "+" if z >= 0 else ""
+    col  = "#ef4444" if meta["score"] >= 7 else "#f97316" if meta["score"] >= 5 else "#f59e0b"
+
+    return f"""<!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{article_data["title"]} | WeatherArb</title>
-<meta name="description" content="{article_data["excerpt"]}">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root{{--ink:#0f1117;--paper:#f5f3ee;--storm:#1a3a5c;--electric:#2563eb;--mist:#e8e5de;--muted:#6b6560}}
-*{{box-sizing:border-box;margin:0;padding:0}}body{{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink)}}
-nav{{display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:1px solid var(--mist);background:rgba(245,243,238,.95);position:sticky;top:0;z-index:100}}
-.logo{{font-family:'Instrument Serif',serif;font-size:20px;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}}
-.logo-icon{{width:28px;height:28px;background:var(--storm);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px}}
-.hero-bar{{background:var(--storm);color:white;padding:16px 48px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}}
-.badge{{background:rgba(255,255,255,.12);border-radius:8px;padding:8px 14px;text-align:center}}
-.badge strong{{display:block;font-family:'Instrument Serif',serif;font-size:20px}}
-.badge span{{font-size:10px;opacity:.6;text-transform:uppercase;letter-spacing:1px}}
-.container{{max-width:720px;margin:0 auto;padding:48px 24px}}
-.tag{{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:{color};margin-bottom:16px}}
-h1{{font-family:'Instrument Serif',serif;font-size:clamp(26px,4vw,38px);line-height:1.2;margin-bottom:12px}}
-.byline{{font-size:13px;color:var(--muted);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--mist)}}
-.body-text p{{font-size:16px;line-height:1.8;margin-bottom:20px;color:var(--ink)}}
-footer{{text-align:center;font-size:12px;color:var(--muted);padding:32px;border-top:1px solid var(--mist);margin-top:48px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{meta['title']} | WeatherArb</title>
+  <meta name="description" content="{meta['lead'][:160]}">
+  <link rel="canonical" href="https://weatherarb.com/news/{meta['slug']}/">
+  <style>
+    :root{{--bg:#040608;--surface:#0a0d12;--border:#141920;--text:#c8d6e5;--muted:#4a5568;--blue:#3b82f6}}
+    *{{box-sizing:border-box;margin:0;padding:0}}
+    body{{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}}
+    .hdr{{border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}}
+    .logo{{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none}}.logo span{{color:var(--blue)}}
+    .nav{{display:flex;gap:20px}}.nav a{{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-decoration:none}}
+    .wrap{{max-width:720px;margin:0 auto;padding:48px 24px 80px}}
+    .bc{{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:20px}}.bc a{{color:var(--muted);text-decoration:none}}
+    .badge{{display:inline-flex;gap:8px;align-items:center;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:100px;padding:4px 12px;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin-bottom:16px}}
+    h1{{font-size:clamp(24px,4vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:16px}}
+    .meta{{font-size:12px;color:var(--muted);margin-bottom:32px;display:flex;gap:16px;flex-wrap:wrap}}
+    .zscore{{font-size:48px;font-weight:800;font-variant-numeric:tabular-nums;color:{col};text-align:center;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:32px}}
+    .zscore-label{{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-top:4px}}
+    .lead{{font-size:18px;line-height:1.6;color:#fff;margin-bottom:24px;font-weight:500}}
+    .body{{font-size:15px;line-height:1.7;color:var(--text);margin-bottom:24px}}
+    .conclusion{{font-size:14px;line-height:1.6;color:var(--muted);padding:20px;background:var(--surface);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;margin-bottom:32px}}
+    .back{{display:inline-block;padding:10px 20px;border:1px solid var(--border);border-radius:8px;color:var(--muted);text-decoration:none;font-size:13px}}.back:hover{{border-color:var(--blue);color:var(--blue)}}
+    .ftr{{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:11px;color:var(--muted)}}.ftr a{{color:var(--muted);text-decoration:none}}
+  </style>
 </head>
 <body>
-<nav><a href="/" class="logo"><div class="logo-icon">⛈</div>WeatherArb</a><a href="/news/" style="font-size:12px;color:var(--muted);text-decoration:none">← Reports</a></nav>
-<div class="hero-bar" style="background:{colors.get(level,'#1a3a5c')}">
-  <div style="flex:1"><div style="font-size:11px;opacity:.6;margin-bottom:4px">📍 {nome}</div><div style="font-size:16px;font-weight:500">{event} · {level}</div></div>
-  <div class="badge"><strong>{z:+.2f}</strong><span>Z-Score</span></div>
-  <div class="badge"><strong>{score:.1f}/10</strong><span>Score</span></div>
-  <div class="badge"><strong>{temp if isinstance(temp,str) else f"{temp:.1f}"}°C</strong><span>Temp</span></div>
+<header class="hdr">
+  <a href="/" class="logo">Weather<span>Arb</span></a>
+  <nav class="nav"><a href="/news/">News</a><a href="/data/">Data</a><a href="/api.html">API</a></nav>
+</header>
+<div class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / <a href="/news/">Intelligence Reports</a> / {city}</div>
+  <div class="badge">📡 {meta['anomaly_level']} · {meta['date']}</div>
+  <h1>{meta['title']}</h1>
+  <div class="meta">
+    <span>📍 <a href="/{cc}/{slugify(city)}/" style="color:var(--blue);text-decoration:none">{city}</a></span>
+    <span>⚡ {meta['vertical'].replace('-',' ').title()}</span>
+    <span>Score: {meta['score']}/10</span>
+  </div>
+  <div class="zscore">
+    {sign}{z:.2f}σ
+    <div class="zscore-label">Z-Score vs baseline NASA POWER 25 anni</div>
+  </div>
+  <p class="lead">{meta['lead']}</p>
+  <div class="body">{meta['body']}</div>
+  <div class="conclusion">{meta['conclusion']}</div>
+  <a href="/news/" class="back">← Tutti gli Intelligence Reports</a>
 </div>
-<div class="container">
-  <div class="tag">🇮🇹 {nome} · {event}</div>
-  <h1>{article_data["title"]}</h1>
-  <div class="byline">WeatherArb Intelligence · {date_str} · ERA5-Land ECMWF + NASA POWER</div>
-  <div class="body-text">{"".join(f"<p>{p}</p>" for p in article_data["content"].split(chr(10)) if p.strip())}</div>
-</div>
-<footer>WeatherArb.com · Independent Weather Intelligence</footer>
+<footer class="ftr">
+  <a href="/">WeatherArb</a> · Independent Weather Intelligence Agency ·
+  Data: NASA POWER, ERA5-Land, OpenWeatherMap ·
+  <a href="/about.html">Methodology</a>
+</footer>
 </body>
-</html>'''
-    return html
+</html>"""
 
-def main():
-    print(f"🚀 WeatherArb Auto-Publisher — {datetime.utcnow().isoformat()}")
-    
-    provinces = load_provinces()
-    top = get_top_anomalies(20)
-    
-    if not top:
-        print("⚠️  Nessun dato dall'API — skip")
-        return
-    
-    targets = [x for x in top if x.get('anomaly_level') in ('CRITICAL','EXTREME') and abs(x.get('z_score',0)) >= 1.5]
-    print(f"📊 Anomalie trovate: {len(targets)}")
-    
-    today = datetime.now().strftime('%Y-%m-%d')
-    existing_slugs = set(f.replace('.json','') for f in os.listdir('data/blog_posts/') if f.endswith('.json'))
-    
-    new_articles = []
-    for item in targets[:6]:
-        nome = item.get('province','')
-        event = item.get('event_type','anomalia')
-        slug = make_slug(nome, event, today)
-        
-        if slug in existing_slugs:
-            print(f"⏭️  {nome} — già pubblicato oggi")
+# ─── STEP 4: Pulizia articoli vecchi ────────────────────────────────────────
+def cleanup_old_articles():
+    cutoff = datetime.utcnow() - timedelta(days=KEEP_DAYS)
+    removed = 0
+
+    all_posts = sorted(BLOG_DIR.glob("*.json"))
+
+    # Rimuovi quelli troppo vecchi
+    for f in all_posts:
+        try:
+            meta = json.loads(f.read_text())
+            ts = datetime.fromisoformat(meta.get("timestamp", "").replace("Z", ""))
+            if ts < cutoff:
+                slug = meta.get("slug", f.stem)
+                # Rimuovi HTML
+                article_dir = NEWS_DIR / slug
+                if article_dir.exists():
+                    import shutil
+                    shutil.rmtree(article_dir)
+                f.unlink()
+                removed += 1
+                log.info(f"🗑  Rimosso vecchio articolo: {slug}")
+        except Exception as e:
+            log.warning(f"Cleanup error on {f}: {e}")
+
+    # Se ancora troppi, rimuovi i più vecchi fino a MAX_TOTAL
+    all_posts = sorted(BLOG_DIR.glob("*.json"))
+    if len(all_posts) > MAX_TOTAL:
+        to_remove = all_posts[:len(all_posts) - MAX_TOTAL]
+        for f in to_remove:
+            try:
+                meta = json.loads(f.read_text())
+                slug = meta.get("slug", f.stem)
+                article_dir = NEWS_DIR / slug
+                if article_dir.exists():
+                    import shutil
+                    shutil.rmtree(article_dir)
+                f.unlink()
+                removed += 1
+                log.info(f"🗑  Rimosso (limite max): {slug}")
+            except Exception as e:
+                log.warning(f"Cleanup error: {e}")
+
+    log.info(f"Cleanup: {removed} articoli rimossi")
+    return removed
+
+# ─── STEP 5: Aggiorna latest_reports.json ───────────────────────────────────
+def update_latest_reports():
+    all_posts = []
+    for f in sorted(BLOG_DIR.glob("*.json"), reverse=True):
+        try:
+            meta = json.loads(f.read_text())
+            all_posts.append({
+                "slug": meta.get("slug"),
+                "title": meta.get("title"),
+                "lead": meta.get("lead", "")[:160] + "...",
+                "location": meta.get("location"),
+                "country_code": meta.get("country_code", "it"),
+                "vertical": meta.get("vertical"),
+                "z_score": meta.get("z_score", 0),
+                "score": meta.get("score", 0),
+                "anomaly_level": meta.get("anomaly_level"),
+                "date": meta.get("date"),
+                "url": f"/news/{meta.get('slug')}/",
+                "excerpt": meta.get("lead", "")[:180],
+            })
+        except Exception:
             continue
-        
-        print(f"📝 Generando articolo per {nome} (Z={item.get('z_score',0):+.2f})...")
-        article_data = generate_article_gemini(item, provinces)
-        
-        if not article_data:
-            # Fallback senza Gemini
-            article_data = {
-                'title': f"{event.replace('_',' ')} anomalo a {nome}: analisi WeatherArb del {datetime.now().strftime('%d/%m/%Y')}",
-                'excerpt': f"Anomalia meteo a {nome}. Z-Score {item.get('z_score',0):+.2f}, livello {item.get('anomaly_level','UNUSUAL')}. Analisi tecnica.",
-                'content': f"WeatherArb ha rilevato un'anomalia meteo significativa a {nome} con Z-Score {item.get('z_score',0):+.2f} rispetto alla baseline ERA5-Land."
-            }
-        
-        # Salva JSON
-        blog_data = {
-            'slug': slug, 'title': article_data['title'],
-            'excerpt': article_data['excerpt'], 'content': article_data['content'],
-            'provincia': nome, 'evento': event, 'date': today,
-            'z_score': item.get('z_score',0), 'score': item.get('score',0),
-            'anomaly_level': item.get('anomaly_level','UNUSUAL'),
-            'url': f'/news/{slug}/'
-        }
-        json.dump(blog_data, open(f'data/blog_posts/{slug}.json','w'), ensure_ascii=False, indent=2)
-        
-        # Crea HTML
-        html = create_article_html(item, article_data, slug)
-        Path(f'data/website/news/{slug}').mkdir(parents=True, exist_ok=True)
-        open(f'data/website/news/{slug}/index.html','w').write(html)
-        
-        new_articles.append({
-            'slug': slug, 'title': article_data['title'],
-            'excerpt': article_data['excerpt'], 'provincia': nome,
-            'evento': event, 'date': today,
-            'z_score': item.get('z_score',0), 'score': item.get('score',0),
-            'anomaly_level': item.get('anomaly_level','UNUSUAL'),
-            'url': f'/news/{slug}/', 'is_live': True
-        })
-        print(f"  ✅ {slug}")
-    
-    # Aggiorna reports anche se nessun articolo nuovo (aggiorna timestamp)
-    update_latest_reports(new_articles)
-    
-    # Sitemap base
-    sitemap_urls = []
-    for f in sorted(Path('data/website/news').iterdir()):
-        if f.is_dir():
-            sitemap_urls.append(f'https://weatherarb.com/news/{f.name}/')
-    
-    sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    sitemap += '<url><loc>https://weatherarb.com/</loc><changefreq>hourly</changefreq><priority>1.0</priority></url>\n'
-    sitemap += '<url><loc>https://weatherarb.com/data/</loc><changefreq>hourly</changefreq><priority>0.9</priority></url>\n'
-    for url in sitemap_urls[-50:]:
-        sitemap += f'<url><loc>{url}</loc><changefreq>daily</changefreq><priority>0.7</priority></url>\n'
-    sitemap += '</urlset>'
-    open('data/website/sitemap.xml','w').write(sitemap)
-    
-    print(f"\n✅ Auto-publisher completato. Nuovi articoli: {len(new_articles)}")
 
-if __name__ == '__main__':
+    report = {
+        "last_updated": datetime.utcnow().isoformat() + "Z",
+        "count": len(all_posts),
+        "reports": all_posts[:20],  # Max 20 nella homepage
+    }
+    REPORTS_JSON.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    log.info(f"✅ latest_reports.json aggiornato — {len(all_posts)} articoli")
+
+# ─── STEP 6: Aggiorna news/index.html ───────────────────────────────────────
+def update_news_index():
+    all_posts = sorted(BLOG_DIR.glob("*.json"), reverse=True)
+    cards = ""
+    for f in all_posts[:50]:
+        try:
+            m = json.loads(f.read_text())
+            z = m.get("z_score", 0)
+            sign = "+" if z >= 0 else ""
+            sc = m.get("score", 0)
+            col = "#ef4444" if sc >= 7 else "#f97316" if sc >= 5 else "#f59e0b"
+            lvl = m.get("anomaly_level", "")
+            cards += f"""  <a href="/news/{m['slug']}/" class="card">
+    <div class="card-top">
+      <span class="loc">{m.get('location','—')}</span>
+      <span class="ev">{(m.get('vertical') or '').replace('-',' ').upper()}</span>
+    </div>
+    <h2>{m.get('title','—')}</h2>
+    <p>{m.get('lead','')[:120]}...</p>
+    <div class="card-foot">
+      <span style="color:{col};font-weight:700">{sign}{z:.2f}σ</span>
+      <span class="lvl" style="color:{col}">{lvl}</span>
+      <span class="date">{m.get('date','')}</span>
+    </div>
+  </a>\n"""
+        except Exception:
+            continue
+
+    html = f"""<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Intelligence Reports | WeatherArb</title>
+  <meta name="description" content="Analisi delle anomalie meteo in Europa. Z-Score in tempo reale su baseline NASA POWER 25 anni. WeatherArb Weather Intelligence Agency.">
+  <style>
+    :root{{--bg:#040608;--surface:#0a0d12;--border:#141920;--text:#c8d6e5;--muted:#4a5568;--blue:#3b82f6}}
+    *{{box-sizing:border-box;margin:0;padding:0}}
+    body{{background:var(--bg);color:var(--text);font-family:-apple-system,sans-serif;min-height:100vh}}
+    .hdr{{border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}}
+    .logo{{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none}}.logo span{{color:var(--blue)}}
+    .nav{{display:flex;gap:20px}}.nav a{{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-decoration:none}}
+    .wrap{{max-width:1100px;margin:0 auto;padding:48px 24px 80px}}
+    h1{{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}}
+    .sub{{font-size:13px;color:var(--muted);margin-bottom:40px}}
+    .filters{{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap}}
+    .filt{{padding:6px 14px;border:1px solid var(--border);border-radius:100px;font-size:12px;color:var(--muted);cursor:pointer;background:transparent;transition:.2s}}.filt:hover,.filt.active{{border-color:var(--blue);color:var(--blue)}}
+    .grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}}
+    .card{{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;color:var(--text);display:flex;flex-direction:column;gap:10px;transition:border-color .2s}}.card:hover{{border-color:var(--blue)}}
+    .card-top{{display:flex;gap:8px;align-items:center}}.loc{{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue)}}.ev{{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}}
+    .card h2{{font-size:16px;font-weight:700;line-height:1.3}}
+    .card p{{font-size:13px;color:var(--muted);line-height:1.5;flex:1}}
+    .card-foot{{display:flex;gap:12px;align-items:center;padding-top:10px;border-top:1px solid var(--border);font-size:12px}}.date{{margin-left:auto;color:var(--muted)}}.lvl{{font-size:10px;font-weight:700;text-transform:uppercase}}
+    .ftr{{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:11px;color:var(--muted)}}.ftr a{{color:var(--muted);text-decoration:none}}
+  </style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">Weather<span>Arb</span></a>
+  <nav class="nav"><a href="/data/">Data</a><a href="/map.html">Map</a><a href="/api.html">API</a><a href="/alerts.html">Alerts</a></nav>
+</header>
+<div class="wrap">
+  <h1>Intelligence Reports</h1>
+  <p class="sub">{len(all_posts)} analisi pubblicate · ERA5-Land + NASA POWER · Aggiornato ogni ora</p>
+  <div class="filters">
+    <button class="filt active" onclick="filter('all')">All</button>
+    <button class="filt" onclick="filter('critical')" style="color:#ef4444;border-color:#ef4444">● Critical</button>
+    <button class="filt" onclick="filter('extreme')" style="color:#f97316;border-color:#f97316">● Extreme</button>
+    <button class="filt" onclick="filter('unusual')" style="color:#f59e0b;border-color:#f59e0b">● Unusual</button>
+  </div>
+  <div class="grid" id="grid">
+{cards}  </div>
+</div>
+<footer class="ftr">
+  <a href="/">WeatherArb</a> · <a href="/about.html">Methodology</a> · <a href="/api.html">API</a>
+</footer>
+<script>
+function filter(lvl){{
+  document.querySelectorAll('.filt').forEach(b=>b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.card').forEach(c=>{{
+    if(lvl==='all'){{c.style.display='';return;}}
+    const t=c.querySelector('.lvl');
+    c.style.display=(t&&t.textContent.toLowerCase().includes(lvl))?'':'none';
+  }});
+}}
+</script>
+</body>
+</html>"""
+
+    (NEWS_DIR / "index.html").write_text(html, encoding="utf-8")
+    log.info(f"✅ news/index.html aggiornato — {len(all_posts)} articoli")
+
+# ─── MAIN ────────────────────────────────────────────────────────────────────
+def main():
+    log.info("=== WeatherArb Auto-Publisher START ===")
+
+    # 1. Pulizia
+    removed = cleanup_old_articles()
+
+    # 2. Fetch segnali
+    signals = fetch_top_signals()
+    if not signals:
+        log.info("Nessuna anomalia sopra soglia — nessun articolo generato")
+    else:
+        # 3. Genera e pubblica
+        published = 0
+        for sig in signals:
+            content = generate_article(sig)
+            if content:
+                meta = save_article(sig, content)
+                if meta:
+                    published += 1
+        log.info(f"Pubblicati {published} nuovi articoli")
+
+    # 4. Aggiorna feed e indice
+    update_latest_reports()
+    update_news_index()
+
+    log.info("=== WeatherArb Auto-Publisher END ===")
+
+if __name__ == "__main__":
     main()
