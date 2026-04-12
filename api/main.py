@@ -38,6 +38,11 @@ app = FastAPI(
     version="0.1.0-sprint1",
 )
 
+@app.on_event("startup")
+def on_startup():
+    _load_cache_from_disk()
+    logger.info(f"Startup: cache restored with {len(_pulse_cache)} entries")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -76,6 +81,25 @@ if USE_MOCK:
 # BACKGROUND TASK: REFRESH
 # ─────────────────────────────────────────────────
 
+def _save_cache_to_disk():
+    import json
+    try:
+        with open("data/pulse_cache.json", "w") as f:
+            json.dump(_pulse_cache, f, default=str)
+    except Exception as e:
+        logger.warning(f"Cache save failed: {e}")
+
+def _load_cache_from_disk():
+    import json
+    from pathlib import Path
+    try:
+        if Path("data/pulse_cache.json").exists():
+            with open("data/pulse_cache.json") as f:
+                _pulse_cache.update(json.load(f))
+            logger.info(f"Cache restored: {len(_pulse_cache)} province")
+    except Exception as e:
+        logger.warning(f"Cache load failed: {e}")
+
 def _refresh_provincia(provincia_nome: str):
     """Task in background: aggiorna pulse per una provincia."""
     provincia = _province_index.get(provincia_nome.lower())
@@ -113,7 +137,8 @@ def _refresh_all():
     for nome in _province_index:
         _refresh_provincia(nome)
     _last_refresh = datetime.utcnow()
-    logger.info("Full refresh complete")
+    _save_cache_to_disk()
+    logger.info(f"Full refresh complete — {len(_pulse_cache)} entries saved to disk")
 
 
 # ─────────────────────────────────────────────────
