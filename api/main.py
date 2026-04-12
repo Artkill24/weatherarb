@@ -324,21 +324,49 @@ def api_pulse(provincia: str):
 
 @app.get("/api/v1/europe/top")
 def api_top(limit: int = 10):
+    # Build lat/lon lookup from province_coords.json
+    import json as _json
+    try:
+        with open("data/province_coords.json", "r") as _f:
+            _raw = _json.load(_f)
+        _provinces = _raw["province"] if "province" in _raw else _raw
+        _coords = {p["nome"].lower(): {"lat": p.get("lat", 0), "lon": p.get("lon", 0), "country": p.get("country", "Italy")} for p in _provinces}
+    except Exception:
+        _coords = {}
+
+    # Country code map
+    _cc_map = {
+        "Italy": "it", "Germany": "de", "France": "fr", "Spain": "es",
+        "United Kingdom": "gb", "Sweden": "se", "Netherlands": "nl",
+        "Poland": "pl", "Austria": "at", "Switzerland": "ch",
+        "Belgium": "be", "Portugal": "pt", "Denmark": "dk", "Norway": "no"
+    }
+
     signals = []
     for nome, pulse in _pulse_cache.items():
         loc = pulse.get("location", {})
         trig = pulse.get("weather_trigger", {})
         arb = pulse.get("arbitrage_score", {})
+        provincia = loc.get("provincia") or nome
+        coords = _coords.get(provincia.lower(), _coords.get(nome.lower(), {}))
+        country_name = coords.get("country", "Italy")
         signals.append({
-            "province": loc.get("provincia"),
+            "location": provincia,
+            "province": provincia,
             "region": loc.get("regione"),
+            "country": country_name,
+            "country_code": _cc_map.get(country_name, "it"),
             "event_type": trig.get("type"),
+            "vertical": trig.get("type", "General"),
             "z_score": trig.get("z_score", 0),
             "anomaly_level": trig.get("anomaly_level"),
             "score": arb.get("score", 0),
+            "lat": coords.get("lat", 0),
+            "lon": coords.get("lon", 0),
         })
     signals.sort(key=lambda x: abs(x["z_score"] or 0), reverse=True)
-    return {"api_version": "v1", "count": min(limit, len(signals)), "data": signals[:limit]}
+    top = signals[:limit]
+    return {"api_version": "v1", "count": len(top), "reports": top, "data": top}
 
 @app.get("/api/v1/widget/{provincia}")
 def api_widget(provincia: str):
