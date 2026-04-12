@@ -4,670 +4,243 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vercelli — WeatherArb Intelligence</title>
-  <meta name="description" content="Analisi anomalie meteo in tempo reale per Vercelli. Z-Score basato su baseline NASA POWER 25 anni. WeatherArb Weather Intelligence Agency.">
-  <meta property="og:title" content="Vercelli — WeatherArb Intelligence">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Real-time weather anomaly analysis for Vercelli. Z-Score vs NASA POWER 25-year baseline. WeatherArb Weather Intelligence Agency.">
   <link rel="canonical" href="https://weatherarb.com/it/vercelli/">
-
   <style>
     :root {
-      --bg: #040608;
-      --surface: #0a0d12;
-      --border: #141920;
-      --border-accent: #1e2d3d;
-      --text: #c8d6e5;
-      --muted: #4a5568;
-      --blue: #3b82f6;
-      --blue-dim: rgba(59,130,246,0.12);
-      --green: #10b981;
-      --yellow: #f59e0b;
-      --red: #ef4444;
-      --red-dim: rgba(239,68,68,0.1);
+      --bg:#040608;--surface:#0a0d12;--border:#141920;--border-a:#1e2d3d;
+      --text:#c8d6e5;--muted:#4a5568;--blue:#3b82f6;--blue-dim:rgba(59,130,246,.12);
+      --green:#10b981;--yellow:#f59e0b;--red:#ef4444;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    /* SCAN LINE EFFECT */
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
-      pointer-events: none; z-index: 9999;
-    }
-
-    /* HEADER */
-    .header {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(4,6,8,0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 24px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .header-logo {
-      font-size: 13px; font-weight: 700; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--text);
-      text-decoration: none;
-    }
-    .header-logo span { color: var(--blue); }
-    .header-nav { display: flex; gap: 20px; align-items: center; }
-    .header-nav a {
-      font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
-      color: var(--muted); text-decoration: none; transition: color 0.2s;
-    }
-    .header-nav a:hover { color: var(--text); }
-    .live-dot {
-      width: 6px; height: 6px; background: var(--green);
-      border-radius: 50%;
-      box-shadow: 0 0 8px var(--green);
-      animation: pulse-dot 2s ease-in-out infinite;
-    }
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.6; transform: scale(0.8); }
-    }
-
-    /* HERO */
-    .hero {
-      padding: 48px 24px 36px;
-      max-width: 1100px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr auto;
-      gap: 40px; align-items: start;
-    }
-    .city-breadcrumb {
-      font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em;
-      color: var(--muted); margin-bottom: 12px;
-    }
-    .city-breadcrumb a { color: var(--muted); text-decoration: none; }
-    .city-breadcrumb a:hover { color: var(--blue); }
-    .city-name {
-      font-size: clamp(36px, 5vw, 64px);
-      font-weight: 800; letter-spacing: -0.02em;
-      line-height: 1; color: #fff;
-      margin-bottom: 8px;
-    }
-    .city-meta {
-      font-size: 12px; color: var(--muted);
-      letter-spacing: 0.08em; text-transform: uppercase;
-    }
-    .city-meta span { color: var(--blue); }
-
-    /* Z-SCORE GAUGE */
-    .gauge-container {
-      display: flex; flex-direction: column; align-items: center;
-      gap: 8px; min-width: 160px;
-    }
-    .gauge-label {
-      font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em;
-      color: var(--muted);
-    }
-    .gauge-svg { width: 160px; height: 100px; }
-    .gauge-value {
-      font-size: 28px; font-weight: 800;
-      font-variant-numeric: tabular-nums;
-      text-align: center;
-    }
-    .gauge-status {
-      font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em;
-      text-align: center; font-weight: 700;
-    }
-
-    /* MAIN GRID */
-    .main { max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; }
-
-    /* SIGNAL PANEL */
-    .signal-panel {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 24px;
-    }
-    .signal-cell {
-      background: var(--surface);
-      padding: 20px 24px;
-      display: flex; flex-direction: column; gap: 6px;
-    }
-    .signal-cell-label {
-      font-size: 10px; text-transform: uppercase;
-      letter-spacing: 0.15em; color: var(--muted);
-    }
-    .signal-cell-value {
-      font-size: 26px; font-weight: 700;
-      font-variant-numeric: tabular-nums;
-      line-height: 1;
-    }
-    .signal-cell-sub {
-      font-size: 11px; color: var(--muted);
-    }
-
-    /* SECTION TITLE */
-    .section-title {
-      font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em;
-      color: var(--muted); margin-bottom: 16px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    /* IMPACT HORIZON */
-    .impact-box {
-      background: var(--surface);
-      border: 1px solid var(--border-accent);
-      border-radius: 12px;
-      padding: 28px;
-      margin-bottom: 24px;
-      position: relative; overflow: hidden;
-    }
-    .impact-box::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--blue), transparent);
-    }
-    .impact-box.critical::before { background: linear-gradient(90deg, var(--red), transparent); }
-    .impact-box.critical { border-color: rgba(239,68,68,0.2); }
-    .impact-header {
-      display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
-    }
-    .impact-icon {
-      width: 36px; height: 36px;
-      background: var(--blue-dim);
-      border: 1px solid rgba(59,130,246,0.3);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 16px;
-    }
-    .impact-title { font-size: 16px; font-weight: 700; }
-    .impact-subtitle { font-size: 12px; color: var(--muted); margin-top: 2px; }
-    .impact-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-    }
-    .impact-item {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid var(--border);
-      border-radius: 8px; padding: 14px 16px;
-    }
-    .impact-item-label {
-      font-size: 10px; text-transform: uppercase;
-      letter-spacing: 0.12em; color: var(--muted); margin-bottom: 6px;
-    }
-    .impact-item-value {
-      font-size: 14px; font-weight: 600; color: var(--text);
-      line-height: 1.4;
-    }
-
-    /* TREND CHART */
-    .chart-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px; padding: 24px;
-      margin-bottom: 24px;
-    }
-    .chart-container { position: relative; height: 120px; }
-    .chart-svg { width: 100%; height: 100%; overflow: visible; }
-    .chart-labels {
-      display: flex; justify-content: space-between;
-      margin-top: 8px;
-    }
-    .chart-label { font-size: 10px; color: var(--muted); }
-
-    /* METHODOLOGY */
-    .method-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px; padding: 24px;
-      margin-bottom: 24px;
-    }
-    .method-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px; margin-top: 16px;
-    }
-    .method-item {
-      display: flex; flex-direction: column; gap: 4px;
-    }
-    .method-item-label {
-      font-size: 10px; text-transform: uppercase;
-      letter-spacing: 0.12em; color: var(--muted);
-    }
-    .method-item-value {
-      font-size: 13px; font-weight: 600;
-    }
-
-    /* ALERT CTA */
-    .alert-box {
-      background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(16,185,129,0.05));
-      border: 1px solid rgba(59,130,246,0.2);
-      border-radius: 12px; padding: 28px;
-      display: flex; align-items: center;
-      justify-content: space-between; gap: 24px;
-      margin-bottom: 24px;
-    }
-    .alert-text h3 {
-      font-size: 16px; font-weight: 700; margin-bottom: 6px;
-    }
-    .alert-text p { font-size: 13px; color: var(--muted); }
-    .alert-form { display: flex; gap: 8px; flex-wrap: wrap; }
-    .alert-input {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border-accent);
-      border-radius: 8px; padding: 10px 14px;
-      color: var(--text); font-size: 13px;
-      outline: none; transition: border-color 0.2s;
-      min-width: 200px;
-    }
-    .alert-input:focus { border-color: var(--blue); }
-    .alert-btn {
-      background: var(--blue);
-      color: #fff; border: none;
-      border-radius: 8px; padding: 10px 20px;
-      font-size: 13px; font-weight: 700;
-      cursor: pointer; transition: opacity 0.2s;
-      white-space: nowrap;
-    }
-    .alert-btn:hover { opacity: 0.85; }
-
-    /* FOOTER */
-    .footer {
-      border-top: 1px solid var(--border);
-      padding: 24px;
-      text-align: center;
-      font-size: 11px; color: var(--muted);
-      letter-spacing: 0.08em;
-    }
-    .footer a { color: var(--muted); text-decoration: none; }
-    .footer a:hover { color: var(--blue); }
-
-    /* LOADING STATE */
-    .skeleton {
-      background: linear-gradient(90deg, var(--surface) 25%, rgba(255,255,255,0.04) 50%, var(--surface) 75%);
-      background-size: 200% 100%;
-      animation: shimmer 1.5s infinite;
-      border-radius: 6px;
-    }
-    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-
-    /* ANOMALY LEVELS */
-    .level-normal { color: var(--green); }
-    .level-unusual { color: var(--yellow); }
-    .level-extreme { color: #f97316; }
-    .level-critical { color: var(--red); }
-
-    /* RESPONSIVE */
-    @media (max-width: 640px) {
-      .hero { grid-template-columns: 1fr; }
-      .gauge-container { align-self: start; }
-      .impact-grid { grid-template-columns: 1fr; }
-      .alert-box { flex-direction: column; }
-      .alert-form { width: 100%; }
-      .alert-input { min-width: unset; flex: 1; }
-    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.03) 2px,rgba(0,0,0,.03) 4px);pointer-events:none;z-index:9999}
+    .hdr{position:sticky;top:0;z-index:100;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none}.logo span{color:var(--blue)}
+    .nav{display:flex;gap:20px;align-items:center}.nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-decoration:none}.nav a:hover{color:var(--text)}
+    .dot{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 8px var(--green);animation:pd 2s ease-in-out infinite}
+    @keyframes pd{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.8)}}
+    .hero{padding:48px 24px 36px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start}
+    .bc{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:12px}.bc a{color:var(--muted);text-decoration:none}.bc a:hover{color:var(--blue)}
+    h1{font-size:clamp(36px,5vw,64px);font-weight:800;letter-spacing:-.02em;line-height:1;color:#fff;margin-bottom:8px}
+    .cmeta{font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}.cmeta span{color:var(--blue)}
+    .gc{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:160px}
+    .gl{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}
+    .gsvg{width:160px;height:100px}
+    .gv{font-size:28px;font-weight:800;font-variant-numeric:tabular-nums;text-align:center}
+    .gs{font-size:10px;text-transform:uppercase;letter-spacing:.15em;text-align:center;font-weight:700}
+    .main{max-width:1100px;margin:0 auto;padding:0 24px 80px}
+    .panel{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:24px}
+    .pcell{background:var(--surface);padding:20px 24px;display:flex;flex-direction:column;gap:6px}
+    .plabel{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}
+    .pval{font-size:26px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+    .psub{font-size:11px;color:var(--muted)}
+    .stitle{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+    .ibox{background:var(--surface);border:1px solid var(--border-a);border-radius:12px;padding:28px;margin-bottom:24px;position:relative;overflow:hidden}
+    .ibox::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),transparent)}
+    .ibox.crit::before{background:linear-gradient(90deg,var(--red),transparent)}.ibox.crit{border-color:rgba(239,68,68,.2)}
+    .ihdr{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+    .iico{width:36px;height:36px;background:var(--blue-dim);border:1px solid rgba(59,130,246,.3);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px}
+    .itit{font-size:16px;font-weight:700}.isub{font-size:12px;color:var(--muted);margin-top:2px}
+    .igrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .iitem{background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:8px;padding:14px 16px}
+    .iilabel{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:6px}
+    .iival{font-size:14px;font-weight:600;color:var(--text);line-height:1.4}
+    .cbox{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:24px}
+    .csvg{width:100%;height:120px;overflow:visible}
+    .clabels{display:flex;justify-content:space-between;margin-top:8px}
+    .clabel{font-size:10px;color:var(--muted)}
+    .mbox{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:24px}
+    .mtext{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px}
+    .mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px}
+    .mi{display:flex;flex-direction:column;gap:4px}
+    .milabel{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+    .mival{font-size:13px;font-weight:600}
+    .abox{background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(16,185,129,.05));border:1px solid rgba(59,130,246,.2);border-radius:12px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:24px}
+    .atext h3{font-size:16px;font-weight:700;margin-bottom:6px}.atext p{font-size:13px;color:var(--muted)}
+    .abtn{background:var(--blue);color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;white-space:nowrap;display:inline-block}
+    .abtn:hover{opacity:.85}
+    .ftr{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:11px;color:var(--muted);letter-spacing:.08em}
+    .ftr a{color:var(--muted);text-decoration:none}.ftr a:hover{color:var(--blue)}
+    @media(max-width:640px){.hero{grid-template-columns:1fr}.igrid{grid-template-columns:1fr}.abox{flex-direction:column}}
   </style>
 </head>
 <body>
-
-<header class="header">
-  <a href="/" class="header-logo">Weather<span>Arb</span></a>
-  <nav class="header-nav">
+<header class="hdr">
+  <a href="/" class="logo">Weather<span>Arb</span></a>
+  <nav class="nav">
     <a href="/data/">Data</a>
     <a href="/news/">News</a>
     <a href="/api.html">API</a>
     <a href="/alerts.html">Alerts</a>
-    <div class="live-dot" title="System Live"></div>
+    <div class="dot"></div>
   </nav>
 </header>
 
 <div class="hero">
   <div>
-    <div class="city-breadcrumb">
-      <a href="/">WeatherArb</a> / <a href="/it/">Italia</a> / Vercelli
-    </div>
-    <h1 class="city-name">Vercelli</h1>
-    <p class="city-meta" id="city-meta">
-      Italia · <span id="coords-text">45.320°N 8.418°E</span> · NASA POWER Baseline
-    </p>
+    <div class="bc"><a href="/">WeatherArb</a> / <a href="/it/">Italia</a> / Vercelli</div>
+    <h1>Vercelli</h1>
+    <p class="cmeta">Italia · <span>45.320°N 8.418°E</span> · NASA POWER Baseline</p>
   </div>
-
-  <div class="gauge-container">
-    <div class="gauge-label">Z-Score</div>
-    <svg class="gauge-svg" viewBox="0 0 160 100" id="gauge-svg">
-      <!-- Track -->
-      <path d="M 20 90 A 70 70 0 0 1 140 90"
-            fill="none" stroke="#141920" stroke-width="10" stroke-linecap="round"/>
-      <!-- Fill -->
-      <path id="gauge-fill"
-            d="M 20 90 A 70 70 0 0 1 140 90"
-            fill="none" stroke="#3b82f6" stroke-width="10"
+  <div class="gc">
+    <div class="gl">Z-Score</div>
+    <svg class="gsvg" viewBox="0 0 160 100" id="gsvg">
+      <path d="M 20 90 A 70 70 0 0 1 140 90" fill="none" stroke="#141920" stroke-width="10" stroke-linecap="round"/>
+      <path id="gfill" d="M 20 90 A 70 70 0 0 1 140 90" fill="none" stroke="#3b82f6" stroke-width="10"
             stroke-linecap="round" stroke-dasharray="220" stroke-dashoffset="220"
-            style="transition: stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1), stroke 0.4s;"/>
-      <!-- Needle dot -->
-      <circle id="gauge-needle" cx="80" cy="90" r="5" fill="#fff" opacity="0"/>
+            style="transition:stroke-dashoffset 1.2s cubic-bezier(.4,0,.2,1),stroke .4s"/>
     </svg>
-    <div class="gauge-value level-normal" id="gauge-value">—</div>
-    <div class="gauge-status level-normal" id="gauge-status">Sincronizzazione dati...</div>
+    <div class="gv" id="gval" style="color:var(--green)">—</div>
+    <div class="gs" id="gstat" style="color:var(--green)">Sincronizzazione...</div>
   </div>
 </div>
 
 <main class="main">
-
-  <!-- SIGNAL PANEL -->
-  <div class="signal-panel">
-    <div class="signal-cell">
-      <div class="signal-cell-label">Punteggio</div>
-      <div class="signal-cell-value" id="score-val">—<span style="font-size:16px;color:var(--muted)">/10</span></div>
-      <div class="signal-cell-sub" id="score-phase">—</div>
+  <div class="panel">
+    <div class="pcell">
+      <div class="plabel">Score</div>
+      <div class="pval" id="score-v">—<span style="font-size:16px;color:var(--muted)">/10</span></div>
+      <div class="psub" id="score-p">—</div>
     </div>
-    <div class="signal-cell">
-      <div class="signal-cell-label">Temperatura</div>
-      <div class="signal-cell-value" id="temp-val">—<span style="font-size:16px">°C</span></div>
-      <div class="signal-cell-sub" id="temp-delta">vs media storica</div>
+    <div class="pcell">
+      <div class="plabel">Temperatura</div>
+      <div class="pval" id="temp-v">—<span style="font-size:16px">°C</span></div>
+      <div class="psub" id="temp-d">vs media storica</div>
     </div>
-    <div class="signal-cell">
-      <div class="signal-cell-label">Vertical</div>
-      <div class="signal-cell-value" style="font-size:18px" id="vertical-val">—</div>
-      <div class="signal-cell-sub" id="confidence-val">—</div>
+    <div class="pcell">
+      <div class="plabel">Vertical</div>
+      <div class="pval" style="font-size:18px" id="vert-v">—</div>
+      <div class="psub" id="conf-v">—</div>
     </div>
-    <div class="signal-cell">
-      <div class="signal-cell-label">Baseline</div>
-      <div class="signal-cell-value" style="font-size:14px; color:var(--muted)">NASA POWER</div>
-      <div class="signal-cell-sub">ERA5-Land · 25 anni</div>
+    <div class="pcell">
+      <div class="plabel">Baseline</div>
+      <div class="pval" style="font-size:14px;color:var(--muted)">NASA POWER</div>
+      <div class="psub">ERA5-Land · 25 anni</div>
     </div>
   </div>
 
-  <!-- IMPACT HORIZON -->
-  <h2 class="section-title">Impact Horizon</h2>
-  <div class="impact-box" id="impact-box">
-    <div class="impact-header">
-      <div class="impact-icon" id="impact-icon">⏱</div>
+  <h2 class="stitle">Impact Horizon</h2>
+  <div class="ibox" id="ibox">
+    <div class="ihdr">
+      <div class="iico" id="iico">⏱</div>
       <div>
-        <div class="impact-title" id="impact-title">Monitoraggio Attivo</div>
-        <div class="impact-subtitle" id="impact-sub">Sincronizzazione dati...</div>
+        <div class="itit" id="itit">Monitoraggio Attivo</div>
+        <div class="isub" id="isub">Sincronizzazione...</div>
       </div>
     </div>
-    <div class="impact-grid">
-      <div class="impact-item">
-        <div class="impact-item-label">Finestra di Preparazione</div>
-        <div class="impact-item-value" id="impact-window">Calcolo in corso...</div>
-      </div>
-      <div class="impact-item">
-        <div class="impact-item-label">Anomalia vs Storico</div>
-        <div class="impact-item-value" id="impact-delta">—</div>
-      </div>
-      <div class="impact-item">
-        <div class="impact-item-label">Fase Operativa</div>
-        <div class="impact-item-value" id="impact-phase">—</div>
-      </div>
-      <div class="impact-item">
-        <div class="impact-item-label">Prossimo Update</div>
-        <div class="impact-item-value" id="impact-next">1 ora</div>
-      </div>
+    <div class="igrid">
+      <div class="iitem"><div class="iilabel">Finestra di Preparazione</div><div class="iival" id="iwin">—</div></div>
+      <div class="iitem"><div class="iilabel">Anomalia vs Storico</div><div class="iival" id="idelta">—</div></div>
+      <div class="iitem"><div class="iilabel">Fase Operativa</div><div class="iival" id="iphase">—</div></div>
+      <div class="iitem"><div class="iilabel">Prossimo Update</div><div class="iival" id="inext">1 ora</div></div>
     </div>
   </div>
 
-  <!-- TREND CHART -->
-  <h2 class="section-title">Trend 7 Giorni</h2>
-  <div class="chart-box">
-    <div class="chart-container">
-      <svg class="chart-svg" id="trend-svg" viewBox="0 0 800 120" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="chart-grad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/>
-            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <!-- Zero line -->
-        <line x1="0" y1="60" x2="800" y2="60" stroke="#141920" stroke-width="1" stroke-dasharray="4,4"/>
-        <!-- Chart placeholder -->
-        <text x="400" y="65" text-anchor="middle" fill="#4a5568" font-size="16">
-          Sincronizzazione dati...
-        </text>
-      </svg>
-    </div>
-    <div class="chart-labels" id="chart-labels">
-      <span class="chart-label">-6d</span>
-      <span class="chart-label">-5d</span>
-      <span class="chart-label">-4d</span>
-      <span class="chart-label">-3d</span>
-      <span class="chart-label">-2d</span>
-      <span class="chart-label">-1d</span>
-      <span class="chart-label">Oggi</span>
+  <h2 class="stitle">Trend 7 Giorni</h2>
+  <div class="cbox">
+    <svg class="csvg" id="csvg" viewBox="0 0 800 120" preserveAspectRatio="none">
+      <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+      </linearGradient></defs>
+      <line x1="0" y1="60" x2="800" y2="60" stroke="#141920" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="400" y="65" text-anchor="middle" fill="#4a5568" font-size="16">Sincronizzazione...</text>
+    </svg>
+    <div class="clabels">
+      <span class="clabel">-6d</span><span class="clabel">-5d</span><span class="clabel">-4d</span>
+      <span class="clabel">-3d</span><span class="clabel">-2d</span><span class="clabel">-1d</span>
+      <span class="clabel">Oggi</span>
     </div>
   </div>
 
-  <!-- METHODOLOGY -->
-  <h2 class="section-title">Cosa Significa</h2>
-  <div class="method-box">
-    <p style="font-size:13px; color:var(--muted); line-height:1.6; margin-bottom:16px" id="method-text">
-      WeatherArb calcola lo Z-Score confrontando le condizioni attuali con la baseline storica NASA POWER degli ultimi 25 anni per le coordinate esatte di Vercelli. Valori superiori a ±2.0 indicano anomalie statisticamente significative.
-    </p>
-    <div class="method-grid">
-      <div class="method-item">
-        <div class="method-item-label">Fonte Baseline</div>
-        <div class="method-item-value">NASA POWER API</div>
-      </div>
-      <div class="method-item">
-        <div class="method-item-label">Copertura Storica</div>
-        <div class="method-item-value">25 anni (2000-2025)</div>
-      </div>
-      <div class="method-item">
-        <div class="method-item-label">Real-Time</div>
-        <div class="method-item-value">OpenWeatherMap</div>
-      </div>
-      <div class="method-item">
-        <div class="method-item-label">Aggiornamento</div>
-        <div class="method-item-value">Ogni ora</div>
-      </div>
-      <div class="method-item">
-        <div class="method-item-label">Coordinate</div>
-        <div class="method-item-value">45.3204°N, 8.4183°E</div>
-      </div>
-      <div class="method-item">
-        <div class="method-item-label">Soglia Alert</div>
-        <div class="method-item-value">Score ≥ 7.0 / 10</div>
-      </div>
+  <h2 class="stitle">Metodologia</h2>
+  <div class="mbox">
+    <p class="mtext">WeatherArb calcola lo Z-Score confrontando le condizioni attuali con la baseline storica NASA POWER degli ultimi 25 anni per le coordinate esatte di Vercelli (45.3204°N, 8.4183°E). Valori superiori a ±2.0 indicano anomalie statisticamente significative.</p>
+    <div class="mgrid">
+      <div class="mi"><div class="milabel">Fonte Baseline</div><div class="mival">NASA POWER API</div></div>
+      <div class="mi"><div class="milabel">Copertura Storica</div><div class="mival">25 anni</div></div>
+      <div class="mi"><div class="milabel">Real-Time</div><div class="mival">OpenWeatherMap</div></div>
+      <div class="mi"><div class="milabel">Aggiornamento</div><div class="mival">Ogni ora</div></div>
+      <div class="mi"><div class="milabel">Coordinate</div><div class="mival">45.3204°N, 8.4183°E</div></div>
+      <div class="mi"><div class="milabel">Soglia Alert</div><div class="mival">Score ≥ 7.0/10</div></div>
     </div>
   </div>
 
-  <!-- ALERT CTA -->
-  <div class="alert-box">
-    <div class="alert-text">
+  <div class="abox">
+    <div class="atext">
       <h3>📡 Ricevi Alert per Vercelli</h3>
       <p>Notifica immediata su Telegram quando il segnale supera 7.0/10</p>
     </div>
-    <div class="alert-form">
-      <a href="https://t.me/weatherarb_alerts" target="_blank" rel="noopener" class="alert-btn">
-        Canale Telegram →
-      </a>
-    </div>
+    <a href="https://t.me/weatherarb_alerts" target="_blank" rel="noopener" class="abtn">Canale Telegram →</a>
   </div>
-
 </main>
 
-<footer class="footer">
-  <p>
-    <a href="/">WeatherArb</a> · Independent Weather Intelligence Agency ·
-    Data: NASA POWER, ERA5-Land, OpenWeatherMap ·
-    <a href="/about.html">Methodology</a> · <a href="/api.html">API</a>
-  </p>
+<footer class="ftr">
+  <a href="/">WeatherArb</a> · Independent Weather Intelligence Agency ·
+  <a href="/about.html">Methodology</a> · <a href="/api.html">API</a>
 </footer>
 
 <script>
-const API = 'https://api.weatherarb.com';
-const CITY_ID = 'vercelli';
-const LAT = 45.3204;
-const LON = 8.4183;
-
-// Color levels
-const LEVELS = {
-  NORMAL:   { color: '#10b981', label: 'NORMAL' },
-  UNUSUAL:  { color: '#f59e0b', label: 'UNUSUAL' },
-  EXTREME:  { color: '#f97316', label: 'EXTREME' },
-  CRITICAL: { color: '#ef4444', label: 'CRITICAL' },
-};
-
-function getLevel(score) {
-  if (score >= 8) return LEVELS.CRITICAL;
-  if (score >= 6) return LEVELS.EXTREME;
-  if (score >= 4) return LEVELS.UNUSUAL;
-  return LEVELS.NORMAL;
+const API='https://api.weatherarb.com',CID='vercelli';
+const LV={NORMAL:'#10b981',UNUSUAL:'#f59e0b',EXTREME:'#f97316',CRITICAL:'#ef4444'};
+function lv(s){return s>=8?'CRITICAL':s>=6?'EXTREME':s>=4?'UNUSUAL':'NORMAL'}
+function ag(z){
+  const f=document.getElementById('gfill'),v=document.getElementById('gval'),s=document.getElementById('gstat');
+  const c=Math.max(-3,Math.min(6,z)),p=(c+3)/9,off=220-(p*220);
+  const col=c>=2?'#ef4444':c>=1?'#f97316':c>=0?'#f59e0b':'#10b981';
+  f.style.stroke=col;f.style.strokeDashoffset=off;
+  v.textContent=(z>0?'+':'')+z.toFixed(2);v.style.color=col;s.style.color=col;
 }
-
-// Animated gauge
-function animateGauge(zscore) {
-  const fill = document.getElementById('gauge-fill');
-  const valueEl = document.getElementById('gauge-value');
-  const statusEl = document.getElementById('gauge-status');
-
-  // Clamp Z to -3..+6 for gauge
-  const clamped = Math.max(-3, Math.min(6, zscore));
-  const pct = (clamped + 3) / 9; // 0..1
-  const totalLen = 220;
-  const offset = totalLen - (pct * totalLen);
-
-  // Color
-  const col = clamped >= 2 ? '#ef4444' : clamped >= 1 ? '#f97316' : clamped >= 0 ? '#f59e0b' : '#10b981';
-  fill.style.stroke = col;
-  fill.style.strokeDashoffset = offset;
-
-  const sign = zscore > 0 ? '+' : '';
-  valueEl.textContent = sign + zscore.toFixed(2);
-  valueEl.style.color = col;
-  statusEl.style.color = col;
+function spark(pts){
+  const svg=document.getElementById('csvg');
+  if(!pts||pts.length<2)return;
+  const W=800,H=120,P=16,mn=Math.min(...pts)-.5,mx=Math.max(...pts)+.5,r=mx-mn||1;
+  const tx=i=>P+(i/(pts.length-1))*(W-P*2),ty=v=>H-P-((v-mn)/r)*(H-P*2);
+  const ps=pts.map((v,i)=>tx(i)+','+ty(v)).join(' ');
+  const zy=Math.max(P,Math.min(H-P,ty(0)));
+  svg.innerHTML=`<defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/></linearGradient></defs>`+
+    `<line x1="${P}" y1="${zy}" x2="${W-P}" y2="${zy}" stroke="#1e2d3d" stroke-width="1" stroke-dasharray="4,4"/>`+
+    `<polygon points="${ps} ${tx(pts.length-1)},${H-P} ${tx(0)},${H-P}" fill="url(#cg)"/>`+
+    `<polyline points="${ps}" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linejoin="round"/>`+
+    `<circle cx="${tx(pts.length-1)}" cy="${ty(pts[pts.length-1])}" r="4" fill="#3b82f6"/>`;
 }
-
-// Draw sparkline
-function drawSparkline(points) {
-  const svg = document.getElementById('trend-svg');
-  if (!points || points.length < 2) return;
-
-  const W = 800, H = 120, PAD = 16;
-  const min = Math.min(...points) - 0.5;
-  const max = Math.max(...points) + 0.5;
-  const range = max - min || 1;
-
-  const toX = (i) => PAD + (i / (points.length - 1)) * (W - PAD * 2);
-  const toY = (v) => H - PAD - ((v - min) / range) * (H - PAD * 2);
-
-  const pts = points.map((v, i) => `${toX(i)},${toY(v)}`).join(' ');
-  const firstX = toX(0), firstY = toY(points[0]);
-  const lastX = toX(points.length - 1), lastY = toY(points[points.length - 1]);
-
-  const zeroY = toY(0);
-  const zeroLine = `<line x1="${PAD}" y1="${Math.max(PAD, Math.min(H-PAD, zeroY))}" x2="${W-PAD}" y2="${Math.max(PAD, Math.min(H-PAD, zeroY))}" stroke="#1e2d3d" stroke-width="1" stroke-dasharray="4,4"/>`;
-
-  const area = `<polygon points="${pts} ${lastX},${H-PAD} ${firstX},${H-PAD}" fill="url(#chart-grad)"/>`;
-  const line = `<polyline points="${pts}" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linejoin="round"/>`;
-  const dot = `<circle cx="${lastX}" cy="${lastY}" r="4" fill="#3b82f6"/>`;
-
-  svg.innerHTML = `<defs><linearGradient id="chart-grad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/></linearGradient></defs>${zeroLine}${area}${line}${dot}`;
-}
-
-function formatPhase(phase) {
-  const map = {
-    'PRE_EVENT_PREP': '⚡ Pre-Event — Finestra Aperta',
-    'BLACKOUT': '🔴 Blackout — Evento Attivo',
-    'POST_EVENT_RECOVERY': '🔄 Post-Event — Recovery',
-    'NO_ACTION': '✅ Monitoraggio Normale',
-  };
-  return map[phase] || phase || '—';
-}
-
-async function loadData() {
-  try {
-    const res = await fetch(`${API}/api/v1/pulse/${CITY_ID}`);
-    const d = await res.json();
-
-    const score = d.score || 0;
-    const zscore = d.z_score || 0;
-    const level = getLevel(score);
-
-    // Gauge
-    animateGauge(zscore);
-    document.getElementById('gauge-status').textContent = level.label;
-
-    // Signal panel
-    document.getElementById('score-val').innerHTML = `${score.toFixed(1)}<span style="font-size:16px;color:var(--muted)">/10</span>`;
-    document.getElementById('score-phase').textContent = (d.anomaly_level || 'NORMAL');
-    document.getElementById('score-phase').style.color = level.color;
-
-    const t = d.current_temp_c;
-    if (t !== null && t !== undefined) {
-      document.getElementById('temp-val').innerHTML = `${t.toFixed(1)}<span style="font-size:16px">°C</span>`;
-      const base = d.baseline_temp || d.avg_temp_c;
-      if (base) {
-        const delta = t - base;
-        const sign = delta >= 0 ? '+' : '';
-        document.getElementById('temp-delta').textContent = `${sign}${delta.toFixed(1)}°C vs media storica`;
-        document.getElementById('temp-delta').style.color = delta >= 2 ? '#ef4444' : delta >= 1 ? '#f59e0b' : '#10b981';
-      }
+const PHASE={PRE_EVENT_PREP:'⚡ Pre-Event — Finestra Aperta',BLACKOUT:'🔴 Evento Attivo',POST_EVENT_RECOVERY:'🔄 Post-Event Recovery',NO_ACTION:'✅ Monitoraggio Normale'};
+async function load(){
+  try{
+    const r=await fetch(API+'/api/v1/pulse/'+CID);
+    const d=await r.json();
+    const sc=d.score||0,z=d.z_score||0,lvl=lv(sc),col=LV[lvl];
+    ag(z);
+    document.getElementById('gstat').textContent=lvl;
+    document.getElementById('score-v').innerHTML=sc.toFixed(1)+'<span style="font-size:16px;color:var(--muted)">/10</span>';
+    document.getElementById('score-p').textContent=d.anomaly_level||'NORMAL';
+    document.getElementById('score-p').style.color=col;
+    const t=d.current_temp_c;
+    if(t!=null){
+      document.getElementById('temp-v').innerHTML=t.toFixed(1)+'<span style="font-size:16px">°C</span>';
+      const b=d.baseline_temp||d.avg_temp_c;
+      if(b){const dl=t-b,sg=dl>=0?'+':'';document.getElementById('temp-d').textContent=sg+dl.toFixed(1)+'°C vs media storica';document.getElementById('temp-d').style.color=dl>=2?'#ef4444':dl>=1?'#f59e0b':'#10b981';}
     }
-
-    const vert = (d.vertical || 'Monitoring').replace('_', ' ');
-    document.getElementById('vertical-val').textContent = vert;
-    document.getElementById('confidence-val').textContent = `Confidence: ${d.confidence || 100}%`;
-
-    // Impact Horizon
-    const impactBox = document.getElementById('impact-box');
-    const horizon = d.horizon_hours || d.hours_to_peak;
-    const phase = d.phase || 'NO_ACTION';
-
-    if (score >= 7) {
-      impactBox.classList.add('critical');
-      document.getElementById('impact-icon').textContent = '🔴';
-      document.getElementById('impact-title').textContent = '⚠ Anomalia Critica Rilevata';
-    } else if (score >= 5) {
-      document.getElementById('impact-icon').textContent = '🟡';
-      document.getElementById('impact-title').textContent = 'Anomalia in Sviluppo';
-    } else {
-      document.getElementById('impact-icon').textContent = '🟢';
-      document.getElementById('impact-title').textContent = 'Monitoraggio Attivo';
-    }
-
-    document.getElementById('impact-sub').textContent = vert + ' · ' + (d.anomaly_level || 'NORMAL');
-    document.getElementById('impact-window').textContent = horizon ? `${horizon} ore alla finestra ottimale` : 'Condizioni nella norma';
-    document.getElementById('impact-phase').textContent = formatPhase(phase);
-
-    if (d.z_score) {
-      const sign = d.z_score >= 0 ? '+' : '';
-      document.getElementById('impact-delta').textContent = `Z = ${sign}${d.z_score.toFixed(2)} σ dal valore atteso`;
-    }
-
-    // Next update
-    const next = new Date(Date.now() + 3600000);
-    document.getElementById('impact-next').textContent = next.toLocaleTimeString('it-IT', {hour:'2-digit', minute:'2-digit'});
-
-    // Sparkline from history if available
-    if (d.history_z_scores && d.history_z_scores.length >= 2) {
-      drawSparkline(d.history_z_scores);
-    } else {
-      // Synthetic sparkline based on current z
-      const base = zscore;
-      const fake = Array.from({length: 7}, (_, i) => base * (0.3 + 0.1 * i) + (Math.random() - 0.5) * 0.3);
-      fake[6] = zscore;
-      drawSparkline(fake);
-    }
-
-  } catch(e) {
-    console.warn('API unavailable, showing placeholder state', e);
-    document.getElementById('gauge-status').textContent = 'Monitoraggio Attivo';
-    document.getElementById('score-val').innerHTML = '—<span style="font-size:16px;color:var(--muted)">/10</span>';
-    // Draw flat line
-    drawSparkline([0.1, -0.2, 0.3, -0.1, 0.2, 0.1, 0.0]);
+    document.getElementById('vert-v').textContent=(d.vertical||'Monitoring').replace('_',' ');
+    document.getElementById('conf-v').textContent='Confidence: '+(d.confidence||100)+'%';
+    if(sc>=7){document.getElementById('ibox').classList.add('crit');document.getElementById('iico').textContent='🔴';document.getElementById('itit').textContent='⚠ Anomalia Critica';}
+    else if(sc>=5){document.getElementById('iico').textContent='🟡';document.getElementById('itit').textContent='Anomalia in Sviluppo';}
+    else{document.getElementById('iico').textContent='🟢';}
+    document.getElementById('isub').textContent=(d.vertical||'Monitoring').replace('_',' ')+' · '+(d.anomaly_level||'NORMAL');
+    document.getElementById('iwin').textContent=d.horizon_hours?d.horizon_hours+' ore alla finestra ottimale':'Condizioni nella norma';
+    document.getElementById('iphase').textContent=PHASE[d.phase]||d.phase||'—';
+    if(z)document.getElementById('idelta').textContent='Z = '+(z>0?'+':'')+z.toFixed(2)+' σ dal valore atteso';
+    const nx=new Date(Date.now()+3600000);
+    document.getElementById('inext').textContent=nx.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
+    if(d.history_z_scores&&d.history_z_scores.length>=2)spark(d.history_z_scores);
+    else{const fake=Array.from({length:7},(_,i)=>z*(0.3+0.1*i)+(Math.random()-.5)*.3);fake[6]=z;spark(fake);}
+  }catch(e){
+    document.getElementById('gstat').textContent='Monitoraggio Attivo';
+    spark([0.1,-.2,.3,-.1,.2,.1,0.0]);
   }
 }
-
-// Boot
-loadData();
-setInterval(loadData, 3600000);
+load();setInterval(load,3600000);
 </script>
 </body>
 </html>

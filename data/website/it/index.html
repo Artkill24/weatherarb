@@ -1,32 +1,88 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Intelligence Network Italia | WeatherArb</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>body { background: #050505; color: #eee; }</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Italia — WeatherArb Intelligence Network</title>
+  <meta name="description" content="WeatherArb weather anomaly monitoring network for Italia. 47 active nodes.">
+  <style>
+    :root{--bg:#040608;--surface:#0a0d12;--border:#141920;--text:#c8d6e5;--muted:#4a5568;--blue:#3b82f6}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,sans-serif;min-height:100vh}
+    .hdr{border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none}.logo span{color:var(--blue)}
+    .nav{display:flex;gap:20px}.nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-decoration:none}.nav a:hover{color:var(--text)}
+    .wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}
+    .bc{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:16px}.bc a{color:var(--muted);text-decoration:none}.bc a:hover{color:var(--blue)}
+    h1{font-size:clamp(32px,4vw,56px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+    .sub{font-size:13px;color:var(--muted);margin-bottom:48px}.sub span{color:var(--blue)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+    .nc{display:block;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;text-decoration:none;transition:border-color .2s,background .2s}.nc:hover{border-color:var(--blue);background:#0d1520}
+    .nn{display:block;font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px}
+    .ns{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+    .ftr{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:11px;color:var(--muted)}
+    .ftr a{color:var(--muted);text-decoration:none}.ftr a:hover{color:var(--blue)}
+  </style>
 </head>
-<body class="p-8">
-    <div class="max-w-6xl mx-auto">
-        <h1 class="text-2xl font-bold mb-8 uppercase tracking-widest border-b border-gray-800 pb-4">Italia <span class="text-blue-500">Nodes</span></h1>
-        <div id="grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <p class="text-gray-500">Sincronizzazione nodi...</p>
-        </div>
-    </div>
-    <script>
-        async function load() {
-            try {
-                const r = await fetch('/api/v1/cities.json');
-                const cities = await r.json();
-                document.getElementById('grid').innerHTML = cities.map(c => `
-                    <a href="/it/${c.id}/" class="p-4 border border-gray-800 rounded hover:border-blue-500 transition-all text-center group">
-                        <span class="block text-sm font-bold group-hover:text-blue-400">${c.name}</span>
-                        <span class="text-[9px] text-gray-600 uppercase">Nodo Attivo</span>
-                    </a>
-                `).join('');
-            } catch (e) { console.error(e); }
-        }
-        load();
-    </script>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">Weather<span>Arb</span></a>
+  <nav class="nav"><a href="/data/">Data</a><a href="/news/">News</a><a href="/api.html">API</a></nav>
+</header>
+<div class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Italia</div>
+  <h1>Italia <span style="color:var(--blue)">Network</span></h1>
+  <p class="sub"><span>47</span> nodi attivi · Baseline NASA POWER · Aggiornamento ogni ora</p>
+  <div class="grid">
+<a href="/it/torino/" class="nc"><span class="nn">Torino</span><span class="ns">Node Active</span></a>
+<a href="/it/vercelli/" class="nc"><span class="nn">Vercelli</span><span class="ns">Node Active</span></a>
+<a href="/it/novara/" class="nc"><span class="nn">Novara</span><span class="ns">Node Active</span></a>
+<a href="/it/cuneo/" class="nc"><span class="nn">Cuneo</span><span class="ns">Node Active</span></a>
+<a href="/it/asti/" class="nc"><span class="nn">Asti</span><span class="ns">Node Active</span></a>
+<a href="/it/alessandria/" class="nc"><span class="nn">Alessandria</span><span class="ns">Node Active</span></a>
+<a href="/it/biella/" class="nc"><span class="nn">Biella</span><span class="ns">Node Active</span></a>
+<a href="/it/verbano-cusio-ossola/" class="nc"><span class="nn">Verbano-Cusio-Ossola</span><span class="ns">Node Active</span></a>
+<a href="/it/aosta/" class="nc"><span class="nn">Aosta</span><span class="ns">Node Active</span></a>
+<a href="/it/varese/" class="nc"><span class="nn">Varese</span><span class="ns">Node Active</span></a>
+<a href="/it/como/" class="nc"><span class="nn">Como</span><span class="ns">Node Active</span></a>
+<a href="/it/sondrio/" class="nc"><span class="nn">Sondrio</span><span class="ns">Node Active</span></a>
+<a href="/it/milano/" class="nc"><span class="nn">Milano</span><span class="ns">Node Active</span></a>
+<a href="/it/bergamo/" class="nc"><span class="nn">Bergamo</span><span class="ns">Node Active</span></a>
+<a href="/it/brescia/" class="nc"><span class="nn">Brescia</span><span class="ns">Node Active</span></a>
+<a href="/it/pavia/" class="nc"><span class="nn">Pavia</span><span class="ns">Node Active</span></a>
+<a href="/it/cremona/" class="nc"><span class="nn">Cremona</span><span class="ns">Node Active</span></a>
+<a href="/it/mantova/" class="nc"><span class="nn">Mantova</span><span class="ns">Node Active</span></a>
+<a href="/it/lecco/" class="nc"><span class="nn">Lecco</span><span class="ns">Node Active</span></a>
+<a href="/it/lodi/" class="nc"><span class="nn">Lodi</span><span class="ns">Node Active</span></a>
+<a href="/it/monza-e-brianza/" class="nc"><span class="nn">Monza e Brianza</span><span class="ns">Node Active</span></a>
+<a href="/it/bolzano/" class="nc"><span class="nn">Bolzano</span><span class="ns">Node Active</span></a>
+<a href="/it/trento/" class="nc"><span class="nn">Trento</span><span class="ns">Node Active</span></a>
+<a href="/it/verona/" class="nc"><span class="nn">Verona</span><span class="ns">Node Active</span></a>
+<a href="/it/vicenza/" class="nc"><span class="nn">Vicenza</span><span class="ns">Node Active</span></a>
+<a href="/it/belluno/" class="nc"><span class="nn">Belluno</span><span class="ns">Node Active</span></a>
+<a href="/it/treviso/" class="nc"><span class="nn">Treviso</span><span class="ns">Node Active</span></a>
+<a href="/it/venezia/" class="nc"><span class="nn">Venezia</span><span class="ns">Node Active</span></a>
+<a href="/it/padova/" class="nc"><span class="nn">Padova</span><span class="ns">Node Active</span></a>
+<a href="/it/rovigo/" class="nc"><span class="nn">Rovigo</span><span class="ns">Node Active</span></a>
+<a href="/it/pordenone/" class="nc"><span class="nn">Pordenone</span><span class="ns">Node Active</span></a>
+<a href="/it/udine/" class="nc"><span class="nn">Udine</span><span class="ns">Node Active</span></a>
+<a href="/it/gorizia/" class="nc"><span class="nn">Gorizia</span><span class="ns">Node Active</span></a>
+<a href="/it/trieste/" class="nc"><span class="nn">Trieste</span><span class="ns">Node Active</span></a>
+<a href="/it/imperia/" class="nc"><span class="nn">Imperia</span><span class="ns">Node Active</span></a>
+<a href="/it/savona/" class="nc"><span class="nn">Savona</span><span class="ns">Node Active</span></a>
+<a href="/it/genova/" class="nc"><span class="nn">Genova</span><span class="ns">Node Active</span></a>
+<a href="/it/la-spezia/" class="nc"><span class="nn">La Spezia</span><span class="ns">Node Active</span></a>
+<a href="/it/piacenza/" class="nc"><span class="nn">Piacenza</span><span class="ns">Node Active</span></a>
+<a href="/it/parma/" class="nc"><span class="nn">Parma</span><span class="ns">Node Active</span></a>
+<a href="/it/reggio-emilia/" class="nc"><span class="nn">Reggio Emilia</span><span class="ns">Node Active</span></a>
+<a href="/it/modena/" class="nc"><span class="nn">Modena</span><span class="ns">Node Active</span></a>
+<a href="/it/bologna/" class="nc"><span class="nn">Bologna</span><span class="ns">Node Active</span></a>
+<a href="/it/ferrara/" class="nc"><span class="nn">Ferrara</span><span class="ns">Node Active</span></a>
+<a href="/it/ravenna/" class="nc"><span class="nn">Ravenna</span><span class="ns">Node Active</span></a>
+<a href="/it/forli-cesena/" class="nc"><span class="nn">Forlì-Cesena</span><span class="ns">Node Active</span></a>
+<a href="/it/rimini/" class="nc"><span class="nn">Rimini</span><span class="ns">Node Active</span></a>
+  </div>
+</div>
+<footer class="ftr"><a href="/">WeatherArb</a> · <a href="/about.html">Methodology</a> · <a href="/api.html">API</a></footer>
 </body>
 </html>

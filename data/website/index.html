@@ -1,15 +1,274 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8"><title>WeatherArb Agency</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WeatherArb — Weather Intelligence Agency</title>
+  <meta name="description" content="WeatherArb monitora 121 città in 14 paesi europei. Anomalie meteo in tempo reale su baseline NASA POWER 25 anni.">
+  <style>
+    :root{--bg:#040608;--surface:#0a0d12;--border:#141920;--border-a:#1e2d3d;
+           --text:#c8d6e5;--muted:#4a5568;--blue:#3b82f6;--green:#10b981}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.03) 2px,rgba(0,0,0,.03) 4px);pointer-events:none;z-index:9999}
+
+    /* NAV */
+    .hdr{position:sticky;top:0;z-index:100;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none}.logo span{color:var(--blue)}
+    .nav{display:flex;gap:20px;align-items:center}.nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-decoration:none}.nav a:hover{color:var(--text)}
+    .dot{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 8px var(--green);animation:pd 2s ease-in-out infinite}
+    @keyframes pd{0%,100%{opacity:1}50%{opacity:.5}}
+
+    /* HERO */
+    .hero{max-width:1100px;margin:0 auto;padding:80px 24px 60px;text-align:center}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:100px;padding:6px 14px;font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--blue);margin-bottom:32px}
+    .badge-dot{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 6px var(--green)}
+    h1{font-size:clamp(40px,6vw,80px);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-bottom:20px}
+    h1 em{font-style:normal;color:var(--blue)}
+    .sub{font-size:16px;color:var(--muted);max-width:560px;margin:0 auto 40px;line-height:1.6}
+    .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-p{background:var(--blue);color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;transition:opacity .2s}.btn-p:hover{opacity:.85}
+    .btn-s{background:transparent;color:var(--text);padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:1px solid var(--border-a);transition:border-color .2s}.btn-s:hover{border-color:var(--blue)}
+
+    /* STATS */
+    .stats{max-width:1100px;margin:0 auto;padding:0 24px 60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .stat{background:var(--bg);padding:28px 24px;text-align:center}
+    .stat-n{font-size:36px;font-weight:800;color:#fff;font-variant-numeric:tabular-nums}
+    .stat-l{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-top:4px}
+
+    /* LIVE TICKER */
+    .ticker-wrap{max-width:1100px;margin:0 auto;padding:40px 24px 0}
+    .section-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .section-title{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}
+    .section-link{font-size:11px;color:var(--blue);text-decoration:none}
+    .ticker{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px;margin-bottom:40px}
+    .tc{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;text-decoration:none;color:var(--text);transition:border-color .2s}.tc:hover{border-color:var(--blue)}
+    .tc-left .tc-city{font-weight:700;font-size:15px}.tc-left .tc-country{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+    .tc-right{text-align:right}.tc-score{font-size:20px;font-weight:800;font-variant-numeric:tabular-nums}.tc-vert{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+    .skeleton{background:linear-gradient(90deg,var(--surface) 25%,rgba(255,255,255,.04) 50%,var(--surface) 75%);background-size:200% 100%;animation:sh 1.5s infinite;border-radius:10px;height:72px}
+    @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+    /* COUNTRIES */
+    .countries{max-width:1100px;margin:0 auto;padding:0 24px 40px}
+    .cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
+    .cc{display:flex;flex-direction:column;align-items:center;gap:6px;padding:20px 16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;text-decoration:none;transition:border-color .2s}.cc:hover{border-color:var(--blue)}
+    .cflag{font-size:28px}.cname{font-size:13px;font-weight:600;color:var(--text)}.ccount{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+    /* REPORTS */
+    .reports{max-width:1100px;margin:0 auto;padding:0 24px 40px}
+    .rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+    .rc{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;color:var(--text);transition:border-color .2s;display:flex;flex-direction:column}.rc:hover{border-color:var(--blue)}
+    .rc-meta{display:flex;gap:8px;align-items:center;margin-bottom:12px}.rc-date{font-size:11px;color:var(--muted)}.rc-loc{font-size:11px;background:rgba(59,130,246,.1);color:var(--blue);padding:2px 8px;border-radius:100px}
+    .rc-title{font-size:15px;font-weight:700;line-height:1.3;margin-bottom:8px}
+    .rc-exc{font-size:12px;color:var(--muted);line-height:1.5;flex:1}
+    .rc-foot{display:flex;justify-content:space-between;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+    .rc-z{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}.rc-s{font-size:12px;color:var(--muted)}
+
+    /* FOOTER */
+    .ftr{border-top:1px solid var(--border);padding:32px 24px;text-align:center;font-size:11px;color:var(--muted);letter-spacing:.08em}
+    .ftr a{color:var(--muted);text-decoration:none;margin:0 8px}.ftr a:hover{color:var(--blue)}
+
+    @media(max-width:640px){h1{font-size:40px}.stats{grid-template-columns:1fr 1fr}}
+  </style>
 </head>
-<body class="bg-black text-white flex flex-col min-h-screen items-center justify-center">
-    <h1 class="text-6xl font-black tracking-tighter uppercase italic">WeatherArb</h1>
-    <p class="text-blue-500 mono uppercase tracking-widest mt-4">Independent Weather Intelligence Agency</p>
-    <div class="mt-10 flex gap-4">
-        <a href="/data/" class="px-6 py-2 bg-blue-600 rounded font-bold">LIVE DATA</a>
-        <a href="/it/" class="px-6 py-2 border border-gray-700 rounded font-bold">ITALIA</a>
-    </div>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">Weather<span>Arb</span></a>
+  <nav class="nav">
+    <a href="/data/">Data</a>
+    <a href="/news/">News</a>
+    <a href="/api.html">API</a>
+    <a href="/alerts.html">Alerts</a>
+    <a href="/about.html">About</a>
+    <div class="dot"></div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge"><div class="badge-dot"></div> Sistema Operativo · Aggiornamento ogni ora</div>
+  <h1>Weather Intelligence<br><em>Per ogni città d'Europa</em></h1>
+  <p class="sub">Z-Score in tempo reale su baseline NASA POWER 25 anni. Anomalie rilevate prima che diventino notizia.</p>
+  <div class="hero-btns">
+    <a href="/data/" class="btn-p">Live Dashboard →</a>
+    <a href="/api.html" class="btn-s">API Pubblica</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-n">121</div><div class="stat-l">Città Monitorate</div></div>
+  <div class="stat"><div class="stat-n">14</div><div class="stat-l">Paesi Europei</div></div>
+  <div class="stat"><div class="stat-n">25</div><div class="stat-l">Anni Baseline</div></div>
+  <div class="stat"><div class="stat-n" id="live-anom">—</div><div class="stat-l">Anomalie Live</div></div>
+</div>
+
+<!-- LIVE TICKER -->
+<div class="ticker-wrap">
+  <div class="section-hdr">
+    <div class="section-title">🔴 Segnali Live</div>
+    <a href="/data/" class="section-link">Vedi tutti →</a>
+  </div>
+  <div class="ticker" id="ticker">
+    <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+    <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+  </div>
+</div>
+
+<!-- COUNTRIES -->
+<div class="countries">
+  <div class="section-hdr">
+    <div class="section-title">📡 Network Europeo</div>
+  </div>
+  <div class="cgrid">
+    <a href="/at/" class="cc">
+      <span class="cflag">🇦🇹</span>
+      <span class="cname">Österreich</span>
+      <span class="ccount">5 nodi</span>
+    </a>
+    <a href="/be/" class="cc">
+      <span class="cflag">🇧🇪</span>
+      <span class="cname">Belgique</span>
+      <span class="ccount">4 nodi</span>
+    </a>
+    <a href="/ch/" class="cc">
+      <span class="cflag">🇨🇭</span>
+      <span class="cname">Schweiz</span>
+      <span class="ccount">5 nodi</span>
+    </a>
+    <a href="/de/" class="cc">
+      <span class="cflag">🇩🇪</span>
+      <span class="cname">Deutschland</span>
+      <span class="ccount">8 nodi</span>
+    </a>
+    <a href="/dk/" class="cc">
+      <span class="cflag">🇩🇰</span>
+      <span class="cname">Danmark</span>
+      <span class="ccount">3 nodi</span>
+    </a>
+    <a href="/es/" class="cc">
+      <span class="cflag">🇪🇸</span>
+      <span class="cname">España</span>
+      <span class="ccount">5 nodi</span>
+    </a>
+    <a href="/fr/" class="cc">
+      <span class="cflag">🇫🇷</span>
+      <span class="cname">France</span>
+      <span class="ccount">5 nodi</span>
+    </a>
+    <a href="/gb/" class="cc">
+      <span class="cflag">🇬🇧</span>
+      <span class="cname">United Kingdom</span>
+      <span class="ccount">10 nodi</span>
+    </a>
+    <a href="/it/" class="cc">
+      <span class="cflag">🇮🇹</span>
+      <span class="cname">Italia</span>
+      <span class="ccount">47 nodi</span>
+    </a>
+    <a href="/nl/" class="cc">
+      <span class="cflag">🇳🇱</span>
+      <span class="cname">Nederland</span>
+      <span class="ccount">6 nodi</span>
+    </a>
+    <a href="/no/" class="cc">
+      <span class="cflag">🇳🇴</span>
+      <span class="cname">Norge</span>
+      <span class="ccount">4 nodi</span>
+    </a>
+    <a href="/pl/" class="cc">
+      <span class="cflag">🇵🇱</span>
+      <span class="cname">Polska</span>
+      <span class="ccount">6 nodi</span>
+    </a>
+    <a href="/pt/" class="cc">
+      <span class="cflag">🇵🇹</span>
+      <span class="cname">Portugal</span>
+      <span class="ccount">3 nodi</span>
+    </a>
+    <a href="/se/" class="cc">
+      <span class="cflag">🇸🇪</span>
+      <span class="cname">Sverige</span>
+      <span class="ccount">10 nodi</span>
+    </a>
+  </div>
+</div>
+
+<!-- REPORTS -->
+<div class="reports">
+  <div class="section-hdr">
+    <div class="section-title">📰 Intelligence Reports</div>
+    <a href="/news/" class="section-link">Archivio →</a>
+  </div>
+  <div class="rgrid" id="reports-grid">
+    <div class="skeleton" style="height:160px"></div>
+    <div class="skeleton" style="height:160px"></div>
+    <div class="skeleton" style="height:160px"></div>
+  </div>
+</div>
+
+<footer class="ftr">
+  <a href="/about.html">Methodology</a>
+  <a href="/api.html">API</a>
+  <a href="/alerts.html">Alerts</a>
+  <a href="/news/">News</a>
+  <a href="https://t.me/weatherarb_alerts" target="_blank">Telegram</a>
+  <br><br>
+  WeatherArb · Independent Weather Intelligence Agency · Data: NASA POWER, ERA5-Land, OpenWeatherMap
+</footer>
+
+<script>
+const API='https://api.weatherarb.com';
+const LV={NORMAL:'#10b981',UNUSUAL:'#f59e0b',EXTREME:'#f97316',CRITICAL:'#ef4444'};
+function lv(s){return s>=8?'CRITICAL':s>=6?'EXTREME':s>=4?'UNUSUAL':'NORMAL'}
+
+async function loadTicker(){
+  try{
+    const r=await fetch(API+'/api/v1/europe/top?limit=12');
+    const d=await r.json();
+    const items=(d.reports||d.cities||[]).slice(0,12);
+    if(!items.length)return;
+    const t=document.getElementById('ticker');
+    t.innerHTML=items.map(c=>{
+      const sc=c.score||0,z=c.z_score||0,lvl=lv(sc),col=LV[lvl];
+      const slug=(c.location||'').toLowerCase().replace(/\s+/g,'-');
+      const cc=c.country_code||'it';
+      return `<a href="/${cc}/${slug}/" class="tc">
+        <div class="tc-left"><div class="tc-city">${c.location||'—'}</div><div class="tc-country">${c.country||cc.toUpperCase()}</div></div>
+        <div class="tc-right"><div class="tc-score" style="color:${col}">${sc.toFixed(1)}</div><div class="tc-vert">${(c.vertical||'').replace('_',' ')}</div></div>
+      </a>`;
+    }).join('');
+    const anom=items.filter(c=>(c.score||0)>=5).length;
+    document.getElementById('live-anom').textContent=anom;
+  }catch(e){
+    document.getElementById('ticker').innerHTML='<p style="color:var(--muted);font-size:13px;padding:20px">Connessione API in corso...</p>';
+  }
+}
+
+async function loadReports(){
+  try{
+    const r=await fetch('/data/latest_reports.json');
+    const d=await r.json();
+    const rpts=(d.reports||[]).slice(0,6);
+    if(!rpts.length)return;
+    const g=document.getElementById('reports-grid');
+    g.innerHTML=rpts.map(r=>{
+      const z=r.z_score||0;
+      return `<a href="${r.url||'/news/'}" class="rc">
+        <div class="rc-meta"><span class="rc-date">${r.date||''}</span><span class="rc-loc">${r.location||''}</span></div>
+        <div class="rc-title">${r.title||'Intelligence Report'}</div>
+        <div class="rc-exc">${(r.excerpt||'').slice(0,120)}...</div>
+        <div class="rc-foot"><span class="rc-z" style="color:${z>=2?'#ef4444':z>=1?'#f59e0b':'#10b981'}">Z ${z>0?'+':''}${z.toFixed(2)}</span><span class="rc-s">Score ${r.score||0}/10</span></div>
+      </a>`;
+    }).join('');
+  }catch(e){
+    document.getElementById('reports-grid').innerHTML='';
+  }
+}
+
+loadTicker();
+loadReports();
+setInterval(loadTicker,300000);
+</script>
 </body>
 </html>
