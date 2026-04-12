@@ -1,295 +1,49 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Intelligence Reports | WeatherArb</title>
-  <meta name="description" content="Analisi delle anomalie meteo in Europa. Z-Score in tempo reale su baseline NASA POWER 25 anni. WeatherArb Weather Intelligence Agency.">
-  <style>
-    :root{--bg:#040608;--surface:#0a0d12;--border:#141920;--text:#c8d6e5;--muted:#4a5568;--blue:#3b82f6}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{background:var(--bg);color:var(--text);font-family:-apple-system,sans-serif;min-height:100vh}
-    .hdr{border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none}.logo span{color:var(--blue)}
-    .nav{display:flex;gap:20px}.nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}
-    h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
-    .sub{font-size:13px;color:var(--muted);margin-bottom:40px}
-    .filters{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap}
-    .filt{padding:6px 14px;border:1px solid var(--border);border-radius:100px;font-size:12px;color:var(--muted);cursor:pointer;background:transparent;transition:.2s}.filt:hover,.filt.active{border-color:var(--blue);color:var(--blue)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
-    .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;color:var(--text);display:flex;flex-direction:column;gap:10px;transition:border-color .2s}.card:hover{border-color:var(--blue)}
-    .card-top{display:flex;gap:8px;align-items:center}.loc{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue)}.ev{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-    .card h2{font-size:16px;font-weight:700;line-height:1.3}
-    .card p{font-size:13px;color:var(--muted);line-height:1.5;flex:1}
-    .card-foot{display:flex;gap:12px;align-items:center;padding-top:10px;border-top:1px solid var(--border);font-size:12px}.date{margin-left:auto;color:var(--muted)}.lvl{font-size:10px;font-weight:700;text-transform:uppercase}
-    .ftr{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:11px;color:var(--muted)}.ftr a{color:var(--muted);text-decoration:none}
-  </style>
-</head>
-<body>
-<header class="hdr">
-  <a href="/" class="logo">Weather<span>Arb</span></a>
-  <nav class="nav"><a href="/data/">Data</a><a href="/map.html">Map</a><a href="/api.html">API</a><a href="/alerts.html">Alerts</a></nav>
-</header>
-<div class="wrap">
-  <h1>Intelligence Reports</h1>
-  <p class="sub">18 analisi pubblicate · ERA5-Land + NASA POWER · Aggiornato ogni ora</p>
-  <div class="filters">
-    <button class="filt active" onclick="filter('all')">All</button>
-    <button class="filt" onclick="filter('critical')" style="color:#ef4444;border-color:#ef4444">● Critical</button>
-    <button class="filt" onclick="filter('extreme')" style="color:#f97316;border-color:#f97316">● Extreme</button>
-    <button class="filt" onclick="filter('unusual')" style="color:#f59e0b;border-color:#f59e0b">● Unusual</button>
-  </div>
-  <div class="grid" id="grid">
-  <a href="/news/2026-04-09-varese-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Varese: analisi WeatherArb del 09/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+3.44σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-09-torino-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Torino: analisi WeatherArb del 09/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+4.55σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-09-como-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Como: analisi WeatherArb del 09/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+3.79σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-09-biella-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Biella: analisi WeatherArb del 09/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+4.03σ</span>
-      <span class="lvl" style="color:#ef4444">EXTREME</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-09-aosta-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Aosta: analisi WeatherArb del 09/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+5.41σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-08-vercelli-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Vercelli: analisi WeatherArb del 08/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+3.86σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-08-verbano-cusio-ossola-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Verbano-Cusio-Ossola: analisi WeatherArb del 08/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+4.02σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-08-varese-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Varese: analisi WeatherArb del 08/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+3.44σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-08-torino-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Torino: analisi WeatherArb del 08/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+4.55σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-08-novara-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Novara: analisi WeatherArb del 08/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+3.98σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-08-cuneo-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Cuneo: analisi WeatherArb del 08/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+3.80σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-08-como-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Como: analisi WeatherArb del 08/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+3.79σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-08-biella-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Biella: analisi WeatherArb del 08/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+4.03σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-08-asti-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Asti: analisi WeatherArb del 08/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+4.62σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-08-aosta-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Aosta: analisi WeatherArb del 08/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+5.41σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-06-vicenza-heavy-rain/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">HOME MAINTENANCE</span>
-    </div>
-    <h2>Heavy Rain anomalo a Vicenza: analisi WeatherArb del 06/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+1.80σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-06-trento-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a Trento: analisi WeatherArb del 06/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+3.29σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  <a href="/news/2026-04-06-munchen-heat-wave/" class="card">
-    <div class="card-top">
-      <span class="loc">—</span>
-      <span class="ev">COOLING COMFORT</span>
-    </div>
-    <h2>Heat Wave anomalo a München: analisi WeatherArb del 06/04/2026</h2>
-    <p>...</p>
-    <div class="card-foot">
-      <span style="color:#ef4444;font-weight:700">+3.39σ</span>
-      <span class="lvl" style="color:#ef4444">CRITICAL</span>
-      <span class="date"></span>
-    </div>
-  </a>
-  </div>
-</div>
-<footer class="ftr">
-  <a href="/">WeatherArb</a> · <a href="/about.html">Methodology</a> · <a href="/api.html">API</a>
-</footer>
-<script>
-function filter(lvl){
-  document.querySelectorAll('.filt').forEach(b=>b.classList.remove('active'));
-  event.target.classList.add('active');
-  document.querySelectorAll('.card').forEach(c=>{
-    if(lvl==='all'){c.style.display='';return;}
-    const t=c.querySelector('.lvl');
-    c.style.display=(t&&t.textContent.toLowerCase().includes(lvl))?'':'none';
-  });
-}
-</script>
-</body>
-</html>
+<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Intelligence Reports | WeatherArb</title>
+<meta name="description" content="Anomalie meteo in Europa. Z-Score su baseline NASA POWER 25 anni. WeatherArb Weather Intelligence Agency.">
+<style>:root{--bg:#040608;--s:#0a0d12;--b:#141920;--t:#c8d6e5;--m:#4a5568;--bl:#3b82f6}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--t);font-family:-apple-system,sans-serif}
+.hdr{border-bottom:1px solid var(--b);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--t);text-decoration:none}.logo span{color:var(--bl)}
+.nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--m);text-decoration:none;margin-left:16px}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}
+h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.sub{font-size:13px;color:var(--m);margin-bottom:32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:22px;text-decoration:none;color:var(--t);display:flex;flex-direction:column;gap:10px;transition:border-color .2s}.card:hover{border-color:var(--bl)}
+.ct{display:flex;gap:8px}.loc{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--bl)}.ev{font-size:10px;color:var(--m);text-transform:uppercase}
+.card h2{font-size:15px;font-weight:700;line-height:1.3}.card p{font-size:13px;color:var(--m);line-height:1.5;flex:1}
+.cf{display:flex;gap:10px;align-items:center;padding-top:10px;border-top:1px solid var(--b);font-size:12px}.dt{margin-left:auto;color:var(--m)}
+.ftr{border-top:1px solid var(--b);padding:20px;text-align:center;font-size:11px;color:var(--m)}.ftr a{color:var(--m);text-decoration:none}
+</style></head><body>
+<header class="hdr"><a href="/" class="logo">Weather<span>Arb</span></a>
+<nav class="nav"><a href="/data/">Data</a><a href="/map.html">Map</a><a href="/alerts.html">Alerts</a></nav></header>
+<div class="wrap"><h1>Intelligence Reports</h1>
+<p class="sub">24 analisi · ERA5-Land + NASA POWER · Aggiornato ogni 6 ore</p>
+<div class="grid"><a href="/news/2026-04-12-valencia-heavy-rain/" class="card"><div class="ct"><span class="loc">Valencia</span><span class="ev">HEAVY RAIN</span></div><h2>Allerta Meteo Critica per Valencia: Precipitazioni Eccezionali Previste</h2><p>Il sistema WeatherArb ha rilevato un livello di allerta CRITICAL per Valencia, con un'anomalia di precipitazio...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+10.11σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt">2026-04-12</span></div></a>
+<a href="/news/2026-04-12-uppsala-clear/" class="card"><div class="ct"><span class="loc">Uppsala</span><span class="ev">CLEAR</span></div><h2>Previsione METEO - Uppsala: Condizioni di Cielo Sereno Estremo</h2><p>Uppsala si prepara ad un evento meteorologico di cielo sereno con un'intensità eccezionale, evidenziata da uno...</p><div class="cf"><span style="color:#ef4444;font-weight:700">-4.50σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt">2026-04-12</span></div></a>
+<a href="/news/2026-04-12-umea-clear/" class="card"><div class="ct"><span class="loc">Umeå</span><span class="ev">CLEAR</span></div><h2>Allerta Meteo: Variazione Drastica delle Condizioni a Umeå</h2><p>WeatherArb segnala una deviazione meteorologica critica a Umeå, con uno Z-Score di -5.20 che indica una probab...</p><div class="cf"><span style="color:#ef4444;font-weight:700">-5.20σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt">2026-04-12</span></div></a>
+<a href="/news/2026-04-12-stockholm-clear/" class="card"><div class="ct"><span class="loc">Stockholm</span><span class="ev">CLEAR</span></div><h2>Allerta Meteo Critica a Stoccolma: Freddo Intenso Previsto</h2><p>Le previsioni meteo per Stoccolma indicano un evento di freddo eccezionalmente intenso, classificato come CRIT...</p><div class="cf"><span style="color:#ef4444;font-weight:700">-4.28σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt">2026-04-12</span></div></a>
+<a href="/news/2026-04-12-stavanger-clear/" class="card"><div class="ct"><span class="loc">Stavanger</span><span class="ev">CLEAR</span></div><h2>Ondata di Sereno Eccezionale su Stavanger: Allarme Meteo CRITICO</h2><p>Il nostro sistema di analisi meteo avanzato, WeatherArb, ha rilevato un evento di 'Clear' (sereno) di magnitud...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+6.38σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt">2026-04-12</span></div></a>
+<a href="/news/2026-04-12-biella-heavy-rain/" class="card"><div class="ct"><span class="loc">Biella</span><span class="ev">HEAVY RAIN</span></div><h2>Allerta Meteo Critica per Biella: Piogge Intense Previste</h2><p>WeatherArb segnala un livello di criticità elevato per Biella a causa di un'imminente ondata di piogge intense...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+4.33σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt">2026-04-12</span></div></a>
+<a href="/news/2026-04-09-varese-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Varese: analisi WeatherArb del 09/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+3.44σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-09-torino-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Torino: analisi WeatherArb del 09/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+4.55σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-09-como-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Como: analisi WeatherArb del 09/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+3.79σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-09-biella-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Biella: analisi WeatherArb del 09/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+4.03σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">EXTREME</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-09-aosta-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Aosta: analisi WeatherArb del 09/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+5.41σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-08-vercelli-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Vercelli: analisi WeatherArb del 08/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+3.86σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-08-verbano-cusio-ossola-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Verbano-Cusio-Ossola: analisi WeatherArb del 08/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+4.02σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-08-varese-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Varese: analisi WeatherArb del 08/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+3.44σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-08-torino-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Torino: analisi WeatherArb del 08/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+4.55σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-08-novara-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Novara: analisi WeatherArb del 08/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+3.98σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-08-cuneo-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Cuneo: analisi WeatherArb del 08/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+3.80σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-08-como-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Como: analisi WeatherArb del 08/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+3.79σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-08-biella-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Biella: analisi WeatherArb del 08/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+4.03σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-08-asti-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Asti: analisi WeatherArb del 08/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+4.62σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-08-aosta-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Aosta: analisi WeatherArb del 08/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+5.41σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-06-vicenza-heavy-rain/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">HOME MAINTENANCE</span></div><h2>Heavy Rain anomalo a Vicenza: analisi WeatherArb del 06/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+1.80σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-06-trento-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a Trento: analisi WeatherArb del 06/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+3.29σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+<a href="/news/2026-04-06-munchen-heat-wave/" class="card"><div class="ct"><span class="loc">—</span><span class="ev">COOLING COMFORT</span></div><h2>Heat Wave anomalo a München: analisi WeatherArb del 06/04/2026</h2><p>...</p><div class="cf"><span style="color:#ef4444;font-weight:700">+3.39σ</span><span style="color:#ef4444;font-size:10px;font-weight:700;text-transform:uppercase">CRITICAL</span><span class="dt"></span></div></a>
+</div></div>
+<footer class="ftr"><a href="/">WeatherArb</a> · <a href="/about.html">Methodology</a> · <a href="/api.html">API</a></footer>
+</body></html>

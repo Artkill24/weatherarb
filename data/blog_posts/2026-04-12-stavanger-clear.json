@@ -1,0 +1,15 @@
+{
+  "slug": "2026-04-12-stavanger-clear",
+  "title": "Ondata di Sereno Eccezionale su Stavanger: Allarme Meteo CRITICO",
+  "lead": "Il nostro sistema di analisi meteo avanzato, WeatherArb, ha rilevato un evento di 'Clear' (sereno) di magnitudo senza precedenti su Stavanger, classificato con un Z-Score di +6.38 e un punteggio di 8.0/10, raggiungendo il livello di allerta CRITICAL.",
+  "body": "Questo valore Z-Score elevatissimo indica una deviazione statisticamente estrema dalle condizioni meteo medie previste per questo periodo. Un evento di sereno con tale intensità è altamente insolito e suggerisce un pattern atmosferico persistente e stabile che sta sopprimendo significativamente la formazione di nubi. Le implicazioni di un tale evento possono variare da un impatto positivo sulla visibilità e sulla produzione di energia solare, a potenziali effetti negativi su ecosistemi dipendenti da precipitazioni o su specifici settori agricoli. La persistenza di questa condizione richiede un monitoraggio attento.",
+  "conclusion": "La valutazione CRITICAL sottolinea l'importanza di prestare particolare attenzione all'evoluzione meteorologica di Stavanger nelle prossime ore e giorni. WeatherArb continuerà a monitorare la situazione per fornire aggiornamenti tempestivi e dettagliati.",
+  "location": "Stavanger",
+  "country_code": "it",
+  "vertical": "clear",
+  "z_score": 6.38,
+  "score": 7.97,
+  "anomaly_level": "CRITICAL",
+  "timestamp": "2026-04-12T23:57:06.197801+00:00",
+  "date": "2026-04-12"
+}

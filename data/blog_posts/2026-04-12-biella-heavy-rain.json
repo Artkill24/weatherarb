@@ -1,0 +1,15 @@
+{
+  "slug": "2026-04-12-biella-heavy-rain",
+  "title": "Allerta Meteo Critica per Biella: Piogge Intense Previste",
+  "lead": "WeatherArb segnala un livello di criticità elevato per Biella a causa di un'imminente ondata di piogge intense. L'evento è caratterizzato da uno Z-score di +4.33, indicando una deviazione significativa dalla norma statistica.",
+  "body": "L'analisi dei dati meteorologici attuali per Biella evidenzia una probabilità estremamente elevata di precipitazioni intense. Lo Z-score di +4.33 posiziona questo evento nel quartile superiore delle piogge osservate storicamente in questo periodo, suggerendo un'anomalia significativa. Il nostro punteggio di 7.0/10 riflette l'intensità e la potenziale impatto di questa perturbazione. Si consiglia massima attenzione e preparazione.",
+  "conclusion": "Le condizioni meteorologiche a Biella raggiungono un livello CRITICAL. La persistenza e l'intensità delle piogge previste richiedono un monitoraggio costante e l'adozione di misure preventive per mitigare potenziali disagi o danni.",
+  "location": "Biella",
+  "country_code": "it",
+  "vertical": "heavy-rain",
+  "z_score": 4.33,
+  "score": 7.02,
+  "anomaly_level": "CRITICAL",
+  "timestamp": "2026-04-12T23:57:11.756564+00:00",
+  "date": "2026-04-12"
+}

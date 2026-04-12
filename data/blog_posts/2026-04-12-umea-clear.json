@@ -1,0 +1,15 @@
+{
+  "slug": "2026-04-12-umea-clear",
+  "title": "Allerta Meteo: Variazione Drastica delle Condizioni a Umeå",
+  "lead": "WeatherArb segnala una deviazione meteorologica critica a Umeå, con uno Z-Score di -5.20 che indica una probabilità estremamente bassa di condizioni di sereno simili a quelle attuali.",
+  "body": "L'analisi dei dati meteorologici per Umeå rivela una situazione di \"Clear\" (sereno) che si discosta significativamente dalle previsioni standard. Lo Z-Score di -5.20 è un indicatore statistico di estrema rarità per questo specifico scenario, suggerendo che le condizioni attuali sono altamente improbabili secondo i modelli storici. Nonostante la valutazione di \"Score: 7.3/10\" possa sembrare positiva, il livello \"CRITICAL\" sottolinea l'anomalia della situazione.",
+  "conclusion": "Questa marcata deviazione dalle aspettative meteorologiche richiede un monitoraggio attento. La comunità scientifica di WeatherArb sta analizzando i fattori sottostanti per comprendere la natura di questa anomalia e le sue potenziali implicazioni.",
+  "location": "Umeå",
+  "country_code": "it",
+  "vertical": "clear",
+  "z_score": -5.2,
+  "score": 7.33,
+  "anomaly_level": "CRITICAL",
+  "timestamp": "2026-04-12T23:57:07.813886+00:00",
+  "date": "2026-04-12"
+}
