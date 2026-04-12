@@ -10,7 +10,7 @@ import os
 import re
 import sys
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from unicodedata import normalize
 
@@ -139,7 +139,7 @@ def save_article(signal: dict, content: dict) -> dict | None:
         "z_score": round(zscore, 2),
         "score": round(score, 2),
         "anomaly_level": signal.get("anomaly_level", "EXTREME"),
-        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "timestamp": datetime.now(timezone.utc).isoformat() + "Z",
         "date": date,
     }
 
@@ -226,7 +226,7 @@ def build_article_html(meta: dict) -> str:
 
 # ─── STEP 4: Pulizia articoli vecchi ────────────────────────────────────────
 def cleanup_old_articles():
-    cutoff = datetime.utcnow() - timedelta(days=KEEP_DAYS)
+    cutoff = datetime.now(timezone.utc) - timedelta(days=KEEP_DAYS)
     removed = 0
 
     all_posts = sorted(BLOG_DIR.glob("*.json"))
@@ -235,7 +235,7 @@ def cleanup_old_articles():
     for f in all_posts:
         try:
             meta = json.loads(f.read_text())
-            ts = datetime.fromisoformat(meta.get("timestamp", "").replace("Z", ""))
+            ts = datetime.fromisoformat(meta.get("timestamp", "2020-01-01T00:00:00+00:00").replace("Z", "+00:00"))
             if ts < cutoff:
                 slug = meta.get("slug", f.stem)
                 # Rimuovi HTML
@@ -294,7 +294,7 @@ def update_latest_reports():
             continue
 
     report = {
-        "last_updated": datetime.utcnow().isoformat() + "Z",
+        "last_updated": datetime.now(timezone.utc).isoformat() + "Z",
         "count": len(all_posts),
         "reports": all_posts[:20],  # Max 20 nella homepage
     }
