@@ -324,26 +324,46 @@ const API='https://api.weatherarb.com';
 const LV={NORMAL:'#10b981',UNUSUAL:'#f59e0b',EXTREME:'#f97316',CRITICAL:'#ef4444'};
 function lv(s){return s>=8?'CRITICAL':s>=6?'EXTREME':s>=4?'UNUSUAL':'NORMAL'}
 
-async function loadTicker(){
+async function loadTicker(attempt){
+  attempt=attempt||1;
   try{
     const r=await fetch(API+'/api/v1/europe/top?limit=12');
     const d=await r.json();
-    const items=(d.reports||d.cities||[]).slice(0,12);
-    if(!items.length)return;
+    const items=(d.reports||d.data||[]).filter(c=>c.location||c.province).slice(0,12);
+    if(!items.length && attempt<3){
+      // Cache vuota: aspetta e riprova (Railway si sta scaldando)
+      setTimeout(()=>loadTicker(attempt+1), 15000);
+      document.getElementById('ticker').innerHTML='<p style="color:var(--muted);font-size:13px;padding:20px">⏳ Sincronizzazione nodi in corso...</p>';
+      return;
+    }
     const t=document.getElementById('ticker');
+    if(!items.length){
+      t.innerHTML='<p style="color:var(--muted);font-size:13px;padding:20px">Nessuna anomalia rilevata al momento.</p>';
+      return;
+    }
     t.innerHTML=items.map(c=>{
       const sc=c.score||0,z=c.z_score||0,lvl=lv(sc),col=LV[lvl];
-      const slug=(c.location||'').toLowerCase().replace(/\s+/g,'-');
+      const name=c.location||c.province||'—';
+      const slug=name.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
       const cc=c.country_code||'it';
+      const vert=(c.vertical||c.event_type||'').replace(/_/g,' ');
+      const sign=z>=0?'+':'';
       return `<a href="/${cc}/${slug}/" class="tc">
-        <div class="tc-left"><div class="tc-city">${c.location||'—'}</div><div class="tc-country">${c.country||cc.toUpperCase()}</div></div>
-        <div class="tc-right"><div class="tc-score" style="color:${col}">${sc.toFixed(1)}</div><div class="tc-vert">${(c.vertical||'').replace('_',' ')}</div></div>
+        <div class="tc-left">
+          <div class="tc-city">${name}</div>
+          <div class="tc-country">${c.country||cc.toUpperCase()} · Z${sign}${(z).toFixed(1)}</div>
+        </div>
+        <div class="tc-right">
+          <div class="tc-score" style="color:${col}">${sc.toFixed(1)}</div>
+          <div class="tc-vert">${vert||'—'}</div>
+        </div>
       </a>`;
     }).join('');
     const anom=items.filter(c=>(c.score||0)>=5).length;
     document.getElementById('live-anom').textContent=anom;
   }catch(e){
-    document.getElementById('ticker').innerHTML='<p style="color:var(--muted);font-size:13px;padding:20px">Connessione API in corso...</p>';
+    if(attempt<3){setTimeout(()=>loadTicker(attempt+1),20000);}
+    else{document.getElementById('ticker').innerHTML='<p style="color:var(--muted);font-size:13px;padding:20px">Sistema in avvio...</p>';}
   }
 }
 
