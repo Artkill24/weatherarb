@@ -629,9 +629,13 @@ def newsletter_unsubscribe(email: str):
 
 @app.get("/api/newsletter/list")
 def newsletter_list(secret: str = ""):
-    if secret != os.getenv("ADMIN_SECRET", "weatherarb2026"):
+    import os as _os2
+    if secret != _os2.getenv("ADMIN_SECRET", "weatherarb2026"):
         raise HTTPException(status_code=403, detail="Forbidden")
-    status, resp = _sb_request("GET", f"{_SB_TABLE}?select=email,city,country_code,created_at&order=created_at.desc")
-    if status == 200 and isinstance(resp, list):
-        return {"count": len(resp), "subscribers": resp}
-    return {"count": 0, "subscribers": []}
+    try:
+        status, resp = _sb_request("GET", f"{_SB_TABLE}?select=email,city,country_code,created_at&order=created_at.desc&limit=200")
+        if status == 200 and isinstance(resp, list):
+            return {"count": len(resp), "subscribers": resp}
+        return {"count": 0, "error": f"status {status}", "subscribers": []}
+    except Exception as e:
+        return {"count": 0, "error": str(e), "subscribers": []}
