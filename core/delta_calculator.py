@@ -52,14 +52,12 @@ class GuardrailDecision:
 # Z-SCORE ENGINE
 # ─────────────────────────────────────────────────
 
-def compute_z_score(observed: float, mean: float, std: float) -> float:
-    """
-    Z-Score standard. Se std è zero (impossibile nella pratica), ritorna 0.
-    Formula: z = (x - μ) / σ
-    """
-    if std <= 0:
+def compute_z_score(observed: float, mean: float, std: float, floor: float = 1.5) -> float:
+    """Z-Score con safety floor sulla deviazione standard."""
+    safe_std = max(std, floor)
+    if safe_std <= 0:
         return 0.0
-    return (observed - mean) / std
+    return round((observed - mean) / safe_std, 2)
 
 
 def classify_anomaly(z_score: float) -> str:
