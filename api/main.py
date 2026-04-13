@@ -536,14 +536,17 @@ from pathlib import Path as _Path
 import urllib.request as _ur
 import json as _json
 
-_SB_URL = os.getenv("SUPABASE_URL", "https://mlawljowkvgeyydrwirk.supabase.co")
-_SB_KEY = os.getenv("SUPABASE_ANON_KEY", "")
+_SB_URL = "https://mlawljowkvgeyydrwirk.supabase.co"
 _SB_TABLE = "newsletter_subscribers"
+
+def _get_sb_key():
+    import os as _os
+    return _os.getenv("SUPABASE_ANON_KEY", "")
 
 def _sb_headers():
     return {
-        "apikey": _SB_KEY,
-        "Authorization": f"Bearer {_SB_KEY}",
+        "apikey": _get_sb_key(),
+        "Authorization": f"Bearer {_get_sb_key()}",
         "Content-Type": "application/json",
         "Prefer": "return=minimal"
     }
