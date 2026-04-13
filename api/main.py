@@ -411,49 +411,7 @@ def api_widget(provincia: str):
     }
 
 
-@app.get("/api/newsletter/count")
-def newsletter_count():
-    from pathlib import Path as _P
-    f = _P("data/newsletter_subscribers.csv")
-    if not f.exists(): return {"count": 0}
-    with open(f, newline="", encoding="utf-8") as fp:
-        count = sum(1 for row in __import__("csv").reader(fp) if row)
-    return {"count": count}
 
-@app.post("/api/newsletter/unsubscribe")
-def newsletter_unsubscribe(email: str):
-    import csv as _c
-    from pathlib import Path as _P
-    f = _P("data/newsletter_subscribers.csv")
-    if not f.exists(): return {"status": "not_found"}
-    rows = []
-    removed = False
-    with open(f, newline="", encoding="utf-8") as fp:
-        for row in _c.reader(fp):
-            if row and row[0].strip().lower() != email.strip().lower():
-                rows.append(row)
-            else:
-                removed = True
-    with open(f, "w", newline="", encoding="utf-8") as fp:
-        _c.writer(fp).writerows(rows)
-    return {"status": "unsubscribed" if removed else "not_found"}
-
-@app.post("/api/newsletter/subscribe")
-def newsletter_subscribe(email: str, provincia: str = ""):
-    if not email or "@" not in email:
-        raise HTTPException(status_code=400, detail="Invalid email")
-    from pathlib import Path
-    f = "data/newsletter_subscribers.csv"
-    Path(f).parent.mkdir(exist_ok=True)
-    existing = set()
-    if Path(f).exists():
-        with open(f) as fp:
-            existing = {row[0] for row in _csv.reader(fp)}
-    if email in existing:
-        return {"status": "already_subscribed"}
-    with open(f, "a", newline="") as fp:
-        _csv.writer(fp).writerow([email, provincia, datetime.utcnow().isoformat()])
-    return {"status": "subscribed", "message": f"Welcome! Alerts for {provincia or 'all Europe'}"}
 
 @app.get("/api/v1/docs")
 def api_docs():
@@ -566,3 +524,111 @@ def debug_provincia(provincia: str):
         "avg_rain_mm": b.avg_rain_mm_day,
         "std_rain_mm": b.std_rain_mm_day,
     }
+
+# ─── NEWSLETTER con SQLite (persistente) ─────────────────────────────────────
+import sqlite3 as _sqlite3
+from pathlib import Path as _Path
+
+_SUBS_DB = "data/subscribers.db"
+
+def _get_subs_conn():
+    conn = _sqlite3.connect(_SUBS_DB)
+    conn.execute("""CREATE TABLE IF NOT EXISTS subscribers (
+        email TEXT PRIMARY KEY,
+        city TEXT DEFAULT '',
+        country_code TEXT DEFAULT 'it',
+        created_at TEXT DEFAULT (datetime('now'))
+    )""")
+    conn.commit()
+    return conn
+
+def _resend_welcome(email: str, city: str, cc: str):
+    import urllib.request as _ur, json as _j
+    key = os.getenv("RESEND_API_KEY","")
+    if not key: return
+    city_label = city or "Europa"
+    html = (
+        "<!DOCTYPE html><html><body style='background:#040608;color:#c8d6e5;"
+        "font-family:-apple-system,sans-serif;max-width:600px;margin:0 auto;padding:40px 24px'>"
+        "<h1 style='font-size:28px;font-weight:800;color:#fff;margin-bottom:6px'>"
+        "Weather<span style='color:#3b82f6'>Arb</span></h1>"
+        "<p style='color:#4a5568;font-size:11px;text-transform:uppercase;letter-spacing:.15em;margin-bottom:32px'>"
+        "Intelligence Agency</p>"
+        "<div style='background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:28px'>"
+        "<h2 style='font-size:18px;font-weight:700;margin-bottom:12px'>Iscrizione confermata per " + "'+city_label+'" + "</h2>"
+        "<p style='font-size:14px;line-height:1.6;color:#c8d6e5'>"
+        "Riceverai alert quando lo Z-Score supera la soglia critica e il briefing settimanale ogni luned&#236;.</p>"
+        "</div>"
+        "<p style='font-size:11px;color:#4a5568;text-align:center;margin-top:24px'>"
+        "WeatherArb &middot; <a href='https://weatherarb.com' style='color:#4a5568'>weatherarb.com</a></p>"
+        "</body></html>"
+    )
+    payload = _j.dumps({
+        "from": "WeatherArb Intelligence <alerts@weatherarb.com>",
+        "to": [email],
+        "subject": f"Iscritto agli alert WeatherArb per {city_label}",
+        "html": html.replace("'+city_label+'", city_label)
+    }).encode()
+    req = _ur.Request("https://api.resend.com/emails", data=payload,
+        headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
+    try:
+        with _ur.urlopen(req, timeout=10): pass
+    except Exception as e:
+        logger.warning(f"Resend error: {e}")
+
+@app.post("/api/newsletter/subscribe")
+def newsletter_subscribe(email: str, city: str = "", country_code: str = "it"):
+    if not email or "@" not in email or "." not in email.split("@")[-1]:
+        raise HTTPException(status_code=400, detail="Email non valida")
+    email = email.strip().lower()
+    try:
+        conn = _get_subs_conn()
+        conn.execute(
+            "INSERT INTO subscribers (email, city, country_code) VALUES (?,?,?)",
+            (email, city, country_code)
+        )
+        conn.commit()
+        conn.close()
+        logger.info(f"New subscriber: {email} ({city})")
+        _resend_welcome(email, city, country_code)
+        return {"status": "subscribed", "message": f"Benvenuto! Alert per {city or 'Europa'}"}
+    except _sqlite3.IntegrityError:
+        return {"status": "already_subscribed", "message": "Sei gia iscritto!"}
+    except Exception as e:
+        logger.error(f"Subscribe error: {e}")
+        raise HTTPException(status_code=500, detail="Errore interno")
+
+@app.get("/api/newsletter/count")
+def newsletter_count():
+    try:
+        conn = _get_subs_conn()
+        count = conn.execute("SELECT COUNT(*) FROM subscribers").fetchone()[0]
+        conn.close()
+        return {"count": count}
+    except Exception:
+        return {"count": 0}
+
+@app.post("/api/newsletter/unsubscribe")
+def newsletter_unsubscribe(email: str):
+    try:
+        conn = _get_subs_conn()
+        cur = conn.execute("DELETE FROM subscribers WHERE email=?", (email.strip().lower(),))
+        conn.commit()
+        conn.close()
+        return {"status": "unsubscribed" if cur.rowcount > 0 else "not_found"}
+    except Exception as e:
+        return {"status": "error", "detail": str(e)}
+
+@app.get("/api/newsletter/list")
+def newsletter_list(secret: str = ""):
+    if secret != os.getenv("ADMIN_SECRET", "weatherarb2026"):
+        raise HTTPException(status_code=403, detail="Forbidden")
+    try:
+        conn = _get_subs_conn()
+        rows = conn.execute("SELECT email, city, country_code, created_at FROM subscribers ORDER BY created_at DESC").fetchall()
+        conn.close()
+        return {"count": len(rows), "subscribers": [
+            {"email": r[0], "city": r[1], "cc": r[2], "date": r[3]} for r in rows
+        ]}
+    except Exception as e:
+        return {"count": 0, "error": str(e)}
