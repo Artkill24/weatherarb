@@ -1,0 +1,15 @@
+{
+  "slug": "2026-04-13-lisboa-clear",
+  "title": "Anomalia di Cielo Sereno a Lisbona: Analisi WeatherArb",
+  "lead": "WeatherArb segnala un evento di cielo sereno con un livello di anomalia 'UNUSUAL' a Lisbona, caratterizzato da uno Z-Score di +1.68 e un punteggio complessivo di 6.6/10.",
+  "body": "L'analisi meteo di WeatherArb per Lisbona evidenzia una condizione di cielo prevalentemente sereno che si discosta in modo significativo dalle aspettative climatologiche per questo periodo. Lo Z-Score di +1.68 indica che questa persistenza di condizioni stabili si colloca ben al di sopra della media storica, suggerendo una deviazione notevole rispetto ai pattern meteorologici tipici.  Sebbene il punteggio di 6.6/10 rifletta una condizione di tempo favorevole e generalmente positiva, il livello 'UNUSUAL' sottolinea la rarità statistica di tale scenario.",
+  "conclusion": "In sintesi, Lisbona sta vivendo un periodo di cielo sereno statisticamente insolito. Questa anomalia, pur non implicando criticità immediate, merita attenzione per comprendere le dinamiche atmosferiche sottostanti e le potenziali implicazioni a lungo termine.",
+  "location": "Lisboa",
+  "country_code": "it",
+  "vertical": "clear",
+  "z_score": 1.68,
+  "score": 6.56,
+  "anomaly_level": "UNUSUAL",
+  "timestamp": "2026-04-13T02:00:54.741493+00:00",
+  "date": "2026-04-13"
+}
