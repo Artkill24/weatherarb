@@ -174,48 +174,12 @@
     </div>
     <a href="https://t.me/weatherarb_alerts" target="_blank" rel="noopener" class="abtn">Canale Telegram →</a>
   </div>
-
-  <div style="background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(16,185,129,.05));border:1px solid rgba(59,130,246,.2);border-radius:12px;padding:24px;margin:24px 0" id="nl-box">
-    <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:12px">
-      <span style="font-size:24px;line-height:1">📬</span>
-      <div>
-        <div style="font-size:15px;font-weight:700;color:#fff">Intelligence Briefing per Bergen</div>
-        <div style="font-size:12px;color:#4a5568;margin-top:2px">Alert anomalie + briefing settimanale · Gratuito</div>
-      </div>
-    </div>
-    <p style="font-size:13px;color:#c8d6e5;line-height:1.6;margin:0 0 14px">Ricevi l'analisi Z-Score per Bergen nella tua inbox. Basato su NASA POWER — non semplici previsioni.</p>
-    <div id="nl-form" style="display:flex;gap:8px;flex-wrap:wrap">
-      <input id="nl-email" type="email" placeholder="La tua email"
-        style="flex:1;min-width:180px;background:rgba(255,255,255,.05);border:1px solid #1e2d3d;border-radius:8px;padding:10px 14px;color:#c8d6e5;font-size:13px;outline:none">
-      <button onclick="nlSub()"
-        style="background:#3b82f6;color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:13px;font-weight:700;cursor:pointer">
-        Iscriviti →
-      </button>
-    </div>
-    <div id="nl-msg" style="display:none;font-size:13px;margin-top:10px;padding:10px 14px;border-radius:8px"></div>
-    <p style="font-size:10px;color:#4a5568;margin-top:8px">Nessuno spam. Cancellazione con un click.</p>
-  </div>
-  <script>
-  async function nlSub(){
-    const e=document.getElementById('nl-email').value.trim();
-    const m=document.getElementById('nl-msg');
-    if(!e||!e.includes('@')){m.style.display='block';m.style.background='rgba(239,68,68,.1)';m.style.color='#ef4444';m.textContent='Email non valida';return;}
-    try{
-      const r=await fetch('https://api.weatherarb.com/api/newsletter/subscribe?email='+encodeURIComponent(e)+'&city=Bergen&country_code=no',{method:'POST'});
-      const d=await r.json();
-      document.getElementById('nl-form').style.display='none';
-      m.style.display='block';m.style.background='rgba(16,185,129,.1)';m.style.color='#10b981';
-      m.textContent=d.status==='already_subscribed'?'✅ Sei già iscritto!':'✅ Iscritto! Controlla la tua email.';
-    }catch(e){m.style.display='block';m.style.background='rgba(239,68,68,.1)';m.style.color='#ef4444';m.textContent='Errore — riprova';}
-  }
-  document.getElementById('nl-email').addEventListener('keydown',e=>e.key==='Enter'&&nlSub());
-  </script>
 </main>
 
 <footer class="ftr">
   <a href="/">WeatherArb</a> · Independent Weather Intelligence Agency ·
   <a href="/about.html">Methodology</a> · <a href="/api.html">API</a>
-</footer>
+<div id="nl-root" data-city="bergen" data-cc="no"></div><script src="/newsletter.js"></script></footer>
 
 <script>
 const API='https://api.weatherarb.com',CID='bergen';
