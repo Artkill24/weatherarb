@@ -567,9 +567,12 @@ def _sb_request(method, path, data=None):
         return 500, {}
 
 def _resend_welcome(email: str, city: str, cc: str):
-    key = os.getenv("RESEND_API_KEY", "")
+    import os as _os3
+    key = _os3.getenv("RESEND_API_KEY", "")
     if not key:
+        logger.warning("RESEND_API_KEY not set — skipping welcome email")
         return
+    logger.info(f"Sending welcome email to {email} via Resend")
     city_label = city or "Europa"
     html = (
         "<!DOCTYPE html><html><body style=\"background:#040608;color:#c8d6e5;"
