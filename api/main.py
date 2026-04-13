@@ -410,6 +410,34 @@ def api_widget(provincia: str):
         "t": (pulse.get("timestamp") or "")[:10],
     }
 
+
+@app.get("/api/newsletter/count")
+def newsletter_count():
+    from pathlib import Path as _P
+    f = _P("data/newsletter_subscribers.csv")
+    if not f.exists(): return {"count": 0}
+    with open(f, newline="", encoding="utf-8") as fp:
+        count = sum(1 for row in __import__("csv").reader(fp) if row)
+    return {"count": count}
+
+@app.post("/api/newsletter/unsubscribe")
+def newsletter_unsubscribe(email: str):
+    import csv as _c
+    from pathlib import Path as _P
+    f = _P("data/newsletter_subscribers.csv")
+    if not f.exists(): return {"status": "not_found"}
+    rows = []
+    removed = False
+    with open(f, newline="", encoding="utf-8") as fp:
+        for row in _c.reader(fp):
+            if row and row[0].strip().lower() != email.strip().lower():
+                rows.append(row)
+            else:
+                removed = True
+    with open(f, "w", newline="", encoding="utf-8") as fp:
+        _c.writer(fp).writerows(rows)
+    return {"status": "unsubscribed" if removed else "not_found"}
+
 @app.post("/api/newsletter/subscribe")
 def newsletter_subscribe(email: str, provincia: str = ""):
     if not email or "@" not in email:
