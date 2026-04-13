@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-13T02:00:54.743124+00:00",
-  "count": 25,
+  "last_updated": "2026-04-13T02:40:34.876815+00:00",
+  "count": 26,
   "reports": [
     {
       "slug": "2026-04-13-lisboa-clear",
@@ -15,6 +15,20 @@
       "date": "2026-04-13",
       "url": "/news/2026-04-13-lisboa-clear/",
       "excerpt": "WeatherArb segnala un evento di cielo sereno con un livello di anomalia 'UNUSUAL' a Lisbona, caratterizzato da uno Z-Score di +1.68 e un punteggio complessivo di 6.6/10."
+    },
+    {
+      "slug": "2026-04-13-birmingham-clear",
+      "title": "Allerta Meteo Critica per Birmingham: Cielo Sereno Imprevisto",
+      "lead": "WeatherArb segnala un evento meteorologico insolito e di livello CRITICO nella città di Birmingham. Le nostre analisi indicano un cielo sereno inaspettato, con ...",
+      "location": "Birmingham",
+      "country_code": "it",
+      "vertical": "clear",
+      "z_score": -3.94,
+      "score": 8.71,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-04-13",
+      "url": "/news/2026-04-13-birmingham-clear/",
+      "excerpt": "WeatherArb segnala un evento meteorologico insolito e di livello CRITICO nella città di Birmingham. Le nostre analisi indicano un cielo sereno inaspettato, con uno Z-Score di -3.94"
     },
     {
       "slug": "2026-04-12-valencia-heavy-rain",
@@ -266,20 +280,6 @@
       "anomaly_level": "CRITICAL",
       "date": null,
       "url": "/news/2026-04-08-como-heat-wave/",
-      "excerpt": ""
-    },
-    {
-      "slug": "2026-04-08-biella-heat-wave",
-      "title": "Heat Wave anomalo a Biella: analisi WeatherArb del 08/04/2026",
-      "lead": "...",
-      "location": null,
-      "country_code": "it",
-      "vertical": "Cooling Comfort",
-      "z_score": 4.03,
-      "score": 8.25,
-      "anomaly_level": "CRITICAL",
-      "date": null,
-      "url": "/news/2026-04-08-biella-heat-wave/",
       "excerpt": ""
     }
   ]
