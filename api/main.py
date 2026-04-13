@@ -623,12 +623,9 @@ def newsletter_unsubscribe(email: str):
 def newsletter_list(secret: str = ""):
     if secret != os.getenv("ADMIN_SECRET", "weatherarb2026"):
         raise HTTPException(status_code=403, detail="Forbidden")
-    try:
-        conn = _get_subs_conn()
-        rows = conn.execute("SELECT email, city, country_code, created_at FROM subscribers ORDER BY created_at DESC").fetchall()
-        conn.close()
-        return {"count": len(rows), "subscribers": [
-            {"email": r[0], "city": r[1], "cc": r[2], "date": r[3]} for r in rows
-        ]}
-    except Exception as e:
-        return {"count": 0, "error": str(e)}
+    conn = _get_subs_conn()
+    rows = conn.execute("SELECT email, city, country_code, created_at FROM subscribers ORDER BY created_at DESC").fetchall()
+    conn.close()
+    return {"count": len(rows), "subscribers": [
+        {"email": r[0], "city": r[1], "cc": r[2], "date": r[3]} for r in rows
+    ]}
