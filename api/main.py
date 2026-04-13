@@ -603,7 +603,10 @@ def newsletter_subscribe(email: str, city: str = "", country_code: str = "it"):
         {"email": email, "city": city, "country_code": country_code})
     if status == 201:
         logger.info(f"New subscriber: {email} ({city})")
-        _resend_welcome(email, city, country_code)
+        try:
+            _resend_welcome(email, city, country_code)
+        except Exception as re:
+            logger.warning(f"Welcome email failed: {re}")
         return {"status": "subscribed", "message": f"Benvenuto! Alert per {city or 'Europa'}"}
     elif status == 409:
         return {"status": "already_subscribed", "message": "Sei gia iscritto!"}
