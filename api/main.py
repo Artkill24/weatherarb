@@ -19,6 +19,8 @@ from core.ingestor import (
     build_weather_snapshot,
     build_historical_baseline,
 )
+from core.delta_calculator import describe_anomaly
+from core.delta_calculator import describe_anomaly, 
 from core.delta_calculator import build_pulse_json
 from core.product_mapper import ProductMapper
 
@@ -335,6 +337,11 @@ def api_pulse(provincia: str):
             "event_type": trig.get("type"),
             "severity": trig.get("severity"),
             "anomaly_level": trig.get("anomaly_level"),
+            "anomaly_label": describe_anomaly(
+                trig.get("z_score", 0),
+                trig.get("type", ""),
+                trig.get("country_code", "it")
+            ),
             "z_score": trig.get("z_score"),
             "temperature_c": trig.get("current_temp_c"),
             "historical_avg_c": trig.get("historical_avg_temp_c"),
@@ -385,6 +392,11 @@ def api_top(limit: int = 10):
             "vertical": trig.get("type", "General"),
             "z_score": trig.get("z_score", 0),
             "anomaly_level": trig.get("anomaly_level"),
+            "anomaly_label": describe_anomaly(
+                trig.get("z_score", 0),
+                trig.get("type", ""),
+                trig.get("country_code", "it")
+            ),
             "score": arb.get("score", 0),
             "lat": coords.get("lat", 0),
             "lon": coords.get("lon", 0),
