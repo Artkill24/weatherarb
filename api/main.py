@@ -529,45 +529,60 @@ def debug_provincia(provincia: str):
 import sqlite3 as _sqlite3
 from pathlib import Path as _Path
 
-_SUBS_DB = "data/subscribers.db"
 
-def _get_subs_conn():
-    conn = _sqlite3.connect(_SUBS_DB)
-    conn.execute("""CREATE TABLE IF NOT EXISTS subscribers (
-        email TEXT PRIMARY KEY,
-        city TEXT DEFAULT '',
-        country_code TEXT DEFAULT 'it',
-        created_at TEXT DEFAULT (datetime('now'))
-    )""")
-    conn.commit()
-    return conn
+
+
+# ─── NEWSLETTER su Supabase ──────────────────────────────────────────────────
+import urllib.request as _ur
+import json as _json
+
+_SB_URL = os.getenv("SUPABASE_URL", "https://mlawljowkvgeyydrwirk.supabase.co")
+_SB_KEY = os.getenv("SUPABASE_ANON_KEY", "")
+_SB_TABLE = "newsletter_subscribers"
+
+def _sb_headers():
+    return {
+        "apikey": _SB_KEY,
+        "Authorization": f"Bearer {_SB_KEY}",
+        "Content-Type": "application/json",
+        "Prefer": "return=minimal"
+    }
+
+def _sb_request(method, path, data=None):
+    url = f"{_SB_URL}/rest/v1/{path}"
+    payload = _json.dumps(data).encode() if data else None
+    req = _ur.Request(url, data=payload, headers=_sb_headers(), method=method)
+    try:
+        with _ur.urlopen(req, timeout=10) as r:
+            body = r.read()
+            return r.status, _json.loads(body) if body else {}
+    except _ur.HTTPError as e:
+        body = e.read()
+        return e.code, _json.loads(body) if body else {}
+    except Exception as ex:
+        logger.error(f"Supabase error: {ex}")
+        return 500, {}
 
 def _resend_welcome(email: str, city: str, cc: str):
-    import urllib.request as _ur, json as _j
-    key = os.getenv("RESEND_API_KEY","")
-    if not key: return
+    key = os.getenv("RESEND_API_KEY", "")
+    if not key:
+        return
     city_label = city or "Europa"
     html = (
-        "<!DOCTYPE html><html><body style='background:#040608;color:#c8d6e5;"
-        "font-family:-apple-system,sans-serif;max-width:600px;margin:0 auto;padding:40px 24px'>"
-        "<h1 style='font-size:28px;font-weight:800;color:#fff;margin-bottom:6px'>"
-        "Weather<span style='color:#3b82f6'>Arb</span></h1>"
-        "<p style='color:#4a5568;font-size:11px;text-transform:uppercase;letter-spacing:.15em;margin-bottom:32px'>"
-        "Intelligence Agency</p>"
-        "<div style='background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:28px'>"
-        "<h2 style='font-size:18px;font-weight:700;margin-bottom:12px'>Iscrizione confermata per " + "'+city_label+'" + "</h2>"
-        "<p style='font-size:14px;line-height:1.6;color:#c8d6e5'>"
-        "Riceverai alert quando lo Z-Score supera la soglia critica e il briefing settimanale ogni luned&#236;.</p>"
-        "</div>"
-        "<p style='font-size:11px;color:#4a5568;text-align:center;margin-top:24px'>"
-        "WeatherArb &middot; <a href='https://weatherarb.com' style='color:#4a5568'>weatherarb.com</a></p>"
+        "<!DOCTYPE html><html><body style=\"background:#040608;color:#c8d6e5;"
+        "font-family:-apple-system,sans-serif;max-width:600px;margin:0 auto;padding:40px 24px\">"
+        "<h1 style=\"font-size:28px;font-weight:800;color:#fff\">Weather"
+        "<span style=\"color:#3b82f6\">Arb</span></h1>"
+        "<p style=\"color:#4a5568;font-size:11px;text-transform:uppercase;letter-spacing:.15em\">Intelligence Agency</p>"
+        f"<p style=\"font-size:15px;line-height:1.6;margin-top:24px\">Iscritto agli alert per <strong>{city_label}</strong>.</p>"
+        "<p style=\"font-size:13px;color:#4a5568;margin-top:32px\">WeatherArb · weatherarb.com</p>"
         "</body></html>"
     )
-    payload = _j.dumps({
+    payload = _json.dumps({
         "from": "WeatherArb Intelligence <alerts@weatherarb.com>",
         "to": [email],
-        "subject": f"Iscritto agli alert WeatherArb per {city_label}",
-        "html": html.replace("'+city_label+'", city_label)
+        "subject": f"Alert WeatherArb per {city_label}",
+        "html": html
     }).encode()
     req = _ur.Request("https://api.resend.com/emails", data=payload,
         headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
@@ -581,51 +596,39 @@ def newsletter_subscribe(email: str, city: str = "", country_code: str = "it"):
     if not email or "@" not in email or "." not in email.split("@")[-1]:
         raise HTTPException(status_code=400, detail="Email non valida")
     email = email.strip().lower()
-    try:
-        conn = _get_subs_conn()
-        conn.execute(
-            "INSERT INTO subscribers (email, city, country_code) VALUES (?,?,?)",
-            (email, city, country_code)
-        )
-        conn.commit()
-        conn.close()
+    status, resp = _sb_request("POST", _SB_TABLE,
+        {"email": email, "city": city, "country_code": country_code})
+    if status == 201:
         logger.info(f"New subscriber: {email} ({city})")
         _resend_welcome(email, city, country_code)
         return {"status": "subscribed", "message": f"Benvenuto! Alert per {city or 'Europa'}"}
-    except _sqlite3.IntegrityError:
+    elif status == 409:
         return {"status": "already_subscribed", "message": "Sei gia iscritto!"}
-    except Exception as e:
-        logger.error(f"Subscribe error: {e}")
+    else:
+        logger.error(f"Supabase subscribe error {status}: {resp}")
         raise HTTPException(status_code=500, detail="Errore interno")
 
 @app.get("/api/newsletter/count")
 def newsletter_count():
-    try:
-        conn = _get_subs_conn()
-        count = conn.execute("SELECT COUNT(*) FROM subscribers").fetchone()[0]
-        conn.close()
-        return {"count": count}
-    except Exception:
-        return {"count": 0}
+    status, resp = _sb_request("GET", f"{_SB_TABLE}?select=count")
+    if status == 200 and isinstance(resp, list):
+        return {"count": resp[0].get("count", 0) if resp else 0}
+    # fallback: conta manualmente
+    status2, resp2 = _sb_request("GET", f"{_SB_TABLE}?select=email")
+    if status2 == 200:
+        return {"count": len(resp2) if isinstance(resp2, list) else 0}
+    return {"count": 0}
 
 @app.post("/api/newsletter/unsubscribe")
 def newsletter_unsubscribe(email: str):
-    try:
-        conn = _get_subs_conn()
-        cur = conn.execute("DELETE FROM subscribers WHERE email=?", (email.strip().lower(),))
-        conn.commit()
-        conn.close()
-        return {"status": "unsubscribed" if cur.rowcount > 0 else "not_found"}
-    except Exception as e:
-        return {"status": "error", "detail": str(e)}
+    status, _ = _sb_request("DELETE", f"{_SB_TABLE}?email=eq.{email.strip().lower()}")
+    return {"status": "unsubscribed" if status == 204 else "not_found"}
 
 @app.get("/api/newsletter/list")
 def newsletter_list(secret: str = ""):
     if secret != os.getenv("ADMIN_SECRET", "weatherarb2026"):
         raise HTTPException(status_code=403, detail="Forbidden")
-    conn = _get_subs_conn()
-    rows = conn.execute("SELECT email, city, country_code, created_at FROM subscribers ORDER BY created_at DESC").fetchall()
-    conn.close()
-    return {"count": len(rows), "subscribers": [
-        {"email": r[0], "city": r[1], "cc": r[2], "date": r[3]} for r in rows
-    ]}
+    status, resp = _sb_request("GET", f"{_SB_TABLE}?select=email,city,country_code,created_at&order=created_at.desc")
+    if status == 200 and isinstance(resp, list):
+        return {"count": len(resp), "subscribers": resp}
+    return {"count": 0, "subscribers": []}
