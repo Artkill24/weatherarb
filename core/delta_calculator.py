@@ -557,6 +557,9 @@ def build_pulse_json(
             "peak_expected_in": f"{lead_time_hours}h" if lead_time_hours else "N/A",
             "current_temp_c": snapshot.temp_c,
             "historical_avg_temp_c": round(baseline.avg_temp_c, 1),
+            "humidity_pct": snapshot.humidity_pct,
+            "wind_kmh": round(snapshot.wind_speed_ms * 3.6, 1) if snapshot.wind_speed_ms else None,
+            "wind_speed_ms": snapshot.wind_speed_ms,
         },
         "delta_breakdown": [d.to_dict() for d in deltas],
         "arbitrage_score": {
