@@ -133,6 +133,13 @@ def describe_anomaly(z_score: float, event_type: str, lang: str = "it") -> str:
         # Fallback basato su Z-score
         cat = "heat" if pos else "cold"
 
+    # Override: se Z negativo e categoria termica, usa cold
+    if not pos and cat == "heat":
+        cat = "cold"
+    # Se Z positivo e categoria cold, usa heat
+    if pos and cat == "cold":
+        cat = "heat"
+
     # Intensità
     if intensity >= 3.5:
         lvl = "critical"
