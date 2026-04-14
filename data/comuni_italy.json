@@ -1,0 +1,1210 @@
+[
+  {
+    "nome": "Torino",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.0703,
+    "lon": 7.6869,
+    "pop": 870952
+  },
+  {
+    "nome": "Moncalieri",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.9978,
+    "lon": 7.6833,
+    "pop": 57935
+  },
+  {
+    "nome": "Collegno",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.0786,
+    "lon": 7.5733,
+    "pop": 49969
+  },
+  {
+    "nome": "Rivoli",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.0706,
+    "lon": 7.5186,
+    "pop": 48800
+  },
+  {
+    "nome": "Nichelino",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.9983,
+    "lon": 7.6428,
+    "pop": 47700
+  },
+  {
+    "nome": "Settimo Torinese",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.1364,
+    "lon": 7.7778,
+    "pop": 47500
+  },
+  {
+    "nome": "Chieri",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.9994,
+    "lon": 7.8264,
+    "pop": 36500
+  },
+  {
+    "nome": "Pinerolo",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.8878,
+    "lon": 7.3319,
+    "pop": 35500
+  },
+  {
+    "nome": "Cuneo",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.3841,
+    "lon": 7.5426,
+    "pop": 56000
+  },
+  {
+    "nome": "Alba",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.6981,
+    "lon": 8.0353,
+    "pop": 31500
+  },
+  {
+    "nome": "Bra",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.6978,
+    "lon": 7.8553,
+    "pop": 30000
+  },
+  {
+    "nome": "Saluzzo",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.6447,
+    "lon": 7.4897,
+    "pop": 17000
+  },
+  {
+    "nome": "Mondovi",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.3897,
+    "lon": 7.8183,
+    "pop": 22000
+  },
+  {
+    "nome": "Fossano",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.5531,
+    "lon": 7.7233,
+    "pop": 24500
+  },
+  {
+    "nome": "Asti",
+    "provincia": "Asti",
+    "regione": "Piemonte",
+    "lat": 44.9003,
+    "lon": 8.2064,
+    "pop": 76000
+  },
+  {
+    "nome": "Alessandria",
+    "provincia": "Alessandria",
+    "regione": "Piemonte",
+    "lat": 44.9122,
+    "lon": 8.6151,
+    "pop": 93000
+  },
+  {
+    "nome": "Casale Monferrato",
+    "provincia": "Alessandria",
+    "regione": "Piemonte",
+    "lat": 45.1344,
+    "lon": 8.4528,
+    "pop": 34000
+  },
+  {
+    "nome": "Tortona",
+    "provincia": "Alessandria",
+    "regione": "Piemonte",
+    "lat": 44.8958,
+    "lon": 8.8658,
+    "pop": 27000
+  },
+  {
+    "nome": "Novara",
+    "provincia": "Novara",
+    "regione": "Piemonte",
+    "lat": 45.4469,
+    "lon": 8.6206,
+    "pop": 104000
+  },
+  {
+    "nome": "Verbania",
+    "provincia": "Verbano-Cusio-Ossola",
+    "regione": "Piemonte",
+    "lat": 45.9219,
+    "lon": 8.552,
+    "pop": 30000
+  },
+  {
+    "nome": "Vercelli",
+    "provincia": "Vercelli",
+    "regione": "Piemonte",
+    "lat": 45.3244,
+    "lon": 8.4236,
+    "pop": 46500
+  },
+  {
+    "nome": "Biella",
+    "provincia": "Biella",
+    "regione": "Piemonte",
+    "lat": 45.5628,
+    "lon": 8.0519,
+    "pop": 44000
+  },
+  {
+    "nome": "Milano",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.4654,
+    "lon": 9.1859,
+    "pop": 1378689
+  },
+  {
+    "nome": "Sesto San Giovanni",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.5328,
+    "lon": 9.2331,
+    "pop": 82000
+  },
+  {
+    "nome": "Monza",
+    "provincia": "Monza e della Brianza",
+    "regione": "Lombardia",
+    "lat": 45.5845,
+    "lon": 9.2744,
+    "pop": 123000
+  },
+  {
+    "nome": "Bergamo",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.6983,
+    "lon": 9.6773,
+    "pop": 120000
+  },
+  {
+    "nome": "Brescia",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.5416,
+    "lon": 10.2118,
+    "pop": 199000
+  },
+  {
+    "nome": "Como",
+    "provincia": "Como",
+    "regione": "Lombardia",
+    "lat": 45.8081,
+    "lon": 9.0852,
+    "pop": 84000
+  },
+  {
+    "nome": "Lecco",
+    "provincia": "Lecco",
+    "regione": "Lombardia",
+    "lat": 45.8566,
+    "lon": 9.3956,
+    "pop": 48000
+  },
+  {
+    "nome": "Varese",
+    "provincia": "Varese",
+    "regione": "Lombardia",
+    "lat": 45.8206,
+    "lon": 8.8256,
+    "pop": 81000
+  },
+  {
+    "nome": "Busto Arsizio",
+    "provincia": "Varese",
+    "regione": "Lombardia",
+    "lat": 45.6131,
+    "lon": 8.8494,
+    "pop": 83000
+  },
+  {
+    "nome": "Gallarate",
+    "provincia": "Varese",
+    "regione": "Lombardia",
+    "lat": 45.6603,
+    "lon": 8.7881,
+    "pop": 52000
+  },
+  {
+    "nome": "Pavia",
+    "provincia": "Pavia",
+    "regione": "Lombardia",
+    "lat": 45.1847,
+    "lon": 9.1594,
+    "pop": 72000
+  },
+  {
+    "nome": "Lodi",
+    "provincia": "Lodi",
+    "regione": "Lombardia",
+    "lat": 45.3142,
+    "lon": 9.5033,
+    "pop": 45000
+  },
+  {
+    "nome": "Cremona",
+    "provincia": "Cremona",
+    "regione": "Lombardia",
+    "lat": 45.1328,
+    "lon": 10.0228,
+    "pop": 72000
+  },
+  {
+    "nome": "Mantova",
+    "provincia": "Mantova",
+    "regione": "Lombardia",
+    "lat": 45.1564,
+    "lon": 10.7914,
+    "pop": 50000
+  },
+  {
+    "nome": "Sondrio",
+    "provincia": "Sondrio",
+    "regione": "Lombardia",
+    "lat": 46.1697,
+    "lon": 9.8739,
+    "pop": 22000
+  },
+  {
+    "nome": "Vigevano",
+    "provincia": "Pavia",
+    "regione": "Lombardia",
+    "lat": 45.3178,
+    "lon": 8.8572,
+    "pop": 64000
+  },
+  {
+    "nome": "Cinisello Balsamo",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.5556,
+    "lon": 9.2167,
+    "pop": 73000
+  },
+  {
+    "nome": "Cernusco sul Naviglio",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.5253,
+    "lon": 9.3289,
+    "pop": 34000
+  },
+  {
+    "nome": "Desio",
+    "provincia": "Monza e della Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6189,
+    "lon": 9.2183,
+    "pop": 41000
+  },
+  {
+    "nome": "Seregno",
+    "provincia": "Monza e della Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6492,
+    "lon": 9.2011,
+    "pop": 43000
+  },
+  {
+    "nome": "Venezia",
+    "provincia": "Venezia",
+    "regione": "Veneto",
+    "lat": 45.4408,
+    "lon": 12.3155,
+    "pop": 261905
+  },
+  {
+    "nome": "Verona",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "lat": 45.4383,
+    "lon": 10.9916,
+    "pop": 253208
+  },
+  {
+    "nome": "Padova",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.4064,
+    "lon": 11.8768,
+    "pop": 209065
+  },
+  {
+    "nome": "Vicenza",
+    "provincia": "Vicenza",
+    "regione": "Veneto",
+    "lat": 45.5455,
+    "lon": 11.5354,
+    "pop": 110644
+  },
+  {
+    "nome": "Treviso",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.6669,
+    "lon": 12.243,
+    "pop": 84669
+  },
+  {
+    "nome": "Mestre",
+    "provincia": "Venezia",
+    "regione": "Veneto",
+    "lat": 45.4917,
+    "lon": 12.2367,
+    "pop": 94000
+  },
+  {
+    "nome": "Bassano del Grappa",
+    "provincia": "Vicenza",
+    "regione": "Veneto",
+    "lat": 45.7667,
+    "lon": 11.7333,
+    "pop": 43500
+  },
+  {
+    "nome": "Rovigo",
+    "provincia": "Rovigo",
+    "regione": "Veneto",
+    "lat": 45.0706,
+    "lon": 11.7906,
+    "pop": 51000
+  },
+  {
+    "nome": "Belluno",
+    "provincia": "Belluno",
+    "regione": "Veneto",
+    "lat": 46.1406,
+    "lon": 12.2175,
+    "pop": 36000
+  },
+  {
+    "nome": "Chioggia",
+    "provincia": "Venezia",
+    "regione": "Veneto",
+    "lat": 45.2186,
+    "lon": 12.2786,
+    "pop": 50000
+  },
+  {
+    "nome": "Vittorio Veneto",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.98,
+    "lon": 12.2994,
+    "pop": 29000
+  },
+  {
+    "nome": "Thiene",
+    "provincia": "Vicenza",
+    "regione": "Veneto",
+    "lat": 45.7078,
+    "lon": 11.4789,
+    "pop": 24000
+  },
+  {
+    "nome": "Trento",
+    "provincia": "Trento",
+    "regione": "Trentino-Alto Adige",
+    "lat": 46.0667,
+    "lon": 11.1167,
+    "pop": 118142
+  },
+  {
+    "nome": "Bolzano",
+    "provincia": "Bolzano",
+    "regione": "Trentino-Alto Adige",
+    "lat": 46.4983,
+    "lon": 11.3548,
+    "pop": 107436
+  },
+  {
+    "nome": "Rovereto",
+    "provincia": "Trento",
+    "regione": "Trentino-Alto Adige",
+    "lat": 45.8894,
+    "lon": 11.0389,
+    "pop": 39000
+  },
+  {
+    "nome": "Merano",
+    "provincia": "Bolzano",
+    "regione": "Trentino-Alto Adige",
+    "lat": 46.67,
+    "lon": 11.16,
+    "pop": 41000
+  },
+  {
+    "nome": "Trieste",
+    "provincia": "Trieste",
+    "regione": "Friuli-Venezia Giulia",
+    "lat": 45.6495,
+    "lon": 13.7768,
+    "pop": 201600
+  },
+  {
+    "nome": "Udine",
+    "provincia": "Udine",
+    "regione": "Friuli-Venezia Giulia",
+    "lat": 46.0639,
+    "lon": 13.2356,
+    "pop": 99000
+  },
+  {
+    "nome": "Pordenone",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "lat": 45.9589,
+    "lon": 12.6614,
+    "pop": 51000
+  },
+  {
+    "nome": "Gorizia",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "lat": 45.94,
+    "lon": 13.6219,
+    "pop": 34000
+  },
+  {
+    "nome": "Genova",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "lat": 44.4056,
+    "lon": 8.9463,
+    "pop": 575577
+  },
+  {
+    "nome": "La Spezia",
+    "provincia": "La Spezia",
+    "regione": "Liguria",
+    "lat": 44.1025,
+    "lon": 9.8239,
+    "pop": 93000
+  },
+  {
+    "nome": "Savona",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "lat": 44.3069,
+    "lon": 8.4811,
+    "pop": 59000
+  },
+  {
+    "nome": "Imperia",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "lat": 43.8878,
+    "lon": 8.0281,
+    "pop": 42000
+  },
+  {
+    "nome": "Sanremo",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "lat": 43.8158,
+    "lon": 7.7761,
+    "pop": 54000
+  },
+  {
+    "nome": "Bologna",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "lat": 44.4949,
+    "lon": 11.3426,
+    "pop": 386663
+  },
+  {
+    "nome": "Modena",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "lat": 44.6483,
+    "lon": 10.9253,
+    "pop": 184753
+  },
+  {
+    "nome": "Parma",
+    "provincia": "Parma",
+    "regione": "Emilia-Romagna",
+    "lat": 44.8015,
+    "lon": 10.3279,
+    "pop": 197176
+  },
+  {
+    "nome": "Reggio Emilia",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "lat": 44.6989,
+    "lon": 10.6297,
+    "pop": 171944
+  },
+  {
+    "nome": "Ferrara",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "lat": 44.8381,
+    "lon": 11.6197,
+    "pop": 132009
+  },
+  {
+    "nome": "Ravenna",
+    "provincia": "Ravenna",
+    "regione": "Emilia-Romagna",
+    "lat": 44.4153,
+    "lon": 12.2014,
+    "pop": 159013
+  },
+  {
+    "nome": "Rimini",
+    "provincia": "Rimini",
+    "regione": "Emilia-Romagna",
+    "lat": 44.0594,
+    "lon": 12.5683,
+    "pop": 149827
+  },
+  {
+    "nome": "Forli",
+    "provincia": "Forli-Cesena",
+    "regione": "Emilia-Romagna",
+    "lat": 44.2228,
+    "lon": 12.0408,
+    "pop": 117996
+  },
+  {
+    "nome": "Cesena",
+    "provincia": "Forli-Cesena",
+    "regione": "Emilia-Romagna",
+    "lat": 44.1339,
+    "lon": 12.2422,
+    "pop": 97000
+  },
+  {
+    "nome": "Piacenza",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "lat": 45.0522,
+    "lon": 9.6931,
+    "pop": 102192
+  },
+  {
+    "nome": "Faenza",
+    "provincia": "Ravenna",
+    "regione": "Emilia-Romagna",
+    "lat": 44.2853,
+    "lon": 11.8833,
+    "pop": 58000
+  },
+  {
+    "nome": "Imola",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "lat": 44.3533,
+    "lon": 11.7147,
+    "pop": 69000
+  },
+  {
+    "nome": "Firenze",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.7696,
+    "lon": 11.2558,
+    "pop": 367150
+  },
+  {
+    "nome": "Prato",
+    "provincia": "Prato",
+    "regione": "Toscana",
+    "lat": 43.8777,
+    "lon": 11.0967,
+    "pop": 195088
+  },
+  {
+    "nome": "Livorno",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "lat": 43.5486,
+    "lon": 10.3106,
+    "pop": 158371
+  },
+  {
+    "nome": "Siena",
+    "provincia": "Siena",
+    "regione": "Toscana",
+    "lat": 43.3186,
+    "lon": 11.3306,
+    "pop": 54000
+  },
+  {
+    "nome": "Pisa",
+    "provincia": "Pisa",
+    "regione": "Toscana",
+    "lat": 43.7228,
+    "lon": 10.4017,
+    "pop": 91104
+  },
+  {
+    "nome": "Arezzo",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "lat": 43.4636,
+    "lon": 11.8797,
+    "pop": 100000
+  },
+  {
+    "nome": "Pistoia",
+    "provincia": "Pistoia",
+    "regione": "Toscana",
+    "lat": 43.9325,
+    "lon": 10.9164,
+    "pop": 90000
+  },
+  {
+    "nome": "Lucca",
+    "provincia": "Lucca",
+    "regione": "Toscana",
+    "lat": 43.843,
+    "lon": 10.5075,
+    "pop": 89000
+  },
+  {
+    "nome": "Grosseto",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "lat": 42.76,
+    "lon": 11.1133,
+    "pop": 82000
+  },
+  {
+    "nome": "Massa",
+    "provincia": "Massa-Carrara",
+    "regione": "Toscana",
+    "lat": 44.035,
+    "lon": 10.14,
+    "pop": 69000
+  },
+  {
+    "nome": "Empoli",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.7175,
+    "lon": 10.9469,
+    "pop": 47000
+  },
+  {
+    "nome": "Viareggio",
+    "provincia": "Lucca",
+    "regione": "Toscana",
+    "lat": 43.8731,
+    "lon": 10.2461,
+    "pop": 62000
+  },
+  {
+    "nome": "Perugia",
+    "provincia": "Perugia",
+    "regione": "Umbria",
+    "lat": 43.1122,
+    "lon": 12.3889,
+    "pop": 166134
+  },
+  {
+    "nome": "Terni",
+    "provincia": "Terni",
+    "regione": "Umbria",
+    "lat": 42.5636,
+    "lon": 12.64,
+    "pop": 111189
+  },
+  {
+    "nome": "Foligno",
+    "provincia": "Perugia",
+    "regione": "Umbria",
+    "lat": 42.9567,
+    "lon": 12.7036,
+    "pop": 57000
+  },
+  {
+    "nome": "Ancona",
+    "provincia": "Ancona",
+    "regione": "Marche",
+    "lat": 43.6158,
+    "lon": 13.5189,
+    "pop": 100924
+  },
+  {
+    "nome": "Pesaro",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "lat": 43.91,
+    "lon": 12.9136,
+    "pop": 94000
+  },
+  {
+    "nome": "Fano",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "lat": 43.8431,
+    "lon": 13.0197,
+    "pop": 61000
+  },
+  {
+    "nome": "Macerata",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "lat": 43.2994,
+    "lon": 13.4531,
+    "pop": 42000
+  },
+  {
+    "nome": "Ascoli Piceno",
+    "provincia": "Ascoli Piceno",
+    "regione": "Marche",
+    "lat": 42.8536,
+    "lon": 13.575,
+    "pop": 49000
+  },
+  {
+    "nome": "Roma",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.8933,
+    "lon": 12.4828,
+    "pop": 2860009
+  },
+  {
+    "nome": "Latina",
+    "provincia": "Latina",
+    "regione": "Lazio",
+    "lat": 41.4678,
+    "lon": 12.9036,
+    "pop": 126500
+  },
+  {
+    "nome": "Frosinone",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "lat": 41.64,
+    "lon": 13.3447,
+    "pop": 46000
+  },
+  {
+    "nome": "Viterbo",
+    "provincia": "Viterbo",
+    "regione": "Lazio",
+    "lat": 42.4169,
+    "lon": 12.1047,
+    "pop": 67000
+  },
+  {
+    "nome": "Rieti",
+    "provincia": "Rieti",
+    "regione": "Lazio",
+    "lat": 42.4047,
+    "lon": 12.8617,
+    "pop": 47000
+  },
+  {
+    "nome": "Ostia",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.7333,
+    "lon": 12.2333,
+    "pop": 89000
+  },
+  {
+    "nome": "Civitavecchia",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 42.0919,
+    "lon": 11.7936,
+    "pop": 52000
+  },
+  {
+    "nome": "L'Aquila",
+    "provincia": "L'Aquila",
+    "regione": "Abruzzo",
+    "lat": 42.35,
+    "lon": 13.3992,
+    "pop": 69753
+  },
+  {
+    "nome": "Pescara",
+    "provincia": "Pescara",
+    "regione": "Abruzzo",
+    "lat": 42.4612,
+    "lon": 14.2158,
+    "pop": 119217
+  },
+  {
+    "nome": "Chieti",
+    "provincia": "Chieti",
+    "regione": "Abruzzo",
+    "lat": 42.3517,
+    "lon": 14.1675,
+    "pop": 50000
+  },
+  {
+    "nome": "Teramo",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "lat": 42.6589,
+    "lon": 13.7033,
+    "pop": 54000
+  },
+  {
+    "nome": "Campobasso",
+    "provincia": "Campobasso",
+    "regione": "Molise",
+    "lat": 41.5606,
+    "lon": 14.6561,
+    "pop": 49000
+  },
+  {
+    "nome": "Isernia",
+    "provincia": "Isernia",
+    "regione": "Molise",
+    "lat": 41.5933,
+    "lon": 14.2275,
+    "pop": 22000
+  },
+  {
+    "nome": "Napoli",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "lat": 40.8518,
+    "lon": 14.2681,
+    "pop": 962003
+  },
+  {
+    "nome": "Salerno",
+    "provincia": "Salerno",
+    "regione": "Campania",
+    "lat": 40.6827,
+    "lon": 14.7681,
+    "pop": 133970
+  },
+  {
+    "nome": "Caserta",
+    "provincia": "Caserta",
+    "regione": "Campania",
+    "lat": 41.0744,
+    "lon": 14.3328,
+    "pop": 76826
+  },
+  {
+    "nome": "Avellino",
+    "provincia": "Avellino",
+    "regione": "Campania",
+    "lat": 40.9147,
+    "lon": 14.7894,
+    "pop": 56440
+  },
+  {
+    "nome": "Benevento",
+    "provincia": "Benevento",
+    "regione": "Campania",
+    "lat": 41.1297,
+    "lon": 14.7797,
+    "pop": 60000
+  },
+  {
+    "nome": "Pozzuoli",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "lat": 40.8228,
+    "lon": 14.1219,
+    "pop": 82000
+  },
+  {
+    "nome": "Torre del Greco",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "lat": 40.7886,
+    "lon": 14.3694,
+    "pop": 86000
+  },
+  {
+    "nome": "Bari",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.1171,
+    "lon": 16.8719,
+    "pop": 316002
+  },
+  {
+    "nome": "Taranto",
+    "provincia": "Taranto",
+    "regione": "Puglia",
+    "lat": 40.4644,
+    "lon": 17.2481,
+    "pop": 200154
+  },
+  {
+    "nome": "Foggia",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "lat": 41.46,
+    "lon": 15.5544,
+    "pop": 146000
+  },
+  {
+    "nome": "Lecce",
+    "provincia": "Lecce",
+    "regione": "Puglia",
+    "lat": 40.3516,
+    "lon": 18.175,
+    "pop": 95000
+  },
+  {
+    "nome": "Andria",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "lat": 41.2261,
+    "lon": 16.2986,
+    "pop": 100000
+  },
+  {
+    "nome": "Brindisi",
+    "provincia": "Brindisi",
+    "regione": "Puglia",
+    "lat": 40.6327,
+    "lon": 17.9417,
+    "pop": 88000
+  },
+  {
+    "nome": "Barletta",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "lat": 41.3147,
+    "lon": 16.2756,
+    "pop": 94000
+  },
+  {
+    "nome": "Potenza",
+    "provincia": "Potenza",
+    "regione": "Basilicata",
+    "lat": 40.6408,
+    "lon": 15.8058,
+    "pop": 68000
+  },
+  {
+    "nome": "Matera",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "lat": 40.6663,
+    "lon": 16.6044,
+    "pop": 60000
+  },
+  {
+    "nome": "Reggio Calabria",
+    "provincia": "Reggio Calabria",
+    "regione": "Calabria",
+    "lat": 38.1147,
+    "lon": 15.65,
+    "pop": 182551
+  },
+  {
+    "nome": "Catanzaro",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "lat": 38.91,
+    "lon": 16.595,
+    "pop": 90000
+  },
+  {
+    "nome": "Cosenza",
+    "provincia": "Cosenza",
+    "regione": "Calabria",
+    "lat": 39.2986,
+    "lon": 16.2536,
+    "pop": 67000
+  },
+  {
+    "nome": "Crotone",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "lat": 39.085,
+    "lon": 17.1275,
+    "pop": 62000
+  },
+  {
+    "nome": "Vibo Valentia",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "lat": 38.6753,
+    "lon": 16.0969,
+    "pop": 33000
+  },
+  {
+    "nome": "Lamezia Terme",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "lat": 38.9706,
+    "lon": 16.3172,
+    "pop": 71000
+  },
+  {
+    "nome": "Palermo",
+    "provincia": "Palermo",
+    "regione": "Sicilia",
+    "lat": 38.1157,
+    "lon": 13.3613,
+    "pop": 657561
+  },
+  {
+    "nome": "Catania",
+    "provincia": "Catania",
+    "regione": "Sicilia",
+    "lat": 37.5023,
+    "lon": 15.0873,
+    "pop": 313110
+  },
+  {
+    "nome": "Messina",
+    "provincia": "Messina",
+    "regione": "Sicilia",
+    "lat": 38.1938,
+    "lon": 15.554,
+    "pop": 231708
+  },
+  {
+    "nome": "Siracusa",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "lat": 37.0755,
+    "lon": 15.2866,
+    "pop": 121171
+  },
+  {
+    "nome": "Ragusa",
+    "provincia": "Ragusa",
+    "regione": "Sicilia",
+    "lat": 36.9281,
+    "lon": 14.7314,
+    "pop": 73000
+  },
+  {
+    "nome": "Trapani",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "lat": 38.0179,
+    "lon": 12.5364,
+    "pop": 68000
+  },
+  {
+    "nome": "Agrigento",
+    "provincia": "Agrigento",
+    "regione": "Sicilia",
+    "lat": 37.3111,
+    "lon": 13.5765,
+    "pop": 59000
+  },
+  {
+    "nome": "Caltanissetta",
+    "provincia": "Caltanissetta",
+    "regione": "Sicilia",
+    "lat": 37.49,
+    "lon": 14.0628,
+    "pop": 62000
+  },
+  {
+    "nome": "Marsala",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "lat": 37.7989,
+    "lon": 12.4333,
+    "pop": 83000
+  },
+  {
+    "nome": "Gela",
+    "provincia": "Caltanissetta",
+    "regione": "Sicilia",
+    "lat": 37.0675,
+    "lon": 14.2506,
+    "pop": 74000
+  },
+  {
+    "nome": "Cagliari",
+    "provincia": "Cagliari",
+    "regione": "Sardegna",
+    "lat": 39.2238,
+    "lon": 9.1217,
+    "pop": 154083
+  },
+  {
+    "nome": "Sassari",
+    "provincia": "Sassari",
+    "regione": "Sardegna",
+    "lat": 40.7259,
+    "lon": 8.5556,
+    "pop": 127525
+  },
+  {
+    "nome": "Nuoro",
+    "provincia": "Nuoro",
+    "regione": "Sardegna",
+    "lat": 40.3183,
+    "lon": 9.3306,
+    "pop": 36000
+  },
+  {
+    "nome": "Oristano",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "lat": 39.9061,
+    "lon": 8.5886,
+    "pop": 31000
+  },
+  {
+    "nome": "Olbia",
+    "provincia": "Sassari",
+    "regione": "Sardegna",
+    "lat": 40.9208,
+    "lon": 9.4978,
+    "pop": 60000
+  },
+  {
+    "nome": "Quartu Sant Elena",
+    "provincia": "Cagliari",
+    "regione": "Sardegna",
+    "lat": 39.2381,
+    "lon": 9.1808,
+    "pop": 71000
+  },
+  {
+    "nome": "Aosta",
+    "provincia": "Aosta",
+    "regione": "Valle d'Aosta",
+    "lat": 45.7372,
+    "lon": 7.315,
+    "pop": 34000
+  }
+]
