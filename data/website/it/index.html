@@ -1,43 +1,35 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Italia — WeatherArb Intelligence Network</title>
-  <meta name="description" content="Anomalie meteo in tempo reale per 65 province italiane e 151 comuni. Z-Score NASA POWER, HDD/CDD energy data. WeatherArb.">
-  <style>
-    :root{--bg:#040608;--s:#0a0d12;--b:#141920;--ba:#1e2d3d;--t:#c8d6e5;--m:#4a5568;--bl:#3b82f6}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{background:var(--bg);color:var(--t);font-family:-apple-system,sans-serif;min-height:100vh}
-    .hdr{border-bottom:1px solid var(--b);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;background:rgba(4,6,8,.95);backdrop-filter:blur(12px)}
-    .logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--t);text-decoration:none}.logo span{color:var(--bl)}
-    .nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--m);text-decoration:none;margin-left:16px}.nav a:hover{color:var(--t)}
-    .wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}
-    .bc{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--m);margin-bottom:16px}.bc a{color:var(--m);text-decoration:none}
-    h1{font-size:clamp(32px,4vw,56px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
-    .sub{font-size:13px;color:var(--m);margin-bottom:32px}.sub span{color:var(--bl)}
-
-    /* REGIONI NAV */
-    .reg-nav{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:40px;padding:16px;background:var(--s);border:1px solid var(--b);border-radius:10px}
-    .reg-nav a{font-size:11px;color:var(--m);text-decoration:none;padding:4px 10px;border:1px solid var(--b);border-radius:100px;transition:.15s}
-    .reg-nav a:hover{border-color:var(--bl);color:var(--bl)}
-
-    .reg-section{margin-bottom:40px}
-    .reg-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--b)}
-    .reg-title{font-size:16px;font-weight:700;color:var(--t)}
-    .reg-link{font-size:11px;color:var(--bl);text-decoration:none}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
-    .nc{display:block;padding:14px 16px;background:var(--s);border:1px solid var(--b);border-radius:10px;text-decoration:none;transition:.15s}
-    .nc:hover{border-color:var(--bl);background:#0d1520}
-    .nc-comune{border-style:dashed;opacity:.85}
-    .nc-comune:hover{opacity:1;border-style:solid}
-    .nn{display:block;font-size:13px;font-weight:600;color:var(--t);margin-bottom:3px}
-    .ns{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--m)}
-    .ftr{border-top:1px solid var(--b);padding:24px;text-align:center;font-size:11px;color:var(--m)}
-    .ftr a{color:var(--m);text-decoration:none}
-    @media(max-width:640px){.grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}}
-  </style>
-</head>
+<html lang="it"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Italia — WeatherArb Intelligence Network</title>
+<meta name="description" content="Anomalie meteo per 65 province e 151 comuni italiani. Z-Score NASA POWER 25 anni. HDD/CDD energy data. WeatherArb.">
+<style>
+:root{--bg:#040608;--s:#0a0d12;--b:#141920;--t:#c8d6e5;--m:#4a5568;--bl:#3b82f6}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--t);font-family:-apple-system,sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid var(--b);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;background:rgba(4,6,8,.95);backdrop-filter:blur(12px)}
+.logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--t);text-decoration:none}.logo span{color:var(--bl)}
+.nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--m);text-decoration:none;margin-left:16px}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}
+.bc{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--m);margin-bottom:16px}.bc a{color:var(--m);text-decoration:none}
+h1{font-size:clamp(32px,4vw,56px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.sub{font-size:13px;color:var(--m);margin-bottom:28px}.sub b{color:var(--bl)}
+.reg-nav{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:36px;padding:14px;background:var(--s);border:1px solid var(--b);border-radius:10px}
+.reg-nav a{font-size:11px;color:var(--m);text-decoration:none;padding:4px 10px;border:1px solid var(--b);border-radius:100px;transition:.15s}
+.reg-nav a:hover{border-color:var(--bl);color:var(--bl)}
+.reg-section{margin-bottom:32px}
+.reg-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--b)}
+.reg-name{font-size:15px;font-weight:700}
+.reg-link{font-size:11px;color:var(--bl);text-decoration:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:7px}
+.nc{display:block;padding:13px 15px;background:var(--s);border:1px solid var(--b);border-radius:9px;text-decoration:none;transition:.15s}
+.nc:hover{border-color:var(--bl);background:#0d1520}
+.nc-c{border-style:dashed;opacity:.85}.nc-c:hover{border-style:solid;opacity:1}
+.nn{display:block;font-size:13px;font-weight:600;color:var(--t);margin-bottom:2px}
+.ns{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--m)}
+.ftr{border-top:1px solid var(--b);padding:20px;text-align:center;font-size:11px;color:var(--m)}
+.ftr a{color:var(--m);text-decoration:none}
+</style></head>
 <body>
 <header class="hdr">
   <a href="/" class="logo">Weather<span>Arb</span></a>
@@ -46,247 +38,35 @@
 <div class="wrap">
   <div class="bc"><a href="/">WeatherArb</a> / Italia</div>
   <h1>Italia</h1>
-  <p class="sub"><span>65</span> province &middot; <span>151</span> comuni &middot; dati live Z-Score NASA POWER</p>
-
-  <!-- NAVIGAZIONE REGIONI -->
-  <div class="reg-nav">
-    <a href="#andalucia">Andalucía</a><a href="#auvergne-rhone-alpes">Auvergne-Rhône-Alpes</a><a href="#baden-wurttemberg">Baden-Württemberg</a><a href="#bayern">Bayern</a><a href="#berlin">Berlin</a><a href="#cataluna">Cataluña</a><a href="#comunidad-de-madrid">Comunidad de Madrid</a><a href="#comunitat-valenciana">Comunitat Valenciana</a><a href="#emilia-romagna">Emilia-Romagna</a><a href="#friuli-venezia-giulia">Friuli-Venezia Giulia</a><a href="#hamburg">Hamburg</a><a href="#hessen">Hessen</a><a href="#liguria">Liguria</a><a href="#lombardia">Lombardia</a><a href="#nordrhein-westfalen">Nordrhein-Westfalen</a><a href="#nouvelle-aquitaine">Nouvelle-Aquitaine</a><a href="#pais-vasco">País Vasco</a><a href="#piemonte">Piemonte</a><a href="#provence-alpes">Provence-Alpes</a><a href="#trentino-alto-adige">Trentino-Alto Adige</a><a href="#valle-daosta">Valle d'Aosta</a><a href="#veneto">Veneto</a><a href="#ile-de-france">Île-de-France</a>
-  </div>
-
-  
-<div class="reg-section" id="andalucia">
-  <div class="reg-header">
-    <h2 class="reg-title">Andalucía</h2>
-    <a href="/it/andalucia/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/sevilla/" class="nc"><span class="nn">Sevilla</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="auvergne-rhone-alpes">
-  <div class="reg-header">
-    <h2 class="reg-title">Auvergne-Rhône-Alpes</h2>
-    <a href="/it/auvergne-rhone-alpes/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/lyon/" class="nc"><span class="nn">Lyon</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="baden-wurttemberg">
-  <div class="reg-header">
-    <h2 class="reg-title">Baden-Württemberg</h2>
-    <a href="/it/baden-wurttemberg/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/stuttgart/" class="nc"><span class="nn">Stuttgart</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="bayern">
-  <div class="reg-header">
-    <h2 class="reg-title">Bayern</h2>
-    <a href="/it/bayern/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/munchen/" class="nc"><span class="nn">München</span><span class="ns">Provincia</span></a><a href="/it/nurnberg/" class="nc"><span class="nn">Nürnberg</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="berlin">
-  <div class="reg-header">
-    <h2 class="reg-title">Berlin</h2>
-    <a href="/it/berlin/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/berlin/" class="nc"><span class="nn">Berlin</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="cataluna">
-  <div class="reg-header">
-    <h2 class="reg-title">Cataluña</h2>
-    <a href="/it/cataluna/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/barcelona/" class="nc"><span class="nn">Barcelona</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="comunidad-de-madrid">
-  <div class="reg-header">
-    <h2 class="reg-title">Comunidad de Madrid</h2>
-    <a href="/it/comunidad-de-madrid/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/madrid/" class="nc"><span class="nn">Madrid</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="comunitat-valenciana">
-  <div class="reg-header">
-    <h2 class="reg-title">Comunitat Valenciana</h2>
-    <a href="/it/comunitat-valenciana/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/valencia/" class="nc"><span class="nn">Valencia</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="emilia-romagna">
-  <div class="reg-header">
-    <h2 class="reg-title">Emilia-Romagna<span style="font-size:11px;color:var(--muted);margin-left:8px">+ 12 comuni</span></h2>
-    <a href="/it/emilia-romagna/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/bologna/" class="nc"><span class="nn">Bologna</span><span class="ns">Provincia</span></a><a href="/it/ferrara/" class="nc"><span class="nn">Ferrara</span><span class="ns">Provincia</span></a><a href="/it/forli-cesena/" class="nc"><span class="nn">Forlì-Cesena</span><span class="ns">Provincia</span></a><a href="/it/modena/" class="nc"><span class="nn">Modena</span><span class="ns">Provincia</span></a><a href="/it/parma/" class="nc"><span class="nn">Parma</span><span class="ns">Provincia</span></a><a href="/it/piacenza/" class="nc"><span class="nn">Piacenza</span><span class="ns">Provincia</span></a><a href="/it/ravenna/" class="nc"><span class="nn">Ravenna</span><span class="ns">Provincia</span></a><a href="/it/reggio-emilia/" class="nc"><span class="nn">Reggio Emilia</span><span class="ns">Provincia</span></a><a href="/it/rimini/" class="nc"><span class="nn">Rimini</span><span class="ns">Provincia</span></a>
-    <a href="/it/emilia-romagna/bologna/" class="nc nc-comune"><span class="nn">Bologna</span><span class="ns">Comune &middot; Bologna</span></a><a href="/it/emilia-romagna/parma/" class="nc nc-comune"><span class="nn">Parma</span><span class="ns">Comune &middot; Parma</span></a><a href="/it/emilia-romagna/modena/" class="nc nc-comune"><span class="nn">Modena</span><span class="ns">Comune &middot; Modena</span></a><a href="/it/emilia-romagna/reggio-emilia/" class="nc nc-comune"><span class="nn">Reggio Emilia</span><span class="ns">Comune &middot; Reggio Emili</span></a><a href="/it/emilia-romagna/ravenna/" class="nc nc-comune"><span class="nn">Ravenna</span><span class="ns">Comune &middot; Ravenna</span></a><a href="/it/emilia-romagna/rimini/" class="nc nc-comune"><span class="nn">Rimini</span><span class="ns">Comune &middot; Rimini</span></a><a href="/it/emilia-romagna/ferrara/" class="nc nc-comune"><span class="nn">Ferrara</span><span class="ns">Comune &middot; Ferrara</span></a><a href="/it/emilia-romagna/forli/" class="nc nc-comune"><span class="nn">Forli</span><span class="ns">Comune &middot; Forli-Cesena</span></a>
-  </div>
-</div>
-<div class="reg-section" id="friuli-venezia-giulia">
-  <div class="reg-header">
-    <h2 class="reg-title">Friuli-Venezia Giulia<span style="font-size:11px;color:var(--muted);margin-left:8px">+ 4 comuni</span></h2>
-    <a href="/it/friuli-venezia-giulia/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/gorizia/" class="nc"><span class="nn">Gorizia</span><span class="ns">Provincia</span></a><a href="/it/pordenone/" class="nc"><span class="nn">Pordenone</span><span class="ns">Provincia</span></a><a href="/it/trieste/" class="nc"><span class="nn">Trieste</span><span class="ns">Provincia</span></a><a href="/it/udine/" class="nc"><span class="nn">Udine</span><span class="ns">Provincia</span></a>
-    <a href="/it/friuli-venezia-giulia/trieste/" class="nc nc-comune"><span class="nn">Trieste</span><span class="ns">Comune &middot; Trieste</span></a><a href="/it/friuli-venezia-giulia/udine/" class="nc nc-comune"><span class="nn">Udine</span><span class="ns">Comune &middot; Udine</span></a><a href="/it/friuli-venezia-giulia/pordenone/" class="nc nc-comune"><span class="nn">Pordenone</span><span class="ns">Comune &middot; Pordenone</span></a><a href="/it/friuli-venezia-giulia/gorizia/" class="nc nc-comune"><span class="nn">Gorizia</span><span class="ns">Comune &middot; Gorizia</span></a>
-  </div>
-</div>
-<div class="reg-section" id="hamburg">
-  <div class="reg-header">
-    <h2 class="reg-title">Hamburg</h2>
-    <a href="/it/hamburg/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/hamburg/" class="nc"><span class="nn">Hamburg</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="hessen">
-  <div class="reg-header">
-    <h2 class="reg-title">Hessen</h2>
-    <a href="/it/hessen/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/frankfurt/" class="nc"><span class="nn">Frankfurt</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="liguria">
-  <div class="reg-header">
-    <h2 class="reg-title">Liguria<span style="font-size:11px;color:var(--muted);margin-left:8px">+ 5 comuni</span></h2>
-    <a href="/it/liguria/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/genova/" class="nc"><span class="nn">Genova</span><span class="ns">Provincia</span></a><a href="/it/imperia/" class="nc"><span class="nn">Imperia</span><span class="ns">Provincia</span></a><a href="/it/la-spezia/" class="nc"><span class="nn">La Spezia</span><span class="ns">Provincia</span></a><a href="/it/savona/" class="nc"><span class="nn">Savona</span><span class="ns">Provincia</span></a>
-    <a href="/it/liguria/genova/" class="nc nc-comune"><span class="nn">Genova</span><span class="ns">Comune &middot; Genova</span></a><a href="/it/liguria/la-spezia/" class="nc nc-comune"><span class="nn">La Spezia</span><span class="ns">Comune &middot; La Spezia</span></a><a href="/it/liguria/savona/" class="nc nc-comune"><span class="nn">Savona</span><span class="ns">Comune &middot; Savona</span></a><a href="/it/liguria/sanremo/" class="nc nc-comune"><span class="nn">Sanremo</span><span class="ns">Comune &middot; Imperia</span></a><a href="/it/liguria/imperia/" class="nc nc-comune"><span class="nn">Imperia</span><span class="ns">Comune &middot; Imperia</span></a>
-  </div>
-</div>
-<div class="reg-section" id="lombardia">
-  <div class="reg-header">
-    <h2 class="reg-title">Lombardia<span style="font-size:11px;color:var(--muted);margin-left:8px">+ 20 comuni</span></h2>
-    <a href="/it/lombardia/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/bergamo/" class="nc"><span class="nn">Bergamo</span><span class="ns">Provincia</span></a><a href="/it/brescia/" class="nc"><span class="nn">Brescia</span><span class="ns">Provincia</span></a><a href="/it/como/" class="nc"><span class="nn">Como</span><span class="ns">Provincia</span></a><a href="/it/cremona/" class="nc"><span class="nn">Cremona</span><span class="ns">Provincia</span></a><a href="/it/lecco/" class="nc"><span class="nn">Lecco</span><span class="ns">Provincia</span></a><a href="/it/lodi/" class="nc"><span class="nn">Lodi</span><span class="ns">Provincia</span></a><a href="/it/mantova/" class="nc"><span class="nn">Mantova</span><span class="ns">Provincia</span></a><a href="/it/milano/" class="nc"><span class="nn">Milano</span><span class="ns">Provincia</span></a><a href="/it/monza-e-brianza/" class="nc"><span class="nn">Monza e Brianza</span><span class="ns">Provincia</span></a><a href="/it/pavia/" class="nc"><span class="nn">Pavia</span><span class="ns">Provincia</span></a><a href="/it/sondrio/" class="nc"><span class="nn">Sondrio</span><span class="ns">Provincia</span></a><a href="/it/varese/" class="nc"><span class="nn">Varese</span><span class="ns">Provincia</span></a>
-    <a href="/it/lombardia/milano/" class="nc nc-comune"><span class="nn">Milano</span><span class="ns">Comune &middot; Milano</span></a><a href="/it/lombardia/brescia/" class="nc nc-comune"><span class="nn">Brescia</span><span class="ns">Comune &middot; Brescia</span></a><a href="/it/lombardia/monza/" class="nc nc-comune"><span class="nn">Monza</span><span class="ns">Comune &middot; Monza e dell</span></a><a href="/it/lombardia/bergamo/" class="nc nc-comune"><span class="nn">Bergamo</span><span class="ns">Comune &middot; Bergamo</span></a><a href="/it/lombardia/como/" class="nc nc-comune"><span class="nn">Como</span><span class="ns">Comune &middot; Como</span></a><a href="/it/lombardia/busto-arsizio/" class="nc nc-comune"><span class="nn">Busto Arsizio</span><span class="ns">Comune &middot; Varese</span></a><a href="/it/lombardia/sesto-san-giovanni/" class="nc nc-comune"><span class="nn">Sesto San Giovanni</span><span class="ns">Comune &middot; Milano</span></a><a href="/it/lombardia/varese/" class="nc nc-comune"><span class="nn">Varese</span><span class="ns">Comune &middot; Varese</span></a>
-  </div>
-</div>
-<div class="reg-section" id="nordrhein-westfalen">
-  <div class="reg-header">
-    <h2 class="reg-title">Nordrhein-Westfalen</h2>
-    <a href="/it/nordrhein-westfalen/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/dusseldorf/" class="nc"><span class="nn">Düsseldorf</span><span class="ns">Provincia</span></a><a href="/it/koln/" class="nc"><span class="nn">Köln</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="nouvelle-aquitaine">
-  <div class="reg-header">
-    <h2 class="reg-title">Nouvelle-Aquitaine</h2>
-    <a href="/it/nouvelle-aquitaine/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/bordeaux/" class="nc"><span class="nn">Bordeaux</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="pais-vasco">
-  <div class="reg-header">
-    <h2 class="reg-title">País Vasco</h2>
-    <a href="/it/pais-vasco/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/bilbao/" class="nc"><span class="nn">Bilbao</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="piemonte">
-  <div class="reg-header">
-    <h2 class="reg-title">Piemonte<span style="font-size:11px;color:var(--muted);margin-left:8px">+ 22 comuni</span></h2>
-    <a href="/it/piemonte/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/alessandria/" class="nc"><span class="nn">Alessandria</span><span class="ns">Provincia</span></a><a href="/it/asti/" class="nc"><span class="nn">Asti</span><span class="ns">Provincia</span></a><a href="/it/biella/" class="nc"><span class="nn">Biella</span><span class="ns">Provincia</span></a><a href="/it/cuneo/" class="nc"><span class="nn">Cuneo</span><span class="ns">Provincia</span></a><a href="/it/novara/" class="nc"><span class="nn">Novara</span><span class="ns">Provincia</span></a><a href="/it/torino/" class="nc"><span class="nn">Torino</span><span class="ns">Provincia</span></a><a href="/it/verbano-cusio-ossola/" class="nc"><span class="nn">Verbano-Cusio-Ossola</span><span class="ns">Provincia</span></a><a href="/it/vercelli/" class="nc"><span class="nn">Vercelli</span><span class="ns">Provincia</span></a>
-    <a href="/it/piemonte/torino/" class="nc nc-comune"><span class="nn">Torino</span><span class="ns">Comune &middot; Torino</span></a><a href="/it/piemonte/novara/" class="nc nc-comune"><span class="nn">Novara</span><span class="ns">Comune &middot; Novara</span></a><a href="/it/piemonte/alessandria/" class="nc nc-comune"><span class="nn">Alessandria</span><span class="ns">Comune &middot; Alessandria</span></a><a href="/it/piemonte/asti/" class="nc nc-comune"><span class="nn">Asti</span><span class="ns">Comune &middot; Asti</span></a><a href="/it/piemonte/moncalieri/" class="nc nc-comune"><span class="nn">Moncalieri</span><span class="ns">Comune &middot; Torino</span></a><a href="/it/piemonte/cuneo/" class="nc nc-comune"><span class="nn">Cuneo</span><span class="ns">Comune &middot; Cuneo</span></a><a href="/it/piemonte/collegno/" class="nc nc-comune"><span class="nn">Collegno</span><span class="ns">Comune &middot; Torino</span></a><a href="/it/piemonte/rivoli/" class="nc nc-comune"><span class="nn">Rivoli</span><span class="ns">Comune &middot; Torino</span></a>
-  </div>
-</div>
-<div class="reg-section" id="provence-alpes">
-  <div class="reg-header">
-    <h2 class="reg-title">Provence-Alpes</h2>
-    <a href="/it/provence-alpes/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/marseille/" class="nc"><span class="nn">Marseille</span><span class="ns">Provincia</span></a><a href="/it/nice/" class="nc"><span class="nn">Nice</span><span class="ns">Provincia</span></a>
-    
-  </div>
-</div>
-<div class="reg-section" id="trentino-alto-adige">
-  <div class="reg-header">
-    <h2 class="reg-title">Trentino-Alto Adige<span style="font-size:11px;color:var(--muted);margin-left:8px">+ 4 comuni</span></h2>
-    <a href="/it/trentino-alto-adige/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/bolzano/" class="nc"><span class="nn">Bolzano</span><span class="ns">Provincia</span></a><a href="/it/trento/" class="nc"><span class="nn">Trento</span><span class="ns">Provincia</span></a>
-    <a href="/it/trentino-alto-adige/trento/" class="nc nc-comune"><span class="nn">Trento</span><span class="ns">Comune &middot; Trento</span></a><a href="/it/trentino-alto-adige/bolzano/" class="nc nc-comune"><span class="nn">Bolzano</span><span class="ns">Comune &middot; Bolzano</span></a><a href="/it/trentino-alto-adige/merano/" class="nc nc-comune"><span class="nn">Merano</span><span class="ns">Comune &middot; Bolzano</span></a><a href="/it/trentino-alto-adige/rovereto/" class="nc nc-comune"><span class="nn">Rovereto</span><span class="ns">Comune &middot; Trento</span></a>
-  </div>
-</div>
-<div class="reg-section" id="valle-daosta">
-  <div class="reg-header">
-    <h2 class="reg-title">Valle d'Aosta<span style="font-size:11px;color:var(--muted);margin-left:8px">+ 1 comuni</span></h2>
-    <a href="/it/valle-daosta/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/aosta/" class="nc"><span class="nn">Aosta</span><span class="ns">Provincia</span></a>
-    <a href="/it/valle-daosta/aosta/" class="nc nc-comune"><span class="nn">Aosta</span><span class="ns">Comune &middot; Aosta</span></a>
-  </div>
-</div>
-<div class="reg-section" id="veneto">
-  <div class="reg-header">
-    <h2 class="reg-title">Veneto<span style="font-size:11px;color:var(--muted);margin-left:8px">+ 12 comuni</span></h2>
-    <a href="/it/veneto/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/belluno/" class="nc"><span class="nn">Belluno</span><span class="ns">Provincia</span></a><a href="/it/padova/" class="nc"><span class="nn">Padova</span><span class="ns">Provincia</span></a><a href="/it/rovigo/" class="nc"><span class="nn">Rovigo</span><span class="ns">Provincia</span></a><a href="/it/treviso/" class="nc"><span class="nn">Treviso</span><span class="ns">Provincia</span></a><a href="/it/venezia/" class="nc"><span class="nn">Venezia</span><span class="ns">Provincia</span></a><a href="/it/verona/" class="nc"><span class="nn">Verona</span><span class="ns">Provincia</span></a><a href="/it/vicenza/" class="nc"><span class="nn">Vicenza</span><span class="ns">Provincia</span></a>
-    <a href="/it/veneto/venezia/" class="nc nc-comune"><span class="nn">Venezia</span><span class="ns">Comune &middot; Venezia</span></a><a href="/it/veneto/verona/" class="nc nc-comune"><span class="nn">Verona</span><span class="ns">Comune &middot; Verona</span></a><a href="/it/veneto/padova/" class="nc nc-comune"><span class="nn">Padova</span><span class="ns">Comune &middot; Padova</span></a><a href="/it/veneto/vicenza/" class="nc nc-comune"><span class="nn">Vicenza</span><span class="ns">Comune &middot; Vicenza</span></a><a href="/it/veneto/mestre/" class="nc nc-comune"><span class="nn">Mestre</span><span class="ns">Comune &middot; Venezia</span></a><a href="/it/veneto/treviso/" class="nc nc-comune"><span class="nn">Treviso</span><span class="ns">Comune &middot; Treviso</span></a><a href="/it/veneto/rovigo/" class="nc nc-comune"><span class="nn">Rovigo</span><span class="ns">Comune &middot; Rovigo</span></a><a href="/it/veneto/chioggia/" class="nc nc-comune"><span class="nn">Chioggia</span><span class="ns">Comune &middot; Venezia</span></a>
-  </div>
-</div>
-<div class="reg-section" id="ile-de-france">
-  <div class="reg-header">
-    <h2 class="reg-title">Île-de-France</h2>
-    <a href="/it/ile-de-france/" class="reg-link">Hub regionale →</a>
-  </div>
-  <div class="grid">
-    <a href="/it/paris/" class="nc"><span class="nn">Paris</span><span class="ns">Provincia</span></a>
-    
-  </div>
+  <p class="sub"><b>65</b> province &middot; <b>151</b> comuni &middot; Z-Score NASA POWER 25 anni</p>
+  <div class="reg-nav"><a href="#emilia-romagna">Emilia-Romagna</a><a href="#friuli-venezia-giulia">Friuli-Venezia Giulia</a><a href="#liguria">Liguria</a><a href="#lombardia">Lombardia</a><a href="#piemonte">Piemonte</a><a href="#trentino-alto-adige">Trentino-Alto Adige</a><a href="#valle-daosta">Valle d'Aosta</a><a href="#veneto">Veneto</a></div>
+  <div class="reg-section" id="emilia-romagna">
+  <div class="reg-hdr"><span class="reg-name">Emilia-Romagna <span style="font-size:11px;color:var(--m);font-weight:400">+12 comuni</span></span><a href="/it/emilia-romagna/" class="reg-link">Vedi tutto →</a></div>
+  <div class="grid"><a href="/it/bologna/" class="nc"><span class="nn">Bologna</span><span class="ns">Provincia</span></a><a href="/it/ferrara/" class="nc"><span class="nn">Ferrara</span><span class="ns">Provincia</span></a><a href="/it/forli-cesena/" class="nc"><span class="nn">Forlì-Cesena</span><span class="ns">Provincia</span></a><a href="/it/modena/" class="nc"><span class="nn">Modena</span><span class="ns">Provincia</span></a><a href="/it/parma/" class="nc"><span class="nn">Parma</span><span class="ns">Provincia</span></a><a href="/it/piacenza/" class="nc"><span class="nn">Piacenza</span><span class="ns">Provincia</span></a><a href="/it/ravenna/" class="nc"><span class="nn">Ravenna</span><span class="ns">Provincia</span></a><a href="/it/reggio-emilia/" class="nc"><span class="nn">Reggio Emilia</span><span class="ns">Provincia</span></a><a href="/it/rimini/" class="nc"><span class="nn">Rimini</span><span class="ns">Provincia</span></a><a href="/it/emilia-romagna/bologna/" class="nc nc-c"><span class="nn">Bologna</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/parma/" class="nc nc-c"><span class="nn">Parma</span><span class="ns">Parma</span></a><a href="/it/emilia-romagna/modena/" class="nc nc-c"><span class="nn">Modena</span><span class="ns">Modena</span></a><a href="/it/emilia-romagna/reggio-emilia/" class="nc nc-c"><span class="nn">Reggio Emilia</span><span class="ns">Reggio Emilia</span></a><a href="/it/emilia-romagna/ravenna/" class="nc nc-c"><span class="nn">Ravenna</span><span class="ns">Ravenna</span></a><a href="/it/emilia-romagna/rimini/" class="nc nc-c"><span class="nn">Rimini</span><span class="ns">Rimini</span></a></div>
+</div><div class="reg-section" id="friuli-venezia-giulia">
+  <div class="reg-hdr"><span class="reg-name">Friuli-Venezia Giulia <span style="font-size:11px;color:var(--m);font-weight:400">+4 comuni</span></span><a href="/it/friuli-venezia-giulia/" class="reg-link">Vedi tutto →</a></div>
+  <div class="grid"><a href="/it/gorizia/" class="nc"><span class="nn">Gorizia</span><span class="ns">Provincia</span></a><a href="/it/pordenone/" class="nc"><span class="nn">Pordenone</span><span class="ns">Provincia</span></a><a href="/it/trieste/" class="nc"><span class="nn">Trieste</span><span class="ns">Provincia</span></a><a href="/it/udine/" class="nc"><span class="nn">Udine</span><span class="ns">Provincia</span></a><a href="/it/friuli-venezia-giulia/trieste/" class="nc nc-c"><span class="nn">Trieste</span><span class="ns">Trieste</span></a><a href="/it/friuli-venezia-giulia/udine/" class="nc nc-c"><span class="nn">Udine</span><span class="ns">Udine</span></a><a href="/it/friuli-venezia-giulia/pordenone/" class="nc nc-c"><span class="nn">Pordenone</span><span class="ns">Pordenone</span></a><a href="/it/friuli-venezia-giulia/gorizia/" class="nc nc-c"><span class="nn">Gorizia</span><span class="ns">Gorizia</span></a></div>
+</div><div class="reg-section" id="liguria">
+  <div class="reg-hdr"><span class="reg-name">Liguria <span style="font-size:11px;color:var(--m);font-weight:400">+5 comuni</span></span><a href="/it/liguria/" class="reg-link">Vedi tutto →</a></div>
+  <div class="grid"><a href="/it/genova/" class="nc"><span class="nn">Genova</span><span class="ns">Provincia</span></a><a href="/it/imperia/" class="nc"><span class="nn">Imperia</span><span class="ns">Provincia</span></a><a href="/it/la-spezia/" class="nc"><span class="nn">La Spezia</span><span class="ns">Provincia</span></a><a href="/it/savona/" class="nc"><span class="nn">Savona</span><span class="ns">Provincia</span></a><a href="/it/liguria/genova/" class="nc nc-c"><span class="nn">Genova</span><span class="ns">Genova</span></a><a href="/it/liguria/la-spezia/" class="nc nc-c"><span class="nn">La Spezia</span><span class="ns">La Spezia</span></a><a href="/it/liguria/savona/" class="nc nc-c"><span class="nn">Savona</span><span class="ns">Savona</span></a><a href="/it/liguria/sanremo/" class="nc nc-c"><span class="nn">Sanremo</span><span class="ns">Imperia</span></a><a href="/it/liguria/imperia/" class="nc nc-c"><span class="nn">Imperia</span><span class="ns">Imperia</span></a></div>
+</div><div class="reg-section" id="lombardia">
+  <div class="reg-hdr"><span class="reg-name">Lombardia <span style="font-size:11px;color:var(--m);font-weight:400">+20 comuni</span></span><a href="/it/lombardia/" class="reg-link">Vedi tutto →</a></div>
+  <div class="grid"><a href="/it/bergamo/" class="nc"><span class="nn">Bergamo</span><span class="ns">Provincia</span></a><a href="/it/brescia/" class="nc"><span class="nn">Brescia</span><span class="ns">Provincia</span></a><a href="/it/como/" class="nc"><span class="nn">Como</span><span class="ns">Provincia</span></a><a href="/it/cremona/" class="nc"><span class="nn">Cremona</span><span class="ns">Provincia</span></a><a href="/it/lecco/" class="nc"><span class="nn">Lecco</span><span class="ns">Provincia</span></a><a href="/it/lodi/" class="nc"><span class="nn">Lodi</span><span class="ns">Provincia</span></a><a href="/it/mantova/" class="nc"><span class="nn">Mantova</span><span class="ns">Provincia</span></a><a href="/it/milano/" class="nc"><span class="nn">Milano</span><span class="ns">Provincia</span></a><a href="/it/monza-e-brianza/" class="nc"><span class="nn">Monza e Brianza</span><span class="ns">Provincia</span></a><a href="/it/pavia/" class="nc"><span class="nn">Pavia</span><span class="ns">Provincia</span></a><a href="/it/sondrio/" class="nc"><span class="nn">Sondrio</span><span class="ns">Provincia</span></a><a href="/it/varese/" class="nc"><span class="nn">Varese</span><span class="ns">Provincia</span></a><a href="/it/lombardia/milano/" class="nc nc-c"><span class="nn">Milano</span><span class="ns">Milano</span></a><a href="/it/lombardia/brescia/" class="nc nc-c"><span class="nn">Brescia</span><span class="ns">Brescia</span></a><a href="/it/lombardia/monza/" class="nc nc-c"><span class="nn">Monza</span><span class="ns">Monza e della </span></a><a href="/it/lombardia/bergamo/" class="nc nc-c"><span class="nn">Bergamo</span><span class="ns">Bergamo</span></a><a href="/it/lombardia/como/" class="nc nc-c"><span class="nn">Como</span><span class="ns">Como</span></a><a href="/it/lombardia/busto-arsizio/" class="nc nc-c"><span class="nn">Busto Arsizio</span><span class="ns">Varese</span></a></div>
+</div><div class="reg-section" id="piemonte">
+  <div class="reg-hdr"><span class="reg-name">Piemonte <span style="font-size:11px;color:var(--m);font-weight:400">+22 comuni</span></span><a href="/it/piemonte/" class="reg-link">Vedi tutto →</a></div>
+  <div class="grid"><a href="/it/alessandria/" class="nc"><span class="nn">Alessandria</span><span class="ns">Provincia</span></a><a href="/it/asti/" class="nc"><span class="nn">Asti</span><span class="ns">Provincia</span></a><a href="/it/biella/" class="nc"><span class="nn">Biella</span><span class="ns">Provincia</span></a><a href="/it/cuneo/" class="nc"><span class="nn">Cuneo</span><span class="ns">Provincia</span></a><a href="/it/novara/" class="nc"><span class="nn">Novara</span><span class="ns">Provincia</span></a><a href="/it/torino/" class="nc"><span class="nn">Torino</span><span class="ns">Provincia</span></a><a href="/it/verbano-cusio-ossola/" class="nc"><span class="nn">Verbano-Cusio-Ossola</span><span class="ns">Provincia</span></a><a href="/it/vercelli/" class="nc"><span class="nn">Vercelli</span><span class="ns">Provincia</span></a><a href="/it/piemonte/torino/" class="nc nc-c"><span class="nn">Torino</span><span class="ns">Torino</span></a><a href="/it/piemonte/novara/" class="nc nc-c"><span class="nn">Novara</span><span class="ns">Novara</span></a><a href="/it/piemonte/alessandria/" class="nc nc-c"><span class="nn">Alessandria</span><span class="ns">Alessandria</span></a><a href="/it/piemonte/asti/" class="nc nc-c"><span class="nn">Asti</span><span class="ns">Asti</span></a><a href="/it/piemonte/moncalieri/" class="nc nc-c"><span class="nn">Moncalieri</span><span class="ns">Torino</span></a><a href="/it/piemonte/cuneo/" class="nc nc-c"><span class="nn">Cuneo</span><span class="ns">Cuneo</span></a></div>
+</div><div class="reg-section" id="trentino-alto-adige">
+  <div class="reg-hdr"><span class="reg-name">Trentino-Alto Adige <span style="font-size:11px;color:var(--m);font-weight:400">+4 comuni</span></span><a href="/it/trentino-alto-adige/" class="reg-link">Vedi tutto →</a></div>
+  <div class="grid"><a href="/it/bolzano/" class="nc"><span class="nn">Bolzano</span><span class="ns">Provincia</span></a><a href="/it/trento/" class="nc"><span class="nn">Trento</span><span class="ns">Provincia</span></a><a href="/it/trentino-alto-adige/trento/" class="nc nc-c"><span class="nn">Trento</span><span class="ns">Trento</span></a><a href="/it/trentino-alto-adige/bolzano/" class="nc nc-c"><span class="nn">Bolzano</span><span class="ns">Bolzano</span></a><a href="/it/trentino-alto-adige/merano/" class="nc nc-c"><span class="nn">Merano</span><span class="ns">Bolzano</span></a><a href="/it/trentino-alto-adige/rovereto/" class="nc nc-c"><span class="nn">Rovereto</span><span class="ns">Trento</span></a></div>
+</div><div class="reg-section" id="valle-daosta">
+  <div class="reg-hdr"><span class="reg-name">Valle d'Aosta <span style="font-size:11px;color:var(--m);font-weight:400">+1 comuni</span></span><a href="/it/valle-daosta/" class="reg-link">Vedi tutto →</a></div>
+  <div class="grid"><a href="/it/aosta/" class="nc"><span class="nn">Aosta</span><span class="ns">Provincia</span></a><a href="/it/valle-daosta/aosta/" class="nc nc-c"><span class="nn">Aosta</span><span class="ns">Aosta</span></a></div>
+</div><div class="reg-section" id="veneto">
+  <div class="reg-hdr"><span class="reg-name">Veneto <span style="font-size:11px;color:var(--m);font-weight:400">+12 comuni</span></span><a href="/it/veneto/" class="reg-link">Vedi tutto →</a></div>
+  <div class="grid"><a href="/it/belluno/" class="nc"><span class="nn">Belluno</span><span class="ns">Provincia</span></a><a href="/it/padova/" class="nc"><span class="nn">Padova</span><span class="ns">Provincia</span></a><a href="/it/rovigo/" class="nc"><span class="nn">Rovigo</span><span class="ns">Provincia</span></a><a href="/it/treviso/" class="nc"><span class="nn">Treviso</span><span class="ns">Provincia</span></a><a href="/it/venezia/" class="nc"><span class="nn">Venezia</span><span class="ns">Provincia</span></a><a href="/it/verona/" class="nc"><span class="nn">Verona</span><span class="ns">Provincia</span></a><a href="/it/vicenza/" class="nc"><span class="nn">Vicenza</span><span class="ns">Provincia</span></a><a href="/it/veneto/venezia/" class="nc nc-c"><span class="nn">Venezia</span><span class="ns">Venezia</span></a><a href="/it/veneto/verona/" class="nc nc-c"><span class="nn">Verona</span><span class="ns">Verona</span></a><a href="/it/veneto/padova/" class="nc nc-c"><span class="nn">Padova</span><span class="ns">Padova</span></a><a href="/it/veneto/vicenza/" class="nc nc-c"><span class="nn">Vicenza</span><span class="ns">Vicenza</span></a><a href="/it/veneto/mestre/" class="nc nc-c"><span class="nn">Mestre</span><span class="ns">Venezia</span></a><a href="/it/veneto/treviso/" class="nc nc-c"><span class="nn">Treviso</span><span class="ns">Treviso</span></a></div>
 </div>
 </div>
 <footer class="ftr">
   <a href="/">WeatherArb</a> &middot; <a href="/data/">Dashboard</a> &middot; <a href="/pricing/">API Pro</a>
 </footer>
-</body>
-</html>
+</body></html>
