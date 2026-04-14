@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-14T19:03:08.717467+00:00",
-  "count": 34,
+  "last_updated": "2026-04-14T19:15:57.288827+00:00",
+  "count": 35,
   "reports": [
     {
       "slug": "2026-04-14-verona-heavy-rain",
@@ -85,6 +85,20 @@
       "date": "2026-04-14",
       "url": "/news/2026-04-14-sondrio-clear/",
       "excerpt": "Le previsioni per Sondrio indicano condizioni meteorologiche stabili con un'alta probabilità di cielo sereno nei prossimi giorni. L'analisi dello Z-score suggerisce un allontanamen"
+    },
+    {
+      "slug": "2026-04-14-innsbruck-clear",
+      "title": "Analisi Meteo Innsbruck: Condizioni di Sereno Insolite con Z-Score Negativo",
+      "lead": "Innsbruck presenta condizioni di sereno con un punteggio di 6.4/10 e un livello di 'UNUSUAL'. Lo Z-Score di -1.24 indica una deviazione significativa rispetto a...",
+      "location": "Innsbruck",
+      "country_code": "it",
+      "vertical": "clear",
+      "z_score": -1.24,
+      "score": 6.4,
+      "anomaly_level": "UNUSUAL",
+      "date": "2026-04-14",
+      "url": "/news/2026-04-14-innsbruck-clear/",
+      "excerpt": "Innsbruck presenta condizioni di sereno con un punteggio di 6.4/10 e un livello di 'UNUSUAL'. Lo Z-Score di -1.24 indica una deviazione significativa rispetto alla norma storica."
     },
     {
       "slug": "2026-04-14-cuneo-clear",
@@ -267,20 +281,6 @@
       "date": "2026-04-12",
       "url": "/news/2026-04-12-biella-heavy-rain/",
       "excerpt": "WeatherArb segnala un livello di criticità elevato per Biella a causa di un'imminente ondata di piogge intense. L'evento è caratterizzato da uno Z-score di +4.33, indicando una dev"
-    },
-    {
-      "slug": "2026-04-09-varese-heat-wave",
-      "title": "Heat Wave anomalo a Varese: analisi WeatherArb del 09/04/2026",
-      "lead": "...",
-      "location": null,
-      "country_code": "it",
-      "vertical": "Cooling Comfort",
-      "z_score": 3.44,
-      "score": 8.83,
-      "anomaly_level": "CRITICAL",
-      "date": null,
-      "url": "/news/2026-04-09-varese-heat-wave/",
-      "excerpt": ""
     }
   ]
 }
