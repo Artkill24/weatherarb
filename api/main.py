@@ -347,6 +347,12 @@ def api_pulse(provincia: str):
             "humidity_pct": trig.get("humidity_pct"),
             "wind_kmh": trig.get("wind_kmh"),
             "wind_ms": trig.get("wind_speed_ms"),
+            "hdd": trig.get("hdd"),
+            "cdd": trig.get("cdd"),
+            "hdd_baseline": trig.get("hdd_baseline"),
+            "cdd_baseline": trig.get("cdd_baseline"),
+            "hdd_delta": trig.get("hdd_delta"),
+            "cdd_delta": trig.get("cdd_delta"),
         },
         "signal": {
             "score": arb.get("score"),
