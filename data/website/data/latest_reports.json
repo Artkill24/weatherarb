@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-14T08:46:29.211819+00:00",
-  "count": 33,
+  "last_updated": "2026-04-14T13:11:01.872413+00:00",
+  "count": 34,
   "reports": [
     {
       "slug": "2026-04-14-verona-heavy-rain",
@@ -99,6 +99,20 @@
       "date": "2026-04-14",
       "url": "/news/2026-04-14-cuneo-clear/",
       "excerpt": "Le previsioni meteo per Cuneo indicano condizioni di sereno con uno Z-Score di +1.30, valutate con un punteggio di 5.7/10 e classificate come UNUSUAL."
+    },
+    {
+      "slug": "2026-04-14-bruxelles-clear",
+      "title": "Previsioni Meteo Bruxelles: Condizioni di Sereno Stabili",
+      "lead": "Le previsioni meteo per Bruxelles indicano condizioni di sereno con uno Z-Score leggermente positivo (+0.06), suggerendo una tendenza verso un clima stabile e g...",
+      "location": "Bruxelles",
+      "country_code": "it",
+      "vertical": "clear",
+      "z_score": 0.06,
+      "score": 5.38,
+      "anomaly_level": "NORMAL",
+      "date": "2026-04-14",
+      "url": "/news/2026-04-14-bruxelles-clear/",
+      "excerpt": "Le previsioni meteo per Bruxelles indicano condizioni di sereno con uno Z-Score leggermente positivo (+0.06), suggerendo una tendenza verso un clima stabile e gradevole. Il puntegg"
     },
     {
       "slug": "2026-04-14-brescia-heavy-rain",
@@ -266,20 +280,6 @@
       "anomaly_level": "CRITICAL",
       "date": null,
       "url": "/news/2026-04-09-varese-heat-wave/",
-      "excerpt": ""
-    },
-    {
-      "slug": "2026-04-09-torino-heat-wave",
-      "title": "Heat Wave anomalo a Torino: analisi WeatherArb del 09/04/2026",
-      "lead": "...",
-      "location": null,
-      "country_code": "it",
-      "vertical": "Cooling Comfort",
-      "z_score": 4.55,
-      "score": 8.96,
-      "anomaly_level": "CRITICAL",
-      "date": null,
-      "url": "/news/2026-04-09-torino-heat-wave/",
       "excerpt": ""
     }
   ]
