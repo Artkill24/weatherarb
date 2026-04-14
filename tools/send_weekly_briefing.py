@@ -45,8 +45,22 @@ def get_subscribers():
 
 
 def fetch_top_signals(n=8):
+    # Prima tenta refresh cache
     try:
-        with urllib.request.urlopen(f"{API_BASE}/api/v1/europe/top?limit={n}", timeout=15) as r:
+        urllib.request.urlopen(
+            urllib.request.Request(f"{API_BASE}/pulse/refresh", method="POST"),
+            timeout=10
+        )
+        import time; time.sleep(30)
+    except Exception:
+        pass
+    # Poi fetcha i segnali
+    try:
+        req = urllib.request.Request(
+            f"{API_BASE}/api/v1/europe/top?limit={n}",
+            headers={"User-Agent": "WeatherArb-Briefing/1.0"}
+        )
+        with urllib.request.urlopen(req, timeout=30) as r:
             d = json.loads(r.read())
         signals = (d.get("reports") or d.get("data") or [])[:n]
         log.info(f"Segnali fetched: {len(signals)}")
@@ -186,7 +200,7 @@ def send_email(to, subject, html):
     }).encode()
     req = urllib.request.Request(
         "https://api.resend.com/emails", data=payload,
-        headers={"Authorization": f"Bearer {RESEND_API_KEY}", "Content-Type": "application/json"}
+        headers={"Authorization": f"Bearer {RESEND_API_KEY}", "Content-Type": "application/json", "User-Agent": "Mozilla/5.0 (compatible; WeatherArb/1.0)"}
     )
     try:
         with urllib.request.urlopen(req, timeout=15) as r:

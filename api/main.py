@@ -602,7 +602,7 @@ def _resend_welcome(email: str, city: str, cc: str):
         "html": html
     }).encode()
     req = _ur.Request("https://api.resend.com/emails", data=payload,
-        headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
+        headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json", "User-Agent": "Mozilla/5.0 (compatible; WeatherArb/1.0)"})
     try:
         with _ur.urlopen(req, timeout=10): pass
     except Exception as e:
