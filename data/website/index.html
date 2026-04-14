@@ -1,274 +1,427 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>WeatherArb — Weather Intelligence Agency</title>
-  <meta name="description" content="WeatherArb monitora 121 città in 14 paesi europei. Anomalie meteo in tempo reale su baseline NASA POWER 25 anni.">
-  <style>
-    :root{--bg:#040608;--surface:#0a0d12;--border:#141920;--border-a:#1e2d3d;
-           --text:#c8d6e5;--muted:#4a5568;--blue:#3b82f6;--green:#10b981}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;overflow-x:hidden}
-    body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.03) 2px,rgba(0,0,0,.03) 4px);pointer-events:none;z-index:9999}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WeatherArb — Local Weather Intelligence</title>
+<meta name="description" content="Practical weather guides for Northern Italy. Products and advice timed to local anomalies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f1117;
+    --paper: #f5f3ee;
+    --storm: #1a3a5c;
+    --electric: #2563eb;
+    --amber: #d97706;
+    --mist: #e8e5de;
+    --text-muted: #6b6560;
+  }
 
-    /* NAV */
-    .hdr{position:sticky;top:0;z-index:100;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none}.logo span{color:var(--blue)}
-    .nav{display:flex;gap:20px;align-items:center}.nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-decoration:none}.nav a:hover{color:var(--text)}
-    .dot{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 8px var(--green);animation:pd 2s ease-in-out infinite}
-    @keyframes pd{0%,100%{opacity:1}50%{opacity:.5}}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* HERO */
-    .hero{max-width:1100px;margin:0 auto;padding:80px 24px 60px;text-align:center}
-    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:100px;padding:6px 14px;font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--blue);margin-bottom:32px}
-    .badge-dot{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 6px var(--green)}
-    h1{font-size:clamp(40px,6vw,80px);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-bottom:20px}
-    h1 em{font-style:normal;color:var(--blue)}
-    .sub{font-size:16px;color:var(--muted);max-width:560px;margin:0 auto 40px;line-height:1.6}
-    .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-    .btn-p{background:var(--blue);color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;transition:opacity .2s}.btn-p:hover{opacity:.85}
-    .btn-s{background:transparent;color:var(--text);padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;border:1px solid var(--border-a);transition:border-color .2s}.btn-s:hover{border-color:var(--blue)}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
 
-    /* STATS */
-    .stats{max-width:1100px;margin:0 auto;padding:0 24px 60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    .stat{background:var(--bg);padding:28px 24px;text-align:center}
-    .stat-n{font-size:36px;font-weight:800;color:#fff;font-variant-numeric:tabular-nums}
-    .stat-l{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-top:4px}
+  /* ── NAV ── */
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 48px;
+    border-bottom: 1px solid var(--mist);
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(245,243,238,0.92);
+    backdrop-filter: blur(12px);
+  }
+  .logo {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px; letter-spacing: -0.5px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .logo-icon {
+    width: 32px; height: 32px;
+    background: var(--storm);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .nav-tag {
+    font-size: 11px; font-weight: 500;
+    color: var(--text-muted); letter-spacing: 2px;
+    text-transform: uppercase;
+  }
 
-    /* LIVE TICKER */
-    .ticker-wrap{max-width:1100px;margin:0 auto;padding:40px 24px 0}
-    .section-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-    .section-title{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}
-    .section-link{font-size:11px;color:var(--blue);text-decoration:none}
-    .ticker{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px;margin-bottom:40px}
-    .tc{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;text-decoration:none;color:var(--text);transition:border-color .2s}.tc:hover{border-color:var(--blue)}
-    .tc-left .tc-city{font-weight:700;font-size:15px}.tc-left .tc-country{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
-    .tc-right{text-align:right}.tc-score{font-size:20px;font-weight:800;font-variant-numeric:tabular-nums}.tc-vert{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
-    .skeleton{background:linear-gradient(90deg,var(--surface) 25%,rgba(255,255,255,.04) 50%,var(--surface) 75%);background-size:200% 100%;animation:sh 1.5s infinite;border-radius:10px;height:72px}
-    @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+  /* ── HERO ── */
+  .hero {
+    padding: 80px 48px 60px;
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+    align-items: center;
+  }
+  .hero-text h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+  }
+  .hero-text h1 em {
+    font-style: italic; color: var(--electric);
+  }
+  .hero-text p {
+    font-size: 17px; color: var(--text-muted);
+    line-height: 1.7; max-width: 440px;
+    margin-bottom: 36px;
+  }
+  .hero-stats {
+    display: flex; gap: 32px;
+  }
+  .stat { }
+  .stat-num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 32px; letter-spacing: -1px;
+    color: var(--storm);
+  }
+  .stat-label {
+    font-size: 12px; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
 
-    /* COUNTRIES */
-    .countries{max-width:1100px;margin:0 auto;padding:0 24px 40px}
-    .cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
-    .cc{display:flex;flex-direction:column;align-items:center;gap:6px;padding:20px 16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;text-decoration:none;transition:border-color .2s}.cc:hover{border-color:var(--blue)}
-    .cflag{font-size:28px}.cname{font-size:13px;font-weight:600;color:var(--text)}.ccount{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  /* ── LIVE TICKER ── */
+  .ticker-wrap {
+    background: var(--storm);
+    color: white; overflow: hidden;
+    padding: 12px 0; font-size: 13px;
+    font-weight: 500; letter-spacing: 0.5px;
+  }
+  .ticker {
+    display: flex; animation: scroll 30s linear infinite;
+    white-space: nowrap;
+  }
+  .ticker span { padding: 0 48px; opacity: 0.85; }
+  .ticker span strong { opacity: 1; color: #93c5fd; }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 
-    /* REPORTS */
-    .reports{max-width:1100px;margin:0 auto;padding:0 24px 40px}
-    .rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
-    .rc{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;text-decoration:none;color:var(--text);transition:border-color .2s;display:flex;flex-direction:column}.rc:hover{border-color:var(--blue)}
-    .rc-meta{display:flex;gap:8px;align-items:center;margin-bottom:12px}.rc-date{font-size:11px;color:var(--muted)}.rc-loc{font-size:11px;background:rgba(59,130,246,.1);color:var(--blue);padding:2px 8px;border-radius:100px}
-    .rc-title{font-size:15px;font-weight:700;line-height:1.3;margin-bottom:8px}
-    .rc-exc{font-size:12px;color:var(--muted);line-height:1.5;flex:1}
-    .rc-foot{display:flex;justify-content:space-between;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
-    .rc-z{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}.rc-s{font-size:12px;color:var(--muted)}
+  /* ── SIGNAL CARD (hero right) ── */
+  .signal-panel {
+    background: white;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+    border: 1px solid var(--mist);
+  }
+  .signal-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 24px;
+  }
+  .signal-label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .live-dot {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 11px; color: #16a34a; font-weight: 500;
+  }
+  .dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #16a34a;
+    animation: pulse-dot 2s infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  .signal-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    margin-bottom: 20px;
+  }
+  .signal-item {
+    background: var(--paper);
+    border-radius: 12px; padding: 16px;
+    border: 1px solid var(--mist);
+    transition: border-color 0.2s;
+  }
+  .signal-item:hover { border-color: var(--electric); }
+  .signal-item.hot { border-color: #fbbf24; background: #fffbeb; }
+  .signal-province {
+    font-size: 13px; font-weight: 500; margin-bottom: 4px;
+  }
+  .signal-event {
+    font-size: 11px; color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .signal-score {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px; color: var(--storm);
+  }
+  .signal-score small { font-size: 12px; color: var(--text-muted); font-family: 'DM Sans', sans-serif; }
+  .signal-badge {
+    display: inline-block; font-size: 10px;
+    padding: 2px 8px; border-radius: 4px;
+    font-weight: 600; letter-spacing: 0.5px;
+    text-transform: uppercase; margin-top: 6px;
+  }
+  .badge-unusual { background: #fef3c7; color: #92400e; }
+  .badge-extreme { background: #fee2e2; color: #991b1b; }
+  .badge-normal { background: #f1f5f9; color: #64748b; }
 
-    /* FOOTER */
-    .ftr{border-top:1px solid var(--border);padding:32px 24px;text-align:center;font-size:11px;color:var(--muted);letter-spacing:.08em}
-    .ftr a{color:var(--muted);text-decoration:none;margin:0 8px}.ftr a:hover{color:var(--blue)}
+  /* ── REGIONS ── */
+  .regions-section {
+    max-width: 1200px; margin: 0 auto;
+    padding: 60px 48px;
+  }
+  .section-label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 32px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px; background: var(--mist);
+  }
+  .regions-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  }
+  .region-card {
+    background: white; border-radius: 16px;
+    padding: 28px; border: 1px solid var(--mist);
+    text-decoration: none; color: inherit;
+    transition: all 0.25s;
+    position: relative; overflow: hidden;
+  }
+  .region-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: var(--electric); opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .region-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+  .region-card:hover::before { opacity: 1; }
+  .region-icon { font-size: 28px; margin-bottom: 16px; display: block; }
+  .region-card h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px; margin-bottom: 8px; letter-spacing: -0.3px;
+  }
+  .region-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .region-provinces {
+    margin-top: 16px; font-size: 12px; color: var(--electric);
+    font-weight: 500;
+  }
 
-    @media(max-width:640px){h1{font-size:40px}.stats{grid-template-columns:1fr 1fr}}
-  </style>
+  /* ── HOW IT WORKS ── */
+  .how-section {
+    background: var(--storm); color: white;
+    padding: 80px 48px;
+  }
+  .how-inner { max-width: 1200px; margin: 0 auto; }
+  .how-inner .section-label { color: rgba(255,255,255,0.4); }
+  .how-inner .section-label::after { background: rgba(255,255,255,0.1); }
+  .how-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(28px, 4vw, 48px);
+    margin-bottom: 48px; letter-spacing: -1px;
+    max-width: 600px;
+  }
+  .how-steps {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+  }
+  .step { }
+  .step-num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 48px; color: rgba(255,255,255,0.15);
+    line-height: 1; margin-bottom: 16px;
+  }
+  .step h4 { font-size: 15px; font-weight: 500; margin-bottom: 8px; }
+  .step p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--mist);
+    padding: 32px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px; color: var(--text-muted);
+    max-width: 1200px; margin: 0 auto;
+  }
+  footer a { color: var(--electric); text-decoration: none; }
+
+  /* ── ANIMATIONS ── */
+  .fade-in {
+    opacity: 0; transform: translateY(20px);
+    animation: fadeIn 0.6s forwards;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .hero { grid-template-columns: 1fr; padding: 40px 20px; gap: 32px; }
+    .regions-grid { grid-template-columns: 1fr; }
+    .how-steps { grid-template-columns: 1fr 1fr; }
+    .regions-section, .how-section { padding: 40px 20px; }
+    footer { flex-direction: column; gap: 12px; padding: 24px 20px; text-align: center; }
+  }
+</style>
 </head>
 <body>
-<header class="hdr">
-  <a href="/" class="logo">Weather<span>Arb</span></a>
-  <nav class="nav">
-    <a href="/data/">Data</a>
-    <a href="/news/">News</a>
-    <a href="/api.html">API</a>
-    <a href="/alerts.html">Alerts</a>
-    <a href="/about.html">About</a>
-    <div class="dot"></div>
-  </nav>
-</header>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <div class="logo-icon">⛈</div>
+    WeatherArb
+  </div>
+  <div class="nav-tag">Weather Intelligence</div>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>🌡️ <strong>Trento</strong> — Heat anomaly Z=+1.55 — Cooling_Comfort vertical active</span>
+    <span>🌧️ <strong>Vicenza</strong> — Monitoring — Z=−0.74 — No action</span>
+    <span>🏔️ <strong>Bolzano</strong> — Unusual warmth Z=+1.50 — PRE_EVENT_PREP</span>
+    <span>⛅ <strong>Milano</strong> — Clear — Z=+0.40 — HOLD</span>
+    <span>🌡️ <strong>Sondrio</strong> — Heat_Wave Z=+2.01 — EXTREME</span>
+    <span>🌡️ <strong>Trento</strong> — Heat anomaly Z=+1.55 — Cooling_Comfort vertical active</span>
+    <span>🌧️ <strong>Vicenza</strong> — Monitoring — Z=−0.74 — No action</span>
+    <span>🏔️ <strong>Bolzano</strong> — Unusual warmth Z=+1.50 — PRE_EVENT_PREP</span>
+    <span>⛅ <strong>Milano</strong> — Clear — Z=+0.40 — HOLD</span>
+    <span>🌡️ <strong>Sondrio</strong> — Heat_Wave Z=+2.01 — EXTREME</span>
+  </div>
+</div>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="badge"><div class="badge-dot"></div> Sistema Operativo · Aggiornamento ogni ora</div>
-  <h1>Weather Intelligence<br><em>Per ogni città d'Europa</em></h1>
-  <p class="sub">Z-Score in tempo reale su baseline NASA POWER 25 anni. Anomalie rilevate prima che diventino notizia.</p>
-  <div class="hero-btns">
-    <a href="/data/" class="btn-p">Live Dashboard →</a>
-    <a href="/api.html" class="btn-s">API Pubblica</a>
+<div class="hero">
+  <div class="hero-text fade-in">
+    <h1>Weather signals.<br><em>Precise advice.</em><br>Right moment.</h1>
+    <p>WeatherArb monitors 47 provinces across Northern Italy, detecting anomalies before they peak — then recommends the right products to the right people at the right time.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">47</div>
+        <div class="stat-label">Provinces</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">72h</div>
+        <div class="stat-label">Lead time</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Live signals</div>
+      </div>
+    </div>
   </div>
-</section>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stat"><div class="stat-n">121</div><div class="stat-l">Città Monitorate</div></div>
-  <div class="stat"><div class="stat-n">14</div><div class="stat-l">Paesi Europei</div></div>
-  <div class="stat"><div class="stat-n">25</div><div class="stat-l">Anni Baseline</div></div>
-  <div class="stat"><div class="stat-n" id="live-anom">—</div><div class="stat-l">Anomalie Live</div></div>
+  <div class="signal-panel fade-in delay-2">
+    <div class="signal-header">
+      <div class="signal-label">Live Signals</div>
+      <div class="live-dot"><div class="dot"></div> Live</div>
+    </div>
+    <div class="signal-grid">
+      <div class="signal-item hot">
+        <div class="signal-province">🌡️ Trento</div>
+        <div class="signal-event">Heat_Wave · Alpine_Extreme</div>
+        <div class="signal-score">6.58 <small>/ 10</small></div>
+        <span class="signal-badge badge-unusual">Unusual</span>
+      </div>
+      <div class="signal-item hot">
+        <div class="signal-province">☀️ Bolzano</div>
+        <div class="signal-event">Clear · Temp anomaly</div>
+        <div class="signal-score">6.39 <small>/ 10</small></div>
+        <span class="signal-badge badge-unusual">Unusual</span>
+      </div>
+      <div class="signal-item hot">
+        <div class="signal-province">🌡️ Sondrio</div>
+        <div class="signal-event">Heat_Wave · Alpine</div>
+        <div class="signal-score">6.07 <small>/ 10</small></div>
+        <span class="signal-badge badge-extreme">Extreme</span>
+      </div>
+      <div class="signal-item">
+        <div class="signal-province">⛅ Milano</div>
+        <div class="signal-event">Clear · Metro_Hub</div>
+        <div class="signal-score">5.52 <small>/ 10</small></div>
+        <span class="signal-badge badge-normal">Normal</span>
+      </div>
+    </div>
+    <div style="font-size:11px;color:var(--text-muted);text-align:center">
+      Updated hourly · Powered by ERA5 + OpenWeatherMap
+    </div>
+  </div>
 </div>
 
-<!-- LIVE TICKER -->
-<div class="ticker-wrap">
-  <div class="section-hdr">
-    <div class="section-title">🔴 Segnali Live</div>
-    <a href="/data/" class="section-link">Vedi tutti →</a>
-  </div>
-  <div class="ticker" id="ticker">
-    <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
-    <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
-  </div>
-</div>
-
-<!-- COUNTRIES -->
-<div class="countries">
-  <div class="section-hdr">
-    <div class="section-title">📡 Network Europeo</div>
-  </div>
-  <div class="cgrid">
-    <a href="/at/" class="cc">
-      <span class="cflag">🇦🇹</span>
-      <span class="cname">Österreich</span>
-      <span class="ccount">5 nodi</span>
+<!-- REGIONS -->
+<div class="regions-section">
+  <div class="section-label">Coverage areas</div>
+  <div class="regions-grid">
+    <a href="/it/trento/" class="region-card fade-in">
+      <span class="region-icon">🏔️</span>
+      <h3>Trentino-Alto Adige</h3>
+      <p>Alpine weather intelligence — heat waves, snowfall and seasonal anomalies in mountain terrain.</p>
+      <div class="region-provinces">Trento · Bolzano · Sondrio →</div>
     </a>
-    <a href="/be/" class="cc">
-      <span class="cflag">🇧🇪</span>
-      <span class="cname">Belgique</span>
-      <span class="ccount">4 nodi</span>
+    <a href="/it/vicenza/" class="region-card fade-in delay-1">
+      <span class="region-icon">🌊</span>
+      <h3>Veneto</h3>
+      <p>Flooding, persistent rain and humidity solutions for the industrial Northeast.</p>
+      <div class="region-provinces">Vicenza · Venezia · Padova · Treviso →</div>
     </a>
-    <a href="/ch/" class="cc">
-      <span class="cflag">🇨🇭</span>
-      <span class="cname">Schweiz</span>
-      <span class="ccount">5 nodi</span>
-    </a>
-    <a href="/de/" class="cc">
-      <span class="cflag">🇩🇪</span>
-      <span class="cname">Deutschland</span>
-      <span class="ccount">8 nodi</span>
-    </a>
-    <a href="/dk/" class="cc">
-      <span class="cflag">🇩🇰</span>
-      <span class="cname">Danmark</span>
-      <span class="ccount">3 nodi</span>
-    </a>
-    <a href="/es/" class="cc">
-      <span class="cflag">🇪🇸</span>
-      <span class="cname">España</span>
-      <span class="ccount">5 nodi</span>
-    </a>
-    <a href="/fr/" class="cc">
-      <span class="cflag">🇫🇷</span>
-      <span class="cname">France</span>
-      <span class="ccount">5 nodi</span>
-    </a>
-    <a href="/gb/" class="cc">
-      <span class="cflag">🇬🇧</span>
-      <span class="cname">United Kingdom</span>
-      <span class="ccount">10 nodi</span>
-    </a>
-    <a href="/it/" class="cc">
-      <span class="cflag">🇮🇹</span>
-      <span class="cname">Italia</span>
-      <span class="ccount">47 nodi</span>
-    </a>
-    <a href="/nl/" class="cc">
-      <span class="cflag">🇳🇱</span>
-      <span class="cname">Nederland</span>
-      <span class="ccount">6 nodi</span>
-    </a>
-    <a href="/no/" class="cc">
-      <span class="cflag">🇳🇴</span>
-      <span class="cname">Norge</span>
-      <span class="ccount">4 nodi</span>
-    </a>
-    <a href="/pl/" class="cc">
-      <span class="cflag">🇵🇱</span>
-      <span class="cname">Polska</span>
-      <span class="ccount">6 nodi</span>
-    </a>
-    <a href="/pt/" class="cc">
-      <span class="cflag">🇵🇹</span>
-      <span class="cname">Portugal</span>
-      <span class="ccount">3 nodi</span>
-    </a>
-    <a href="/se/" class="cc">
-      <span class="cflag">🇸🇪</span>
-      <span class="cname">Sverige</span>
-      <span class="ccount">10 nodi</span>
+    <a href="/it/milano/" class="region-card fade-in delay-2">
+      <span class="region-icon">🏙️</span>
+      <h3>Lombardia</h3>
+      <p>Urban weather preparedness for Milan, Bergamo, Brescia and the Po Valley.</p>
+      <div class="region-provinces">Milano · Bergamo · Brescia · Monza →</div>
     </a>
   </div>
 </div>
 
-<!-- REPORTS -->
-<div class="reports">
-  <div class="section-hdr">
-    <div class="section-title">📰 Intelligence Reports</div>
-    <a href="/news/" class="section-link">Archivio →</a>
-  </div>
-  <div class="rgrid" id="reports-grid">
-    <div class="skeleton" style="height:160px"></div>
-    <div class="skeleton" style="height:160px"></div>
-    <div class="skeleton" style="height:160px"></div>
+<!-- HOW IT WORKS -->
+<div class="how-section">
+  <div class="how-inner">
+    <div class="section-label">How it works</div>
+    <h2 class="how-title">From weather anomaly to product recommendation in under 60 seconds.</h2>
+    <div class="how-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h4>Signal Detection</h4>
+        <p>ERA5 historical baselines compared to OWM 72h forecasts. Z-Score calculated per province.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h4>Anomaly Scoring</h4>
+        <p>Statistical outliers ranked by arbitrage potential — population, lead time, confidence.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h4>Content Generation</h4>
+        <p>Local guides written for each cluster — Alpine tone differs from Po Valley tone.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h4>Timed Delivery</h4>
+        <p>Content published 24-72h before the event peak. Products recommended before demand spikes.</p>
+      </div>
+    </div>
   </div>
 </div>
 
-<footer class="ftr">
-  <a href="/about.html">Methodology</a>
-  <a href="/api.html">API</a>
-  <a href="/alerts.html">Alerts</a>
-  <a href="/news/">News</a>
-  <a href="https://t.me/weatherarb_alerts" target="_blank">Telegram</a>
-  <br><br>
-  WeatherArb · Independent Weather Intelligence Agency · Data: NASA POWER, ERA5-Land, OpenWeatherMap
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 WeatherArb.com — Weather intelligence for local decisions</span>
+  <span>
+    <a href="https://www.amazon.it" rel="nofollow">Amazon affiliate program participant</a> ·
+    <a href="/privacy">Privacy</a>
+  </span>
 </footer>
 
-<script>
-const API='https://api.weatherarb.com';
-const LV={NORMAL:'#10b981',UNUSUAL:'#f59e0b',EXTREME:'#f97316',CRITICAL:'#ef4444'};
-function lv(s){return s>=8?'CRITICAL':s>=6?'EXTREME':s>=4?'UNUSUAL':'NORMAL'}
-
-async function loadTicker(){
-  try{
-    const r=await fetch(API+'/api/v1/europe/top?limit=12');
-    const d=await r.json();
-    const items=(d.reports||d.cities||[]).slice(0,12);
-    if(!items.length)return;
-    const t=document.getElementById('ticker');
-    t.innerHTML=items.map(c=>{
-      const sc=c.score||0,z=c.z_score||0,lvl=lv(sc),col=LV[lvl];
-      const slug=(c.location||'').toLowerCase().replace(/\s+/g,'-');
-      const cc=c.country_code||'it';
-      return `<a href="/${cc}/${slug}/" class="tc">
-        <div class="tc-left"><div class="tc-city">${c.location||'—'}</div><div class="tc-country">${c.country||cc.toUpperCase()}</div></div>
-        <div class="tc-right"><div class="tc-score" style="color:${col}">${sc.toFixed(1)}</div><div class="tc-vert">${(c.vertical||'').replace('_',' ')}</div></div>
-      </a>`;
-    }).join('');
-    const anom=items.filter(c=>(c.score||0)>=5).length;
-    document.getElementById('live-anom').textContent=anom;
-  }catch(e){
-    document.getElementById('ticker').innerHTML='<p style="color:var(--muted);font-size:13px;padding:20px">Connessione API in corso...</p>';
-  }
-}
-
-async function loadReports(){
-  try{
-    const r=await fetch('/data/latest_reports.json');
-    const d=await r.json();
-    const rpts=(d.reports||[]).slice(0,6);
-    if(!rpts.length)return;
-    const g=document.getElementById('reports-grid');
-    g.innerHTML=rpts.map(r=>{
-      const z=r.z_score||0;
-      return `<a href="${r.url||'/news/'}" class="rc">
-        <div class="rc-meta"><span class="rc-date">${r.date||''}</span><span class="rc-loc">${r.location||''}</span></div>
-        <div class="rc-title">${r.title||'Intelligence Report'}</div>
-        <div class="rc-exc">${(r.excerpt||'').slice(0,120)}...</div>
-        <div class="rc-foot"><span class="rc-z" style="color:${z>=2?'#ef4444':z>=1?'#f59e0b':'#10b981'}">Z ${z>0?'+':''}${z.toFixed(2)}</span><span class="rc-s">Score ${r.score||0}/10</span></div>
-      </a>`;
-    }).join('');
-  }catch(e){
-    document.getElementById('reports-grid').innerHTML='';
-  }
-}
-
-loadTicker();
-loadReports();
-setInterval(loadTicker,300000);
-</script>
 </body>
 </html>
