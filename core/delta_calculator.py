@@ -649,3 +649,4 @@ def estimate_impact_horizon(z_score: float, score: float) -> dict:
         h = max(6, int(24 * (1 - (score - 7) / 3)))
         return {"hours": h, "label": f"{h} ore", "status": "warning"}
     return {"hours": None, "label": "Stabile", "status": "nominal"}
+# HDD/CDD energy intelligence
