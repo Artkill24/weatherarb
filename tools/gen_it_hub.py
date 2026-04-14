@@ -25,7 +25,8 @@ for p in it_provinces:
     regioni[reg].append(p)
 
 # Ordina regioni alfabeticamente
-regioni_sorted = sorted(regioni.items())
+REGIONI_VALIDE = {'Piemonte',"Valle d'Aosta",'Lombardia','Trentino-Alto Adige','Veneto','Friuli-Venezia Giulia','Liguria','Emilia-Romagna','Toscana','Umbria','Marche','Lazio','Abruzzo','Molise','Campania','Puglia','Basilicata','Calabria','Sicilia','Sardegna'}
+regioni_sorted = sorted((k,v) for k,v in regioni.items() if k in REGIONI_VALIDE)
 
 # Carica comuni se disponibili
 comuni = []
