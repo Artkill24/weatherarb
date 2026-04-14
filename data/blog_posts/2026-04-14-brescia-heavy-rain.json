@@ -1,0 +1,15 @@
+{
+  "slug": "2026-04-14-brescia-heavy-rain",
+  "title": "Allerta Meteo Brescia: Piogge Intense Previste",
+  "lead": "WeatherArb segnala condizioni meteorologiche insolite a Brescia, con un'alta probabilità di piogge intense.",
+  "body": "Le analisi di WeatherArb indicano un livello di allerta 'UNUSUAL' per la città di Brescia, a causa di un evento di pioggia intensa previsto. Lo Z-Score di +1.04 suggerisce una deviazione significativa dalla norma stagionale, posizionando l'evento come insolito ma non estremo. Il punteggio complessivo di 5.0/10 riflette una probabilità moderata ma meritevole di attenzione. Si raccomanda di monitorare gli aggiornamenti meteo per eventuali variazioni.",
+  "conclusion": "Sebbene l'evento non sia classificato come estremo, la pioggia intensa annunciata richiede preparazione. WeatherArb continua a monitorare la situazione per fornire le informazioni più accurate.",
+  "location": "Brescia",
+  "country_code": "it",
+  "vertical": "heavy-rain",
+  "z_score": 1.04,
+  "score": 5.05,
+  "anomaly_level": "UNUSUAL",
+  "timestamp": "2026-04-14T08:46:25.471276+00:00",
+  "date": "2026-04-14"
+}

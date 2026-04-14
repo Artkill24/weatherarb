@@ -1,0 +1,15 @@
+{
+  "slug": "2026-04-14-sondrio-clear",
+  "title": "Previsioni Meteo per Sondrio: Condizioni Stabili Previste",
+  "lead": "Le previsioni per Sondrio indicano condizioni meteorologiche stabili con un'alta probabilità di cielo sereno nei prossimi giorni. L'analisi dello Z-score suggerisce un allontanamento dalla media stagionale in senso positivo, indicando un tempo favorevole.",
+  "body": "L'indicatore di stabilità, con uno Z-score di +0.83, posiziona le condizioni meteo attuali in Sondrio leggermente al di sopra della norma attesa per questo periodo. Questo si traduce in un punteggio di 5.8 su 10, che classifica il livello meteorologico come 'NORMAL'. La probabilità di precipitazioni è minima, con ampie schiarite che domineranno il panorama celeste. Le temperature dovrebbero mantenersi in linea con le medie stagionali, offrendo giornate gradevoli.",
+  "conclusion": "In sintesi, Sondrio si prepara ad affrontare un periodo di tempo prevalentemente sereno. Le condizioni attuali sono considerate stabili e favorevoli, con un livello meteorologico nella norma, offrendo un'ottima opportunità per attività all'aperto.",
+  "location": "Sondrio",
+  "country_code": "it",
+  "vertical": "clear",
+  "z_score": 0.83,
+  "score": 5.85,
+  "anomaly_level": "NORMAL",
+  "timestamp": "2026-04-14T08:46:29.205326+00:00",
+  "date": "2026-04-14"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "2026-04-14-venezia-clear",
+  "title": "Ondata di Calore Estiva a Venezia: Allerta CRITICAL",
+  "lead": "Venezia si trova ad affrontare un'ondata di calore di intensità eccezionale, classificata con un livello di allerta CRITICAL. Le proiezioni indicano un'anomalia termica significativa, con uno Z-score di +3.46, suggerendo un evento di caldo estremo che si discosta notevolmente dalle medie storiche.",
+  "body": "L'analisi meteo di WeatherArb rileva condizioni 'Clear', ovvero di cielo sereno e assenza di nuvolosità significativa, che contribuiranno a massimizzare l'irraggiamento solare e a intensificare l'aumento delle temperature. Questo scenario, unito a un punteggio di 7.1/10, segnala un rischio elevato per la salute pubblica e per l'ecosistema lagunare. Le temperature previste supereranno ampiamente le soglie di comfort, richiedendo un'attenzione particolare da parte della popolazione e delle autorità locali.",
+  "conclusion": "Si raccomanda massima cautela e l'adozione di misure precauzionali per mitigare gli effetti del caldo estremo. La persistenza di queste condizioni richiede un monitoraggio costante della situazione meteorologica.",
+  "location": "Venezia",
+  "country_code": "it",
+  "vertical": "clear",
+  "z_score": 3.46,
+  "score": 7.13,
+  "anomaly_level": "CRITICAL",
+  "timestamp": "2026-04-14T08:46:14.480894+00:00",
+  "date": "2026-04-14"
+}

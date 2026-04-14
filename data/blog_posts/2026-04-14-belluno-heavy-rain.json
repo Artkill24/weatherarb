@@ -1,0 +1,15 @@
+{
+  "slug": "2026-04-14-belluno-heavy-rain",
+  "title": "Allerta Meteo Critica a Belluno: Rischio Piogge Intense",
+  "lead": "Belluno si trova sotto un livello di allerta CRITICAL (6.7/10) a causa di un evento di piogge intense previsto con uno Z-score di +3.20, indicando una deviazione significativa dalla norma climatologica.",
+  "body": "Le analisi di WeatherArb evidenziano un potenziale accumulo di precipitazioni ben al di sopra delle medie stagionali per l'area di Belluno. Lo Z-score elevato (+3.20) suggerisce che l'intensità e la durata previste di queste piogge rappresentano un evento meteorologico estremo, con implicazioni che richiedono un'attenta valutazione. Questo livello di criticità è basato su modelli previsionali avanzati che considerano diversi parametri atmosferici e la loro evoluzione nel tempo.",
+  "conclusion": "Si raccomanda massima attenzione e monitoraggio costante degli aggiornamenti meteo per Belluno e le zone limitrofe. È fondamentale essere preparati a potenziali disagi legati alle condizioni meteorologiche avverse.",
+  "location": "Belluno",
+  "country_code": "it",
+  "vertical": "heavy-rain",
+  "z_score": 3.2,
+  "score": 6.74,
+  "anomaly_level": "CRITICAL",
+  "timestamp": "2026-04-14T08:46:16.128937+00:00",
+  "date": "2026-04-14"
+}

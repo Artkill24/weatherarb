@@ -10,9 +10,9 @@ log = logging.getLogger(__name__)
 API_BASE       = os.getenv("API_BASE", "https://api.weatherarb.com")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 GEMINI_MODEL   = "gemini-2.5-flash-lite"
-SCORE_MIN      = float(os.getenv("SCORE_THRESHOLD", "6.0"))
-MAX_NEW        = int(os.getenv("MAX_ARTICLES", "6"))
-KEEP_DAYS      = int(os.getenv("KEEP_DAYS", "30"))
+SCORE_MIN      = float(os.getenv("SCORE_THRESHOLD", "5.0"))
+MAX_NEW        = int(os.getenv("MAX_ARTICLES", "10"))
+KEEP_DAYS      = int(os.getenv("KEEP_DAYS", "7"))
 MAX_TOTAL      = int(os.getenv("MAX_TOTAL", "50"))
 
 BLOG  = Path("data/blog_posts");  BLOG.mkdir(parents=True, exist_ok=True)

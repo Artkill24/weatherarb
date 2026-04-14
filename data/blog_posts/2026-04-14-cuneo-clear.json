@@ -1,0 +1,15 @@
+{
+  "slug": "2026-04-14-cuneo-clear",
+  "title": "Analisi Meteo per Cuneo: Condizioni di Sereno Insolite",
+  "lead": "Le previsioni meteo per Cuneo indicano condizioni di sereno con uno Z-Score di +1.30, valutate con un punteggio di 5.7/10 e classificate come UNUSUAL.",
+  "body": "Attualmente, Cuneo sta sperimentando un periodo di cielo prevalentemente sereno. L'analisi statistica, rappresentata dallo Z-Score di +1.30, suggerisce che questa condizione atmosferica è leggermente al di sopra della media storica per questo periodo dell'anno. Sebbene il cielo sereno sia generalmente associato a condizioni favorevoli, il punteggio complessivo di 5.7/10 e la classificazione 'UNUSUAL' indicano che potrebbero esserci altri fattori meteorologici, non immediatamente evidenti, che meritano attenzione.",
+  "conclusion": "In sintesi, mentre il bel tempo domina il cielo di Cuneo, la sua deviazione dalla norma statistica raccomanda un monitoraggio attento per comprendere appieno le implicazioni di questo scenario meteo insolito.",
+  "location": "Cuneo",
+  "country_code": "it",
+  "vertical": "clear",
+  "z_score": 1.3,
+  "score": 5.72,
+  "anomaly_level": "UNUSUAL",
+  "timestamp": "2026-04-14T08:46:21.372341+00:00",
+  "date": "2026-04-14"
+}
