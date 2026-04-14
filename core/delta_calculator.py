@@ -321,7 +321,7 @@ def analyze_deltas(snapshot: WeatherSnapshot,
         rain_observed = snapshot.rain_1h_mm * 8  # 8h stima evento
 
     if rain_observed > 0 or baseline.avg_rain_mm_day > 0:
-        z = compute_z_score(rain_observed, baseline.avg_rain_mm_day, baseline.std_rain_mm_day)
+        z = compute_z_score(rain_observed, baseline.avg_rain_mm_day, baseline.std_rain_mm_day, floor=3.0)
         results.append(DeltaResult(
             variable="precipitation",
             observed=rain_observed,
@@ -334,7 +334,7 @@ def analyze_deltas(snapshot: WeatherSnapshot,
     # --- Vento ---
     if snapshot.wind_speed_ms is not None:
         z = compute_z_score(snapshot.wind_speed_ms, baseline.avg_wind_ms,
-                            baseline.std_wind_ms)
+                            baseline.std_wind_ms, floor=0.5)
         results.append(DeltaResult(
             variable="wind",
             observed=snapshot.wind_speed_ms,
