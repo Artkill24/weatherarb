@@ -344,6 +344,9 @@ def api_pulse(provincia: str):
             "z_score": trig.get("z_score"),
             "temperature_c": trig.get("current_temp_c"),
             "historical_avg_c": trig.get("historical_avg_temp_c"),
+            "humidity_pct": trig.get("humidity_pct"),
+            "wind_kmh": trig.get("wind_kmh"),
+            "wind_ms": trig.get("wind_speed_ms"),
         },
         "signal": {
             "score": arb.get("score"),
