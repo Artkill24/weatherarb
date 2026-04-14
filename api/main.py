@@ -20,7 +20,6 @@ from core.ingestor import (
     build_historical_baseline,
 )
 from core.delta_calculator import describe_anomaly
-from core.delta_calculator import describe_anomaly
 from core.delta_calculator import build_pulse_json
 from core.product_mapper import ProductMapper
 
