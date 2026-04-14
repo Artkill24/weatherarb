@@ -560,6 +560,12 @@ def build_pulse_json(
             "humidity_pct": snapshot.humidity_pct,
             "wind_kmh": round(snapshot.wind_speed_ms * 3.6, 1) if snapshot.wind_speed_ms else None,
             "wind_speed_ms": snapshot.wind_speed_ms,
+            "hdd": round(max(0, 18.0 - snapshot.temp_c), 2) if snapshot.temp_c is not None else None,
+            "cdd": round(max(0, snapshot.temp_c - 18.0), 2) if snapshot.temp_c is not None else None,
+            "hdd_baseline": round(max(0, 18.0 - baseline.avg_temp_c), 2),
+            "cdd_baseline": round(max(0, baseline.avg_temp_c - 18.0), 2),
+            "hdd_delta": round(max(0, 18.0 - snapshot.temp_c) - max(0, 18.0 - baseline.avg_temp_c), 2) if snapshot.temp_c is not None else None,
+            "cdd_delta": round(max(0, snapshot.temp_c - 18.0) - max(0, baseline.avg_temp_c - 18.0), 2) if snapshot.temp_c is not None else None,
         },
         "delta_breakdown": [d.to_dict() for d in deltas],
         "arbitrage_score": {
