@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-04-15T19:50:29.261774+00:00",
+  "space_weather": {
+    "timestamp": "2026-04-15T19:50:28.341656+00:00",
+    "kp_current": 1.0,
+    "kp_forecast_max_24h": 0,
+    "solar_flux": 3.978833547080285e-07,
+    "flare_class": "C",
+    "storm_probability": {
+      "G1": 0,
+      "G2": 0,
+      "G3": 0
+    },
+    "kp_forecast": []
+  },
+  "grid_stress": [],
+  "total_nodes": 0
+}

@@ -4,33 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>WeatherArb — European Weather Intelligence Agency</title>
-  <meta name="description" content="Anomalie meteo in tempo reale per 121 citta europee. Z-Score su baseline NASA POWER 25 anni. HDD/CDD energy data. WeatherArb Intelligence Agency.">
+  <meta name="description" content="Anomalie meteo in tempo reale per 322 nodi europei. Z-Score NASA POWER 25 anni. HDD/CDD energy data. Space Weather & Grid Risk. WeatherArb Intelligence Agency.">
   <link rel="canonical" href="https://weatherarb.com/">
   <style>
-    /* ─── THEME ─── */
-    :root {
-      --bg:#040608; --s:#0a0d12; --b:#141920; --ba:#1e2d3d;
-      --t:#c8d6e5; --m:#4a5568; --bl:#3b82f6;
-      --g:#10b981; --y:#f59e0b; --o:#f97316; --r:#ef4444;
-      --shadow:rgba(0,0,0,.4);
-    }
-    [data-theme="light"] {
-      --bg:#f8fafc; --s:#fff; --b:#e2e8f0; --ba:#cbd5e1;
-      --t:#0f172a; --m:#64748b; --bl:#2563eb;
-      --g:#059669; --y:#d97706; --o:#ea580c; --r:#dc2626;
-      --shadow:rgba(0,0,0,.1);
-    }
-
+    :root{--bg:#040608;--s:#0a0d12;--b:#141920;--ba:#1e2d3d;--t:#c8d6e5;--m:#4a5568;--bl:#3b82f6;--g:#10b981;--y:#f59e0b;--o:#f97316;--r:#ef4444;--shadow:rgba(0,0,0,.4)}
+    [data-theme="light"]{--bg:#f8fafc;--s:#fff;--b:#e2e8f0;--ba:#cbd5e1;--t:#0f172a;--m:#64748b;--bl:#2563eb;--g:#059669;--y:#d97706;--o:#ea580c;--r:#dc2626;--shadow:rgba(0,0,0,.1)}
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{background:var(--bg);color:var(--t);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;transition:background .3s,color .3s}
-
-    /* SCANLINE */
     body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.02) 2px,rgba(0,0,0,.02) 4px);pointer-events:none;z-index:9999}
     [data-theme="light"] body::before{display:none}
 
-    /* ─── HEADER ─── */
-    .hdr{position:sticky;top:0;z-index:100;background:rgba(4,6,8,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--b);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;transition:background .3s}
+    /* HEADER */
+    .hdr{position:sticky;top:0;z-index:100;background:rgba(4,6,8,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--b);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;transition:background .3s}
     [data-theme="light"] .hdr{background:rgba(248,250,252,.92)}
     .logo{font-size:14px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--t);text-decoration:none;display:flex;align-items:center;gap:2px}
     .logo b{color:var(--bl)}
@@ -43,8 +29,8 @@
     .live-dot{width:7px;height:7px;background:var(--g);border-radius:50%;box-shadow:0 0 10px var(--g);animation:pulse 2s infinite;margin-left:8px}
     @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
 
-    /* ─── HERO ─── */
-    .hero{max-width:1100px;margin:0 auto;padding:80px 24px 60px;text-align:center;position:relative}
+    /* HERO */
+    .hero{max-width:1100px;margin:0 auto;padding:80px 24px 60px;text-align:center}
     .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.18);border-radius:100px;padding:6px 16px;font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--bl);margin-bottom:24px}
     .hero h1{font-size:clamp(40px,6vw,80px);font-weight:900;letter-spacing:-.03em;line-height:.95;color:#fff;margin-bottom:20px}
     [data-theme="light"] .hero h1{color:#0f172a}
@@ -56,17 +42,31 @@
     .btn-sec{background:transparent;color:var(--t);border:1px solid var(--b);border-radius:10px;padding:14px 28px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:.2s;display:inline-flex;align-items:center;gap:8px}
     .btn-sec:hover{border-color:var(--ba);transform:translateY(-1px)}
 
-    /* ─── STATS ─── */
-    .stats{max-width:1100px;margin:0 auto;padding:0 24px 60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--b);border:1px solid var(--b);border-radius:14px;overflow:hidden}
-    .stat{background:var(--s);padding:28px 20px;text-align:center}
-    .stat-n{font-size:38px;font-weight:800;color:var(--t);font-variant-numeric:tabular-nums;line-height:1}
+    /* STATS */
+    .stats{max-width:1100px;margin:0 auto 60px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--b);border:1px solid var(--b);border-radius:14px;overflow:hidden}
+    .stat{background:var(--s);padding:24px 20px;text-align:center}
+    .stat-n{font-size:36px;font-weight:800;color:var(--t);font-variant-numeric:tabular-nums;line-height:1}
     .stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--m);margin-top:6px}
 
-    /* ─── TICKER LABEL ─── */
+    /* SECTION LABEL */
     .section-label{max-width:1100px;margin:0 auto;padding:0 24px 14px;font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:var(--m);display:flex;align-items:center;gap:10px}
     .section-label::after{content:'';flex:1;height:1px;background:var(--b)}
 
-    /* ─── TICKER CARDS ─── */
+    /* SPACE WEATHER */
+    .sw-panel{max-width:1100px;margin:0 auto;padding:0 24px 60px}
+    .sw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--b);border:1px solid var(--b);border-radius:14px;overflow:hidden;margin-bottom:12px}
+    @media(max-width:640px){.sw-grid{grid-template-columns:1fr 1fr}}
+    .sw-cell{background:var(--s);padding:18px;text-align:center}
+    .sw-icon{font-size:22px;margin-bottom:6px}
+    .sw-label{font-size:9px;text-transform:uppercase;letter-spacing:.15em;color:var(--m);margin-bottom:6px}
+    .sw-val{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+    .sw-sub{font-size:10px;color:var(--m);margin-top:4px}
+    .sw-bar{height:3px;border-radius:2px;background:var(--b);margin-top:8px;overflow:hidden}
+    .sw-bar-fill{height:100%;border-radius:2px;transition:width .8s}
+    .kp-scale{display:flex;justify-content:space-between;font-size:9px;color:var(--m);margin-top:3px}
+    .sw-alert{background:var(--s);border:1px solid var(--b);border-radius:10px;padding:14px 18px;font-size:12px;color:var(--m);line-height:1.5}
+
+    /* TICKER */
     .ticker-wrap{max-width:1100px;margin:0 auto;padding:0 24px 60px}
     .ticker{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
     .tick-card{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;text-decoration:none;color:var(--t);transition:.2s}
@@ -80,11 +80,9 @@
     .tick-fill{height:100%;border-radius:2px;transition:width .6s}
     .ticker-empty{text-align:center;padding:40px;color:var(--m);font-size:14px;grid-column:1/-1}
 
-    /* ─── MAP ─── */
+    /* MAP */
     .map-section{max-width:1100px;margin:0 auto;padding:0 24px 60px}
     #map{height:380px;border-radius:14px;border:1px solid var(--b);background:var(--s);overflow:hidden}
-    .leaflet-container{background:#040608!important}
-    [data-theme="light"] .leaflet-container{background:#f1f5f9!important}
     .wa-popup{background:var(--s);border:1px solid var(--ba);border-radius:8px;padding:10px 14px;color:var(--t);font-family:-apple-system,sans-serif;min-width:160px;box-shadow:0 4px 20px var(--shadow)}
     .wa-popup b{display:block;font-size:14px;margin-bottom:4px}
     .wa-popup small{font-size:10px;color:var(--m);text-transform:uppercase}
@@ -92,20 +90,23 @@
     .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:transparent!important;box-shadow:none!important;padding:0!important}
     .leaflet-popup-content{margin:0!important}
 
-    /* ─── NETWORK GRID ─── */
+    /* NETWORK */
     .network-section{max-width:1100px;margin:0 auto;padding:0 24px 60px}
-    .network-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px}
-    .country-card{background:var(--s);border:1px solid var(--b);border-radius:10px;padding:16px 12px;text-align:center;text-decoration:none;color:var(--t);transition:.2s}
+    .network-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
+    .country-card{background:var(--s);border:1px solid var(--b);border-radius:10px;padding:14px 10px;text-align:center;text-decoration:none;color:var(--t);transition:.2s}
     .country-card:hover{border-color:var(--bl);transform:translateY(-2px)}
-    .country-code{font-size:22px;font-weight:800;letter-spacing:.05em;color:var(--bl)}
-    .country-name{font-size:11px;color:var(--m);margin:4px 0 2px;text-transform:uppercase;letter-spacing:.06em}
+    .country-code{font-size:20px;font-weight:800;letter-spacing:.05em;color:var(--bl)}
+    .country-name{font-size:10px;color:var(--m);margin:4px 0 2px;text-transform:uppercase;letter-spacing:.06em}
     .country-nodes{font-size:10px;color:var(--m)}
 
-    /* ─── REPORTS ─── */
+    /* REPORTS */
     .reports-section{max-width:1100px;margin:0 auto;padding:0 24px 60px}
-    .reports-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
-    .report-card{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:22px;text-decoration:none;color:var(--t);display:flex;flex-direction:column;gap:10px;transition:.2s}
+    .reports-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+    .report-card{background:var(--s);border:1px solid var(--b);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--t);display:flex;flex-direction:column;transition:.2s}
     .report-card:hover{border-color:var(--ba);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow)}
+    .rc-cover{width:100%;height:120px;object-fit:cover;display:block}
+    .rc-cover-placeholder{width:100%;height:60px;background:var(--b)}
+    .rc-body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
     .rc-head{display:flex;align-items:center;gap:8px}
     .rc-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:3px 10px;border-radius:100px}
     .rc-date{font-size:11px;color:var(--m);margin-left:auto}
@@ -115,17 +116,11 @@
     .rc-z{font-weight:700}
     .rc-more{margin-left:auto;color:var(--bl);font-size:11px}
 
-    /* ─── FOOTER ─── */
-    .ftr{border-top:1px solid var(--b);padding:32px 24px;max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:gap;font-size:12px;color:var(--m)}
+    /* FOOTER */
+    .ftr{border-top:1px solid var(--b);padding:32px 24px;max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--m)}
     .ftr a{color:var(--m);text-decoration:none;margin:0 8px}.ftr a:hover{color:var(--t)}
-    .ftr-links{display:flex;flex-wrap:wrap;gap:4px}
 
-    @media(max-width:768px){
-      .hero{padding:56px 24px 40px}
-      .hero h1{font-size:40px}
-      .nav a:not(.nav-keep){display:none}
-      #map{height:260px}
-    }
+    @media(max-width:768px){.hero{padding:56px 24px 40px}.hero h1{font-size:40px}.nav a:not(.nav-keep){display:none}#map{height:260px}}
   </style>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
@@ -139,7 +134,6 @@
     <a href="/map.html">Map</a>
     <a href="/api.html">API</a>
     <a href="/pricing/">Pricing</a>
-    <a href="/alerts.html">Alerts</a>
     <div class="live-dot" title="Live"></div>
     <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle theme">🌙</button>
   </nav>
@@ -147,11 +141,9 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">
-    <span>●</span> Intelligence Agency — Live
-  </div>
+  <div class="hero-eyebrow"><span>●</span> Intelligence Agency — Live</div>
   <h1>Weather<em>Arb</em><br>Intelligence</h1>
-  <p class="hero-sub">Anomalie meteo in tempo reale per 322 nodi europei. Z-Score su baseline NASA POWER 25 anni. HDD/CDD energy data.</p>
+  <p class="hero-sub">Anomalie meteo, Space Weather e Grid Risk per 322 nodi europei. Z-Score NASA POWER 25 anni. HDD/CDD energy data.</p>
   <div class="hero-btns">
     <a href="/data/" class="btn-pri">Dashboard Live →</a>
     <a href="/pricing/" class="btn-sec">API Pro</a>
@@ -159,7 +151,7 @@
 </section>
 
 <!-- STATS -->
-<div class="stats" style="margin:0 24px 60px;max-width:calc(1100px);margin-left:auto;margin-right:auto">
+<div class="stats">
   <div class="stat"><div class="stat-n">322</div><div class="stat-l">Nodi Europei</div></div>
   <div class="stat"><div class="stat-n">23</div><div class="stat-l">Paesi</div></div>
   <div class="stat"><div class="stat-n">25</div><div class="stat-l">Anni Baseline</div></div>
@@ -168,8 +160,45 @@
   <div class="stat"><div class="stat-n" id="live-avg" style="color:var(--bl)">—</div><div class="stat-l">Score Medio</div></div>
 </div>
 
-<!-- TICKER -->
-<div class="section-label" style="max-width:1100px;margin:0 auto;padding:0 24px 14px">Top Segnali Europa</div>
+<!-- SPACE WEATHER -->
+<div class="section-label">
+  Space Weather & Grid Risk
+  <span style="font-size:10px;color:var(--m);margin-left:8px;letter-spacing:normal;text-transform:none;font-weight:400">NOAA SWPC</span>
+</div>
+<div class="sw-panel">
+  <div class="sw-grid">
+    <div class="sw-cell">
+      <div class="sw-icon">🌍</div>
+      <div class="sw-label">Kp Index</div>
+      <div class="sw-val" id="sw-kp" style="color:var(--g)">...</div>
+      <div class="sw-sub" id="sw-kp-label">Geomagnetic</div>
+      <div class="sw-bar"><div class="sw-bar-fill" id="sw-kp-bar" style="background:var(--g);width:0%"></div></div>
+      <div class="kp-scale"><span>0</span><span>3</span><span>5</span><span>7</span><span>9</span></div>
+    </div>
+    <div class="sw-cell">
+      <div class="sw-icon">☀️</div>
+      <div class="sw-label">Solar Flare</div>
+      <div class="sw-val" id="sw-flare" style="color:var(--g)">...</div>
+      <div class="sw-sub" id="sw-flare-label">X-Ray Class</div>
+    </div>
+    <div class="sw-cell">
+      <div class="sw-icon">⚡</div>
+      <div class="sw-label">Grid Risk Top EU</div>
+      <div class="sw-val" id="sw-grid-score" style="color:var(--g)">...</div>
+      <div class="sw-sub" id="sw-grid-city">Caricamento...</div>
+    </div>
+    <div class="sw-cell">
+      <div class="sw-icon">📡</div>
+      <div class="sw-label">Kp Forecast 24h</div>
+      <div class="sw-val" id="sw-kp-forecast" style="color:var(--g)">...</div>
+      <div class="sw-sub">Max previsto</div>
+    </div>
+  </div>
+  <div class="sw-alert" id="sw-alert">⚡ <b>Grid Intelligence</b> — Caricamento dati NOAA SWPC...</div>
+</div>
+
+<!-- TOP SIGNALS -->
+<div class="section-label">Top Segnali Europa</div>
 <div class="ticker-wrap">
   <div class="ticker" id="ticker">
     <div class="ticker-empty">⏳ Caricamento segnali...</div>
@@ -177,34 +206,43 @@
 </div>
 
 <!-- MAP -->
-<div class="section-label" style="max-width:1100px;margin:0 auto;padding:0 24px 14px">Mappa Anomalie</div>
+<div class="section-label">Mappa Anomalie</div>
 <div class="map-section">
   <div id="map"></div>
 </div>
 
 <!-- NETWORK -->
-<div class="section-label" style="max-width:1100px;margin:0 auto;padding:0 24px 14px">Network Europeo</div>
+<div class="section-label">Network Europeo</div>
 <div class="network-section">
-  <div class="network-grid" id="network-grid">
-    <a href="/at/" class="country-card"><div class="country-code">AT</div><div class="country-name">Osterreich</div><div class="country-nodes">5 nodi</div></a>
-    <a href="/be/" class="country-card"><div class="country-code">BE</div><div class="country-name">Belgique</div><div class="country-nodes">4 nodi</div></a>
-    <a href="/ch/" class="country-card"><div class="country-code">CH</div><div class="country-name">Schweiz</div><div class="country-nodes">5 nodi</div></a>
-    <a href="/de/" class="country-card"><div class="country-code">DE</div><div class="country-name">Deutschland</div><div class="country-nodes">8 nodi</div></a>
-    <a href="/dk/" class="country-card"><div class="country-code">DK</div><div class="country-name">Danmark</div><div class="country-nodes">3 nodi</div></a>
-    <a href="/es/" class="country-card"><div class="country-code">ES</div><div class="country-name">Espana</div><div class="country-nodes">5 nodi</div></a>
-    <a href="/fr/" class="country-card"><div class="country-code">FR</div><div class="country-name">France</div><div class="country-nodes">5 nodi</div></a>
-    <a href="/gb/" class="country-card"><div class="country-code">GB</div><div class="country-name">United Kingdom</div><div class="country-nodes">10 nodi</div></a>
-    <a href="/it/" class="country-card"><div class="country-code">IT</div><div class="country-name">Italia</div><div class="country-nodes">47 nodi</div></a>
-    <a href="/nl/" class="country-card"><div class="country-code">NL</div><div class="country-name">Nederland</div><div class="country-nodes">6 nodi</div></a>
-    <a href="/no/" class="country-card"><div class="country-code">NO</div><div class="country-name">Norge</div><div class="country-nodes">4 nodi</div></a>
-    <a href="/pl/" class="country-card"><div class="country-code">PL</div><div class="country-name">Polska</div><div class="country-nodes">6 nodi</div></a>
-    <a href="/pt/" class="country-card"><div class="country-code">PT</div><div class="country-name">Portugal</div><div class="country-nodes">3 nodi</div></a>
-    <a href="/se/" class="country-card"><div class="country-code">SE</div><div class="country-name">Sverige</div><div class="country-nodes">10 nodi</div></a>
+  <div class="network-grid">
+    <a href="/it/" class="country-card"><div class="country-code">IT</div><div class="country-name">Italia</div><div class="country-nodes">120 nodi</div></a>
+    <a href="/de/" class="country-card"><div class="country-code">DE</div><div class="country-name">Deutschland</div><div class="country-nodes">31 nodi</div></a>
+    <a href="/gb/" class="country-card"><div class="country-code">GB</div><div class="country-name">United Kingdom</div><div class="country-nodes">20 nodi</div></a>
+    <a href="/fr/" class="country-card"><div class="country-code">FR</div><div class="country-name">France</div><div class="country-nodes">19 nodi</div></a>
+    <a href="/es/" class="country-card"><div class="country-code">ES</div><div class="country-name">Espana</div><div class="country-nodes">17 nodi</div></a>
+    <a href="/se/" class="country-card"><div class="country-code">SE</div><div class="country-name">Sverige</div><div class="country-nodes">16 nodi</div></a>
+    <a href="/pl/" class="country-card"><div class="country-code">PL</div><div class="country-name">Polska</div><div class="country-nodes">13 nodi</div></a>
+    <a href="/nl/" class="country-card"><div class="country-code">NL</div><div class="country-name">Nederland</div><div class="country-nodes">10 nodi</div></a>
+    <a href="/ch/" class="country-card"><div class="country-code">CH</div><div class="country-name">Schweiz</div><div class="country-nodes">8 nodi</div></a>
+    <a href="/at/" class="country-card"><div class="country-code">AT</div><div class="country-name">Osterreich</div><div class="country-nodes">7 nodi</div></a>
+    <a href="/be/" class="country-card"><div class="country-code">BE</div><div class="country-name">Belgique</div><div class="country-nodes">7 nodi</div></a>
+    <a href="/pt/" class="country-card"><div class="country-code">PT</div><div class="country-name">Portugal</div><div class="country-nodes">7 nodi</div></a>
+    <a href="/no/" class="country-card"><div class="country-code">NO</div><div class="country-name">Norge</div><div class="country-nodes">7 nodi</div></a>
+    <a href="/ro/" class="country-card"><div class="country-code">RO</div><div class="country-name">Romania</div><div class="country-nodes">6 nodi</div></a>
+    <a href="/gr/" class="country-card"><div class="country-code">GR</div><div class="country-name">Hellas</div><div class="country-nodes">5 nodi</div></a>
+    <a href="/hr/" class="country-card"><div class="country-code">HR</div><div class="country-name">Hrvatska</div><div class="country-nodes">5 nodi</div></a>
+    <a href="/hu/" class="country-card"><div class="country-code">HU</div><div class="country-name">Magyarorszag</div><div class="country-nodes">5 nodi</div></a>
+    <a href="/cz/" class="country-card"><div class="country-code">CZ</div><div class="country-name">Cesko</div><div class="country-nodes">4 nodi</div></a>
+    <a href="/fi/" class="country-card"><div class="country-code">FI</div><div class="country-name">Suomi</div><div class="country-nodes">4 nodi</div></a>
+    <a href="/dk/" class="country-card"><div class="country-code">DK</div><div class="country-name">Danmark</div><div class="country-nodes">5 nodi</div></a>
+    <a href="/si/" class="country-card"><div class="country-code">SI</div><div class="country-name">Slovenija</div><div class="country-nodes">2 nodi</div></a>
+    <a href="/sk/" class="country-card"><div class="country-code">SK</div><div class="country-name">Slovensko</div><div class="country-nodes">2 nodi</div></a>
+    <a href="/rs/" class="country-card"><div class="country-code">RS</div><div class="country-name">Srbija</div><div class="country-nodes">2 nodi</div></a>
   </div>
 </div>
 
 <!-- REPORTS -->
-<div class="section-label" style="max-width:1100px;margin:0 auto;padding:0 24px 14px">
+<div class="section-label">
   Intelligence Reports
   <a href="/news/" style="font-size:11px;color:var(--bl);text-decoration:none;margin-left:auto;letter-spacing:normal;text-transform:none">Archivio →</a>
 </div>
@@ -215,14 +253,14 @@
 </div>
 
 <!-- FOOTER -->
-<div style="border-top:1px solid var(--b);padding:32px 24px;max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--m)">
-  <span>WeatherArb &copy; 2026 &mdash; Independent Weather Intelligence Agency</span>
+<div class="ftr">
+  <span>WeatherArb © 2026 — Independent Weather Intelligence Agency</span>
   <div>
-    <a href="/about.html" style="color:var(--m);text-decoration:none;margin:0 8px">Methodology</a>
-    <a href="/api.html" style="color:var(--m);text-decoration:none;margin:0 8px">API</a>
-    <a href="/pricing/" style="color:var(--m);text-decoration:none;margin:0 8px">Pricing</a>
-    <a href="/alerts.html" style="color:var(--m);text-decoration:none;margin:0 8px">Alerts</a>
-    <a href="/news/" style="color:var(--m);text-decoration:none;margin:0 8px">News</a>
+    <a href="/about.html">Methodology</a>
+    <a href="/api.html">API</a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/news/">News</a>
+    <a href="/data/">Data</a>
   </div>
 </div>
 
@@ -230,15 +268,14 @@
 <script>
 const API = 'https://api.weatherarb.com';
 const COL = {CRITICAL:'#ef4444',EXTREME:'#f97316',UNUSUAL:'#f59e0b',NORMAL:'#10b981'};
-const CC_FLAG = {it:'🇮🇹',de:'🇩🇪',fr:'🇫🇷',es:'🇪🇸',gb:'🇬🇧',se:'🇸🇪',nl:'🇳🇱',pl:'🇵🇱',at:'🇦🇹',ch:'🇨🇭',be:'🇧🇪',pt:'🇵🇹',dk:'🇩🇰',no:'🇳🇴'};
+const CC_FLAG = {it:'🇮🇹',de:'🇩🇪',fr:'🇫🇷',es:'🇪🇸',gb:'🇬🇧',se:'🇸🇪',nl:'🇳🇱',pl:'🇵🇱',at:'🇦🇹',ch:'🇨🇭',be:'🇧🇪',pt:'🇵🇹',dk:'🇩🇰',no:'🇳🇴',gr:'🇬🇷',hr:'🇭🇷',cz:'🇨🇿',hu:'🇭🇺',ro:'🇷🇴',fi:'🇫🇮',si:'🇸🇮',sk:'🇸🇰',rs:'🇷🇸'};
 
-// ─── THEME ───
+// THEME
 function toggleTheme(){
   var t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
   document.documentElement.setAttribute('data-theme',t);
   document.getElementById('theme-btn').textContent=t==='dark'?'🌙':'☀️';
   localStorage.setItem('wa-theme',t);
-  // Update map tiles
   updateMapTiles(t);
 }
 (function(){
@@ -247,168 +284,140 @@ function toggleTheme(){
   document.getElementById('theme-btn').textContent=saved==='dark'?'🌙':'☀️';
 })();
 
-// ─── MAP ───
+// MAP
 var mapTiles, map;
 function initMap(){
-  map = L.map('map',{center:[50,10],zoom:4,zoomControl:true,attributionControl:false});
-  var isDark = document.documentElement.getAttribute('data-theme')==='dark';
-  mapTiles = L.tileLayer(
-    isDark
-      ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
-      : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-    {maxZoom:18}
-  ).addTo(map);
+  map=L.map('map',{center:[50,10],zoom:4,zoomControl:true,attributionControl:false});
+  var isDark=document.documentElement.getAttribute('data-theme')==='dark';
+  mapTiles=L.tileLayer(isDark?'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png':'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:18}).addTo(map);
 }
 function updateMapTiles(theme){
-  if(!map) return;
-  if(mapTiles) map.removeLayer(mapTiles);
-  mapTiles = L.tileLayer(
-    theme==='dark'
-      ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
-      : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-    {maxZoom:18}
-  ).addTo(map);
+  if(!map)return;
+  if(mapTiles)map.removeLayer(mapTiles);
+  mapTiles=L.tileLayer(theme==='dark'?'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png':'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:18}).addTo(map);
 }
 initMap();
 
-var markers = [];
+var markers=[];
 function clearMarkers(){markers.forEach(m=>map.removeLayer(m));markers.length=0;}
-
 function addMarker(d){
-  if(!d.lat||!d.lon) return;
-  var lv = d.anomaly_level||'NORMAL';
-  var col = COL[lv]||COL.NORMAL;
-  var sc = d.score||0;
-  var r = 5 + sc*0.7;
-  var cc = (d.country_code||'it').toLowerCase();
-  var slug = (d.location||'').toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
-  var m = L.circleMarker([d.lat,d.lon],{
-    radius:r, fillColor:col, color:col, weight:1,
-    fillOpacity:sc>4?0.85:0.4
-  }).bindPopup(
-    '<div class="wa-popup">'+
-    '<b>'+(d.location||'—')+'</b>'+
-    '<div style="font-size:12px;color:'+col+';margin-bottom:4px">Score '+(sc).toFixed(1)+'/10 &nbsp;Z '+(d.z_score>=0?'+':'')+d.z_score+'</div>'+
-    '<small>'+lv+'</small>'+
-    '<a href="/'+cc+'/'+slug+'/">Analisi →</a>'+
-    '</div>',
-    {closeButton:false}
-  );
-  m.addTo(map);
-  markers.push(m);
+  if(!d.lat||!d.lon)return;
+  var lv=d.anomaly_level||'NORMAL';
+  var col=COL[lv]||COL.NORMAL;
+  var sc=d.score||0;
+  var r=5+sc*0.7;
+  var cc=(d.country_code||'it').toLowerCase();
+  var slug=(d.location||'').toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
+  var m=L.circleMarker([d.lat,d.lon],{radius:r,fillColor:col,color:col,weight:1,fillOpacity:sc>4?0.85:0.4})
+    .bindPopup('<div class="wa-popup"><b>'+(d.location||'—')+'</b><div style="font-size:12px;color:'+col+';margin-bottom:4px">Score '+(sc).toFixed(1)+'/10 Z '+(d.z_score>=0?'+':'')+d.z_score+'</div><small>'+lv+'</small><a href="/'+cc+'/'+slug+'/">Analisi →</a></div>',{closeButton:false});
+  m.addTo(map);markers.push(m);
 }
 
-// ─── DATA ───
-var allData = [];
+// DATA
+var allData=[];
 async function loadData(){
   try{
-    var attempts = 0;
-    var data = null;
-    while(attempts < 3){
-      try{
-        var r = await fetch(API+'/api/v1/europe/top?limit=50');
-        data = await r.json();
-        break;
-      }catch(e){
-        attempts++;
-        if(attempts<3) await new Promise(res=>setTimeout(res,5000));
-      }
-    }
-    if(!data) return;
-    allData = (data.reports||data.data||[]);
-    renderStats();
-    renderTicker();
-    renderMap();
-  }catch(e){
-    console.warn('Data load error',e);
-    setTimeout(loadData,30000);
-  }
+    var r=await fetch(API+'/api/v1/europe/top?limit=50');
+    var data=await r.json();
+    allData=(data.reports||data.data||[]);
+    renderStats();renderTicker();renderMap();
+  }catch(e){setTimeout(loadData,30000);}
 }
-
 function renderStats(){
-  var crit = allData.filter(d=>d.anomaly_level==='CRITICAL').length;
-  var ext = allData.filter(d=>d.anomaly_level==='EXTREME').length;
-  var tot = crit+ext;
-  var avg = allData.reduce((a,d)=>a+(d.score||0),0)/Math.max(allData.length,1);
-  var el = document.getElementById('live-anom');
-  var elc = document.getElementById('live-crit');
-  var ela = document.getElementById('live-avg');
-  if(el) el.textContent = tot;
-  if(elc) elc.textContent = crit;
-  if(ela) ela.textContent = avg.toFixed(1);
+  var crit=allData.filter(d=>d.anomaly_level==='CRITICAL').length;
+  var ext=allData.filter(d=>d.anomaly_level==='EXTREME').length;
+  var avg=allData.reduce((a,d)=>a+(d.score||0),0)/Math.max(allData.length,1);
+  var el=document.getElementById('live-anom'); if(el)el.textContent=crit+ext;
+  var elc=document.getElementById('live-crit'); if(elc)elc.textContent=crit;
+  var ela=document.getElementById('live-avg'); if(ela)ela.textContent=avg.toFixed(1);
 }
-
 function renderTicker(){
-  var t = document.getElementById('ticker');
-  if(!t) return;
-  if(!allData.length){
-    t.innerHTML='<div class="ticker-empty">Nessun segnale disponibile — retry in corso...</div>';
-    setTimeout(loadData,20000);
-    return;
-  }
-  t.innerHTML = allData.slice(0,9).map(function(d){
-    var lv = d.anomaly_level||'NORMAL';
-    var col = COL[lv]||COL.NORMAL;
-    var z = d.z_score||0;
-    var sc = d.score||0;
-    var cc = (d.country_code||'it').toLowerCase();
-    var slug = (d.location||'').toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
-    var flag = CC_FLAG[cc]||'🌍';
-    var sign = z>=0?'+':'';
-    var vert = (d.vertical||d.event_type||'—').replace(/_/g,' ');
+  var t=document.getElementById('ticker');
+  if(!t)return;
+  if(!allData.length){t.innerHTML='<div class="ticker-empty">Nessun segnale disponibile</div>';return;}
+  t.innerHTML=allData.slice(0,9).map(function(d){
+    var lv=d.anomaly_level||'NORMAL';
+    var col=COL[lv]||COL.NORMAL;
+    var z=d.z_score||0; var sc=d.score||0;
+    var cc=(d.country_code||'it').toLowerCase();
+    var slug=(d.location||'').toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
+    var flag=CC_FLAG[cc]||'🌍';
+    var sign=z>=0?'+':'';
+    var vert=(d.vertical||d.event_type||'—').replace(/_/g,' ');
     return '<a href="/'+cc+'/'+slug+'/" class="tick-card">'+
-      '<div class="tick-left">'+
-      '<div class="tick-city">'+flag+' '+(d.location||'—')+'</div>'+
+      '<div class="tick-left"><div class="tick-city">'+flag+' '+(d.location||'—')+'</div>'+
       '<div class="tick-ev">'+vert+'</div>'+
-      '<div class="tick-bar"><div class="tick-fill" style="width:'+Math.min(sc*10,100)+'%;background:'+col+'"></div></div>'+
-      '</div>'+
-      '<div style="text-align:right">'+
-      '<div class="tick-z" style="color:'+col+'">'+sign+z.toFixed(2)+'σ</div>'+
-      '<div class="tick-score" style="color:'+col+'">'+sc.toFixed(1)+'/10</div>'+
-      '</div>'+
-      '</a>';
+      '<div class="tick-bar"><div class="tick-fill" style="width:'+Math.min(sc*10,100)+'%;background:'+col+'"></div></div></div>'+
+      '<div style="text-align:right"><div class="tick-z" style="color:'+col+'">'+sign+z.toFixed(2)+'σ</div>'+
+      '<div class="tick-score" style="color:'+col+'">'+sc.toFixed(1)+'/10</div></div></a>';
   }).join('');
 }
+function renderMap(){clearMarkers();allData.forEach(addMarker);}
 
-function renderMap(){
-  clearMarkers();
-  allData.forEach(addMarker);
+// SPACE WEATHER
+async function loadSpaceWeather(){
+  try{
+    var r=await fetch('/data/grid_stress.json');
+    var d=await r.json();
+    var sw=d.space_weather||{};
+    var gs=d.grid_stress||[];
+    var kp=sw.kp_current||0;
+    var flare=sw.flare_class||'A';
+    var kp_forecast=sw.kp_forecast_max_24h||0;
+    var kp_col=kp>=7?'#ef4444':kp>=5?'#f97316':kp>=3?'#f59e0b':'#10b981';
+    var kp_pct=(kp/9*100).toFixed(0);
+    var kp_labels={0:'Tranquillo',1:'Tranquillo',2:'Tranquillo',3:'Minore',4:'Minore',5:'Moderato',6:'Forte',7:'Forte',8:'Severo',9:'Estremo'};
+    var kp_label=kp_labels[Math.floor(kp)]||'N/D';
+    var flare_col={A:'#10b981',B:'#10b981',C:'#f59e0b',M:'#f97316',X:'#ef4444','X+':'#ef4444'}[flare]||'#10b981';
+    var flare_desc={A:'Trascurabile',B:'Minore',C:'Moderata',M:'Forte',X:'Intensa','X+':'Estrema'}[flare]||'';
+    var top=gs[0]||{};
+    var gs_col=top.risk_level==='CRITICAL'?'#ef4444':top.risk_level==='HIGH'?'#f97316':top.risk_level==='MODERATE'?'#f59e0b':'#10b981';
+    var e=function(id){return document.getElementById(id);};
+    if(e('sw-kp')){e('sw-kp').textContent=kp.toFixed(1);e('sw-kp').style.color=kp_col;}
+    if(e('sw-kp-label'))e('sw-kp-label').textContent=kp_label;
+    if(e('sw-kp-bar')){e('sw-kp-bar').style.width=kp_pct+'%';e('sw-kp-bar').style.background=kp_col;}
+    if(e('sw-flare')){e('sw-flare').textContent=flare;e('sw-flare').style.color=flare_col;}
+    if(e('sw-flare-label'))e('sw-flare-label').textContent=flare_desc;
+    if(e('sw-grid-score')){e('sw-grid-score').textContent=top.grid_stress_score?top.grid_stress_score.toFixed(1)+'/10':'--';e('sw-grid-score').style.color=gs_col;}
+    if(e('sw-grid-city'))e('sw-grid-city').textContent=top.location?(top.location+' · '+(top.risk_level||'')):'--';
+    if(e('sw-kp-forecast')){e('sw-kp-forecast').textContent=kp_forecast.toFixed(1);e('sw-kp-forecast').style.color=kp_forecast>=5?'#f97316':'#10b981';}
+    var alert_col=top.risk_level==='CRITICAL'?'#ef4444':top.risk_level==='HIGH'?'#f97316':'#10b981';
+    if(e('sw-alert'))e('sw-alert').innerHTML='<b style="color:'+alert_col+'">⚡ Grid Intelligence</b> — '+(top.label||'Condizioni normali — nessuna perturbazione geomagnetica significativa')+' <span style="color:var(--m);font-size:10px">· NOAA SWPC '+(sw.timestamp?sw.timestamp.slice(0,16).replace('T',' ')+' UTC':'')+'</span>';
+  }catch(e){console.warn('Space weather unavailable');}
 }
 
-// ─── REPORTS ───
+// REPORTS
 async function loadReports(){
   try{
-    var r = await fetch('/data/latest_reports.json');
-    var d = await r.json();
-    var posts = (d.reports||[]).slice(0,6);
-    var g = document.getElementById('reports-grid');
-    if(!g||!posts.length) return;
-    g.innerHTML = posts.map(function(p){
-      var lv = p.anomaly_level||'NORMAL';
-      var col = COL[lv]||COL.NORMAL;
-      var z = p.z_score||0;
-      var sign = z>=0?'+':'';
-      return '<a href="'+(p.url||'/news/'+p.slug+'/')+ '" class="report-card">'+
-        '<div class="rc-head">'+
+    var r=await fetch('/data/latest_reports.json');
+    var d=await r.json();
+    var posts=(d.reports||[]).slice(0,6);
+    var g=document.getElementById('reports-grid');
+    if(!g||!posts.length)return;
+    g.innerHTML=posts.map(function(p){
+      var lv=p.anomaly_level||'NORMAL';
+      var col=COL[lv]||COL.NORMAL;
+      var z=p.z_score||0; var sign=z>=0?'+':'';
+      var cover=p.cover_url?'<img src="'+p.cover_url+'&w=600&q=70" alt="" class="rc-cover">':'<div class="rc-cover-placeholder"></div>';
+      return '<a href="'+(p.url||'/news/'+p.slug+'/')+ '" class="report-card">'+cover+
+        '<div class="rc-body"><div class="rc-head">'+
         '<span class="rc-tag" style="background:'+col+'22;color:'+col+'">'+p.location+'</span>'+
-        '<span class="rc-date">'+( p.date||'')+'</span>'+
-        '</div>'+
+        '<span class="rc-date">'+(p.date||'')+'</span></div>'+
         '<div class="rc-title">'+(p.title||'—')+'</div>'+
-        '<div class="rc-lead">'+(p.lead||p.excerpt||'')+'</div>'+
-        '<div class="rc-foot">'+
-        '<span class="rc-z" style="color:'+col+'">Z '+sign+z.toFixed(2)+'σ</span>'+
+        '<div class="rc-lead">'+(p.excerpt||p.lead||'')+'</div>'+
+        '<div class="rc-foot"><span class="rc-z" style="color:'+col+'">Z '+sign+z.toFixed(2)+'σ</span>'+
         '<span style="color:var(--m)">Score '+(p.score||0).toFixed(1)+'/10</span>'+
-        '<span class="rc-more">Leggi →</span>'+
-        '</div>'+
-        '</a>';
+        '<span class="rc-more">Leggi →</span></div></div></a>';
     }).join('');
   }catch(e){console.warn('Reports error',e);}
 }
 
-// Boot
+// BOOT
 loadData();
+loadSpaceWeather();
 loadReports();
-setInterval(loadData, 300000);
+setInterval(loadData,300000);
+setInterval(loadSpaceWeather,900000);
 </script>
 </body>
 </html>

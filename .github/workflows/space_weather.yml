@@ -1,0 +1,32 @@
+name: WeatherArb Space Weather Engine
+on:
+  schedule:
+    - cron: '0 */3 * * *'   # ogni 3 ore
+  workflow_dispatch:
+jobs:
+  space-weather:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run Space Weather Engine
+        env:
+          API_BASE: https://api.weatherarb.com
+        run: python tools/space_weather.py
+      - name: Commit & push if changed
+        run: |
+          git config user.name "WeatherArb Bot"
+          git config user.email "bot@weatherarb.com"
+          git add data/website/data/space_weather.json data/website/data/grid_stress.json
+          git diff --staged --quiet || git commit -m "auto: space weather update $(date -u +%Y-%m-%dT%H:%M)"
+          git push
