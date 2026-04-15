@@ -1,0 +1,15 @@
+{
+  "slug": "2026-04-15-bilbao-clear",
+  "title": "Bilbao: Tempo Sereno Inatteso con Valore Z di +1.78",
+  "lead": "Le previsioni meteo per Bilbao indicano condizioni di cielo sereno, un evento classificato come UNUSUAL dal nostro sistema di analisi WeatherArb.",
+  "body": "Analizzando i dati storici e attuali, abbiamo riscontrato un valore Z-Score di +1.78 per questa situazione di tempo sereno a Bilbao. Questo indica una deviazione significativa dalla norma stagionale, rendendo l'evento statisticamente insolito. Il nostro punteggio generale di 6.7/10 riflette questa anomalia, pur confermando la probabilità di bel tempo.",
+  "conclusion": "I residenti e i visitatori di Bilbao possono aspettarsi una giornata prevalentemente limpida, ma è importante notare che questa configurazione meteorologica si discosta dalle tipiche condizioni attese per questo periodo dell'anno.",
+  "location": "Bilbao",
+  "country_code": "it",
+  "vertical": "clear",
+  "z_score": 1.78,
+  "score": 6.66,
+  "anomaly_level": "UNUSUAL",
+  "timestamp": "2026-04-15T01:51:58.831195+00:00",
+  "date": "2026-04-15"
+}

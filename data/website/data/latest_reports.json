@@ -1,7 +1,49 @@
 {
-  "last_updated": "2026-04-14T19:15:57.288827+00:00",
-  "count": 35,
+  "last_updated": "2026-04-15T01:52:01.665771+00:00",
+  "count": 38,
   "reports": [
+    {
+      "slug": "2026-04-15-innsbruck-clear",
+      "title": "Innsbruck: Condizioni di Cielo Sereno Inaspettate con Leggero Impatto",
+      "lead": "Le previsioni meteo per Innsbruck indicano un evento di cielo sereno con uno Z-score di -1.32, valutato 6.4/10 e classificato come UNUSUAL. Questo suggerisce un...",
+      "location": "Innsbruck",
+      "country_code": "it",
+      "vertical": "clear",
+      "z_score": -1.32,
+      "score": 6.38,
+      "anomaly_level": "UNUSUAL",
+      "date": "2026-04-15",
+      "url": "/news/2026-04-15-innsbruck-clear/",
+      "excerpt": "Le previsioni meteo per Innsbruck indicano un evento di cielo sereno con uno Z-score di -1.32, valutato 6.4/10 e classificato come UNUSUAL. Questo suggerisce una deviazione dalla n"
+    },
+    {
+      "slug": "2026-04-15-bilbao-clear",
+      "title": "Bilbao: Tempo Sereno Inatteso con Valore Z di +1.78",
+      "lead": "Le previsioni meteo per Bilbao indicano condizioni di cielo sereno, un evento classificato come UNUSUAL dal nostro sistema di analisi WeatherArb....",
+      "location": "Bilbao",
+      "country_code": "it",
+      "vertical": "clear",
+      "z_score": 1.78,
+      "score": 6.66,
+      "anomaly_level": "UNUSUAL",
+      "date": "2026-04-15",
+      "url": "/news/2026-04-15-bilbao-clear/",
+      "excerpt": "Le previsioni meteo per Bilbao indicano condizioni di cielo sereno, un evento classificato come UNUSUAL dal nostro sistema di analisi WeatherArb."
+    },
+    {
+      "slug": "2026-04-15-bergen-clear",
+      "title": "Allerta Meteo Estrema a Bergen: Cielo Sereno con Anomalie Significative",
+      "lead": "Un evento di cielo sereno di rara intensità è previsto a Bergen, caratterizzato da uno Z-Score di -2.92 e valutato con un punteggio di 8.6/10, raggiungendo un l...",
+      "location": "Bergen",
+      "country_code": "it",
+      "vertical": "clear",
+      "z_score": -2.92,
+      "score": 8.58,
+      "anomaly_level": "EXTREME",
+      "date": "2026-04-15",
+      "url": "/news/2026-04-15-bergen-clear/",
+      "excerpt": "Un evento di cielo sereno di rara intensità è previsto a Bergen, caratterizzato da uno Z-Score di -2.92 e valutato con un punteggio di 8.6/10, raggiungendo un livello di criticità "
+    },
     {
       "slug": "2026-04-14-verona-heavy-rain",
       "title": "Allerta Meteo Critica a Verona: Piogge Intense con Probabilità Elevata",
@@ -239,48 +281,6 @@
       "date": "2026-04-12",
       "url": "/news/2026-04-12-umea-clear/",
       "excerpt": "WeatherArb segnala una deviazione meteorologica critica a Umeå, con uno Z-Score di -5.20 che indica una probabilità estremamente bassa di condizioni di sereno simili a quelle attua"
-    },
-    {
-      "slug": "2026-04-12-stockholm-clear",
-      "title": "Allerta Meteo Critica a Stoccolma: Freddo Intenso Previsto",
-      "lead": "Le previsioni meteo per Stoccolma indicano un evento di freddo eccezionalmente intenso, classificato come CRITICAL, con uno Z-Score di -4.28....",
-      "location": "Stockholm",
-      "country_code": "it",
-      "vertical": "clear",
-      "z_score": -4.28,
-      "score": 7.6,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-04-12",
-      "url": "/news/2026-04-12-stockholm-clear/",
-      "excerpt": "Le previsioni meteo per Stoccolma indicano un evento di freddo eccezionalmente intenso, classificato come CRITICAL, con uno Z-Score di -4.28."
-    },
-    {
-      "slug": "2026-04-12-stavanger-clear",
-      "title": "Ondata di Sereno Eccezionale su Stavanger: Allarme Meteo CRITICO",
-      "lead": "Il nostro sistema di analisi meteo avanzato, WeatherArb, ha rilevato un evento di 'Clear' (sereno) di magnitudo senza precedenti su Stavanger, classificato con ...",
-      "location": "Stavanger",
-      "country_code": "it",
-      "vertical": "clear",
-      "z_score": 6.38,
-      "score": 7.97,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-04-12",
-      "url": "/news/2026-04-12-stavanger-clear/",
-      "excerpt": "Il nostro sistema di analisi meteo avanzato, WeatherArb, ha rilevato un evento di 'Clear' (sereno) di magnitudo senza precedenti su Stavanger, classificato con un Z-Score di +6.38 "
-    },
-    {
-      "slug": "2026-04-12-biella-heavy-rain",
-      "title": "Allerta Meteo Critica per Biella: Piogge Intense Previste",
-      "lead": "WeatherArb segnala un livello di criticità elevato per Biella a causa di un'imminente ondata di piogge intense. L'evento è caratterizzato da uno Z-score di +4.3...",
-      "location": "Biella",
-      "country_code": "it",
-      "vertical": "heavy-rain",
-      "z_score": 4.33,
-      "score": 7.02,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-04-12",
-      "url": "/news/2026-04-12-biella-heavy-rain/",
-      "excerpt": "WeatherArb segnala un livello di criticità elevato per Biella a causa di un'imminente ondata di piogge intense. L'evento è caratterizzato da uno Z-score di +4.33, indicando una dev"
     }
   ]
 }

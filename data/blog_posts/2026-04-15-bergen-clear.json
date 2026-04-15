@@ -1,0 +1,15 @@
+{
+  "slug": "2026-04-15-bergen-clear",
+  "title": "Allerta Meteo Estrema a Bergen: Cielo Sereno con Anomalie Significative",
+  "lead": "Un evento di cielo sereno di rara intensità è previsto a Bergen, caratterizzato da uno Z-Score di -2.92 e valutato con un punteggio di 8.6/10, raggiungendo un livello di criticità EXTREME.",
+  "body": "L'analisi meteorologica di WeatherArb segnala condizioni di cielo sereno eccezionalmente stabili e prolungate per la città di Bergen. Lo Z-Score di -2.92 indica una deviazione significativa dalla media climatologica per questo tipo di evento, suggerendo una persistenza insolita di alta pressione e assenza di nuvolosità. Questa situazione, sebbene apparentemente favorevole, solleva interrogativi riguardo le dinamiche atmosferiche sottostanti.",
+  "conclusion": "La classificazione EXTREME evidenzia l'importanza di monitorare attentamente questa fase meteorologica. Sebbene il cielo sereno sia spesso associato a condizioni piacevoli, la sua intensità anomala potrebbe avere implicazioni indirette a lungo termine. Si raccomanda di seguire gli aggiornamenti per comprendere appieno le conseguenze di questo fenomeno eccezionale.",
+  "location": "Bergen",
+  "country_code": "it",
+  "vertical": "clear",
+  "z_score": -2.92,
+  "score": 8.58,
+  "anomaly_level": "EXTREME",
+  "timestamp": "2026-04-15T01:51:57.283347+00:00",
+  "date": "2026-04-15"
+}
