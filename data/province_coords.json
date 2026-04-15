@@ -1088,6 +1088,470 @@
       "cluster": "NO_Coastal",
       "popolazione": 145000,
       "lang": "no"
+    },
+    {
+      "nome": "Roma",
+      "regione": "Lazio",
+      "country": "Italy",
+      "lat": 41.9028,
+      "lon": 12.4964,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Latina",
+      "regione": "Lazio",
+      "country": "Italy",
+      "lat": 41.4678,
+      "lon": 12.9036,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Frosinone",
+      "regione": "Lazio",
+      "country": "Italy",
+      "lat": 41.64,
+      "lon": 13.3447,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Viterbo",
+      "regione": "Lazio",
+      "country": "Italy",
+      "lat": 42.4169,
+      "lon": 12.1047,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Rieti",
+      "regione": "Lazio",
+      "country": "Italy",
+      "lat": 42.4047,
+      "lon": 12.8617,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Firenze",
+      "regione": "Toscana",
+      "country": "Italy",
+      "lat": 43.7696,
+      "lon": 11.2558,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Pisa",
+      "regione": "Toscana",
+      "country": "Italy",
+      "lat": 43.7228,
+      "lon": 10.4017,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Livorno",
+      "regione": "Toscana",
+      "country": "Italy",
+      "lat": 43.5486,
+      "lon": 10.3106,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Siena",
+      "regione": "Toscana",
+      "country": "Italy",
+      "lat": 43.3186,
+      "lon": 11.3306,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Arezzo",
+      "regione": "Toscana",
+      "country": "Italy",
+      "lat": 43.4636,
+      "lon": 11.8797,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Pistoia",
+      "regione": "Toscana",
+      "country": "Italy",
+      "lat": 43.9325,
+      "lon": 10.9164,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Lucca",
+      "regione": "Toscana",
+      "country": "Italy",
+      "lat": 43.843,
+      "lon": 10.5075,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Grosseto",
+      "regione": "Toscana",
+      "country": "Italy",
+      "lat": 42.76,
+      "lon": 11.1133,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Massa-Carrara",
+      "regione": "Toscana",
+      "country": "Italy",
+      "lat": 44.035,
+      "lon": 10.14,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Prato",
+      "regione": "Toscana",
+      "country": "Italy",
+      "lat": 43.8777,
+      "lon": 11.0967,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Perugia",
+      "regione": "Umbria",
+      "country": "Italy",
+      "lat": 43.1122,
+      "lon": 12.3889,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Terni",
+      "regione": "Umbria",
+      "country": "Italy",
+      "lat": 42.5636,
+      "lon": 12.64,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Ancona",
+      "regione": "Marche",
+      "country": "Italy",
+      "lat": 43.6158,
+      "lon": 13.5189,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Pesaro e Urbino",
+      "regione": "Marche",
+      "country": "Italy",
+      "lat": 43.91,
+      "lon": 12.9136,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Macerata",
+      "regione": "Marche",
+      "country": "Italy",
+      "lat": 43.2994,
+      "lon": 13.4531,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Ascoli Piceno",
+      "regione": "Marche",
+      "country": "Italy",
+      "lat": 42.8536,
+      "lon": 13.575,
+      "cluster": "Central"
+    },
+    {
+      "nome": "L'Aquila",
+      "regione": "Abruzzo",
+      "country": "Italy",
+      "lat": 42.35,
+      "lon": 13.3992,
+      "cluster": "South"
+    },
+    {
+      "nome": "Pescara",
+      "regione": "Abruzzo",
+      "country": "Italy",
+      "lat": 42.4612,
+      "lon": 14.2158,
+      "cluster": "South"
+    },
+    {
+      "nome": "Chieti",
+      "regione": "Abruzzo",
+      "country": "Italy",
+      "lat": 42.3517,
+      "lon": 14.1675,
+      "cluster": "South"
+    },
+    {
+      "nome": "Teramo",
+      "regione": "Abruzzo",
+      "country": "Italy",
+      "lat": 42.6589,
+      "lon": 13.7033,
+      "cluster": "South"
+    },
+    {
+      "nome": "Campobasso",
+      "regione": "Molise",
+      "country": "Italy",
+      "lat": 41.5606,
+      "lon": 14.6561,
+      "cluster": "South"
+    },
+    {
+      "nome": "Isernia",
+      "regione": "Molise",
+      "country": "Italy",
+      "lat": 41.5933,
+      "lon": 14.2275,
+      "cluster": "South"
+    },
+    {
+      "nome": "Napoli",
+      "regione": "Campania",
+      "country": "Italy",
+      "lat": 40.8518,
+      "lon": 14.2681,
+      "cluster": "South"
+    },
+    {
+      "nome": "Salerno",
+      "regione": "Campania",
+      "country": "Italy",
+      "lat": 40.6827,
+      "lon": 14.7681,
+      "cluster": "South"
+    },
+    {
+      "nome": "Caserta",
+      "regione": "Campania",
+      "country": "Italy",
+      "lat": 41.0744,
+      "lon": 14.3328,
+      "cluster": "South"
+    },
+    {
+      "nome": "Avellino",
+      "regione": "Campania",
+      "country": "Italy",
+      "lat": 40.9147,
+      "lon": 14.7894,
+      "cluster": "South"
+    },
+    {
+      "nome": "Benevento",
+      "regione": "Campania",
+      "country": "Italy",
+      "lat": 41.1297,
+      "lon": 14.7797,
+      "cluster": "South"
+    },
+    {
+      "nome": "Bari",
+      "regione": "Puglia",
+      "country": "Italy",
+      "lat": 41.1171,
+      "lon": 16.8719,
+      "cluster": "South"
+    },
+    {
+      "nome": "Taranto",
+      "regione": "Puglia",
+      "country": "Italy",
+      "lat": 40.4644,
+      "lon": 17.2481,
+      "cluster": "South"
+    },
+    {
+      "nome": "Foggia",
+      "regione": "Puglia",
+      "country": "Italy",
+      "lat": 41.46,
+      "lon": 15.5544,
+      "cluster": "South"
+    },
+    {
+      "nome": "Lecce",
+      "regione": "Puglia",
+      "country": "Italy",
+      "lat": 40.3516,
+      "lon": 18.175,
+      "cluster": "South"
+    },
+    {
+      "nome": "Brindisi",
+      "regione": "Puglia",
+      "country": "Italy",
+      "lat": 40.6327,
+      "lon": 17.9417,
+      "cluster": "South"
+    },
+    {
+      "nome": "Barletta-Andria-Trani",
+      "regione": "Puglia",
+      "country": "Italy",
+      "lat": 41.3147,
+      "lon": 16.2756,
+      "cluster": "South"
+    },
+    {
+      "nome": "Potenza",
+      "regione": "Basilicata",
+      "country": "Italy",
+      "lat": 40.6408,
+      "lon": 15.8058,
+      "cluster": "South"
+    },
+    {
+      "nome": "Matera",
+      "regione": "Basilicata",
+      "country": "Italy",
+      "lat": 40.6663,
+      "lon": 16.6044,
+      "cluster": "South"
+    },
+    {
+      "nome": "Catanzaro",
+      "regione": "Calabria",
+      "country": "Italy",
+      "lat": 38.91,
+      "lon": 16.595,
+      "cluster": "South"
+    },
+    {
+      "nome": "Cosenza",
+      "regione": "Calabria",
+      "country": "Italy",
+      "lat": 39.2986,
+      "lon": 16.2536,
+      "cluster": "South"
+    },
+    {
+      "nome": "Reggio Calabria",
+      "regione": "Calabria",
+      "country": "Italy",
+      "lat": 38.1147,
+      "lon": 15.65,
+      "cluster": "South"
+    },
+    {
+      "nome": "Crotone",
+      "regione": "Calabria",
+      "country": "Italy",
+      "lat": 39.085,
+      "lon": 17.1275,
+      "cluster": "South"
+    },
+    {
+      "nome": "Vibo Valentia",
+      "regione": "Calabria",
+      "country": "Italy",
+      "lat": 38.6753,
+      "lon": 16.0969,
+      "cluster": "South"
+    },
+    {
+      "nome": "Palermo",
+      "regione": "Sicilia",
+      "country": "Italy",
+      "lat": 38.1157,
+      "lon": 13.3613,
+      "cluster": "Sicily"
+    },
+    {
+      "nome": "Catania",
+      "regione": "Sicilia",
+      "country": "Italy",
+      "lat": 37.5023,
+      "lon": 15.0873,
+      "cluster": "Sicily"
+    },
+    {
+      "nome": "Messina",
+      "regione": "Sicilia",
+      "country": "Italy",
+      "lat": 38.1938,
+      "lon": 15.554,
+      "cluster": "Sicily"
+    },
+    {
+      "nome": "Siracusa",
+      "regione": "Sicilia",
+      "country": "Italy",
+      "lat": 37.0755,
+      "lon": 15.2866,
+      "cluster": "Sicily"
+    },
+    {
+      "nome": "Ragusa",
+      "regione": "Sicilia",
+      "country": "Italy",
+      "lat": 36.9281,
+      "lon": 14.7314,
+      "cluster": "Sicily"
+    },
+    {
+      "nome": "Trapani",
+      "regione": "Sicilia",
+      "country": "Italy",
+      "lat": 38.0179,
+      "lon": 12.5364,
+      "cluster": "Sicily"
+    },
+    {
+      "nome": "Agrigento",
+      "regione": "Sicilia",
+      "country": "Italy",
+      "lat": 37.3111,
+      "lon": 13.5765,
+      "cluster": "Sicily"
+    },
+    {
+      "nome": "Caltanissetta",
+      "regione": "Sicilia",
+      "country": "Italy",
+      "lat": 37.49,
+      "lon": 14.0628,
+      "cluster": "Sicily"
+    },
+    {
+      "nome": "Enna",
+      "regione": "Sicilia",
+      "country": "Italy",
+      "lat": 37.5669,
+      "lon": 14.2789,
+      "cluster": "Sicily"
+    },
+    {
+      "nome": "Cagliari",
+      "regione": "Sardegna",
+      "country": "Italy",
+      "lat": 39.2238,
+      "lon": 9.1217,
+      "cluster": "Sardinia"
+    },
+    {
+      "nome": "Sassari",
+      "regione": "Sardegna",
+      "country": "Italy",
+      "lat": 40.7259,
+      "lon": 8.5556,
+      "cluster": "Sardinia"
+    },
+    {
+      "nome": "Nuoro",
+      "regione": "Sardegna",
+      "country": "Italy",
+      "lat": 40.3183,
+      "lon": 9.3306,
+      "cluster": "Sardinia"
+    },
+    {
+      "nome": "Oristano",
+      "regione": "Sardegna",
+      "country": "Italy",
+      "lat": 39.9061,
+      "lon": 8.5886,
+      "cluster": "Sardinia"
     }
   ]
 }
