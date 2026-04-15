@@ -1,0 +1,23 @@
+{
+  "slug": "2026-04-15-edinburgh-heavy-rain",
+  "title": "Edimburgo Sotto Pioggia Battente: Allerta Meteo CRITICA con Z-Score Elevato",
+  "lead": "Edimburgo si prepara ad affrontare un evento meteorologico di forte intensità, caratterizzato da piogge abbondanti e persistenti. L'analisi di WeatherArb segnala un'anomalia significativa con uno Z-Score di +4.33, posizionando l'evento a un livello di criticità elevato (7.0/10).",
+  "body": "Il valore dello Z-Score di +4.33 indica che l'intensità delle piogge attese a Edimburgo supera di oltre quattro deviazioni standard la media storica per questo periodo. Questo livello di anomalia statistica suggerisce un'altissima probabilità che le precipitazioni superino ampiamente le normali aspettative, portando a condizioni meteorologiche estreme.\n\nIl punteggio di 7.0 su 10, classificato come CRITICO, riflette la gravità potenziale dell'evento. Le piogge intense possono causare rapido innalzamento dei livelli dei corsi d'acqua, allagamenti localizzati e un aumento del rischio di smottamenti, specialmente nelle aree urbane e collinari.\n\nL'analisi tecnica evidenzia la necessità di monitorare attentamente l'evoluzione delle precipitazioni e la loro durata. La persistenza di piogge di questa entità può portare a un accumulo significativo di acqua, con conseguenze che richiedono prontezza e preparazione da parte delle autorità e della popolazione.",
+  "conclusion": "Si raccomanda massima allerta e l'attuazione di misure preventive immediate per mitigare i potenziali disagi.",
+  "agri_impact": "Rischio allagamenti e danni ai raccolti per saturazione del suolo.",
+  "logistica_impact": "Interruzioni stradali e ritardi significativi nei trasporti a causa di allagamenti.",
+  "energia_impact": "Potenziali guasti alle infrastrutture energetiche dovuti a inondazioni.",
+  "location": "Edinburgh",
+  "country_code": "it",
+  "vertical": "heavy-rain",
+  "z_score": 4.33,
+  "score": 7.02,
+  "anomaly_level": "CRITICAL",
+  "hdd": null,
+  "cdd": null,
+  "hdd_delta": null,
+  "humidity_pct": null,
+  "wind_kmh": null,
+  "timestamp": "2026-04-15T13:35:17.208833+00:00",
+  "date": "2026-04-15"
+}

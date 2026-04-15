@@ -1,0 +1,27 @@
+{
+  "slug": "2026-04-15-sevilla-heat-wave",
+  "title": "Ondata di Calore Critica a Siviglia: Z-Score +4.39 e Punteggio 7.5/10",
+  "lead": "Siviglia sta affrontando un'ondata di calore di eccezionale intensità, classificata come CRITICAL, con uno Z-score di +4.39 che indica un'anomalia estremamente significativa rispetto alle medie storiche. Il punteggio di 7.5/10 conferma la gravità della situazione, richiedendo massima attenzione.",
+  "body": [
+    "Le temperature previste superano di gran lunga le normali medie stagionali per Siviglia, attestandosi su livelli che rappresentano un rischio elevato per la salute umana e per gli ecosistemi locali. L'alta deviazione standard (Z-score) suggerisce che questo evento è statisticamente raro e fuori dall'ordinario, mettendo a dura prova la resilienza della regione.",
+    "L'analisi dei dati storici e dei modelli previsionali indica una persistenza prolungata di queste condizioni estreme. L'intensa irradiazione solare combinata con masse d'aria calda stazionarie contribuiscono a creare un ambiente che può rapidamente portare a condizioni di stress termico acuto, sia per le persone che per le infrastrutture.",
+    "La combinazione di calore estremo e umidità, se presente, può esacerbare ulteriormente gli effetti negativi, aumentando il rischio di colpi di calore e affaticamento. È fondamentale monitorare attentamente l'evoluzione meteorologica e implementare misure preventive adeguate per mitigare gli impatti."
+  ],
+  "conclusion": "Adottare immediatamente misure di mitigazione e protezione per affrontare questa ondata di calore critica.",
+  "agri_impact": "Rischio elevato di stress idrico e danni alle colture, con possibile calo della produttività agricola.",
+  "logistica_impact": "Possibili rallentamenti nei trasporti a causa del caldo estremo su asfalto e materiali soggetti a dilatazione.",
+  "energia_impact": "Aumento significativo della domanda energetica per il raffrescamento, con potenziale stress sulla rete elettrica.",
+  "location": "Sevilla",
+  "country_code": "it",
+  "vertical": "heat-wave",
+  "z_score": 4.39,
+  "score": 7.55,
+  "anomaly_level": "CRITICAL",
+  "hdd": null,
+  "cdd": null,
+  "hdd_delta": null,
+  "humidity_pct": null,
+  "wind_kmh": null,
+  "timestamp": "2026-04-15T13:35:13.594748+00:00",
+  "date": "2026-04-15"
+}

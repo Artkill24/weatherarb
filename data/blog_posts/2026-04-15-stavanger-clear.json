@@ -1,0 +1,27 @@
+{
+  "slug": "2026-04-15-stavanger-clear",
+  "title": "Stavanger: Sole Brillante Eccezionale (+5.52 Z-Score) - Allerta Meteo CRITICAL",
+  "lead": "Stavanger sta vivendo un periodo di sereno di rara intensità, con uno Z-Score di +5.52 che segnala un'anomalia meteorologica di livello CRITICAL. Questo dato indica una deviazione estremamente significativa dalle condizioni tipiche, qualificandola come un evento di punteggio 8.3/10.",
+  "body": [
+    "L'analisi dello Z-Score di +5.52 per Stavanger evidenzia una marcata e prolungata assenza di nuvolosità, ben oltre la normale variabilità stagionale. Tale valore, considerato elevatissimo, suggerisce che le condizioni di cielo sereno osservate sono statisticamente molto improbabili, posizionando l'evento in una categoria di criticità.",
+    "Questo scenario di sereno eccezionale può avere implicazioni dirette sulla radiazione solare incidente. L'elevata esposizione solare potrebbe portare a un significativo aumento delle temperature superficiali e a una minore dispersione del calore durante le ore diurne, con potenziali effetti sulla microclimatologia locale.",
+    "Dal punto di vista tecnico, l'evento CRITICAL suggerisce un'anomalia atmosferica persistente che richiede attenzione. L'alta probabilità di condizioni stabili e soleggiate per un periodo esteso si discosta nettamente dai pattern medi, giustificando un punteggio elevato e un livello di allerta commisurato."
+  ],
+  "conclusion": "Monitorare attentamente l'evoluzione di questo sereno eccezionale per anticipare potenziali impatti.",
+  "agri_impact": "Potenziale stress idrico per colture; ottimizzare irrigazione e protezione.",
+  "logistica_impact": "Condizioni ideali per trasporti aerei e marittimi; visibilità ottimale.",
+  "energia_impact": "Massimizzare produzione da solare; valutare impatti su raffreddamento infrastrutture.",
+  "location": "Stavanger",
+  "country_code": "it",
+  "vertical": "clear",
+  "z_score": 5.52,
+  "score": 8.32,
+  "anomaly_level": "CRITICAL",
+  "hdd": null,
+  "cdd": null,
+  "hdd_delta": null,
+  "humidity_pct": null,
+  "wind_kmh": null,
+  "timestamp": "2026-04-15T13:35:01.542924+00:00",
+  "date": "2026-04-15"
+}

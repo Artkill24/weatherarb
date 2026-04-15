@@ -1,0 +1,27 @@
+{
+  "slug": "2026-04-15-matera-clear",
+  "title": "Matera in Cielo Sereno: Anomalia Critica con Z-Score Elevato",
+  "lead": "Matera si prepara ad accogliere un evento meteorologico di rara intensità, caratterizzato da un cielo eccezionalmente sereno. L'analisi di WeatherArb evidenzia uno Z-Score di +4.12, indicando una deviazione significativa dalla norma che porta il livello di criticità a 'CRITICAL'.",
+  "body": [
+    "Questo valore di Z-Score, pari a +4.12, segnala una probabilità estremamente bassa che le attuali condizioni di cielo sereno si verifichino in questo periodo dell'anno per Matera. Si tratta di una deviazione statisticamente rilevante che giustifica la classificazione di livello 'CRITICAL'. La scala di valutazione di WeatherArb assegna un punteggio di 7.9/10 a questa anomalia, sottolineando la sua eccezionalità.",
+    "Analizzando la composizione atmosferica, si prevede una stabilità marcata con assenza quasi totale di nuvolosità. Questo scenario può favorire un'intensa irradiazione solare durante il giorno e un raffreddamento più rapido durante la notte, a seconda della presenza o assenza di umidità residua. L'assenza di precipitazioni è un dato certo.",
+    "Le implicazioni di tale evento vanno oltre la semplice osservazione meteorologica. La persistente assenza di copertura nuvolosa può influenzare i cicli termici locali e la qualità dell'aria, favorendo la dispersione di inquinanti in assenza di vento, o al contrario, una loro concentrazione in condizioni di inversione termica."
+  ],
+  "conclusion": "Si raccomanda di monitorare attentamente le variazioni termiche e la qualità dell'aria locali.",
+  "agri_impact": "Ideale per lavorazioni agricole che richiedono visibilità e assenza di pioggia.",
+  "logistica_impact": "Condizioni ottimali per trasporti aerei e terrestri, visibilità eccellente.",
+  "energia_impact": "Massima produzione solare prevista, ma possibile calo notturno per fotovoltaico.",
+  "location": "Matera",
+  "country_code": "it",
+  "vertical": "clear",
+  "z_score": 4.12,
+  "score": 7.9,
+  "anomaly_level": "CRITICAL",
+  "hdd": null,
+  "cdd": null,
+  "hdd_delta": null,
+  "humidity_pct": null,
+  "wind_kmh": null,
+  "timestamp": "2026-04-15T13:35:27.203509+00:00",
+  "date": "2026-04-15"
+}
