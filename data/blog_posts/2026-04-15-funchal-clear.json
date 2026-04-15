@@ -1,0 +1,23 @@
+{
+  "slug": "2026-04-15-funchal-clear",
+  "title": "Funchal: Sole Intenso Previsto con Z-Score Critico di +3.94",
+  "lead": "Funchal si prepara ad affrontare un periodo di tempo eccezionalmente sereno, caratterizzato da un Z-Score di +3.94 che indica un'anomalia significativa rispetto alle condizioni medie. Questo scenario, valutato 7.4/10, raggiunge un livello CRITICAL di intensità solare.",
+  "body": "L'analisi tecnica rivela un'anomalia di alta magnitudo nella probabilità di cielo sereno a Funchal. Lo Z-Score positivo di +3.94 suggerisce che l'attuale configurazione atmosferica è estremamente improbabile in condizioni normali, puntando verso un periodo prolungato di assenza di nuvolosità.\n\nLe temperature potrebbero subire un rialzo moderato, ma l'elemento distintivo sarà l'intensità della radiazione solare. La persistenza di queste condizioni potrebbe influenzare i cicli naturali e le attività all'aperto, richiedendo un'attenta pianificazione.\n\nLa valutazione complessiva di 7.4/10 sottolinea la rilevanza di questo evento meteorologico. Il livello CRITICAL evidenzia la necessità di monitorare attentamente l'evoluzione, specialmente per le attività che dipendono direttamente dalle condizioni di luce e calore solare.",
+  "conclusion": "Si raccomanda di prepararsi a un'intensa esposizione solare e di adottare misure preventive adeguate.",
+  "agri_impact": "Elevata radiazione solare benefica per la maturazione, ma rischio di stress idrico prolungato.",
+  "logistica_impact": "Condizioni favorevoli per trasporti aerei e marittimi, ma attenzione a possibili disagi legati al caldo.",
+  "energia_impact": "Potenziale aumento della produzione solare, ma rischio di surriscaldamento per infrastrutture.",
+  "location": "Funchal",
+  "country_code": "pt",
+  "vertical": "clear",
+  "z_score": 3.94,
+  "score": 7.39,
+  "anomaly_level": "CRITICAL",
+  "hdd": null,
+  "cdd": null,
+  "hdd_delta": null,
+  "humidity_pct": null,
+  "wind_kmh": null,
+  "timestamp": "2026-04-15T19:18:52.097280+00:00",
+  "date": "2026-04-15"
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "2026-04-15-southampton-clear",
+  "title": "Southampton: Allerta Meteo Estrema per Sole Intenso (Z-Score +4.33)",
+  "lead": "Southampton si trova ad affrontare un'anomalia meteorologica di livello CRITICAL, con un valore Z-Score eccezionalmente alto di +4.33 associato a condizioni di cielo sereno. Questo indica una deviazione significativa dalla norma per la persistenza e l'intensità del sole.",
+  "body": [
+    "L'analisi dei dati di WeatherArb evidenzia un punteggio di 6.9/10, classificando l'evento come critico a causa dell'intensità delle condizioni di cielo sereno prolungato. Lo Z-Score di +4.33 suggerisce che la probabilità di osservare tali condizioni di sole in questo periodo dell'anno è estremamente bassa, indicando un evento meteorologico di notevole anomalia.",
+    "La persistenza di un cielo completamente sereno per un periodo prolungato, come suggerito da questo Z-Score elevato, può portare a un accumulo significativo di radiazione solare. Questo non solo influenzerà le temperature superficiali, ma potrebbe anche avere implicazioni per l'umidità dell'aria e l'evaporazione, alterando i microclimi locali.",
+    "Le cause di tale anomalia potrebbero essere legate a un blocco atmosferico persistente o a un'area di alta pressione particolarmente stabile che impedisce la formazione di nubi. Monitorare l'evoluzione di questa situazione è fondamentale per comprendere la sua durata e il suo impatto complessivo sul territorio di Southampton."
+  ],
+  "conclusion": "Si raccomanda un monitoraggio continuo e una valutazione della resilienza delle infrastrutture esposte a un'intensa radiazione solare.",
+  "agri_impact": "Rischio di stress idrico e danni da scottatura per le colture.",
+  "logistica_impact": "Potenziali disagi per la visibilità e surriscaldamento dei mezzi.",
+  "energia_impact": "Aumento della domanda per raffrescamento e potenziale stress sulle reti.",
+  "location": "Southampton",
+  "country_code": "gb",
+  "vertical": "clear",
+  "z_score": 4.33,
+  "score": 6.89,
+  "anomaly_level": "CRITICAL",
+  "hdd": null,
+  "cdd": null,
+  "hdd_delta": null,
+  "humidity_pct": null,
+  "wind_kmh": null,
+  "timestamp": "2026-04-15T19:18:28.860927+00:00",
+  "date": "2026-04-15"
+}

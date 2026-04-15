@@ -1,7 +1,21 @@
 {
-  "last_updated": "2026-04-15T19:05:55.910808+00:00",
-  "count": 43,
+  "last_updated": "2026-04-15T19:18:52.101308+00:00",
+  "count": 48,
   "reports": [
+    {
+      "slug": "2026-04-15-viterbo-heavy-rain",
+      "title": "Viterbo: Allerta Meteo CRITICA per Piogge Intense, Z-Score +4.88",
+      "lead": "Viterbo è attualmente interessata da un evento di pioggia intensa di livello CRITICO, caratterizzato da uno Z-Score di +4.88, indicativo di un'anomalia meteorol...",
+      "location": "Viterbo",
+      "country_code": "it",
+      "vertical": "heavy-rain",
+      "z_score": 4.88,
+      "score": 7.72,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-04-15",
+      "url": "/news/2026-04-15-viterbo-heavy-rain/",
+      "excerpt": "Viterbo è attualmente interessata da un evento di pioggia intensa di livello CRITICO, caratterizzato da uno Z-Score di +4.88, indicativo di un'anomalia meteorologica di forte entit"
+    },
     {
       "slug": "2026-04-15-trento-heat-wave",
       "title": "Ondata di Calore a Trento: Livello UNUSUAL con Z-Score Elevato",
@@ -43,6 +57,20 @@
       "date": "2026-04-15",
       "url": "/news/2026-04-15-stavanger-clear/",
       "excerpt": "Stavanger sta vivendo un periodo di sereno di rara intensità, con uno Z-Score di +5.52 che segnala un'anomalia meteorologica di livello CRITICAL. Questo dato indica una deviazione "
+    },
+    {
+      "slug": "2026-04-15-southampton-clear",
+      "title": "Southampton: Allerta Meteo Estrema per Sole Intenso (Z-Score +4.33)",
+      "lead": "Southampton si trova ad affrontare un'anomalia meteorologica di livello CRITICAL, con un valore Z-Score eccezionalmente alto di +4.33 associato a condizioni di ...",
+      "location": "Southampton",
+      "country_code": "gb",
+      "vertical": "clear",
+      "z_score": 4.33,
+      "score": 6.89,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-04-15",
+      "url": "/news/2026-04-15-southampton-clear/",
+      "excerpt": "Southampton si trova ad affrontare un'anomalia meteorologica di livello CRITICAL, con un valore Z-Score eccezionalmente alto di +4.33 associato a condizioni di cielo sereno. Questo"
     },
     {
       "slug": "2026-04-15-sevilla-heat-wave",
@@ -129,6 +157,20 @@
       "excerpt": "Livorno è attualmente sotto l'influenza di un'ondata di calore di eccezionale intensità, caratterizzata da uno Z-Score di +4.46. Questo valore indica che le temperature registrate "
     },
     {
+      "slug": "2026-04-15-lamezia-terme-clear",
+      "title": "Anomalia Meteo Lamezia Terme: Ciel Sereno Estremo, Livello CRITICAL",
+      "lead": "Lamezia Terme sta vivendo un evento di cielo sereno di eccezionale intensità, come evidenziato da uno Z-Score di +5.52. Questo fenomeno, valutato 7.9/10 con liv...",
+      "location": "Lamezia Terme",
+      "country_code": "it",
+      "vertical": "clear",
+      "z_score": 5.52,
+      "score": 7.9,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-04-15",
+      "url": "/news/2026-04-15-lamezia-terme-clear/",
+      "excerpt": "Lamezia Terme sta vivendo un evento di cielo sereno di eccezionale intensità, come evidenziato da uno Z-Score di +5.52. Questo fenomeno, valutato 7.9/10 con livello CRITICAL, indic"
+    },
+    {
       "slug": "2026-04-15-innsbruck-clear",
       "title": "Innsbruck: Condizioni di Cielo Sereno Inaspettate con Leggero Impatto",
       "lead": "Le previsioni meteo per Innsbruck indicano un evento di cielo sereno con uno Z-score di -1.32, valutato 6.4/10 e classificato come UNUSUAL. Questo suggerisce un...",
@@ -141,6 +183,20 @@
       "date": "2026-04-15",
       "url": "/news/2026-04-15-innsbruck-clear/",
       "excerpt": "Le previsioni meteo per Innsbruck indicano un evento di cielo sereno con uno Z-score di -1.32, valutato 6.4/10 e classificato come UNUSUAL. Questo suggerisce una deviazione dalla n"
+    },
+    {
+      "slug": "2026-04-15-funchal-clear",
+      "title": "Funchal: Sole Intenso Previsto con Z-Score Critico di +3.94",
+      "lead": "Funchal si prepara ad affrontare un periodo di tempo eccezionalmente sereno, caratterizzato da un Z-Score di +3.94 che indica un'anomalia significativa rispetto...",
+      "location": "Funchal",
+      "country_code": "pt",
+      "vertical": "clear",
+      "z_score": 3.94,
+      "score": 7.39,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-04-15",
+      "url": "/news/2026-04-15-funchal-clear/",
+      "excerpt": "Funchal si prepara ad affrontare un periodo di tempo eccezionalmente sereno, caratterizzato da un Z-Score di +3.94 che indica un'anomalia significativa rispetto alle condizioni med"
     },
     {
       "slug": "2026-04-15-edinburgh-heavy-rain",
@@ -225,62 +281,6 @@
       "date": "2026-04-15",
       "url": "/news/2026-04-15-bilbao-clear/",
       "excerpt": "Le previsioni meteo per Bilbao indicano condizioni di cielo sereno, un evento classificato come UNUSUAL dal nostro sistema di analisi WeatherArb."
-    },
-    {
-      "slug": "2026-04-15-bergen-clear",
-      "title": "Allerta Meteo Estrema a Bergen: Cielo Sereno con Anomalie Significative",
-      "lead": "Un evento di cielo sereno di rara intensità è previsto a Bergen, caratterizzato da uno Z-Score di -2.92 e valutato con un punteggio di 8.6/10, raggiungendo un l...",
-      "location": "Bergen",
-      "country_code": "it",
-      "vertical": "clear",
-      "z_score": -2.92,
-      "score": 8.58,
-      "anomaly_level": "EXTREME",
-      "date": "2026-04-15",
-      "url": "/news/2026-04-15-bergen-clear/",
-      "excerpt": "Un evento di cielo sereno di rara intensità è previsto a Bergen, caratterizzato da uno Z-Score di -2.92 e valutato con un punteggio di 8.6/10, raggiungendo un livello di criticità "
-    },
-    {
-      "slug": "2026-04-15-aosta-heat-wave",
-      "title": "Ondata di Calore Critica su Aosta: Z-Score di +4.27 e Punteggio 8.0/10",
-      "lead": "Aosta è attualmente interessata da un'ondata di calore di eccezionale intensità, classificata come CRITICAL. Lo Z-score di +4.27 indica un'anomalia termica che ...",
-      "location": "Aosta",
-      "country_code": "it",
-      "vertical": "heat-wave",
-      "z_score": 4.27,
-      "score": 7.99,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-04-15",
-      "url": "/news/2026-04-15-aosta-heat-wave/",
-      "excerpt": "Aosta è attualmente interessata da un'ondata di calore di eccezionale intensità, classificata come CRITICAL. Lo Z-score di +4.27 indica un'anomalia termica che si discosta signific"
-    },
-    {
-      "slug": "2026-04-14-verona-heavy-rain",
-      "title": "Allerta Meteo Critica a Verona: Piogge Intense con Probabilità Elevata",
-      "lead": "WeatherArb segnala un livello di criticità elevato per la città di Verona a causa di un'intensa ondata di piogge....",
-      "location": "Verona",
-      "country_code": "it",
-      "vertical": "heavy-rain",
-      "z_score": 5.04,
-      "score": 7.29,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-04-14",
-      "url": "/news/2026-04-14-verona-heavy-rain/",
-      "excerpt": "WeatherArb segnala un livello di criticità elevato per la città di Verona a causa di un'intensa ondata di piogge."
-    },
-    {
-      "slug": "2026-04-14-venezia-clear",
-      "title": "Ondata di Calore Estiva a Venezia: Allerta CRITICAL",
-      "lead": "Venezia si trova ad affrontare un'ondata di calore di intensità eccezionale, classificata con un livello di allerta CRITICAL. Le proiezioni indicano un'anomalia...",
-      "location": "Venezia",
-      "country_code": "it",
-      "vertical": "clear",
-      "z_score": 3.46,
-      "score": 7.13,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-04-14",
-      "url": "/news/2026-04-14-venezia-clear/",
-      "excerpt": "Venezia si trova ad affrontare un'ondata di calore di intensità eccezionale, classificata con un livello di allerta CRITICAL. Le proiezioni indicano un'anomalia termica significati"
     }
   ]
 }
