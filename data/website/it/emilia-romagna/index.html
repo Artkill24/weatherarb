@@ -5,7 +5,7 @@
 <meta name="description" content="Anomalie meteo in Emilia-Romagna: 9 province e 12 comuni monitorati. Z-Score NASA POWER 25 anni. WeatherArb.">
 <link rel="canonical" href="https://weatherarb.com/it/emilia-romagna/">
 <style>
-:root{--bg:#040608;--s:#0a0d12;--b:#141920;--ba:#1e2d3d;--t:#c8d6e5;--m:#4a5568;--bl:#3b82f6}
+:root{--bg:#040608;--s:#0a0d12;--b:#141920;--t:#c8d6e5;--m:#4a5568;--bl:#3b82f6}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--t);font-family:-apple-system,sans-serif;min-height:100vh}
 .hdr{border-bottom:1px solid var(--b);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
@@ -13,17 +13,16 @@ body{background:var(--bg);color:var(--t);font-family:-apple-system,sans-serif;mi
 .nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--m);text-decoration:none;margin-left:16px}
 .wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}
 .bc{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--m);margin-bottom:16px}.bc a{color:var(--m);text-decoration:none}
-h1{font-size:clamp(32px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
-.sub{font-size:13px;color:var(--m);margin-bottom:32px}
-.section-title{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--m);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--b)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:32px}
-.nc{display:block;padding:14px 16px;background:var(--s);border:1px solid var(--b);border-radius:10px;text-decoration:none;transition:.15s}
+h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.sub{font-size:13px;color:var(--m);margin-bottom:28px}
+.stitle{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--m);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--b)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:7px;margin-bottom:28px}
+.nc{display:block;padding:13px 15px;background:var(--s);border:1px solid var(--b);border-radius:9px;text-decoration:none;transition:.15s}
 .nc:hover{border-color:var(--bl);background:#0d1520}
-.nc-comune{border-style:dashed}
-.nc-comune:hover{border-style:solid}
-.nn{display:block;font-size:13px;font-weight:600;color:var(--t);margin-bottom:3px}
-.ns{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--m)}
-.ftr{border-top:1px solid var(--b);padding:24px;text-align:center;font-size:11px;color:var(--m)}
+.nc-c{border-style:dashed;opacity:.85}.nc-c:hover{border-style:solid;opacity:1}
+.nn{display:block;font-size:13px;font-weight:600;color:var(--t);margin-bottom:2px}
+.ns{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--m)}
+.ftr{border-top:1px solid var(--b);padding:20px;text-align:center;font-size:11px;color:var(--m)}
 .ftr a{color:var(--m);text-decoration:none}
 </style></head>
 <body>
@@ -34,10 +33,10 @@ h1{font-size:clamp(32px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
 <div class="wrap">
   <div class="bc"><a href="/">WeatherArb</a> / <a href="/it/">Italia</a> / Emilia-Romagna</div>
   <h1>Emilia-Romagna</h1>
-  <p class="sub">9 province &middot; 12 comuni &middot; dati live Z-Score</p>
-  <div class="section-title">Province — Nodi di rilevazione</div>
+  <p class="sub">9 province &middot; 12 comuni &middot; Z-Score live</p>
+  <div class="stitle">Province — Nodi di rilevazione</div>
   <div class="grid"><a href="/it/bologna/" class="nc"><span class="nn">Bologna</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/ferrara/" class="nc"><span class="nn">Ferrara</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/forli-cesena/" class="nc"><span class="nn">Forlì-Cesena</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/modena/" class="nc"><span class="nn">Modena</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/parma/" class="nc"><span class="nn">Parma</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/piacenza/" class="nc"><span class="nn">Piacenza</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/ravenna/" class="nc"><span class="nn">Ravenna</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/reggio-emilia/" class="nc"><span class="nn">Reggio Emilia</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/rimini/" class="nc"><span class="nn">Rimini</span><span class="ns">Provincia &middot; nodo dati</span></a></div>
-  <div class="section-title">Comuni</div><div class="grid"><a href="/it/emilia-romagna/bologna/" class="nc nc-comune"><span class="nn">Bologna</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/parma/" class="nc nc-comune"><span class="nn">Parma</span><span class="ns">Parma</span></a><a href="/it/emilia-romagna/modena/" class="nc nc-comune"><span class="nn">Modena</span><span class="ns">Modena</span></a><a href="/it/emilia-romagna/reggio-emilia/" class="nc nc-comune"><span class="nn">Reggio Emilia</span><span class="ns">Reggio Emilia</span></a><a href="/it/emilia-romagna/ravenna/" class="nc nc-comune"><span class="nn">Ravenna</span><span class="ns">Ravenna</span></a><a href="/it/emilia-romagna/rimini/" class="nc nc-comune"><span class="nn">Rimini</span><span class="ns">Rimini</span></a><a href="/it/emilia-romagna/ferrara/" class="nc nc-comune"><span class="nn">Ferrara</span><span class="ns">Ferrara</span></a><a href="/it/emilia-romagna/forli/" class="nc nc-comune"><span class="nn">Forli</span><span class="ns">Forli-Cesena</span></a><a href="/it/emilia-romagna/piacenza/" class="nc nc-comune"><span class="nn">Piacenza</span><span class="ns">Piacenza</span></a><a href="/it/emilia-romagna/cesena/" class="nc nc-comune"><span class="nn">Cesena</span><span class="ns">Forli-Cesena</span></a><a href="/it/emilia-romagna/imola/" class="nc nc-comune"><span class="nn">Imola</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/faenza/" class="nc nc-comune"><span class="nn">Faenza</span><span class="ns">Ravenna</span></a></div>
+  <div class="stitle">Comuni</div><div class="grid"><a href="/it/emilia-romagna/bologna/" class="nc nc-c"><span class="nn">Bologna</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/parma/" class="nc nc-c"><span class="nn">Parma</span><span class="ns">Parma</span></a><a href="/it/emilia-romagna/modena/" class="nc nc-c"><span class="nn">Modena</span><span class="ns">Modena</span></a><a href="/it/emilia-romagna/reggio-emilia/" class="nc nc-c"><span class="nn">Reggio Emilia</span><span class="ns">Reggio Emilia</span></a><a href="/it/emilia-romagna/ravenna/" class="nc nc-c"><span class="nn">Ravenna</span><span class="ns">Ravenna</span></a><a href="/it/emilia-romagna/rimini/" class="nc nc-c"><span class="nn">Rimini</span><span class="ns">Rimini</span></a><a href="/it/emilia-romagna/ferrara/" class="nc nc-c"><span class="nn">Ferrara</span><span class="ns">Ferrara</span></a><a href="/it/emilia-romagna/forli/" class="nc nc-c"><span class="nn">Forli</span><span class="ns">Forli-Cesena</span></a><a href="/it/emilia-romagna/piacenza/" class="nc nc-c"><span class="nn">Piacenza</span><span class="ns">Piacenza</span></a><a href="/it/emilia-romagna/cesena/" class="nc nc-c"><span class="nn">Cesena</span><span class="ns">Forli-Cesena</span></a><a href="/it/emilia-romagna/imola/" class="nc nc-c"><span class="nn">Imola</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/faenza/" class="nc nc-c"><span class="nn">Faenza</span><span class="ns">Ravenna</span></a></div>
 </div>
 <footer class="ftr">
   <a href="/">WeatherArb</a> &middot; <a href="/it/">Italia</a> &middot; <a href="/pricing/">API Pro</a>
