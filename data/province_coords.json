@@ -7,7 +7,8 @@
       "lat": 45.0703,
       "lon": 7.6869,
       "popolazione": 2247780,
-      "cluster": "NW_Industrial"
+      "cluster": "NW_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Vercelli",
@@ -16,7 +17,8 @@
       "lat": 45.3204,
       "lon": 8.4183,
       "popolazione": 172277,
-      "cluster": "NW_Rural"
+      "cluster": "NW_Rural",
+      "country": "Italy"
     },
     {
       "nome": "Novara",
@@ -25,7 +27,8 @@
       "lat": 45.4468,
       "lon": 8.6218,
       "popolazione": 370243,
-      "cluster": "NW_Industrial"
+      "cluster": "NW_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Cuneo",
@@ -34,7 +37,8 @@
       "lat": 44.3841,
       "lon": 7.5425,
       "popolazione": 590000,
-      "cluster": "NW_Alpine"
+      "cluster": "NW_Alpine",
+      "country": "Italy"
     },
     {
       "nome": "Asti",
@@ -43,7 +47,8 @@
       "lat": 44.9003,
       "lon": 8.2064,
       "popolazione": 218000,
-      "cluster": "NW_Rural"
+      "cluster": "NW_Rural",
+      "country": "Italy"
     },
     {
       "nome": "Alessandria",
@@ -52,7 +57,8 @@
       "lat": 44.9124,
       "lon": 8.6151,
       "popolazione": 427000,
-      "cluster": "NW_Industrial"
+      "cluster": "NW_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Biella",
@@ -61,7 +67,8 @@
       "lat": 45.5667,
       "lon": 8.0583,
       "popolazione": 177000,
-      "cluster": "NW_Industrial"
+      "cluster": "NW_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Verbano-Cusio-Ossola",
@@ -70,7 +77,8 @@
       "lat": 45.9237,
       "lon": 8.5523,
       "popolazione": 159000,
-      "cluster": "NW_Alpine"
+      "cluster": "NW_Alpine",
+      "country": "Italy"
     },
     {
       "nome": "Aosta",
@@ -79,7 +87,8 @@
       "lat": 45.7369,
       "lon": 7.32,
       "popolazione": 128000,
-      "cluster": "Alpine_Extreme"
+      "cluster": "Alpine_Extreme",
+      "country": "Italy"
     },
     {
       "nome": "Varese",
@@ -88,7 +97,8 @@
       "lat": 45.8206,
       "lon": 8.8257,
       "popolazione": 889000,
-      "cluster": "NW_Industrial"
+      "cluster": "NW_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Como",
@@ -97,7 +107,8 @@
       "lat": 45.808,
       "lon": 9.0852,
       "popolazione": 599000,
-      "cluster": "NW_Industrial"
+      "cluster": "NW_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Sondrio",
@@ -106,7 +117,8 @@
       "lat": 46.1699,
       "lon": 9.8714,
       "popolazione": 181000,
-      "cluster": "Alpine_Extreme"
+      "cluster": "Alpine_Extreme",
+      "country": "Italy"
     },
     {
       "nome": "Milano",
@@ -115,7 +127,8 @@
       "lat": 45.4654,
       "lon": 9.1859,
       "popolazione": 3250000,
-      "cluster": "Metro_Hub"
+      "cluster": "Metro_Hub",
+      "country": "Italy"
     },
     {
       "nome": "Bergamo",
@@ -124,7 +137,8 @@
       "lat": 45.6983,
       "lon": 9.6773,
       "popolazione": 1114000,
-      "cluster": "NE_Industrial"
+      "cluster": "NE_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Brescia",
@@ -133,7 +147,8 @@
       "lat": 45.5416,
       "lon": 10.2118,
       "popolazione": 1265000,
-      "cluster": "NE_Industrial"
+      "cluster": "NE_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Pavia",
@@ -142,7 +157,8 @@
       "lat": 45.1847,
       "lon": 9.1582,
       "popolazione": 548000,
-      "cluster": "Po_Valley"
+      "cluster": "Po_Valley",
+      "country": "Italy"
     },
     {
       "nome": "Cremona",
@@ -151,7 +167,8 @@
       "lat": 45.1333,
       "lon": 10.022,
       "popolazione": 358000,
-      "cluster": "Po_Valley"
+      "cluster": "Po_Valley",
+      "country": "Italy"
     },
     {
       "nome": "Mantova",
@@ -160,7 +177,8 @@
       "lat": 45.1564,
       "lon": 10.7914,
       "popolazione": 412000,
-      "cluster": "Po_Valley"
+      "cluster": "Po_Valley",
+      "country": "Italy"
     },
     {
       "nome": "Lecco",
@@ -169,7 +187,8 @@
       "lat": 45.8566,
       "lon": 9.3966,
       "popolazione": 337000,
-      "cluster": "NW_Alpine"
+      "cluster": "NW_Alpine",
+      "country": "Italy"
     },
     {
       "nome": "Lodi",
@@ -178,7 +197,8 @@
       "lat": 45.3142,
       "lon": 9.5034,
       "popolazione": 229000,
-      "cluster": "Po_Valley"
+      "cluster": "Po_Valley",
+      "country": "Italy"
     },
     {
       "nome": "Monza e Brianza",
@@ -187,7 +207,8 @@
       "lat": 45.5845,
       "lon": 9.2744,
       "popolazione": 873000,
-      "cluster": "Metro_Hub"
+      "cluster": "Metro_Hub",
+      "country": "Italy"
     },
     {
       "nome": "Bolzano",
@@ -196,7 +217,8 @@
       "lat": 46.4983,
       "lon": 11.3548,
       "popolazione": 534000,
-      "cluster": "Alpine_Extreme"
+      "cluster": "Alpine_Extreme",
+      "country": "Italy"
     },
     {
       "nome": "Trento",
@@ -205,7 +227,8 @@
       "lat": 46.0748,
       "lon": 11.1217,
       "popolazione": 541000,
-      "cluster": "Alpine_Extreme"
+      "cluster": "Alpine_Extreme",
+      "country": "Italy"
     },
     {
       "nome": "Verona",
@@ -214,7 +237,8 @@
       "lat": 45.4384,
       "lon": 10.9916,
       "popolazione": 926000,
-      "cluster": "NE_Industrial"
+      "cluster": "NE_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Vicenza",
@@ -223,7 +247,8 @@
       "lat": 45.5455,
       "lon": 11.5354,
       "popolazione": 859000,
-      "cluster": "NE_Industrial"
+      "cluster": "NE_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Belluno",
@@ -232,7 +257,8 @@
       "lat": 46.142,
       "lon": 12.2163,
       "popolazione": 206000,
-      "cluster": "Alpine_Extreme"
+      "cluster": "Alpine_Extreme",
+      "country": "Italy"
     },
     {
       "nome": "Treviso",
@@ -241,7 +267,8 @@
       "lat": 45.6669,
       "lon": 12.2427,
       "popolazione": 891000,
-      "cluster": "NE_Industrial"
+      "cluster": "NE_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Venezia",
@@ -250,7 +277,8 @@
       "lat": 45.4408,
       "lon": 12.3155,
       "popolazione": 849000,
-      "cluster": "Coastal_NE"
+      "cluster": "Coastal_NE",
+      "country": "Italy"
     },
     {
       "nome": "Padova",
@@ -259,7 +287,8 @@
       "lat": 45.4065,
       "lon": 11.8768,
       "popolazione": 937000,
-      "cluster": "NE_Industrial"
+      "cluster": "NE_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Rovigo",
@@ -268,7 +297,8 @@
       "lat": 45.0684,
       "lon": 11.79,
       "popolazione": 246000,
-      "cluster": "Po_Valley"
+      "cluster": "Po_Valley",
+      "country": "Italy"
     },
     {
       "nome": "Pordenone",
@@ -277,7 +307,8 @@
       "lat": 45.9564,
       "lon": 12.6615,
       "popolazione": 312000,
-      "cluster": "NE_Industrial"
+      "cluster": "NE_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Udine",
@@ -286,7 +317,8 @@
       "lat": 46.0637,
       "lon": 13.2356,
       "popolazione": 533000,
-      "cluster": "NE_Industrial"
+      "cluster": "NE_Industrial",
+      "country": "Italy"
     },
     {
       "nome": "Gorizia",
@@ -295,7 +327,8 @@
       "lat": 45.9399,
       "lon": 13.6219,
       "popolazione": 141000,
-      "cluster": "NE_Border"
+      "cluster": "NE_Border",
+      "country": "Italy"
     },
     {
       "nome": "Trieste",
@@ -304,7 +337,8 @@
       "lat": 45.6495,
       "lon": 13.7768,
       "popolazione": 233000,
-      "cluster": "Coastal_NE"
+      "cluster": "Coastal_NE",
+      "country": "Italy"
     },
     {
       "nome": "Imperia",
@@ -313,7 +347,8 @@
       "lat": 43.8891,
       "lon": 8.0304,
       "popolazione": 215000,
-      "cluster": "Coastal_NW"
+      "cluster": "Coastal_NW",
+      "country": "Italy"
     },
     {
       "nome": "Savona",
@@ -322,7 +357,8 @@
       "lat": 44.3069,
       "lon": 8.4814,
       "popolazione": 277000,
-      "cluster": "Coastal_NW"
+      "cluster": "Coastal_NW",
+      "country": "Italy"
     },
     {
       "nome": "Genova",
@@ -331,7 +367,8 @@
       "lat": 44.4056,
       "lon": 8.9463,
       "popolazione": 841000,
-      "cluster": "Metro_Hub"
+      "cluster": "Metro_Hub",
+      "country": "Italy"
     },
     {
       "nome": "La Spezia",
@@ -340,7 +377,8 @@
       "lat": 44.1024,
       "lon": 9.824,
       "popolazione": 220000,
-      "cluster": "Coastal_NW"
+      "cluster": "Coastal_NW",
+      "country": "Italy"
     },
     {
       "nome": "Piacenza",
@@ -349,7 +387,8 @@
       "lat": 45.0522,
       "lon": 9.693,
       "popolazione": 286000,
-      "cluster": "Po_Valley"
+      "cluster": "Po_Valley",
+      "country": "Italy"
     },
     {
       "nome": "Parma",
@@ -358,7 +397,8 @@
       "lat": 44.8015,
       "lon": 10.328,
       "popolazione": 449000,
-      "cluster": "Po_Valley"
+      "cluster": "Po_Valley",
+      "country": "Italy"
     },
     {
       "nome": "Reggio Emilia",
@@ -367,7 +407,8 @@
       "lat": 44.6989,
       "lon": 10.6297,
       "popolazione": 535000,
-      "cluster": "Po_Valley"
+      "cluster": "Po_Valley",
+      "country": "Italy"
     },
     {
       "nome": "Modena",
@@ -376,7 +417,8 @@
       "lat": 44.6471,
       "lon": 10.9252,
       "popolazione": 706000,
-      "cluster": "Po_Valley"
+      "cluster": "Po_Valley",
+      "country": "Italy"
     },
     {
       "nome": "Bologna",
@@ -385,7 +427,8 @@
       "lat": 44.4949,
       "lon": 11.3426,
       "popolazione": 1015000,
-      "cluster": "Metro_Hub"
+      "cluster": "Metro_Hub",
+      "country": "Italy"
     },
     {
       "nome": "Ferrara",
@@ -394,7 +437,8 @@
       "lat": 44.8381,
       "lon": 11.6197,
       "popolazione": 352000,
-      "cluster": "Po_Valley"
+      "cluster": "Po_Valley",
+      "country": "Italy"
     },
     {
       "nome": "Ravenna",
@@ -403,7 +447,8 @@
       "lat": 44.4184,
       "lon": 12.2035,
       "popolazione": 394000,
-      "cluster": "Coastal_NE"
+      "cluster": "Coastal_NE",
+      "country": "Italy"
     },
     {
       "nome": "Forlì-Cesena",
@@ -412,7 +457,8 @@
       "lat": 44.2227,
       "lon": 12.0407,
       "popolazione": 397000,
-      "cluster": "Apennine_NE"
+      "cluster": "Apennine_NE",
+      "country": "Italy"
     },
     {
       "nome": "Rimini",
@@ -421,7 +467,8 @@
       "lat": 44.0595,
       "lon": 12.5653,
       "popolazione": 340000,
-      "cluster": "Coastal_NE"
+      "cluster": "Coastal_NE",
+      "country": "Italy"
     },
     {
       "nome": "München",
@@ -430,7 +477,8 @@
       "lat": 48.1351,
       "lon": 11.582,
       "popolazione": 1488000,
-      "cluster": "DE_Alpine"
+      "cluster": "DE_Alpine",
+      "country": "Germany"
     },
     {
       "nome": "Hamburg",
@@ -439,7 +487,8 @@
       "lat": 53.5753,
       "lon": 10.0153,
       "popolazione": 1841000,
-      "cluster": "DE_Coastal"
+      "cluster": "DE_Coastal",
+      "country": "Germany"
     },
     {
       "nome": "Berlin",
@@ -448,7 +497,8 @@
       "lat": 52.52,
       "lon": 13.405,
       "popolazione": 3645000,
-      "cluster": "DE_Metro"
+      "cluster": "DE_Metro",
+      "country": "Germany"
     },
     {
       "nome": "Frankfurt",
@@ -457,7 +507,8 @@
       "lat": 50.1109,
       "lon": 8.6821,
       "popolazione": 753000,
-      "cluster": "DE_Industrial"
+      "cluster": "DE_Industrial",
+      "country": "Germany"
     },
     {
       "nome": "Stuttgart",
@@ -466,7 +517,8 @@
       "lat": 48.7758,
       "lon": 9.1829,
       "popolazione": 634000,
-      "cluster": "DE_Industrial"
+      "cluster": "DE_Industrial",
+      "country": "Germany"
     },
     {
       "nome": "Köln",
@@ -475,7 +527,8 @@
       "lat": 50.9333,
       "lon": 6.95,
       "popolazione": 1084000,
-      "cluster": "DE_Industrial"
+      "cluster": "DE_Industrial",
+      "country": "Germany"
     },
     {
       "nome": "Düsseldorf",
@@ -484,7 +537,8 @@
       "lat": 51.2217,
       "lon": 6.7762,
       "popolazione": 619000,
-      "cluster": "DE_Industrial"
+      "cluster": "DE_Industrial",
+      "country": "Germany"
     },
     {
       "nome": "Nürnberg",
@@ -493,7 +547,8 @@
       "lat": 49.4521,
       "lon": 11.0767,
       "popolazione": 518000,
-      "cluster": "DE_Industrial"
+      "cluster": "DE_Industrial",
+      "country": "Germany"
     },
     {
       "nome": "Madrid",
@@ -502,7 +557,8 @@
       "lat": 40.42,
       "lon": -3.7,
       "popolazione": 3300000,
-      "cluster": "ES_Metro"
+      "cluster": "ES_Metro",
+      "country": "Spain"
     },
     {
       "nome": "Barcelona",
@@ -511,7 +567,8 @@
       "lat": 41.39,
       "lon": 2.17,
       "popolazione": 1636000,
-      "cluster": "ES_Coastal"
+      "cluster": "ES_Coastal",
+      "country": "Spain"
     },
     {
       "nome": "Valencia",
@@ -520,7 +577,8 @@
       "lat": 39.47,
       "lon": -0.38,
       "popolazione": 794000,
-      "cluster": "ES_Coastal"
+      "cluster": "ES_Coastal",
+      "country": "Spain"
     },
     {
       "nome": "Sevilla",
@@ -529,7 +587,8 @@
       "lat": 37.39,
       "lon": -5.98,
       "popolazione": 688000,
-      "cluster": "ES_South"
+      "cluster": "ES_South",
+      "country": "Spain"
     },
     {
       "nome": "Bilbao",
@@ -538,7 +597,8 @@
       "lat": 43.26,
       "lon": -2.93,
       "popolazione": 346000,
-      "cluster": "ES_Coastal"
+      "cluster": "ES_Coastal",
+      "country": "Spain"
     },
     {
       "nome": "Paris",
@@ -547,7 +607,8 @@
       "lat": 48.86,
       "lon": 2.35,
       "popolazione": 2148000,
-      "cluster": "FR_Metro"
+      "cluster": "FR_Metro",
+      "country": "France"
     },
     {
       "nome": "Lyon",
@@ -556,7 +617,8 @@
       "lat": 45.75,
       "lon": 4.83,
       "popolazione": 513000,
-      "cluster": "FR_Metro"
+      "cluster": "FR_Metro",
+      "country": "France"
     },
     {
       "nome": "Marseille",
@@ -565,7 +627,8 @@
       "lat": 43.3,
       "lon": 5.37,
       "popolazione": 861000,
-      "cluster": "FR_Coastal"
+      "cluster": "FR_Coastal",
+      "country": "France"
     },
     {
       "nome": "Bordeaux",
@@ -574,7 +637,8 @@
       "lat": 44.84,
       "lon": -0.58,
       "popolazione": 254000,
-      "cluster": "FR_Coastal"
+      "cluster": "FR_Coastal",
+      "country": "France"
     },
     {
       "nome": "Nice",
@@ -583,13 +647,14 @@
       "lat": 43.71,
       "lon": 7.26,
       "popolazione": 342000,
-      "cluster": "FR_Coastal"
+      "cluster": "FR_Coastal",
+      "country": "France"
     },
     {
       "nome": "Stockholm",
       "lat": 59.3293,
       "lon": 18.0686,
-      "country": "SE",
+      "country": "Sweden",
       "cluster": "SE_Metro",
       "popolazione": 975000,
       "lang": "sv"
@@ -598,7 +663,7 @@
       "nome": "Göteborg",
       "lat": 57.7089,
       "lon": 11.9746,
-      "country": "SE",
+      "country": "Sweden",
       "cluster": "SE_Industrial",
       "popolazione": 580000,
       "lang": "sv"
@@ -607,7 +672,7 @@
       "nome": "Malmö",
       "lat": 55.605,
       "lon": 13.0038,
-      "country": "SE",
+      "country": "Sweden",
       "cluster": "SE_Coastal",
       "popolazione": 350000,
       "lang": "sv"
@@ -616,7 +681,7 @@
       "nome": "Uppsala",
       "lat": 59.8586,
       "lon": 17.6389,
-      "country": "SE",
+      "country": "Sweden",
       "cluster": "SE_University",
       "popolazione": 230000,
       "lang": "sv"
@@ -625,7 +690,7 @@
       "nome": "Västerås",
       "lat": 59.6162,
       "lon": 16.5528,
-      "country": "SE",
+      "country": "Sweden",
       "cluster": "SE_Industrial",
       "popolazione": 150000,
       "lang": "sv"
@@ -634,7 +699,7 @@
       "nome": "Örebro",
       "lat": 59.2741,
       "lon": 15.2066,
-      "country": "SE",
+      "country": "Sweden",
       "cluster": "SE_Industrial",
       "popolazione": 155000,
       "lang": "sv"
@@ -643,7 +708,7 @@
       "nome": "Linköping",
       "lat": 58.4108,
       "lon": 15.6214,
-      "country": "SE",
+      "country": "Sweden",
       "cluster": "SE_Industrial",
       "popolazione": 165000,
       "lang": "sv"
@@ -652,7 +717,7 @@
       "nome": "Helsingborg",
       "lat": 56.0465,
       "lon": 12.6945,
-      "country": "SE",
+      "country": "Sweden",
       "cluster": "SE_Coastal",
       "popolazione": 145000,
       "lang": "sv"
@@ -661,7 +726,7 @@
       "nome": "Jönköping",
       "lat": 57.7826,
       "lon": 14.1618,
-      "country": "SE",
+      "country": "Sweden",
       "cluster": "SE_Industrial",
       "popolazione": 140000,
       "lang": "sv"
@@ -670,7 +735,7 @@
       "nome": "Umeå",
       "lat": 63.8258,
       "lon": 20.263,
-      "country": "SE",
+      "country": "Sweden",
       "cluster": "SE_North",
       "popolazione": 130000,
       "lang": "sv"
@@ -679,7 +744,7 @@
       "nome": "London",
       "lat": 51.5074,
       "lon": -0.1278,
-      "country": "GB",
+      "country": "United Kingdom",
       "cluster": "GB_Metro",
       "popolazione": 9000000,
       "lang": "en"
@@ -688,7 +753,7 @@
       "nome": "Manchester",
       "lat": 53.4808,
       "lon": -2.2426,
-      "country": "GB",
+      "country": "United Kingdom",
       "cluster": "GB_Industrial",
       "popolazione": 553000,
       "lang": "en"
@@ -697,7 +762,7 @@
       "nome": "Birmingham",
       "lat": 52.4862,
       "lon": -1.8904,
-      "country": "GB",
+      "country": "United Kingdom",
       "cluster": "GB_Industrial",
       "popolazione": 1140000,
       "lang": "en"
@@ -706,7 +771,7 @@
       "nome": "Edinburgh",
       "lat": 55.9533,
       "lon": -3.1883,
-      "country": "GB",
+      "country": "United Kingdom",
       "cluster": "GB_Metro",
       "popolazione": 530000,
       "lang": "en"
@@ -715,7 +780,7 @@
       "nome": "Glasgow",
       "lat": 55.8642,
       "lon": -4.2518,
-      "country": "GB",
+      "country": "United Kingdom",
       "cluster": "GB_Industrial",
       "popolazione": 630000,
       "lang": "en"
@@ -724,7 +789,7 @@
       "nome": "Leeds",
       "lat": 53.8008,
       "lon": -1.5491,
-      "country": "GB",
+      "country": "United Kingdom",
       "cluster": "GB_Industrial",
       "popolazione": 793000,
       "lang": "en"
@@ -733,7 +798,7 @@
       "nome": "Bristol",
       "lat": 51.4545,
       "lon": -2.5879,
-      "country": "GB",
+      "country": "United Kingdom",
       "cluster": "GB_Coastal",
       "popolazione": 470000,
       "lang": "en"
@@ -742,7 +807,7 @@
       "nome": "Cardiff",
       "lat": 51.4816,
       "lon": -3.1791,
-      "country": "GB",
+      "country": "United Kingdom",
       "cluster": "GB_Coastal",
       "popolazione": 370000,
       "lang": "en"
@@ -751,7 +816,7 @@
       "nome": "Liverpool",
       "lat": 53.4084,
       "lon": -2.9916,
-      "country": "GB",
+      "country": "United Kingdom",
       "cluster": "GB_Coastal",
       "popolazione": 498000,
       "lang": "en"
@@ -760,7 +825,7 @@
       "nome": "Sheffield",
       "lat": 53.3811,
       "lon": -1.4701,
-      "country": "GB",
+      "country": "United Kingdom",
       "cluster": "GB_Industrial",
       "popolazione": 584000,
       "lang": "en"
@@ -769,7 +834,7 @@
       "nome": "Amsterdam",
       "lat": 52.3676,
       "lon": 4.9041,
-      "country": "NL",
+      "country": "Netherlands",
       "cluster": "NL_Metro",
       "popolazione": 921000,
       "lang": "nl"
@@ -778,7 +843,7 @@
       "nome": "Rotterdam",
       "lat": 51.9244,
       "lon": 4.4777,
-      "country": "NL",
+      "country": "Netherlands",
       "cluster": "NL_Industrial",
       "popolazione": 651000,
       "lang": "nl"
@@ -787,7 +852,7 @@
       "nome": "Den Haag",
       "lat": 52.0705,
       "lon": 4.3007,
-      "country": "NL",
+      "country": "Netherlands",
       "cluster": "NL_Metro",
       "popolazione": 545000,
       "lang": "nl"
@@ -796,7 +861,7 @@
       "nome": "Utrecht",
       "lat": 52.0907,
       "lon": 5.1214,
-      "country": "NL",
+      "country": "Netherlands",
       "cluster": "NL_University",
       "popolazione": 361000,
       "lang": "nl"
@@ -805,7 +870,7 @@
       "nome": "Eindhoven",
       "lat": 51.4416,
       "lon": 5.4697,
-      "country": "NL",
+      "country": "Netherlands",
       "cluster": "NL_Industrial",
       "popolazione": 234000,
       "lang": "nl"
@@ -814,7 +879,7 @@
       "nome": "Groningen",
       "lat": 53.2194,
       "lon": 6.5665,
-      "country": "NL",
+      "country": "Netherlands",
       "cluster": "NL_North",
       "popolazione": 233000,
       "lang": "nl"
@@ -823,7 +888,7 @@
       "nome": "Warszawa",
       "lat": 52.2297,
       "lon": 21.0122,
-      "country": "PL",
+      "country": "Poland",
       "cluster": "PL_Metro",
       "popolazione": 1800000,
       "lang": "pl"
@@ -832,7 +897,7 @@
       "nome": "Kraków",
       "lat": 50.0647,
       "lon": 19.945,
-      "country": "PL",
+      "country": "Poland",
       "cluster": "PL_Metro",
       "popolazione": 780000,
       "lang": "pl"
@@ -841,7 +906,7 @@
       "nome": "Wrocław",
       "lat": 51.1079,
       "lon": 17.0385,
-      "country": "PL",
+      "country": "Poland",
       "cluster": "PL_Industrial",
       "popolazione": 643000,
       "lang": "pl"
@@ -850,7 +915,7 @@
       "nome": "Poznań",
       "lat": 52.4064,
       "lon": 16.9252,
-      "country": "PL",
+      "country": "Poland",
       "cluster": "PL_Industrial",
       "popolazione": 541000,
       "lang": "pl"
@@ -859,7 +924,7 @@
       "nome": "Gdańsk",
       "lat": 54.352,
       "lon": 18.6466,
-      "country": "PL",
+      "country": "Poland",
       "cluster": "PL_Coastal",
       "popolazione": 486000,
       "lang": "pl"
@@ -868,7 +933,7 @@
       "nome": "Łódź",
       "lat": 51.7592,
       "lon": 19.456,
-      "country": "PL",
+      "country": "Poland",
       "cluster": "PL_Industrial",
       "popolazione": 672000,
       "lang": "pl"
@@ -877,7 +942,7 @@
       "nome": "Wien",
       "lat": 48.2082,
       "lon": 16.3738,
-      "country": "AT",
+      "country": "Austria",
       "cluster": "AT_Metro",
       "popolazione": 1900000,
       "lang": "de"
@@ -886,7 +951,7 @@
       "nome": "Graz",
       "lat": 47.0707,
       "lon": 15.4395,
-      "country": "AT",
+      "country": "Austria",
       "cluster": "AT_Industrial",
       "popolazione": 291000,
       "lang": "de"
@@ -895,7 +960,7 @@
       "nome": "Linz",
       "lat": 48.3069,
       "lon": 14.2858,
-      "country": "AT",
+      "country": "Austria",
       "cluster": "AT_Industrial",
       "popolazione": 205000,
       "lang": "de"
@@ -904,7 +969,7 @@
       "nome": "Salzburg",
       "lat": 47.8095,
       "lon": 13.055,
-      "country": "AT",
+      "country": "Austria",
       "cluster": "AT_Alpine",
       "popolazione": 155000,
       "lang": "de"
@@ -913,7 +978,7 @@
       "nome": "Innsbruck",
       "lat": 47.2692,
       "lon": 11.4041,
-      "country": "AT",
+      "country": "Austria",
       "cluster": "AT_Alpine",
       "popolazione": 132000,
       "lang": "de"
@@ -922,7 +987,7 @@
       "nome": "Zürich",
       "lat": 47.3769,
       "lon": 8.5417,
-      "country": "CH",
+      "country": "Switzerland",
       "cluster": "CH_Metro",
       "popolazione": 435000,
       "lang": "de"
@@ -931,7 +996,7 @@
       "nome": "Genève",
       "lat": 46.2044,
       "lon": 6.1432,
-      "country": "CH",
+      "country": "Switzerland",
       "cluster": "CH_Metro",
       "popolazione": 203000,
       "lang": "fr"
@@ -940,7 +1005,7 @@
       "nome": "Basel",
       "lat": 47.5596,
       "lon": 7.5886,
-      "country": "CH",
+      "country": "Switzerland",
       "cluster": "CH_Industrial",
       "popolazione": 178000,
       "lang": "de"
@@ -949,7 +1014,7 @@
       "nome": "Bern",
       "lat": 46.948,
       "lon": 7.4474,
-      "country": "CH",
+      "country": "Switzerland",
       "cluster": "CH_Metro",
       "popolazione": 134000,
       "lang": "de"
@@ -958,7 +1023,7 @@
       "nome": "Lausanne",
       "lat": 46.5197,
       "lon": 6.6323,
-      "country": "CH",
+      "country": "Switzerland",
       "cluster": "CH_Metro",
       "popolazione": 140000,
       "lang": "fr"
@@ -967,7 +1032,7 @@
       "nome": "Bruxelles",
       "lat": 50.8503,
       "lon": 4.3517,
-      "country": "BE",
+      "country": "Belgium",
       "cluster": "BE_Metro",
       "popolazione": 1200000,
       "lang": "fr"
@@ -976,7 +1041,7 @@
       "nome": "Antwerpen",
       "lat": 51.2194,
       "lon": 4.4025,
-      "country": "BE",
+      "country": "Belgium",
       "cluster": "BE_Industrial",
       "popolazione": 530000,
       "lang": "nl"
@@ -985,7 +1050,7 @@
       "nome": "Gent",
       "lat": 51.0543,
       "lon": 3.7174,
-      "country": "BE",
+      "country": "Belgium",
       "cluster": "BE_Industrial",
       "popolazione": 262000,
       "lang": "nl"
@@ -994,7 +1059,7 @@
       "nome": "Liège",
       "lat": 50.6326,
       "lon": 5.5797,
-      "country": "BE",
+      "country": "Belgium",
       "cluster": "BE_Industrial",
       "popolazione": 197000,
       "lang": "fr"
@@ -1003,7 +1068,7 @@
       "nome": "Lisboa",
       "lat": 38.7223,
       "lon": -9.1393,
-      "country": "PT",
+      "country": "Portugal",
       "cluster": "PT_Metro",
       "popolazione": 545000,
       "lang": "pt"
@@ -1012,7 +1077,7 @@
       "nome": "Porto",
       "lat": 41.1579,
       "lon": -8.6291,
-      "country": "PT",
+      "country": "Portugal",
       "cluster": "PT_Metro",
       "popolazione": 237000,
       "lang": "pt"
@@ -1021,7 +1086,7 @@
       "nome": "Braga",
       "lat": 41.5454,
       "lon": -8.4265,
-      "country": "PT",
+      "country": "Portugal",
       "cluster": "PT_Industrial",
       "popolazione": 193000,
       "lang": "pt"
@@ -1030,7 +1095,7 @@
       "nome": "København",
       "lat": 55.6761,
       "lon": 12.5683,
-      "country": "DK",
+      "country": "Denmark",
       "cluster": "DK_Metro",
       "popolazione": 794000,
       "lang": "da"
@@ -1039,7 +1104,7 @@
       "nome": "Aarhus",
       "lat": 56.1629,
       "lon": 10.2039,
-      "country": "DK",
+      "country": "Denmark",
       "cluster": "DK_Industrial",
       "popolazione": 285000,
       "lang": "da"
@@ -1048,7 +1113,7 @@
       "nome": "Odense",
       "lat": 55.4038,
       "lon": 10.4024,
-      "country": "DK",
+      "country": "Denmark",
       "cluster": "DK_Industrial",
       "popolazione": 180000,
       "lang": "da"
@@ -1057,7 +1122,7 @@
       "nome": "Oslo",
       "lat": 59.9139,
       "lon": 10.7522,
-      "country": "NO",
+      "country": "Norway",
       "cluster": "NO_Metro",
       "popolazione": 693000,
       "lang": "no"
@@ -1066,7 +1131,7 @@
       "nome": "Bergen",
       "lat": 60.3913,
       "lon": 5.3221,
-      "country": "NO",
+      "country": "Norway",
       "cluster": "NO_Coastal",
       "popolazione": 285000,
       "lang": "no"
@@ -1075,7 +1140,7 @@
       "nome": "Trondheim",
       "lat": 63.4305,
       "lon": 10.3951,
-      "country": "NO",
+      "country": "Norway",
       "cluster": "NO_Industrial",
       "popolazione": 207000,
       "lang": "no"
@@ -1084,7 +1149,7 @@
       "nome": "Stavanger",
       "lat": 58.97,
       "lon": 5.7331,
-      "country": "NO",
+      "country": "Norway",
       "cluster": "NO_Coastal",
       "popolazione": 145000,
       "lang": "no"
@@ -1552,6 +1617,1150 @@
       "lat": 39.9061,
       "lon": 8.5886,
       "cluster": "Sardinia"
+    },
+    {
+      "nome": "Fermo",
+      "regione": "Marche",
+      "country": "Italy",
+      "lat": 43.1608,
+      "lon": 13.7152,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Lamezia Terme",
+      "regione": "Calabria",
+      "country": "Italy",
+      "lat": 38.9706,
+      "lon": 16.3172,
+      "cluster": "South"
+    },
+    {
+      "nome": "Marsala",
+      "regione": "Sicilia",
+      "country": "Italy",
+      "lat": 37.7989,
+      "lon": 12.4333,
+      "cluster": "Sicily"
+    },
+    {
+      "nome": "Gela",
+      "regione": "Sicilia",
+      "country": "Italy",
+      "lat": 37.0675,
+      "lon": 14.2506,
+      "cluster": "Sicily"
+    },
+    {
+      "nome": "Acireale",
+      "regione": "Sicilia",
+      "country": "Italy",
+      "lat": 37.6119,
+      "lon": 15.165,
+      "cluster": "Sicily"
+    },
+    {
+      "nome": "Bagheria",
+      "regione": "Sicilia",
+      "country": "Italy",
+      "lat": 38.0833,
+      "lon": 13.5119,
+      "cluster": "Sicily"
+    },
+    {
+      "nome": "Olbia",
+      "regione": "Sardegna",
+      "country": "Italy",
+      "lat": 40.9208,
+      "lon": 9.4978,
+      "cluster": "Sardinia"
+    },
+    {
+      "nome": "Sud Sardegna",
+      "regione": "Sardegna",
+      "country": "Italy",
+      "lat": 39.3122,
+      "lon": 8.9661,
+      "cluster": "Sardinia"
+    },
+    {
+      "nome": "Spoleto",
+      "regione": "Umbria",
+      "country": "Italy",
+      "lat": 42.734,
+      "lon": 12.7381,
+      "cluster": "Central"
+    },
+    {
+      "nome": "Lanciano",
+      "regione": "Abruzzo",
+      "country": "Italy",
+      "lat": 42.2289,
+      "lon": 14.3908,
+      "cluster": "South"
+    },
+    {
+      "nome": "Vasto",
+      "regione": "Abruzzo",
+      "country": "Italy",
+      "lat": 42.1121,
+      "lon": 14.7086,
+      "cluster": "South"
+    },
+    {
+      "nome": "Torre del Greco",
+      "regione": "Campania",
+      "country": "Italy",
+      "lat": 40.7886,
+      "lon": 14.3694,
+      "cluster": "South"
+    },
+    {
+      "nome": "Giugliano in Campania",
+      "regione": "Campania",
+      "country": "Italy",
+      "lat": 40.9272,
+      "lon": 14.1956,
+      "cluster": "South"
+    },
+    {
+      "nome": "Altamura",
+      "regione": "Puglia",
+      "country": "Italy",
+      "lat": 40.8267,
+      "lon": 16.5536,
+      "cluster": "South"
+    },
+    {
+      "nome": "Melfi",
+      "regione": "Basilicata",
+      "country": "Italy",
+      "lat": 40.9942,
+      "lon": 15.6512,
+      "cluster": "South"
+    },
+    {
+      "nome": "Leipzig",
+      "regione": "Sachsen",
+      "country": "Germany",
+      "lat": 51.3397,
+      "lon": 12.3731,
+      "cluster": "DE_East"
+    },
+    {
+      "nome": "Dresden",
+      "regione": "Sachsen",
+      "country": "Germany",
+      "lat": 51.0504,
+      "lon": 13.7373,
+      "cluster": "DE_East"
+    },
+    {
+      "nome": "Dortmund",
+      "regione": "Nordrhein-Westfalen",
+      "country": "Germany",
+      "lat": 51.5136,
+      "lon": 7.4653,
+      "cluster": "DE_West"
+    },
+    {
+      "nome": "Essen",
+      "regione": "Nordrhein-Westfalen",
+      "country": "Germany",
+      "lat": 51.4566,
+      "lon": 7.0116,
+      "cluster": "DE_West"
+    },
+    {
+      "nome": "Bremen",
+      "regione": "Bremen",
+      "country": "Germany",
+      "lat": 53.0793,
+      "lon": 8.8017,
+      "cluster": "DE_North"
+    },
+    {
+      "nome": "Hannover",
+      "regione": "Niedersachsen",
+      "country": "Germany",
+      "lat": 52.3759,
+      "lon": 9.732,
+      "cluster": "DE_North"
+    },
+    {
+      "nome": "Duisburg",
+      "regione": "Nordrhein-Westfalen",
+      "country": "Germany",
+      "lat": 51.4344,
+      "lon": 6.7623,
+      "cluster": "DE_West"
+    },
+    {
+      "nome": "Bochum",
+      "regione": "Nordrhein-Westfalen",
+      "country": "Germany",
+      "lat": 51.4818,
+      "lon": 7.2162,
+      "cluster": "DE_West"
+    },
+    {
+      "nome": "Wuppertal",
+      "regione": "Nordrhein-Westfalen",
+      "country": "Germany",
+      "lat": 51.2562,
+      "lon": 7.1508,
+      "cluster": "DE_West"
+    },
+    {
+      "nome": "Bielefeld",
+      "regione": "Nordrhein-Westfalen",
+      "country": "Germany",
+      "lat": 52.0302,
+      "lon": 8.5325,
+      "cluster": "DE_West"
+    },
+    {
+      "nome": "Mannheim",
+      "regione": "Baden-Württemberg",
+      "country": "Germany",
+      "lat": 49.4875,
+      "lon": 8.466,
+      "cluster": "DE_South"
+    },
+    {
+      "nome": "Augsburg",
+      "regione": "Bayern",
+      "country": "Germany",
+      "lat": 48.3717,
+      "lon": 10.8983,
+      "cluster": "DE_South"
+    },
+    {
+      "nome": "Wiesbaden",
+      "regione": "Hessen",
+      "country": "Germany",
+      "lat": 50.0782,
+      "lon": 8.2398,
+      "cluster": "DE_Central"
+    },
+    {
+      "nome": "Munster",
+      "regione": "Nordrhein-Westfalen",
+      "country": "Germany",
+      "lat": 51.9607,
+      "lon": 7.6261,
+      "cluster": "DE_West"
+    },
+    {
+      "nome": "Chemnitz",
+      "regione": "Sachsen",
+      "country": "Germany",
+      "lat": 50.8278,
+      "lon": 12.9214,
+      "cluster": "DE_East"
+    },
+    {
+      "nome": "Freiburg im Breisgau",
+      "regione": "Baden-Württemberg",
+      "country": "Germany",
+      "lat": 47.999,
+      "lon": 7.8421,
+      "cluster": "DE_South"
+    },
+    {
+      "nome": "Kiel",
+      "regione": "Schleswig-Holstein",
+      "country": "Germany",
+      "lat": 54.3233,
+      "lon": 10.1394,
+      "cluster": "DE_North"
+    },
+    {
+      "nome": "Rostock",
+      "regione": "Mecklenburg-Vorpommern",
+      "country": "Germany",
+      "lat": 54.0887,
+      "lon": 12.1403,
+      "cluster": "DE_North"
+    },
+    {
+      "nome": "Erfurt",
+      "regione": "Thuringen",
+      "country": "Germany",
+      "lat": 50.9787,
+      "lon": 11.0328,
+      "cluster": "DE_Central"
+    },
+    {
+      "nome": "Kassel",
+      "regione": "Hessen",
+      "country": "Germany",
+      "lat": 51.3127,
+      "lon": 9.4797,
+      "cluster": "DE_Central"
+    },
+    {
+      "nome": "Mainz",
+      "regione": "Rheinland-Pfalz",
+      "country": "Germany",
+      "lat": 49.9929,
+      "lon": 8.2473,
+      "cluster": "DE_Central"
+    },
+    {
+      "nome": "Saarbrucken",
+      "regione": "Saarland",
+      "country": "Germany",
+      "lat": 49.2354,
+      "lon": 6.9969,
+      "cluster": "DE_West"
+    },
+    {
+      "nome": "Heidelberg",
+      "regione": "Baden-Württemberg",
+      "country": "Germany",
+      "lat": 49.3988,
+      "lon": 8.6724,
+      "cluster": "DE_South"
+    },
+    {
+      "nome": "Toulouse",
+      "regione": "Occitanie",
+      "country": "France",
+      "lat": 43.6047,
+      "lon": 1.4442,
+      "cluster": "FR_South"
+    },
+    {
+      "nome": "Strasbourg",
+      "regione": "Grand Est",
+      "country": "France",
+      "lat": 48.5734,
+      "lon": 7.7521,
+      "cluster": "FR_East"
+    },
+    {
+      "nome": "Nantes",
+      "regione": "Pays de la Loire",
+      "country": "France",
+      "lat": 47.2184,
+      "lon": -1.5536,
+      "cluster": "FR_West"
+    },
+    {
+      "nome": "Montpellier",
+      "regione": "Occitanie",
+      "country": "France",
+      "lat": 43.6108,
+      "lon": 3.8767,
+      "cluster": "FR_South"
+    },
+    {
+      "nome": "Rennes",
+      "regione": "Bretagne",
+      "country": "France",
+      "lat": 48.1147,
+      "lon": -1.6794,
+      "cluster": "FR_West"
+    },
+    {
+      "nome": "Grenoble",
+      "regione": "Auvergne-Rhone-Alpes",
+      "country": "France",
+      "lat": 45.1885,
+      "lon": 5.7245,
+      "cluster": "FR_Alps"
+    },
+    {
+      "nome": "Dijon",
+      "regione": "Bourgogne-Franche-Comte",
+      "country": "France",
+      "lat": 47.322,
+      "lon": 5.0415,
+      "cluster": "FR_Central"
+    },
+    {
+      "nome": "Nimes",
+      "regione": "Occitanie",
+      "country": "France",
+      "lat": 43.8367,
+      "lon": 4.3601,
+      "cluster": "FR_South"
+    },
+    {
+      "nome": "Le Havre",
+      "regione": "Normandie",
+      "country": "France",
+      "lat": 49.4938,
+      "lon": 0.1077,
+      "cluster": "FR_North"
+    },
+    {
+      "nome": "Reims",
+      "regione": "Grand Est",
+      "country": "France",
+      "lat": 49.2583,
+      "lon": 4.0317,
+      "cluster": "FR_North"
+    },
+    {
+      "nome": "Toulon",
+      "regione": "Provence-Alpes",
+      "country": "France",
+      "lat": 43.1242,
+      "lon": 5.928,
+      "cluster": "FR_South"
+    },
+    {
+      "nome": "Lille",
+      "regione": "Hauts-de-France",
+      "country": "France",
+      "lat": 50.6292,
+      "lon": 3.0573,
+      "cluster": "FR_North"
+    },
+    {
+      "nome": "Brest",
+      "regione": "Bretagne",
+      "country": "France",
+      "lat": 48.3905,
+      "lon": -4.486,
+      "cluster": "FR_West"
+    },
+    {
+      "nome": "Clermont-Ferrand",
+      "regione": "Auvergne-Rhone-Alpes",
+      "country": "France",
+      "lat": 45.7797,
+      "lon": 3.0863,
+      "cluster": "FR_Central"
+    },
+    {
+      "nome": "Zaragoza",
+      "regione": "Aragon",
+      "country": "Spain",
+      "lat": 41.6561,
+      "lon": -0.8773,
+      "cluster": "ES_Central"
+    },
+    {
+      "nome": "Malaga",
+      "regione": "Andalucia",
+      "country": "Spain",
+      "lat": 36.7213,
+      "lon": -4.4213,
+      "cluster": "ES_South"
+    },
+    {
+      "nome": "Murcia",
+      "regione": "Region de Murcia",
+      "country": "Spain",
+      "lat": 37.9922,
+      "lon": -1.1307,
+      "cluster": "ES_East"
+    },
+    {
+      "nome": "Palma",
+      "regione": "Islas Baleares",
+      "country": "Spain",
+      "lat": 39.5696,
+      "lon": 2.6502,
+      "cluster": "ES_Islands"
+    },
+    {
+      "nome": "Valladolid",
+      "regione": "Castilla y Leon",
+      "country": "Spain",
+      "lat": 41.6523,
+      "lon": -4.7245,
+      "cluster": "ES_Central"
+    },
+    {
+      "nome": "Cordoba",
+      "regione": "Andalucia",
+      "country": "Spain",
+      "lat": 37.8882,
+      "lon": -4.7794,
+      "cluster": "ES_South"
+    },
+    {
+      "nome": "Alicante",
+      "regione": "Comunitat Valenciana",
+      "country": "Spain",
+      "lat": 38.3452,
+      "lon": -0.481,
+      "cluster": "ES_East"
+    },
+    {
+      "nome": "Vigo",
+      "regione": "Galicia",
+      "country": "Spain",
+      "lat": 42.2314,
+      "lon": -8.7124,
+      "cluster": "ES_North"
+    },
+    {
+      "nome": "Granada",
+      "regione": "Andalucia",
+      "country": "Spain",
+      "lat": 37.1765,
+      "lon": -3.5981,
+      "cluster": "ES_South"
+    },
+    {
+      "nome": "Oviedo",
+      "regione": "Asturias",
+      "country": "Spain",
+      "lat": 43.3614,
+      "lon": -5.8593,
+      "cluster": "ES_North"
+    },
+    {
+      "nome": "Pamplona",
+      "regione": "Navarra",
+      "country": "Spain",
+      "lat": 42.8125,
+      "lon": -1.6458,
+      "cluster": "ES_North"
+    },
+    {
+      "nome": "Santander",
+      "regione": "Cantabria",
+      "country": "Spain",
+      "lat": 43.4623,
+      "lon": -3.8099,
+      "cluster": "ES_North"
+    },
+    {
+      "nome": "Nottingham",
+      "regione": "East Midlands",
+      "country": "United Kingdom",
+      "lat": 52.9548,
+      "lon": -1.1581,
+      "cluster": "GB_Midlands"
+    },
+    {
+      "nome": "Leicester",
+      "regione": "East Midlands",
+      "country": "United Kingdom",
+      "lat": 52.6369,
+      "lon": -1.1398,
+      "cluster": "GB_Midlands"
+    },
+    {
+      "nome": "Southampton",
+      "regione": "South East",
+      "country": "United Kingdom",
+      "lat": 50.9097,
+      "lon": -1.4044,
+      "cluster": "GB_South"
+    },
+    {
+      "nome": "Newcastle upon Tyne",
+      "regione": "North East",
+      "country": "United Kingdom",
+      "lat": 54.9783,
+      "lon": -1.6178,
+      "cluster": "GB_North"
+    },
+    {
+      "nome": "Coventry",
+      "regione": "West Midlands",
+      "country": "United Kingdom",
+      "lat": 52.4068,
+      "lon": -1.5197,
+      "cluster": "GB_Midlands"
+    },
+    {
+      "nome": "Bradford",
+      "regione": "Yorkshire",
+      "country": "United Kingdom",
+      "lat": 53.796,
+      "lon": -1.7594,
+      "cluster": "GB_North"
+    },
+    {
+      "nome": "Portsmouth",
+      "regione": "South East",
+      "country": "United Kingdom",
+      "lat": 50.8198,
+      "lon": -1.088,
+      "cluster": "GB_South"
+    },
+    {
+      "nome": "Plymouth",
+      "regione": "South West",
+      "country": "United Kingdom",
+      "lat": 50.3755,
+      "lon": -4.1427,
+      "cluster": "GB_South"
+    },
+    {
+      "nome": "Aberdeen",
+      "regione": "Scotland",
+      "country": "United Kingdom",
+      "lat": 57.1497,
+      "lon": -2.0943,
+      "cluster": "GB_Scotland"
+    },
+    {
+      "nome": "Swansea",
+      "regione": "Wales",
+      "country": "United Kingdom",
+      "lat": 51.6214,
+      "lon": -3.9436,
+      "cluster": "GB_Wales"
+    },
+    {
+      "nome": "Atene",
+      "regione": "Attica",
+      "country": "Greece",
+      "lat": 37.9838,
+      "lon": 23.7275,
+      "cluster": "GR_Central"
+    },
+    {
+      "nome": "Salonicco",
+      "regione": "Macedonia",
+      "country": "Greece",
+      "lat": 40.6401,
+      "lon": 22.9444,
+      "cluster": "GR_North"
+    },
+    {
+      "nome": "Patrasso",
+      "regione": "Peloponneso",
+      "country": "Greece",
+      "lat": 38.2444,
+      "lon": 21.7344,
+      "cluster": "GR_South"
+    },
+    {
+      "nome": "Heraklion",
+      "regione": "Creta",
+      "country": "Greece",
+      "lat": 35.3387,
+      "lon": 25.1442,
+      "cluster": "GR_Island"
+    },
+    {
+      "nome": "Larissa",
+      "regione": "Tessaglia",
+      "country": "Greece",
+      "lat": 39.639,
+      "lon": 22.4191,
+      "cluster": "GR_Central"
+    },
+    {
+      "nome": "Zagabria",
+      "regione": "Grad Zagreb",
+      "country": "Croatia",
+      "lat": 45.815,
+      "lon": 15.9819,
+      "cluster": "HR_Central"
+    },
+    {
+      "nome": "Spalato",
+      "regione": "Dalmazia",
+      "country": "Croatia",
+      "lat": 43.5081,
+      "lon": 16.4402,
+      "cluster": "HR_Coast"
+    },
+    {
+      "nome": "Rijeka",
+      "regione": "Primorje-Gorski Kotar",
+      "country": "Croatia",
+      "lat": 45.3271,
+      "lon": 14.4422,
+      "cluster": "HR_Coast"
+    },
+    {
+      "nome": "Osijek",
+      "regione": "Slavonia",
+      "country": "Croatia",
+      "lat": 45.555,
+      "lon": 18.6955,
+      "cluster": "HR_East"
+    },
+    {
+      "nome": "Zadar",
+      "regione": "Dalmazia",
+      "country": "Croatia",
+      "lat": 44.1194,
+      "lon": 15.2314,
+      "cluster": "HR_Coast"
+    },
+    {
+      "nome": "Praga",
+      "regione": "Hlavni mesto Praha",
+      "country": "Czech Republic",
+      "lat": 50.0755,
+      "lon": 14.4378,
+      "cluster": "CZ_Central"
+    },
+    {
+      "nome": "Brno",
+      "regione": "Jihomoravsky kraj",
+      "country": "Czech Republic",
+      "lat": 49.1951,
+      "lon": 16.6068,
+      "cluster": "CZ_South"
+    },
+    {
+      "nome": "Ostrava",
+      "regione": "Moravskoslezsky kraj",
+      "country": "Czech Republic",
+      "lat": 49.8209,
+      "lon": 18.2625,
+      "cluster": "CZ_East"
+    },
+    {
+      "nome": "Plzen",
+      "regione": "Plzensky kraj",
+      "country": "Czech Republic",
+      "lat": 49.7384,
+      "lon": 13.3736,
+      "cluster": "CZ_West"
+    },
+    {
+      "nome": "Budapest",
+      "regione": "Budapest",
+      "country": "Hungary",
+      "lat": 47.4979,
+      "lon": 19.0402,
+      "cluster": "HU_Central"
+    },
+    {
+      "nome": "Debrecen",
+      "regione": "Hajdu-Bihar",
+      "country": "Hungary",
+      "lat": 47.5316,
+      "lon": 21.6273,
+      "cluster": "HU_East"
+    },
+    {
+      "nome": "Miskolc",
+      "regione": "Borsod-Abauj-Zemplen",
+      "country": "Hungary",
+      "lat": 48.1035,
+      "lon": 20.7784,
+      "cluster": "HU_North"
+    },
+    {
+      "nome": "Pecs",
+      "regione": "Baranya",
+      "country": "Hungary",
+      "lat": 46.0727,
+      "lon": 18.2323,
+      "cluster": "HU_South"
+    },
+    {
+      "nome": "Gyor",
+      "regione": "Gyor-Moson-Sopron",
+      "country": "Hungary",
+      "lat": 47.6875,
+      "lon": 17.6504,
+      "cluster": "HU_West"
+    },
+    {
+      "nome": "Bucarest",
+      "regione": "Bucuresti",
+      "country": "Romania",
+      "lat": 44.4268,
+      "lon": 26.1025,
+      "cluster": "RO_Central"
+    },
+    {
+      "nome": "Cluj-Napoca",
+      "regione": "Cluj",
+      "country": "Romania",
+      "lat": 46.7712,
+      "lon": 23.6236,
+      "cluster": "RO_West"
+    },
+    {
+      "nome": "Timisoara",
+      "regione": "Timis",
+      "country": "Romania",
+      "lat": 45.7489,
+      "lon": 21.2087,
+      "cluster": "RO_West"
+    },
+    {
+      "nome": "Iasi",
+      "regione": "Iasi",
+      "country": "Romania",
+      "lat": 47.1585,
+      "lon": 27.6014,
+      "cluster": "RO_East"
+    },
+    {
+      "nome": "Constanta",
+      "regione": "Constanta",
+      "country": "Romania",
+      "lat": 44.1733,
+      "lon": 28.6383,
+      "cluster": "RO_Coast"
+    },
+    {
+      "nome": "Brasov",
+      "regione": "Brasov",
+      "country": "Romania",
+      "lat": 45.6427,
+      "lon": 25.5887,
+      "cluster": "RO_Central"
+    },
+    {
+      "nome": "Lodz",
+      "regione": "Lodzkie",
+      "country": "Poland",
+      "lat": 51.7592,
+      "lon": 19.456,
+      "cluster": "PL_Central"
+    },
+    {
+      "nome": "Wroclaw",
+      "regione": "Dolnoslaskie",
+      "country": "Poland",
+      "lat": 51.1079,
+      "lon": 17.0385,
+      "cluster": "PL_South"
+    },
+    {
+      "nome": "Poznan",
+      "regione": "Wielkopolskie",
+      "country": "Poland",
+      "lat": 52.4064,
+      "lon": 16.9252,
+      "cluster": "PL_West"
+    },
+    {
+      "nome": "Gdansk",
+      "regione": "Pomorskie",
+      "country": "Poland",
+      "lat": 54.352,
+      "lon": 18.6466,
+      "cluster": "PL_North"
+    },
+    {
+      "nome": "Szczecin",
+      "regione": "Zachodniopomorskie",
+      "country": "Poland",
+      "lat": 53.4285,
+      "lon": 14.5528,
+      "cluster": "PL_North"
+    },
+    {
+      "nome": "Lublin",
+      "regione": "Lubelskie",
+      "country": "Poland",
+      "lat": 51.2465,
+      "lon": 22.5684,
+      "cluster": "PL_East"
+    },
+    {
+      "nome": "Katowice",
+      "regione": "Slaskie",
+      "country": "Poland",
+      "lat": 50.2649,
+      "lon": 19.0238,
+      "cluster": "PL_South"
+    },
+    {
+      "nome": "Gothenburg",
+      "regione": "Vastra Gotaland",
+      "country": "Sweden",
+      "lat": 57.7089,
+      "lon": 11.9746,
+      "cluster": "SE_West"
+    },
+    {
+      "nome": "Malmo",
+      "regione": "Skane",
+      "country": "Sweden",
+      "lat": 55.605,
+      "lon": 13.0038,
+      "cluster": "SE_South"
+    },
+    {
+      "nome": "Vasteras",
+      "regione": "Vastmanland",
+      "country": "Sweden",
+      "lat": 59.6099,
+      "lon": 16.5448,
+      "cluster": "SE_Central"
+    },
+    {
+      "nome": "Orebro",
+      "regione": "Orebro",
+      "country": "Sweden",
+      "lat": 59.2741,
+      "lon": 15.2066,
+      "cluster": "SE_Central"
+    },
+    {
+      "nome": "Linkoping",
+      "regione": "Ostergotland",
+      "country": "Sweden",
+      "lat": 58.4108,
+      "lon": 15.6214,
+      "cluster": "SE_Central"
+    },
+    {
+      "nome": "Jonkoping",
+      "regione": "Jonkoping",
+      "country": "Sweden",
+      "lat": 57.7826,
+      "lon": 14.1618,
+      "cluster": "SE_Central"
+    },
+    {
+      "nome": "Tilburg",
+      "regione": "Noord-Brabant",
+      "country": "Netherlands",
+      "lat": 51.5555,
+      "lon": 5.0913,
+      "cluster": "NL_South"
+    },
+    {
+      "nome": "Breda",
+      "regione": "Noord-Brabant",
+      "country": "Netherlands",
+      "lat": 51.5719,
+      "lon": 4.7683,
+      "cluster": "NL_South"
+    },
+    {
+      "nome": "Nijmegen",
+      "regione": "Gelderland",
+      "country": "Netherlands",
+      "lat": 51.8426,
+      "lon": 5.8546,
+      "cluster": "NL_Central"
+    },
+    {
+      "nome": "Arnhem",
+      "regione": "Gelderland",
+      "country": "Netherlands",
+      "lat": 51.9851,
+      "lon": 5.8987,
+      "cluster": "NL_Central"
+    },
+    {
+      "nome": "Charleroi",
+      "regione": "Hainaut",
+      "country": "Belgium",
+      "lat": 50.4108,
+      "lon": 4.4446,
+      "cluster": "BE_South"
+    },
+    {
+      "nome": "Namur",
+      "regione": "Namur",
+      "country": "Belgium",
+      "lat": 50.4674,
+      "lon": 4.872,
+      "cluster": "BE_Central"
+    },
+    {
+      "nome": "Bruges",
+      "regione": "West-Vlaanderen",
+      "country": "Belgium",
+      "lat": 51.2093,
+      "lon": 3.2247,
+      "cluster": "BE_West"
+    },
+    {
+      "nome": "Aalborg",
+      "regione": "Nordjylland",
+      "country": "Denmark",
+      "lat": 57.0488,
+      "lon": 9.9217,
+      "cluster": "DK_North"
+    },
+    {
+      "nome": "Esbjerg",
+      "regione": "Syddanmark",
+      "country": "Denmark",
+      "lat": 55.476,
+      "lon": 8.4593,
+      "cluster": "DK_West"
+    },
+    {
+      "nome": "Tromsoe",
+      "regione": "Troms",
+      "country": "Norway",
+      "lat": 69.6492,
+      "lon": 18.9553,
+      "cluster": "NO_North"
+    },
+    {
+      "nome": "Fredrikstad",
+      "regione": "Viken",
+      "country": "Norway",
+      "lat": 59.2181,
+      "lon": 10.9298,
+      "cluster": "NO_South"
+    },
+    {
+      "nome": "Kristiansand",
+      "regione": "Agder",
+      "country": "Norway",
+      "lat": 58.1467,
+      "lon": 7.9956,
+      "cluster": "NO_South"
+    },
+    {
+      "nome": "Lugano",
+      "regione": "Ticino",
+      "country": "Switzerland",
+      "lat": 46.0037,
+      "lon": 8.9511,
+      "cluster": "CH_South"
+    },
+    {
+      "nome": "Winterthur",
+      "regione": "Zurich",
+      "country": "Switzerland",
+      "lat": 47.5006,
+      "lon": 8.7241,
+      "cluster": "CH_North"
+    },
+    {
+      "nome": "Lucerna",
+      "regione": "Luzern",
+      "country": "Switzerland",
+      "lat": 47.0502,
+      "lon": 8.3093,
+      "cluster": "CH_Central"
+    },
+    {
+      "nome": "Klagenfurt",
+      "regione": "Karnten",
+      "country": "Austria",
+      "lat": 46.6249,
+      "lon": 14.305,
+      "cluster": "AT_South"
+    },
+    {
+      "nome": "Sankt Polten",
+      "regione": "Niederosterreich",
+      "country": "Austria",
+      "lat": 48.2047,
+      "lon": 15.6256,
+      "cluster": "AT_Central"
+    },
+    {
+      "nome": "Setubal",
+      "regione": "Setubal",
+      "country": "Portugal",
+      "lat": 38.5243,
+      "lon": -8.8926,
+      "cluster": "PT_Central"
+    },
+    {
+      "nome": "Coimbra",
+      "regione": "Centro",
+      "country": "Portugal",
+      "lat": 40.2033,
+      "lon": -8.4103,
+      "cluster": "PT_Central"
+    },
+    {
+      "nome": "Faro",
+      "regione": "Algarve",
+      "country": "Portugal",
+      "lat": 37.0194,
+      "lon": -7.9322,
+      "cluster": "PT_South"
+    },
+    {
+      "nome": "Funchal",
+      "regione": "Madeira",
+      "country": "Portugal",
+      "lat": 32.6669,
+      "lon": -16.9241,
+      "cluster": "PT_Island"
+    },
+    {
+      "nome": "Helsinki",
+      "regione": "Uusimaa",
+      "country": "Finland",
+      "lat": 60.1699,
+      "lon": 24.9384,
+      "cluster": "FI_South"
+    },
+    {
+      "nome": "Tampere",
+      "regione": "Pirkanmaa",
+      "country": "Finland",
+      "lat": 61.4978,
+      "lon": 23.761,
+      "cluster": "FI_Central"
+    },
+    {
+      "nome": "Turku",
+      "regione": "Varsinais-Suomi",
+      "country": "Finland",
+      "lat": 60.4518,
+      "lon": 22.2666,
+      "cluster": "FI_South"
+    },
+    {
+      "nome": "Oulu",
+      "regione": "Pohjois-Pohjanmaa",
+      "country": "Finland",
+      "lat": 65.0121,
+      "lon": 25.4651,
+      "cluster": "FI_North"
+    },
+    {
+      "nome": "Ljubljana",
+      "regione": "Osrednjeslovenska",
+      "country": "Slovenia",
+      "lat": 46.0569,
+      "lon": 14.5058,
+      "cluster": "SI_Central"
+    },
+    {
+      "nome": "Maribor",
+      "regione": "Podravska",
+      "country": "Slovenia",
+      "lat": 46.5547,
+      "lon": 15.6459,
+      "cluster": "SI_East"
+    },
+    {
+      "nome": "Bratislava",
+      "regione": "Bratislavsky kraj",
+      "country": "Slovakia",
+      "lat": 48.1486,
+      "lon": 17.1077,
+      "cluster": "SK_Central"
+    },
+    {
+      "nome": "Kosice",
+      "regione": "Kosicky kraj",
+      "country": "Slovakia",
+      "lat": 48.7164,
+      "lon": 21.2611,
+      "cluster": "SK_East"
+    },
+    {
+      "nome": "Belgrado",
+      "regione": "Grad Beograd",
+      "country": "Serbia",
+      "lat": 44.8176,
+      "lon": 20.4569,
+      "cluster": "RS_Central"
+    },
+    {
+      "nome": "Novi Sad",
+      "regione": "Vojvodina",
+      "country": "Serbia",
+      "lat": 45.2671,
+      "lon": 19.8335,
+      "cluster": "RS_North"
     }
   ]
 }
