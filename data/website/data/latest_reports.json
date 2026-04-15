@@ -1,7 +1,21 @@
 {
-  "last_updated": "2026-04-15T02:32:33.073991+00:00",
-  "count": 38,
+  "last_updated": "2026-04-15T07:21:58.494727+00:00",
+  "count": 40,
   "reports": [
+    {
+      "slug": "2026-04-15-trento-heat-wave",
+      "title": "Ondata di Calore a Trento: Livello UNUSUAL con Z-Score Elevato",
+      "lead": "Le previsioni meteo per Trento indicano l'arrivo di un'ondata di calore con un'intensità e una probabilità di accadimento che la classificano come UNUSUAL. Il p...",
+      "location": "Trento",
+      "country_code": "it",
+      "vertical": "heat-wave",
+      "z_score": 1.64,
+      "score": 6.88,
+      "anomaly_level": "UNUSUAL",
+      "date": "2026-04-15",
+      "url": "/news/2026-04-15-trento-heat-wave/",
+      "excerpt": "Le previsioni meteo per Trento indicano l'arrivo di un'ondata di calore con un'intensità e una probabilità di accadimento che la classificano come UNUSUAL. Il punteggio di 6.9/10 r"
+    },
     {
       "slug": "2026-04-15-innsbruck-clear",
       "title": "Innsbruck: Condizioni di Cielo Sereno Inaspettate con Leggero Impatto",
@@ -15,6 +29,20 @@
       "date": "2026-04-15",
       "url": "/news/2026-04-15-innsbruck-clear/",
       "excerpt": "Le previsioni meteo per Innsbruck indicano un evento di cielo sereno con uno Z-score di -1.32, valutato 6.4/10 e classificato come UNUSUAL. Questo suggerisce una deviazione dalla n"
+    },
+    {
+      "slug": "2026-04-15-como-clear",
+      "title": "Previsioni Meteo per Como: Condizioni Stabili",
+      "lead": "L'analisi meteo per Como indica condizioni prevalentemente serene con un punteggio di 5.7/10, posizionandosi a un livello 'NORMAL' di variabilità....",
+      "location": "Como",
+      "country_code": "it",
+      "vertical": "clear",
+      "z_score": -0.2,
+      "score": 5.66,
+      "anomaly_level": "NORMAL",
+      "date": "2026-04-15",
+      "url": "/news/2026-04-15-como-clear/",
+      "excerpt": "L'analisi meteo per Como indica condizioni prevalentemente serene con un punteggio di 5.7/10, posizionandosi a un livello 'NORMAL' di variabilità."
     },
     {
       "slug": "2026-04-15-bilbao-clear",
@@ -253,34 +281,6 @@
       "date": "2026-04-12",
       "url": "/news/2026-04-12-valencia-heavy-rain/",
       "excerpt": "Il sistema WeatherArb ha rilevato un livello di allerta CRITICAL per Valencia, con un'anomalia di precipitazione pari a uno Z-Score di +10.11, indicando un evento di pioggia di int"
-    },
-    {
-      "slug": "2026-04-12-uppsala-clear",
-      "title": "Previsione METEO - Uppsala: Condizioni di Cielo Sereno Estremo",
-      "lead": "Uppsala si prepara ad un evento meteorologico di cielo sereno con un'intensità eccezionale, evidenziata da uno Z-Score di -4.50. Questo valore segnala una devia...",
-      "location": "Uppsala",
-      "country_code": "it",
-      "vertical": "clear",
-      "z_score": -4.5,
-      "score": 7.41,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-04-12",
-      "url": "/news/2026-04-12-uppsala-clear/",
-      "excerpt": "Uppsala si prepara ad un evento meteorologico di cielo sereno con un'intensità eccezionale, evidenziata da uno Z-Score di -4.50. Questo valore segnala una deviazione statisticament"
-    },
-    {
-      "slug": "2026-04-12-umea-clear",
-      "title": "Allerta Meteo: Variazione Drastica delle Condizioni a Umeå",
-      "lead": "WeatherArb segnala una deviazione meteorologica critica a Umeå, con uno Z-Score di -5.20 che indica una probabilità estremamente bassa di condizioni di sereno s...",
-      "location": "Umeå",
-      "country_code": "it",
-      "vertical": "clear",
-      "z_score": -5.2,
-      "score": 7.33,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-04-12",
-      "url": "/news/2026-04-12-umea-clear/",
-      "excerpt": "WeatherArb segnala una deviazione meteorologica critica a Umeå, con uno Z-Score di -5.20 che indica una probabilità estremamente bassa di condizioni di sereno simili a quelle attua"
     }
   ]
 }

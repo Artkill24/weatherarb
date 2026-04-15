@@ -1,0 +1,15 @@
+{
+  "slug": "2026-04-15-como-clear",
+  "title": "Previsioni Meteo per Como: Condizioni Stabili",
+  "lead": "L'analisi meteo per Como indica condizioni prevalentemente serene con un punteggio di 5.7/10, posizionandosi a un livello 'NORMAL' di variabilità.",
+  "body": "Il valore dello Z-Score di -0.20 suggerisce una leggera deviazione dalla media storica delle condizioni attese per questo periodo, orientata verso una maggiore stabilità.  Ciò si traduce in una probabilità elevata di cieli sereni, con un impatto minimo su eventuali attività all'aperto. Le temperature dovrebbero mantenersi in una fascia confortevole, senza picchi significativi o flessioni marcate. L'assenza di perturbazioni significative rende il quadro meteorologico particolarmente tranquillo.",
+  "conclusion": "In sintesi, Como può aspettarsi giornate stabili e gradevoli, con condizioni ideali per godere del paesaggio circostante senza preoccupazioni legate al meteo avverso.",
+  "location": "Como",
+  "country_code": "it",
+  "vertical": "clear",
+  "z_score": -0.2,
+  "score": 5.66,
+  "anomaly_level": "NORMAL",
+  "timestamp": "2026-04-15T07:21:58.492689+00:00",
+  "date": "2026-04-15"
+}

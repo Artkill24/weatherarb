@@ -1,0 +1,15 @@
+{
+  "slug": "2026-04-15-trento-heat-wave",
+  "title": "Ondata di Calore a Trento: Livello UNUSUAL con Z-Score Elevato",
+  "lead": "Le previsioni meteo per Trento indicano l'arrivo di un'ondata di calore con un'intensità e una probabilità di accadimento che la classificano come UNUSUAL. Il punteggio di 6.9/10 riflette una situazione degna di attenzione.",
+  "body": "L'analisi condotta da WeatherArb evidenzia uno Z-Score di +1.64, valore che indica una deviazione significativa rispetto alla media storica delle temperature per questo periodo dell'anno. Questo suggerisce che le condizioni di caldo attese sono notevolmente superiori a quelle tipicamente registrate, rendendo l'evento degno di particolare monitoraggio. Il punteggio complessivo di 6.9/10, su una scala da 0 a 10, conferma la rilevanza di questa ondata di calore, posizionandola nella categoria 'UNUSUAL'.",
+  "conclusion": "I residenti e le autorità di Trento sono invitati a prendere precauzioni adeguate per affrontare questo periodo di temperature elevate, dato il carattere eccezionale dell'evento previsto.",
+  "location": "Trento",
+  "country_code": "it",
+  "vertical": "heat-wave",
+  "z_score": 1.64,
+  "score": 6.88,
+  "anomaly_level": "UNUSUAL",
+  "timestamp": "2026-04-15T07:21:56.928078+00:00",
+  "date": "2026-04-15"
+}
