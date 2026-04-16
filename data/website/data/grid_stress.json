@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-04-15T21:49:18.158273+00:00",
+  "timestamp": "2026-04-16T02:25:56.458958+00:00",
   "space_weather": {
-    "timestamp": "2026-04-15T21:49:17.933784+00:00",
-    "kp_current": 0.8,
+    "timestamp": "2026-04-16T02:25:56.115202+00:00",
+    "kp_current": 0.0,
     "kp_forecast_max_24h": 0,
-    "solar_flux": 0.0,
-    "flare_class": "A",
+    "solar_flux": 4.274854177310772e-07,
+    "flare_class": "C",
     "storm_probability": {
       "G1": 0,
       "G2": 0,
@@ -13,49 +13,6 @@
     },
     "kp_forecast": []
   },
-  "grid_stress": [
-    {
-      "grid_stress_score": 1.61,
-      "geo_component": 0.36,
-      "solar_component": 0,
-      "energy_component": 1.25,
-      "risk_level": "LOW",
-      "kp_current": 0.8,
-      "kp_forecast_max": 0,
-      "flare_class": "A",
-      "location": "Paris",
-      "country_code": "fr",
-      "z_score": 0.94,
-      "label": "Rete stabile a Paris: nessuna perturbazione geomagnetica significativa"
-    },
-    {
-      "grid_stress_score": 1.05,
-      "geo_component": 0.36,
-      "solar_component": 0,
-      "energy_component": 0.69,
-      "risk_level": "LOW",
-      "kp_current": 0.8,
-      "kp_forecast_max": 0,
-      "flare_class": "A",
-      "location": "Venezia",
-      "country_code": "it",
-      "z_score": 0.52,
-      "label": "Rete stabile a Venezia: nessuna perturbazione geomagnetica significativa"
-    },
-    {
-      "grid_stress_score": 0.96,
-      "geo_component": 0.36,
-      "solar_component": 0,
-      "energy_component": 0.6,
-      "risk_level": "LOW",
-      "kp_current": 0.8,
-      "kp_forecast_max": 0,
-      "flare_class": "A",
-      "location": "Viterbo",
-      "country_code": "it",
-      "z_score": 0.45,
-      "label": "Rete stabile a Viterbo: nessuna perturbazione geomagnetica significativa"
-    }
-  ],
-  "total_nodes": 3
+  "grid_stress": [],
+  "total_nodes": 0
 }
