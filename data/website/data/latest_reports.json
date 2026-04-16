@@ -1,7 +1,37 @@
 {
-  "last_updated": "2026-04-16T07:22:08.159476+00:00",
-  "count": 50,
+  "last_updated": "2026-04-16T07:46:57.360741+00:00",
+  "count": 52,
   "reports": [
+    {
+      "slug": "2026-04-16-torino-clear",
+      "title": "Torino Clear",
+      "lead": "A Torino si verifica un evento di cielo sereno con un punteggio di 6.8 su 10. L'anomalia e' classificata come insolita con uno Z-Score di +1.41....",
+      "location": "Torino",
+      "country_code": "it",
+      "vertical": "clear",
+      "z_score": 1.41,
+      "score": 6.82,
+      "anomaly_level": "UNUSUAL",
+      "date": "2026-04-16",
+      "cover_url": "https://images.unsplash.com/photo-1626635049439-2f7ddb8db15e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYzMjU2MTF8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-04-16-torino-clear/",
+      "excerpt": "A Torino si verifica un evento di cielo sereno con un punteggio di 6.8 su 10. L'anomalia e' classificata come insolita con uno Z-Score di +1.41."
+    },
+    {
+      "slug": "2026-04-16-bilbao-clear",
+      "title": "Bilbao Clear",
+      "lead": "A Bilbao si verifica un evento di cielo sereno con un indice di anomalia positivo. L'impatto sulla citta sara moderato....",
+      "location": "Bilbao",
+      "country_code": "es",
+      "vertical": "clear",
+      "z_score": 0.22,
+      "score": 5.36,
+      "anomaly_level": "NORMAL",
+      "date": "2026-04-16",
+      "cover_url": "https://images.unsplash.com/photo-1726426885379-b441fba5067b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYzMjU2MTV8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-04-16-bilbao-clear/",
+      "excerpt": "A Bilbao si verifica un evento di cielo sereno con un indice di anomalia positivo. L'impatto sulla citta sara moderato."
+    },
     {
       "slug": "2026-04-15-viterbo-heavy-rain",
       "title": "Viterbo: Allerta Meteo CRITICA per Piogge Intense, Z-Score +4.88",
@@ -271,36 +301,6 @@
       "cover_url": "",
       "url": "/news/2026-04-15-edinburgh-heavy-rain/",
       "excerpt": "Edimburgo si prepara ad affrontare un evento meteorologico di forte intensità, caratterizzato da piogge abbondanti e persistenti. L'analisi di WeatherArb segnala un'anomalia signif"
-    },
-    {
-      "slug": "2026-04-15-cuneo-heat-wave",
-      "title": "Cuneo Heat Wave",
-      "lead": "Cuneo sta vivendo un evento di onda di caldo anomalo. Il Z-Score di +1.97 indica una deviazione significativa dalle condizioni normali....",
-      "location": "Cuneo",
-      "country_code": "it",
-      "vertical": "heat-wave",
-      "z_score": 1.97,
-      "score": 6.96,
-      "anomaly_level": "UNUSUAL",
-      "date": "2026-04-15",
-      "cover_url": "",
-      "url": "/news/2026-04-15-cuneo-heat-wave/",
-      "excerpt": "Cuneo sta vivendo un evento di onda di caldo anomalo. Il Z-Score di +1.97 indica una deviazione significativa dalle condizioni normali."
-    },
-    {
-      "slug": "2026-04-15-como-clear",
-      "title": "Previsioni Meteo per Como: Condizioni Stabili",
-      "lead": "L'analisi meteo per Como indica condizioni prevalentemente serene con un punteggio di 5.7/10, posizionandosi a un livello 'NORMAL' di variabilità....",
-      "location": "Como",
-      "country_code": "it",
-      "vertical": "clear",
-      "z_score": -0.2,
-      "score": 5.66,
-      "anomaly_level": "NORMAL",
-      "date": "2026-04-15",
-      "cover_url": "",
-      "url": "/news/2026-04-15-como-clear/",
-      "excerpt": "L'analisi meteo per Como indica condizioni prevalentemente serene con un punteggio di 5.7/10, posizionandosi a un livello 'NORMAL' di variabilità."
     }
   ]
 }
