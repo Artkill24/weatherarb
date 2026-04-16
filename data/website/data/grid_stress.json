@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-04-16T13:24:13.882673+00:00",
+  "timestamp": "2026-04-16T16:20:48.043562+00:00",
   "space_weather": {
-    "timestamp": "2026-04-16T13:24:13.427224+00:00",
+    "timestamp": "2026-04-16T16:20:47.772886+00:00",
     "kp_current": 0.0,
     "kp_forecast_max_24h": 0,
-    "solar_flux": 8.671513000990672e-07,
+    "solar_flux": 4.957080932399549e-07,
     "flare_class": "C",
     "storm_probability": {
       "G1": 0,
@@ -13,6 +13,21 @@
     },
     "kp_forecast": []
   },
-  "grid_stress": [],
-  "total_nodes": 0
+  "grid_stress": [
+    {
+      "grid_stress_score": 4.5,
+      "geo_component": 0.0,
+      "solar_component": 0.5,
+      "energy_component": 4.0,
+      "risk_level": "MODERATE",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "C",
+      "location": "Bilbao",
+      "country_code": "es",
+      "z_score": 3.16,
+      "label": "Attenzione rete a Bilbao: condizioni di stress moderate — monitorare nelle prossime 6h"
+    }
+  ],
+  "total_nodes": 1
 }
