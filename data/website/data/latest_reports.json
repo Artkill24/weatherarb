@@ -1,7 +1,22 @@
 {
-  "last_updated": "2026-04-17T07:23:32.218363+00:00",
-  "count": 50,
+  "last_updated": "2026-04-17T07:47:05.056015+00:00",
+  "count": 51,
   "reports": [
+    {
+      "slug": "2026-04-17-odense-clear",
+      "title": "Odense Clear",
+      "lead": "Odense registra condizioni meteo insolite. Il Clear previsto presenta un Z-Score di -1.25....",
+      "location": "Odense",
+      "country_code": "dk",
+      "vertical": "clear",
+      "z_score": -1.25,
+      "score": 6.37,
+      "anomaly_level": "UNUSUAL",
+      "date": "2026-04-17",
+      "cover_url": "https://images.unsplash.com/photo-1612347113519-e6fc25f49210?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY0MTIwMjN8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-04-17-odense-clear/",
+      "excerpt": "Odense registra condizioni meteo insolite. Il Clear previsto presenta un Z-Score di -1.25."
+    },
     {
       "slug": "2026-04-16-torino-clear",
       "title": "Torino Clear",
@@ -286,21 +301,6 @@
       "cover_url": "",
       "url": "/news/2026-04-15-funchal-clear/",
       "excerpt": "Funchal si prepara ad affrontare un periodo di tempo eccezionalmente sereno, caratterizzato da un Z-Score di +3.94 che indica un'anomalia significativa rispetto alle condizioni med"
-    },
-    {
-      "slug": "2026-04-15-edinburgh-heavy-rain",
-      "title": "Edimburgo Sotto Pioggia Battente: Allerta Meteo CRITICA con Z-Score Elevato",
-      "lead": "Edimburgo si prepara ad affrontare un evento meteorologico di forte intensità, caratterizzato da piogge abbondanti e persistenti. L'analisi di WeatherArb segnal...",
-      "location": "Edinburgh",
-      "country_code": "it",
-      "vertical": "heavy-rain",
-      "z_score": 4.33,
-      "score": 7.02,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-04-15",
-      "cover_url": "",
-      "url": "/news/2026-04-15-edinburgh-heavy-rain/",
-      "excerpt": "Edimburgo si prepara ad affrontare un evento meteorologico di forte intensità, caratterizzato da piogge abbondanti e persistenti. L'analisi di WeatherArb segnala un'anomalia signif"
     }
   ]
 }
