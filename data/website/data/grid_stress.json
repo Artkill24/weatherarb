@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-04-17T15:57:58.887136+00:00",
+  "timestamp": "2026-04-17T18:56:27.528202+00:00",
   "space_weather": {
-    "timestamp": "2026-04-17T15:57:58.670238+00:00",
+    "timestamp": "2026-04-17T18:56:27.150313+00:00",
     "kp_current": 0.0,
     "kp_forecast_max_24h": 0,
-    "solar_flux": 3.6511116263682197e-07,
+    "solar_flux": 3.943712272302946e-07,
     "flare_class": "C",
     "storm_probability": {
       "G1": 0,
@@ -13,21 +13,6 @@
     },
     "kp_forecast": []
   },
-  "grid_stress": [
-    {
-      "grid_stress_score": 1.35,
-      "geo_component": 0.0,
-      "solar_component": 0.5,
-      "energy_component": 0.85,
-      "risk_level": "LOW",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "C",
-      "location": "Odense",
-      "country_code": "dk",
-      "z_score": 0.64,
-      "label": "Rete stabile a Odense: nessuna perturbazione geomagnetica significativa"
-    }
-  ],
-  "total_nodes": 1
+  "grid_stress": [],
+  "total_nodes": 0
 }
