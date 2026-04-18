@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-04-18T05:04:15.939772+00:00",
+  "timestamp": "2026-04-18T07:03:16.825400+00:00",
   "space_weather": {
-    "timestamp": "2026-04-18T05:04:15.652486+00:00",
-    "kp_current": 4.03,
+    "timestamp": "2026-04-18T07:03:16.625672+00:00",
+    "kp_current": 3.0,
     "kp_forecast_max_24h": 0,
-    "solar_flux": 2.779310364076082e-07,
-    "flare_class": "C",
+    "solar_flux": 1.565798811498098e-06,
+    "flare_class": "M",
     "storm_probability": {
       "G1": 0,
       "G2": 0,
@@ -13,35 +13,6 @@
     },
     "kp_forecast": []
   },
-  "grid_stress": [
-    {
-      "grid_stress_score": 5.82,
-      "geo_component": 1.79,
-      "solar_component": 0.5,
-      "energy_component": 3.53,
-      "risk_level": "HIGH",
-      "kp_current": 4.03,
-      "kp_forecast_max": 0,
-      "flare_class": "C",
-      "location": "Birmingham",
-      "country_code": "gb",
-      "z_score": -2.65,
-      "label": "Rischio rete elevato a Birmingham: combinazione domanda anomala + perturbazione magnetica (Kp=4.0)"
-    },
-    {
-      "grid_stress_score": 3.12,
-      "geo_component": 1.79,
-      "solar_component": 0.5,
-      "energy_component": 0.83,
-      "risk_level": "MODERATE",
-      "kp_current": 4.03,
-      "kp_forecast_max": 0,
-      "flare_class": "C",
-      "location": "Gorizia",
-      "country_code": "it",
-      "z_score": 0.62,
-      "label": "Attenzione rete a Gorizia: condizioni di stress moderate — monitorare nelle prossime 6h"
-    }
-  ],
-  "total_nodes": 2
+  "grid_stress": [],
+  "total_nodes": 0
 }
