@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-04-18T12:56:27.606551+00:00",
+  "timestamp": "2026-04-18T15:35:13.079830+00:00",
   "space_weather": {
-    "timestamp": "2026-04-18T12:56:27.288309+00:00",
-    "kp_current": 3.1,
+    "timestamp": "2026-04-18T15:35:12.834276+00:00",
+    "kp_current": 1.77,
     "kp_forecast_max_24h": 0,
-    "solar_flux": 3.631124911862571e-07,
+    "solar_flux": 3.8130059465402155e-07,
     "flare_class": "C",
     "storm_probability": {
       "G1": 0,
@@ -13,6 +13,35 @@
     },
     "kp_forecast": []
   },
-  "grid_stress": [],
-  "total_nodes": 0
+  "grid_stress": [
+    {
+      "grid_stress_score": 5.29,
+      "geo_component": 0.79,
+      "solar_component": 0.5,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 1.77,
+      "kp_forecast_max": 0,
+      "flare_class": "C",
+      "location": "Pistoia",
+      "country_code": "it",
+      "z_score": 4.23,
+      "label": "Rischio rete elevato a Pistoia: combinazione domanda anomala + perturbazione magnetica (Kp=1.8)"
+    },
+    {
+      "grid_stress_score": 4.51,
+      "geo_component": 0.79,
+      "solar_component": 0.5,
+      "energy_component": 3.23,
+      "risk_level": "MODERATE",
+      "kp_current": 1.77,
+      "kp_forecast_max": 0,
+      "flare_class": "C",
+      "location": "Lanciano",
+      "country_code": "it",
+      "z_score": 2.42,
+      "label": "Attenzione rete a Lanciano: condizioni di stress moderate — monitorare nelle prossime 6h"
+    }
+  ],
+  "total_nodes": 2
 }
