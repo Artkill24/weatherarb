@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-04-17T21:38:56.091375+00:00",
+  "timestamp": "2026-04-18T02:04:41.720113+00:00",
   "space_weather": {
-    "timestamp": "2026-04-17T21:38:55.971267+00:00",
-    "kp_current": 0.87,
+    "timestamp": "2026-04-18T02:04:41.366286+00:00",
+    "kp_current": 2.87,
     "kp_forecast_max_24h": 0,
-    "solar_flux": 4.309345058572944e-07,
+    "solar_flux": 3.3578194802430517e-07,
     "flare_class": "C",
     "storm_probability": {
       "G1": 0,
@@ -15,47 +15,19 @@
   },
   "grid_stress": [
     {
-      "grid_stress_score": 2.5,
-      "geo_component": 0.39,
+      "grid_stress_score": 3.72,
+      "geo_component": 1.28,
       "solar_component": 0.5,
-      "energy_component": 1.61,
-      "risk_level": "LOW",
-      "kp_current": 0.87,
+      "energy_component": 1.95,
+      "risk_level": "MODERATE",
+      "kp_current": 2.87,
       "kp_forecast_max": 0,
       "flare_class": "C",
-      "location": "Milano",
-      "country_code": "it",
-      "z_score": 1.21,
-      "label": "Rete stabile a Milano: nessuna perturbazione geomagnetica significativa"
-    },
-    {
-      "grid_stress_score": 2.21,
-      "geo_component": 0.39,
-      "solar_component": 0.5,
-      "energy_component": 1.32,
-      "risk_level": "LOW",
-      "kp_current": 0.87,
-      "kp_forecast_max": 0,
-      "flare_class": "C",
-      "location": "Odense",
+      "location": "Aarhus",
       "country_code": "dk",
-      "z_score": -0.99,
-      "label": "Rete stabile a Odense: nessuna perturbazione geomagnetica significativa"
-    },
-    {
-      "grid_stress_score": 1.93,
-      "geo_component": 0.39,
-      "solar_component": 0.5,
-      "energy_component": 1.04,
-      "risk_level": "LOW",
-      "kp_current": 0.87,
-      "kp_forecast_max": 0,
-      "flare_class": "C",
-      "location": "Frankfurt",
-      "country_code": "de",
-      "z_score": 0.78,
-      "label": "Rete stabile a Frankfurt: nessuna perturbazione geomagnetica significativa"
+      "z_score": -1.46,
+      "label": "Attenzione rete a Aarhus: condizioni di stress moderate — monitorare nelle prossime 6h"
     }
   ],
-  "total_nodes": 3
+  "total_nodes": 1
 }
