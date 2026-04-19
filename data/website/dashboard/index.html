@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dashboard | WeatherArb API</title>
+  <meta name="robots" content="noindex">
+  <style>
+    :root{--bg:#040608;--s:#0a0d12;--b:#141920;--ba:#1e2d3d;--t:#c8d6e5;--m:#4a5568;--bl:#3b82f6;--g:#10b981;--r:#ef4444;--y:#f59e0b}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--t);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+    .hdr{border-bottom:1px solid var(--b);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--t);text-decoration:none}.logo span{color:var(--bl)}
+    .nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--m);text-decoration:none;margin-left:16px}
+    .wrap{max-width:900px;margin:0 auto;padding:48px 24px 80px}
+    /* LOGIN */
+    .login-box{background:var(--s);border:1px solid var(--b);border-radius:16px;padding:40px;max-width:480px;margin:80px auto}
+    .login-title{font-size:24px;font-weight:800;color:#fff;margin-bottom:8px}
+    .login-sub{font-size:14px;color:var(--m);margin-bottom:28px;line-height:1.5}
+    .input{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--b);border-radius:8px;padding:12px 16px;color:var(--t);font-size:14px;outline:none;margin-bottom:12px;font-family:monospace}
+    .input:focus{border-color:var(--bl)}
+    .btn{width:100%;background:var(--bl);color:#fff;border:none;border-radius:8px;padding:13px;font-size:14px;font-weight:700;cursor:pointer}
+    .btn:hover{background:#2563eb}
+    .err{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);border-radius:8px;padding:12px;font-size:13px;color:var(--r);margin-top:12px;display:none}
+    /* DASHBOARD */
+    .dashboard{display:none}
+    .greeting{margin-bottom:32px}
+    .greeting h1{font-size:28px;font-weight:800;color:#fff;margin-bottom:4px}
+    .greeting p{font-size:14px;color:var(--m)}
+    .plan-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:100px;padding:4px 14px;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--bl);margin-bottom:24px}
+    /* STATS */
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--b);border:1px solid var(--b);border-radius:12px;overflow:hidden;margin-bottom:24px}
+    .stat{background:var(--s);padding:20px;text-align:center}
+    .stat-n{font-size:32px;font-weight:800;font-variant-numeric:tabular-nums;color:#fff}
+    .stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--m);margin-top:4px}
+    /* USAGE BAR */
+    .usage-bar-wrap{margin-bottom:8px}
+    .usage-bar{height:6px;border-radius:3px;background:var(--b);overflow:hidden}
+    .usage-fill{height:100%;border-radius:3px;transition:width .6s}
+    .usage-label{font-size:11px;color:var(--m);display:flex;justify-content:space-between;margin-top:6px}
+    /* API KEY BOX */
+    .key-box{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:24px;margin-bottom:24px}
+    .box-title{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--m);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--b)}
+    .key-display{display:flex;align-items:center;gap:10px;background:var(--bg);border:1px solid var(--b);border-radius:8px;padding:12px 16px;margin-bottom:12px}
+    .key-val{font-family:monospace;font-size:14px;color:var(--bl);flex:1;word-break:break-all}
+    .copy-btn{background:var(--b);border:1px solid var(--ba);border-radius:6px;padding:6px 12px;color:var(--m);font-size:12px;cursor:pointer;white-space:nowrap;transition:.15s}
+    .copy-btn:hover{color:var(--t);border-color:var(--bl)}
+    .copy-ok{color:var(--g)!important}
+    /* EXAMPLES */
+    .examples{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:24px;margin-bottom:24px}
+    .example{margin-bottom:16px}
+    .ex-label{font-size:12px;color:var(--m);margin-bottom:6px}
+    pre{background:var(--bg);border:1px solid var(--b);border-radius:8px;padding:14px 16px;font-size:12px;color:#c8d6e5;overflow-x:auto;font-family:monospace;line-height:1.6}
+    /* LINKS */
+    .links{display:flex;gap:12px;flex-wrap:wrap}
+    .link-card{flex:1;min-width:180px;background:var(--s);border:1px solid var(--b);border-radius:10px;padding:16px;text-decoration:none;color:var(--t);transition:.2s;display:flex;align-items:center;gap:10px}
+    .link-card:hover{border-color:var(--bl)}
+    .link-icon{font-size:20px}
+    .link-text{font-size:13px;font-weight:600}
+    .link-sub{font-size:11px;color:var(--m)}
+    .ftr{border-top:1px solid var(--b);padding:20px;text-align:center;font-size:11px;color:var(--m)}
+    .ftr a{color:var(--m);text-decoration:none}
+  </style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">Weather<span>Arb</span></a>
+  <nav class="nav"><a href="/data/">Data</a><a href="/news/">News</a><a href="/pricing/">Pricing</a></nav>
+</header>
+
+<!-- LOGIN -->
+<div class="wrap" id="login-section">
+  <div class="login-box">
+    <div class="login-title">Dashboard API</div>
+    <div class="login-sub">Inserisci la tua API key WeatherArb Professional per accedere alla dashboard.</div>
+    <input id="key-input" class="input" type="text" placeholder="wa_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" onkeydown="if(event.key==='Enter')login()">
+    <button class="btn" onclick="login()">Accedi →</button>
+    <div class="err" id="login-err"></div>
+    <p style="font-size:12px;color:var(--m);margin-top:16px;text-align:center">
+      Non hai ancora un account? <a href="/pricing/" style="color:var(--bl)">Abbonati ora →</a>
+    </p>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="wrap dashboard" id="dashboard-section">
+  <div class="greeting">
+    <h1>Dashboard WeatherArb</h1>
+    <p id="dash-email" style="color:var(--m)">Caricamento...</p>
+  </div>
+  <div class="plan-badge">⚡ Professional API</div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-n" id="d-calls" style="color:var(--g)">—</div>
+      <div class="stat-l">Chiamate Oggi</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n" id="d-remaining" style="color:var(--bl)">—</div>
+      <div class="stat-l">Rimanenti</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n" id="d-limit">10.000</div>
+      <div class="stat-l">Limite Giornaliero</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n" id="d-since" style="font-size:16px;padding-top:8px">—</div>
+      <div class="stat-l">Membro Dal</div>
+    </div>
+  </div>
+
+  <!-- USAGE BAR -->
+  <div class="usage-bar-wrap" style="margin-bottom:24px">
+    <div class="usage-bar"><div class="usage-fill" id="d-bar" style="width:0%;background:var(--g)"></div></div>
+    <div class="usage-label"><span>0 chiamate usate</span><span id="d-bar-label">10.000 disponibili</span></div>
+  </div>
+
+  <!-- API KEY -->
+  <div class="key-box">
+    <div class="box-title">La tua API Key</div>
+    <div class="key-display">
+      <div class="key-val" id="d-key">...</div>
+      <button class="copy-btn" id="copy-btn" onclick="copyKey()">Copia</button>
+    </div>
+    <p style="font-size:12px;color:var(--m)">Tieni la key al sicuro — non condividerla pubblicamente.</p>
+  </div>
+
+  <!-- EXAMPLES -->
+  <div class="examples">
+    <div class="box-title">Esempi di utilizzo</div>
+    <div class="example">
+      <div class="ex-label">Pulse con Z-Score + HDD/CDD per Milano</div>
+      <pre id="ex-pulse">curl "https://api.weatherarb.com/api/v1/pulse/milano?key=..."</pre>
+    </div>
+    <div class="example">
+      <div class="ex-label">Top anomalie Europa</div>
+      <pre id="ex-top">curl "https://api.weatherarb.com/api/v1/europe/top?limit=10&key=..."</pre>
+    </div>
+    <div class="example">
+      <div class="ex-label">Grid Stress Score</div>
+      <pre id="ex-grid">curl "https://api.weatherarb.com/api/space-weather?key=..."</pre>
+    </div>
+  </div>
+
+  <!-- LINKS -->
+  <div class="links" style="margin-bottom:32px">
+    <a href="/api.html" class="link-card">
+      <div class="link-icon">📖</div>
+      <div><div class="link-text">Documentazione</div><div class="link-sub">Tutti gli endpoint</div></div>
+    </a>
+    <a href="/data/" class="link-card">
+      <div class="link-icon">📊</div>
+      <div><div class="link-text">Dashboard Live</div><div class="link-sub">322 nodi EU</div></div>
+    </a>
+    <a href="mailto:alerts@weatherarb.com" class="link-card">
+      <div class="link-icon">💬</div>
+      <div><div class="link-text">Supporto</div><div class="link-sub">alerts@weatherarb.com</div></div>
+    </a>
+  </div>
+
+  <button onclick="logout()" style="background:transparent;border:1px solid var(--b);border-radius:8px;padding:10px 20px;color:var(--m);cursor:pointer;font-size:13px">Logout</button>
+</div>
+
+<footer class="ftr">
+  <a href="/">WeatherArb</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="mailto:alerts@weatherarb.com">Supporto</a>
+</footer>
+
+<script>
+const API = 'https://api.weatherarb.com';
+var currentKey = '';
+
+// Check saved key
+(function(){
+  var saved = localStorage.getItem('wa_api_key');
+  if(saved) { currentKey = saved; loadDashboard(saved); }
+})();
+
+async function login(){
+  var key = document.getElementById('key-input').value.trim();
+  var err = document.getElementById('login-err');
+  err.style.display = 'none';
+  if(!key || !key.startsWith('wa_')){
+    err.textContent = 'API key non valida. Deve iniziare con "wa_".';
+    err.style.display = 'block'; return;
+  }
+  currentKey = key;
+  await loadDashboard(key);
+}
+
+async function loadDashboard(key){
+  try{
+    var r = await fetch(API + '/api/me?key=' + encodeURIComponent(key));
+    if(!r.ok){
+      var e = await r.json();
+      document.getElementById('login-err').textContent = e.detail || 'API key non trovata o inattiva.';
+      document.getElementById('login-err').style.display = 'block';
+      return;
+    }
+    var d = await r.json();
+    
+    // Save key
+    localStorage.setItem('wa_api_key', key);
+    
+    // Show dashboard
+    document.getElementById('login-section').style.display = 'none';
+    document.getElementById('dashboard-section').style.display = 'block';
+    
+    // Fill data
+    document.getElementById('dash-email').textContent = d.email + ' · Piano ' + d.plan.charAt(0).toUpperCase() + d.plan.slice(1);
+    document.getElementById('d-calls').textContent = d.calls_today.toLocaleString();
+    document.getElementById('d-remaining').textContent = d.calls_remaining.toLocaleString();
+    document.getElementById('d-limit').textContent = d.calls_limit.toLocaleString();
+    document.getElementById('d-since').textContent = d.member_since;
+    document.getElementById('d-key').textContent = key;
+    
+    // Usage bar
+    var pct = Math.min((d.calls_today / d.calls_limit) * 100, 100);
+    var barCol = pct > 80 ? '#ef4444' : pct > 60 ? '#f59e0b' : '#10b981';
+    document.getElementById('d-bar').style.width = pct + '%';
+    document.getElementById('d-bar').style.background = barCol;
+    document.getElementById('d-bar-label').textContent = d.calls_remaining.toLocaleString() + ' disponibili';
+    
+    // Examples with real key
+    document.getElementById('ex-pulse').textContent = 'curl "https://api.weatherarb.com/api/v1/pulse/milano?key=' + key + '"';
+    document.getElementById('ex-top').textContent = 'curl "https://api.weatherarb.com/api/v1/europe/top?limit=10&key=' + key + '"';
+    document.getElementById('ex-grid').textContent = 'curl "https://api.weatherarb.com/api/space-weather?key=' + key + '"';
+    
+  }catch(e){
+    document.getElementById('login-err').textContent = 'Errore di connessione — riprova.';
+    document.getElementById('login-err').style.display = 'block';
+  }
+}
+
+function copyKey(){
+  navigator.clipboard.writeText(currentKey).then(function(){
+    var btn = document.getElementById('copy-btn');
+    btn.textContent = '✓ Copiata';
+    btn.classList.add('copy-ok');
+    setTimeout(function(){ btn.textContent = 'Copia'; btn.classList.remove('copy-ok'); }, 2000);
+  });
+}
+
+function logout(){
+  localStorage.removeItem('wa_api_key');
+  currentKey = '';
+  document.getElementById('login-section').style.display = 'block';
+  document.getElementById('dashboard-section').style.display = 'none';
+  document.getElementById('key-input').value = '';
+}
+</script>
+</body>
+</html>

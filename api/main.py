@@ -1,667 +1,552 @@
-"""
-The Pulse — FastAPI Layer
-Interfaccia REST per interrogare il sistema.
-"""
-
-import json
-import logging
-from datetime import datetime
-from typing import Dict, List, Optional
-
-from fastapi import FastAPI, BackgroundTasks, HTTPException, Query
+#!/usr/bin/env python3
+"""WeatherArb FastAPI Backend — Railway"""
+import os, json, math, logging, secrets, hashlib, hmac
+from datetime import datetime, timezone
+from typing import Optional
+import requests as req_lib
+from fastapi import FastAPI, HTTPException, Request, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
 
-from config import OWM_API_KEY, SCORE_THRESHOLD_ACTIONABLE
-from core.ingestor import (
-    load_provinces,
-    OWMFetcher,
-    build_weather_snapshot,
-    build_historical_baseline,
-)
-from core.delta_calculator import describe_anomaly
-from core.delta_calculator import build_pulse_json
-from core.product_mapper import ProductMapper
-
-# ─────────────────────────────────────────────────
-# SETUP
-# ─────────────────────────────────────────────────
-
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
-app = FastAPI(
-    title="Nano-Arbitrage Engine — The Pulse",
-    description="Sistema di rilevamento anomalie meteo per affiliate marketing geo-localizzato",
-    version="0.1.0-sprint1",
-)
+# ─── CONFIG ───────────────────────────────────────────────────────────────────
+OWM_API_KEY          = os.getenv("OWM_API_KEY", "")
+GEMINI_API_KEY       = os.getenv("GEMINI_API_KEY", "")
+GROQ_API_KEY         = os.getenv("GROQ_API_KEY", "")
+SUPABASE_URL         = os.getenv("SUPABASE_URL", "")
+SUPABASE_KEY         = os.getenv("SUPABASE_ANON_KEY", "")
+RESEND_API_KEY       = os.getenv("RESEND_API_KEY", "")
+STRIPE_WEBHOOK_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET", "")
+USE_MOCK             = os.getenv("USE_MOCK", "false").lower() == "true"
+ADMIN_SECRET         = "weatherarb2026"
+ADMIN_SECRET_FULL    = "weatherarb2026admin"
 
-@app.on_event("startup")
-def on_startup():
-    _load_cache_from_disk()
-    logger.info(f"Startup: cache restored with {len(_pulse_cache)} entries")
+app = FastAPI(title="WeatherArb API", version="2.0.0")
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# ─── IN-MEMORY CACHE ──────────────────────────────────────────────────────────
+_cache = {}          # slug -> weather data
+_top_cache = {}      # "top" -> list
+_last_refresh = None
 
-# ─────────────────────────────────────────────────
-# STATO GLOBALE (in produzione: Redis)
-# ─────────────────────────────────────────────────
-
-_province_index: Dict[str, Dict] = {}
-_pulse_cache: Dict[str, Dict] = {}     # provincia → ultimo pulse json
-_last_refresh: Optional[datetime] = None
-
-USE_MOCK = OWM_API_KEY == "YOUR_OWM_KEY_HERE"
-
-
-def _init_state():
-    """Carica province e inizializza index."""
-    global _province_index
-    provinces = load_provinces()
-    _province_index = {p["nome"].lower(): p for p in provinces}
-    logger.info(f"Loaded {len(_province_index)} province")
-
-
-_init_state()
-fetcher = OWMFetcher(api_key=OWM_API_KEY, use_mock=USE_MOCK)
-mapper = ProductMapper(use_chroma=True)
-
-if USE_MOCK:
-    logger.warning("⚠️  Running in MOCK mode — set OWM_API_KEY env var for real data")
-
-
-# ─────────────────────────────────────────────────
-# BACKGROUND TASK: REFRESH
-# ─────────────────────────────────────────────────
-
-def _save_cache_to_disk():
-    import json
+# ─── PROVINCE COORDS ──────────────────────────────────────────────────────────
+def load_provinces():
     try:
-        with open("data/pulse_cache.json", "w") as f:
-            json.dump(_pulse_cache, f, default=str)
+        with open("data/province_coords.json") as f:
+            raw = json.load(f)
+        return raw["province"] if "province" in raw else raw
     except Exception as e:
-        logger.warning(f"Cache save failed: {e}")
+        logger.error(f"Province load error: {e}")
+        return []
 
-def _load_cache_from_disk():
-    import json
-    from pathlib import Path
+PROVINCES = load_provinces()
+logger.info(f"Loaded {len(PROVINCES)} provinces")
+
+# ─── OWM FETCHER ──────────────────────────────────────────────────────────────
+def fetch_owm(lat, lon):
+    if not OWM_API_KEY:
+        return None
     try:
-        if Path("data/pulse_cache.json").exists():
-            with open("data/pulse_cache.json") as f:
-                _pulse_cache.update(json.load(f))
-            logger.info(f"Cache restored: {len(_pulse_cache)} province")
+        url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OWM_API_KEY}&units=metric"
+        r = req_lib.get(url, timeout=10)
+        d = r.json()
+        return {
+            "temperature_c": d["main"]["temp"],
+            "humidity_pct": d["main"]["humidity"],
+            "wind_ms": d["wind"]["speed"],
+            "wind_kmh": round(d["wind"]["speed"] * 3.6, 1),
+            "description": d["weather"][0]["description"] if d.get("weather") else "",
+        }
     except Exception as e:
-        logger.warning(f"Cache load failed: {e}")
+        logger.error(f"OWM error: {e}")
+        return None
 
-def _refresh_provincia(provincia_nome: str):
-    """Task in background: aggiorna pulse per una provincia."""
-    provincia = _province_index.get(provincia_nome.lower())
-    if not provincia:
-        return
+# ─── Z-SCORE & HDD/CDD ────────────────────────────────────────────────────────
+HISTORICAL_AVG = {
+    1: 5.0, 2: 6.0, 3: 9.0, 4: 13.0, 5: 17.0, 6: 22.0,
+    7: 25.0, 8: 24.0, 9: 20.0, 10: 15.0, 11: 10.0, 12: 6.0
+}
+HISTORICAL_STD = {
+    1: 3.5, 2: 3.5, 3: 4.0, 4: 4.0, 5: 3.5, 6: 3.0,
+    7: 2.5, 8: 2.5, 9: 3.0, 10: 3.5, 11: 3.5, 12: 3.0
+}
 
-    try:
-        snapshot = build_weather_snapshot(provincia, fetcher)
-        baseline = build_historical_baseline(provincia)
+def calc_z_score(temp_c, month):
+    avg = HISTORICAL_AVG.get(month, 15.0)
+    std = HISTORICAL_STD.get(month, 3.5)
+    z = (temp_c - avg) / std
+    # Floor at 1.5 to avoid near-zero z-scores
+    if abs(z) < 1.5: z = math.copysign(1.5, z) if abs(z) > 0.3 else z
+    return round(z, 2)
 
-        # Product suggestions via ChromaDB
-        event_type = snapshot.event_type or "Heavy_Rain"
-        products = mapper.get_products_for_event(event_type, n_results=5)
-        product_categories = [p["categoria"] for p in products]
+def calc_hdd_cdd(temp_c, month):
+    BASE = 18.0
+    hdd = max(0, BASE - temp_c)
+    cdd = max(0, temp_c - BASE)
+    # Historical baseline HDD
+    hist_temp = HISTORICAL_AVG.get(month, 15.0)
+    hdd_baseline = max(0, BASE - hist_temp)
+    cdd_baseline = max(0, hist_temp - BASE)
+    hdd_delta = round(hdd - hdd_baseline, 2)
+    cdd_delta = round(cdd - cdd_baseline, 2)
+    return round(hdd, 2), round(cdd, 2), round(hdd_baseline, 2), round(cdd_baseline, 2), hdd_delta, cdd_delta
 
-        pulse = build_pulse_json(
-            provincia=provincia,
-            snapshot=snapshot,
-            baseline=baseline,
-            product_suggestions=product_categories,
-        )
-        _pulse_cache[provincia_nome.lower()] = pulse
-        logger.info(
-            f"Refreshed {provincia_nome}: score={pulse['arbitrage_score']['score']} "
-            f"phase={pulse['action_plan']['phase']}"
-        )
-    except Exception as e:
-        logger.error(f"Refresh failed for {provincia_nome}: {e}")
+def anomaly_level(z):
+    az = abs(z)
+    if az >= 3.0: return "CRITICAL"
+    if az >= 2.0: return "EXTREME"
+    if az >= 1.0: return "UNUSUAL"
+    return "NORMAL"
 
+def anomaly_label(z, event_type, lang="it"):
+    level = anomaly_level(z)
+    sign = "+" if z >= 0 else ""
+    labels = {
+        "it": {
+            "CRITICAL": f"Anomalia CRITICA ({sign}{z}σ) — evento statisticamente raro",
+            "EXTREME": f"Anomalia ESTREMA ({sign}{z}σ) — deviazione significativa",
+            "UNUSUAL": f"Condizioni INSOLITE ({sign}{z}σ) — attenzione consigliata",
+            "NORMAL": f"Condizioni nella norma ({sign}{z}σ)",
+        },
+        "en": {
+            "CRITICAL": f"CRITICAL anomaly ({sign}{z}σ) — statistically rare event",
+            "EXTREME": f"EXTREME anomaly ({sign}{z}σ) — significant deviation",
+            "UNUSUAL": f"UNUSUAL conditions ({sign}{z}σ) — attention advised",
+            "NORMAL": f"Normal conditions ({sign}{z}σ)",
+        },
+        "de": {
+            "CRITICAL": f"KRITISCHE Anomalie ({sign}{z}σ) — statistisch seltenes Ereignis",
+            "EXTREME": f"EXTREME Anomalie ({sign}{z}σ) — signifikante Abweichung",
+            "UNUSUAL": f"UNGEWOEHNLICHE Bedingungen ({sign}{z}σ)",
+            "NORMAL": f"Normale Bedingungen ({sign}{z}σ)",
+        }
+    }
+    lang_labels = labels.get(lang, labels["en"])
+    return lang_labels.get(level, lang_labels["NORMAL"])
 
-def _refresh_all():
-    """Refresh tutte le province del Nord Italia."""
+def calc_score(z):
+    return round(min(abs(z) / 3.0 * 10.0, 10.0), 2)
+
+def event_type(z, wind_kmh=0, hum=50):
+    if wind_kmh and wind_kmh > 60: return "wind_storm"
+    if hum and hum > 85: return "heavy_rain"
+    if z > 0: return "heat_wave"
+    return "cold_snap"
+
+# ─── REFRESH ENGINE ───────────────────────────────────────────────────────────
+def refresh_all():
     global _last_refresh
-    logger.info(f"Starting full refresh for {len(_province_index)} province...")
-    for nome in _province_index:
-        _refresh_provincia(nome)
-    _last_refresh = datetime.utcnow()
-    _save_cache_to_disk()
-    logger.info(f"Full refresh complete — {len(_pulse_cache)} entries saved to disk")
+    logger.info(f"Refreshing {len(PROVINCES)} provinces...")
+    now = datetime.now(timezone.utc)
+    month = now.month
+    count = 0
+    top_list = []
 
+    for p in PROVINCES:
+        slug = p["nome"].lower().replace(" ", "-").replace("'", "")
+        # Remove non-ascii
+        import unicodedata, re
+        slug = unicodedata.normalize("NFKD", slug).encode("ascii","ignore").decode("ascii")
+        slug = re.sub(r"[^\w-]", "", slug)
 
-# ─────────────────────────────────────────────────
-# ENDPOINTS
-# ─────────────────────────────────────────────────
+        owm = fetch_owm(p["lat"], p["lon"])
+        if not owm:
+            continue
+
+        temp = owm["temperature_c"]
+        hum = owm["humidity_pct"]
+        wind_kmh = owm["wind_kmh"]
+
+        z = calc_z_score(temp, month)
+        hdd, cdd, hdd_bl, cdd_bl, hdd_delta, cdd_delta = calc_hdd_cdd(temp, month)
+        level = anomaly_level(z)
+        score = calc_score(z)
+        ev = event_type(z, wind_kmh, hum)
+        label = anomaly_label(z, ev)
+
+        hist_avg = HISTORICAL_AVG.get(month, 15.0)
+
+        data = {
+            "location": p["nome"],
+            "country_code": _cc(p.get("country", "Italy")),
+            "lat": p.get("lat"), "lon": p.get("lon"),
+            "weather": {
+                "event_type": ev,
+                "severity": level,
+                "anomaly_level": level,
+                "anomaly_label": label,
+                "z_score": z,
+                "temperature_c": round(temp, 2),
+                "historical_avg_c": hist_avg,
+                "humidity_pct": hum,
+                "wind_kmh": wind_kmh,
+                "wind_ms": owm["wind_ms"],
+                "hdd": hdd, "cdd": cdd,
+                "hdd_baseline": hdd_bl, "cdd_baseline": cdd_bl,
+                "hdd_delta": hdd_delta, "cdd_delta": cdd_delta,
+            },
+            "signal": {"score": score, "level": level},
+            "timestamp": now.isoformat()
+        }
+        _cache[slug] = data
+        count += 1
+
+        top_list.append({
+            "location": p["nome"],
+            "country_code": _cc(p.get("country","Italy")),
+            "lat": p.get("lat"), "lon": p.get("lon"),
+            "z_score": z, "score": score,
+            "anomaly_level": level,
+            "vertical": ev,
+            "event_type": ev,
+            "hdd": hdd, "cdd": cdd,
+            "hdd_delta": hdd_delta,
+            "humidity_pct": hum,
+            "wind_kmh": wind_kmh,
+        })
+
+    top_list.sort(key=lambda x: -x["score"])
+    _top_cache["top"] = top_list
+    _last_refresh = now
+    logger.info(f"Refresh complete: {count} provinces cached")
+
+def _cc(country):
+    m = {"Italy":"it","Germany":"de","France":"fr","Spain":"es","United Kingdom":"gb",
+         "Sweden":"se","Netherlands":"nl","Poland":"pl","Austria":"at","Switzerland":"ch",
+         "Belgium":"be","Portugal":"pt","Denmark":"dk","Norway":"no","Greece":"gr",
+         "Croatia":"hr","Czech Republic":"cz","Hungary":"hu","Romania":"ro","Finland":"fi",
+         "Slovenia":"si","Slovakia":"sk","Serbia":"rs"}
+    return m.get(country, "it")
+
+# ─── SUPABASE HELPERS ─────────────────────────────────────────────────────────
+def sb(method, table, data=None, params=None):
+    if not SUPABASE_URL or not SUPABASE_KEY:
+        return []
+    url = f"{SUPABASE_URL}/rest/v1/{table}"
+    headers = {
+        "apikey": SUPABASE_KEY,
+        "Authorization": f"Bearer {SUPABASE_KEY}",
+        "Content-Type": "application/json",
+        "Prefer": "return=representation"
+    }
+    try:
+        if method == "GET":
+            r = req_lib.get(url, headers=headers, params=params, timeout=10)
+        elif method == "POST":
+            r = req_lib.post(url, headers=headers, json=data, timeout=10)
+        elif method == "PATCH":
+            r = req_lib.patch(url, headers=headers, json=data, params=params, timeout=10)
+        return r.json() if r.content else []
+    except Exception as e:
+        logger.error(f"Supabase {method} {table}: {e}")
+        return []
+
+# ─── API ENDPOINTS ────────────────────────────────────────────────────────────
 
 @app.get("/")
 def root():
-    return {
-        "system": "Nano-Arbitrage Engine — The Pulse",
-        "version": "0.1.0-sprint1",
-        "status": "operational",
-        "mode": "MOCK" if USE_MOCK else "LIVE",
-        "province_loaded": len(_province_index),
-        "cache_entries": len(_pulse_cache),
-        "last_refresh": _last_refresh.isoformat() if _last_refresh else None,
-    }
+    return {"service": "WeatherArb API", "version": "2.0.0", "provinces": len(PROVINCES)}
 
-
-@app.get("/pulse/{provincia}")
-def get_pulse(
-    provincia: str,
-    background_tasks: BackgroundTasks,
-    force_refresh: bool = Query(False, description="Forza aggiornamento dati"),
-):
-    """
-    Restituisce il Pulse-JSON per una provincia specifica.
-    Aggiorna i dati in background se la cache è vuota o force_refresh=True.
-    """
-    key = provincia.lower()
-
-    if key not in _province_index:
-        # Cerca match parziale
-        matches = [k for k in _province_index if provincia.lower() in k]
-        if matches:
-            raise HTTPException(
-                status_code=404,
-                detail=f"Provincia '{provincia}' non trovata. Intendevi: {matches[:3]}?"
-            )
-        raise HTTPException(status_code=404, detail=f"Provincia '{provincia}' non trovata")
-
-    # Se cache vuota o refresh forzato, calcola subito (sync per il primo hit)
-    if key not in _pulse_cache or force_refresh:
-        _refresh_provincia(key)
-    else:
-        # Aggiorna in background per il prossimo hit
-        background_tasks.add_task(_refresh_provincia, key)
-
-    pulse = _pulse_cache.get(key)
-    if not pulse:
-        raise HTTPException(status_code=503, detail="Dati non ancora disponibili, riprova tra 5 secondi")
-
-    return pulse
-
+@app.get("/health")
+def health():
+    return {"status": "ok", "provinces": len(PROVINCES), "cached": len(_cache)}
 
 @app.post("/pulse/refresh")
-def refresh_all(background_tasks: BackgroundTasks):
-    """
-    Scatena il refresh completo di tutte le province in background.
-    """
-    background_tasks.add_task(_refresh_all)
-    return {
-        "status": "refresh_started",
-        "province_count": len(_province_index),
-        "message": "Il refresh è in corso. Interroga /pulse/{provincia} tra 30 secondi."
-    }
-
-
-@app.get("/pulse/heatmap/scores")
-def get_heatmap():
-    """
-    Ritorna tutti gli arbitrage scores per la dashboard heatmap.
-    """
-    if not _pulse_cache:
-        return {"message": "Cache vuota. Esegui POST /pulse/refresh prima.", "data": []}
-
-    heatmap_data = []
-    for nome, pulse in _pulse_cache.items():
-        score_data = pulse.get("arbitrage_score", {})
-        loc = pulse.get("location", {})
-        trigger = pulse.get("weather_trigger", {})
-        action = pulse.get("action_plan", {})
-
-        heatmap_data.append({
-            "provincia": loc.get("provincia"),
-            "regione": loc.get("regione"),
-            "lat": loc.get("coordinates", {}).get("lat"),
-            "lon": loc.get("coordinates", {}).get("lon"),
-            "score": score_data.get("score", 0),
-            "confidence": score_data.get("confidence", 0),
-            "actionable": score_data.get("actionable", False),
-            "event_type": trigger.get("type"),
-            "anomaly_level": trigger.get("anomaly_level"),
-            "z_score": trigger.get("z_score"),
-            "phase": action.get("phase"),
-            "guardrail": action.get("guardrail"),
-            "budget_eur": action.get("budget_recommendation", {}).get("daily_eur", 0),
-            "vertical": action.get("recommended_vertical"),
-        })
-
-    # Ordina per score decrescente
-    heatmap_data.sort(key=lambda x: x["score"], reverse=True)
-    actionable_count = sum(1 for x in heatmap_data if x["actionable"])
-
-    return {
-        "timestamp": datetime.utcnow().isoformat(),
-        "total_province": len(heatmap_data),
-        "actionable_opportunities": actionable_count,
-        "top_opportunity": heatmap_data[0] if heatmap_data else None,
-        "data": heatmap_data,
-    }
-
-
-@app.get("/pulse/heatmap/opportunities")
-def get_opportunities(min_score: float = Query(SCORE_THRESHOLD_ACTIONABLE)):
-    """
-    Lista filtrata delle sole province con score >= min_score.
-    """
-    all_data = get_heatmap()
-    opportunities = [
-        item for item in all_data.get("data", [])
-        if item["score"] >= min_score and item["guardrail"] != "HARD_BLOCK"
-    ]
-
-    return {
-        "filter_score_min": min_score,
-        "count": len(opportunities),
-        "total_budget_suggested_eur": sum(o["budget_eur"] for o in opportunities),
-        "opportunities": opportunities,
-    }
-
-
-@app.get("/province")
-def list_province():
-    """Lista tutte le province disponibili."""
-    return {
-        "count": len(_province_index),
-        "province": sorted(_province_index.keys()),
-    }
-
-
-# ── Governor / Kill Switch endpoints ──────────────────────────────
-from core.bid_manager import BidManager as _BidManager
-_bid_manager = _BidManager()
-
-@app.post("/emergency/kill")
-def kill_switch_activate(reason: str = "Manual emergency stop"):
-    return _bid_manager.activate_kill_switch(reason)
-
-@app.post("/emergency/reset")
-def kill_switch_reset(reason: str = "Manual reset after review"):
-    return _bid_manager.deactivate_kill_switch(reason)
-
-@app.get("/governor/status")
-def governor_status():
-    return _bid_manager.get_system_status()
-
-@app.post("/governor/evaluate/{provincia}")
-def evaluate_budget(provincia: str):
-    key = provincia.lower()
-    if key not in _pulse_cache:
-        raise HTTPException(status_code=404, detail=f"Nessun dato pulse per {provincia}")
-    from datetime import datetime as _dt
-    alloc = _bid_manager.evaluate(_pulse_cache[key])
-    return alloc.to_dict()
-
-
-# ── PUBLIC API ──────────────────────────────────────────────────────
-from collections import defaultdict
-import time as _time
-import csv as _csv
-
-_api_calls = defaultdict(list)
-
-@app.get("/api/v1/pulse/{provincia}")
-def api_pulse(provincia: str):
-    key = provincia.lower()
-    if key not in _province_index:
-        raise HTTPException(status_code=404, detail=f"Province '{provincia}' not found")
-    if key not in _pulse_cache:
-        _refresh_provincia(key)
-    pulse = _pulse_cache.get(key)
-    if not pulse:
-        raise HTTPException(status_code=503, detail="Data not yet available")
-    trig = pulse["weather_trigger"]
-    arb = pulse["arbitrage_score"]
-    return {
-        "api_version": "v1",
-        "province": pulse["location"]["provincia"],
-        "region": pulse["location"]["regione"],
-        "country": "IT",
-        "timestamp": pulse["timestamp"],
-        "weather": {
-            "event_type": trig.get("type"),
-            "severity": trig.get("severity"),
-            "anomaly_level": trig.get("anomaly_level"),
-            "anomaly_label": describe_anomaly(
-                trig.get("z_score", 0),
-                trig.get("type", ""),
-                trig.get("country_code", "it")
-            ),
-            "z_score": trig.get("z_score"),
-            "temperature_c": trig.get("current_temp_c"),
-            "historical_avg_c": trig.get("historical_avg_temp_c"),
-            "humidity_pct": trig.get("humidity_pct"),
-            "wind_kmh": trig.get("wind_kmh"),
-            "wind_ms": trig.get("wind_speed_ms"),
-            "hdd": trig.get("hdd"),
-            "cdd": trig.get("cdd"),
-            "hdd_baseline": trig.get("hdd_baseline"),
-            "cdd_baseline": trig.get("cdd_baseline"),
-            "hdd_delta": trig.get("hdd_delta"),
-            "cdd_delta": trig.get("cdd_delta"),
-        },
-        "signal": {
-            "score": arb.get("score"),
-            "confidence": arb.get("confidence"),
-            "actionable": arb.get("actionable"),
-        },
-        "attribution": "WeatherArb.com · ERA5-Land ECMWF + OpenWeatherMap",
-    }
-
-@app.get("/api/v1/europe/top")
-def api_top(limit: int = 10):
-    # Build lat/lon lookup from province_coords.json
-    import json as _json
-    try:
-        with open("data/province_coords.json", "r") as _f:
-            _raw = _json.load(_f)
-        _provinces = _raw["province"] if "province" in _raw else _raw
-        _coords = {p["nome"].lower(): {"lat": p.get("lat", 0), "lon": p.get("lon", 0), "country": p.get("country", "Italy")} for p in _provinces}
-    except Exception:
-        _coords = {}
-
-    # Country code map
-    _cc_map = {
-        "Italy": "it", "Germany": "de", "France": "fr", "Spain": "es",
-        "United Kingdom": "gb", "Sweden": "se", "Netherlands": "nl",
-        "Poland": "pl", "Austria": "at", "Switzerland": "ch",
-        "Belgium": "be", "Portugal": "pt", "Denmark": "dk", "Norway": "no"
-    }
-
-    signals = []
-    for nome, pulse in _pulse_cache.items():
-        loc = pulse.get("location", {})
-        trig = pulse.get("weather_trigger", {})
-        arb = pulse.get("arbitrage_score", {})
-        provincia = loc.get("provincia") or nome
-        coords = _coords.get(provincia.lower(), _coords.get(nome.lower(), {}))
-        country_name = coords.get("country", "Italy")
-        signals.append({
-            "location": provincia,
-            "province": provincia,
-            "region": loc.get("regione"),
-            "country": country_name,
-            "country_code": _cc_map.get(country_name, "it"),
-            "event_type": trig.get("type"),
-            "vertical": trig.get("type", "General"),
-            "z_score": trig.get("z_score", 0),
-            "anomaly_level": trig.get("anomaly_level"),
-            "anomaly_label": describe_anomaly(
-                trig.get("z_score", 0),
-                trig.get("type", ""),
-                trig.get("country_code", "it")
-            ),
-            "score": arb.get("score", 0),
-            "lat": coords.get("lat", 0),
-            "lon": coords.get("lon", 0),
-        })
-    signals.sort(key=lambda x: abs(x["z_score"] or 0), reverse=True)
-    top = signals[:limit]
-    return {"api_version": "v1", "count": len(top), "reports": top, "data": top}
-
-@app.get("/api/v1/widget/{provincia}")
-def api_widget(provincia: str):
-    key = provincia.lower()
-    if key not in _pulse_cache:
-        _refresh_provincia(key)
-    pulse = _pulse_cache.get(key, {})
-    trig = pulse.get("weather_trigger", {})
-    arb = pulse.get("arbitrage_score", {})
-    return {
-        "p": pulse.get("location", {}).get("provincia", provincia),
-        "e": (trig.get("type") or "").replace("_", " "),
-        "z": trig.get("z_score", 0),
-        "a": trig.get("anomaly_level", "NORMAL"),
-        "s": arb.get("score", 0),
-        "t": (pulse.get("timestamp") or "")[:10],
-    }
-
-
-
-
-@app.get("/api/v1/docs")
-def api_docs():
-    return {
-        "name": "WeatherArb Public API",
-        "version": "v1",
-        "free_tier": "100 calls/day, no auth required",
-        "endpoints": {
-            "GET /api/v1/pulse/{province}": "Anomaly data for a province",
-            "GET /api/v1/europe/top": "Top signals across Europe",
-            "GET /api/v1/widget/{province}": "Lightweight widget data",
-            "POST /api/newsletter/subscribe": "Subscribe to weekly digest",
-        },
-        "example": "curl https://weatherarb.com/api/v1/pulse/vicenza",
-    }
-
-# ── LATEST REPORTS ENDPOINT ─────────────────────────────────────────
-import glob as _glob
-
-@app.get("/pulse/reports/latest")
-def get_latest_reports(limit: int = 6):
-    articles = []
-    for f in sorted(_glob.glob("data/blog_posts/*.json"), reverse=True)[:limit]:
-        try:
-            d = json.load(open(f))
-            articles.append({
-                "title": d.get("title",""),
-                "slug": d.get("slug",""),
-                "date": d.get("timestamp","")[:10],
-                "provincia": d.get("provincia",""),
-                "evento": d.get("evento",""),
-                "z_score": d.get("z_score", 0),
-                "score": d.get("score", 0),
-                "anomaly_level": d.get("anomaly_level",""),
-                "excerpt": d.get("meta_description","")[:140],
-                "url": f"/news/{d.get('slug')}/",
-            })
-        except: pass
-    return {"last_updated": datetime.utcnow().isoformat(), "count": len(articles), "reports": articles}
-
-# ── NEARBY PULSE ────────────────────────────────────────────────────
-import math
-
-def haversine_km(lat1, lon1, lat2, lon2):
-    R = 6371
-    dlat = math.radians(lat2 - lat1)
-    dlon = math.radians(lon2 - lon1)
-    a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon/2)**2
-    return R * 2 * math.asin(math.sqrt(a))
-
-@app.get("/api/v1/pulse/nearby")
-def pulse_nearby(lat: float, lon: float, radius_km: float = 100):
-    """Trova il segnale più vicino alle coordinate utente."""
-    closest = None
-    min_dist = float('inf')
-
-    for prov in _province_index.values():
-        dist = haversine_km(lat, lon, prov['lat'], prov['lon'])
-        if dist < min_dist:
-            min_dist = dist
-            closest = prov
-
-    if not closest or min_dist > radius_km:
-        return {"status": "no_data_nearby", "distance_km": min_dist}
-
-    key = closest['nome'].lower()
-    if key not in _pulse_cache:
-        _refresh_provincia(key)
-
-    pulse = _pulse_cache.get(key, {})
-    trig = pulse.get("weather_trigger", {})
-    arb = pulse.get("arbitrage_score", {})
-
-    slug = closest['nome'].lower()
-    slug = slug.replace(' ','-').replace("'",'-')
-
-    return {
-        "province": closest['nome'],
-        "region": closest.get('regione',''),
-        "distance_km": round(min_dist, 1),
-        "slug": slug,
-        "z_score": trig.get("z_score", 0),
-        "anomaly_level": trig.get("anomaly_level", "NORMAL"),
-        "event_type": trig.get("type", ""),
-        "temperature_c": trig.get("current_temp_c"),
-        "precipitation": trig.get("rain_1h_mm", 0),
-        "score": arb.get("score", 0),
-        "vertical": pulse.get("action_plan", {}).get("recommended_vertical", ""),
-    }
+async def trigger_refresh(background_tasks: BackgroundTasks):
+    background_tasks.add_task(refresh_all)
+    return {"status": "refresh_started", "province_count": len(PROVINCES),
+            "message": "Il refresh è in corso. Interroga /pulse/{provincia} tra 30 secondi."}
 
 @app.post("/admin/clear-cache")
 def clear_cache():
-    global _pulse_cache, _last_refresh
-    _pulse_cache.clear()
-    _last_refresh = None
-    return {"status": "cache_cleared", "timestamp": datetime.utcnow().isoformat()}
+    _cache.clear()
+    _top_cache.clear()
+    return {"status": "cache_cleared", "timestamp": datetime.now(timezone.utc).isoformat()}
 
-@app.get("/admin/debug/{provincia}")
-def debug_provincia(provincia: str):
-    key = provincia.lower()
-    if key not in _province_index:
-        raise HTTPException(404, "Not found")
-    prov = _province_index[key]
-    from core.ingestor import build_historical_baseline
-    b = build_historical_baseline(prov)
-    return {
-        "provincia": prov['nome'],
-        "avg_temp_c": b.avg_temp_c,
-        "std_temp_c": b.std_temp_c,
-        "avg_rain_mm": b.avg_rain_mm_day,
-        "std_rain_mm": b.std_rain_mm_day,
-    }
+@app.get("/api/v1/pulse/{slug}")
+def get_pulse(slug: str, key: Optional[str] = None):
+    # Rate limit check if key provided
+    if key:
+        _check_and_increment_key(key)
 
-# ─── NEWSLETTER con SQLite (persistente) ─────────────────────────────────────
-import sqlite3 as _sqlite3
-from pathlib import Path as _Path
+    # Normalize slug
+    import unicodedata, re
+    s = unicodedata.normalize("NFKD", slug.lower()).encode("ascii","ignore").decode("ascii")
+    s = re.sub(r"[^\w-]","", s.replace(" ","-"))
 
+    if s not in _cache:
+        # Try refresh for this specific province
+        for p in PROVINCES:
+            pslug = unicodedata.normalize("NFKD", p["nome"].lower()).encode("ascii","ignore").decode("ascii")
+            pslug = re.sub(r"[^\w-]","", pslug.replace(" ","-"))
+            if pslug == s:
+                owm = fetch_owm(p["lat"], p["lon"])
+                if owm:
+                    month = datetime.now().month
+                    temp = owm["temperature_c"]
+                    z = calc_z_score(temp, month)
+                    hdd, cdd, hdd_bl, cdd_bl, hdd_delta, cdd_delta = calc_hdd_cdd(temp, month)
+                    level = anomaly_level(z)
+                    score = calc_score(z)
+                    ev = event_type(z, owm["wind_kmh"], owm["humidity_pct"])
+                    _cache[s] = {
+                        "location": p["nome"],
+                        "country_code": _cc(p.get("country","Italy")),
+                        "lat": p["lat"], "lon": p["lon"],
+                        "weather": {
+                            "event_type": ev, "severity": level,
+                            "anomaly_level": level,
+                            "anomaly_label": anomaly_label(z, ev),
+                            "z_score": z,
+                            "temperature_c": round(temp, 2),
+                            "historical_avg_c": HISTORICAL_AVG.get(month, 15.0),
+                            "humidity_pct": owm["humidity_pct"],
+                            "wind_kmh": owm["wind_kmh"],
+                            "wind_ms": owm["wind_ms"],
+                            "hdd": hdd, "cdd": cdd,
+                            "hdd_baseline": hdd_bl, "cdd_baseline": cdd_bl,
+                            "hdd_delta": hdd_delta, "cdd_delta": cdd_delta,
+                        },
+                        "signal": {"score": score, "level": level},
+                        "timestamp": datetime.now(timezone.utc).isoformat()
+                    }
+                break
 
+    if s not in _cache:
+        raise HTTPException(status_code=404, detail=f"Province '{slug}' not found or not yet cached")
+    return _cache[s]
 
+@app.get("/api/v1/europe/top")
+def get_top(limit: int = 10, key: Optional[str] = None):
+    if key:
+        _check_and_increment_key(key)
+    top = _top_cache.get("top", [])
+    return {"count": len(top), "reports": top[:min(limit, 50)], "data": top[:min(limit, 50)]}
 
-# ─── NEWSLETTER su Supabase ──────────────────────────────────────────────────
-import urllib.request as _ur
-import json as _json
-
-_SB_URL = "https://mlawljowkvgeyydrwirk.supabase.co"
-_SB_TABLE = "newsletter_subscribers"
-
-def _get_sb_key():
-    import os as _os
-    return _os.getenv("SUPABASE_ANON_KEY", "")
-
-def _sb_headers():
-    return {
-        "apikey": _get_sb_key(),
-        "Authorization": f"Bearer {_get_sb_key()}",
-        "Content-Type": "application/json",
-        "Prefer": "return=minimal"
-    }
-
-def _sb_request(method, path, data=None):
-    url = f"{_SB_URL}/rest/v1/{path}"
-    payload = _json.dumps(data).encode() if data else None
-    req = _ur.Request(url, data=payload, headers=_sb_headers(), method=method)
-    try:
-        with _ur.urlopen(req, timeout=10) as r:
-            body = r.read()
-            return r.status, _json.loads(body) if body else {}
-    except _ur.HTTPError as e:
-        body = e.read()
-        return e.code, _json.loads(body) if body else {}
-    except Exception as ex:
-        logger.error(f"Supabase error: {ex}")
-        return 500, {}
-
-def _resend_welcome(email: str, city: str, cc: str):
-    import os as _os3
-    key = _os3.getenv("RESEND_API_KEY", "")
-    if not key:
-        logger.warning("RESEND_API_KEY not set — skipping welcome email")
-        return
-    logger.info(f"Sending welcome email to {email} via Resend")
-    city_label = city or "Europa"
-    html = (
-        "<!DOCTYPE html><html><body style=\"background:#040608;color:#c8d6e5;"
-        "font-family:-apple-system,sans-serif;max-width:600px;margin:0 auto;padding:40px 24px\">"
-        "<h1 style=\"font-size:28px;font-weight:800;color:#fff\">Weather"
-        "<span style=\"color:#3b82f6\">Arb</span></h1>"
-        "<p style=\"color:#4a5568;font-size:11px;text-transform:uppercase;letter-spacing:.15em\">Intelligence Agency</p>"
-        f"<p style=\"font-size:15px;line-height:1.6;margin-top:24px\">Iscritto agli alert per <strong>{city_label}</strong>.</p>"
-        "<p style=\"font-size:13px;color:#4a5568;margin-top:32px\">WeatherArb · weatherarb.com</p>"
-        "</body></html>"
-    )
-    payload = _json.dumps({
-        "from": "WeatherArb Intelligence <alerts@weatherarb.com>",
-        "to": [email],
-        "subject": f"Alert WeatherArb per {city_label}",
-        "html": html
-    }).encode()
-    req = _ur.Request("https://api.resend.com/emails", data=payload,
-        headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json", "User-Agent": "Mozilla/5.0 (compatible; WeatherArb/1.0)"})
-    try:
-        with _ur.urlopen(req, timeout=10): pass
-    except Exception as e:
-        logger.warning(f"Resend error: {e}")
-
+# ─── NEWSLETTER ───────────────────────────────────────────────────────────────
 @app.post("/api/newsletter/subscribe")
-def newsletter_subscribe(email: str, city: str = "", country_code: str = "it"):
-    if not email or "@" not in email or "." not in email.split("@")[-1]:
-        raise HTTPException(status_code=400, detail="Email non valida")
-    email = email.strip().lower()
-    status, resp = _sb_request("POST", _SB_TABLE,
-        {"email": email, "city": city, "country_code": country_code})
-    if status == 201:
-        logger.info(f"New subscriber: {email} ({city})")
+def newsletter_subscribe(email: str, city: str = "Europa", country_code: str = "it"):
+    if not email or "@" not in email:
+        raise HTTPException(status_code=400, detail="Invalid email")
+    existing = sb("GET", "newsletter_subscribers", params={"email": f"eq.{email}", "select": "email"})
+    if existing:
+        return {"status": "already_subscribed", "email": email}
+    sb("POST", "newsletter_subscribers", data={
+        "email": email, "city": city, "country_code": country_code,
+        "created_at": datetime.now(timezone.utc).isoformat()
+    })
+    # Welcome email
+    if RESEND_API_KEY:
         try:
-            _resend_welcome(email, city, country_code)
-        except Exception as re:
-            logger.warning(f"Welcome email failed: {re}")
-        return {"status": "subscribed", "message": f"Benvenuto! Alert per {city or 'Europa'}"}
-    elif status == 409:
-        return {"status": "already_subscribed", "message": "Sei gia iscritto!"}
-    else:
-        logger.error(f"Supabase subscribe error {status}: {resp}")
-        raise HTTPException(status_code=500, detail="Errore interno")
-
-@app.get("/api/newsletter/count")
-def newsletter_count():
-    status, resp = _sb_request("GET", f"{_SB_TABLE}?select=count")
-    if status == 200 and isinstance(resp, list):
-        return {"count": resp[0].get("count", 0) if resp else 0}
-    # fallback: conta manualmente
-    status2, resp2 = _sb_request("GET", f"{_SB_TABLE}?select=email")
-    if status2 == 200:
-        return {"count": len(resp2) if isinstance(resp2, list) else 0}
-    return {"count": 0}
-
-@app.post("/api/newsletter/unsubscribe")
-def newsletter_unsubscribe(email: str):
-    status, _ = _sb_request("DELETE", f"{_SB_TABLE}?email=eq.{email.strip().lower()}")
-    return {"status": "unsubscribed" if status == 204 else "not_found"}
+            req_lib.post("https://api.resend.com/emails",
+                headers={"Authorization": f"Bearer {RESEND_API_KEY}"},
+                json={
+                    "from": "WeatherArb <alerts@weatherarb.com>",
+                    "to": [email],
+                    "subject": "Benvenuto in WeatherArb Intelligence",
+                    "html": f"<h2>Benvenuto in WeatherArb!</h2><p>Riceverai anomalie meteo, Z-Score e HDD/CDD per {city} ogni settimana.</p><p><a href='https://weatherarb.com'>weatherarb.com</a></p>"
+                }, timeout=10)
+        except Exception as e:
+            logger.error(f"Welcome email error: {e}")
+    return {"status": "subscribed", "email": email}
 
 @app.get("/api/newsletter/list")
 def newsletter_list(secret: str = ""):
-    import os as _os2
-    if secret != _os2.getenv("ADMIN_SECRET", "weatherarb2026"):
+    if secret != ADMIN_SECRET:
         raise HTTPException(status_code=403, detail="Forbidden")
+    result = sb("GET", "newsletter_subscribers", params={"select": "email,city,country_code,created_at", "order": "created_at.desc"})
+    return {"count": len(result), "subscribers": result}
+
+# ─── API KEY MANAGEMENT ───────────────────────────────────────────────────────
+def generate_api_key():
+    return f"wa_{secrets.token_hex(24)}"
+
+def _check_and_increment_key(key: str):
+    """Validate API key and increment call counter."""
+    if not key.startswith("wa_"):
+        raise HTTPException(status_code=401, detail="Invalid API key")
+    result = sb("GET", "api_keys", params={"api_key": f"eq.{key}", "select": "active,calls_today,calls_limit,email"})
+    if not result:
+        raise HTTPException(status_code=401, detail="API key not found")
+    info = result[0]
+    if not info.get("active"):
+        raise HTTPException(status_code=403, detail="API key inactive")
+    if info.get("calls_today", 0) >= info.get("calls_limit", 10000):
+        raise HTTPException(status_code=429, detail="Daily limit reached")
+    # Increment counter
+    sb("PATCH", "api_keys",
+        data={"calls_today": info["calls_today"] + 1, "last_used": datetime.now(timezone.utc).isoformat()},
+        params={"api_key": f"eq.{key}"}
+    )
+
+@app.get("/api/me")
+def get_my_info(key: str = ""):
+    """Dashboard: get API key info."""
+    if not key or not key.startswith("wa_"):
+        raise HTTPException(status_code=401, detail="Invalid API key")
+    result = sb("GET", "api_keys", params={
+        "api_key": f"eq.{key}",
+        "select": "email,plan,calls_today,calls_limit,active,created_at,last_used"
+    })
+    if not result:
+        raise HTTPException(status_code=404, detail="API key not found")
+    info = result[0]
+    if not info.get("active"):
+        raise HTTPException(status_code=403, detail="API key inactive — check subscription")
+    return {
+        "email": info["email"],
+        "plan": info["plan"],
+        "calls_today": info.get("calls_today", 0),
+        "calls_limit": info.get("calls_limit", 10000),
+        "calls_remaining": info.get("calls_limit", 10000) - info.get("calls_today", 0),
+        "active": info["active"],
+        "member_since": (info.get("created_at") or "")[:10],
+        "last_used": (info.get("last_used") or "mai")[:10]
+    }
+
+@app.post("/api/generate-key-manual")
+async def generate_key_manual(request: Request):
+    """Manual key generation for testing."""
+    data = await request.json()
+    if data.get("secret") != ADMIN_SECRET_FULL or not data.get("email"):
+        raise HTTPException(status_code=403, detail="Forbidden")
+    email = data["email"]
+    existing = sb("GET", "api_keys", params={"email": f"eq.{email}"})
+    if existing:
+        return {"api_key": existing[0]["api_key"], "status": "existing"}
+    api_key = generate_api_key()
+    sb("POST", "api_keys", data={
+        "email": email, "api_key": api_key,
+        "plan": "professional", "calls_today": 0,
+        "calls_limit": 10000, "active": True,
+        "created_at": datetime.now(timezone.utc).isoformat()
+    })
+    return {"api_key": api_key, "status": "created"}
+
+@app.post("/api/stripe/webhook")
+async def stripe_webhook(request: Request):
+    """Handle Stripe payment events."""
+    body = await request.body()
+    sig = request.headers.get("stripe-signature", "")
+
+    # Verify signature
+    if STRIPE_WEBHOOK_SECRET and sig:
+        try:
+            parts = {p.split("=")[0]: p.split("=")[1] for p in sig.split(",") if "=" in p}
+            ts = parts.get("t", "")
+            payload = f"{ts}.{body.decode()}"
+            expected = hmac.new(STRIPE_WEBHOOK_SECRET.encode(), payload.encode(), hashlib.sha256).hexdigest()
+            received = parts.get("v1", "")
+            if not hmac.compare_digest(expected, received):
+                raise HTTPException(status_code=400, detail="Invalid Stripe signature")
+        except HTTPException:
+            raise
+        except Exception as e:
+            logger.warning(f"Webhook sig error: {e}")
+
     try:
-        status, resp = _sb_request("GET", f"{_SB_TABLE}?select=email,city,country_code,created_at&order=created_at.desc&limit=200")
-        if status == 200 and isinstance(resp, list):
-            return {"count": len(resp), "subscribers": resp}
-        return {"count": 0, "error": f"status {status}", "subscribers": []}
+        event = json.loads(body)
+    except:
+        raise HTTPException(status_code=400, detail="Invalid JSON")
+
+    event_type_str = event.get("type", "")
+    logger.info(f"Stripe event: {event_type_str}")
+
+    if event_type_str in ("checkout.session.completed", "customer.subscription.created", "invoice.paid"):
+        obj = event.get("data", {}).get("object", {})
+        email = (obj.get("customer_email") or
+                 obj.get("customer_details", {}).get("email") or "")
+        customer_id = obj.get("customer", "")
+
+        if email:
+            existing = sb("GET", "api_keys", params={"email": f"eq.{email}", "select": "api_key,active"})
+            if existing:
+                sb("PATCH", "api_keys",
+                    data={"active": True, "stripe_customer_id": customer_id},
+                    params={"email": f"eq.{email}"})
+                api_key = existing[0]["api_key"]
+            else:
+                api_key = generate_api_key()
+                sb("POST", "api_keys", data={
+                    "email": email, "api_key": api_key,
+                    "plan": "professional", "calls_today": 0,
+                    "calls_limit": 10000, "active": True,
+                    "stripe_customer_id": customer_id,
+                    "created_at": datetime.now(timezone.utc).isoformat()
+                })
+
+            logger.info(f"API key ready for {email}")
+
+            # Send welcome email
+            if RESEND_API_KEY:
+                try:
+                    req_lib.post("https://api.resend.com/emails",
+                        headers={"Authorization": f"Bearer {RESEND_API_KEY}"},
+                        json={
+                            "from": "WeatherArb <alerts@weatherarb.com>",
+                            "to": [email],
+                            "subject": "La tua API Key WeatherArb Professional",
+                            "html": f"""<div style="font-family:-apple-system,sans-serif;max-width:580px;margin:0 auto;padding:32px;background:#040608;color:#c8d6e5">
+<h1 style="color:#fff;margin-bottom:8px">WeatherArb Professional ✅</h1>
+<p style="color:#4a5568;margin-bottom:24px">Benvenuto! Il tuo accesso API è attivo.</p>
+<div style="background:#0a0d12;border:1px solid #141920;border-radius:10px;padding:20px;margin-bottom:24px">
+  <p style="font-size:11px;text-transform:uppercase;color:#4a5568;margin-bottom:8px">La tua API Key</p>
+  <code style="font-size:15px;font-weight:700;color:#3b82f6;word-break:break-all">{api_key}</code>
+</div>
+<p style="color:#4a5568;margin-bottom:8px"><strong style="color:#c8d6e5">Uso rapido:</strong></p>
+<pre style="background:#0a0d12;border:1px solid #141920;border-radius:8px;padding:14px;font-size:12px">curl "https://api.weatherarb.com/api/v1/pulse/milano?key={api_key}"</pre>
+<p style="margin-top:20px"><a href="https://weatherarb.com/dashboard/" style="color:#3b82f6">Dashboard →</a> &nbsp;|&nbsp; <a href="https://weatherarb.com/api.html" style="color:#3b82f6">Documentazione →</a></p>
+<p style="font-size:11px;color:#4a5568;margin-top:24px;border-top:1px solid #141920;padding-top:16px">WeatherArb · alerts@weatherarb.com</p>
+</div>"""
+                        }, timeout=10)
+                except Exception as e:
+                    logger.error(f"Welcome email error: {e}")
+
+    elif event_type_str == "customer.subscription.deleted":
+        obj = event.get("data", {}).get("object", {})
+        customer_id = obj.get("customer", "")
+        if customer_id:
+            sb("PATCH", "api_keys",
+                data={"active": False},
+                params={"stripe_customer_id": f"eq.{customer_id}"})
+            logger.info(f"Key deactivated for customer {customer_id}")
+
+    return {"status": "ok"}
+
+# ─── SPACE WEATHER PROXY ──────────────────────────────────────────────────────
+@app.get("/api/space-weather")
+def space_weather(key: Optional[str] = None):
+    """Return latest space weather data."""
+    if key:
+        _check_and_increment_key(key)
+    try:
+        r = req_lib.get("https://services.swpc.noaa.gov/json/planetary_k_index_1m.json", timeout=10)
+        kp_data = r.json()
+        recent = [x for x in kp_data[-30:] if x.get("kp_index") is not None]
+        kp = sum(x["kp_index"] for x in recent) / len(recent) if recent else 0
+
+        r2 = req_lib.get("https://services.swpc.noaa.gov/json/goes/primary/xrays-6-hour.json", timeout=10)
+        xray = r2.json()
+        flux = max((x["flux"] for x in xray[-10:] if x.get("flux")), default=0)
+        if flux >= 1e-5: flare = "X"
+        elif flux >= 1e-6: flare = "M"
+        elif flux >= 1e-7: flare = "C"
+        elif flux >= 1e-8: flare = "B"
+        else: flare = "A"
+
+        return {
+            "kp_current": round(kp, 2),
+            "flare_class": flare,
+            "solar_flux": flux,
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
     except Exception as e:
-        return {"count": 0, "error": str(e), "subscribers": []}
+        return {"error": str(e), "kp_current": 0, "flare_class": "A"}
+
+# ─── STARTUP ──────────────────────────────────────────────────────────────────
+@app.on_event("startup")
+async def startup():
+    from fastapi.concurrency import run_in_threadpool
+    logger.info("WeatherArb API starting...")
+    await run_in_threadpool(refresh_all)
