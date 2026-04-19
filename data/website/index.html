@@ -121,6 +121,27 @@
     .ftr a{color:var(--m);text-decoration:none;margin:0 8px}.ftr a:hover{color:var(--t)}
 
     @media(max-width:768px){.hero{padding:56px 24px 40px}.hero h1{font-size:40px}.nav a:not(.nav-keep){display:none}#map{height:260px}}
+
+    .nl-section{max-width:1100px;margin:0 auto;padding:0 24px 60px}
+    .nl-hero{background:linear-gradient(135deg,rgba(59,130,246,.1),rgba(16,185,129,.06));border:1px solid rgba(59,130,246,.2);border-radius:20px;padding:48px;text-align:center;position:relative;overflow:hidden}
+    .nl-tag{display:inline-block;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.25);border-radius:100px;padding:4px 14px;font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--bl);margin-bottom:16px}
+    .nl-hero h2{font-size:clamp(24px,4vw,38px);font-weight:800;letter-spacing:-.02em;color:#fff;margin-bottom:12px}
+    [data-theme="light"] .nl-hero h2{color:#0f172a}
+    .nl-hero p{font-size:15px;color:var(--m);max-width:480px;margin:0 auto 28px;line-height:1.6}
+    .nl-form{display:flex;gap:10px;max-width:480px;margin:0 auto 12px;flex-wrap:wrap}
+    .nl-email{flex:1;min-width:200px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:13px 18px;color:var(--t);font-size:14px;outline:none;transition:.2s}
+    [data-theme="light"] .nl-email{background:rgba(0,0,0,.04);border-color:var(--b)}
+    .nl-email:focus{border-color:var(--bl)}
+    .nl-submit{background:var(--bl);color:#fff;border:none;border-radius:10px;padding:13px 24px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.2s}
+    .nl-submit:hover{background:#2563eb;transform:translateY(-1px)}
+    .nl-note{font-size:11px;color:var(--m)}
+    .nl-success{display:none;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);border-radius:10px;padding:14px 20px;font-size:14px;color:var(--g);max-width:480px;margin:0 auto}
+    .nl-error{display:none;font-size:13px;color:var(--r);margin-top:8px}
+    .nl-stats{display:flex;justify-content:center;gap:32px;margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08)}
+    [data-theme="light"] .nl-stats{border-top-color:var(--b)}
+    .nl-stat-n{font-size:22px;font-weight:800;color:#fff;text-align:center}
+    [data-theme="light"] .nl-stat-n{color:#0f172a}
+    .nl-stat-l{font-size:10px;color:var(--m);text-transform:uppercase;letter-spacing:.1em;margin-top:2px;text-align:center}
   </style>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
@@ -249,6 +270,29 @@
 <div class="reports-section">
   <div class="reports-grid" id="reports-grid">
     <div style="color:var(--m);font-size:13px;padding:20px;grid-column:1/-1">Caricamento reports...</div>
+  </div>
+</div>
+
+
+<!-- NEWSLETTER -->
+<div class="section-label">Intelligence Alert &mdash; Gratuito</div>
+<div class="nl-section">
+  <div class="nl-hero">
+    <div class="nl-tag">&#128225; Newsletter</div>
+    <h2>Ricevi le Anomalie Meteo<br>nella tua Inbox</h2>
+    <p>Z-Score, HDD/CDD, Space Weather e Grid Risk per l'Europa. Ogni settimana, gratis. Usato da energy trader, agronomi e logistici.</p>
+    <div class="nl-form" id="nl-home-form">
+      <input id="nl-home-email" class="nl-email" type="email" placeholder="La tua email" onkeydown="if(event.key==='Enter')nlHomeSubmit()">
+      <button class="nl-submit" onclick="nlHomeSubmit()">Iscriviti &#8594;</button>
+    </div>
+    <div class="nl-error" id="nl-home-error"></div>
+    <div class="nl-success" id="nl-home-success">&#10003; Iscritto! Il prossimo briefing arriva luned&#236;.</div>
+    <p class="nl-note">Nessuno spam. Cancellazione con un click.</p>
+    <div class="nl-stats">
+      <div><div class="nl-stat-n">322</div><div class="nl-stat-l">Nodi EU</div></div>
+      <div><div class="nl-stat-n">23</div><div class="nl-stat-l">Paesi</div></div>
+      <div><div class="nl-stat-n">6h</div><div class="nl-stat-l">Update</div></div>
+    </div>
   </div>
 </div>
 
@@ -418,6 +462,28 @@ loadSpaceWeather();
 loadReports();
 setInterval(loadData,300000);
 setInterval(loadSpaceWeather,900000);
+
+async function nlHomeSubmit() {
+  var email = document.getElementById('nl-home-email').value.trim();
+  var errEl = document.getElementById('nl-home-error');
+  var okEl = document.getElementById('nl-home-success');
+  var formEl = document.getElementById('nl-home-form');
+  errEl.style.display = 'none';
+  if (!email || email.indexOf('@') < 0) {
+    errEl.textContent = 'Email non valida.';
+    errEl.style.display = 'block'; return;
+  }
+  try {
+    var r = await fetch('https://api.weatherarb.com/api/newsletter/subscribe?email=' + encodeURIComponent(email) + '&city=Europa&country_code=eu', {method: 'POST'});
+    var d = await r.json();
+    formEl.style.display = 'none';
+    okEl.style.display = 'block';
+    if (d.status === 'already_subscribed') okEl.textContent = 'Sei gia iscritto! Ti invieremo il prossimo briefing.';
+  } catch(e) {
+    errEl.textContent = 'Errore — riprova.'; errEl.style.display = 'block';
+  }
+}
+
 </script>
 </body>
 </html>
