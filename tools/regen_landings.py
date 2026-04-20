@@ -12,7 +12,16 @@ CC_MAP = {
     'Belgium':'be','Portugal':'pt','Denmark':'dk','Norway':'no',
     'Greece':'gr','Croatia':'hr','Czech Republic':'cz','Hungary':'hu','Romania':'ro',
     'Finland':'fi','Slovenia':'si','Slovakia':'sk','Serbia':'rs',
-    'USA':'us','Canada':'ca'
+    'USA':'us','Canada':'ca',
+    'Japan':'jp','China':'cn','South Korea':'kr','Singapore':'sg',
+    'India':'in','Thailand':'th','Indonesia':'id','Malaysia':'my',
+    'Philippines':'ph','Taiwan':'tw','Vietnam':'vn','Pakistan':'pk',
+    'Bangladesh':'bd','Sri Lanka':'lk','Nepal':'np','Mongolia':'mn',
+    'UAE':'ae','Saudi Arabia':'sa','Iran':'ir','Turkey':'tr',
+    'Israel':'il','Kenya':'ke','Nigeria':'ng','Egypt':'eg',
+    'South Africa':'za','Morocco':'ma','Brazil':'br','Argentina':'ar',
+    'Chile':'cl','Colombia':'co','Mexico':'mx','Australia':'au',
+    'New Zealand':'nz',
 }
 
 LABEL = {
