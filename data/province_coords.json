@@ -2761,6 +2761,462 @@
       "lat": 45.2671,
       "lon": 19.8335,
       "cluster": "RS_North"
+    },
+    {
+      "nome": "New York",
+      "regione": "New York",
+      "country": "USA",
+      "lat": 40.7128,
+      "lon": -74.006,
+      "cluster": "US_East"
+    },
+    {
+      "nome": "Boston",
+      "regione": "Massachusetts",
+      "country": "USA",
+      "lat": 42.3601,
+      "lon": -71.0589,
+      "cluster": "US_East"
+    },
+    {
+      "nome": "Philadelphia",
+      "regione": "Pennsylvania",
+      "country": "USA",
+      "lat": 39.9526,
+      "lon": -75.1652,
+      "cluster": "US_East"
+    },
+    {
+      "nome": "Washington DC",
+      "regione": "District of Columbia",
+      "country": "USA",
+      "lat": 38.9072,
+      "lon": -77.0369,
+      "cluster": "US_East"
+    },
+    {
+      "nome": "Baltimore",
+      "regione": "Maryland",
+      "country": "USA",
+      "lat": 39.2904,
+      "lon": -76.6122,
+      "cluster": "US_East"
+    },
+    {
+      "nome": "Pittsburgh",
+      "regione": "Pennsylvania",
+      "country": "USA",
+      "lat": 40.4406,
+      "lon": -79.9959,
+      "cluster": "US_East"
+    },
+    {
+      "nome": "Charlotte",
+      "regione": "North Carolina",
+      "country": "USA",
+      "lat": 35.2271,
+      "lon": -80.8431,
+      "cluster": "US_Southeast"
+    },
+    {
+      "nome": "Atlanta",
+      "regione": "Georgia",
+      "country": "USA",
+      "lat": 33.749,
+      "lon": -84.388,
+      "cluster": "US_Southeast"
+    },
+    {
+      "nome": "Miami",
+      "regione": "Florida",
+      "country": "USA",
+      "lat": 25.7617,
+      "lon": -80.1918,
+      "cluster": "US_Southeast"
+    },
+    {
+      "nome": "Tampa",
+      "regione": "Florida",
+      "country": "USA",
+      "lat": 27.9506,
+      "lon": -82.4572,
+      "cluster": "US_Southeast"
+    },
+    {
+      "nome": "Orlando",
+      "regione": "Florida",
+      "country": "USA",
+      "lat": 28.5383,
+      "lon": -81.3792,
+      "cluster": "US_Southeast"
+    },
+    {
+      "nome": "Jacksonville",
+      "regione": "Florida",
+      "country": "USA",
+      "lat": 30.3322,
+      "lon": -81.6557,
+      "cluster": "US_Southeast"
+    },
+    {
+      "nome": "Chicago",
+      "regione": "Illinois",
+      "country": "USA",
+      "lat": 41.8781,
+      "lon": -87.6298,
+      "cluster": "US_Midwest"
+    },
+    {
+      "nome": "Detroit",
+      "regione": "Michigan",
+      "country": "USA",
+      "lat": 42.3314,
+      "lon": -83.0458,
+      "cluster": "US_Midwest"
+    },
+    {
+      "nome": "Minneapolis",
+      "regione": "Minnesota",
+      "country": "USA",
+      "lat": 44.9778,
+      "lon": -93.265,
+      "cluster": "US_Midwest"
+    },
+    {
+      "nome": "Cleveland",
+      "regione": "Ohio",
+      "country": "USA",
+      "lat": 41.4993,
+      "lon": -81.6944,
+      "cluster": "US_Midwest"
+    },
+    {
+      "nome": "Columbus",
+      "regione": "Ohio",
+      "country": "USA",
+      "lat": 39.9612,
+      "lon": -82.9988,
+      "cluster": "US_Midwest"
+    },
+    {
+      "nome": "Indianapolis",
+      "regione": "Indiana",
+      "country": "USA",
+      "lat": 39.7684,
+      "lon": -86.1581,
+      "cluster": "US_Midwest"
+    },
+    {
+      "nome": "Milwaukee",
+      "regione": "Wisconsin",
+      "country": "USA",
+      "lat": 43.0389,
+      "lon": -87.9065,
+      "cluster": "US_Midwest"
+    },
+    {
+      "nome": "Kansas City",
+      "regione": "Missouri",
+      "country": "USA",
+      "lat": 39.0997,
+      "lon": -94.5786,
+      "cluster": "US_Midwest"
+    },
+    {
+      "nome": "St Louis",
+      "regione": "Missouri",
+      "country": "USA",
+      "lat": 38.627,
+      "lon": -90.1994,
+      "cluster": "US_Midwest"
+    },
+    {
+      "nome": "Cincinnati",
+      "regione": "Ohio",
+      "country": "USA",
+      "lat": 39.1031,
+      "lon": -84.512,
+      "cluster": "US_Midwest"
+    },
+    {
+      "nome": "Omaha",
+      "regione": "Nebraska",
+      "country": "USA",
+      "lat": 41.2565,
+      "lon": -95.9345,
+      "cluster": "US_Midwest"
+    },
+    {
+      "nome": "Houston",
+      "regione": "Texas",
+      "country": "USA",
+      "lat": 29.7604,
+      "lon": -95.3698,
+      "cluster": "US_South"
+    },
+    {
+      "nome": "Dallas",
+      "regione": "Texas",
+      "country": "USA",
+      "lat": 32.7767,
+      "lon": -96.797,
+      "cluster": "US_South"
+    },
+    {
+      "nome": "Austin",
+      "regione": "Texas",
+      "country": "USA",
+      "lat": 30.2672,
+      "lon": -97.7431,
+      "cluster": "US_South"
+    },
+    {
+      "nome": "San Antonio",
+      "regione": "Texas",
+      "country": "USA",
+      "lat": 29.4241,
+      "lon": -98.4936,
+      "cluster": "US_South"
+    },
+    {
+      "nome": "Fort Worth",
+      "regione": "Texas",
+      "country": "USA",
+      "lat": 32.7555,
+      "lon": -97.3308,
+      "cluster": "US_South"
+    },
+    {
+      "nome": "El Paso",
+      "regione": "Texas",
+      "country": "USA",
+      "lat": 31.7619,
+      "lon": -106.485,
+      "cluster": "US_South"
+    },
+    {
+      "nome": "New Orleans",
+      "regione": "Louisiana",
+      "country": "USA",
+      "lat": 29.9511,
+      "lon": -90.0715,
+      "cluster": "US_South"
+    },
+    {
+      "nome": "Memphis",
+      "regione": "Tennessee",
+      "country": "USA",
+      "lat": 35.1495,
+      "lon": -90.049,
+      "cluster": "US_South"
+    },
+    {
+      "nome": "Nashville",
+      "regione": "Tennessee",
+      "country": "USA",
+      "lat": 36.1627,
+      "lon": -86.7816,
+      "cluster": "US_South"
+    },
+    {
+      "nome": "Oklahoma City",
+      "regione": "Oklahoma",
+      "country": "USA",
+      "lat": 35.4676,
+      "lon": -97.5164,
+      "cluster": "US_South"
+    },
+    {
+      "nome": "Tulsa",
+      "regione": "Oklahoma",
+      "country": "USA",
+      "lat": 36.154,
+      "lon": -95.9928,
+      "cluster": "US_South"
+    },
+    {
+      "nome": "Los Angeles",
+      "regione": "California",
+      "country": "USA",
+      "lat": 34.0522,
+      "lon": -118.2437,
+      "cluster": "US_West"
+    },
+    {
+      "nome": "San Francisco",
+      "regione": "California",
+      "country": "USA",
+      "lat": 37.7749,
+      "lon": -122.4194,
+      "cluster": "US_West"
+    },
+    {
+      "nome": "Seattle",
+      "regione": "Washington",
+      "country": "USA",
+      "lat": 47.6062,
+      "lon": -122.3321,
+      "cluster": "US_West"
+    },
+    {
+      "nome": "Portland",
+      "regione": "Oregon",
+      "country": "USA",
+      "lat": 45.5051,
+      "lon": -122.675,
+      "cluster": "US_West"
+    },
+    {
+      "nome": "San Diego",
+      "regione": "California",
+      "country": "USA",
+      "lat": 32.7157,
+      "lon": -117.1611,
+      "cluster": "US_West"
+    },
+    {
+      "nome": "San Jose",
+      "regione": "California",
+      "country": "USA",
+      "lat": 37.3382,
+      "lon": -121.8863,
+      "cluster": "US_West"
+    },
+    {
+      "nome": "Sacramento",
+      "regione": "California",
+      "country": "USA",
+      "lat": 38.5816,
+      "lon": -121.4944,
+      "cluster": "US_West"
+    },
+    {
+      "nome": "Las Vegas",
+      "regione": "Nevada",
+      "country": "USA",
+      "lat": 36.1699,
+      "lon": -115.1398,
+      "cluster": "US_West"
+    },
+    {
+      "nome": "Phoenix",
+      "regione": "Arizona",
+      "country": "USA",
+      "lat": 33.4484,
+      "lon": -112.074,
+      "cluster": "US_West"
+    },
+    {
+      "nome": "Tucson",
+      "regione": "Arizona",
+      "country": "USA",
+      "lat": 32.2226,
+      "lon": -110.9747,
+      "cluster": "US_West"
+    },
+    {
+      "nome": "Denver",
+      "regione": "Colorado",
+      "country": "USA",
+      "lat": 39.7392,
+      "lon": -104.9903,
+      "cluster": "US_West"
+    },
+    {
+      "nome": "Salt Lake City",
+      "regione": "Utah",
+      "country": "USA",
+      "lat": 40.7608,
+      "lon": -111.891,
+      "cluster": "US_West"
+    },
+    {
+      "nome": "Albuquerque",
+      "regione": "New Mexico",
+      "country": "USA",
+      "lat": 35.0844,
+      "lon": -106.6504,
+      "cluster": "US_West"
+    },
+    {
+      "nome": "Honolulu",
+      "regione": "Hawaii",
+      "country": "USA",
+      "lat": 21.3069,
+      "lon": -157.8583,
+      "cluster": "US_Islands"
+    },
+    {
+      "nome": "Anchorage",
+      "regione": "Alaska",
+      "country": "USA",
+      "lat": 61.2181,
+      "lon": -149.9003,
+      "cluster": "US_Alaska"
+    },
+    {
+      "nome": "Toronto",
+      "regione": "Ontario",
+      "country": "Canada",
+      "lat": 43.6532,
+      "lon": -79.3832,
+      "cluster": "CA_Central"
+    },
+    {
+      "nome": "Montreal",
+      "regione": "Quebec",
+      "country": "Canada",
+      "lat": 45.5017,
+      "lon": -73.5673,
+      "cluster": "CA_East"
+    },
+    {
+      "nome": "Vancouver",
+      "regione": "British Columbia",
+      "country": "Canada",
+      "lat": 49.2827,
+      "lon": -123.1207,
+      "cluster": "CA_West"
+    },
+    {
+      "nome": "Calgary",
+      "regione": "Alberta",
+      "country": "Canada",
+      "lat": 51.0447,
+      "lon": -114.0719,
+      "cluster": "CA_West"
+    },
+    {
+      "nome": "Edmonton",
+      "regione": "Alberta",
+      "country": "Canada",
+      "lat": 53.5461,
+      "lon": -113.4938,
+      "cluster": "CA_West"
+    },
+    {
+      "nome": "Ottawa",
+      "regione": "Ontario",
+      "country": "Canada",
+      "lat": 45.4215,
+      "lon": -75.6972,
+      "cluster": "CA_Central"
+    },
+    {
+      "nome": "Winnipeg",
+      "regione": "Manitoba",
+      "country": "Canada",
+      "lat": 49.8951,
+      "lon": -97.1384,
+      "cluster": "CA_Central"
+    },
+    {
+      "nome": "Quebec City",
+      "regione": "Quebec",
+      "country": "Canada",
+      "lat": 46.8139,
+      "lon": -71.208,
+      "cluster": "CA_East"
     }
   ]
 }

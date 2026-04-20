@@ -11,7 +11,8 @@ CC_MAP = {
     'Sweden':'se','Netherlands':'nl','Poland':'pl','Austria':'at','Switzerland':'ch',
     'Belgium':'be','Portugal':'pt','Denmark':'dk','Norway':'no',
     'Greece':'gr','Croatia':'hr','Czech Republic':'cz','Hungary':'hu','Romania':'ro',
-    'Finland':'fi','Slovenia':'si','Slovakia':'sk','Serbia':'rs'
+    'Finland':'fi','Slovenia':'si','Slovakia':'sk','Serbia':'rs',
+    'USA':'us','Canada':'ca'
 }
 
 LABEL = {
@@ -157,7 +158,8 @@ CC_LANG = {
     'se':'en', 'nl':'en', 'pl':'en', 'at':'de', 'ch':'de',
     'be':'fr', 'pt':'en', 'dk':'en', 'no':'en',
     'gr':'en', 'hr':'en', 'cz':'en', 'hu':'en', 'ro':'en',
-    'fi':'en', 'si':'en', 'sk':'en', 'rs':'en'
+    'fi':'en', 'si':'en', 'sk':'en', 'rs':'en',
+    'us':'en', 'ca':'en'
 }
 
 API = 'https://api.weatherarb.com'
