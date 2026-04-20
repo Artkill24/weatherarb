@@ -484,6 +484,77 @@ async function nlHomeSubmit() {
   }
 }
 
+
+// GEOLOCALIZZAZIONE AUTO
+async function loadGeoAlert() {
+  try {
+    // Usa Cloudflare per IP geolocation (gratis, già disponibile)
+    var r = await fetch('https://cloudflare.com/cdn-cgi/trace');
+    var t = await r.text();
+    var loc = {};
+    t.split('\n').forEach(function(l){ var p=l.split('='); if(p.length==2) loc[p[0]]=p[1]; });
+    var country = (loc.loc||'').toLowerCase();
+    
+    // Prova browser GPS (più preciso)
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(async function(pos) {
+        var lat = pos.coords.latitude;
+        var lon = pos.coords.longitude;
+        
+        // Trova nodo più vicino dall'API
+        var top = await fetch(API+'/api/v1/europe/top?limit=200');
+        var data = await top.json();
+        var nodes = data.data || data.reports || [];
+        
+        // Calcola distanza
+        var nearest = null, minDist = Infinity;
+        nodes.forEach(function(n) {
+          if(!n.lat||!n.lon) return;
+          var d = Math.sqrt(Math.pow(n.lat-lat,2)+Math.pow(n.lon-lon,2));
+          if(d < minDist) { minDist=d; nearest=n; }
+        });
+        
+        if(nearest && nearest.score >= 3) {
+          showGeoAlert(nearest);
+        }
+      }, function(){}, {timeout:5000});
+    }
+  } catch(e) {}
+}
+
+function showGeoAlert(node) {
+  var existing = document.getElementById('geo-alert');
+  if(existing) return;
+  
+  var z = node.z_score || 0;
+  var sc = node.score || 0;
+  var sign = z >= 0 ? '+' : '';
+  var col = sc>=7?'#ef4444':sc>=5?'#f97316':'#f59e0b';
+  var cc = (node.country_code||'it').toLowerCase();
+  var slug = (node.location||'').toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
+  var ev = (node.vertical||node.event_type||'anomalia').replace(/_/g,' ');
+  
+  var bar = document.createElement('div');
+  bar.id = 'geo-alert';
+  bar.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:1000;background:linear-gradient(135deg,rgba(4,6,8,.97),rgba(10,13,18,.97));border-top:1px solid '+col+';padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;backdrop-filter:blur(16px)';
+  bar.innerHTML = (
+    '<div style="display:flex;align-items:center;gap:12px">' +
+    '<div style="width:8px;height:8px;border-radius:50%;background:'+col+';box-shadow:0 0 10px '+col+';animation:pulse 2s infinite"></div>' +
+    '<div><div style="font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:'+col+';margin-bottom:2px">📍 Rilevato vicino a te</div>' +
+    '<div style="font-size:15px;font-weight:700;color:#fff">'+node.location+' — '+ev.charAt(0).toUpperCase()+ev.slice(1)+'</div>' +
+    '<div style="font-size:12px;color:#4a5568">Z-Score <span style="color:'+col+';font-weight:700">'+sign+z.toFixed(2)+'σ</span> · Score '+sc.toFixed(1)+'/10</div>' +
+    '</div></div>' +
+    '<div style="display:flex;gap:10px;align-items:center">' +
+    '<a href="/'+cc+'/'+slug+'/" style="background:'+col+';color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;white-space:nowrap">Analisi locale →</a>' +
+    '<button onclick="document.getElementById('geo-alert').remove()" style="background:transparent;border:1px solid #1e2d3d;border-radius:8px;padding:10px;color:#4a5568;cursor:pointer;font-size:16px">✕</button>' +
+    '</div>'
+  );
+  document.body.appendChild(bar);
+}
+
+// Lancia dopo 2 secondi
+setTimeout(loadGeoAlert, 2000);
+
 </script>
 </body>
 </html>
