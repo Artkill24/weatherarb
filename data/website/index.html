@@ -164,7 +164,7 @@
 <section class="hero">
   <div class="hero-eyebrow"><span>●</span> Intelligence Agency — Live</div>
   <h1>Weather<em>Arb</em><br>Intelligence</h1>
-  <p class="hero-sub">Anomalie meteo, Space Weather e Grid Risk per 322 nodi europei. Z-Score NASA POWER 25 anni. HDD/CDD energy data.</p>
+  <p class="hero-sub">Anomalie meteo, Space Weather e Grid Risk per 379 nodi globali. Z-Score NASA POWER 25 anni. HDD/CDD energy data.</p>
   <div class="hero-btns">
     <a href="/data/" class="btn-pri">Dashboard Live →</a>
     <a href="/pricing/" class="btn-sec">API Pro</a>
@@ -173,8 +173,8 @@
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stat"><div class="stat-n">322</div><div class="stat-l">Nodi Europei</div></div>
-  <div class="stat"><div class="stat-n">23</div><div class="stat-l">Paesi</div></div>
+  <div class="stat"><div class="stat-n">379</div><div class="stat-l">Nodi Globali</div></div>
+  <div class="stat"><div class="stat-n">25</div><div class="stat-l">Paesi</div></div>
   <div class="stat"><div class="stat-n">25</div><div class="stat-l">Anni Baseline</div></div>
   <div class="stat"><div class="stat-n" id="live-anom" style="color:var(--g)">—</div><div class="stat-l">Anomalie Live</div></div>
   <div class="stat"><div class="stat-n" id="live-crit" style="color:var(--r)">—</div><div class="stat-l">Critical</div></div>
@@ -258,7 +258,7 @@
     <a href="/dk/" class="country-card"><div class="country-code">DK</div><div class="country-name">Danmark</div><div class="country-nodes">5 nodi</div></a>
     <a href="/si/" class="country-card"><div class="country-code">SI</div><div class="country-name">Slovenija</div><div class="country-nodes">2 nodi</div></a>
     <a href="/sk/" class="country-card"><div class="country-code">SK</div><div class="country-name">Slovensko</div><div class="country-nodes">2 nodi</div></a>
-    <a href="/rs/" class="country-card"><div class="country-code">RS</div><div class="country-name">Srbija</div><div class="country-nodes">2 nodi</div></a>
+    <a href="/rs/" class="country-card"><div class="country-code">RS</div><div class="country-name">Srbija</div><div class="country-nodes">2 nodi</div></a><a href="/us/" class="country-card"><div class="country-code">US</div><div class="country-name">United States</div><div class="country-nodes">49 nodi</div></a><a href="/ca/" class="country-card"><div class="country-code">CA</div><div class="country-name">Canada</div><div class="country-nodes">8 nodi</div></a>
   </div>
 </div>
 
@@ -331,7 +331,7 @@ function toggleTheme(){
 // MAP
 var mapTiles, map;
 function initMap(){
-  map=L.map('map',{center:[50,10],zoom:4,zoomControl:true,attributionControl:false});
+  map=L.map('map',{center:[30,0],zoom:2,zoomControl:true,attributionControl:false});
   var isDark=document.documentElement.getAttribute('data-theme')==='dark';
   mapTiles=L.tileLayer(isDark?'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png':'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:18}).addTo(map);
 }
