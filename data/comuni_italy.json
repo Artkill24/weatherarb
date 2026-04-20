@@ -3502,5 +3502,3125 @@
     "lat": 39.7197,
     "lon": 8.6364,
     "pop": 10000
+  },
+  {
+    "nome": "Alpignano",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.0992,
+    "lon": 7.5269,
+    "pop": 0
+  },
+  {
+    "nome": "Rivalta di Torino",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.9608,
+    "lon": 7.5172,
+    "pop": 0
+  },
+  {
+    "nome": "Beinasco",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.0167,
+    "lon": 7.5833,
+    "pop": 0
+  },
+  {
+    "nome": "Bruino",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.9667,
+    "lon": 7.4833,
+    "pop": 0
+  },
+  {
+    "nome": "None",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.9333,
+    "lon": 7.55,
+    "pop": 0
+  },
+  {
+    "nome": "Vinovo",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.95,
+    "lon": 7.6333,
+    "pop": 0
+  },
+  {
+    "nome": "Carignano",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.9,
+    "lon": 7.6833,
+    "pop": 0
+  },
+  {
+    "nome": "Cambiano",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.9667,
+    "lon": 7.75,
+    "pop": 0
+  },
+  {
+    "nome": "Santena",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.9333,
+    "lon": 7.7667,
+    "pop": 0
+  },
+  {
+    "nome": "Trofarello",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.9833,
+    "lon": 7.7333,
+    "pop": 0
+  },
+  {
+    "nome": "Pecetto Torinese",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.0,
+    "lon": 7.75,
+    "pop": 0
+  },
+  {
+    "nome": "Baldissero Torinese",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.0333,
+    "lon": 7.8,
+    "pop": 0
+  },
+  {
+    "nome": "Pino Torinese",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.05,
+    "lon": 7.8167,
+    "pop": 0
+  },
+  {
+    "nome": "Castiglione Torinese",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.1167,
+    "lon": 7.8,
+    "pop": 0
+  },
+  {
+    "nome": "San Mauro Torinese",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.1,
+    "lon": 7.7667,
+    "pop": 0
+  },
+  {
+    "nome": "Gassino Torinese",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.1333,
+    "lon": 7.8333,
+    "pop": 0
+  },
+  {
+    "nome": "Brandizzo",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.1667,
+    "lon": 7.8333,
+    "pop": 0
+  },
+  {
+    "nome": "Volpiano",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.1833,
+    "lon": 7.7833,
+    "pop": 0
+  },
+  {
+    "nome": "San Benigno Canavese",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.2333,
+    "lon": 7.8,
+    "pop": 0
+  },
+  {
+    "nome": "Leinì",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.1833,
+    "lon": 7.7167,
+    "pop": 0
+  },
+  {
+    "nome": "Ciriè",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.2333,
+    "lon": 7.6,
+    "pop": 0
+  },
+  {
+    "nome": "Robassomero",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.2,
+    "lon": 7.5667,
+    "pop": 0
+  },
+  {
+    "nome": "Front",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.25,
+    "lon": 7.65,
+    "pop": 0
+  },
+  {
+    "nome": "Rivarolo Canavese",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.3333,
+    "lon": 7.7167,
+    "pop": 0
+  },
+  {
+    "nome": "Castellamonte",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.3833,
+    "lon": 7.7,
+    "pop": 0
+  },
+  {
+    "nome": "Cuorgnè",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.3833,
+    "lon": 7.65,
+    "pop": 0
+  },
+  {
+    "nome": "Valperga",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.4,
+    "lon": 7.6667,
+    "pop": 0
+  },
+  {
+    "nome": "Agliè",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.3667,
+    "lon": 7.7667,
+    "pop": 0
+  },
+  {
+    "nome": "San Giorgio Canavese",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.3333,
+    "lon": 7.8,
+    "pop": 0
+  },
+  {
+    "nome": "Caluso",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.3,
+    "lon": 7.8833,
+    "pop": 0
+  },
+  {
+    "nome": "San Sebastiano da Po",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.1667,
+    "lon": 7.9333,
+    "pop": 0
+  },
+  {
+    "nome": "Montanaro",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.2333,
+    "lon": 7.8667,
+    "pop": 0
+  },
+  {
+    "nome": "Foglizzo",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.2,
+    "lon": 7.8667,
+    "pop": 0
+  },
+  {
+    "nome": "Verolengo",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.1833,
+    "lon": 7.9667,
+    "pop": 0
+  },
+  {
+    "nome": "Rondissone",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.2,
+    "lon": 7.95,
+    "pop": 0
+  },
+  {
+    "nome": "Torrazza Piemonte",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 45.2333,
+    "lon": 7.9833,
+    "pop": 0
+  },
+  {
+    "nome": "Cigliano",
+    "provincia": "Biella",
+    "regione": "Piemonte",
+    "lat": 45.3167,
+    "lon": 8.0333,
+    "pop": 0
+  },
+  {
+    "nome": "Livorno Ferraris",
+    "provincia": "Biella",
+    "regione": "Piemonte",
+    "lat": 45.3,
+    "lon": 8.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Crescentino",
+    "provincia": "Asti",
+    "regione": "Piemonte",
+    "lat": 45.1833,
+    "lon": 8.1,
+    "pop": 0
+  },
+  {
+    "nome": "Savigliano",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.65,
+    "lon": 7.66,
+    "pop": 0
+  },
+  {
+    "nome": "Racconigi",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.7667,
+    "lon": 7.6833,
+    "pop": 0
+  },
+  {
+    "nome": "Cavallermaggiore",
+    "provincia": "Torino",
+    "regione": "Piemonte",
+    "lat": 44.7167,
+    "lon": 7.6833,
+    "pop": 0
+  },
+  {
+    "nome": "Centallo",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.5,
+    "lon": 7.5833,
+    "pop": 0
+  },
+  {
+    "nome": "Busca",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.5167,
+    "lon": 7.4667,
+    "pop": 0
+  },
+  {
+    "nome": "Dronero",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.4667,
+    "lon": 7.3667,
+    "pop": 0
+  },
+  {
+    "nome": "Borgo San Dalmazzo",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.3333,
+    "lon": 7.4833,
+    "pop": 0
+  },
+  {
+    "nome": "Boves",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.3333,
+    "lon": 7.55,
+    "pop": 0
+  },
+  {
+    "nome": "Villanova Mondovì",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.3333,
+    "lon": 7.7667,
+    "pop": 0
+  },
+  {
+    "nome": "Ceva",
+    "provincia": "Savona",
+    "regione": "Piemonte",
+    "lat": 44.3833,
+    "lon": 8.0333,
+    "pop": 0
+  },
+  {
+    "nome": "Garessio",
+    "provincia": "Imperia",
+    "regione": "Piemonte",
+    "lat": 44.2,
+    "lon": 8.0167,
+    "pop": 0
+  },
+  {
+    "nome": "Limone Piemonte",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.2,
+    "lon": 7.5667,
+    "pop": 0
+  },
+  {
+    "nome": "Vernante",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.25,
+    "lon": 7.5333,
+    "pop": 0
+  },
+  {
+    "nome": "Pietraporzio",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.3167,
+    "lon": 7.0,
+    "pop": 0
+  },
+  {
+    "nome": "Vinadio",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.3,
+    "lon": 7.1667,
+    "pop": 0
+  },
+  {
+    "nome": "Demonte",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.3167,
+    "lon": 7.2833,
+    "pop": 0
+  },
+  {
+    "nome": "Argentera",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.3833,
+    "lon": 6.95,
+    "pop": 0
+  },
+  {
+    "nome": "Sambuco",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.3333,
+    "lon": 6.9833,
+    "pop": 0
+  },
+  {
+    "nome": "Castelmagno",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.3167,
+    "lon": 7.1833,
+    "pop": 0
+  },
+  {
+    "nome": "Pradleves",
+    "provincia": "Cuneo",
+    "regione": "Piemonte",
+    "lat": 44.35,
+    "lon": 7.2167,
+    "pop": 0
+  },
+  {
+    "nome": "Nizza Monferrato",
+    "provincia": "Asti",
+    "regione": "Piemonte",
+    "lat": 44.7833,
+    "lon": 8.35,
+    "pop": 0
+  },
+  {
+    "nome": "Canelli",
+    "provincia": "Asti",
+    "regione": "Piemonte",
+    "lat": 44.7167,
+    "lon": 8.2833,
+    "pop": 0
+  },
+  {
+    "nome": "Costigliole d'Asti",
+    "provincia": "Asti",
+    "regione": "Piemonte",
+    "lat": 44.7833,
+    "lon": 8.1667,
+    "pop": 0
+  },
+  {
+    "nome": "Isola d'Asti",
+    "provincia": "Asti",
+    "regione": "Piemonte",
+    "lat": 44.8,
+    "lon": 8.1833,
+    "pop": 0
+  },
+  {
+    "nome": "Mombercelli",
+    "provincia": "Asti",
+    "regione": "Piemonte",
+    "lat": 44.7667,
+    "lon": 8.2667,
+    "pop": 0
+  },
+  {
+    "nome": "Rocchetta Tanaro",
+    "provincia": "Asti",
+    "regione": "Piemonte",
+    "lat": 44.7667,
+    "lon": 8.3,
+    "pop": 0
+  },
+  {
+    "nome": "Castagnole delle Lanze",
+    "provincia": "Asti",
+    "regione": "Piemonte",
+    "lat": 44.7667,
+    "lon": 8.2333,
+    "pop": 0
+  },
+  {
+    "nome": "San Marzano Oliveto",
+    "provincia": "Asti",
+    "regione": "Piemonte",
+    "lat": 44.75,
+    "lon": 8.2667,
+    "pop": 0
+  },
+  {
+    "nome": "Quargnento",
+    "provincia": "Alessandria",
+    "regione": "Piemonte",
+    "lat": 44.9667,
+    "lon": 8.4333,
+    "pop": 0
+  },
+  {
+    "nome": "Felizzano",
+    "provincia": "Alessandria",
+    "regione": "Piemonte",
+    "lat": 44.9,
+    "lon": 8.4333,
+    "pop": 0
+  },
+  {
+    "nome": "Solero",
+    "provincia": "Alessandria",
+    "regione": "Piemonte",
+    "lat": 44.9333,
+    "lon": 8.5167,
+    "pop": 0
+  },
+  {
+    "nome": "Quattordio",
+    "provincia": "Asti",
+    "regione": "Piemonte",
+    "lat": 44.8833,
+    "lon": 8.3833,
+    "pop": 0
+  },
+  {
+    "nome": "Sezzadio",
+    "provincia": "Alessandria",
+    "regione": "Piemonte",
+    "lat": 44.8167,
+    "lon": 8.5833,
+    "pop": 0
+  },
+  {
+    "nome": "Bosco Marengo",
+    "provincia": "Alessandria",
+    "regione": "Piemonte",
+    "lat": 44.8167,
+    "lon": 8.6667,
+    "pop": 0
+  },
+  {
+    "nome": "Marengo",
+    "provincia": "Alessandria",
+    "regione": "Piemonte",
+    "lat": 44.8333,
+    "lon": 8.65,
+    "pop": 0
+  },
+  {
+    "nome": "Frugarolo",
+    "provincia": "Alessandria",
+    "regione": "Piemonte",
+    "lat": 44.8167,
+    "lon": 8.6833,
+    "pop": 0
+  },
+  {
+    "nome": "Corbetta",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.4667,
+    "lon": 8.9167,
+    "pop": 0
+  },
+  {
+    "nome": "Robecco sul Naviglio",
+    "provincia": "Novara",
+    "regione": "Lombardia",
+    "lat": 45.4333,
+    "lon": 8.8833,
+    "pop": 0
+  },
+  {
+    "nome": "Cuggiono",
+    "provincia": "Novara",
+    "regione": "Lombardia",
+    "lat": 45.5,
+    "lon": 8.8167,
+    "pop": 0
+  },
+  {
+    "nome": "Inveruno",
+    "provincia": "Novara",
+    "regione": "Lombardia",
+    "lat": 45.5167,
+    "lon": 8.8667,
+    "pop": 0
+  },
+  {
+    "nome": "Busto Garolfo",
+    "provincia": "Varese",
+    "regione": "Lombardia",
+    "lat": 45.55,
+    "lon": 8.8833,
+    "pop": 0
+  },
+  {
+    "nome": "Canegrate",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.5667,
+    "lon": 8.9333,
+    "pop": 0
+  },
+  {
+    "nome": "San Giorgio su Legnano",
+    "provincia": "Varese",
+    "regione": "Lombardia",
+    "lat": 45.5667,
+    "lon": 8.9167,
+    "pop": 0
+  },
+  {
+    "nome": "Legnano",
+    "provincia": "Varese",
+    "regione": "Lombardia",
+    "lat": 45.5958,
+    "lon": 8.9175,
+    "pop": 0
+  },
+  {
+    "nome": "Cerro Maggiore",
+    "provincia": "Como",
+    "regione": "Lombardia",
+    "lat": 45.5833,
+    "lon": 8.95,
+    "pop": 0
+  },
+  {
+    "nome": "Nerviano",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.55,
+    "lon": 8.9833,
+    "pop": 0
+  },
+  {
+    "nome": "Parabiago",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.55,
+    "lon": 8.95,
+    "pop": 0
+  },
+  {
+    "nome": "Rescaldina",
+    "provincia": "Como",
+    "regione": "Lombardia",
+    "lat": 45.6,
+    "lon": 8.95,
+    "pop": 0
+  },
+  {
+    "nome": "Lainate",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.5667,
+    "lon": 9.0,
+    "pop": 0
+  },
+  {
+    "nome": "Garbagnate Milanese",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.5833,
+    "lon": 9.0667,
+    "pop": 0
+  },
+  {
+    "nome": "Solaro",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.6167,
+    "lon": 9.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Cesate",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.6,
+    "lon": 9.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Bovisio-Masciago",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6167,
+    "lon": 9.1667,
+    "pop": 0
+  },
+  {
+    "nome": "Varedo",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6,
+    "lon": 9.1833,
+    "pop": 0
+  },
+  {
+    "nome": "Nova Milanese",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.5833,
+    "lon": 9.2,
+    "pop": 0
+  },
+  {
+    "nome": "Muggiò",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.5917,
+    "lon": 9.2283,
+    "pop": 0
+  },
+  {
+    "nome": "Villasanta",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6,
+    "lon": 9.3,
+    "pop": 0
+  },
+  {
+    "nome": "Arcore",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6333,
+    "lon": 9.3167,
+    "pop": 0
+  },
+  {
+    "nome": "Carnate",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6667,
+    "lon": 9.3833,
+    "pop": 0
+  },
+  {
+    "nome": "Usmate Velate",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.65,
+    "lon": 9.3667,
+    "pop": 0
+  },
+  {
+    "nome": "Bernareggio",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6667,
+    "lon": 9.4,
+    "pop": 0
+  },
+  {
+    "nome": "Caponago",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6,
+    "lon": 9.3833,
+    "pop": 0
+  },
+  {
+    "nome": "Busnago",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6333,
+    "lon": 9.4333,
+    "pop": 0
+  },
+  {
+    "nome": "Sulbiate",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.65,
+    "lon": 9.4667,
+    "pop": 0
+  },
+  {
+    "nome": "Bellusco",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.65,
+    "lon": 9.4167,
+    "pop": 0
+  },
+  {
+    "nome": "Mezzago",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6667,
+    "lon": 9.45,
+    "pop": 0
+  },
+  {
+    "nome": "Ornago",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6333,
+    "lon": 9.4667,
+    "pop": 0
+  },
+  {
+    "nome": "Burago di Molgora",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6333,
+    "lon": 9.3833,
+    "pop": 0
+  },
+  {
+    "nome": "Camparada",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6667,
+    "lon": 9.35,
+    "pop": 0
+  },
+  {
+    "nome": "Aicurzio",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.6833,
+    "lon": 9.4,
+    "pop": 0
+  },
+  {
+    "nome": "Roncello",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.6333,
+    "lon": 9.4833,
+    "pop": 0
+  },
+  {
+    "nome": "Agrate Brianza",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.5833,
+    "lon": 9.35,
+    "pop": 0
+  },
+  {
+    "nome": "Concorezzo",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.5833,
+    "lon": 9.3333,
+    "pop": 0
+  },
+  {
+    "nome": "Brugherio",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.55,
+    "lon": 9.3,
+    "pop": 0
+  },
+  {
+    "nome": "Cologno Monzese",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.5333,
+    "lon": 9.2833,
+    "pop": 0
+  },
+  {
+    "nome": "Vimodrone",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.5167,
+    "lon": 9.2833,
+    "pop": 0
+  },
+  {
+    "nome": "Cassina de' Pecchi",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.5,
+    "lon": 9.3667,
+    "pop": 0
+  },
+  {
+    "nome": "Pessano con Bornago",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.55,
+    "lon": 9.3667,
+    "pop": 0
+  },
+  {
+    "nome": "Cambiago",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.5667,
+    "lon": 9.4333,
+    "pop": 0
+  },
+  {
+    "nome": "Inzago",
+    "provincia": "Monza e Brianza",
+    "regione": "Lombardia",
+    "lat": 45.5333,
+    "lon": 9.4667,
+    "pop": 0
+  },
+  {
+    "nome": "Bellinzago Lombardo",
+    "provincia": "Lodi",
+    "regione": "Lombardia",
+    "lat": 45.5333,
+    "lon": 9.5,
+    "pop": 0
+  },
+  {
+    "nome": "Liscate",
+    "provincia": "Lodi",
+    "regione": "Lombardia",
+    "lat": 45.4833,
+    "lon": 9.5,
+    "pop": 0
+  },
+  {
+    "nome": "Settala",
+    "provincia": "Lodi",
+    "regione": "Lombardia",
+    "lat": 45.45,
+    "lon": 9.5,
+    "pop": 0
+  },
+  {
+    "nome": "Rodano",
+    "provincia": "Lodi",
+    "regione": "Lombardia",
+    "lat": 45.4667,
+    "lon": 9.4667,
+    "pop": 0
+  },
+  {
+    "nome": "Peschiera Borromeo",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.4333,
+    "lon": 9.3333,
+    "pop": 0
+  },
+  {
+    "nome": "San Donato Milanese",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.4167,
+    "lon": 9.2667,
+    "pop": 0
+  },
+  {
+    "nome": "Opera",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.3833,
+    "lon": 9.2167,
+    "pop": 0
+  },
+  {
+    "nome": "Locate di Triulzi",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.3667,
+    "lon": 9.2167,
+    "pop": 0
+  },
+  {
+    "nome": "Lacchiarella",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.3333,
+    "lon": 9.15,
+    "pop": 0
+  },
+  {
+    "nome": "Binasco",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.3333,
+    "lon": 9.1,
+    "pop": 0
+  },
+  {
+    "nome": "Vernate",
+    "provincia": "Pavia",
+    "regione": "Lombardia",
+    "lat": 45.3,
+    "lon": 9.0667,
+    "pop": 0
+  },
+  {
+    "nome": "Calvignasco",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.35,
+    "lon": 9.0,
+    "pop": 0
+  },
+  {
+    "nome": "Bubbiano",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.35,
+    "lon": 8.9833,
+    "pop": 0
+  },
+  {
+    "nome": "Motta Visconti",
+    "provincia": "Pavia",
+    "regione": "Lombardia",
+    "lat": 45.3167,
+    "lon": 8.9667,
+    "pop": 0
+  },
+  {
+    "nome": "Rosate",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.3667,
+    "lon": 9.0333,
+    "pop": 0
+  },
+  {
+    "nome": "Gaggiano",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.4,
+    "lon": 9.0333,
+    "pop": 0
+  },
+  {
+    "nome": "Zibido San Giacomo",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.3833,
+    "lon": 9.1167,
+    "pop": 0
+  },
+  {
+    "nome": "Trezzano sul Naviglio",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.4167,
+    "lon": 9.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Cesano Boscone",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.4333,
+    "lon": 9.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Cusago",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.45,
+    "lon": 9.0167,
+    "pop": 0
+  },
+  {
+    "nome": "Buccinasco",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.4,
+    "lon": 9.1,
+    "pop": 0
+  },
+  {
+    "nome": "Assago",
+    "provincia": "Milano",
+    "regione": "Lombardia",
+    "lat": 45.4,
+    "lon": 9.1333,
+    "pop": 0
+  },
+  {
+    "nome": "Ponte San Pietro",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.6833,
+    "lon": 9.5833,
+    "pop": 0
+  },
+  {
+    "nome": "Curno",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7,
+    "lon": 9.6333,
+    "pop": 0
+  },
+  {
+    "nome": "Stezzano",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.6667,
+    "lon": 9.65,
+    "pop": 0
+  },
+  {
+    "nome": "Gorle",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.6833,
+    "lon": 9.7333,
+    "pop": 0
+  },
+  {
+    "nome": "Soazza",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7,
+    "lon": 9.7333,
+    "pop": 0
+  },
+  {
+    "nome": "Ponteranica",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7333,
+    "lon": 9.6667,
+    "pop": 0
+  },
+  {
+    "nome": "Almè",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.75,
+    "lon": 9.6167,
+    "pop": 0
+  },
+  {
+    "nome": "Villa d'Almè",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.75,
+    "lon": 9.6,
+    "pop": 0
+  },
+  {
+    "nome": "Paladina",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7333,
+    "lon": 9.6167,
+    "pop": 0
+  },
+  {
+    "nome": "Sorisole",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.75,
+    "lon": 9.6833,
+    "pop": 0
+  },
+  {
+    "nome": "Orio al Serio",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.6667,
+    "lon": 9.7167,
+    "pop": 0
+  },
+  {
+    "nome": "Grassobbio",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.65,
+    "lon": 9.75,
+    "pop": 0
+  },
+  {
+    "nome": "Brusaporto",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.65,
+    "lon": 9.7667,
+    "pop": 0
+  },
+  {
+    "nome": "Bagnatica",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.6333,
+    "lon": 9.7833,
+    "pop": 0
+  },
+  {
+    "nome": "Costa di Mezzate",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.6333,
+    "lon": 9.7667,
+    "pop": 0
+  },
+  {
+    "nome": "Pedrengo",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7,
+    "lon": 9.7667,
+    "pop": 0
+  },
+  {
+    "nome": "Scanzorosciate",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7,
+    "lon": 9.7833,
+    "pop": 0
+  },
+  {
+    "nome": "Cavernago",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.6667,
+    "lon": 9.8,
+    "pop": 0
+  },
+  {
+    "nome": "Spirano",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.6333,
+    "lon": 9.7333,
+    "pop": 0
+  },
+  {
+    "nome": "Zanica",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.6333,
+    "lon": 9.7,
+    "pop": 0
+  },
+  {
+    "nome": "Osio Sotto",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.6833,
+    "lon": 9.6833,
+    "pop": 0
+  },
+  {
+    "nome": "Osio Sopra",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7,
+    "lon": 9.6667,
+    "pop": 0
+  },
+  {
+    "nome": "Mapello",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7333,
+    "lon": 9.5833,
+    "pop": 0
+  },
+  {
+    "nome": "Ambivere",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7667,
+    "lon": 9.5667,
+    "pop": 0
+  },
+  {
+    "nome": "Carvico",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7667,
+    "lon": 9.5333,
+    "pop": 0
+  },
+  {
+    "nome": "Sotto il Monte Giovanni XXIII",
+    "provincia": "Lecco",
+    "regione": "Lombardia",
+    "lat": 45.7833,
+    "lon": 9.4833,
+    "pop": 0
+  },
+  {
+    "nome": "Calusco d'Adda",
+    "provincia": "Lecco",
+    "regione": "Lombardia",
+    "lat": 45.7833,
+    "lon": 9.4667,
+    "pop": 0
+  },
+  {
+    "nome": "Solza",
+    "provincia": "Lecco",
+    "regione": "Lombardia",
+    "lat": 45.7833,
+    "lon": 9.45,
+    "pop": 0
+  },
+  {
+    "nome": "Filago",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.6833,
+    "lon": 9.5833,
+    "pop": 0
+  },
+  {
+    "nome": "Bonate Sotto",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7,
+    "lon": 9.5667,
+    "pop": 0
+  },
+  {
+    "nome": "Bonate Sopra",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7167,
+    "lon": 9.55,
+    "pop": 0
+  },
+  {
+    "nome": "Suisio",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7,
+    "lon": 9.5333,
+    "pop": 0
+  },
+  {
+    "nome": "Capriate San Gervasio",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7,
+    "lon": 9.5167,
+    "pop": 0
+  },
+  {
+    "nome": "Medolago",
+    "provincia": "Bergamo",
+    "regione": "Lombardia",
+    "lat": 45.7167,
+    "lon": 9.5167,
+    "pop": 0
+  },
+  {
+    "nome": "Gardone Val Trompia",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.6833,
+    "lon": 10.1833,
+    "pop": 0
+  },
+  {
+    "nome": "Marcheno",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.7,
+    "lon": 10.2167,
+    "pop": 0
+  },
+  {
+    "nome": "Pezzaze",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.75,
+    "lon": 10.2167,
+    "pop": 0
+  },
+  {
+    "nome": "Tavernole sul Mella",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.7333,
+    "lon": 10.25,
+    "pop": 0
+  },
+  {
+    "nome": "Collio",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.7833,
+    "lon": 10.3167,
+    "pop": 0
+  },
+  {
+    "nome": "Bovegno",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.7667,
+    "lon": 10.3,
+    "pop": 0
+  },
+  {
+    "nome": "Irma",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.7833,
+    "lon": 10.2833,
+    "pop": 0
+  },
+  {
+    "nome": "Lodrino",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.7167,
+    "lon": 10.25,
+    "pop": 0
+  },
+  {
+    "nome": "Nave",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.6,
+    "lon": 10.2833,
+    "pop": 0
+  },
+  {
+    "nome": "Cellatica",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.5833,
+    "lon": 10.2167,
+    "pop": 0
+  },
+  {
+    "nome": "Collebeato",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.6,
+    "lon": 10.2167,
+    "pop": 0
+  },
+  {
+    "nome": "Bovezzo",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.6167,
+    "lon": 10.2,
+    "pop": 0
+  },
+  {
+    "nome": "Villa Carcina",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.65,
+    "lon": 10.2167,
+    "pop": 0
+  },
+  {
+    "nome": "Gussago",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.5833,
+    "lon": 10.1667,
+    "pop": 0
+  },
+  {
+    "nome": "Rodengo Saiano",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.6,
+    "lon": 10.1667,
+    "pop": 0
+  },
+  {
+    "nome": "Ome",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.6333,
+    "lon": 10.1667,
+    "pop": 0
+  },
+  {
+    "nome": "Monticelli Brusati",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.65,
+    "lon": 10.0667,
+    "pop": 0
+  },
+  {
+    "nome": "Provaglio d'Iseo",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.6333,
+    "lon": 10.05,
+    "pop": 0
+  },
+  {
+    "nome": "Iseo",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.6567,
+    "lon": 10.0442,
+    "pop": 0
+  },
+  {
+    "nome": "Sulzano",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.65,
+    "lon": 10.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Sale Marasino",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.6833,
+    "lon": 10.1,
+    "pop": 0
+  },
+  {
+    "nome": "Marone",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.7,
+    "lon": 10.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Zone",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.7333,
+    "lon": 10.1167,
+    "pop": 0
+  },
+  {
+    "nome": "Pisogne",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.8,
+    "lon": 10.1,
+    "pop": 0
+  },
+  {
+    "nome": "Darfo Boario Terme",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.8833,
+    "lon": 10.1833,
+    "pop": 0
+  },
+  {
+    "nome": "Breno",
+    "provincia": "Brescia",
+    "regione": "Lombardia",
+    "lat": 45.95,
+    "lon": 10.3,
+    "pop": 0
+  },
+  {
+    "nome": "Capo di Ponte",
+    "provincia": "Sondrio",
+    "regione": "Lombardia",
+    "lat": 46.0333,
+    "lon": 10.3333,
+    "pop": 0
+  },
+  {
+    "nome": "Edolo",
+    "provincia": "Sondrio",
+    "regione": "Lombardia",
+    "lat": 46.1833,
+    "lon": 10.3333,
+    "pop": 0
+  },
+  {
+    "nome": "Silea",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.65,
+    "lon": 12.3167,
+    "pop": 0
+  },
+  {
+    "nome": "Roncade",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.6167,
+    "lon": 12.3833,
+    "pop": 0
+  },
+  {
+    "nome": "Mogliano Veneto",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.5667,
+    "lon": 12.2333,
+    "pop": 0
+  },
+  {
+    "nome": "Quinto di Treviso",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.65,
+    "lon": 12.1833,
+    "pop": 0
+  },
+  {
+    "nome": "Ponzano Veneto",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.7,
+    "lon": 12.2,
+    "pop": 0
+  },
+  {
+    "nome": "Villorba",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.7167,
+    "lon": 12.2333,
+    "pop": 0
+  },
+  {
+    "nome": "Paese",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.7,
+    "lon": 12.1667,
+    "pop": 0
+  },
+  {
+    "nome": "Morgano",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.7167,
+    "lon": 12.1,
+    "pop": 0
+  },
+  {
+    "nome": "Preganziol",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.6,
+    "lon": 12.2333,
+    "pop": 0
+  },
+  {
+    "nome": "Carbonera",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.7,
+    "lon": 12.2833,
+    "pop": 0
+  },
+  {
+    "nome": "Susegana",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.85,
+    "lon": 12.25,
+    "pop": 0
+  },
+  {
+    "nome": "Pieve di Soligo",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.8833,
+    "lon": 12.1833,
+    "pop": 0
+  },
+  {
+    "nome": "Refrontolo",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.9,
+    "lon": 12.2,
+    "pop": 0
+  },
+  {
+    "nome": "Moriago della Battaglia",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "lat": 45.8833,
+    "lon": 12.15,
+    "pop": 0
+  },
+  {
+    "nome": "Valdobbiadene",
+    "provincia": "Belluno",
+    "regione": "Veneto",
+    "lat": 45.9,
+    "lon": 11.9833,
+    "pop": 0
+  },
+  {
+    "nome": "Miane",
+    "provincia": "Belluno",
+    "regione": "Veneto",
+    "lat": 45.9167,
+    "lon": 12.05,
+    "pop": 0
+  },
+  {
+    "nome": "Farra di Soligo",
+    "provincia": "Belluno",
+    "regione": "Veneto",
+    "lat": 45.9,
+    "lon": 12.1,
+    "pop": 0
+  },
+  {
+    "nome": "Col San Martino",
+    "provincia": "Belluno",
+    "regione": "Veneto",
+    "lat": 45.9,
+    "lon": 12.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Cison di Valmarino",
+    "provincia": "Belluno",
+    "regione": "Veneto",
+    "lat": 45.9667,
+    "lon": 12.15,
+    "pop": 0
+  },
+  {
+    "nome": "Follina",
+    "provincia": "Belluno",
+    "regione": "Veneto",
+    "lat": 45.95,
+    "lon": 12.1167,
+    "pop": 0
+  },
+  {
+    "nome": "Albignasego",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.35,
+    "lon": 11.8833,
+    "pop": 0
+  },
+  {
+    "nome": "Casalserugo",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.3,
+    "lon": 11.9,
+    "pop": 0
+  },
+  {
+    "nome": "Maserà di Padova",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.3167,
+    "lon": 11.8667,
+    "pop": 0
+  },
+  {
+    "nome": "Ponte San Nicolò",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.35,
+    "lon": 11.9333,
+    "pop": 0
+  },
+  {
+    "nome": "Saonara",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.3833,
+    "lon": 11.9667,
+    "pop": 0
+  },
+  {
+    "nome": "Legnaro",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.35,
+    "lon": 11.9667,
+    "pop": 0
+  },
+  {
+    "nome": "Polverara",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.3167,
+    "lon": 11.9833,
+    "pop": 0
+  },
+  {
+    "nome": "Sant'Angelo di Piove di Sacco",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.3333,
+    "lon": 12.0333,
+    "pop": 0
+  },
+  {
+    "nome": "Correzzola",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.3,
+    "lon": 12.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Agna",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.2167,
+    "lon": 11.9833,
+    "pop": 0
+  },
+  {
+    "nome": "Tribano",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.2333,
+    "lon": 11.9667,
+    "pop": 0
+  },
+  {
+    "nome": "Pernumia",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.2833,
+    "lon": 11.95,
+    "pop": 0
+  },
+  {
+    "nome": "Due Carrare",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.3,
+    "lon": 11.8333,
+    "pop": 0
+  },
+  {
+    "nome": "Monselice",
+    "provincia": "Rovigo",
+    "regione": "Veneto",
+    "lat": 45.2333,
+    "lon": 11.75,
+    "pop": 0
+  },
+  {
+    "nome": "Baone",
+    "provincia": "Rovigo",
+    "regione": "Veneto",
+    "lat": 45.2167,
+    "lon": 11.6833,
+    "pop": 0
+  },
+  {
+    "nome": "Cinto Euganeo",
+    "provincia": "Rovigo",
+    "regione": "Veneto",
+    "lat": 45.25,
+    "lon": 11.65,
+    "pop": 0
+  },
+  {
+    "nome": "Lozzo Atestino",
+    "provincia": "Rovigo",
+    "regione": "Veneto",
+    "lat": 45.2833,
+    "lon": 11.6333,
+    "pop": 0
+  },
+  {
+    "nome": "Vo'",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.3167,
+    "lon": 11.6667,
+    "pop": 0
+  },
+  {
+    "nome": "Rovolon",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.35,
+    "lon": 11.6667,
+    "pop": 0
+  },
+  {
+    "nome": "Teolo",
+    "provincia": "Padova",
+    "regione": "Veneto",
+    "lat": 45.3667,
+    "lon": 11.7,
+    "pop": 0
+  },
+  {
+    "nome": "Castel Maggiore",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "lat": 44.5667,
+    "lon": 11.3833,
+    "pop": 0
+  },
+  {
+    "nome": "Argelato",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "lat": 44.6333,
+    "lon": 11.35,
+    "pop": 0
+  },
+  {
+    "nome": "Bentivoglio",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "lat": 44.6333,
+    "lon": 11.4167,
+    "pop": 0
+  },
+  {
+    "nome": "San Pietro in Casale",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "lat": 44.6833,
+    "lon": 11.4,
+    "pop": 0
+  },
+  {
+    "nome": "Galliera",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "lat": 44.75,
+    "lon": 11.4167,
+    "pop": 0
+  },
+  {
+    "nome": "Pieve di Cento",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "lat": 44.7167,
+    "lon": 11.3,
+    "pop": 0
+  },
+  {
+    "nome": "Sant'Agata Bolognese",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "lat": 44.6667,
+    "lon": 11.1333,
+    "pop": 0
+  },
+  {
+    "nome": "Crevalcore",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "lat": 44.7333,
+    "lon": 11.15,
+    "pop": 0
+  },
+  {
+    "nome": "Sant'Agata sul Santerno",
+    "provincia": "Forlì-Cesena",
+    "regione": "Emilia-Romagna",
+    "lat": 44.4333,
+    "lon": 11.8667,
+    "pop": 0
+  },
+  {
+    "nome": "Castel Guelfo di Bologna",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "lat": 44.4333,
+    "lon": 11.6833,
+    "pop": 0
+  },
+  {
+    "nome": "Medicina",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "lat": 44.4833,
+    "lon": 11.6333,
+    "pop": 0
+  },
+  {
+    "nome": "Molinella",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "lat": 44.6167,
+    "lon": 11.6667,
+    "pop": 0
+  },
+  {
+    "nome": "Minerbio",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "lat": 44.6167,
+    "lon": 11.4833,
+    "pop": 0
+  },
+  {
+    "nome": "Malalbergo",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "lat": 44.7167,
+    "lon": 11.5333,
+    "pop": 0
+  },
+  {
+    "nome": "Baricella",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "lat": 44.6833,
+    "lon": 11.55,
+    "pop": 0
+  },
+  {
+    "nome": "Granarolo dell'Emilia",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "lat": 44.55,
+    "lon": 11.4333,
+    "pop": 0
+  },
+  {
+    "nome": "Rufina",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.8167,
+    "lon": 11.4833,
+    "pop": 0
+  },
+  {
+    "nome": "Pelago",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.75,
+    "lon": 11.5,
+    "pop": 0
+  },
+  {
+    "nome": "Reggello",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.6833,
+    "lon": 11.5,
+    "pop": 0
+  },
+  {
+    "nome": "Figline e Incisa Valdarno",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.6333,
+    "lon": 11.4667,
+    "pop": 0
+  },
+  {
+    "nome": "Rignano sull'Arno",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.7167,
+    "lon": 11.45,
+    "pop": 0
+  },
+  {
+    "nome": "Greve in Chianti",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.5833,
+    "lon": 11.3167,
+    "pop": 0
+  },
+  {
+    "nome": "Barberino Tavarnelle",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.5333,
+    "lon": 11.1667,
+    "pop": 0
+  },
+  {
+    "nome": "San Casciano in Val di Pesa",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.65,
+    "lon": 11.1833,
+    "pop": 0
+  },
+  {
+    "nome": "Impruneta",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.6833,
+    "lon": 11.2667,
+    "pop": 0
+  },
+  {
+    "nome": "Vaglia",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.9167,
+    "lon": 11.2833,
+    "pop": 0
+  },
+  {
+    "nome": "Barberino di Mugello",
+    "provincia": "Prato",
+    "regione": "Toscana",
+    "lat": 44.0,
+    "lon": 11.25,
+    "pop": 0
+  },
+  {
+    "nome": "Scarperia e San Piero",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.9833,
+    "lon": 11.35,
+    "pop": 0
+  },
+  {
+    "nome": "Borgo San Lorenzo",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.95,
+    "lon": 11.3833,
+    "pop": 0
+  },
+  {
+    "nome": "Vicchio",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.9333,
+    "lon": 11.4667,
+    "pop": 0
+  },
+  {
+    "nome": "Dicomano",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.8833,
+    "lon": 11.5167,
+    "pop": 0
+  },
+  {
+    "nome": "Londa",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.8333,
+    "lon": 11.5667,
+    "pop": 0
+  },
+  {
+    "nome": "San Godenzo",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "lat": 43.9333,
+    "lon": 11.6167,
+    "pop": 0
+  },
+  {
+    "nome": "Marradi",
+    "provincia": "Forlì-Cesena",
+    "regione": "Toscana",
+    "lat": 44.0667,
+    "lon": 11.6167,
+    "pop": 0
+  },
+  {
+    "nome": "Palazzuolo sul Senio",
+    "provincia": "Bologna",
+    "regione": "Toscana",
+    "lat": 44.1167,
+    "lon": 11.55,
+    "pop": 0
+  },
+  {
+    "nome": "Fiumicino",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.7667,
+    "lon": 12.2333,
+    "pop": 0
+  },
+  {
+    "nome": "Ciampino",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.8,
+    "lon": 12.6,
+    "pop": 0
+  },
+  {
+    "nome": "Castel Gandolfo",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.75,
+    "lon": 12.65,
+    "pop": 0
+  },
+  {
+    "nome": "Ariccia",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.7167,
+    "lon": 12.6667,
+    "pop": 0
+  },
+  {
+    "nome": "Lanuvio",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.6833,
+    "lon": 12.6833,
+    "pop": 0
+  },
+  {
+    "nome": "Lariano",
+    "provincia": "Latina",
+    "regione": "Lazio",
+    "lat": 41.7167,
+    "lon": 12.8333,
+    "pop": 0
+  },
+  {
+    "nome": "Artena",
+    "provincia": "Latina",
+    "regione": "Lazio",
+    "lat": 41.7333,
+    "lon": 12.9167,
+    "pop": 0
+  },
+  {
+    "nome": "Segni",
+    "provincia": "Latina",
+    "regione": "Lazio",
+    "lat": 41.6833,
+    "lon": 13.0167,
+    "pop": 0
+  },
+  {
+    "nome": "Carpineto Romano",
+    "provincia": "Latina",
+    "regione": "Lazio",
+    "lat": 41.5833,
+    "lon": 13.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Rocca Priora",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.7833,
+    "lon": 12.7667,
+    "pop": 0
+  },
+  {
+    "nome": "Rocca di Papa",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.7667,
+    "lon": 12.7,
+    "pop": 0
+  },
+  {
+    "nome": "Monte Compatri",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.8,
+    "lon": 12.75,
+    "pop": 0
+  },
+  {
+    "nome": "Colonna",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.8333,
+    "lon": 12.75,
+    "pop": 0
+  },
+  {
+    "nome": "Monte Porzio Catone",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.8167,
+    "lon": 12.7167,
+    "pop": 0
+  },
+  {
+    "nome": "Grottaferrata",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.7833,
+    "lon": 12.6667,
+    "pop": 0
+  },
+  {
+    "nome": "Montecompatri",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.8,
+    "lon": 12.7333,
+    "pop": 0
+  },
+  {
+    "nome": "San Cesareo",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "lat": 41.8167,
+    "lon": 12.8167,
+    "pop": 0
+  },
+  {
+    "nome": "Cave",
+    "provincia": "Latina",
+    "regione": "Lazio",
+    "lat": 41.8167,
+    "lon": 12.9333,
+    "pop": 0
+  },
+  {
+    "nome": "San Vito Romano",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "lat": 41.8833,
+    "lon": 13.0167,
+    "pop": 0
+  },
+  {
+    "nome": "Genazzano",
+    "provincia": "Latina",
+    "regione": "Lazio",
+    "lat": 41.8333,
+    "lon": 12.9833,
+    "pop": 0
+  },
+  {
+    "nome": "Olevano Romano",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "lat": 41.8667,
+    "lon": 13.0333,
+    "pop": 0
+  },
+  {
+    "nome": "Bellegra",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "lat": 41.9,
+    "lon": 13.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Capranica Prenestina",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "lat": 41.8833,
+    "lon": 13.0667,
+    "pop": 0
+  },
+  {
+    "nome": "Casavatore",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "lat": 40.9,
+    "lon": 14.2667,
+    "pop": 0
+  },
+  {
+    "nome": "Arzano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "lat": 40.9167,
+    "lon": 14.2667,
+    "pop": 0
+  },
+  {
+    "nome": "Casandrino",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.9333,
+    "lon": 14.2333,
+    "pop": 0
+  },
+  {
+    "nome": "Melito di Napoli",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.9167,
+    "lon": 14.2333,
+    "pop": 0
+  },
+  {
+    "nome": "Mugnano di Napoli",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.9167,
+    "lon": 14.2,
+    "pop": 0
+  },
+  {
+    "nome": "Villaricca",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.9167,
+    "lon": 14.1667,
+    "pop": 0
+  },
+  {
+    "nome": "Calvizzano",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.9167,
+    "lon": 14.1833,
+    "pop": 0
+  },
+  {
+    "nome": "Quarto",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.8667,
+    "lon": 14.1333,
+    "pop": 0
+  },
+  {
+    "nome": "Bacoli",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.8,
+    "lon": 14.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Monte di Procida",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.7833,
+    "lon": 14.05,
+    "pop": 0
+  },
+  {
+    "nome": "Forio",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.7333,
+    "lon": 13.85,
+    "pop": 0
+  },
+  {
+    "nome": "Lacco Ameno",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.75,
+    "lon": 13.9,
+    "pop": 0
+  },
+  {
+    "nome": "Casamicciola Terme",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.75,
+    "lon": 13.9,
+    "pop": 0
+  },
+  {
+    "nome": "Barano d'Ischia",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.7167,
+    "lon": 13.9167,
+    "pop": 0
+  },
+  {
+    "nome": "Serrara Fontana",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.7167,
+    "lon": 13.8833,
+    "pop": 0
+  },
+  {
+    "nome": "Sant'Angelo d'Ischia",
+    "provincia": "Giugliano in Campania",
+    "regione": "Campania",
+    "lat": 40.7,
+    "lon": 13.8833,
+    "pop": 0
+  },
+  {
+    "nome": "Anacapri",
+    "provincia": "Torre del Greco",
+    "regione": "Campania",
+    "lat": 40.5667,
+    "lon": 14.2167,
+    "pop": 0
+  },
+  {
+    "nome": "Capri",
+    "provincia": "Torre del Greco",
+    "regione": "Campania",
+    "lat": 40.55,
+    "lon": 14.2167,
+    "pop": 0
+  },
+  {
+    "nome": "San Giovanni a Teduccio",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "lat": 40.8333,
+    "lon": 14.3,
+    "pop": 0
+  },
+  {
+    "nome": "Triggiano",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.0833,
+    "lon": 16.9167,
+    "pop": 0
+  },
+  {
+    "nome": "Capurso",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.05,
+    "lon": 16.9167,
+    "pop": 0
+  },
+  {
+    "nome": "Cellamare",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.0333,
+    "lon": 16.9167,
+    "pop": 0
+  },
+  {
+    "nome": "Valenzano",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.0333,
+    "lon": 16.9,
+    "pop": 0
+  },
+  {
+    "nome": "Adelfia",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.0,
+    "lon": 16.8667,
+    "pop": 0
+  },
+  {
+    "nome": "Noicattaro",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.0333,
+    "lon": 16.9833,
+    "pop": 0
+  },
+  {
+    "nome": "Rutigliano",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 40.9833,
+    "lon": 17.0167,
+    "pop": 0
+  },
+  {
+    "nome": "Acquaviva delle Fonti",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 40.8833,
+    "lon": 16.85,
+    "pop": 0
+  },
+  {
+    "nome": "Sammichele di Bari",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 40.8667,
+    "lon": 17.0,
+    "pop": 0
+  },
+  {
+    "nome": "Turi",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 40.9167,
+    "lon": 17.0167,
+    "pop": 0
+  },
+  {
+    "nome": "Casamassima",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 40.95,
+    "lon": 16.9167,
+    "pop": 0
+  },
+  {
+    "nome": "Sannicandro di Bari",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.0,
+    "lon": 16.7833,
+    "pop": 0
+  },
+  {
+    "nome": "Grumo Appula",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.0167,
+    "lon": 16.7,
+    "pop": 0
+  },
+  {
+    "nome": "Binetto",
+    "provincia": "Altamura",
+    "regione": "Puglia",
+    "lat": 41.0,
+    "lon": 16.6833,
+    "pop": 0
+  },
+  {
+    "nome": "Palo del Colle",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.05,
+    "lon": 16.6833,
+    "pop": 0
+  },
+  {
+    "nome": "Bitetto",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.05,
+    "lon": 16.7333,
+    "pop": 0
+  },
+  {
+    "nome": "Bitritto",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.0167,
+    "lon": 16.8333,
+    "pop": 0
+  },
+  {
+    "nome": "Modugno",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.1167,
+    "lon": 16.7833,
+    "pop": 0
+  },
+  {
+    "nome": "Giovinazzo",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "lat": 41.1833,
+    "lon": 16.6667,
+    "pop": 0
+  },
+  {
+    "nome": "Terlizzi",
+    "provincia": "Altamura",
+    "regione": "Puglia",
+    "lat": 41.1333,
+    "lon": 16.5333,
+    "pop": 0
+  },
+  {
+    "nome": "Minervino Murge",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "lat": 41.0833,
+    "lon": 16.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Spinazzola",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "lat": 40.9667,
+    "lon": 16.1,
+    "pop": 0
+  },
+  {
+    "nome": "Poggiorsini",
+    "provincia": "Altamura",
+    "regione": "Puglia",
+    "lat": 40.9167,
+    "lon": 16.2667,
+    "pop": 0
+  },
+  {
+    "nome": "Gravina in Puglia",
+    "provincia": "Altamura",
+    "regione": "Puglia",
+    "lat": 40.8167,
+    "lon": 16.4167,
+    "pop": 0
+  },
+  {
+    "nome": "Laterza",
+    "provincia": "Matera",
+    "regione": "Puglia",
+    "lat": 40.6167,
+    "lon": 16.8,
+    "pop": 0
+  },
+  {
+    "nome": "Ginosa",
+    "provincia": "Matera",
+    "regione": "Puglia",
+    "lat": 40.5833,
+    "lon": 16.75,
+    "pop": 0
+  },
+  {
+    "nome": "Castellaneta",
+    "provincia": "Matera",
+    "regione": "Puglia",
+    "lat": 40.6333,
+    "lon": 16.9333,
+    "pop": 0
+  },
+  {
+    "nome": "Ficarazzi",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 38.0833,
+    "lon": 13.4833,
+    "pop": 0
+  },
+  {
+    "nome": "Santa Flavia",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 38.0833,
+    "lon": 13.5333,
+    "pop": 0
+  },
+  {
+    "nome": "Aspra",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 38.1,
+    "lon": 13.5667,
+    "pop": 0
+  },
+  {
+    "nome": "Altavilla Milicia",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 38.0333,
+    "lon": 13.55,
+    "pop": 0
+  },
+  {
+    "nome": "Villabate",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 38.0833,
+    "lon": 13.45,
+    "pop": 0
+  },
+  {
+    "nome": "Belmonte Mezzagno",
+    "provincia": "Palermo",
+    "regione": "Sicilia",
+    "lat": 38.05,
+    "lon": 13.3833,
+    "pop": 0
+  },
+  {
+    "nome": "Misilmeri",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 38.0333,
+    "lon": 13.45,
+    "pop": 0
+  },
+  {
+    "nome": "Bolognetta",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 37.9667,
+    "lon": 13.45,
+    "pop": 0
+  },
+  {
+    "nome": "Marineo",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 37.95,
+    "lon": 13.4167,
+    "pop": 0
+  },
+  {
+    "nome": "Mezzojuso",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 37.9333,
+    "lon": 13.4667,
+    "pop": 0
+  },
+  {
+    "nome": "Godrano",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 37.9167,
+    "lon": 13.4167,
+    "pop": 0
+  },
+  {
+    "nome": "Caccamo",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 37.9333,
+    "lon": 13.6667,
+    "pop": 0
+  },
+  {
+    "nome": "Trabia",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 38.0,
+    "lon": 13.65,
+    "pop": 0
+  },
+  {
+    "nome": "Termini Imerese",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 38.0,
+    "lon": 13.7,
+    "pop": 0
+  },
+  {
+    "nome": "Cefalù",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 38.0333,
+    "lon": 14.0167,
+    "pop": 0
+  },
+  {
+    "nome": "Castelbuono",
+    "provincia": "Enna",
+    "regione": "Sicilia",
+    "lat": 37.9333,
+    "lon": 14.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Pollina",
+    "provincia": "Enna",
+    "regione": "Sicilia",
+    "lat": 38.0,
+    "lon": 14.1333,
+    "pop": 0
+  },
+  {
+    "nome": "Gratteri",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 37.9833,
+    "lon": 13.9667,
+    "pop": 0
+  },
+  {
+    "nome": "Isnello",
+    "provincia": "Caltanissetta",
+    "regione": "Sicilia",
+    "lat": 37.95,
+    "lon": 14.0,
+    "pop": 0
+  },
+  {
+    "nome": "Collesano",
+    "provincia": "Caltanissetta",
+    "regione": "Sicilia",
+    "lat": 37.9167,
+    "lon": 13.9333,
+    "pop": 0
+  },
+  {
+    "nome": "Campofelice di Roccella",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 38.0,
+    "lon": 13.8667,
+    "pop": 0
+  },
+  {
+    "nome": "Lascari",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 38.0,
+    "lon": 13.9333,
+    "pop": 0
+  },
+  {
+    "nome": "Scillato",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 37.9333,
+    "lon": 13.8833,
+    "pop": 0
+  },
+  {
+    "nome": "Sclafani Bagni",
+    "provincia": "Bagheria",
+    "regione": "Sicilia",
+    "lat": 37.8833,
+    "lon": 13.8667,
+    "pop": 0
+  },
+  {
+    "nome": "Elmas",
+    "provincia": "Cagliari",
+    "regione": "Sardegna",
+    "lat": 39.2667,
+    "lon": 9.05,
+    "pop": 0
+  },
+  {
+    "nome": "Monserrato",
+    "provincia": "Cagliari",
+    "regione": "Sardegna",
+    "lat": 39.2667,
+    "lon": 9.15,
+    "pop": 0
+  },
+  {
+    "nome": "Settimo San Pietro",
+    "provincia": "Cagliari",
+    "regione": "Sardegna",
+    "lat": 39.2833,
+    "lon": 9.2167,
+    "pop": 0
+  },
+  {
+    "nome": "Maracalagonis",
+    "provincia": "Cagliari",
+    "regione": "Sardegna",
+    "lat": 39.2333,
+    "lon": 9.2667,
+    "pop": 0
+  },
+  {
+    "nome": "Burcei",
+    "provincia": "Cagliari",
+    "regione": "Sardegna",
+    "lat": 39.35,
+    "lon": 9.35,
+    "pop": 0
+  },
+  {
+    "nome": "Dolianova",
+    "provincia": "Cagliari",
+    "regione": "Sardegna",
+    "lat": 39.3667,
+    "lon": 9.1833,
+    "pop": 0
+  },
+  {
+    "nome": "Donori",
+    "provincia": "Sud Sardegna",
+    "regione": "Sardegna",
+    "lat": 39.4,
+    "lon": 9.1167,
+    "pop": 0
+  },
+  {
+    "nome": "Samatzai",
+    "provincia": "Sud Sardegna",
+    "regione": "Sardegna",
+    "lat": 39.4167,
+    "lon": 9.0,
+    "pop": 0
+  },
+  {
+    "nome": "Monastir",
+    "provincia": "Sud Sardegna",
+    "regione": "Sardegna",
+    "lat": 39.3833,
+    "lon": 9.05,
+    "pop": 0
+  },
+  {
+    "nome": "Nuraminis",
+    "provincia": "Sud Sardegna",
+    "regione": "Sardegna",
+    "lat": 39.4333,
+    "lon": 9.0,
+    "pop": 0
+  },
+  {
+    "nome": "Villasor",
+    "provincia": "Sud Sardegna",
+    "regione": "Sardegna",
+    "lat": 39.3833,
+    "lon": 8.9333,
+    "pop": 0
+  },
+  {
+    "nome": "Villaspeciosa",
+    "provincia": "Sud Sardegna",
+    "regione": "Sardegna",
+    "lat": 39.35,
+    "lon": 8.9167,
+    "pop": 0
+  },
+  {
+    "nome": "Decimoputzu",
+    "provincia": "Sud Sardegna",
+    "regione": "Sardegna",
+    "lat": 39.3167,
+    "lon": 8.8833,
+    "pop": 0
+  },
+  {
+    "nome": "San Sperate",
+    "provincia": "Sud Sardegna",
+    "regione": "Sardegna",
+    "lat": 39.35,
+    "lon": 9.0,
+    "pop": 0
+  },
+  {
+    "nome": "Sestu",
+    "provincia": "Cagliari",
+    "regione": "Sardegna",
+    "lat": 39.3,
+    "lon": 9.0833,
+    "pop": 0
+  },
+  {
+    "nome": "Uta",
+    "provincia": "Sud Sardegna",
+    "regione": "Sardegna",
+    "lat": 39.2833,
+    "lon": 8.95,
+    "pop": 0
+  },
+  {
+    "nome": "Sarroch",
+    "provincia": "Cagliari",
+    "regione": "Sardegna",
+    "lat": 39.0667,
+    "lon": 9.0167,
+    "pop": 0
+  },
+  {
+    "nome": "Villa San Pietro",
+    "provincia": "Cagliari",
+    "regione": "Sardegna",
+    "lat": 38.9667,
+    "lon": 9.0333,
+    "pop": 0
+  },
+  {
+    "nome": "Pula",
+    "provincia": "Cagliari",
+    "regione": "Sardegna",
+    "lat": 38.9833,
+    "lon": 9.0,
+    "pop": 0
   }
 ]
