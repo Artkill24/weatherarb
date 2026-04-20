@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Live Data Dashboard | WeatherArb Intelligence</title>
-  <meta name="description" content="Dashboard in tempo reale delle anomalie meteo in 121 città europee. Z-Score su baseline NASA POWER 25 anni. WeatherArb Weather Intelligence Agency.">
+  <meta name="description" content="Dashboard in tempo reale delle anomalie meteo in 379 nodi globali. Z-Score su baseline NASA POWER 25 anni. WeatherArb Weather Intelligence Agency.">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <style>
     :root{
@@ -48,7 +48,7 @@
 
     /* MAP */
     .map-wrap{max-width:1200px;margin:0 auto;padding:0 24px 24px}
-    #map{height:320px;border-radius:12px;border:1px solid var(--b);background:var(--s)}
+    #map{height:420px;border-radius:12px;border:1px solid var(--b);background:var(--s)}
     .leaflet-container{background:#0a0d12!important}
     .wa-popup{background:#0a0d12;border:1px solid #1e2d3d;border-radius:8px;padding:10px 14px;color:#c8d6e5;font-family:-apple-system,sans-serif;min-width:160px}
     .wa-popup b{display:block;font-size:14px;margin-bottom:4px}
@@ -89,7 +89,7 @@
     @media(max-width:768px){
       .hero-stats{gap:16px}.hs-n{font-size:22px}
       th:nth-child(4),th:nth-child(5),td:nth-child(4),td:nth-child(5){display:none}
-      #map{height:220px}
+      #map{height:260px}
     }
   </style>
 </head>
@@ -109,10 +109,10 @@
 <div class="hero">
   <div class="hero-left">
     <h1>Live Intelligence Dashboard</h1>
-    <p>121 nodi europei · Z-Score su baseline NASA POWER 25 anni · Aggiornamento ogni ora</p>
+    <p>379 nodi globali · Z-Score NASA POWER 25 anni · Aggiornamento ogni ora</p>
   </div>
   <div class="hero-stats">
-    <div class="hs"><div class="hs-n" id="stat-total">121</div><div class="hs-l">Città</div></div>
+    <div class="hs"><div class="hs-n" id="stat-total">379</div><div class="hs-l">Nodi</div></div>
     <div class="hs"><div class="hs-n" id="stat-crit" style="color:var(--r)">—</div><div class="hs-l">Critical</div></div>
     <div class="hs"><div class="hs-n" id="stat-ext" style="color:var(--o)">—</div><div class="hs-l">Extreme</div></div>
     <div class="hs"><div class="hs-n" id="stat-avg" style="color:var(--bl)">—</div><div class="hs-l">Score Medio</div></div>
@@ -182,7 +182,7 @@ let currentFilter = 'ALL';
 let currentSort = {key:'score', dir:-1};
 
 // MAP
-const map = L.map('map',{center:[50,10],zoom:4,zoomControl:true,attributionControl:false});
+const map = L.map('map',{center:[30,0],zoom:2,zoomControl:true,attributionControl:false});
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:18}).addTo(map);
 const markers = [];
 
