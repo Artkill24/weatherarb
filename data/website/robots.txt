@@ -9,3 +9,4 @@ User-agent: Bingbot
 Allow: /
 
 Sitemap: https://weatherarb.com/sitemap.xml
+
