@@ -3217,6 +3217,391 @@
       "lat": 46.8139,
       "lon": -71.208,
       "cluster": "CA_East"
+    },
+    {
+      "nome": "Tokyo",
+      "regione": "Kanto",
+      "country": "Japan",
+      "lat": 35.6895,
+      "lon": 139.6917
+    },
+    {
+      "nome": "Osaka",
+      "regione": "Kansai",
+      "country": "Japan",
+      "lat": 34.6937,
+      "lon": 135.5023
+    },
+    {
+      "nome": "Yokohama",
+      "regione": "Kanto",
+      "country": "Japan",
+      "lat": 35.4437,
+      "lon": 139.638
+    },
+    {
+      "nome": "Nagoya",
+      "regione": "Chubu",
+      "country": "Japan",
+      "lat": 35.1815,
+      "lon": 136.9066
+    },
+    {
+      "nome": "Sapporo",
+      "regione": "Hokkaido",
+      "country": "Japan",
+      "lat": 43.0618,
+      "lon": 141.3545
+    },
+    {
+      "nome": "Fukuoka",
+      "regione": "Kyushu",
+      "country": "Japan",
+      "lat": 33.5904,
+      "lon": 130.4017
+    },
+    {
+      "nome": "Shanghai",
+      "regione": "Shanghai",
+      "country": "China",
+      "lat": 31.2304,
+      "lon": 121.4737
+    },
+    {
+      "nome": "Beijing",
+      "regione": "Beijing",
+      "country": "China",
+      "lat": 39.9042,
+      "lon": 116.4074
+    },
+    {
+      "nome": "Guangzhou",
+      "regione": "Guangdong",
+      "country": "China",
+      "lat": 23.1291,
+      "lon": 113.2644
+    },
+    {
+      "nome": "Shenzhen",
+      "regione": "Guangdong",
+      "country": "China",
+      "lat": 22.5431,
+      "lon": 114.0579
+    },
+    {
+      "nome": "Chengdu",
+      "regione": "Sichuan",
+      "country": "China",
+      "lat": 30.5728,
+      "lon": 104.0668
+    },
+    {
+      "nome": "Chongqing",
+      "regione": "Chongqing",
+      "country": "China",
+      "lat": 29.4316,
+      "lon": 106.9123
+    },
+    {
+      "nome": "Seoul",
+      "regione": "Seoul",
+      "country": "South Korea",
+      "lat": 37.5665,
+      "lon": 126.978
+    },
+    {
+      "nome": "Busan",
+      "regione": "Gyeongnam",
+      "country": "South Korea",
+      "lat": 35.1796,
+      "lon": 129.0756
+    },
+    {
+      "nome": "Singapore",
+      "regione": "Singapore",
+      "country": "Singapore",
+      "lat": 1.3521,
+      "lon": 103.8198
+    },
+    {
+      "nome": "Mumbai",
+      "regione": "Maharashtra",
+      "country": "India",
+      "lat": 19.076,
+      "lon": 72.8777
+    },
+    {
+      "nome": "Delhi",
+      "regione": "Delhi",
+      "country": "India",
+      "lat": 28.6139,
+      "lon": 77.209
+    },
+    {
+      "nome": "Bangalore",
+      "regione": "Karnataka",
+      "country": "India",
+      "lat": 12.9716,
+      "lon": 77.5946
+    },
+    {
+      "nome": "Chennai",
+      "regione": "Tamil Nadu",
+      "country": "India",
+      "lat": 13.0827,
+      "lon": 80.2707
+    },
+    {
+      "nome": "Kolkata",
+      "regione": "West Bengal",
+      "country": "India",
+      "lat": 22.5726,
+      "lon": 88.3639
+    },
+    {
+      "nome": "Hong Kong",
+      "regione": "Hong Kong",
+      "country": "China",
+      "lat": 22.3193,
+      "lon": 114.1694
+    },
+    {
+      "nome": "Bangkok",
+      "regione": "Bangkok",
+      "country": "Thailand",
+      "lat": 13.7563,
+      "lon": 100.5018
+    },
+    {
+      "nome": "Jakarta",
+      "regione": "Java",
+      "country": "Indonesia",
+      "lat": -6.2088,
+      "lon": 106.8456
+    },
+    {
+      "nome": "Kuala Lumpur",
+      "regione": "Selangor",
+      "country": "Malaysia",
+      "lat": 3.139,
+      "lon": 101.6869
+    },
+    {
+      "nome": "Manila",
+      "regione": "Metro Manila",
+      "country": "Philippines",
+      "lat": 14.5995,
+      "lon": 120.9842
+    },
+    {
+      "nome": "Taipei",
+      "regione": "Taipei",
+      "country": "Taiwan",
+      "lat": 25.033,
+      "lon": 121.5654
+    },
+    {
+      "nome": "Ho Chi Minh City",
+      "regione": "Nam Bo",
+      "country": "Vietnam",
+      "lat": 10.8231,
+      "lon": 106.6297
+    },
+    {
+      "nome": "Hanoi",
+      "regione": "Red River Delta",
+      "country": "Vietnam",
+      "lat": 21.0285,
+      "lon": 105.8542
+    },
+    {
+      "nome": "Karachi",
+      "regione": "Sindh",
+      "country": "Pakistan",
+      "lat": 24.8607,
+      "lon": 67.0011
+    },
+    {
+      "nome": "Lahore",
+      "regione": "Punjab",
+      "country": "Pakistan",
+      "lat": 31.5204,
+      "lon": 74.3587
+    },
+    {
+      "nome": "Dhaka",
+      "regione": "Dhaka",
+      "country": "Bangladesh",
+      "lat": 23.8103,
+      "lon": 90.4125
+    },
+    {
+      "nome": "Colombo",
+      "regione": "Western Province",
+      "country": "Sri Lanka",
+      "lat": 6.9271,
+      "lon": 79.8612
+    },
+    {
+      "nome": "Kathmandu",
+      "regione": "Bagmati",
+      "country": "Nepal",
+      "lat": 27.7172,
+      "lon": 85.324
+    },
+    {
+      "nome": "Ulaanbaatar",
+      "regione": "Ulaanbaatar",
+      "country": "Mongolia",
+      "lat": 47.8864,
+      "lon": 106.9057
+    },
+    {
+      "nome": "Dubai",
+      "regione": "Dubai",
+      "country": "UAE",
+      "lat": 25.2048,
+      "lon": 55.2708
+    },
+    {
+      "nome": "Riyadh",
+      "regione": "Riyadh",
+      "country": "Saudi Arabia",
+      "lat": 24.7136,
+      "lon": 46.6753
+    },
+    {
+      "nome": "Tehran",
+      "regione": "Tehran",
+      "country": "Iran",
+      "lat": 35.6892,
+      "lon": 51.389
+    },
+    {
+      "nome": "Istanbul",
+      "regione": "Marmara",
+      "country": "Turkey",
+      "lat": 41.0082,
+      "lon": 28.9784
+    },
+    {
+      "nome": "Ankara",
+      "regione": "Central Anatolia",
+      "country": "Turkey",
+      "lat": 39.9334,
+      "lon": 32.8597
+    },
+    {
+      "nome": "Tel Aviv",
+      "regione": "Tel Aviv",
+      "country": "Israel",
+      "lat": 32.0853,
+      "lon": 34.7818
+    },
+    {
+      "nome": "Nairobi",
+      "regione": "Nairobi",
+      "country": "Kenya",
+      "lat": -1.2921,
+      "lon": 36.8219
+    },
+    {
+      "nome": "Lagos",
+      "regione": "Lagos",
+      "country": "Nigeria",
+      "lat": 6.5244,
+      "lon": 3.3792
+    },
+    {
+      "nome": "Cairo",
+      "regione": "Cairo",
+      "country": "Egypt",
+      "lat": 30.0444,
+      "lon": 31.2357
+    },
+    {
+      "nome": "Johannesburg",
+      "regione": "Gauteng",
+      "country": "South Africa",
+      "lat": -26.2041,
+      "lon": 28.0473
+    },
+    {
+      "nome": "Casablanca",
+      "regione": "Casablanca",
+      "country": "Morocco",
+      "lat": 33.5731,
+      "lon": -7.5898
+    },
+    {
+      "nome": "São Paulo",
+      "regione": "São Paulo",
+      "country": "Brazil",
+      "lat": -23.5505,
+      "lon": -46.6333
+    },
+    {
+      "nome": "Rio de Janeiro",
+      "regione": "Rio de Janeiro",
+      "country": "Brazil",
+      "lat": -22.9068,
+      "lon": -43.1729
+    },
+    {
+      "nome": "Buenos Aires",
+      "regione": "Buenos Aires",
+      "country": "Argentina",
+      "lat": -34.6037,
+      "lon": -58.3816
+    },
+    {
+      "nome": "Santiago",
+      "regione": "Santiago",
+      "country": "Chile",
+      "lat": -33.4489,
+      "lon": -70.6693
+    },
+    {
+      "nome": "Bogotá",
+      "regione": "Cundinamarca",
+      "country": "Colombia",
+      "lat": 4.711,
+      "lon": -74.0721
+    },
+    {
+      "nome": "Mexico City",
+      "regione": "CDMX",
+      "country": "Mexico",
+      "lat": 19.4326,
+      "lon": -99.1332
+    },
+    {
+      "nome": "Sydney",
+      "regione": "New South Wales",
+      "country": "Australia",
+      "lat": -33.8688,
+      "lon": 151.2093
+    },
+    {
+      "nome": "Melbourne",
+      "regione": "Victoria",
+      "country": "Australia",
+      "lat": -37.8136,
+      "lon": 144.9631
+    },
+    {
+      "nome": "Perth",
+      "regione": "Western Australia",
+      "country": "Australia",
+      "lat": -31.9505,
+      "lon": 115.8605
+    },
+    {
+      "nome": "Auckland",
+      "regione": "Auckland",
+      "country": "New Zealand",
+      "lat": -36.8485,
+      "lon": 174.7633
     }
   ]
 }
