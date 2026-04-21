@@ -9,7 +9,7 @@ log = logging.getLogger(__name__)
 
 API_BASE       = os.getenv("API_BASE", "https://api.weatherarb.com")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL   = "gemini-2.0-flash"
+GEMINI_MODEL   = "gemini-2.0-flash-lite"
 GROQ_API_KEY   = os.getenv("GROQ_API_KEY", "")
 GROQ_MODEL     = "llama-3.3-70b-versatile"
 UNSPLASH_KEY   = os.getenv("UNSPLASH_KEY", "TQKawFnfN84CU84RHdzVHWqFHMFsmjiNnPbktCcyjMw")
@@ -539,7 +539,7 @@ def main():
     update_feed()
     # Aggiorna RSS feed.xml
     try:
-        from core.content_generator import update_sitemap
+        import sys; sys.path.insert(0, "/home/saad/nano_pulse"); from core.content_generator import update_sitemap
         all_posts = list(sorted(BLOG.glob("*.json"), reverse=True))
         articles = [json.loads(f.read_text()) for f in all_posts[:30]]
         update_sitemap(articles)
