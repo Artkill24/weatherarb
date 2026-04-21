@@ -537,6 +537,15 @@ def main():
     if not sigs: log.info("Nessuna anomalia sopra soglia")
     else: log.info(f"Pubblicati {published} nuovi articoli")
     update_feed()
+    # Aggiorna RSS feed.xml
+    try:
+        from core.content_generator import update_sitemap
+        all_posts = list(sorted(BLOG.glob("*.json"), reverse=True))
+        articles = [json.loads(f.read_text()) for f in all_posts[:30]]
+        update_sitemap(articles)
+        log.info("feed.xml aggiornato")
+    except Exception as e:
+        log.warning(f"feed.xml error: {e}")
     update_news_index()
     log.info("=== WeatherArb Auto-Publisher END ===")
 
