@@ -217,7 +217,8 @@ def _cc(country):
          "Belgium":"be","Portugal":"pt","Denmark":"dk","Norway":"no","Greece":"gr",
          "Croatia":"hr","Czech Republic":"cz","Hungary":"hu","Romania":"ro","Finland":"fi",
          "Slovenia":"si","Slovakia":"sk","Serbia":"rs"}
-    return m.get(country, "it")
+    m.update({'USA': 'us', 'Canada': 'ca', 'Brazil': 'br', 'Argentina': 'ar', 'Mexico': 'mx', 'Colombia': 'co', 'Chile': 'cl', 'Australia': 'au', 'New Zealand': 'nz', 'Japan': 'jp', 'South Korea': 'kr', 'China': 'cn', 'India': 'in', 'Bangladesh': 'bd', 'Pakistan': 'pk', 'Sri Lanka': 'lk', 'Nepal': 'np', 'Indonesia': 'id', 'Philippines': 'ph', 'Vietnam': 'vn', 'Thailand': 'th', 'Malaysia': 'my', 'Singapore': 'sg', 'Taiwan': 'tw', 'Mongolia': 'mn', 'Iran': 'ir', 'Turkey': 'tr', 'Israel': 'il', 'UAE': 'ae', 'Saudi Arabia': 'sa', 'Egypt': 'eg', 'Morocco': 'ma', 'Nigeria': 'ng', 'Kenya': 'ke', 'South Africa': 'za'})
+    return m.get(country, "eu")
 
 # ─── SUPABASE HELPERS ─────────────────────────────────────────────────────────
 def sb(method, table, data=None, params=None):
