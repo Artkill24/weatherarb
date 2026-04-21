@@ -324,6 +324,23 @@ def get_top(limit: int = 10, key: Optional[str] = None):
     top = _top_cache.get("top", [])
     return {"count": len(top), "reports": top[:min(limit, 50)], "data": top[:min(limit, 50)]}
 
+@app.get("/api/v1/pulse/nearby")
+def get_nearby(lat: float, lon: float, key: Optional[str] = None):
+    if key:
+        _check_and_increment_key(key)
+    top = _top_cache.get("top", [])
+    if not top:
+        return {"error": "No data cached yet"}
+    import math, unicodedata, re
+    nearest = min(top, key=lambda n: math.sqrt((n["lat"]-lat)**2 + (n["lon"]-lon)**2))
+    dist = round(math.sqrt((nearest["lat"]-lat)**2 + (nearest["lon"]-lon)**2) * 111, 1)
+    slug = nearest["location"].lower().replace(" ", "-").replace("'", "")
+    slug = unicodedata.normalize("NFKD", slug).encode("ascii","ignore").decode("ascii")
+    slug = re.sub(r"[^\w-]", "", slug)
+    data = _cache.get(slug, {})
+    weather = data.get("weather", {})
+    return {"province": nearest["location"], "country_code": nearest["country_code"], "lat": nearest["lat"], "lon": nearest["lon"], "distance_km": dist, "z_score": nearest["z_score"], "anomaly_level": nearest["anomaly_level"], "event_type": nearest["event_type"], "score": nearest["score"], "temperature_c": weather.get("temperature_c"), "precipitation": weather.get("precipitation", 0), "humidity_pct": nearest.get("humidity_pct"), "wind_kmh": nearest.get("wind_kmh")}
+
 # ─── NEWSLETTER ───────────────────────────────────────────────────────────────
 @app.post("/api/newsletter/subscribe")
 def newsletter_subscribe(email: str, city: str = "Europa", country_code: str = "it"):
