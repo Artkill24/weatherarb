@@ -339,7 +339,7 @@ def get_top(limit: int = 10, key: Optional[str] = None):
     if key:
         _check_and_increment_key(key)
     top = _top_cache.get("top", [])
-    return {"count": len(top), "reports": top[:min(limit, 50)], "data": top[:min(limit, 50)]}
+    return {"count": len(top), "reports": top[:min(limit, 500)], "data": top[:min(limit, 500)]}
 
 @app.get("/api/v1/pulse/nearby")
 def get_nearby(lat: float, lon: float, key: Optional[str] = None):
