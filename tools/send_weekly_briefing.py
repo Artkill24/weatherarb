@@ -18,7 +18,7 @@ RESEND_API_KEY = os.getenv("RESEND_API_KEY", "")
 SUPABASE_URL   = os.getenv("SUPABASE_URL", "https://mlawljowkvgeyydrwirk.supabase.co")
 SUPABASE_KEY   = os.getenv("SUPABASE_ANON_KEY", "")
 FROM_EMAIL     = "WeatherArb Intelligence <alerts@weatherarb.com>"
-GEMINI_MODEL   = "gemini-2.5-flash-lite"
+GEMINI_MODEL   = "gemini-2.0-flash-lite"
 
 
 def get_subscribers():
