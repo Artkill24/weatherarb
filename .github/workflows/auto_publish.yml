@@ -42,3 +42,11 @@ jobs:
           git add data/blog_posts/ data/website/news/ data/website/data/latest_reports.json
           git diff --staged --quiet || git commit -m "auto: publish weather intelligence reports $(date -u +%Y-%m-%d)"
           git push
+
+      - name: Send alerts
+        env:
+          API_BASE: https://api.weatherarb.com
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: python tools/send_alerts.py
