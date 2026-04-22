@@ -597,3 +597,44 @@ async def startup():
     from fastapi.concurrency import run_in_threadpool
     logger.info("WeatherArb API starting...")
     await run_in_threadpool(refresh_all)
+
+# ─── USER ALERTS ──────────────────────────────────────────────────────────────
+@app.post("/api/alerts/subscribe")
+async def alert_subscribe(request: Request):
+    data = await request.json()
+    key = data.get("api_key", "")
+    city = data.get("city", "")
+    country_code = data.get("country_code", "it")
+    threshold = float(data.get("threshold_zscore", 2.0))
+    if not key or not city:
+        raise HTTPException(status_code=400, detail="api_key and city required")
+    key_data = sb("GET", "api_keys", params={"api_key": f"eq.{key}", "select": "email,active"})
+    if not key_data or not key_data[0].get("active"):
+        raise HTTPException(status_code=403, detail="Invalid or inactive API key")
+    email = key_data[0]["email"]
+    existing = sb("GET", "user_alerts", params={"api_key": f"eq.{key}", "city": f"eq.{city}"})
+    if existing:
+        sb("PATCH", "user_alerts", data={"threshold_zscore": threshold, "active": True}, params={"api_key": f"eq.{key}", "city": f"eq.{city}"})
+        return {"status": "updated", "city": city, "threshold": threshold}
+    sb("POST", "user_alerts", data={"email": email, "api_key": key, "city": city, "country_code": country_code, "threshold_zscore": threshold, "active": True})
+    return {"status": "created", "city": city, "threshold": threshold, "email": email}
+
+@app.get("/api/alerts/list")
+def alert_list(key: str = ""):
+    if not key:
+        raise HTTPException(status_code=400, detail="api_key required")
+    key_data = sb("GET", "api_keys", params={"api_key": f"eq.{key}", "select": "email,active"})
+    if not key_data or not key_data[0].get("active"):
+        raise HTTPException(status_code=403, detail="Invalid or inactive API key")
+    alerts = sb("GET", "user_alerts", params={"api_key": f"eq.{key}", "active": "eq.true"})
+    return {"alerts": alerts or []}
+
+@app.delete("/api/alerts/delete")
+async def alert_delete(request: Request):
+    data = await request.json()
+    key = data.get("api_key", "")
+    city = data.get("city", "")
+    if not key or not city:
+        raise HTTPException(status_code=400, detail="api_key and city required")
+    sb("PATCH", "user_alerts", data={"active": False}, params={"api_key": f"eq.{key}", "city": f"eq.{city}"})
+    return {"status": "deleted", "city": city}
