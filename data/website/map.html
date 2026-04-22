@@ -133,76 +133,83 @@ function makeSlug(name){
     .replace(/[^a-z0-9]/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
 }
 
-var cities = [
-  {n:"Torino",la:45.07,lo:7.69},{n:"Aosta",la:45.74,lo:7.32},
-  {n:"Milano",la:45.46,lo:9.19},{n:"Varese",la:45.82,lo:8.83},
-  {n:"Como",la:45.81,lo:9.09},{n:"Bergamo",la:45.70,lo:9.68},
-  {n:"Brescia",la:45.54,lo:10.22},{n:"Sondrio",la:46.17,lo:9.87},
-  {n:"Trento",la:46.07,lo:11.12},{n:"Bolzano",la:46.50,lo:11.36},
-  {n:"Vicenza",la:45.55,lo:11.55},{n:"Verona",la:45.44,lo:10.99},
-  {n:"Venezia",la:45.44,lo:12.33},{n:"Padova",la:45.41,lo:11.88},
-  {n:"Treviso",la:45.67,lo:12.24},{n:"Belluno",la:46.14,lo:12.22},
-  {n:"Udine",la:46.06,lo:13.24},{n:"Trieste",la:45.65,lo:13.78},
-  {n:"Genova",la:44.41,lo:8.93},{n:"Bologna",la:44.49,lo:11.34},
-  {n:"Parma",la:44.80,lo:10.33},{n:"Modena",la:44.65,lo:10.92},
-  {n:"Ferrara",la:44.84,lo:11.62},{n:"Biella",la:45.56,lo:8.05},
-  {n:"Novara",la:45.45,lo:8.62},{n:"Vercelli",la:45.32,lo:8.42},
-  {n:"Cuneo",la:44.39,lo:7.55},{n:"Asti",la:44.90,lo:8.21},
-  {n:"Alessandria",la:44.91,lo:8.62},{n:"Pavia",la:45.19,lo:9.16},
-  {n:"Lodi",la:45.31,lo:9.50},{n:"Cremona",la:45.13,lo:10.03},
-  {n:"Mantova",la:45.16,lo:10.79},{n:"Lecco",la:45.86,lo:9.40},
-  {n:"München",la:48.14,lo:11.58},{n:"Hamburg",la:53.58,lo:10.02},
-  {n:"Berlin",la:52.52,lo:13.40},{n:"Frankfurt",la:50.11,lo:8.68},
-  {n:"Stuttgart",la:48.78,lo:9.18},{n:"Köln",la:50.94,lo:6.96},
-  {n:"Düsseldorf",la:51.22,lo:6.78},{n:"Nürnberg",la:49.45,lo:11.08}
-];
+var markers = [];
 
-function addMarkers(cache){
-  cities.forEach(function(c){
-    var d = cache[c.n.toLowerCase()];
-    var z = d ? (d.z_score||0) : 0;
-    var level = getLevel(z);
-    var color = colors[level];
-    var size = sizes[level];
-    var slug = makeSlug(c.n);
+function makeSlug(name){
+  return (name||'').toLowerCase()
+    .replace(/[àáâ]/g,'a').replace(/[èéê]/g,'e')
+    .replace(/[ùúû]/g,'u').replace(/ü/g,'u')
+    .replace(/ö/g,'o').replace(/ä/g,'a')
+    .replace(/[^a-z0-9]/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
+}
 
-    var el = document.createElement('div');
-    el.style.cssText = 'width:'+size+'px;height:'+size+'px;border-radius:50%;'
-      +'background:'+color+';border:2px solid rgba(255,255,255,.5);cursor:pointer;'
-      +'box-shadow:0 0 '+(level==='critical'?12:4)+'px '+color;
+var heatmapVisible = true;
+
+function addHeatmap(data){
+  if(map.getSource('heat')) { map.removeLayer('heatmap-layer'); map.removeSource('heat'); }
+  var features = data.filter(function(d){ return d.lat && d.lon && Math.abs(d.z_score||0)>=1; })
+    .map(function(d){ return {type:'Feature', geometry:{type:'Point',coordinates:[d.lon,d.lat]}, properties:{z:Math.min(Math.abs(d.z_score||0)/5,1)}}; });
+  map.addSource('heat', {type:'geojson', data:{type:'FeatureCollection',features:features}});
+  map.addLayer({id:'heatmap-layer', type:'heatmap', source:'heat',
+    paint:{
+      'heatmap-weight':['get','z'],
+      'heatmap-intensity':1.5,
+      'heatmap-radius':30,
+      'heatmap-color':['interpolate',['linear'],['heatmap-density'],
+        0,'rgba(0,0,255,0)',0.2,'rgba(59,130,246,0.4)',0.4,'rgba(234,179,8,0.6)',
+        0.7,'rgba(249,115,22,0.8)',1,'rgba(239,68,68,1)'],
+      'heatmap-opacity':0.6
+    }
+  }, 'waterway');
+}
+
+function addMarkers(data){
+  markers.forEach(function(m){m.remove();});
+  markers=[];
+  data.forEach(function(d){
+    if(!d.lat||!d.lon) return;
+    var z=d.z_score||0, sc=d.score||0;
+    var a=Math.abs(z);
+    var level=a>=3?'critical':a>=2?'extreme':a>=1?'unusual':'normal';
+    var color=colors[level], size=sizes[level];
+    var cc=(d.country_code||'eu').toLowerCase();
+    var slug=makeSlug(d.location||d.province||'');
+    var el=document.createElement('div');
+    el.style.cssText='width:'+size+'px;height:'+size+'px;border-radius:50%;background:'+color+';border:2px solid rgba(255,255,255,.5);cursor:pointer;box-shadow:0 0 '+(level==='critical'?12:4)+'px '+color;
     if(level==='critical') el.className='dot-critical';
     else if(level==='extreme') el.className='dot-extreme';
-
-    var zText = z!==0 ? (z>=0?'+':'')+z.toFixed(2) : '—';
-    var popupHtml = '<div style="font-family:Georgia,serif;font-size:16px;margin-bottom:8px">'+c.n+'</div>'
+    var zText=(z>=0?'+':'')+z.toFixed(2);
+    var popupHtml='<div style="font-family:Georgia,serif;font-size:16px;margin-bottom:8px">'+(d.location||d.province||'')+'</div>'
       +'<div style="display:flex;gap:14px;margin-bottom:10px">'
       +'<div><div style="font-size:10px;opacity:.5;text-transform:uppercase">Z-Score</div>'
       +'<div style="font-size:20px;font-weight:700;color:'+color+'">'+zText+'</div></div>'
-      +(d?'<div><div style="font-size:10px;opacity:.5;text-transform:uppercase">Livello</div>'
-        +'<div style="font-size:13px;font-weight:600;color:'+color+'">'+d.anomaly_level+'</div></div>':'')
-      +(d&&d.score?'<div><div style="font-size:10px;opacity:.5;text-transform:uppercase">Score</div>'
-        +'<div style="font-size:13px;font-weight:600">'+Number(d.score).toFixed(1)+'/10</div></div>':'')
+      +'<div><div style="font-size:10px;opacity:.5;text-transform:uppercase">Livello</div>'
+      +'<div style="font-size:13px;font-weight:600;color:'+color+'">'+(d.anomaly_level||level.toUpperCase())+'</div></div>'
+      +'<div><div style="font-size:10px;opacity:.5;text-transform:uppercase">Score</div>'
+      +'<div style="font-size:13px;font-weight:600">'+sc.toFixed(1)+'/10</div></div>'
       +'</div>'
-      +(d&&d.event_type?'<div style="font-size:12px;opacity:.6;margin-bottom:10px">'+d.event_type.replace(/_/g,' ')+'</div>':'')
-      +'<a href="/it/'+slug+'/" style="display:block;background:#2563eb;color:white;padding:8px;'
-      +'border-radius:8px;text-align:center;font-size:12px;text-decoration:none">Analisi completa →</a>';
-
-    new maplibregl.Marker({element:el})
-      .setLngLat([c.lo, c.la])
-      .setPopup(new maplibregl.Popup({offset:size/2+2, closeButton:true}).setHTML(popupHtml))
+      +(d.event_type?'<div style="font-size:12px;opacity:.6;margin-bottom:10px">'+d.event_type.replace(/_/g,' ')+'</div>':'')
+      +'<a href="/'+cc+'/'+slug+'/" style="display:block;background:#2563eb;color:white;padding:8px;border-radius:8px;text-align:center;font-size:12px;text-decoration:none">Analisi completa →</a>';
+    var m=new maplibregl.Marker({element:el})
+      .setLngLat([d.lon,d.lat])
+      .setPopup(new maplibregl.Popup({offset:size/2+2,closeButton:true}).setHTML(popupHtml))
       .addTo(map);
+    markers.push(m);
   });
 }
 
 // Load data
-fetch('https://api.weatherarb.com/api/v1/europe/top?limit=60')
+fetch('https://api.weatherarb.com/api/v1/europe/top?limit=500')
   .then(function(r){return r.json();})
   .then(function(d){
-    var cache = {};
-    if(d&&d.data) d.data.forEach(function(x){if(x.province)cache[x.province.toLowerCase()]=x;});
-    addMarkers(cache);
+    var data=(d.reports||d.data||[]);
+    map.on('load',function(){
+      addHeatmap(data);
+      addMarkers(data);
+    });
+    if(map.loaded()){addHeatmap(data);addMarkers(data);}
   })
-  .catch(function(){addMarkers({});});
+  .catch(function(){});
 
 // Geo card
 if(navigator.geolocation){
