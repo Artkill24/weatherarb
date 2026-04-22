@@ -638,3 +638,26 @@ async def alert_delete(request: Request):
         raise HTTPException(status_code=400, detail="api_key and city required")
     sb("PATCH", "user_alerts", data={"active": False}, params={"api_key": f"eq.{key}", "city": f"eq.{city}"})
     return {"status": "deleted", "city": city}
+
+# ─── LINKEDIN OAuth ───────────────────────────────────────────────────────────
+LINKEDIN_CLIENT_ID = os.getenv("LINKEDIN_CLIENT_ID", "")
+LINKEDIN_CLIENT_SECRET = os.getenv("LINKEDIN_CLIENT_SECRET", "")
+
+@app.get("/auth/linkedin/callback")
+async def linkedin_callback(code: str = "", error: str = ""):
+    if error or not code:
+        return {"error": error}
+    r = req_lib.post("https://www.linkedin.com/oauth/v2/accessToken", data={
+        "grant_type": "authorization_code",
+        "code": code,
+        "redirect_uri": "https://api.weatherarb.com/auth/linkedin/callback",
+        "client_id": LINKEDIN_CLIENT_ID,
+        "client_secret": LINKEDIN_CLIENT_SECRET
+    })
+    data = r.json()
+    token = data.get("access_token", "")
+    if token:
+        _top_cache["linkedin_token"] = token
+        logger.info(f"LinkedIn token saved")
+        return {"status": "ok", "message": "Token salvato! Puoi chiudere questa pagina."}
+    return {"error": data}
