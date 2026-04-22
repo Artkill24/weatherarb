@@ -204,4 +204,5 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url><loc>https://weatherarb.com/leaderboard/</loc><lastmod>2026-04-22</lastmod><changefreq>hourly</changefreq><priority>0.9</priority></url>
 </urlset>
