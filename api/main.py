@@ -210,6 +210,15 @@ def refresh_all():
 
     top_list.sort(key=lambda x: -x["score"])
     _top_cache["top"] = top_list
+    # Cache space weather
+    try:
+        r_sw = req_lib.get("https://services.swpc.noaa.gov/json/planetary_k_index_1m.json", timeout=10)
+        kp_data = r_sw.json()
+        recent = [x for x in kp_data[-30:] if x.get("kp_index") is not None]
+        kp = sum(x["kp_index"] for x in recent) / len(recent) if recent else 0
+        _top_cache["space_weather"] = {"kp_current": round(kp, 2), "flare_class": "C", "solar_flux": 0, "timestamp": datetime.now(timezone.utc).isoformat()}
+    except:
+        pass
     _last_refresh = now
     logger.info(f"Refresh complete: {count} provinces cached")
 
@@ -342,7 +351,8 @@ def get_top(limit: int = 10, key: Optional[str] = None):
     if key:
         _check_and_increment_key(key)
     top = _top_cache.get("top", [])
-    return {"count": len(top), "reports": top[:min(limit, 500)], "data": top[:min(limit, 500)]}
+    sw = _top_cache.get("space_weather", {})
+    return {"count": len(top), "reports": top[:min(limit, 500)], "data": top[:min(limit, 500)], "space_weather": sw}
 
 @app.get("/api/v1/pulse/nearby")
 def get_nearby(lat: float, lon: float, key: Optional[str] = None):
