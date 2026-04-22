@@ -1,3 +1,5 @@
+import hmac
+import hashlib
 #!/usr/bin/env python3
 """WeatherArb FastAPI Backend — Railway"""
 import os, json, math, logging, secrets, hashlib, hmac
