@@ -164,8 +164,9 @@ function prog(p,m){$('fill').style.width=p+'%';$('lmsg').textContent=m}
 function toast(msg,dur=3000){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur)}
 
 function latLon3D(lat,lon,r){
-  const phi=(90-lat)*Math.PI/180, theta=(lon+180)*Math.PI/180;
-  return new THREE.Vector3(-(r*Math.sin(phi)*Math.cos(theta)), r*Math.cos(phi), r*Math.sin(phi)*Math.sin(theta));
+  const phi = (90 - lat) * (Math.PI / 180);
+  const theta = (lon + 90) * (Math.PI / 180);
+  return new THREE.Vector3(r * Math.sin(phi) * Math.cos(theta), r * Math.cos(phi), r * Math.sin(phi) * Math.sin(theta));
 }
 
 function nodeColor(z){
@@ -234,7 +235,7 @@ function buildEarthShader(){
     fragmentShader:`uniform sampler2D dayTex;uniform sampler2D nightTex;uniform vec3 sunDir;varying vec2 vUv;varying vec3 vNormalWorld;void main(){vec3 dayColor=texture2D(dayTex,vUv).rgb;vec3 nightColor=texture2D(nightTex,vUv).rgb;float lightIntensity=dot(vNormalWorld,normalize(sunDir));float blend=smoothstep(-0.2,0.2,lightIntensity);vec3 finalColor=mix(nightColor,dayColor*(lightIntensity+0.2),blend);gl_FragColor=vec4(finalColor,1.0);}`
   });
   globeMesh=new THREE.Mesh(new THREE.SphereGeometry(R,128,128),earthShaderMaterial);
-  globeMesh.rotation.y=-Math.PI/2;
+  
   scene.add(globeMesh);
   const loader=new THREE.TextureLoader();
   loader.load('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg',t=>{earthShaderMaterial.uniforms.dayTex.value=t;});
