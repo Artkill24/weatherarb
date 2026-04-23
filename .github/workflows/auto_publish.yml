@@ -43,6 +43,12 @@ jobs:
           git diff --staged --quiet || git commit -m "auto: publish weather intelligence reports $(date -u +%Y-%m-%d)"
           git push
 
+      - name: Deploy to Cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          cd data/website
+          npx wrangler deploy
       - name: Send alerts
         env:
           API_BASE: https://api.weatherarb.com
