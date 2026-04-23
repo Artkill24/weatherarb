@@ -75,7 +75,7 @@ body{background:#000103;color:#e2e8f0;font-family:'Space Mono',monospace;overflo
     <div style="flex:1;max-width:320px;position:relative;display:flex;justify-content:center">
       <div id="searchbox" class="pointer-auto">
         <svg width="14" height="14" fill="none" stroke="var(--cyan)" stroke-width="2" opacity=".6" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input id="citysearch" type="text" placeholder="Cerca città...">
+        <input id="citysearch" type="text" placeholder="Cerca città (es. Milano, New York)...">
       </div>
       <div id="searchresults"></div>
     </div>
@@ -124,7 +124,7 @@ body{background:#000103;color:#e2e8f0;font-family:'Space Mono',monospace;overflo
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 <script>
 let scene, camera, renderer, theClock, controls;
-let earthGroup; // IL GRUPPO PRINCIPALE!
+let earthGroup; // CORPO RIGIDO ASSOLUTO
 let globeMesh, cloudsMesh, atmosMesh, earthShaderMaterial;
 let sunLight, sunMesh, moonLight, moonMesh;
 let pointCloud, weatherFX=[], labelEls=[];
@@ -137,12 +137,12 @@ const $=id=>document.getElementById(id);
 function prog(p,m){$('fill').style.width=p+'%';$('lmsg').textContent=m}
 function toast(msg,dur=3000){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur)}
 
-// MATEMATICA CORRETTA PER L'ALLINEAMENTO TEXTURE E COORDINATE
+// MATEMATICA EQUIRETTANGOLARE PERFETTA
 function latLon3D(lat,lon,r){
   const phi = (90 - lat) * (Math.PI / 180);
-  const theta = (lon + 90) * (Math.PI / 180); // Offset perfetto per Blue Marble
+  const theta = (lon + 180) * (Math.PI / 180); 
   return new THREE.Vector3(
-    r * Math.sin(phi) * Math.cos(theta),
+    -(r * Math.sin(phi) * Math.cos(theta)),
     r * Math.cos(phi),
     r * Math.sin(phi) * Math.sin(theta)
   );
@@ -169,7 +169,7 @@ window.onload=function(){
   scene=new THREE.Scene();
   scene.fog=new THREE.FogExp2(0x000103,.03);
   
-  // INIZIALIZZA IL GRUPPO DELLA TERRA
+  // LA SCATOLA MAGICA (Corpo Rigido)
   earthGroup = new THREE.Group();
   scene.add(earthGroup);
 
@@ -206,11 +206,6 @@ function buildStarsAndPlanets(){
   }
   geo.setAttribute('position',new THREE.BufferAttribute(pos,3));
   scene.add(new THREE.Points(geo,new THREE.PointsMaterial({size:.07,color:0xffffff,transparent:true,opacity:.6,sizeAttenuation:true})));
-  
-  const pGeo=new THREE.BufferGeometry();
-  pGeo.setAttribute('position',new THREE.Float32BufferAttribute([15,8,-30,-25,12,-20,35,-15,-40],3));
-  pGeo.setAttribute('color',new THREE.Float32BufferAttribute([1,.9,.8,1,.4,.2,.9,.8,.7],3));
-  scene.add(new THREE.Points(pGeo,new THREE.PointsMaterial({vertexColors:true,sizeAttenuation:true,map:makeCircleTex(),transparent:true,opacity:.9,blending:THREE.AdditiveBlending,size:.5})));
 }
 
 function buildEarthShader(){
@@ -220,8 +215,11 @@ function buildEarthShader(){
     fragmentShader:`uniform sampler2D dayTex;uniform sampler2D nightTex;uniform vec3 sunDir;varying vec2 vUv;varying vec3 vNormalWorld;void main(){vec3 dayColor=texture2D(dayTex,vUv).rgb;vec3 nightColor=texture2D(nightTex,vUv).rgb;float lightIntensity=dot(vNormalWorld,normalize(sunDir));float blend=smoothstep(-0.2,0.2,lightIntensity);vec3 finalColor=mix(nightColor,dayColor*(lightIntensity+0.2),blend);gl_FragColor=vec4(finalColor,1.0);}`
   });
   globeMesh=new THREE.Mesh(new THREE.SphereGeometry(R,128,128),earthShaderMaterial);
-  // AGGIUNGIAMO AL GRUPPO TERRA (Nessuna rotazione artificiale qui!)
-  earthGroup.add(globeMesh);
+  
+  // FIX OFFSET DELLA TEXTURE (Blue Marble ha la cucitura a -90°)
+  globeMesh.rotation.y = -Math.PI / 2; 
+  
+  earthGroup.add(globeMesh); // DENTRO AL GRUPPO
   
   const loader=new THREE.TextureLoader();
   loader.load('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg',t=>{earthShaderMaterial.uniforms.dayTex.value=t;});
@@ -240,20 +238,26 @@ function buildAtmosphere(){
   new THREE.TextureLoader().load('https://unpkg.com/three-globe/example/img/earth-clouds10k.png',tex=>{
     cloudsMesh=new THREE.Mesh(new THREE.SphereGeometry(R*1.012,64,64),
       new THREE.MeshBasicMaterial({map:tex,transparent:true,opacity:.3,blending:THREE.AdditiveBlending,depthWrite:false}));
-    // AGGIUNGIAMO AL GRUPPO TERRA
-    earthGroup.add(cloudsMesh);
+    
+    cloudsMesh.rotation.y = -Math.PI / 2; // Allineato alla texture Terra
+    earthGroup.add(cloudsMesh); // DENTRO AL GRUPPO
   });
 }
 
 function buildSunAndMoon(){
-  sunLight=new THREE.DirectionalLight(0xffffff,2.5); scene.add(sunLight);
+  sunLight=new THREE.DirectionalLight(0xffffff,2.5);
   sunMesh=new THREE.Mesh(new THREE.SphereGeometry(.8,32,32),
     new THREE.MeshBasicMaterial({color:0xffffee,transparent:true,opacity:.9,fog:false}));
-  scene.add(sunMesh);
-  moonLight=new THREE.DirectionalLight(0x8ab8d0,.4); scene.add(moonLight);
+  moonLight=new THREE.DirectionalLight(0x8ab8d0,.4);
   moonMesh=new THREE.Mesh(new THREE.SphereGeometry(.12,32,32),
     new THREE.MeshStandardMaterial({color:0xdddddd,roughness:.8}));
-  scene.add(moonMesh);
+    
+  // TUTTO DENTRO AL GRUPPO TERRA PER NON FARLI SCIVOLARE
+  earthGroup.add(sunLight);
+  earthGroup.add(sunMesh);
+  earthGroup.add(moonLight);
+  earthGroup.add(moonMesh);
+  
   new THREE.TextureLoader().load('https://unpkg.com/three-globe/example/img/moon_1024.jpg',tex=>{moonMesh.material.map=tex;moonMesh.material.needsUpdate=true;});
   updateAstroPositions();
 }
@@ -262,11 +266,11 @@ function updateAstroPositions(){
   const now=new Date();
   const dayOfYear=Math.floor((now-(new Date(now.getFullYear(),0,0)))/86400000);
   const utcH=now.getUTCHours()+now.getUTCMinutes()/60+now.getUTCSeconds()/3600;
+  
   const sunLat=-23.44*Math.cos((360/365)*(dayOfYear+10)*Math.PI/180);
   const sunLon=180-(utcH*15);
   const sunPos=latLon3D(sunLat,sunLon,35);
   sunLight.position.copy(sunPos); sunMesh.position.copy(sunPos);
-  if(earthShaderMaterial) earthShaderMaterial.uniforms.sunDir.value.copy(sunPos).normalize();
   
   const lunarPhase=(dayOfYear%29.53)/29.53;
   const moonPos=latLon3D(sunLat+5.1,sunLon-(lunarPhase*360),4.5);
@@ -287,7 +291,6 @@ async function loadNodes(){
     prog(100,'Sistemi operativi');
     setTimeout(()=>$('loader').classList.add('gone'),600);
   }catch(e){
-    // Demo data fallback
     nodesData=Array.from({length:300},(_,i)=>({location:`Node-${i}`,lat:(Math.random()-.5)*140,lon:(Math.random()-.5)*360,z_score:(Math.random()-.5)*6}));
     ['Milano','Tokyo','New York','Mumbai','Delhi','Calgary'].forEach((name,i)=>{
       nodesData.push({location:name,country_code:'--',lat:[45.46,35.67,40.71,19.07,28.61,51.04][i],lon:[9.19,139.65,-74,-72.87,77.2,-114.07][i],z_score:[3.2,4.1,-3.5,5.0,3.8,-3.2][i]});
@@ -316,8 +319,7 @@ function buildNodesMesh(data){
     size:.055,map:makeCircleTex(),vertexColors:true,transparent:true,opacity:.95,
     sizeAttenuation:true,depthWrite:false,blending:THREE.AdditiveBlending
   }));
-  // AGGIUNGIAMO AL GRUPPO TERRA
-  earthGroup.add(pointCloud);
+  earthGroup.add(pointCloud); // DENTRO AL GRUPPO
 }
 
 function buildLabels(criticals){
@@ -338,9 +340,8 @@ function buildLabels(criticals){
 function updateLabels(){
   const wh=innerWidth/2,hh=innerHeight/2;
   labelEls.forEach(item=>{
-    // TRASFORMAZIONE IN WORLD SPACE CORRETTA!
-    const wp=item.pos3D.clone().applyMatrix4(earthGroup.matrixWorld);
-    const normal=wp.clone().normalize();
+    const wp=item.pos3D.clone().applyMatrix4(earthGroup.matrixWorld); // MANTIENE L'ALLINEAMENTO QUANDO GIRA
+    const normal=wp.clone().sub(earthGroup.position).normalize();
     const view=camera.position.clone().sub(wp).normalize();
     if(normal.dot(view)>0.1){
       item.el.style.opacity='1';
@@ -369,7 +370,6 @@ function addSunFX(center,normal,z){
   const glow=new THREE.Mesh(new THREE.SphereGeometry(.038+intensity*.025,12,12),
     new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:.6,depthWrite:false,blending:THREE.AdditiveBlending}));
   glow.position.copy(center); glow.userData={type:'sun',phase:Math.random()*Math.PI*2};
-  // AGGIUNTO A EARTHGROUP
   earthGroup.add(glow); weatherFX.push(glow);
   
   const up=Math.abs(normal.y)<.9?new THREE.Vector3(0,1,0):new THREE.Vector3(1,0,0);
@@ -443,11 +443,9 @@ function setupSearch(){
 function flyToCity(lat,lon,name){$('citysearch').value=name;$('searchresults').style.display='none';flyTo(lat,lon);toast(`Posizionamento su: ${name}`);}
 
 function flyTo(lat,lon){
-  // 1. Calcoliamo la posizione della città RELATIVA al globo
   const localTarget = latLon3D(lat,lon,R*2.8);
-  // 2. La trasformiamo nella posizione ASSOLUTA in base a quanto la terra è ruotata ORA
+  // Calcola la posizione ASSOLUTA del nodo in base a come è girato il globo ora
   const worldTarget = localTarget.clone().applyMatrix4(earthGroup.matrixWorld);
-  
   const start=camera.position.clone();
   let step=0;
   function s_(){
@@ -456,9 +454,7 @@ function flyTo(lat,lon){
       camera.position.lerpVectors(start,worldTarget,step);
       camera.lookAt(0,0,0);
       requestAnimationFrame(s_);
-    } else {
-      controls.update();
-    }
+    } else { controls.update(); }
   }
   s_();
 }
@@ -473,15 +469,11 @@ function goToMyCity(){
 function doFlyToMe(){
   flyTo(myLat,myLon);
   if(myMarker) earthGroup.remove(myMarker);
-  
   const p=latLon3D(myLat,myLon,R+.025);
   myMarker=new THREE.Mesh(new THREE.SphereGeometry(.025,16,16),
     new THREE.MeshBasicMaterial({color:0x00ffff,transparent:true,opacity:.9,blending:THREE.AdditiveBlending,depthWrite:false}));
   myMarker.position.copy(p); 
-  
-  // AGGIUNTO AL GRUPPO DELLA TERRA!
-  earthGroup.add(myMarker);
-  
+  earthGroup.add(myMarker); // DENTRO AL GRUPPO
   let nearest=null,minD=999;
   nodesData.forEach(n=>{const d=Math.sqrt((n.lat-myLat)**2+(n.lon-myLon)**2);if(d<minD){minD=d;nearest=n;}});
   toast(`🌍 ${nearest?nearest.location:'Posizione rilevata'}`);
@@ -498,12 +490,16 @@ function animate(){
   const t=theClock.getElapsedTime();
   controls.update();
   
-  // LA MAGIA: RUOTA SOLO LA SCATOLA (earthGroup), TUTTO IL RESTO SEGUE!
+  // RUOTA SOLO LA SCATOLA (Tutto il resto segue)
   if(earthGroup) earthGroup.rotation.y = t * 0.015;
-  if(cloudsMesh) cloudsMesh.rotation.y = t * 0.003; // Le nuvole ruotano un po' di più
   
+  if(earthShaderMaterial && sunMesh){
+     // Aggiorna lo shader con la direzione del Sole nel mondo reale
+     const worldSunPos = sunMesh.position.clone().applyMatrix4(earthGroup.matrixWorld);
+     earthShaderMaterial.uniforms.sunDir.value.copy(worldSunPos).normalize();
+  }
+
   if(myMarker) myMarker.scale.setScalar(1+Math.sin(t*4)*.3);
-  
   weatherFX.forEach(fx=>{
     const ph=fx.userData.phase||0;
     if(fx.userData.type==='sun'){fx.material.opacity=.4+Math.abs(Math.sin(t*2+ph))*.5;fx.scale.setScalar(1+Math.sin(t*2+ph)*.15);}
