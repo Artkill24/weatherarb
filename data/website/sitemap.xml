@@ -148,6 +148,16 @@
   <url><loc>https://weatherarb.com/it/viterbo/</loc></url>
   <url><loc>https://weatherarb.com/ae/dubai/</loc></url>
   <url><loc>https://weatherarb.com/ar/buenos-aires/</loc></url>
+  <url><loc>https://weatherarb.com/ar/colonia-wanda/</loc></url>
+  <url><loc>https://weatherarb.com/ar/tigre/</loc></url>
+  <url><loc>https://weatherarb.com/ar/tortuguitas/</loc></url>
+  <url><loc>https://weatherarb.com/ar/villa-de-mayo/</loc></url>
+  <url><loc>https://weatherarb.com/ar/villa-gesell/</loc></url>
+  <url><loc>https://weatherarb.com/ar/villa-lugano/</loc></url>
+  <url><loc>https://weatherarb.com/ar/villa-ocampo/</loc></url>
+  <url><loc>https://weatherarb.com/ar/villa-ortuzar/</loc></url>
+  <url><loc>https://weatherarb.com/ar/villaguay/</loc></url>
+  <url><loc>https://weatherarb.com/ar/zarate/</loc></url>
   <url><loc>https://weatherarb.com/at/graz/</loc></url>
   <url><loc>https://weatherarb.com/at/innsbruck/</loc></url>
   <url><loc>https://weatherarb.com/at/klagenfurt/</loc></url>
@@ -155,10 +165,30 @@
   <url><loc>https://weatherarb.com/at/salzburg/</loc></url>
   <url><loc>https://weatherarb.com/at/sankt-polten/</loc></url>
   <url><loc>https://weatherarb.com/at/wien/</loc></url>
+  <url><loc>https://weatherarb.com/au/busselton/</loc></url>
+  <url><loc>https://weatherarb.com/au/byford/</loc></url>
+  <url><loc>https://weatherarb.com/au/darwin/</loc></url>
+  <url><loc>https://weatherarb.com/au/gawler/</loc></url>
+  <url><loc>https://weatherarb.com/au/geraldton/</loc></url>
+  <url><loc>https://weatherarb.com/au/gosnells/</loc></url>
+  <url><loc>https://weatherarb.com/au/kalgoorlie/</loc></url>
+  <url><loc>https://weatherarb.com/au/kwinana/</loc></url>
+  <url><loc>https://weatherarb.com/au/mandurah/</loc></url>
   <url><loc>https://weatherarb.com/au/melbourne/</loc></url>
+  <url><loc>https://weatherarb.com/au/morphett-vale/</loc></url>
+  <url><loc>https://weatherarb.com/au/mount-barker/</loc></url>
+  <url><loc>https://weatherarb.com/au/mount-isa/</loc></url>
   <url><loc>https://weatherarb.com/au/perth/</loc></url>
+  <url><loc>https://weatherarb.com/au/port-hedland/</loc></url>
+  <url><loc>https://weatherarb.com/au/rockingham/</loc></url>
+  <url><loc>https://weatherarb.com/au/scarborough/</loc></url>
   <url><loc>https://weatherarb.com/au/sydney/</loc></url>
   <url><loc>https://weatherarb.com/bd/dhaka/</loc></url>
+  <url><loc>https://weatherarb.com/bd/dohar/</loc></url>
+  <url><loc>https://weatherarb.com/bd/sylhet/</loc></url>
+  <url><loc>https://weatherarb.com/bd/teknaf/</loc></url>
+  <url><loc>https://weatherarb.com/bd/thakurgaon/</loc></url>
+  <url><loc>https://weatherarb.com/bd/tungi/</loc></url>
   <url><loc>https://weatherarb.com/be/antwerpen/</loc></url>
   <url><loc>https://weatherarb.com/be/bruges/</loc></url>
   <url><loc>https://weatherarb.com/be/bruxelles/</loc></url>
@@ -166,8 +196,28 @@
   <url><loc>https://weatherarb.com/be/gent/</loc></url>
   <url><loc>https://weatherarb.com/be/liege/</loc></url>
   <url><loc>https://weatherarb.com/be/namur/</loc></url>
+  <url><loc>https://weatherarb.com/br/conde/</loc></url>
   <url><loc>https://weatherarb.com/br/rio-de-janeiro/</loc></url>
   <url><loc>https://weatherarb.com/br/sao-paulo/</loc></url>
+  <url><loc>https://weatherarb.com/br/uruburetama/</loc></url>
+  <url><loc>https://weatherarb.com/br/urucara/</loc></url>
+  <url><loc>https://weatherarb.com/br/urucui/</loc></url>
+  <url><loc>https://weatherarb.com/br/urucurituba/</loc></url>
+  <url><loc>https://weatherarb.com/br/valenca-do-piaui/</loc></url>
+  <url><loc>https://weatherarb.com/br/vargem-grande/</loc></url>
+  <url><loc>https://weatherarb.com/br/varjota/</loc></url>
+  <url><loc>https://weatherarb.com/br/varzea-alegre/</loc></url>
+  <url><loc>https://weatherarb.com/br/venturosa/</loc></url>
+  <url><loc>https://weatherarb.com/br/vertentes/</loc></url>
+  <url><loc>https://weatherarb.com/br/viana/</loc></url>
+  <url><loc>https://weatherarb.com/br/vicencia/</loc></url>
+  <url><loc>https://weatherarb.com/br/vicosa/</loc></url>
+  <url><loc>https://weatherarb.com/br/vicosa-do-ceara/</loc></url>
+  <url><loc>https://weatherarb.com/br/vigia/</loc></url>
+  <url><loc>https://weatherarb.com/br/viseu/</loc></url>
+  <url><loc>https://weatherarb.com/br/vitoria-de-santo-antao/</loc></url>
+  <url><loc>https://weatherarb.com/br/vitoria-do-mearim/</loc></url>
+  <url><loc>https://weatherarb.com/br/vitorino-freire/</loc></url>
   <url><loc>https://weatherarb.com/ca/calgary/</loc></url>
   <url><loc>https://weatherarb.com/ca/edmonton/</loc></url>
   <url><loc>https://weatherarb.com/ca/montreal/</loc></url>
@@ -185,14 +235,52 @@
   <url><loc>https://weatherarb.com/ch/winterthur/</loc></url>
   <url><loc>https://weatherarb.com/ch/zurich/</loc></url>
   <url><loc>https://weatherarb.com/cl/santiago/</loc></url>
+  <url><loc>https://weatherarb.com/cl/vallenar/</loc></url>
+  <url><loc>https://weatherarb.com/cl/valparaiso/</loc></url>
+  <url><loc>https://weatherarb.com/cl/victoria/</loc></url>
+  <url><loc>https://weatherarb.com/cl/vicuna/</loc></url>
+  <url><loc>https://weatherarb.com/cl/vilcun/</loc></url>
+  <url><loc>https://weatherarb.com/cl/villa-alemana/</loc></url>
+  <url><loc>https://weatherarb.com/cl/villarrica/</loc></url>
+  <url><loc>https://weatherarb.com/cl/vina-del-mar/</loc></url>
   <url><loc>https://weatherarb.com/cn/beijing/</loc></url>
   <url><loc>https://weatherarb.com/cn/chengdu/</loc></url>
   <url><loc>https://weatherarb.com/cn/chongqing/</loc></url>
+  <url><loc>https://weatherarb.com/cn/gar/</loc></url>
   <url><loc>https://weatherarb.com/cn/guangzhou/</loc></url>
   <url><loc>https://weatherarb.com/cn/hong-kong/</loc></url>
+  <url><loc>https://weatherarb.com/cn/jiuquan/</loc></url>
+  <url><loc>https://weatherarb.com/cn/qamdo/</loc></url>
+  <url><loc>https://weatherarb.com/cn/qarek/</loc></url>
+  <url><loc>https://weatherarb.com/cn/qiemo/</loc></url>
+  <url><loc>https://weatherarb.com/cn/qushi/</loc></url>
+  <url><loc>https://weatherarb.com/cn/quxu/</loc></url>
+  <url><loc>https://weatherarb.com/cn/rikaze/</loc></url>
+  <url><loc>https://weatherarb.com/cn/ruidian/</loc></url>
+  <url><loc>https://weatherarb.com/cn/shache/</loc></url>
   <url><loc>https://weatherarb.com/cn/shanghai/</loc></url>
+  <url><loc>https://weatherarb.com/cn/shangpa/</loc></url>
+  <url><loc>https://weatherarb.com/cn/shangyun/</loc></url>
   <url><loc>https://weatherarb.com/cn/shenzhen/</loc></url>
+  <url><loc>https://weatherarb.com/cn/shigu/</loc></url>
+  <url><loc>https://weatherarb.com/cn/tengyue/</loc></url>
+  <url><loc>https://weatherarb.com/cn/yengisar/</loc></url>
+  <url><loc>https://weatherarb.com/cn/yingpan/</loc></url>
+  <url><loc>https://weatherarb.com/cn/zepu/</loc></url>
+  <url><loc>https://weatherarb.com/cn/zhangfeng/</loc></url>
+  <url><loc>https://weatherarb.com/cn/zhefang/</loc></url>
+  <url><loc>https://weatherarb.com/cn/zibihu/</loc></url>
   <url><loc>https://weatherarb.com/co/bogota/</loc></url>
+  <url><loc>https://weatherarb.com/co/villa-del-rosario/</loc></url>
+  <url><loc>https://weatherarb.com/co/villanueva/</loc></url>
+  <url><loc>https://weatherarb.com/co/villavicencio/</loc></url>
+  <url><loc>https://weatherarb.com/co/villeta/</loc></url>
+  <url><loc>https://weatherarb.com/co/yarumal/</loc></url>
+  <url><loc>https://weatherarb.com/co/yondo/</loc></url>
+  <url><loc>https://weatherarb.com/co/yopal/</loc></url>
+  <url><loc>https://weatherarb.com/co/yumbo/</loc></url>
+  <url><loc>https://weatherarb.com/co/zarzal/</loc></url>
+  <url><loc>https://weatherarb.com/co/zipaquira/</loc></url>
   <url><loc>https://weatherarb.com/cz/brno/</loc></url>
   <url><loc>https://weatherarb.com/cz/ostrava/</loc></url>
   <url><loc>https://weatherarb.com/cz/plzen/</loc></url>
@@ -234,7 +322,21 @@
   <url><loc>https://weatherarb.com/dk/kbenhavn/</loc></url>
   <url><loc>https://weatherarb.com/dk/kobenhavn/</loc></url>
   <url><loc>https://weatherarb.com/dk/odense/</loc></url>
+  <url><loc>https://weatherarb.com/dz/boumerdas/</loc></url>
+  <url><loc>https://weatherarb.com/dz/touggourt/</loc></url>
+  <url><loc>https://weatherarb.com/dz/zemoura/</loc></url>
+  <url><loc>https://weatherarb.com/dz/zeralda/</loc></url>
+  <url><loc>https://weatherarb.com/dz/zeribet-el-oued/</loc></url>
+  <url><loc>https://weatherarb.com/dz/zighout-youcef/</loc></url>
   <url><loc>https://weatherarb.com/eg/cairo/</loc></url>
+  <url><loc>https://weatherarb.com/eg/tamiyah/</loc></url>
+  <url><loc>https://weatherarb.com/eg/tanta/</loc></url>
+  <url><loc>https://weatherarb.com/eg/tima/</loc></url>
+  <url><loc>https://weatherarb.com/eg/timayy-al-imdid/</loc></url>
+  <url><loc>https://weatherarb.com/eg/tud/</loc></url>
+  <url><loc>https://weatherarb.com/eg/tukh/</loc></url>
+  <url><loc>https://weatherarb.com/eg/zaafarana/</loc></url>
+  <url><loc>https://weatherarb.com/eg/zefta/</loc></url>
   <url><loc>https://weatherarb.com/es/alicante/</loc></url>
   <url><loc>https://weatherarb.com/es/barcelona/</loc></url>
   <url><loc>https://weatherarb.com/es/bilbao/</loc></url>
@@ -295,6 +397,10 @@
   <url><loc>https://weatherarb.com/gb/sheffield/</loc></url>
   <url><loc>https://weatherarb.com/gb/southampton/</loc></url>
   <url><loc>https://weatherarb.com/gb/swansea/</loc></url>
+  <url><loc>https://weatherarb.com/gh/wankyi/</loc></url>
+  <url><loc>https://weatherarb.com/gh/winneba/</loc></url>
+  <url><loc>https://weatherarb.com/gh/yegyi/</loc></url>
+  <url><loc>https://weatherarb.com/gh/yendi/</loc></url>
   <url><loc>https://weatherarb.com/gr/atene/</loc></url>
   <url><loc>https://weatherarb.com/gr/heraklion/</loc></url>
   <url><loc>https://weatherarb.com/gr/larissa/</loc></url>
@@ -311,28 +417,107 @@
   <url><loc>https://weatherarb.com/hu/miskolc/</loc></url>
   <url><loc>https://weatherarb.com/hu/pecs/</loc></url>
   <url><loc>https://weatherarb.com/id/jakarta/</loc></url>
+  <url><loc>https://weatherarb.com/id/singkil/</loc></url>
+  <url><loc>https://weatherarb.com/id/stabat/</loc></url>
+  <url><loc>https://weatherarb.com/id/sunggal/</loc></url>
+  <url><loc>https://weatherarb.com/id/tanjungbalai/</loc></url>
+  <url><loc>https://weatherarb.com/id/tanjungtiram/</loc></url>
+  <url><loc>https://weatherarb.com/id/tarutung/</loc></url>
+  <url><loc>https://weatherarb.com/id/tebingtinggi/</loc></url>
+  <url><loc>https://weatherarb.com/id/teluk-dalam/</loc></url>
+  <url><loc>https://weatherarb.com/id/teluk-nibung/</loc></url>
+  <url><loc>https://weatherarb.com/id/tongging/</loc></url>
   <url><loc>https://weatherarb.com/il/tel-aviv/</loc></url>
   <url><loc>https://weatherarb.com/in/bangalore/</loc></url>
   <url><loc>https://weatherarb.com/in/chennai/</loc></url>
   <url><loc>https://weatherarb.com/in/delhi/</loc></url>
+  <url><loc>https://weatherarb.com/in/kilakarai/</loc></url>
   <url><loc>https://weatherarb.com/in/kolkata/</loc></url>
   <url><loc>https://weatherarb.com/in/mumbai/</loc></url>
+  <url><loc>https://weatherarb.com/in/punch/</loc></url>
+  <url><loc>https://weatherarb.com/in/waraseoni/</loc></url>
+  <url><loc>https://weatherarb.com/in/wardha/</loc></url>
+  <url><loc>https://weatherarb.com/in/waris-aliganj/</loc></url>
+  <url><loc>https://weatherarb.com/in/warora/</loc></url>
+  <url><loc>https://weatherarb.com/in/warud/</loc></url>
+  <url><loc>https://weatherarb.com/in/washim/</loc></url>
+  <url><loc>https://weatherarb.com/in/wazirganj/</loc></url>
+  <url><loc>https://weatherarb.com/in/weir/</loc></url>
+  <url><loc>https://weatherarb.com/in/wellington/</loc></url>
+  <url><loc>https://weatherarb.com/in/wokha/</loc></url>
+  <url><loc>https://weatherarb.com/in/yadgir/</loc></url>
+  <url><loc>https://weatherarb.com/in/yamuna-nagar/</loc></url>
+  <url><loc>https://weatherarb.com/in/yanam/</loc></url>
+  <url><loc>https://weatherarb.com/in/yaval/</loc></url>
+  <url><loc>https://weatherarb.com/in/yavatmal/</loc></url>
+  <url><loc>https://weatherarb.com/in/yelahanka/</loc></url>
+  <url><loc>https://weatherarb.com/in/yellandu/</loc></url>
+  <url><loc>https://weatherarb.com/in/yellapur/</loc></url>
+  <url><loc>https://weatherarb.com/in/yeola/</loc></url>
+  <url><loc>https://weatherarb.com/in/zahirabad/</loc></url>
+  <url><loc>https://weatherarb.com/in/zaidpur/</loc></url>
+  <url><loc>https://weatherarb.com/in/zamania/</loc></url>
+  <url><loc>https://weatherarb.com/in/zunheboto/</loc></url>
   <url><loc>https://weatherarb.com/ir/tehran/</loc></url>
+  <url><loc>https://weatherarb.com/jp/akashi/</loc></url>
+  <url><loc>https://weatherarb.com/jp/atsugi/</loc></url>
   <url><loc>https://weatherarb.com/jp/fukuoka/</loc></url>
+  <url><loc>https://weatherarb.com/jp/gero/</loc></url>
   <url><loc>https://weatherarb.com/jp/nagoya/</loc></url>
   <url><loc>https://weatherarb.com/jp/osaka/</loc></url>
   <url><loc>https://weatherarb.com/jp/sapporo/</loc></url>
+  <url><loc>https://weatherarb.com/jp/shingu/</loc></url>
   <url><loc>https://weatherarb.com/jp/tokyo/</loc></url>
   <url><loc>https://weatherarb.com/jp/yokohama/</loc></url>
+  <url><loc>https://weatherarb.com/jp/yorii/</loc></url>
+  <url><loc>https://weatherarb.com/jp/yoshida-kasugacho/</loc></url>
+  <url><loc>https://weatherarb.com/jp/yoshii/</loc></url>
+  <url><loc>https://weatherarb.com/jp/yoshikawa/</loc></url>
+  <url><loc>https://weatherarb.com/jp/yotsutsuji/</loc></url>
+  <url><loc>https://weatherarb.com/jp/yugawara/</loc></url>
+  <url><loc>https://weatherarb.com/jp/yuki/</loc></url>
+  <url><loc>https://weatherarb.com/jp/yukuhashi/</loc></url>
+  <url><loc>https://weatherarb.com/jp/zama/</loc></url>
+  <url><loc>https://weatherarb.com/jp/zentsujicho/</loc></url>
+  <url><loc>https://weatherarb.com/jp/zushi/</loc></url>
   <url><loc>https://weatherarb.com/ke/nairobi/</loc></url>
   <url><loc>https://weatherarb.com/kr/busan/</loc></url>
   <url><loc>https://weatherarb.com/kr/seoul/</loc></url>
   <url><loc>https://weatherarb.com/lk/colombo/</loc></url>
   <url><loc>https://weatherarb.com/ma/casablanca/</loc></url>
+  <url><loc>https://weatherarb.com/ma/setti-fatma/</loc></url>
+  <url><loc>https://weatherarb.com/ma/smara/</loc></url>
+  <url><loc>https://weatherarb.com/ma/youssoufia/</loc></url>
+  <url><loc>https://weatherarb.com/ma/zagora/</loc></url>
+  <url><loc>https://weatherarb.com/ma/zaio/</loc></url>
+  <url><loc>https://weatherarb.com/ma/zawyat-ech-cheikh/</loc></url>
   <url><loc>https://weatherarb.com/mn/ulaanbaatar/</loc></url>
+  <url><loc>https://weatherarb.com/mx/ciudad-valles/</loc></url>
   <url><loc>https://weatherarb.com/mx/mexico-city/</loc></url>
+  <url><loc>https://weatherarb.com/mx/san-fernando/</loc></url>
+  <url><loc>https://weatherarb.com/mx/xicotepec-de-juarez/</loc></url>
+  <url><loc>https://weatherarb.com/mx/xochimilco/</loc></url>
+  <url><loc>https://weatherarb.com/mx/xochitepec/</loc></url>
+  <url><loc>https://weatherarb.com/mx/xonacatlan/</loc></url>
+  <url><loc>https://weatherarb.com/mx/xoxocotla/</loc></url>
+  <url><loc>https://weatherarb.com/mx/yajalon/</loc></url>
+  <url><loc>https://weatherarb.com/mx/yautepec/</loc></url>
+  <url><loc>https://weatherarb.com/mx/yecapixtla/</loc></url>
+  <url><loc>https://weatherarb.com/mx/zacatepec/</loc></url>
+  <url><loc>https://weatherarb.com/mx/zacatlan/</loc></url>
+  <url><loc>https://weatherarb.com/mx/zacualtipan/</loc></url>
+  <url><loc>https://weatherarb.com/mx/zumpango/</loc></url>
+  <url><loc>https://weatherarb.com/mx/zumpango-del-rio/</loc></url>
   <url><loc>https://weatherarb.com/my/kuala-lumpur/</loc></url>
   <url><loc>https://weatherarb.com/ng/lagos/</loc></url>
+  <url><loc>https://weatherarb.com/ng/warri/</loc></url>
+  <url><loc>https://weatherarb.com/ng/wudil/</loc></url>
+  <url><loc>https://weatherarb.com/ng/wukari/</loc></url>
+  <url><loc>https://weatherarb.com/ng/yenagoa/</loc></url>
+  <url><loc>https://weatherarb.com/ng/yola/</loc></url>
+  <url><loc>https://weatherarb.com/ng/zaria/</loc></url>
+  <url><loc>https://weatherarb.com/ng/zungeru/</loc></url>
+  <url><loc>https://weatherarb.com/ng/zuru/</loc></url>
   <url><loc>https://weatherarb.com/nl/amsterdam/</loc></url>
   <url><loc>https://weatherarb.com/nl/arnhem/</loc></url>
   <url><loc>https://weatherarb.com/nl/breda/</loc></url>
@@ -352,9 +537,33 @@
   <url><loc>https://weatherarb.com/no/trondheim/</loc></url>
   <url><loc>https://weatherarb.com/np/kathmandu/</loc></url>
   <url><loc>https://weatherarb.com/nz/auckland/</loc></url>
+  <url><loc>https://weatherarb.com/pe/tocache/</loc></url>
+  <url><loc>https://weatherarb.com/pe/trujillo/</loc></url>
+  <url><loc>https://weatherarb.com/pe/tumbes/</loc></url>
+  <url><loc>https://weatherarb.com/pe/uchiza/</loc></url>
+  <url><loc>https://weatherarb.com/pe/viru/</loc></url>
+  <url><loc>https://weatherarb.com/pe/yurimaguas/</loc></url>
   <url><loc>https://weatherarb.com/ph/manila/</loc></url>
+  <url><loc>https://weatherarb.com/ph/valenzuela/</loc></url>
+  <url><loc>https://weatherarb.com/ph/veruela/</loc></url>
+  <url><loc>https://weatherarb.com/ph/victorias/</loc></url>
+  <url><loc>https://weatherarb.com/ph/vigan/</loc></url>
+  <url><loc>https://weatherarb.com/ph/villasis/</loc></url>
+  <url><loc>https://weatherarb.com/ph/vinzons/</loc></url>
+  <url><loc>https://weatherarb.com/ph/virac/</loc></url>
+  <url><loc>https://weatherarb.com/ph/wao/</loc></url>
+  <url><loc>https://weatherarb.com/ph/zamboanga/</loc></url>
+  <url><loc>https://weatherarb.com/ph/zumarraga/</loc></url>
+  <url><loc>https://weatherarb.com/pk/chuhar-jamali/</loc></url>
   <url><loc>https://weatherarb.com/pk/karachi/</loc></url>
+  <url><loc>https://weatherarb.com/pk/khairpur-mirs/</loc></url>
   <url><loc>https://weatherarb.com/pk/lahore/</loc></url>
+  <url><loc>https://weatherarb.com/pk/pir-jo-goth/</loc></url>
+  <url><loc>https://weatherarb.com/pk/rawalakot/</loc></url>
+  <url><loc>https://weatherarb.com/pk/sharifabad/</loc></url>
+  <url><loc>https://weatherarb.com/pk/zahir-pir/</loc></url>
+  <url><loc>https://weatherarb.com/pk/zaida/</loc></url>
+  <url><loc>https://weatherarb.com/pk/zhob/</loc></url>
   <url><loc>https://weatherarb.com/pl/gdansk/</loc></url>
   <url><loc>https://weatherarb.com/pl/katowice/</loc></url>
   <url><loc>https://weatherarb.com/pl/krakow/</loc></url>
@@ -381,6 +590,26 @@
   <url><loc>https://weatherarb.com/ro/timisoara/</loc></url>
   <url><loc>https://weatherarb.com/rs/belgrado/</loc></url>
   <url><loc>https://weatherarb.com/rs/novi-sad/</loc></url>
+  <url><loc>https://weatherarb.com/ru/sasovo/</loc></url>
+  <url><loc>https://weatherarb.com/ru/sosnovka/</loc></url>
+  <url><loc>https://weatherarb.com/ru/udomlya/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zelenokumsk/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zernograd/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zheleznodorozhnyy/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zheleznogorsk/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zheleznovodsk/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zherdevka/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zhigulevsk/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zhirnovsk/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zhukovka/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zhukovsky/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zhulebino/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zimovniki/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zlatoust/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zvenigorod/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zverevo/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zyablikovo/</loc></url>
+  <url><loc>https://weatherarb.com/ru/zyuzino/</loc></url>
   <url><loc>https://weatherarb.com/sa/riyadh/</loc></url>
   <url><loc>https://weatherarb.com/se/goteborg/</loc></url>
   <url><loc>https://weatherarb.com/se/gothenburg/</loc></url>
@@ -398,10 +627,40 @@
   <url><loc>https://weatherarb.com/si/maribor/</loc></url>
   <url><loc>https://weatherarb.com/sk/bratislava/</loc></url>
   <url><loc>https://weatherarb.com/sk/kosice/</loc></url>
+  <url><loc>https://weatherarb.com/th/ban-talat-nua/</loc></url>
+  <url><loc>https://weatherarb.com/th/ban-talat-yai/</loc></url>
   <url><loc>https://weatherarb.com/th/bangkok/</loc></url>
+  <url><loc>https://weatherarb.com/th/phetchaburi/</loc></url>
+  <url><loc>https://weatherarb.com/th/sam-roi-yot/</loc></url>
+  <url><loc>https://weatherarb.com/th/thap-than/</loc></url>
+  <url><loc>https://weatherarb.com/th/thoen/</loc></url>
+  <url><loc>https://weatherarb.com/th/thung-song/</loc></url>
+  <url><loc>https://weatherarb.com/th/trang/</loc></url>
   <url><loc>https://weatherarb.com/tr/ankara/</loc></url>
+  <url><loc>https://weatherarb.com/tr/didim/</loc></url>
+  <url><loc>https://weatherarb.com/tr/erzin/</loc></url>
   <url><loc>https://weatherarb.com/tr/istanbul/</loc></url>
+  <url><loc>https://weatherarb.com/tr/varto/</loc></url>
+  <url><loc>https://weatherarb.com/tr/viransehir/</loc></url>
+  <url><loc>https://weatherarb.com/tr/yahyal/</loc></url>
+  <url><loc>https://weatherarb.com/tr/yalvac/</loc></url>
+  <url><loc>https://weatherarb.com/tr/yatagan/</loc></url>
+  <url><loc>https://weatherarb.com/tr/yerkoy/</loc></url>
+  <url><loc>https://weatherarb.com/tr/yesilli/</loc></url>
+  <url><loc>https://weatherarb.com/tr/yesilova/</loc></url>
+  <url><loc>https://weatherarb.com/tr/yozgat/</loc></url>
+  <url><loc>https://weatherarb.com/tr/yuksekova/</loc></url>
   <url><loc>https://weatherarb.com/tw/taipei/</loc></url>
+  <url><loc>https://weatherarb.com/ua/druzhkivka/</loc></url>
+  <url><loc>https://weatherarb.com/ua/lebedyn/</loc></url>
+  <url><loc>https://weatherarb.com/ua/zhmerynka/</loc></url>
+  <url><loc>https://weatherarb.com/ua/zhovti-vody/</loc></url>
+  <url><loc>https://weatherarb.com/ua/zhytomyr/</loc></url>
+  <url><loc>https://weatherarb.com/ua/znamyanka/</loc></url>
+  <url><loc>https://weatherarb.com/ua/zolochiv/</loc></url>
+  <url><loc>https://weatherarb.com/ua/zolotonosha/</loc></url>
+  <url><loc>https://weatherarb.com/ua/zuhres/</loc></url>
+  <url><loc>https://weatherarb.com/ua/zvenihorodka/</loc></url>
   <url><loc>https://weatherarb.com/us/albuquerque/</loc></url>
   <url><loc>https://weatherarb.com/us/anchorage/</loc></url>
   <url><loc>https://weatherarb.com/us/atlanta/</loc></url>
@@ -451,9 +710,25 @@
   <url><loc>https://weatherarb.com/us/tucson/</loc></url>
   <url><loc>https://weatherarb.com/us/tulsa/</loc></url>
   <url><loc>https://weatherarb.com/us/washington-dc/</loc></url>
+  <url><loc>https://weatherarb.com/vn/cai-oi-vam/</loc></url>
   <url><loc>https://weatherarb.com/vn/hanoi/</loc></url>
   <url><loc>https://weatherarb.com/vn/ho-chi-minh-city/</loc></url>
+  <url><loc>https://weatherarb.com/vn/xom-cai-nuoc/</loc></url>
+  <url><loc>https://weatherarb.com/vn/xom-my-xuan/</loc></url>
+  <url><loc>https://weatherarb.com/vn/xuan-loc/</loc></url>
+  <url><loc>https://weatherarb.com/vn/xuan-mai/</loc></url>
+  <url><loc>https://weatherarb.com/vn/yen-bai/</loc></url>
+  <url><loc>https://weatherarb.com/vn/yen-phu/</loc></url>
+  <url><loc>https://weatherarb.com/vn/yen-vinh/</loc></url>
+  <url><loc>https://weatherarb.com/za/emalahleni/</loc></url>
   <url><loc>https://weatherarb.com/za/johannesburg/</loc></url>
+  <url><loc>https://weatherarb.com/za/roodepoort/</loc></url>
+  <url><loc>https://weatherarb.com/za/white-river/</loc></url>
+  <url><loc>https://weatherarb.com/za/whittlesea/</loc></url>
+  <url><loc>https://weatherarb.com/za/winburg/</loc></url>
+  <url><loc>https://weatherarb.com/za/wolmaransstad/</loc></url>
+  <url><loc>https://weatherarb.com/za/zastron/</loc></url>
+  <url><loc>https://weatherarb.com/za/zeerust/</loc></url>
   <url><loc>https://weatherarb.com/news/2026-04-23-singapore-heat-wave/</loc></url>
   <url><loc>https://weatherarb.com/news/2026-04-23-mumbai-heat-wave/</loc></url>
   <url><loc>https://weatherarb.com/news/2026-04-23-granada-heat-wave/</loc></url>
