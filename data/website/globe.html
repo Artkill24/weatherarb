@@ -156,14 +156,14 @@ const $=id=>document.getElementById(id);
 function prog(p,m){$('fill').style.width=p+'%';$('lmsg').textContent=m}
 function toast(msg,dur=3000){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur)}
 
-// LA MATEMATICA CORRETTA PER LA MAPPA BLUE MARBLE (+180 e Rotazione Z)
-function latLon3D(lat,lon,r){
+// MATEMATICA EQUIRETTANGOLARE PURA: Sincronizzazione perfetta per texture senza offset
+function latLon3D(lat, lon, r) {
   const phi = (90 - lat) * (Math.PI / 180);
-  const theta = (lon + 180) * (Math.PI / 180); 
+  const theta = lon * (Math.PI / 180); 
   return new THREE.Vector3(
-    -(r * Math.sin(phi) * Math.cos(theta)),
+    r * Math.sin(phi) * Math.cos(theta),
     r * Math.cos(phi),
-    r * Math.sin(phi) * Math.sin(theta)
+    -r * Math.sin(phi) * Math.sin(theta)
   );
 }
 
@@ -226,6 +226,10 @@ window.onload=function(){
   controls.enableDamping=true; controls.dampingFactor=.05;
   controls.enablePan=false; controls.minDistance=1.2; controls.maxDistance=8;
   
+  // DRONE CAMERA AUTO-ORBIT: Orbita fisica anziché ruotare il globo finto
+  controls.autoRotate = true; 
+  controls.autoRotateSpeed = 0.8;
+  
   theClock=new THREE.Clock();
   prog(15,'Generazione Via Lattea...'); buildStarsAndPlanets();
   prog(28,'Terra Day/Night shader GLSL...'); buildEarthShader();
@@ -264,7 +268,8 @@ function buildEarthShader(){
   });
   globeMesh=new THREE.Mesh(new THREE.SphereGeometry(R,128,128),earthShaderMaterial);
   
-  globeMesh.rotation.y = -Math.PI / 2; // L'OFFSET FONDAMENTALE CHE ABBIAMO SISTEMATO
+  // ZERO ASSOLUTO. Nessuno sfasamento artificiale.
+  globeMesh.rotation.y = 0; 
   earthGroup.add(globeMesh); 
   
   const loader=new THREE.TextureLoader();
@@ -286,7 +291,7 @@ function buildAtmosphere(){
     cloudsMesh=new THREE.Mesh(new THREE.SphereGeometry(R*1.012,64,64),
       new THREE.MeshBasicMaterial({map:tex,transparent:true,opacity:.35,blending:THREE.AdditiveBlending,depthWrite:false}));
     
-    cloudsMesh.rotation.y = -Math.PI / 2; 
+    cloudsMesh.rotation.y = 0; 
     earthGroup.add(cloudsMesh);
   });
 }
@@ -531,6 +536,7 @@ function setupSearch(){
 function flyToCity(lat,lon,name){$('citysearch').value='';$('searchresults').style.display='none';flyTo(lat,lon);toast(`Intercettazione: ${name}`);}
 
 function flyTo(lat,lon){
+  controls.autoRotate = false; // Disattiva orbita per atterrare
   const localTarget = latLon3D(lat,lon,R*2.6); // Zoom più vicino e aggressivo
   const worldTarget = localTarget.clone().applyMatrix4(earthGroup.matrixWorld);
   const start=camera.position.clone();
@@ -584,8 +590,9 @@ function animate(){
   const t=theClock.getElapsedTime();
   controls.update();
   
-  if(earthGroup) earthGroup.rotation.y = t * 0.012; // Rotazione lenta maestosa
-  if(cloudsMesh) cloudsMesh.rotation.y = t * 0.003; 
+  // Tutta l'architettura rotazionale ora è data dal camera drone (autoRotate), NON dalla mappa falsa.
+  // Faccio driftare lentamente solo le nuvole per realismo.
+  if(cloudsMesh) cloudsMesh.rotation.y = t * 0.002; 
   
   if(earthShaderMaterial && sunMesh){
      const worldSunPos = sunMesh.position.clone().applyMatrix4(earthGroup.matrixWorld);
@@ -639,4 +646,3 @@ function animate(){
 </script>
 </body>
 </html>
-
