@@ -10,3 +10,4 @@ data/newsletter_subscribers.csv
 logs/
 *.zip
 .cdsapirc
+data/website/.wrangler/
