@@ -325,7 +325,8 @@ function buildNodesMesh(data){
     size:.055,map:makeCircleTex(),vertexColors:true,transparent:true,opacity:.95,
     sizeAttenuation:true,depthWrite:false,blending:THREE.AdditiveBlending
   }));
-  scene.add(pointCloud);
+  // Add to globeMesh so nodes rotate with the earth
+  globeMesh.add(pointCloud);
 }
 
 function buildLabels(criticals){
@@ -346,8 +347,8 @@ function buildLabels(criticals){
 function updateLabels(){
   const wh=innerWidth/2,hh=innerHeight/2;
   labelEls.forEach(item=>{
-    const wp=item.pos3D.clone();
-    const normal=wp.clone().normalize();
+    const wp=item.pos3D.clone().applyMatrix4(globeMesh.matrixWorld);
+    const normal=wp.clone().sub(globeMesh.position).normalize();
     const view=camera.position.clone().sub(wp).normalize();
     if(normal.dot(view)>0.1){
       item.el.style.opacity='1';
@@ -376,7 +377,7 @@ function addSunFX(center,normal,z){
   const glow=new THREE.Mesh(new THREE.SphereGeometry(.038+intensity*.025,12,12),
     new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:.6,depthWrite:false,blending:THREE.AdditiveBlending}));
   glow.position.copy(center); glow.userData={type:'sun',phase:Math.random()*Math.PI*2};
-  scene.add(glow); weatherFX.push(glow);
+  globeMesh.add(glow); weatherFX.push(glow);
   const up=Math.abs(normal.y)<.9?new THREE.Vector3(0,1,0):new THREE.Vector3(1,0,0);
   const tang=new THREE.Vector3().crossVectors(normal,up).normalize();
   const bitan=new THREE.Vector3().crossVectors(normal,tang).normalize();
@@ -389,7 +390,7 @@ function addSunFX(center,normal,z){
       new THREE.LineBasicMaterial({color:col,transparent:true,opacity:.5,depthWrite:false,blending:THREE.AdditiveBlending})
     );
     ray.userData={type:'sunray',phase:Math.random()*Math.PI*2};
-    scene.add(ray); weatherFX.push(ray);
+    globeMesh.add(ray); weatherFX.push(ray);
   }
 }
 
@@ -413,7 +414,7 @@ function addRainFX(center,normal,z){
     new THREE.LineBasicMaterial({color:0x4488ff,transparent:true,opacity:.5,depthWrite:false,blending:THREE.AdditiveBlending})
   );
   rain.userData={type:'rain',normal,center,phase:Math.random()*Math.PI*2};
-  scene.add(rain); weatherFX.push(rain);
+  globeMesh.add(rain); weatherFX.push(rain);
 }
 
 function updateStats(data){
