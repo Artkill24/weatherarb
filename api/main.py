@@ -33,6 +33,19 @@ _top_cache = {}      # "top" -> list
 _last_refresh = None
 
 # ─── PROVINCE COORDS ──────────────────────────────────────────────────────────
+# Comuni italiani per geolocalizzazione precisa
+_COMUNI = []
+def load_comuni():
+    global _COMUNI
+    try:
+        import json, pathlib
+        p = pathlib.Path(__file__).parent.parent / "data" / "comuni_italy.json"
+        if p.exists():
+            _COMUNI = json.loads(p.read_text())
+            logger.info(f"Loaded {len(_COMUNI)} comuni")
+    except Exception as e:
+        logger.warning(f"Comuni load error: {e}")
+
 def load_provinces():
     try:
         with open("data/province_coords.json") as f:
@@ -290,7 +303,16 @@ def get_nearby(lat: float, lon: float, key: Optional[str] = None):
     slug = re.sub(r"[^\w-]", "", slug)
     data = _cache.get(slug, {})
     weather = data.get("weather", {})
-    return {"province": nearest["location"], "country_code": nearest["country_code"], "lat": nearest["lat"], "lon": nearest["lon"], "distance_km": dist, "z_score": nearest["z_score"], "anomaly_level": nearest["anomaly_level"], "event_type": nearest["event_type"], "score": nearest["score"], "temperature_c": weather.get("temperature_c"), "precipitation": weather.get("precipitation", 0), "humidity_pct": nearest.get("humidity_pct"), "wind_kmh": nearest.get("wind_kmh")}
+    # Trova comune più vicino se disponibile
+    comune_name = nearest["location"]
+    comune_dist = dist
+    if _COMUNI:
+        nc = min(_COMUNI, key=lambda c: math.sqrt((c["lat"]-lat)**2 + (c["lon"]-lon)**2))
+        nc_dist = round(math.sqrt((nc["lat"]-lat)**2 + (nc["lon"]-lon)**2) * 111, 1)
+        if nc_dist < dist:
+            comune_name = nc["nome"]
+            comune_dist = nc_dist
+    return {"province": nearest["location"], "comune": comune_name, "distance_km": comune_dist, "country_code": nearest["country_code"], "lat": nearest["lat"], "lon": nearest["lon"], "z_score": nearest["z_score"], "anomaly_level": nearest["anomaly_level"], "event_type": nearest["event_type"], "score": nearest["score"], "temperature_c": weather.get("temperature_c"), "precipitation": weather.get("precipitation", 0), "humidity_pct": nearest.get("humidity_pct"), "wind_kmh": nearest.get("wind_kmh")}
 
 
 @app.get("/api/v1/pulse/{slug}")
@@ -369,7 +391,16 @@ def get_nearby(lat: float, lon: float, key: Optional[str] = None):
     slug = re.sub(r"[^\w-]", "", slug)
     data = _cache.get(slug, {})
     weather = data.get("weather", {})
-    return {"province": nearest["location"], "country_code": nearest["country_code"], "lat": nearest["lat"], "lon": nearest["lon"], "distance_km": dist, "z_score": nearest["z_score"], "anomaly_level": nearest["anomaly_level"], "event_type": nearest["event_type"], "score": nearest["score"], "temperature_c": weather.get("temperature_c"), "precipitation": weather.get("precipitation", 0), "humidity_pct": nearest.get("humidity_pct"), "wind_kmh": nearest.get("wind_kmh")}
+    # Trova comune più vicino se disponibile
+    comune_name = nearest["location"]
+    comune_dist = dist
+    if _COMUNI:
+        nc = min(_COMUNI, key=lambda c: math.sqrt((c["lat"]-lat)**2 + (c["lon"]-lon)**2))
+        nc_dist = round(math.sqrt((nc["lat"]-lat)**2 + (nc["lon"]-lon)**2) * 111, 1)
+        if nc_dist < dist:
+            comune_name = nc["nome"]
+            comune_dist = nc_dist
+    return {"province": nearest["location"], "comune": comune_name, "distance_km": comune_dist, "country_code": nearest["country_code"], "lat": nearest["lat"], "lon": nearest["lon"], "z_score": nearest["z_score"], "anomaly_level": nearest["anomaly_level"], "event_type": nearest["event_type"], "score": nearest["score"], "temperature_c": weather.get("temperature_c"), "precipitation": weather.get("precipitation", 0), "humidity_pct": nearest.get("humidity_pct"), "wind_kmh": nearest.get("wind_kmh")}
 
 # ─── NEWSLETTER ───────────────────────────────────────────────────────────────
 @app.post("/api/newsletter/subscribe")
@@ -597,6 +628,7 @@ async def startup():
     from fastapi.concurrency import run_in_threadpool
     logger.info("WeatherArb API starting...")
     await run_in_threadpool(refresh_all)
+    load_comuni()
 
 # ─── USER ALERTS ──────────────────────────────────────────────────────────────
 @app.post("/api/alerts/subscribe")
