@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WeatherArb • Earth Intelligence</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#00060a;color:#7eb8c8;font-family:'Space Mono',monospace;overflow:hidden;height:100vh;width:100vw}
+canvas{display:block;position:fixed;inset:0;z-index:1}
+#hud{position:fixed;inset:0;z-index:10;pointer-events:none}
+body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.04) 3px,rgba(0,0,0,.04) 4px)}
+body::before{content:'';position:fixed;inset:0;z-index:49;pointer-events:none;
+  background:radial-gradient(ellipse 80% 80% at 50% 50%,transparent 40%,rgba(0,6,10,.85) 100%)}
+
+/* TOP BAR */
+#topbar{
+  position:absolute;top:0;left:0;right:0;
+  padding:16px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  background:linear-gradient(180deg,rgba(0,6,10,.95) 0%,transparent 100%);
+  pointer-events:all;
+}
+.logo{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;
+  letter-spacing:.18em;text-transform:uppercase;color:#fff;text-decoration:none;flex-shrink:0}
+.logo em{color:#00d4ff;font-style:normal}
+
+/* SEARCH */
+#searchbox{
+  display:flex;align-items:center;gap:8px;flex:1;max-width:320px;
+  background:rgba(0,20,40,.8);border:1px solid rgba(0,212,255,.2);
+  border-radius:24px;padding:7px 16px;
+  transition:border-color .2s;
+}
+#searchbox:focus-within{border-color:rgba(0,212,255,.6)}
+#searchbox svg{flex-shrink:0;opacity:.4}
+#citysearch{
+  background:none;border:none;outline:none;
+  color:#c8e6f0;font-family:'Space Mono',monospace;font-size:11px;
+  width:100%;letter-spacing:.05em;
+}
+#citysearch::placeholder{color:#1e4050}
+
+.live-badge{display:flex;align-items:center;gap:8px;font-size:8px;letter-spacing:.18em;color:#1e4050;flex-shrink:0}
+.live-dot{width:5px;height:5px;border-radius:50%;background:#00ff88;
+  box-shadow:0 0 10px #00ff88;animation:blink 1.8s ease infinite}
+@keyframes blink{0%,100%{opacity:1;box-shadow:0 0 10px #00ff88}50%{opacity:.15;box-shadow:none}}
+
+/* MY CITY BUTTON */
+#mylocbtn{
+  position:absolute;top:72px;left:24px;
+  background:rgba(0,212,255,.12);border:1px solid rgba(0,212,255,.3);
+  color:#00d4ff;font-family:'Space Mono',monospace;font-size:9px;
+  letter-spacing:.15em;text-transform:uppercase;
+  padding:8px 14px;border-radius:20px;cursor:pointer;
+  pointer-events:all;transition:all .2s;
+}
+#mylocbtn:hover{background:rgba(0,212,255,.22);border-color:#00d4ff}
+
+/* SEARCH DROPDOWN */
+#searchresults{
+  position:absolute;top:56px;left:50%;transform:translateX(-50%);
+  width:320px;
+  background:rgba(0,8,18,.97);border:1px solid rgba(0,212,255,.2);
+  border-radius:8px;overflow:hidden;
+  display:none;z-index:100;pointer-events:all;
+}
+.sr-item{
+  padding:10px 16px;font-size:10px;cursor:pointer;
+  border-bottom:1px solid rgba(0,212,255,.07);
+  display:flex;justify-content:space-between;align-items:center;
+  transition:background .15s;
+}
+.sr-item:hover{background:rgba(0,212,255,.08)}
+.sr-city{color:#c8e6f0;font-weight:700;letter-spacing:.05em}
+.sr-z{font-size:11px;font-weight:700}
+.sr-z.hot{color:#ff3030}
+.sr-z.cold{color:#3388ff}
+.sr-z.norm{color:#00ff88}
+
+/* LEFT PANEL */
+#leftpanel{
+  position:absolute;left:20px;top:50%;transform:translateY(-50%);
+  width:200px;pointer-events:all;
+}
+#rightpanel{
+  position:absolute;right:20px;top:50%;transform:translateY(-50%);
+  width:200px;pointer-events:all;
+}
+.pane-title{font-size:8px;letter-spacing:.25em;text-transform:uppercase;
+  color:#1e5060;margin-bottom:12px;padding-bottom:8px;
+  border-bottom:1px solid rgba(0,200,255,.1)}
+.kv{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.kv-label{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#1e5060}
+.kv-val{font-size:20px;font-weight:700;font-family:'Syne',sans-serif;color:#fff}
+.kv-val.red{color:#ff3030;text-shadow:0 0 16px rgba(255,48,48,.5)}
+.kv-val.orange{color:#ff8800;text-shadow:0 0 12px rgba(255,136,0,.4)}
+.kv-val.cyan{color:#00d4ff;text-shadow:0 0 12px rgba(0,212,255,.4)}
+.sep{height:1px;background:rgba(0,200,255,.08);margin:12px 0}
+.legend{display:flex;flex-direction:column;gap:6px}
+.leg-row{display:flex;align-items:center;gap:8px;font-size:8px;letter-spacing:.1em;color:#1e4050}
+.leg-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+
+/* MY LOCATION CARD */
+#mycard{
+  background:rgba(0,212,255,.05);border:1px solid rgba(0,212,255,.15);
+  border-radius:4px;padding:10px 12px;margin-top:12px;display:none;
+}
+.mycard-title{font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:#00d4ff;margin-bottom:6px}
+.mycard-city{font-size:12px;font-weight:700;color:#fff;font-family:'Syne',sans-serif}
+.mycard-coords{font-size:8px;color:#1e4050;margin-top:2px}
+
+/* ANOMALY LIST */
+.anom{background:rgba(0,180,255,.03);border:1px solid rgba(0,180,255,.08);
+  border-radius:3px;padding:9px 11px;margin-bottom:7px;cursor:pointer;
+  transition:background .2s,border-color .2s;pointer-events:all}
+.anom:hover{background:rgba(0,180,255,.08);border-color:rgba(0,180,255,.25)}
+.anom-city{font-size:10px;font-weight:700;color:#c8e6f0;margin-bottom:3px;
+  font-family:'Syne',sans-serif;letter-spacing:.05em}
+.anom-row{display:flex;justify-content:space-between}
+.anom-cc{font-size:8px;color:#1e5060;letter-spacing:.12em;text-transform:uppercase}
+.anom-z{font-size:11px;font-weight:700}
+.anom-z.hot{color:#ff3030}
+.anom-z.cold{color:#3388ff}
+
+/* BOTTOM */
+#bottombar{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:16px 24px;
+  display:flex;justify-content:space-between;align-items:flex-end;
+  background:linear-gradient(0deg,rgba(0,6,10,.95) 0%,transparent 100%);
+}
+.hint{font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#1a3040}
+
+/* TOAST */
+#toast{
+  position:fixed;bottom:70px;left:50%;transform:translateX(-50%);
+  background:rgba(0,212,255,.9);color:#000;
+  font-family:'Space Mono',monospace;font-size:10px;font-weight:700;
+  letter-spacing:.1em;padding:10px 22px;border-radius:20px;
+  opacity:0;pointer-events:none;transition:opacity .3s;z-index:200;
+  white-space:nowrap;
+}
+#toast.show{opacity:1}
+
+/* TOOLTIP */
+#tip{position:fixed;z-index:60;pointer-events:none;
+  background:rgba(0,8,18,.97);border:1px solid rgba(0,212,255,.25);
+  border-radius:4px;padding:12px 15px;
+  backdrop-filter:blur(12px);opacity:0;transition:opacity .12s;min-width:170px}
+#tip.on{opacity:1}
+.tip-city{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#fff;margin-bottom:6px}
+.tip-row{display:flex;justify-content:space-between;gap:14px;margin-top:3px}
+.tip-l{font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#1e5060}
+.tip-v{font-size:10px;font-weight:700;color:#00d4ff}
+
+/* LOADER */
+#loader{position:fixed;inset:0;z-index:200;background:#00060a;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;
+  transition:opacity .6s}
+#loader.gone{opacity:0;pointer-events:none}
+.load-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;
+  letter-spacing:.15em;color:#fff}
+.load-title em{color:#00d4ff;font-style:normal}
+.load-track{width:180px;height:1px;background:rgba(0,212,255,.2)}
+.load-fill{height:100%;background:#00d4ff;width:0%;transition:width .08s linear}
+.load-msg{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#1a4050}
+</style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="load-title">Weather<em>Arb</em></div>
+  <div class="load-track"><div class="load-fill" id="fill"></div></div>
+  <div class="load-msg" id="lmsg">Initializing earth systems...</div>
+</div>
+
+<div id="hud">
+  <div id="topbar">
+    <a href="https://weatherarb.com" class="logo" target="_blank">Weather<em>Arb</em></a>
+
+    <div id="searchbox">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input id="citysearch" type="text" placeholder="Search city...">
+    </div>
+
+    <div class="live-badge">
+      <span class="live-dot"></span>
+      <span id="node-label">— nodes</span>
+      <span style="margin-left:10px" id="utctime">—</span>
+    </div>
+  </div>
+
+  <div id="searchresults"></div>
+
+  <button id="mylocbtn" onclick="goToMyCity()">📍 My Location</button>
+
+  <div id="leftpanel">
+    <div class="pane-title">Intelligence</div>
+    <div class="kv"><span class="kv-label">Nodes</span><span class="kv-val cyan" id="s-nodes">—</span></div>
+    <div class="kv"><span class="kv-label">Critical</span><span class="kv-val red" id="s-crit">—</span></div>
+    <div class="kv"><span class="kv-label">Warning</span><span class="kv-val orange" id="s-warn">—</span></div>
+    <div class="kv"><span class="kv-label">Countries</span><span class="kv-val" id="s-cc">—</span></div>
+    <div class="sep"></div>
+    <div class="pane-title">Legend</div>
+    <div class="legend">
+      <div class="leg-row"><div class="leg-dot" style="background:#ff3030;box-shadow:0 0 8px #ff3030"></div>Heat wave (Z &gt; +2σ)</div>
+      <div class="leg-row"><div class="leg-dot" style="background:#ff8800;box-shadow:0 0 6px #ff8800"></div>Heat warning (+1→+2σ)</div>
+      <div class="leg-row"><div class="leg-dot" style="background:#3388ff;box-shadow:0 0 8px #3388ff"></div>Cold snap (Z &lt; -2σ)</div>
+      <div class="leg-row"><div class="leg-dot" style="background:#00ff88;box-shadow:0 0 6px #00ff88"></div>Normal</div>
+    </div>
+    <div id="mycard">
+      <div class="mycard-title">📍 Your Location</div>
+      <div class="mycard-city" id="mycard-city">—</div>
+      <div class="mycard-coords" id="mycard-coords">—</div>
+    </div>
+  </div>
+
+  <div id="rightpanel">
+    <div class="pane-title">Top Anomalies</div>
+    <div id="anomlist"></div>
+  </div>
+
+  <div id="bottombar">
+    <div class="hint">Drag · Scroll · Hover · Dbl-click auto-rotate</div>
+    <div class="hint" id="coord"></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+<div id="tip">
+  <div class="tip-city" id="tc"></div>
+  <div class="tip-row"><span class="tip-l">Z-Score</span><span class="tip-v" id="tz"></span></div>
+  <div class="tip-row"><span class="tip-l">Score</span><span class="tip-v" id="tsc"></span></div>
+  <div class="tip-row"><span class="tip-l">Temp</span><span class="tip-v" id="tt"></span></div>
+  <div class="tip-row"><span class="tip-l">Event</span><span class="tip-v" id="te"></span></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// ─── State ────────────────────────────────────────────────────────────────────
+let scene, camera, renderer;
+let globeMesh, atmosphereMesh;
+let pointCloud, ringObjs = [];
+let myMarker = null, myMarkerInterval = null;
+let nodesData = [];
+let thetaOff=0, phiOff=Math.PI/2, camR=2.8;
+let tTheta=0, tPhi=Math.PI/2, tR=2.8;
+let dragging=false, lastXY={x:0,y:0};
+let autoRot=true;
+let clock=0;
+const R=1;
+
+// ─── Progress ─────────────────────────────────────────────────────────────────
+function prog(p,m){
+  document.getElementById('fill').style.width=p+'%';
+  document.getElementById('lmsg').textContent=m;
+}
+
+// ─── Toast ────────────────────────────────────────────────────────────────────
+function toast(msg, dur=2500){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), dur);
+}
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+function init(){
+  scene=new THREE.Scene();
+  scene.background=new THREE.Color(0x00060a);
+  camera=new THREE.PerspectiveCamera(42, innerWidth/innerHeight, 0.01, 2000);
+  renderer=new THREE.WebGLRenderer({antialias:true});
+  renderer.setSize(innerWidth,innerHeight);
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  document.body.prepend(renderer.domElement);
+
+  prog(10,'Stars...'); buildStars();
+  prog(20,'Globe...'); buildGlobe();
+  prog(35,'Atmosphere...'); buildAtmosphere();
+  prog(45,'Grid...'); buildGrid();
+  prog(55,'Lights...'); buildLights();
+  setupEvents();
+  setupSearch();
+  prog(65,'Loading nodes...');
+  loadNodes();
+  animate();
+  tickClock(); setInterval(tickClock,1000);
+  camUpdate();
+}
+
+function camUpdate(){
+  camera.position.x=camR*Math.sin(phiOff)*Math.cos(thetaOff);
+  camera.position.y=camR*Math.cos(phiOff);
+  camera.position.z=camR*Math.sin(phiOff)*Math.sin(thetaOff);
+  camera.lookAt(0,0,0);
+}
+
+// ─── Stars ────────────────────────────────────────────────────────────────────
+function buildStars(){
+  const geo=new THREE.BufferGeometry();
+  const pos=new Float32Array(12000*3);
+  for(let i=0;i<12000;i++){
+    const r=250+Math.random()*400, t=Math.random()*Math.PI*2, p=Math.acos(2*Math.random()-1);
+    pos[i*3]=r*Math.sin(p)*Math.cos(t);
+    pos[i*3+1]=r*Math.cos(p);
+    pos[i*3+2]=r*Math.sin(p)*Math.sin(t);
+  }
+  geo.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  scene.add(new THREE.Points(geo,new THREE.PointsMaterial({color:0x6688aa,size:.4,transparent:true,opacity:.5})));
+}
+
+// ─── Globe ────────────────────────────────────────────────────────────────────
+function buildGlobe(){
+  const geo=new THREE.SphereGeometry(R,128,128);
+  const mat=new THREE.MeshPhongMaterial({color:0x040e1a,emissive:0x010508,shininess:60,specular:0x002244});
+  globeMesh=new THREE.Mesh(geo,mat);
+  scene.add(globeMesh);
+
+  const loader=new THREE.TextureLoader();
+  loader.crossOrigin='anonymous';
+  const urls=[
+    'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_atmos_2048.jpg',
+    'https://unpkg.com/three-globe/example/img/earth-dark.jpg',
+  ];
+  function tryTex(i){
+    if(i>=urls.length) return;
+    loader.load(urls[i], tex=>{
+      mat.map=tex; mat.color.set(0xffffff); mat.needsUpdate=true;
+    }, null, ()=>tryTex(i+1));
+  }
+  tryTex(0);
+}
+
+// ─── Atmosphere ───────────────────────────────────────────────────────────────
+function buildAtmosphere(){
+  atmosphereMesh=new THREE.Mesh(
+    new THREE.SphereGeometry(R*1.06,64,64),
+    new THREE.ShaderMaterial({
+      uniforms:{color:{value:new THREE.Color(0x002255)}},
+      vertexShader:`varying vec3 vN;void main(){vN=normalize(normalMatrix*normal);gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+      fragmentShader:`varying vec3 vN;uniform vec3 color;void main(){float r=pow(1.-dot(vN,vec3(0,0,1)),3.);gl_FragColor=vec4(color,r*.7);}`,
+      transparent:true,side:THREE.BackSide,depthWrite:false,blending:THREE.AdditiveBlending
+    })
+  );
+  scene.add(atmosphereMesh);
+}
+
+// ─── Grid ─────────────────────────────────────────────────────────────────────
+function buildGrid(){
+  const mat=new THREE.LineBasicMaterial({color:0x003344,transparent:true,opacity:.25});
+  const g=new THREE.Group();
+  for(let lat=-60;lat<=60;lat+=30){
+    const pts=[];
+    for(let lon=0;lon<=360;lon+=4) pts.push(latLon3D(lat,lon,R+.002));
+    g.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),mat));
+  }
+  for(let lon=0;lon<360;lon+=30){
+    const pts=[];
+    for(let lat=-90;lat<=90;lat+=4) pts.push(latLon3D(lat,lon,R+.002));
+    g.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),mat));
+  }
+  scene.add(g);
+}
+
+// ─── Lights ───────────────────────────────────────────────────────────────────
+function buildLights(){
+  scene.add(new THREE.AmbientLight(0x223355,1.5));
+  const s=new THREE.DirectionalLight(0xaaccff,2.0); s.position.set(8,3,5); scene.add(s);
+  const b=new THREE.DirectionalLight(0x001122,.8); b.position.set(-4,-2,-3); scene.add(b);
+}
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+function latLon3D(lat,lon,r){
+  const phi=(90-lat)*Math.PI/180, theta=(lon+180)*Math.PI/180;
+  return new THREE.Vector3(-r*Math.sin(phi)*Math.cos(theta), r*Math.cos(phi), r*Math.sin(phi)*Math.sin(theta));
+}
+
+function nodeColor(z){
+  if(z>=3)  return [1,.05,.05];
+  if(z>=2)  return [1,.5,0];
+  if(z>=1)  return [1,.85,.1];
+  if(z<=-3) return [.1,.4,1];
+  if(z<=-2) return [.2,.6,1];
+  if(z<=-1) return [.4,.8,1];
+  return [0,1,.5];
+}
+
+// ─── Load nodes ───────────────────────────────────────────────────────────────
+async function loadNodes(){
+  try{
+    prog(70,'Fetching anomaly data...');
+    const r=await fetch('https://api.weatherarb.com/api/v1/europe/top?limit=750');
+    const data=await r.json();
+    nodesData=data.reports||[];
+    prog(85,'Rendering...');
+    buildNodes(nodesData);
+    updateStats(nodesData);
+    buildAnomalyList(nodesData);
+    prog(100,'Ready');
+    setTimeout(()=>document.getElementById('loader').classList.add('gone'),400);
+  }catch(e){
+    prog(100,'Demo mode');
+    setTimeout(()=>document.getElementById('loader').classList.add('gone'),400);
+  }
+}
+
+function buildNodes(data){
+  if(pointCloud) scene.remove(pointCloud);
+  ringObjs.forEach(o=>scene.remove(o)); ringObjs=[];
+
+  const positions=[], colors=[];
+  data.forEach(n=>{
+    const p=latLon3D(n.lat,n.lon,R+.015);
+    positions.push(p.x,p.y,p.z);
+    const [r,g,b]=nodeColor(n.z_score||0);
+    colors.push(r,g,b);
+  });
+
+  const geo=new THREE.BufferGeometry();
+  geo.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));
+  geo.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));
+  pointCloud=new THREE.Points(geo, new THREE.PointsMaterial({
+    size:.028,vertexColors:true,transparent:true,opacity:.95,
+    sizeAttenuation:true,depthWrite:false,blending:THREE.AdditiveBlending
+  }));
+  scene.add(pointCloud);
+
+  // Critical rings
+  data.filter(n=>Math.abs(n.z_score||0)>=2.5).forEach(n=>{
+    const p=latLon3D(n.lat,n.lon,R+.016);
+    const [r,g,b]=nodeColor(n.z_score);
+    const ring=new THREE.Mesh(
+      new THREE.RingGeometry(.018,.028,20),
+      new THREE.MeshBasicMaterial({color:new THREE.Color(r,g,b),transparent:true,opacity:.5,
+        side:THREE.DoubleSide,depthWrite:false,blending:THREE.AdditiveBlending})
+    );
+    ring.position.copy(p);
+    ring.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),p.clone().normalize());
+    ring.userData.node=n;
+    scene.add(ring); ringObjs.push(ring);
+  });
+}
+
+// ─── Stats & lists ────────────────────────────────────────────────────────────
+function updateStats(data){
+  const crit=data.filter(n=>Math.abs(n.z_score||0)>=3).length;
+  const warn=data.filter(n=>Math.abs(n.z_score||0)>=2&&Math.abs(n.z_score||0)<3).length;
+  const cc=new Set(data.map(n=>n.country_code)).size;
+  document.getElementById('s-nodes').textContent=data.length;
+  document.getElementById('s-crit').textContent=crit;
+  document.getElementById('s-warn').textContent=warn;
+  document.getElementById('s-cc').textContent=cc;
+  document.getElementById('node-label').textContent=data.length+' nodes';
+}
+
+function buildAnomalyList(data){
+  const top=[...data].filter(n=>Math.abs(n.z_score||0)>=2)
+    .sort((a,b)=>Math.abs(b.z_score)-Math.abs(a.z_score)).slice(0,7);
+  document.getElementById('anomlist').innerHTML=top.map(n=>{
+    const z=(n.z_score||0).toFixed(2), cls=n.z_score>=0?'hot':'cold', sign=n.z_score>=0?'+':'';
+    return `<div class="anom" onclick="flyTo(${n.lat},${n.lon})">
+      <div class="anom-city">${n.location}</div>
+      <div class="anom-row">
+        <span class="anom-cc">${(n.country_code||'').toUpperCase()}</span>
+        <span class="anom-z ${cls}">${sign}${z}σ</span>
+      </div></div>`;
+  }).join('');
+}
+
+// ─── Fly to ───────────────────────────────────────────────────────────────────
+function flyTo(lat,lon,zoom=1.75){
+  autoRot=false;
+  tPhi=(90-lat)*Math.PI/180;
+  tTheta=-(lon+180)*Math.PI/180;
+  tR=zoom;
+}
+
+// ─── My City / Geolocation ────────────────────────────────────────────────────
+let myLat=null, myLon=null;
+
+function goToMyCity(){
+  if(myLat!==null){ flyToMyCity(myLat,myLon); return; }
+  if(!navigator.geolocation){ toast('⚠️ Geolocation not supported'); return; }
+  toast('📡 Detecting location...',3000);
+  navigator.geolocation.getCurrentPosition(pos=>{
+    myLat=pos.coords.latitude;
+    myLon=pos.coords.longitude;
+    flyToMyCity(myLat,myLon);
+  }, ()=>toast('⚠️ Location access denied'));
+}
+
+function flyToMyCity(lat,lon){
+  flyTo(lat,lon,1.6);
+  placeMyMarker(lat,lon);
+
+  // Find nearest node
+  let nearest=null, minDist=999;
+  nodesData.forEach(n=>{
+    const d=Math.sqrt((n.lat-lat)**2+(n.lon-lon)**2);
+    if(d<minDist){minDist=d;nearest=n;}
+  });
+  const cityName = nearest ? nearest.location : `${lat.toFixed(2)}°N ${lon.toFixed(2)}°E`;
+  toast(`🌍 Flying to ${cityName}`);
+  document.getElementById('mycard').style.display='block';
+  document.getElementById('mycard-city').textContent=cityName;
+  document.getElementById('mycard-coords').textContent=`${lat.toFixed(3)}°N  ${lon.toFixed(3)}°E`;
+}
+
+function placeMyMarker(lat,lon){
+  if(myMarker){scene.remove(myMarker);clearInterval(myMarkerInterval);}
+  const p=latLon3D(lat,lon,R+.025);
+  myMarker=new THREE.Mesh(
+    new THREE.SphereGeometry(.025,16,16),
+    new THREE.MeshBasicMaterial({color:0x00ffff,transparent:true,opacity:.9,
+      blending:THREE.AdditiveBlending,depthWrite:false})
+  );
+  myMarker.position.copy(p);
+  scene.add(myMarker);
+  // Outer ring
+  const ring=new THREE.Mesh(
+    new THREE.RingGeometry(.03,.04,24),
+    new THREE.MeshBasicMaterial({color:0x00ffff,transparent:true,opacity:.5,
+      side:THREE.DoubleSide,blending:THREE.AdditiveBlending,depthWrite:false})
+  );
+  ring.position.copy(p);
+  ring.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),p.clone().normalize());
+  ring.userData.isMyRing=true;
+  scene.add(ring);
+  myMarkerInterval=setInterval(()=>{
+    const s=1+Math.sin(Date.now()/300)*.4;
+    if(myMarker) myMarker.scale.setScalar(s);
+    ring.scale.setScalar(1+Math.sin(Date.now()/300+1)*.25);
+    ring.material.opacity=.3+Math.abs(Math.sin(Date.now()/300))*.4;
+  },16);
+}
+
+// ─── Search ───────────────────────────────────────────────────────────────────
+function setupSearch(){
+  const inp=document.getElementById('citysearch');
+  const res=document.getElementById('searchresults');
+
+  inp.addEventListener('input',()=>{
+    const q=inp.value.trim().toLowerCase();
+    if(q.length<2){res.style.display='none';return;}
+    const matches=nodesData.filter(n=>(n.location||'').toLowerCase().includes(q)).slice(0,6);
+    if(!matches.length){res.style.display='none';return;}
+    res.innerHTML=matches.map(n=>{
+      const z=(n.z_score||0).toFixed(2);
+      const cls=n.z_score>=2?'hot':n.z_score<=-2?'cold':'norm';
+      const sign=n.z_score>=0?'+':'';
+      return `<div class="sr-item" onclick="selectCity(${n.lat},${n.lon},'${n.location.replace(/'/g,'')}')" >
+        <span class="sr-city">${n.location} <span style="color:#1e4050;font-size:8px">${(n.country_code||'').toUpperCase()}</span></span>
+        <span class="sr-z ${cls}">${sign}${z}σ</span>
+      </div>`;
+    }).join('');
+    res.style.display='block';
+  });
+
+  inp.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){res.style.display='none';inp.value='';inp.blur();}
+  });
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('#searchbox')&&!e.target.closest('#searchresults'))
+      res.style.display='none';
+  });
+}
+
+function selectCity(lat,lon,name){
+  document.getElementById('citysearch').value=name;
+  document.getElementById('searchresults').style.display='none';
+  flyTo(lat,lon);
+  toast(`🔍 ${name}`);
+}
+
+// ─── Hover ────────────────────────────────────────────────────────────────────
+const tip=document.getElementById('tip');
+const raycaster=new THREE.Raycaster();
+raycaster.params.Points={threshold:.025};
+const mouse2=new THREE.Vector2();
+
+function doHover(e){
+  if(!pointCloud){tip.classList.remove('on');return;}
+  mouse2.x=(e.clientX/innerWidth)*2-1;
+  mouse2.y=-(e.clientY/innerHeight)*2+1;
+  raycaster.setFromCamera(mouse2,camera);
+  const hits=raycaster.intersectObject(pointCloud);
+  if(hits.length){
+    const n=nodesData[hits[0].index];
+    if(n){
+      document.getElementById('tc').textContent=n.location+' · '+(n.country_code||'').toUpperCase();
+      const z=n.z_score||0;
+      document.getElementById('tz').textContent=(z>=0?'+':'')+z.toFixed(2)+'σ';
+      document.getElementById('tsc').textContent=(n.score||0).toFixed(1)+'/10';
+      document.getElementById('tt').textContent=n.temperature_c!=null?n.temperature_c.toFixed(1)+'°C':'—';
+      document.getElementById('te').textContent=(n.event_type||n.anomaly_level||'—').replace(/_/g,' ');
+      tip.style.left=(e.clientX+18)+'px'; tip.style.top=(e.clientY-10)+'px';
+      tip.classList.add('on'); return;
+    }
+  }
+  tip.classList.remove('on');
+}
+
+// ─── Events ───────────────────────────────────────────────────────────────────
+function setupEvents(){
+  const cv=renderer.domElement;
+  cv.addEventListener('mousedown',e=>{dragging=true;autoRot=false;lastXY={x:e.clientX,y:e.clientY};});
+  cv.addEventListener('mousemove',e=>{
+    if(dragging){
+      tTheta+=(e.clientX-lastXY.x)*.004;
+      tPhi=Math.max(.05,Math.min(Math.PI-.05,tPhi+(e.clientY-lastXY.y)*.004));
+      lastXY={x:e.clientX,y:e.clientY};
+    }
+    doHover(e);
+  });
+  cv.addEventListener('mouseup',()=>dragging=false);
+  cv.addEventListener('mouseleave',()=>{dragging=false;tip.classList.remove('on');});
+  cv.addEventListener('wheel',e=>{tR=Math.max(1.2,Math.min(7,tR+e.deltaY*.002));e.preventDefault();},{passive:false});
+  cv.addEventListener('dblclick',()=>autoRot=!autoRot);
+  window.addEventListener('resize',()=>{
+    camera.aspect=innerWidth/innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(innerWidth,innerHeight);
+  });
+}
+
+// ─── Clock ────────────────────────────────────────────────────────────────────
+function tickClock(){
+  const d=new Date();
+  document.getElementById('utctime').textContent=
+    d.getUTCHours().toString().padStart(2,'0')+':'+
+    d.getUTCMinutes().toString().padStart(2,'0')+' UTC';
+}
+
+// ─── Animate ─────────────────────────────────────────────────────────────────
+function animate(){
+  requestAnimationFrame(animate);
+  clock+=.012;
+  if(autoRot) tTheta+=.0006;
+  thetaOff+=(tTheta-thetaOff)*.07;
+  phiOff  +=(tPhi  -phiOff  )*.07;
+  camR    +=(tR    -camR    )*.06;
+  camera.position.x=camR*Math.sin(phiOff)*Math.cos(thetaOff);
+  camera.position.y=camR*Math.cos(phiOff);
+  camera.position.z=camR*Math.sin(phiOff)*Math.sin(thetaOff);
+  camera.lookAt(0,0,0);
+
+  ringObjs.forEach((r,i)=>{
+    const p=.25+Math.abs(Math.sin(clock*1.2+i*.2))*.55;
+    r.material.opacity=p;
+    r.scale.setScalar(1+Math.sin(clock*1.2+i*.2)*.2);
+  });
+  if(pointCloud) pointCloud.material.size=.028*(1+Math.sin(clock*.8)*.012);
+  renderer.render(scene,camera);
+}
+
+init();
+</script>
+</body>
+</html>
