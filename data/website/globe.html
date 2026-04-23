@@ -137,12 +137,12 @@ const $=id=>document.getElementById(id);
 function prog(p,m){$('fill').style.width=p+'%';$('lmsg').textContent=m}
 function toast(msg,dur=3000){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur)}
 
-// MATEMATICA EQUIRETTANGOLARE PERFETTA
+// LA MATEMATICA CORRETTA PER LA MAPPA BLUE MARBLE (+90 offset)
 function latLon3D(lat,lon,r){
   const phi = (90 - lat) * (Math.PI / 180);
-  const theta = (lon + 180) * (Math.PI / 180); 
+  const theta = (lon + 90) * (Math.PI / 180); 
   return new THREE.Vector3(
-    -(r * Math.sin(phi) * Math.cos(theta)),
+    r * Math.sin(phi) * Math.cos(theta),
     r * Math.cos(phi),
     r * Math.sin(phi) * Math.sin(theta)
   );
@@ -169,7 +169,6 @@ window.onload=function(){
   scene=new THREE.Scene();
   scene.fog=new THREE.FogExp2(0x000103,.03);
   
-  // LA SCATOLA MAGICA (Corpo Rigido)
   earthGroup = new THREE.Group();
   scene.add(earthGroup);
 
@@ -216,10 +215,9 @@ function buildEarthShader(){
   });
   globeMesh=new THREE.Mesh(new THREE.SphereGeometry(R,128,128),earthShaderMaterial);
   
-  // FIX OFFSET DELLA TEXTURE (Blue Marble ha la cucitura a -90°)
-  globeMesh.rotation.y = -Math.PI / 2; 
-  
-  earthGroup.add(globeMesh); // DENTRO AL GRUPPO
+  // LA MAPPA È A ZERO (Nessun offset strano)
+  globeMesh.rotation.y = 0; 
+  earthGroup.add(globeMesh);
   
   const loader=new THREE.TextureLoader();
   loader.load('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg',t=>{earthShaderMaterial.uniforms.dayTex.value=t;});
@@ -239,8 +237,8 @@ function buildAtmosphere(){
     cloudsMesh=new THREE.Mesh(new THREE.SphereGeometry(R*1.012,64,64),
       new THREE.MeshBasicMaterial({map:tex,transparent:true,opacity:.3,blending:THREE.AdditiveBlending,depthWrite:false}));
     
-    cloudsMesh.rotation.y = -Math.PI / 2; // Allineato alla texture Terra
-    earthGroup.add(cloudsMesh); // DENTRO AL GRUPPO
+    cloudsMesh.rotation.y = 0; 
+    earthGroup.add(cloudsMesh);
   });
 }
 
@@ -252,7 +250,6 @@ function buildSunAndMoon(){
   moonMesh=new THREE.Mesh(new THREE.SphereGeometry(.12,32,32),
     new THREE.MeshStandardMaterial({color:0xdddddd,roughness:.8}));
     
-  // TUTTO DENTRO AL GRUPPO TERRA PER NON FARLI SCIVOLARE
   earthGroup.add(sunLight);
   earthGroup.add(sunMesh);
   earthGroup.add(moonLight);
@@ -319,7 +316,7 @@ function buildNodesMesh(data){
     size:.055,map:makeCircleTex(),vertexColors:true,transparent:true,opacity:.95,
     sizeAttenuation:true,depthWrite:false,blending:THREE.AdditiveBlending
   }));
-  earthGroup.add(pointCloud); // DENTRO AL GRUPPO
+  earthGroup.add(pointCloud);
 }
 
 function buildLabels(criticals){
@@ -340,7 +337,7 @@ function buildLabels(criticals){
 function updateLabels(){
   const wh=innerWidth/2,hh=innerHeight/2;
   labelEls.forEach(item=>{
-    const wp=item.pos3D.clone().applyMatrix4(earthGroup.matrixWorld); // MANTIENE L'ALLINEAMENTO QUANDO GIRA
+    const wp=item.pos3D.clone().applyMatrix4(earthGroup.matrixWorld);
     const normal=wp.clone().sub(earthGroup.position).normalize();
     const view=camera.position.clone().sub(wp).normalize();
     if(normal.dot(view)>0.1){
@@ -444,7 +441,6 @@ function flyToCity(lat,lon,name){$('citysearch').value=name;$('searchresults').s
 
 function flyTo(lat,lon){
   const localTarget = latLon3D(lat,lon,R*2.8);
-  // Calcola la posizione ASSOLUTA del nodo in base a come è girato il globo ora
   const worldTarget = localTarget.clone().applyMatrix4(earthGroup.matrixWorld);
   const start=camera.position.clone();
   let step=0;
@@ -473,7 +469,7 @@ function doFlyToMe(){
   myMarker=new THREE.Mesh(new THREE.SphereGeometry(.025,16,16),
     new THREE.MeshBasicMaterial({color:0x00ffff,transparent:true,opacity:.9,blending:THREE.AdditiveBlending,depthWrite:false}));
   myMarker.position.copy(p); 
-  earthGroup.add(myMarker); // DENTRO AL GRUPPO
+  earthGroup.add(myMarker);
   let nearest=null,minD=999;
   nodesData.forEach(n=>{const d=Math.sqrt((n.lat-myLat)**2+(n.lon-myLon)**2);if(d<minD){minD=d;nearest=n;}});
   toast(`🌍 ${nearest?nearest.location:'Posizione rilevata'}`);
@@ -490,11 +486,9 @@ function animate(){
   const t=theClock.getElapsedTime();
   controls.update();
   
-  // RUOTA SOLO LA SCATOLA (Tutto il resto segue)
   if(earthGroup) earthGroup.rotation.y = t * 0.015;
   
   if(earthShaderMaterial && sunMesh){
-     // Aggiorna lo shader con la direzione del Sole nel mondo reale
      const worldSunPos = sunMesh.position.clone().applyMatrix4(earthGroup.matrixWorld);
      earthShaderMaterial.uniforms.sunDir.value.copy(worldSunPos).normalize();
   }
