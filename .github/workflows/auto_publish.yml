@@ -41,7 +41,7 @@ jobs:
           git config user.email "bot@weatherarb.com"
           git add data/blog_posts/ data/website/news/ data/website/data/latest_reports.json
           git diff --staged --quiet || git commit -m "auto: publish weather intelligence reports $(date -u +%Y-%m-%d)"
-          git push
+          git pull --rebase origin main && git push
 
       - name: Deploy to Cloudflare
         env:
