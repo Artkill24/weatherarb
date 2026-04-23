@@ -233,7 +233,7 @@ if(navigator.geolocation){
       var lEl = document.getElementById('gc-level');
       lEl.textContent = d.anomaly_level||'—';
       lEl.style.color = color;
-      document.getElementById('gc-link').href = '/it/'+makeSlug(d.province)+'/';
+      document.getElementById('gc-link').href = '/it/'+makeSlug(d.province)+'/'+makeSlug(d.comune||'')+'/';
     }).catch(function(){});
   }, null, {timeout:5000});
 }
