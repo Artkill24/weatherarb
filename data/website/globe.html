@@ -486,8 +486,10 @@ function animate(){
   requestAnimationFrame(animate);
   const t=theClock.getElapsedTime();
   controls.update();
-  if(cloudsMesh) cloudsMesh.rotation.y=t*.003;
-  if(nodeGroup) nodeGroup.rotation.y=globeMesh.rotation.y;
+  const earthRot = -Math.PI/2 + t*.018;
+  if(globeMesh) globeMesh.rotation.y=earthRot;
+  if(cloudsMesh) cloudsMesh.rotation.y=earthRot + t*.003;
+  if(nodeGroup) nodeGroup.rotation.y=earthRot;
   if(myMarker) myMarker.scale.setScalar(1+Math.sin(t*4)*.3);
   weatherFX.forEach(fx=>{
     const ph=fx.userData.phase||0;
