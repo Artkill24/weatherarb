@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-04-25T12:58:00.754904+00:00",
+  "timestamp": "2026-04-25T15:37:14.881934+00:00",
   "space_weather": {
-    "timestamp": "2026-04-25T12:58:00.284754+00:00",
+    "timestamp": "2026-04-25T15:37:14.747848+00:00",
     "kp_current": 0.0,
     "kp_forecast_max_24h": 0,
-    "solar_flux": 1.2409648206812562e-06,
+    "solar_flux": 1.0287110399076482e-06,
     "flare_class": "M",
     "storm_probability": {
       "G1": 0,
@@ -23,9 +23,23 @@
       "kp_current": 0.0,
       "kp_forecast_max": 0,
       "flare_class": "M",
+      "location": "Asti",
+      "country_code": "it",
+      "z_score": 3.0,
+      "label": "Rischio rete elevato a Asti: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+    },
+    {
+      "grid_stress_score": 5.2,
+      "geo_component": 0.0,
+      "solar_component": 1.2,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "M",
       "location": "Sondrio",
       "country_code": "it",
-      "z_score": 3.23,
+      "z_score": 3.34,
       "label": "Rischio rete elevato a Sondrio: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -39,7 +53,7 @@
       "flare_class": "M",
       "location": "Pavia",
       "country_code": "it",
-      "z_score": 3.15,
+      "z_score": 3.01,
       "label": "Rischio rete elevato a Pavia: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -53,8 +67,36 @@
       "flare_class": "M",
       "location": "Mantova",
       "country_code": "it",
-      "z_score": 3.02,
+      "z_score": 3.12,
       "label": "Rischio rete elevato a Mantova: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+    },
+    {
+      "grid_stress_score": 5.2,
+      "geo_component": 0.0,
+      "solar_component": 1.2,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "M",
+      "location": "Bolzano",
+      "country_code": "it",
+      "z_score": 3.01,
+      "label": "Rischio rete elevato a Bolzano: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+    },
+    {
+      "grid_stress_score": 5.2,
+      "geo_component": 0.0,
+      "solar_component": 1.2,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "M",
+      "location": "Trento",
+      "country_code": "it",
+      "z_score": 3.14,
+      "label": "Rischio rete elevato a Trento: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
       "grid_stress_score": 5.2,
@@ -79,9 +121,23 @@
       "kp_current": 0.0,
       "kp_forecast_max": 0,
       "flare_class": "M",
+      "location": "Ferrara",
+      "country_code": "it",
+      "z_score": 3.01,
+      "label": "Rischio rete elevato a Ferrara: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+    },
+    {
+      "grid_stress_score": 5.2,
+      "geo_component": 0.0,
+      "solar_component": 1.2,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "M",
       "location": "Graz",
       "country_code": "at",
-      "z_score": 3.18,
+      "z_score": 3.25,
       "label": "Rischio rete elevato a Graz: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -95,7 +151,7 @@
       "flare_class": "M",
       "location": "Braga",
       "country_code": "pt",
-      "z_score": 3.19,
+      "z_score": 3.33,
       "label": "Rischio rete elevato a Braga: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -109,22 +165,8 @@
       "flare_class": "M",
       "location": "Frosinone",
       "country_code": "it",
-      "z_score": 3.1,
+      "z_score": 3.09,
       "label": "Rischio rete elevato a Frosinone: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
-    },
-    {
-      "grid_stress_score": 5.2,
-      "geo_component": 0.0,
-      "solar_component": 1.2,
-      "energy_component": 4.0,
-      "risk_level": "HIGH",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "M",
-      "location": "Foggia",
-      "country_code": "it",
-      "z_score": 3.01,
-      "label": "Rischio rete elevato a Foggia: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
       "grid_stress_score": 5.2,
@@ -137,7 +179,7 @@
       "flare_class": "M",
       "location": "Zagabria",
       "country_code": "hr",
-      "z_score": 3.23,
+      "z_score": 3.26,
       "label": "Rischio rete elevato a Zagabria: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -179,7 +221,7 @@
       "flare_class": "M",
       "location": "Ljubljana",
       "country_code": "si",
-      "z_score": 3.03,
+      "z_score": 3.11,
       "label": "Rischio rete elevato a Ljubljana: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -191,10 +233,10 @@
       "kp_current": 0.0,
       "kp_forecast_max": 0,
       "flare_class": "M",
-      "location": "Maribor",
-      "country_code": "si",
-      "z_score": 3.21,
-      "label": "Rischio rete elevato a Maribor: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+      "location": "Miami",
+      "country_code": "us",
+      "z_score": 3.1,
+      "label": "Rischio rete elevato a Miami: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
       "grid_stress_score": 5.2,
@@ -207,7 +249,7 @@
       "flare_class": "M",
       "location": "Calgary",
       "country_code": "ca",
-      "z_score": -4.4,
+      "z_score": -4.38,
       "label": "Rischio rete elevato a Calgary: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -221,7 +263,7 @@
       "flare_class": "M",
       "location": "Edmonton",
       "country_code": "ca",
-      "z_score": -4.25,
+      "z_score": -4.26,
       "label": "Rischio rete elevato a Edmonton: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -235,7 +277,7 @@
       "flare_class": "M",
       "location": "Chengdu",
       "country_code": "cn",
-      "z_score": 3.01,
+      "z_score": 3.17,
       "label": "Rischio rete elevato a Chengdu: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -249,50 +291,8 @@
       "flare_class": "M",
       "location": "Singapore",
       "country_code": "sg",
-      "z_score": 4.18,
+      "z_score": 4.08,
       "label": "Rischio rete elevato a Singapore: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
-    },
-    {
-      "grid_stress_score": 5.2,
-      "geo_component": 0.0,
-      "solar_component": 1.2,
-      "energy_component": 4.0,
-      "risk_level": "HIGH",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "M",
-      "location": "Mumbai",
-      "country_code": "in",
-      "z_score": 5.01,
-      "label": "Rischio rete elevato a Mumbai: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
-    },
-    {
-      "grid_stress_score": 5.2,
-      "geo_component": 0.0,
-      "solar_component": 1.2,
-      "energy_component": 4.0,
-      "risk_level": "HIGH",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "M",
-      "location": "Delhi",
-      "country_code": "in",
-      "z_score": 6.77,
-      "label": "Rischio rete elevato a Delhi: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
-    },
-    {
-      "grid_stress_score": 5.2,
-      "geo_component": 0.0,
-      "solar_component": 1.2,
-      "energy_component": 4.0,
-      "risk_level": "HIGH",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "M",
-      "location": "Bangalore",
-      "country_code": "in",
-      "z_score": 5.06,
-      "label": "Rischio rete elevato a Bangalore: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     }
   ],
   "total_nodes": 30
