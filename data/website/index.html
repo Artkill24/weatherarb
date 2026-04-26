@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>WeatherArb — European Weather Intelligence Agency</title>
+  <title>WeatherArb — Anomalie Meteo Globali in Tempo Reale | 1.514 Città Monitorate</title>
   <meta name="description" content="Real-time weather anomalies for 121 cities across 14 countries. NASA POWER Z-Score 25yr baseline. HDD/CDD energy data. Space Weather & Grid Risk Intelligence.">
   <link rel="canonical" href="https://weatherarb.com/">
   <style>
@@ -164,7 +164,7 @@
 <section class="hero">
   <div class="hero-eyebrow"><span>●</span> Intelligence Agency — Live</div>
   <h1>Weather<em>Arb</em><br>Intelligence</h1>
-  <p class="hero-sub">Anomalie meteo, Space Weather e Grid Risk per 434 nodi globali. Z-Score NASA POWER 25 anni. HDD/CDD energy data.</p>
+  <p class="hero-sub">Anomalie meteo, Space Weather e Grid Risk per 1.514 città in 100+ paesi. Z-Score NASA POWER 25 anni. HDD/CDD energy data. Anomalie meteo in tempo reale.</p>
   <div class="hero-btns">
     <a href="/data/" class="btn-pri">Dashboard Live →</a>
     <a href="/pricing/" class="btn-sec">API Pro</a>
@@ -173,8 +173,8 @@
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stat"><div class="stat-n">434</div><div class="stat-l">Nodi Globali</div></div>
-  <div class="stat"><div class="stat-n">58</div><div class="stat-l">Paesi</div></div>
+  <div class="stat"><div class="stat-n" id="stat-nodes">1.514</div><div class="stat-l">Nodi Globali</div></div>
+  <div class="stat"><div class="stat-n" id="stat-countries">100+</div><div class="stat-l">Paesi</div></div>
   <div class="stat"><div class="stat-n">25</div><div class="stat-l">Anni Baseline</div></div>
   <div class="stat"><div class="stat-n" id="live-anom" style="color:var(--g)">—</div><div class="stat-l">Anomalie Live</div></div>
   <div class="stat"><div class="stat-n" id="live-crit" style="color:var(--r)">—</div><div class="stat-l">Critical</div></div>
@@ -566,6 +566,19 @@ function showGeoAlert(node) {
 // Lancia dopo 2 secondi
 setTimeout(loadGeoAlert, 2000);
 
+</script>
+
+<script>
+// Aggiorna stats in tempo reale dall'API
+(async function(){
+  try {
+    const r = await fetch('https://api.weatherarb.com/api/v1/europe/top?limit=1');
+    const d = await r.json();
+    const total = d.count || 1514;
+    const el = document.getElementById('stat-nodes');
+    if(el) el.textContent = total.toLocaleString('it-IT');
+  } catch(e) {}
+})();
 </script>
 </body>
 </html>
