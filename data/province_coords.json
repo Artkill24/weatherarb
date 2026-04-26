@@ -5527,6 +5527,5641 @@
       "lon": 26.82437,
       "country": "South Africa",
       "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Sarandë",
+      "lat": 39.87534,
+      "lon": 20.00477,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Pogradec",
+      "lat": 40.9025,
+      "lon": 20.6525,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Librazhd",
+      "lat": 41.17944,
+      "lon": 20.315,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Kukës",
+      "lat": 42.07694,
+      "lon": 20.42194,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Korçë",
+      "lat": 40.61861,
+      "lon": 20.78083,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Tandil",
+      "lat": -37.3287,
+      "lon": -59.1369,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "San Vicente",
+      "lat": -26.61667,
+      "lon": -54.13333,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Santo Tomé",
+      "lat": -28.55104,
+      "lon": -56.04125,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Santos Lugares",
+      "lat": -34.60306,
+      "lon": -58.54074,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Santa Elena",
+      "lat": -30.94432,
+      "lon": -59.78832,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "San Pedro",
+      "lat": -33.67918,
+      "lon": -59.66633,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "San Luis del Palmar",
+      "lat": -27.50766,
+      "lon": -58.55625,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "San Lorenzo",
+      "lat": -28.13442,
+      "lon": -58.76685,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "San Justo",
+      "lat": -34.68107,
+      "lon": -58.56379,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "San Javier",
+      "lat": -30.58072,
+      "lon": -59.92962,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "San Isidro",
+      "lat": -34.46971,
+      "lon": -58.52111,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "San Antonio de Padua",
+      "lat": -34.66267,
+      "lon": -58.69819,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Saladillo",
+      "lat": -35.63884,
+      "lon": -59.77938,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Saladas",
+      "lat": -28.25504,
+      "lon": -58.62386,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Retiro",
+      "lat": -34.58333,
+      "lon": -58.38333,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Resistencia",
+      "lat": -27.46363,
+      "lon": -58.98665,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Reconquista",
+      "lat": -29.15,
+      "lon": -59.65,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Quilmes",
+      "lat": -34.72065,
+      "lon": -58.25454,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Puerto Rico",
+      "lat": -26.8089,
+      "lon": -55.02147,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Puerto Iguazú",
+      "lat": -25.59912,
+      "lon": -54.57355,
+      "country": "Argentina",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Bunbury",
+      "lat": -33.32711,
+      "lon": 115.64137,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Australind",
+      "lat": -33.2792,
+      "lon": 115.71504,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Alice Springs",
+      "lat": -23.69748,
+      "lon": 133.88362,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Albany",
+      "lat": -35.02692,
+      "lon": 117.88369,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Adelaide",
+      "lat": -34.92866,
+      "lon": 138.59863,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Yarraville",
+      "lat": -37.81667,
+      "lon": 144.9,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Wollert",
+      "lat": -37.58333,
+      "lon": 145.03333,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Wodonga",
+      "lat": -36.12179,
+      "lon": 146.88809,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Wheelers Hill",
+      "lat": -37.9,
+      "lon": 145.18333,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Westmead",
+      "lat": -33.80383,
+      "lon": 150.98768,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Werribee",
+      "lat": -37.9,
+      "lon": 144.66667,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Warwick",
+      "lat": -28.21901,
+      "lon": 152.03438,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Warrnambool",
+      "lat": -38.38176,
+      "lon": 142.48799,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Warragul",
+      "lat": -38.15912,
+      "lon": 145.93118,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Wantirna South",
+      "lat": -37.88333,
+      "lon": 145.21667,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Wangaratta",
+      "lat": -36.35846,
+      "lon": 146.32056,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Wallan",
+      "lat": -37.41625,
+      "lon": 144.97859,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Wahroonga",
+      "lat": -33.71816,
+      "lon": 151.11561,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Upper Coomera",
+      "lat": -27.87683,
+      "lon": 153.28572,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Tuggeranong Administrative District",
+      "lat": -35.41647,
+      "lon": 149.06954,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Truganina",
+      "lat": -37.81667,
+      "lon": 144.75,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Traralgon",
+      "lat": -38.19528,
+      "lon": 146.5415,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Townsville",
+      "lat": -19.26639,
+      "lon": 146.80569,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Torquay",
+      "lat": -38.33085,
+      "lon": 144.32638,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Toowoomba",
+      "lat": -27.56056,
+      "lon": 151.95386,
+      "country": "Australia",
+      "cluster": "AU_Auto"
+    },
+    {
+      "nome": "Əhmədbəyli",
+      "lat": 39.88074,
+      "lon": 48.39158,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Şuşa",
+      "lat": 39.76006,
+      "lon": 46.74989,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Salyan",
+      "lat": 39.59621,
+      "lon": 48.98479,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Saatlı",
+      "lat": 39.93214,
+      "lon": 48.36892,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Neftçala",
+      "lat": 39.3768,
+      "lon": 49.247,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Naxçıvan",
+      "lat": 39.20889,
+      "lon": 45.41222,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Zenica",
+      "lat": 44.20169,
+      "lon": 17.90397,
+      "country": "Bosnia",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Visoko",
+      "lat": 43.98889,
+      "lon": 18.17806,
+      "country": "Bosnia",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Velika Kladuša",
+      "lat": 45.18497,
+      "lon": 15.80579,
+      "country": "Bosnia",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Tuzla",
+      "lat": 44.53842,
+      "lon": 18.66709,
+      "country": "Bosnia",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Trebinje",
+      "lat": 42.71197,
+      "lon": 18.34362,
+      "country": "Bosnia",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Travnik",
+      "lat": 44.22637,
+      "lon": 17.66583,
+      "country": "Bosnia",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Sunāmganj",
+      "lat": 25.06889,
+      "lon": 91.40243,
+      "country": "Bangladesh",
+      "cluster": "BD_Auto"
+    },
+    {
+      "nome": "Jamālpur",
+      "lat": 24.91965,
+      "lon": 89.94812,
+      "country": "Bangladesh",
+      "cluster": "BD_Auto"
+    },
+    {
+      "nome": "Shibganj",
+      "lat": 25.00146,
+      "lon": 89.32266,
+      "country": "Bangladesh",
+      "cluster": "BD_Auto"
+    },
+    {
+      "nome": "Sātkhira",
+      "lat": 22.70817,
+      "lon": 89.07185,
+      "country": "Bangladesh",
+      "cluster": "BD_Auto"
+    },
+    {
+      "nome": "Sirajganj",
+      "lat": 24.45771,
+      "lon": 89.70802,
+      "country": "Bangladesh",
+      "cluster": "BD_Auto"
+    },
+    {
+      "nome": "Netrakona",
+      "lat": 24.88352,
+      "lon": 90.72898,
+      "country": "Bangladesh",
+      "cluster": "BD_Auto"
+    },
+    {
+      "nome": "Narsingdi",
+      "lat": 23.92298,
+      "lon": 90.71768,
+      "country": "Bangladesh",
+      "cluster": "BD_Auto"
+    },
+    {
+      "nome": "Sandwīp",
+      "lat": 22.51409,
+      "lon": 91.45491,
+      "country": "Bangladesh",
+      "cluster": "BD_Auto"
+    },
+    {
+      "nome": "Shāhzādpur",
+      "lat": 24.17687,
+      "lon": 89.5988,
+      "country": "Bangladesh",
+      "cluster": "BD_Auto"
+    },
+    {
+      "nome": "Rāmganj",
+      "lat": 23.1006,
+      "lon": 90.84989,
+      "country": "Bangladesh",
+      "cluster": "BD_Auto"
+    },
+    {
+      "nome": "Yambol",
+      "lat": 42.48243,
+      "lon": 26.50006,
+      "country": "Bulgaria",
+      "cluster": "BG_Auto"
+    },
+    {
+      "nome": "Vratsa",
+      "lat": 43.21052,
+      "lon": 23.56312,
+      "country": "Bulgaria",
+      "cluster": "BG_Auto"
+    },
+    {
+      "nome": "Vidin",
+      "lat": 43.99159,
+      "lon": 22.88236,
+      "country": "Bulgaria",
+      "cluster": "BG_Auto"
+    },
+    {
+      "nome": "Velingrad",
+      "lat": 42.02754,
+      "lon": 23.99155,
+      "country": "Bulgaria",
+      "cluster": "BG_Auto"
+    },
+    {
+      "nome": "Veliko Tŭrnovo",
+      "lat": 43.08124,
+      "lon": 25.62904,
+      "country": "Bulgaria",
+      "cluster": "BG_Auto"
+    },
+    {
+      "nome": "Varna",
+      "lat": 43.21912,
+      "lon": 27.91024,
+      "country": "Bulgaria",
+      "cluster": "BG_Auto"
+    },
+    {
+      "nome": "Targovishte",
+      "lat": 43.2512,
+      "lon": 26.57215,
+      "country": "Bulgaria",
+      "cluster": "BG_Auto"
+    },
+    {
+      "nome": "Troyan",
+      "lat": 42.89427,
+      "lon": 24.71589,
+      "country": "Bulgaria",
+      "cluster": "BG_Auto"
+    },
+    {
+      "nome": "Yacuiba",
+      "lat": -22.01643,
+      "lon": -63.67753,
+      "country": "Bolivia",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Warnes",
+      "lat": -17.5163,
+      "lon": -63.16778,
+      "country": "Bolivia",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Vinto",
+      "lat": -17.39141,
+      "lon": -66.31681,
+      "country": "Bolivia",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Villazón",
+      "lat": -22.08659,
+      "lon": -65.59422,
+      "country": "Bolivia",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Villa Yapacaní",
+      "lat": -17.4,
+      "lon": -63.83333,
+      "country": "Bolivia",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Villamontes",
+      "lat": -21.26235,
+      "lon": -63.46903,
+      "country": "Bolivia",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Viacha",
+      "lat": -16.65,
+      "lon": -68.3,
+      "country": "Bolivia",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Tupiza",
+      "lat": -21.44345,
+      "lon": -65.71875,
+      "country": "Bolivia",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Urbano Santos",
+      "lat": -3.20778,
+      "lon": -43.40361,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "União dos Palmares",
+      "lat": -9.16278,
+      "lon": -36.03194,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "União",
+      "lat": -4.58583,
+      "lon": -42.86417,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Umirim",
+      "lat": -3.67722,
+      "lon": -39.35028,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Ubajara",
+      "lat": -3.85444,
+      "lon": -40.92111,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Uauá",
+      "lat": -9.84139,
+      "lon": -39.48167,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Tutóia",
+      "lat": -2.76194,
+      "lon": -42.27444,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Turiaçu",
+      "lat": -1.66333,
+      "lon": -45.37167,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Turaru",
+      "lat": -3.6,
+      "lon": -39.43333,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Tupanatinga",
+      "lat": -8.75333,
+      "lon": -37.33972,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Tuntum",
+      "lat": -5.25806,
+      "lon": -44.64889,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Tucuruí",
+      "lat": -3.76585,
+      "lon": -49.67923,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Tucumã",
+      "lat": -0.15491,
+      "lon": -50.0615,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Trindade",
+      "lat": -7.76194,
+      "lon": -40.26778,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Trairi",
+      "lat": -3.27778,
+      "lon": -39.26889,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Traipu",
+      "lat": -9.97056,
+      "lon": -37.00333,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Tracuateua",
+      "lat": -1.07611,
+      "lon": -46.90306,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Touros",
+      "lat": -5.19889,
+      "lon": -35.46083,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Toritama",
+      "lat": -8.00667,
+      "lon": -36.05667,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Tomé-Açu",
+      "lat": -2.41889,
+      "lon": -48.15222,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Tocantinópolis",
+      "lat": -6.32944,
+      "lon": -47.41639,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Timon",
+      "lat": -5.09417,
+      "lon": -42.83667,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Timbiras",
+      "lat": -4.25528,
+      "lon": -43.94056,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Timbaúba",
+      "lat": -7.50528,
+      "lon": -35.31833,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Tibau do Sul",
+      "lat": -6.18667,
+      "lon": -35.09194,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Tianguá",
+      "lat": -3.73222,
+      "lon": -40.99167,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Terra Santa",
+      "lat": -2.10417,
+      "lon": -56.48694,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Teresina",
+      "lat": -5.08917,
+      "lon": -42.80194,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Tejuçuoca",
+      "lat": -3.98889,
+      "lon": -39.58056,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Tauá",
+      "lat": -6.00306,
+      "lon": -40.29278,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "São João dos Inhamuns",
+      "lat": -6.0,
+      "lon": -40.28333,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Taquaritinga do Norte",
+      "lat": -7.90306,
+      "lon": -36.04417,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Taquarana",
+      "lat": -9.645,
+      "lon": -36.49722,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Tamboril",
+      "lat": -4.83222,
+      "lon": -40.32056,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Itambé",
+      "lat": -7.41028,
+      "lon": -35.11278,
+      "country": "Brazil",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Horad Zhodzina",
+      "lat": 54.0985,
+      "lon": 28.3331,
+      "country": "Belarus",
+      "cluster": "BY_Auto"
+    },
+    {
+      "nome": "Zhlobin",
+      "lat": 52.8926,
+      "lon": 30.024,
+      "country": "Belarus",
+      "cluster": "BY_Auto"
+    },
+    {
+      "nome": "Žytkavičy",
+      "lat": 52.2168,
+      "lon": 27.8561,
+      "country": "Belarus",
+      "cluster": "BY_Auto"
+    },
+    {
+      "nome": "Zaslawye",
+      "lat": 54.0114,
+      "lon": 27.2695,
+      "country": "Belarus",
+      "cluster": "BY_Auto"
+    },
+    {
+      "nome": "Vitebsk",
+      "lat": 55.1904,
+      "lon": 30.2049,
+      "country": "Belarus",
+      "cluster": "BY_Auto"
+    },
+    {
+      "nome": "Vileyka",
+      "lat": 54.4914,
+      "lon": 26.9111,
+      "country": "Belarus",
+      "cluster": "BY_Auto"
+    },
+    {
+      "nome": "Volkovysk",
+      "lat": 53.1561,
+      "lon": 24.4513,
+      "country": "Belarus",
+      "cluster": "BY_Auto"
+    },
+    {
+      "nome": "Svetlogorsk",
+      "lat": 52.6329,
+      "lon": 29.7389,
+      "country": "Belarus",
+      "cluster": "BY_Auto"
+    },
+    {
+      "nome": "Valdivia",
+      "lat": -39.81422,
+      "lon": -73.24589,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "Traiguén",
+      "lat": -38.2496,
+      "lon": -72.67027,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "Tomé",
+      "lat": -36.61756,
+      "lon": -72.95593,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "Tocopilla",
+      "lat": -22.09198,
+      "lon": -70.19792,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "Tiltil",
+      "lat": -33.0831,
+      "lon": -70.92924,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "Teodoro Schmidt",
+      "lat": -38.99442,
+      "lon": -73.08927,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "Temuco",
+      "lat": -38.73628,
+      "lon": -72.59738,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "Talcahuano",
+      "lat": -36.72494,
+      "lon": -73.11684,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "Talca",
+      "lat": -35.4232,
+      "lon": -71.64974,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "Talagante",
+      "lat": -33.66386,
+      "lon": -70.92734,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "San Vicente de Tagua Tagua",
+      "lat": -34.43859,
+      "lon": -71.07751,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "Santa Cruz",
+      "lat": -34.63881,
+      "lon": -71.36576,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "San José de Maipo",
+      "lat": -33.63912,
+      "lon": -70.35318,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "San Francisco de Mostazal",
+      "lat": -33.98219,
+      "lon": -70.7104,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "San Felipe",
+      "lat": -32.74976,
+      "lon": -70.72584,
+      "country": "Chile",
+      "cluster": "CL_Auto"
+    },
+    {
+      "nome": "Yingjiang",
+      "lat": 24.71022,
+      "lon": 97.93671,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Oytograk",
+      "lat": 36.83333,
+      "lon": 81.93333,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Nyêmo",
+      "lat": 29.43736,
+      "lon": 90.14849,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Luobuqiongzi",
+      "lat": 29.16667,
+      "lon": 89.25,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Nagqu",
+      "lat": 31.47678,
+      "lon": 92.05729,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Qaraqash",
+      "lat": 37.27246,
+      "lon": 79.73438,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Mengmao",
+      "lat": 24.00139,
+      "lon": 97.86499,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Menglang",
+      "lat": 22.56214,
+      "lon": 99.91029,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Mangshi",
+      "lat": 24.45329,
+      "lon": 98.57037,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Mangnai Zhen",
+      "lat": 38.38554,
+      "lon": 90.15553,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Lop",
+      "lat": 37.07891,
+      "lon": 80.18182,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Liuku",
+      "lat": 25.8505,
+      "lon": 98.85567,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Lhasa",
+      "lat": 29.65,
+      "lon": 91.1,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Laojunmiao",
+      "lat": 39.83333,
+      "lon": 97.73333,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Bonan",
+      "lat": 25.46335,
+      "lon": 99.52826,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Langru",
+      "lat": 36.89333,
+      "lon": 79.62139,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Maizhokunggar",
+      "lat": 29.83774,
+      "lon": 91.72889,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Kokyar",
+      "lat": 36.81899,
+      "lon": 81.63334,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Kashgar",
+      "lat": 39.46718,
+      "lon": 75.98675,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Kaqun",
+      "lat": 37.97806,
+      "lon": 76.86722,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Judian",
+      "lat": 27.30612,
+      "lon": 99.6491,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Jinhua",
+      "lat": 26.538,
+      "lon": 99.91715,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Jinding",
+      "lat": 26.43903,
+      "lon": 99.44061,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Jietou",
+      "lat": 25.4274,
+      "lon": 98.65324,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Jiayuguan",
+      "lat": 39.81121,
+      "lon": 98.28618,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Huatugou",
+      "lat": 38.25544,
+      "lon": 90.86792,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Houqiao",
+      "lat": 25.32356,
+      "lon": 98.27802,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Gujangbagh",
+      "lat": 37.10927,
+      "lon": 79.93433,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Yushu",
+      "lat": 33.00118,
+      "lon": 97.00893,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Gudong",
+      "lat": 25.34165,
+      "lon": 98.48297,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Elixku",
+      "lat": 38.70917,
+      "lon": 77.37056,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Dêqên",
+      "lat": 29.96178,
+      "lon": 90.71875,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Dagzê",
+      "lat": 29.67329,
+      "lon": 91.34531,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Damxung",
+      "lat": 30.47797,
+      "lon": 91.1055,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Langgar",
+      "lat": 36.7,
+      "lon": 81.5,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Bayi",
+      "lat": 29.65812,
+      "lon": 94.35892,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Baoshan",
+      "lat": 25.11626,
+      "lon": 99.16366,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Artux",
+      "lat": 39.70842,
+      "lon": 76.17971,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Layka",
+      "lat": 37.07694,
+      "lon": 79.73167,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Saybag",
+      "lat": 37.14972,
+      "lon": 79.65833,
+      "country": "China",
+      "cluster": "CN_Auto"
+    },
+    {
+      "nome": "Villamaría",
+      "lat": 5.04565,
+      "lon": -75.51474,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Vélez",
+      "lat": 6.01335,
+      "lon": -73.67352,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Valledupar",
+      "lat": 10.46538,
+      "lon": -73.2531,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Urrao",
+      "lat": 6.31696,
+      "lon": -76.1342,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Villa de San Diego de Ubaté",
+      "lat": 5.30933,
+      "lon": -73.81575,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Turbo",
+      "lat": 8.09263,
+      "lon": -76.72822,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Turbaco",
+      "lat": 10.32944,
+      "lon": -75.41137,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Túquerres",
+      "lat": 1.08647,
+      "lon": -77.61858,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Tunja",
+      "lat": 5.54481,
+      "lon": -73.35756,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Tumaco",
+      "lat": 1.79112,
+      "lon": -78.79275,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Tuluá",
+      "lat": 4.08466,
+      "lon": -76.19536,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Tolú Viejo",
+      "lat": 9.45082,
+      "lon": -75.43864,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Santiago de Tolú",
+      "lat": 9.52392,
+      "lon": -75.58139,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Tocancipá",
+      "lat": 4.96531,
+      "lon": -73.91301,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Timbiquí",
+      "lat": 2.7717,
+      "lon": -77.66536,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Tierralta",
+      "lat": 8.17361,
+      "lon": -76.05917,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Tauramena",
+      "lat": 5.01789,
+      "lon": -72.74675,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Tarqui",
+      "lat": 2.11248,
+      "lon": -75.82419,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Tame",
+      "lat": 6.46065,
+      "lon": -71.73618,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Tadó",
+      "lat": 5.26598,
+      "lon": -76.56487,
+      "country": "Colombia",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Yara",
+      "lat": 20.27465,
+      "lon": -76.95132,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Yaguajay",
+      "lat": 22.32691,
+      "lon": -79.23567,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Viñales",
+      "lat": 22.61892,
+      "lon": -83.70694,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Víbora Park",
+      "lat": 23.08105,
+      "lon": -82.35448,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Vertientes",
+      "lat": 21.25817,
+      "lon": -78.14979,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Venezuela",
+      "lat": 21.73748,
+      "lon": -78.79336,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Vedado del Cotorro",
+      "lat": 23.05,
+      "lon": -82.25,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Vedado",
+      "lat": 23.13767,
+      "lon": -82.39339,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Villa Francisca",
+      "lat": 18.48278,
+      "lon": -69.88914,
+      "country": "Dominican Republic",
+      "cluster": "DO_Auto"
+    },
+    {
+      "nome": "Villa Consuelo",
+      "lat": 18.48333,
+      "lon": -69.9,
+      "country": "Dominican Republic",
+      "cluster": "DO_Auto"
+    },
+    {
+      "nome": "Villa Bisonó",
+      "lat": 19.56378,
+      "lon": -70.87582,
+      "country": "Dominican Republic",
+      "cluster": "DO_Auto"
+    },
+    {
+      "nome": "Villa Altagracia",
+      "lat": 18.67297,
+      "lon": -70.17095,
+      "country": "Dominican Republic",
+      "cluster": "DO_Auto"
+    },
+    {
+      "nome": "Santo Domingo",
+      "lat": 18.47186,
+      "lon": -69.89232,
+      "country": "Dominican Republic",
+      "cluster": "DO_Auto"
+    },
+    {
+      "nome": "Santiago de los Caballeros",
+      "lat": 19.45036,
+      "lon": -70.69085,
+      "country": "Dominican Republic",
+      "cluster": "DO_Auto"
+    },
+    {
+      "nome": "Santa Cruz de El Seibo",
+      "lat": 18.76484,
+      "lon": -69.03991,
+      "country": "Dominican Republic",
+      "cluster": "DO_Auto"
+    },
+    {
+      "nome": "Santa Cruz de Barahona",
+      "lat": 18.20861,
+      "lon": -71.10068,
+      "country": "Dominican Republic",
+      "cluster": "DO_Auto"
+    },
+    {
+      "nome": "Tolga",
+      "lat": 34.72224,
+      "lon": 5.37845,
+      "country": "Algeria",
+      "cluster": "DZ_Auto"
+    },
+    {
+      "nome": "Tlemcen",
+      "lat": 34.87833,
+      "lon": -1.315,
+      "country": "Algeria",
+      "cluster": "DZ_Auto"
+    },
+    {
+      "nome": "Tizi Rached",
+      "lat": 36.67176,
+      "lon": 4.19176,
+      "country": "Algeria",
+      "cluster": "DZ_Auto"
+    },
+    {
+      "nome": "Tizi Ouzou",
+      "lat": 36.71182,
+      "lon": 4.04591,
+      "country": "Algeria",
+      "cluster": "DZ_Auto"
+    },
+    {
+      "nome": "Tizi-n-Tleta",
+      "lat": 36.54569,
+      "lon": 4.05712,
+      "country": "Algeria",
+      "cluster": "DZ_Auto"
+    },
+    {
+      "nome": "Tizi Gheniff",
+      "lat": 36.58839,
+      "lon": 3.77445,
+      "country": "Algeria",
+      "cluster": "DZ_Auto"
+    },
+    {
+      "nome": "Tissemsilt",
+      "lat": 35.60722,
+      "lon": 1.81081,
+      "country": "Algeria",
+      "cluster": "DZ_Auto"
+    },
+    {
+      "nome": "Tirmitine",
+      "lat": 36.65393,
+      "lon": 3.98143,
+      "country": "Algeria",
+      "cluster": "DZ_Auto"
+    },
+    {
+      "nome": "Tipasa",
+      "lat": 36.58972,
+      "lon": 2.44889,
+      "country": "Algeria",
+      "cluster": "DZ_Auto"
+    },
+    {
+      "nome": "Tindouf",
+      "lat": 27.67111,
+      "lon": -8.14743,
+      "country": "Algeria",
+      "cluster": "DZ_Auto"
+    },
+    {
+      "nome": "Timizart",
+      "lat": 36.8,
+      "lon": 4.26667,
+      "country": "Algeria",
+      "cluster": "DZ_Auto"
+    },
+    {
+      "nome": "Timimoun",
+      "lat": 29.26417,
+      "lon": 0.23583,
+      "country": "Algeria",
+      "cluster": "DZ_Auto"
+    },
+    {
+      "nome": "Zamora",
+      "lat": -4.06446,
+      "lon": -78.95123,
+      "country": "Ecuador",
+      "cluster": "EC_Auto"
+    },
+    {
+      "nome": "Yaguachi Nuevo",
+      "lat": -2.09757,
+      "lon": -79.69261,
+      "country": "Ecuador",
+      "cluster": "EC_Auto"
+    },
+    {
+      "nome": "Vinces",
+      "lat": -1.55637,
+      "lon": -79.75249,
+      "country": "Ecuador",
+      "cluster": "EC_Auto"
+    },
+    {
+      "nome": "Ventanas",
+      "lat": -1.44285,
+      "lon": -79.46274,
+      "country": "Ecuador",
+      "cluster": "EC_Auto"
+    },
+    {
+      "nome": "El Empalme",
+      "lat": -1.04491,
+      "lon": -79.6384,
+      "country": "Ecuador",
+      "cluster": "EC_Auto"
+    },
+    {
+      "nome": "Tulcán",
+      "lat": 0.8124,
+      "lon": -77.71709,
+      "country": "Ecuador",
+      "cluster": "EC_Auto"
+    },
+    {
+      "nome": "Tena",
+      "lat": -0.9961,
+      "lon": -77.81315,
+      "country": "Ecuador",
+      "cluster": "EC_Auto"
+    },
+    {
+      "nome": "Sucre",
+      "lat": -1.27987,
+      "lon": -80.41776,
+      "country": "Ecuador",
+      "cluster": "EC_Auto"
+    },
+    {
+      "nome": "Santo Domingo de los Colorados",
+      "lat": -0.25368,
+      "lon": -79.17628,
+      "country": "Ecuador",
+      "cluster": "EC_Auto"
+    },
+    {
+      "nome": "Santa Rosa",
+      "lat": -3.45571,
+      "lon": -79.9637,
+      "country": "Ecuador",
+      "cluster": "EC_Auto"
+    },
+    {
+      "nome": "Viljandi",
+      "lat": 58.36319,
+      "lon": 25.59159,
+      "country": "Estonia",
+      "cluster": "EE_Auto"
+    },
+    {
+      "nome": "Tartu",
+      "lat": 58.38062,
+      "lon": 26.72509,
+      "country": "Estonia",
+      "cluster": "EE_Auto"
+    },
+    {
+      "nome": "Tallinn",
+      "lat": 59.43696,
+      "lon": 24.75353,
+      "country": "Estonia",
+      "cluster": "EE_Auto"
+    },
+    {
+      "nome": "Pärnu",
+      "lat": 58.38588,
+      "lon": 24.49711,
+      "country": "Estonia",
+      "cluster": "EE_Auto"
+    },
+    {
+      "nome": "Nõmme",
+      "lat": 59.37757,
+      "lon": 24.68587,
+      "country": "Estonia",
+      "cluster": "EE_Auto"
+    },
+    {
+      "nome": "Ţalkhā",
+      "lat": 31.0539,
+      "lon": 31.37787,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Talā",
+      "lat": 30.6798,
+      "lon": 30.94364,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Ţahţā",
+      "lat": 26.76866,
+      "lon": 31.50198,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Sumusţā as Sulţānī",
+      "lat": 28.91667,
+      "lon": 30.85,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Sumusţā al Waqf",
+      "lat": 28.92095,
+      "lon": 30.85367,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Sohag",
+      "lat": 26.55695,
+      "lon": 31.69478,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Sīwah",
+      "lat": 29.2032,
+      "lon": 25.51965,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Sirs al Layyānah",
+      "lat": 30.4428,
+      "lon": 30.96975,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Sinnūris",
+      "lat": 29.41345,
+      "lon": 30.86579,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Sīdī Sālim",
+      "lat": 31.27133,
+      "lon": 30.78617,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Sīdī Ghāzī",
+      "lat": 31.21114,
+      "lon": 31.05119,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Sīdī Barānī",
+      "lat": 31.61166,
+      "lon": 25.92539,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Şidfā",
+      "lat": 26.96637,
+      "lon": 31.37953,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Shubrākhīt",
+      "lat": 31.02795,
+      "lon": 30.71493,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Shubrā al Khaymah",
+      "lat": 30.12511,
+      "lon": 31.25053,
+      "country": "Egypt",
+      "cluster": "EG_Auto"
+    },
+    {
+      "nome": "Waal",
+      "lat": 6.88658,
+      "lon": 46.21508,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Fadhigaradle",
+      "lat": 6.17559,
+      "lon": 45.29866,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Ziway",
+      "lat": 7.93333,
+      "lon": 38.71667,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Yirga Ch’efē",
+      "lat": 6.16667,
+      "lon": 38.2,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Yirga ‘Alem",
+      "lat": 6.75,
+      "lon": 38.41667,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Yabēlo",
+      "lat": 4.88333,
+      "lon": 38.08333,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Wik’ro",
+      "lat": 13.79525,
+      "lon": 39.60303,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Werota",
+      "lat": 11.91667,
+      "lon": 37.7,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Zugdidi",
+      "lat": 42.5084,
+      "lon": 41.86796,
+      "country": "Georgia",
+      "cluster": "GE_Auto"
+    },
+    {
+      "nome": "Zestaponi",
+      "lat": 42.10752,
+      "lon": 43.03291,
+      "country": "Georgia",
+      "cluster": "GE_Auto"
+    },
+    {
+      "nome": "Ts’khinvali",
+      "lat": 42.22764,
+      "lon": 43.96861,
+      "country": "Georgia",
+      "cluster": "GE_Auto"
+    },
+    {
+      "nome": "Telavi",
+      "lat": 41.91957,
+      "lon": 45.47002,
+      "country": "Georgia",
+      "cluster": "GE_Auto"
+    },
+    {
+      "nome": "Tbilisi",
+      "lat": 41.69143,
+      "lon": 44.83412,
+      "country": "Georgia",
+      "cluster": "GE_Auto"
+    },
+    {
+      "nome": "Sokhumi",
+      "lat": 43.00697,
+      "lon": 40.9893,
+      "country": "Georgia",
+      "cluster": "GE_Auto"
+    },
+    {
+      "nome": "Wa",
+      "lat": 10.06069,
+      "lon": -2.50192,
+      "country": "Ghana",
+      "cluster": "GH_Auto"
+    },
+    {
+      "nome": "Twifu Praso",
+      "lat": 5.61411,
+      "lon": -1.5502,
+      "country": "Ghana",
+      "cluster": "GH_Auto"
+    },
+    {
+      "nome": "Teshi Old Town",
+      "lat": 5.58365,
+      "lon": -0.10722,
+      "country": "Ghana",
+      "cluster": "GH_Auto"
+    },
+    {
+      "nome": "Tepa",
+      "lat": 7.00595,
+      "lon": -2.16586,
+      "country": "Ghana",
+      "cluster": "GH_Auto"
+    },
+    {
+      "nome": "Tema",
+      "lat": 5.6698,
+      "lon": -0.01657,
+      "country": "Ghana",
+      "cluster": "GH_Auto"
+    },
+    {
+      "nome": "Techiman",
+      "lat": 7.59054,
+      "lon": -1.93947,
+      "country": "Ghana",
+      "cluster": "GH_Auto"
+    },
+    {
+      "nome": "Tarkwa",
+      "lat": 5.30383,
+      "lon": -1.98956,
+      "country": "Ghana",
+      "cluster": "GH_Auto"
+    },
+    {
+      "nome": "Tamale",
+      "lat": 9.40079,
+      "lon": -0.8393,
+      "country": "Ghana",
+      "cluster": "GH_Auto"
+    },
+    {
+      "nome": "Zacapa",
+      "lat": 14.96867,
+      "lon": -89.52732,
+      "country": "Guatemala",
+      "cluster": "GT_Auto"
+    },
+    {
+      "nome": "Yepocapa",
+      "lat": 14.50195,
+      "lon": -90.95396,
+      "country": "Guatemala",
+      "cluster": "GT_Auto"
+    },
+    {
+      "nome": "Villa Nueva",
+      "lat": 14.52512,
+      "lon": -90.58544,
+      "country": "Guatemala",
+      "cluster": "GT_Auto"
+    },
+    {
+      "nome": "Villa Canales",
+      "lat": 14.48285,
+      "lon": -90.53425,
+      "country": "Guatemala",
+      "cluster": "GT_Auto"
+    },
+    {
+      "nome": "Totonicapán",
+      "lat": 14.91188,
+      "lon": -91.36054,
+      "country": "Guatemala",
+      "cluster": "GT_Auto"
+    },
+    {
+      "nome": "Tecpán Guatemala",
+      "lat": 14.76181,
+      "lon": -90.99247,
+      "country": "Guatemala",
+      "cluster": "GT_Auto"
+    },
+    {
+      "nome": "Sumpango",
+      "lat": 14.64623,
+      "lon": -90.73427,
+      "country": "Guatemala",
+      "cluster": "GT_Auto"
+    },
+    {
+      "nome": "Soloma",
+      "lat": 15.65841,
+      "lon": -91.42994,
+      "country": "Guatemala",
+      "cluster": "GT_Auto"
+    },
+    {
+      "nome": "Puerto Cortez",
+      "lat": 15.82562,
+      "lon": -87.92968,
+      "country": "Honduras",
+      "cluster": "HN_Auto"
+    },
+    {
+      "nome": "Yoro",
+      "lat": 15.13824,
+      "lon": -87.12838,
+      "country": "Honduras",
+      "cluster": "HN_Auto"
+    },
+    {
+      "nome": "Tocoa",
+      "lat": 15.68333,
+      "lon": -86.0,
+      "country": "Honduras",
+      "cluster": "HN_Auto"
+    },
+    {
+      "nome": "Tela",
+      "lat": 15.77425,
+      "lon": -87.46731,
+      "country": "Honduras",
+      "cluster": "HN_Auto"
+    },
+    {
+      "nome": "Tegucigalpa",
+      "lat": 14.0818,
+      "lon": -87.20681,
+      "country": "Honduras",
+      "cluster": "HN_Auto"
+    },
+    {
+      "nome": "Siguatepeque",
+      "lat": 14.59691,
+      "lon": -87.83102,
+      "country": "Honduras",
+      "cluster": "HN_Auto"
+    },
+    {
+      "nome": "Sigli",
+      "lat": 5.3848,
+      "lon": 95.9609,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Sidikalang",
+      "lat": 2.74899,
+      "lon": 98.3127,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Sibolga",
+      "lat": 1.74016,
+      "lon": 98.78117,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Sabang",
+      "lat": 5.88969,
+      "lon": 95.31644,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Reuleuet",
+      "lat": 5.21667,
+      "lon": 96.28333,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Rantauprapat",
+      "lat": 2.1,
+      "lon": 99.83333,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Percut",
+      "lat": 3.6253,
+      "lon": 98.864,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Perbaungan",
+      "lat": 3.5679,
+      "lon": 98.956,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Pematangsiantar",
+      "lat": 2.9595,
+      "lon": 99.0687,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Paropo",
+      "lat": 2.8663,
+      "lon": 98.5211,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Pangkalan Brandan",
+      "lat": 4.0238,
+      "lon": 98.2782,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Padangsidempuan",
+      "lat": 1.37952,
+      "lon": 99.27146,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Meulaboh",
+      "lat": 4.14402,
+      "lon": 96.12664,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Medan",
+      "lat": 3.58333,
+      "lon": 98.66667,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Lhokseumawe",
+      "lat": 5.1801,
+      "lon": 97.1507,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Langsa",
+      "lat": 4.4683,
+      "lon": 97.9683,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Lahewa",
+      "lat": 1.3943,
+      "lon": 97.1675,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Labuhan Deli",
+      "lat": 3.879,
+      "lon": 98.633,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Kisaran",
+      "lat": 2.9845,
+      "lon": 99.6158,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Kabanjahe",
+      "lat": 3.1001,
+      "lon": 98.4908,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Gunungsitoli",
+      "lat": 1.2888,
+      "lon": 97.6143,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Deli Tua",
+      "lat": 3.5078,
+      "lon": 98.6839,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Blangpidie",
+      "lat": 3.73956,
+      "lon": 96.83608,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Bireun",
+      "lat": 5.203,
+      "lon": 96.7009,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Binjai",
+      "lat": 3.6001,
+      "lon": 98.4854,
+      "country": "Indonesia",
+      "cluster": "ID_Auto"
+    },
+    {
+      "nome": "Warangal",
+      "lat": 18.0,
+      "lon": 79.58333,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Wanparti",
+      "lat": 16.36738,
+      "lon": 78.06889,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Wānkāner",
+      "lat": 22.61198,
+      "lon": 70.94379,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Wani",
+      "lat": 20.05507,
+      "lon": 78.95313,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Waluj Buzurg",
+      "lat": 19.79632,
+      "lon": 75.22648,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Walajapet",
+      "lat": 12.9251,
+      "lon": 79.36626,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Wai",
+      "lat": 17.95276,
+      "lon": 73.89058,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Wādi",
+      "lat": 17.05183,
+      "lon": 76.99048,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Wadgaon",
+      "lat": 16.83553,
+      "lon": 74.31338,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vypīn",
+      "lat": 9.96667,
+      "lon": 76.25,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vyāra",
+      "lat": 21.11079,
+      "lon": 73.39365,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vuyyūru",
+      "lat": 16.36307,
+      "lon": 80.84406,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vrindāvan",
+      "lat": 27.58105,
+      "lon": 77.69662,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vriddhāchalam",
+      "lat": 11.5183,
+      "lon": 79.32411,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vizianagaram",
+      "lat": 18.11692,
+      "lon": 83.41148,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vittal",
+      "lat": 12.76325,
+      "lon": 75.09896,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vite",
+      "lat": 17.27343,
+      "lon": 74.53792,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Visnagar",
+      "lat": 23.69855,
+      "lon": 72.5521,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vishāram",
+      "lat": 12.91808,
+      "lon": 79.27756,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Visakhapatnam",
+      "lat": 17.68009,
+      "lon": 83.20161,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vīsāvadar",
+      "lat": 21.33954,
+      "lon": 70.74966,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Virudunagar",
+      "lat": 9.58509,
+      "lon": 77.95787,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vadakku Viravanallur",
+      "lat": 8.69786,
+      "lon": 77.51916,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Virajpet",
+      "lat": 12.19644,
+      "lon": 75.80512,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Virār",
+      "lat": 19.45591,
+      "lon": 72.81136,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Viramgām",
+      "lat": 23.12564,
+      "lon": 72.05014,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vinukonda",
+      "lat": 16.0531,
+      "lon": 79.73964,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Villupuram",
+      "lat": 11.93975,
+      "lon": 79.49244,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Villianur",
+      "lat": 11.91393,
+      "lon": 79.75568,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vilattikulam",
+      "lat": 9.13227,
+      "lon": 78.16635,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vikramasingapuram",
+      "lat": 8.71477,
+      "lon": 77.39032,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vikārābād",
+      "lat": 17.3381,
+      "lon": 77.90441,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vijayawada",
+      "lat": 16.50745,
+      "lon": 80.6466,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vijāpur",
+      "lat": 23.5623,
+      "lon": 72.74848,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vidisha",
+      "lat": 23.52604,
+      "lon": 77.81092,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vettūr",
+      "lat": 8.71742,
+      "lon": 76.72582,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vettavalam",
+      "lat": 12.10769,
+      "lon": 79.24516,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vettaikkaranpudur",
+      "lat": 10.56207,
+      "lon": 76.91305,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vetapālem",
+      "lat": 15.78502,
+      "lon": 80.30663,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Verāval",
+      "lat": 20.9077,
+      "lon": 70.36786,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vepagunta",
+      "lat": 17.77844,
+      "lon": 83.21577,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Venkatagiri",
+      "lat": 13.96005,
+      "lon": 79.58032,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vemalwāda",
+      "lat": 18.46523,
+      "lon": 78.86894,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Velur",
+      "lat": 11.10825,
+      "lon": 78.00113,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vellore",
+      "lat": 12.9184,
+      "lon": 79.13255,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Zaxo",
+      "lat": 37.14871,
+      "lon": 42.68591,
+      "country": "Iraq",
+      "cluster": "IQ_Auto"
+    },
+    {
+      "nome": "Umm Qaşr",
+      "lat": 30.0362,
+      "lon": 47.91951,
+      "country": "Iraq",
+      "cluster": "IQ_Auto"
+    },
+    {
+      "nome": "Ţūz Khūrmātū",
+      "lat": 34.88808,
+      "lon": 44.63256,
+      "country": "Iraq",
+      "cluster": "IQ_Auto"
+    },
+    {
+      "nome": "Tikrīt",
+      "lat": 34.61581,
+      "lon": 43.67861,
+      "country": "Iraq",
+      "cluster": "IQ_Auto"
+    },
+    {
+      "nome": "Tallkayf",
+      "lat": 36.49118,
+      "lon": 43.12114,
+      "country": "Iraq",
+      "cluster": "IQ_Auto"
+    },
+    {
+      "nome": "Sīnah",
+      "lat": 36.80851,
+      "lon": 43.03935,
+      "country": "Iraq",
+      "cluster": "IQ_Auto"
+    },
+    {
+      "nome": "Sāmarrā’",
+      "lat": 34.1959,
+      "lon": 43.88568,
+      "country": "Iraq",
+      "cluster": "IQ_Auto"
+    },
+    {
+      "nome": "Nāḩīyat Saddat al Hindīyah",
+      "lat": 32.71557,
+      "lon": 44.27857,
+      "country": "Iraq",
+      "cluster": "IQ_Auto"
+    },
+    {
+      "nome": "Ṟuwandiz",
+      "lat": 36.6114,
+      "lon": 44.52194,
+      "country": "Iraq",
+      "cluster": "IQ_Auto"
+    },
+    {
+      "nome": "Al Qā’im",
+      "lat": 34.39251,
+      "lon": 40.98945,
+      "country": "Iraq",
+      "cluster": "IQ_Auto"
+    },
+    {
+      "nome": "Lavāsān",
+      "lat": 35.82159,
+      "lon": 51.64444,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Alvand",
+      "lat": 36.1893,
+      "lon": 50.0643,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Āzādshahr",
+      "lat": 34.79049,
+      "lon": 48.57011,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Nūrābād",
+      "lat": 34.0734,
+      "lon": 47.9725,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Īstgāh-e Rāh Āhan-e Garmsār",
+      "lat": 35.23455,
+      "lon": 52.30942,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Qarchak",
+      "lat": 35.42873,
+      "lon": 51.57757,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Ṣāleḥīeh",
+      "lat": 35.50527,
+      "lon": 51.19142,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Golestān",
+      "lat": 35.5183,
+      "lon": 51.1819,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Shahre Jadide Andisheh",
+      "lat": 35.6803,
+      "lon": 51.0193,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Dezfūl",
+      "lat": 32.41667,
+      "lon": 48.21667,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Khorramdarreh",
+      "lat": 36.20777,
+      "lon": 49.19527,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Pādegān-e Manjīl",
+      "lat": 36.7415,
+      "lon": 49.4161,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Kamālshahr",
+      "lat": 35.86187,
+      "lon": 50.87424,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Kavār",
+      "lat": 29.20505,
+      "lon": 52.69043,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Ābādeh",
+      "lat": 28.8349,
+      "lon": 53.1726,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Yasuj",
+      "lat": 30.66824,
+      "lon": 51.58796,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Zarand",
+      "lat": 30.81271,
+      "lon": 56.56399,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Zanjan",
+      "lat": 36.67642,
+      "lon": 48.49628,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Yazd",
+      "lat": 31.89722,
+      "lon": 54.3675,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Varāmīn",
+      "lat": 35.3242,
+      "lon": 51.6457,
+      "country": "Iran",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Yono",
+      "lat": 35.88333,
+      "lon": 139.63333,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yonago",
+      "lat": 35.43333,
+      "lon": 133.33333,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yonabaru",
+      "lat": 26.20437,
+      "lon": 127.75267,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yokota",
+      "lat": 35.75,
+      "lon": 139.38333,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yokosuka",
+      "lat": 35.28361,
+      "lon": 139.66722,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yokkaichi",
+      "lat": 34.96667,
+      "lon": 136.61667,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Youkaichi",
+      "lat": 35.11626,
+      "lon": 136.19768,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yawata",
+      "lat": 34.87009,
+      "lon": 135.7027,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Honmachi",
+      "lat": 32.50439,
+      "lon": 130.59952,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yatsuomachi-higashikumisaka",
+      "lat": 36.56667,
+      "lon": 137.13333,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yasugichō",
+      "lat": 35.42146,
+      "lon": 133.24224,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yashiro",
+      "lat": 34.91667,
+      "lon": 134.96667,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yashio",
+      "lat": 35.82255,
+      "lon": 139.83905,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yao",
+      "lat": 34.61667,
+      "lon": 135.6,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yanai",
+      "lat": 33.96667,
+      "lon": 132.11667,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yanagawa",
+      "lat": 33.16667,
+      "lon": 130.4,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yamato-Takada",
+      "lat": 34.51667,
+      "lon": 135.75,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yamashita",
+      "lat": 33.56554,
+      "lon": 133.70284,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yamazakichō-nakabirose",
+      "lat": 35.0,
+      "lon": 134.55,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yamaguchi",
+      "lat": 34.18333,
+      "lon": 131.46667,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yamaga",
+      "lat": 33.01667,
+      "lon": 130.68911,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Tosayamadachō-nakano",
+      "lat": 33.6,
+      "lon": 133.68333,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yaizu",
+      "lat": 34.86877,
+      "lon": 138.31952,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yaita",
+      "lat": 36.8,
+      "lon": 139.93333,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yae",
+      "lat": 34.68333,
+      "lon": 132.53333,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yabu",
+      "lat": 35.40304,
+      "lon": 134.77118,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Yabase",
+      "lat": 35.5,
+      "lon": 133.68333,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Wakimachi",
+      "lat": 34.06667,
+      "lon": 134.15,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Wajima",
+      "lat": 37.40458,
+      "lon": 136.89912,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Wadayama",
+      "lat": 35.31667,
+      "lon": 134.86667,
+      "country": "Japan",
+      "cluster": "JP_Auto"
+    },
+    {
+      "nome": "Wote",
+      "lat": -1.78079,
+      "lon": 37.62882,
+      "country": "Kenya",
+      "cluster": "KE_Auto"
+    },
+    {
+      "nome": "Webuye",
+      "lat": 0.6004,
+      "lon": 34.77119,
+      "country": "Kenya",
+      "cluster": "KE_Auto"
+    },
+    {
+      "nome": "Watamu",
+      "lat": -3.35335,
+      "lon": 40.02095,
+      "country": "Kenya",
+      "cluster": "KE_Auto"
+    },
+    {
+      "nome": "Wanguru",
+      "lat": -0.68393,
+      "lon": 37.35701,
+      "country": "Kenya",
+      "cluster": "KE_Auto"
+    },
+    {
+      "nome": "Wajir",
+      "lat": 1.7471,
+      "lon": 40.05732,
+      "country": "Kenya",
+      "cluster": "KE_Auto"
+    },
+    {
+      "nome": "Voi",
+      "lat": -3.39605,
+      "lon": 38.55609,
+      "country": "Kenya",
+      "cluster": "KE_Auto"
+    },
+    {
+      "nome": "Ukunda",
+      "lat": -4.2929,
+      "lon": 39.56404,
+      "country": "Kenya",
+      "cluster": "KE_Auto"
+    },
+    {
+      "nome": "Thika",
+      "lat": -1.03326,
+      "lon": 37.06933,
+      "country": "Kenya",
+      "cluster": "KE_Auto"
+    },
+    {
+      "nome": "Tetu",
+      "lat": -0.43419,
+      "lon": 36.91681,
+      "country": "Kenya",
+      "cluster": "KE_Auto"
+    },
+    {
+      "nome": "Taveta",
+      "lat": -3.39879,
+      "lon": 37.68336,
+      "country": "Kenya",
+      "cluster": "KE_Auto"
+    },
+    {
+      "nome": "Heunghae",
+      "lat": 36.10945,
+      "lon": 129.34517,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Yeonil",
+      "lat": 36.00446,
+      "lon": 129.3185,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Neietsu",
+      "lat": 37.18447,
+      "lon": 128.46821,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Yeongju",
+      "lat": 36.82167,
+      "lon": 128.63083,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Yeonggwang",
+      "lat": 35.27814,
+      "lon": 126.51181,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Yeongdong",
+      "lat": 36.175,
+      "lon": 127.77639,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Eisen",
+      "lat": 35.9675,
+      "lon": 128.93083,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Yeoju",
+      "lat": 37.29583,
+      "lon": 127.63389,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Yesan",
+      "lat": 36.67756,
+      "lon": 126.84272,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Yecheon",
+      "lat": 36.6574,
+      "lon": 128.45514,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Yangsan",
+      "lat": 35.34199,
+      "lon": 129.03358,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Yangp'yŏng",
+      "lat": 37.48972,
+      "lon": 127.49056,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Yangju",
+      "lat": 37.83311,
+      "lon": 127.06169,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Yanggu",
+      "lat": 38.10583,
+      "lon": 127.98944,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Wŏnju",
+      "lat": 37.35139,
+      "lon": 127.94528,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Tallang-dong",
+      "lat": 33.49028,
+      "lon": 126.47528,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Wanju",
+      "lat": 35.84509,
+      "lon": 127.14752,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Waegwan",
+      "lat": 35.99251,
+      "lon": 128.39785,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Ulsan",
+      "lat": 35.53722,
+      "lon": 129.31667,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Uijeongbu-si",
+      "lat": 37.7415,
+      "lon": 127.0474,
+      "country": "South Korea",
+      "cluster": "KR_Auto"
+    },
+    {
+      "nome": "Zhanaozen",
+      "lat": 43.34116,
+      "lon": 52.86192,
+      "country": "Kazakhstan",
+      "cluster": "KZ_Auto"
+    },
+    {
+      "nome": "Shalqar",
+      "lat": 47.83154,
+      "lon": 59.61926,
+      "country": "Kazakhstan",
+      "cluster": "KZ_Auto"
+    },
+    {
+      "nome": "Shalkar",
+      "lat": 48.03333,
+      "lon": 48.9,
+      "country": "Kazakhstan",
+      "cluster": "KZ_Auto"
+    },
+    {
+      "nome": "Oral",
+      "lat": 51.24601,
+      "lon": 51.42558,
+      "country": "Kazakhstan",
+      "cluster": "KZ_Auto"
+    },
+    {
+      "nome": "Kandyagash",
+      "lat": 49.46917,
+      "lon": 57.41865,
+      "country": "Kazakhstan",
+      "cluster": "KZ_Auto"
+    },
+    {
+      "nome": "Mangistau",
+      "lat": 43.69088,
+      "lon": 51.32237,
+      "country": "Kazakhstan",
+      "cluster": "KZ_Auto"
+    },
+    {
+      "nome": "Qulsary",
+      "lat": 46.95307,
+      "lon": 54.01978,
+      "country": "Kazakhstan",
+      "cluster": "KZ_Auto"
+    },
+    {
+      "nome": "Khromtau",
+      "lat": 50.25161,
+      "lon": 58.43574,
+      "country": "Kazakhstan",
+      "cluster": "KZ_Auto"
+    },
+    {
+      "nome": "Karagandy",
+      "lat": 49.80187,
+      "lon": 73.10211,
+      "country": "Kazakhstan",
+      "cluster": "KZ_Auto"
+    },
+    {
+      "nome": "Embi",
+      "lat": 48.82981,
+      "lon": 58.15042,
+      "country": "Kazakhstan",
+      "cluster": "KZ_Auto"
+    },
+    {
+      "nome": "Visaginas",
+      "lat": 55.59678,
+      "lon": 26.43984,
+      "country": "Lithuania",
+      "cluster": "LT_Auto"
+    },
+    {
+      "nome": "Vilnius",
+      "lat": 54.68916,
+      "lon": 25.2798,
+      "country": "Lithuania",
+      "cluster": "LT_Auto"
+    },
+    {
+      "nome": "Utena",
+      "lat": 55.4978,
+      "lon": 25.60462,
+      "country": "Lithuania",
+      "cluster": "LT_Auto"
+    },
+    {
+      "nome": "Ukmerge",
+      "lat": 55.25,
+      "lon": 24.75,
+      "country": "Lithuania",
+      "cluster": "LT_Auto"
+    },
+    {
+      "nome": "Telsiai",
+      "lat": 55.98139,
+      "lon": 22.24722,
+      "country": "Lithuania",
+      "cluster": "LT_Auto"
+    },
+    {
+      "nome": "Taurage",
+      "lat": 55.25222,
+      "lon": 22.28972,
+      "country": "Lithuania",
+      "cluster": "LT_Auto"
+    },
+    {
+      "nome": "Valmiera",
+      "lat": 57.54108,
+      "lon": 25.42751,
+      "country": "Latvia",
+      "cluster": "LV_Auto"
+    },
+    {
+      "nome": "Ventspils",
+      "lat": 57.39485,
+      "lon": 21.56121,
+      "country": "Latvia",
+      "cluster": "LV_Auto"
+    },
+    {
+      "nome": "Tukums",
+      "lat": 56.96764,
+      "lon": 23.15554,
+      "country": "Latvia",
+      "cluster": "LV_Auto"
+    },
+    {
+      "nome": "Salaspils",
+      "lat": 56.86014,
+      "lon": 24.36544,
+      "country": "Latvia",
+      "cluster": "LV_Auto"
+    },
+    {
+      "nome": "Riga",
+      "lat": 56.946,
+      "lon": 24.10589,
+      "country": "Latvia",
+      "cluster": "LV_Auto"
+    },
+    {
+      "nome": "Tiznit",
+      "lat": 29.69742,
+      "lon": -9.73162,
+      "country": "Morocco",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Tit Mellil",
+      "lat": 33.55808,
+      "lon": -7.48647,
+      "country": "Morocco",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Tirhanimîne",
+      "lat": 35.23619,
+      "lon": -3.95453,
+      "country": "Morocco",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Tinghir",
+      "lat": 31.51472,
+      "lon": -5.53278,
+      "country": "Morocco",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Tiflet",
+      "lat": 33.89469,
+      "lon": -6.30649,
+      "country": "Morocco",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Tétouan",
+      "lat": 35.57845,
+      "lon": -5.36837,
+      "country": "Morocco",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Temara",
+      "lat": 33.92866,
+      "lon": -6.90656,
+      "country": "Morocco",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Taza",
+      "lat": 34.21,
+      "lon": -4.01,
+      "country": "Morocco",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Tata",
+      "lat": 29.74409,
+      "lon": -7.973,
+      "country": "Morocco",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Taroudant",
+      "lat": 30.47028,
+      "lon": -8.87695,
+      "country": "Morocco",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Taourirt",
+      "lat": 34.40731,
+      "lon": -2.89732,
+      "country": "Morocco",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Taounate",
+      "lat": 34.53661,
+      "lon": -4.64009,
+      "country": "Morocco",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Zelino",
+      "lat": 41.98028,
+      "lon": 21.06417,
+      "country": "North Macedonia",
+      "cluster": "MK_Auto"
+    },
+    {
+      "nome": "Vinica",
+      "lat": 41.8812,
+      "lon": 22.51074,
+      "country": "North Macedonia",
+      "cluster": "MK_Auto"
+    },
+    {
+      "nome": "Veles",
+      "lat": 41.71719,
+      "lon": 21.77196,
+      "country": "North Macedonia",
+      "cluster": "MK_Auto"
+    },
+    {
+      "nome": "Tetovo",
+      "lat": 42.00989,
+      "lon": 20.97138,
+      "country": "North Macedonia",
+      "cluster": "MK_Auto"
+    },
+    {
+      "nome": "Tearce",
+      "lat": 42.07593,
+      "lon": 21.05179,
+      "country": "North Macedonia",
+      "cluster": "MK_Auto"
+    },
+    {
+      "nome": "Xico",
+      "lat": 19.42178,
+      "lon": -97.00819,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Santa Ana Xalmimilulco",
+      "lat": 19.21287,
+      "lon": -98.38207,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Álvaro Obregón",
+      "lat": 19.35867,
+      "lon": -99.20329,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Villahermosa",
+      "lat": 17.98625,
+      "lon": -92.93928,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Gustavo Adolfo Madero",
+      "lat": 19.49392,
+      "lon": -99.11075,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Villaflores",
+      "lat": 16.23377,
+      "lon": -93.27006,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Veracruz",
+      "lat": 19.18095,
+      "lon": -96.1429,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Venustiano Carranza",
+      "lat": 16.33851,
+      "lon": -92.56317,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Valle Hermoso",
+      "lat": 25.67317,
+      "lon": -97.81272,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Umán",
+      "lat": 20.88149,
+      "lon": -89.74798,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tuxtla",
+      "lat": 16.75357,
+      "lon": -93.11578,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Túxpam de Rodríguez Cano",
+      "lat": 20.95777,
+      "lon": -97.40805,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tulum",
+      "lat": 20.21173,
+      "lon": -87.46325,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tultitlán de Mariano Escobedo",
+      "lat": 19.64655,
+      "lon": -99.16787,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tultepec",
+      "lat": 19.685,
+      "lon": -99.12806,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tulancingo",
+      "lat": 20.08355,
+      "lon": -98.36288,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tula de Allende",
+      "lat": 20.05161,
+      "lon": -99.34397,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Santa Rosa Treinta",
+      "lat": 18.70025,
+      "lon": -99.18357,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "San Miguel Topilejo",
+      "lat": 19.20264,
+      "lon": -99.14193,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Toluca",
+      "lat": 19.28786,
+      "lon": -99.65324,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "San Bernardino Tlaxcalancingo",
+      "lat": 19.02867,
+      "lon": -98.27698,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tlaquiltenango",
+      "lat": 18.63429,
+      "lon": -99.1632,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tlapa de Comonfort",
+      "lat": 17.54528,
+      "lon": -98.57599,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tlapacoyan",
+      "lat": 19.96268,
+      "lon": -97.21141,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tlalpan",
+      "lat": 19.29513,
+      "lon": -99.16206,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tlalnepantla",
+      "lat": 19.54005,
+      "lon": -99.19538,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tláhuac",
+      "lat": 19.28689,
+      "lon": -99.00507,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tizimín",
+      "lat": 21.14304,
+      "lon": -88.15188,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tizayuca",
+      "lat": 19.83721,
+      "lon": -98.97607,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Tixtla de Guerrero",
+      "lat": 17.56732,
+      "lon": -99.39799,
+      "country": "Mexico",
+      "cluster": "MX_Auto"
+    },
+    {
+      "nome": "Kuah",
+      "lat": 6.32649,
+      "lon": 99.8432,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Jerantut",
+      "lat": 3.936,
+      "lon": 102.3626,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Maran",
+      "lat": 3.586,
+      "lon": 102.773,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Raub",
+      "lat": 3.7899,
+      "lon": 101.857,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Bentung",
+      "lat": 3.5316,
+      "lon": 101.9038,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Tanjong Malim",
+      "lat": 3.681,
+      "lon": 101.5198,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Kuala Kubu Baharu",
+      "lat": 3.5638,
+      "lon": 101.6581,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Parit Sulung",
+      "lat": 1.976,
+      "lon": 102.8835,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Batu Pahat",
+      "lat": 1.8548,
+      "lon": 102.9325,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Parit Raja",
+      "lat": 1.8681,
+      "lon": 103.1124,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Simpang Renggam",
+      "lat": 1.825,
+      "lon": 103.3107,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Pekan Nenas",
+      "lat": 1.51,
+      "lon": 103.5141,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Pontian Besar",
+      "lat": 1.5059,
+      "lon": 103.3816,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Kampung Pasir Gudang Baru",
+      "lat": 1.4726,
+      "lon": 103.878,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Pasir Gudang",
+      "lat": 1.462,
+      "lon": 103.9053,
+      "country": "Malaysia",
+      "cluster": "MY_Auto"
+    },
+    {
+      "nome": "Wamba",
+      "lat": 8.94153,
+      "lon": 8.60315,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Uyo",
+      "lat": 5.05127,
+      "lon": 7.9335,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Uromi",
+      "lat": 6.7,
+      "lon": 6.33333,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Umuahia",
+      "lat": 5.52491,
+      "lon": 7.49461,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Ughelli",
+      "lat": 5.48956,
+      "lon": 6.00407,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Ugep",
+      "lat": 5.80865,
+      "lon": 8.08098,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Uga",
+      "lat": 5.93576,
+      "lon": 7.0793,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Ubiaja",
+      "lat": 6.65581,
+      "lon": 6.38494,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Tegina",
+      "lat": 10.0706,
+      "lon": 6.1906,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Tambuwal",
+      "lat": 12.40592,
+      "lon": 4.64605,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Talata Mafara",
+      "lat": 12.56841,
+      "lon": 6.06225,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Takum",
+      "lat": 7.26667,
+      "lon": 9.98333,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Surulere",
+      "lat": 6.50153,
+      "lon": 3.35808,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Suleja",
+      "lat": 9.18059,
+      "lon": 7.17939,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Sokoto",
+      "lat": 13.06269,
+      "lon": 5.24322,
+      "country": "Nigeria",
+      "cluster": "NG_Auto"
+    },
+    {
+      "nome": "Wāliṅ",
+      "lat": 27.9837,
+      "lon": 83.75925,
+      "country": "Nepal",
+      "cluster": "NP_Auto"
+    },
+    {
+      "nome": "Tulsi̇̄pur",
+      "lat": 28.13328,
+      "lon": 82.29803,
+      "country": "Nepal",
+      "cluster": "NP_Auto"
+    },
+    {
+      "nome": "Ṭikāpur",
+      "lat": 28.52819,
+      "lon": 81.11828,
+      "country": "Nepal",
+      "cluster": "NP_Auto"
+    },
+    {
+      "nome": "Tānsen",
+      "lat": 27.86655,
+      "lon": 83.54587,
+      "country": "Nepal",
+      "cluster": "NP_Auto"
+    },
+    {
+      "nome": "Siraha",
+      "lat": 26.65422,
+      "lon": 86.20795,
+      "country": "Nepal",
+      "cluster": "NP_Auto"
+    },
+    {
+      "nome": "Rājbirāj",
+      "lat": 26.53968,
+      "lon": 86.74796,
+      "country": "Nepal",
+      "cluster": "NP_Auto"
+    },
+    {
+      "nome": "Tingo María",
+      "lat": -9.29532,
+      "lon": -75.99574,
+      "country": "Peru",
+      "cluster": "PE_Auto"
+    },
+    {
+      "nome": "Tambo Grande",
+      "lat": -4.92694,
+      "lon": -80.34472,
+      "country": "Peru",
+      "cluster": "PE_Auto"
+    },
+    {
+      "nome": "Talara",
+      "lat": -4.57722,
+      "lon": -81.27194,
+      "country": "Peru",
+      "cluster": "PE_Auto"
+    },
+    {
+      "nome": "Sullana",
+      "lat": -4.90389,
+      "lon": -80.68528,
+      "country": "Peru",
+      "cluster": "PE_Auto"
+    },
+    {
+      "nome": "Sechura",
+      "lat": -5.55694,
+      "lon": -80.82222,
+      "country": "Peru",
+      "cluster": "PE_Auto"
+    },
+    {
+      "nome": "Santiago de Cao",
+      "lat": -7.95889,
+      "lon": -79.23917,
+      "country": "Peru",
+      "cluster": "PE_Auto"
+    },
+    {
+      "nome": "San Pedro de Lloc",
+      "lat": -7.4289,
+      "lon": -79.50416,
+      "country": "Peru",
+      "cluster": "PE_Auto"
+    },
+    {
+      "nome": "San Juan",
+      "lat": -3.77611,
+      "lon": -73.28139,
+      "country": "Peru",
+      "cluster": "PE_Auto"
+    },
+    {
+      "nome": "Saña",
+      "lat": -6.91888,
+      "lon": -79.582,
+      "country": "Peru",
+      "cluster": "PE_Auto"
+    },
+    {
+      "nome": "Rioja",
+      "lat": -6.05675,
+      "lon": -77.16651,
+      "country": "Peru",
+      "cluster": "PE_Auto"
+    },
+    {
+      "nome": "Querecotillo",
+      "lat": -4.83778,
+      "lon": -80.64556,
+      "country": "Peru",
+      "cluster": "PE_Auto"
+    },
+    {
+      "nome": "Pucallpa",
+      "lat": -8.37915,
+      "lon": -74.55387,
+      "country": "Peru",
+      "cluster": "PE_Auto"
+    },
+    {
+      "nome": "NIA Valencia",
+      "lat": 7.90639,
+      "lon": 125.09417,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Urdaneta",
+      "lat": 15.97611,
+      "lon": 120.57111,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Ualog",
+      "lat": 10.57396,
+      "lon": 123.3933,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tupi",
+      "lat": 6.33444,
+      "lon": 124.95278,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tunasan",
+      "lat": 14.37917,
+      "lon": 121.0525,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tuguegarao",
+      "lat": 17.61577,
+      "lon": 121.72285,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tubod",
+      "lat": 8.0555,
+      "lon": 123.7904,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Toledo",
+      "lat": 10.3773,
+      "lon": 123.6386,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tiwi",
+      "lat": 13.4585,
+      "lon": 123.6805,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tinongan",
+      "lat": 10.215,
+      "lon": 123.03528,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Ternate",
+      "lat": 14.2897,
+      "lon": 120.7168,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Teresa",
+      "lat": 14.5612,
+      "lon": 121.2195,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Telabastagan",
+      "lat": 15.11854,
+      "lon": 120.60773,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Taytay",
+      "lat": 14.55883,
+      "lon": 121.13285,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tayabas",
+      "lat": 14.0259,
+      "lon": 121.5929,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tarlac City",
+      "lat": 15.48017,
+      "lon": 120.59794,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tanza",
+      "lat": 14.6753,
+      "lon": 120.9389,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tanjay",
+      "lat": 9.5162,
+      "lon": 123.158,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tangub",
+      "lat": 8.0618,
+      "lon": 123.7477,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tandag",
+      "lat": 9.07833,
+      "lon": 126.19861,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Zafarwal",
+      "lat": 32.34464,
+      "lon": 74.8999,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Yazman",
+      "lat": 29.12122,
+      "lon": 71.74459,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Wazirabad",
+      "lat": 32.44324,
+      "lon": 74.12,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Washuk",
+      "lat": 27.72728,
+      "lon": 64.80972,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Chak Five Hundred Seventy-five",
+      "lat": 31.54514,
+      "lon": 73.82891,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Warah",
+      "lat": 27.44805,
+      "lon": 67.79654,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Vihari",
+      "lat": 30.0445,
+      "lon": 72.3556,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Utmanzai",
+      "lat": 34.18775,
+      "lon": 71.76274,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Uthal",
+      "lat": 25.80722,
+      "lon": 66.62194,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Usta Muhammad",
+      "lat": 28.17723,
+      "lon": 68.04367,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Umarkot",
+      "lat": 25.36329,
+      "lon": 69.74184,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Ubauro",
+      "lat": 28.16429,
+      "lon": 69.73114,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Turbat",
+      "lat": 26.00122,
+      "lon": 63.04849,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Tordher",
+      "lat": 33.99047,
+      "lon": 72.2863,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Topi",
+      "lat": 34.07034,
+      "lon": 72.62147,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Toba Tek Singh",
+      "lat": 30.97127,
+      "lon": 72.48275,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Thul",
+      "lat": 28.2403,
+      "lon": 68.7755,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Thatta",
+      "lat": 24.74745,
+      "lon": 67.92353,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Tharu Shah",
+      "lat": 26.9423,
+      "lon": 68.11759,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Taunsa",
+      "lat": 30.70358,
+      "lon": 70.65054,
+      "country": "Pakistan",
+      "cluster": "PK_Auto"
+    },
+    {
+      "nome": "Zelenogradsk",
+      "lat": 54.95893,
+      "lon": 20.47668,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Zelenograd",
+      "lat": 55.9825,
+      "lon": 37.18139,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Zelenodolsk",
+      "lat": 55.84376,
+      "lon": 48.51784,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Zelenchukskaya",
+      "lat": 43.85495,
+      "lon": 41.59019,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Zavolzh’ye",
+      "lat": 56.64051,
+      "lon": 43.39446,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Zavety Il’icha",
+      "lat": 56.04284,
+      "lon": 37.85153,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Zarechnyy",
+      "lat": 53.20356,
+      "lon": 45.19227,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Zaraysk",
+      "lat": 54.76327,
+      "lon": 38.88076,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Zapolyarnyy",
+      "lat": 69.426,
+      "lon": 30.811,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Zamoskvorech’ye",
+      "lat": 55.73333,
+      "lon": 37.63333,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Zainsk",
+      "lat": 55.3195,
+      "lon": 52.06942,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yushkovo",
+      "lat": 55.55741,
+      "lon": 36.97176,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yur’yev-Pol’skiy",
+      "lat": 56.5046,
+      "lon": 39.67931,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yoshkar-Ola",
+      "lat": 56.63877,
+      "lon": 47.89078,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yeysk",
+      "lat": 46.69263,
+      "lon": 38.27907,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yessentukskaya",
+      "lat": 44.02583,
+      "lon": 42.87491,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yessentuki",
+      "lat": 44.04826,
+      "lon": 42.85638,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yershov",
+      "lat": 51.35595,
+      "lon": 48.27269,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yemva",
+      "lat": 62.5879,
+      "lon": 50.8634,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yelizavetinskaya",
+      "lat": 45.04616,
+      "lon": 38.79491,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yelets",
+      "lat": 52.61435,
+      "lon": 38.50935,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yelan’",
+      "lat": 50.9488,
+      "lon": 43.73709,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yelabuga",
+      "lat": 55.76232,
+      "lon": 52.04425,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yegor’yevsk",
+      "lat": 55.37952,
+      "lon": 39.04122,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yegorlykskaya",
+      "lat": 46.56587,
+      "lon": 40.6571,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yefremov",
+      "lat": 53.13762,
+      "lon": 38.11856,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yasnyy",
+      "lat": 51.03534,
+      "lon": 59.87234,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yasnogorsk",
+      "lat": 54.48091,
+      "lon": 37.6982,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yasenevo",
+      "lat": 55.60686,
+      "lon": 37.51991,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yartsevo",
+      "lat": 55.06491,
+      "lon": 32.69693,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yaroslavl",
+      "lat": 57.62987,
+      "lon": 39.87368,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yaransk",
+      "lat": 57.30496,
+      "lon": 47.87387,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yanaul",
+      "lat": 56.27233,
+      "lon": 54.92964,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yagry",
+      "lat": 64.59417,
+      "lon": 39.81028,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yablonovskiy",
+      "lat": 44.98901,
+      "lon": 38.94324,
+      "country": "Russia",
+      "cluster": "RU_Auto"
+    },
+    {
+      "nome": "Yanbu",
+      "lat": 24.08954,
+      "lon": 38.0618,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Umluj",
+      "lat": 25.02126,
+      "lon": 37.2685,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Turaif",
+      "lat": 31.67252,
+      "lon": 38.66374,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Ţurayf",
+      "lat": 31.672,
+      "lon": 38.663,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Turabah",
+      "lat": 21.21406,
+      "lon": 41.6331,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Taymā’",
+      "lat": 27.62233,
+      "lon": 38.53882,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Tārūt",
+      "lat": 26.5733,
+      "lon": 50.04028,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Tabuk",
+      "lat": 28.3998,
+      "lon": 36.57151,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Ţubarjal",
+      "lat": 30.49987,
+      "lon": 38.21603,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Unaizah",
+      "lat": 26.1,
+      "lon": 44.0,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Sulţānah",
+      "lat": 24.49258,
+      "lon": 39.58572,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Shaqra",
+      "lat": 25.24019,
+      "lon": 45.25104,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Sayhāt",
+      "lat": 26.48345,
+      "lon": 50.04849,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Şāmitah",
+      "lat": 16.59601,
+      "lon": 42.94435,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Sakakah",
+      "lat": 29.96974,
+      "lon": 40.20641,
+      "country": "Saudi Arabia",
+      "cluster": "SA_Auto"
+    },
+    {
+      "nome": "Tha Muang",
+      "lat": 13.96118,
+      "lon": 99.64122,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Tha Maka",
+      "lat": 13.9,
+      "lon": 99.76667,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Tak",
+      "lat": 16.86968,
+      "lon": 99.12898,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Surat Thani",
+      "lat": 9.14011,
+      "lon": 99.33311,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Sukhothai",
+      "lat": 17.00778,
+      "lon": 99.823,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Si Satchanalai",
+      "lat": 17.51692,
+      "lon": 99.75978,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Sawankhalok",
+      "lat": 17.31597,
+      "lon": 99.83186,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "San Pa Tong",
+      "lat": 18.62828,
+      "lon": 98.89572,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "San Kamphaeng",
+      "lat": 18.74486,
+      "lon": 99.11953,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ron Phibun",
+      "lat": 8.17911,
+      "lon": 99.85425,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ratchaburi",
+      "lat": 13.53671,
+      "lon": 99.81712,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ranong",
+      "lat": 9.96583,
+      "lon": 98.63476,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Pran Buri",
+      "lat": 12.38487,
+      "lon": 99.90157,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Prachuap Khiri Khan",
+      "lat": 11.82098,
+      "lon": 99.7841,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Tha Kham",
+      "lat": 9.11072,
+      "lon": 99.23208,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Van",
+      "lat": 38.49457,
+      "lon": 43.38323,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Cimin",
+      "lat": 39.70947,
+      "lon": 39.70015,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Uşak",
+      "lat": 38.67351,
+      "lon": 29.4058,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Urla",
+      "lat": 38.32292,
+      "lon": 26.76403,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Ürgüp",
+      "lat": 38.6296,
+      "lon": 34.91199,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Şanlıurfa",
+      "lat": 37.16708,
+      "lon": 38.79392,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Arsuz",
+      "lat": 36.41305,
+      "lon": 35.89033,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Turgutlu",
+      "lat": 38.49533,
+      "lon": 27.6997,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Tunceli",
+      "lat": 39.09921,
+      "lon": 39.54351,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Torbalı",
+      "lat": 38.182,
+      "lon": 27.335,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Tire",
+      "lat": 38.08877,
+      "lon": 27.73508,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Tavşanlı",
+      "lat": 39.54237,
+      "lon": 29.49866,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Tatvan",
+      "lat": 38.49221,
+      "lon": 42.28269,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Taşucu",
+      "lat": 36.3214,
+      "lon": 33.88165,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Tarsus",
+      "lat": 36.91766,
+      "lon": 34.89277,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Talas",
+      "lat": 38.6908,
+      "lon": 35.5538,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Susurluk",
+      "lat": 39.91361,
+      "lon": 28.15778,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Suruç",
+      "lat": 36.97612,
+      "lon": 38.42533,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Sorgun",
+      "lat": 39.81012,
+      "lon": 35.18596,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Soma",
+      "lat": 39.18554,
+      "lon": 27.60945,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Solhan",
+      "lat": 38.96525,
+      "lon": 41.05443,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Söke",
+      "lat": 37.7482,
+      "lon": 27.40614,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Siverek",
+      "lat": 37.75503,
+      "lon": 39.31667,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Sivas",
+      "lat": 39.74833,
+      "lon": 37.01611,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Şırnak",
+      "lat": 37.51393,
+      "lon": 42.45432,
+      "country": "Turkey",
+      "cluster": "TR_Auto"
+    },
+    {
+      "nome": "Douliu",
+      "lat": 23.70944,
+      "lon": 120.54333,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Yongkang",
+      "lat": 23.02444,
+      "lon": 120.25556,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Yongjing",
+      "lat": 23.92148,
+      "lon": 120.54594,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Yujing",
+      "lat": 23.12493,
+      "lon": 120.46138,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Yuanlin",
+      "lat": 23.95671,
+      "lon": 120.57608,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Yingge",
+      "lat": 24.95608,
+      "lon": 121.3507,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Wufeng",
+      "lat": 24.0637,
+      "lon": 120.698,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Citong",
+      "lat": 23.75751,
+      "lon": 120.49965,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Donggang",
+      "lat": 22.46515,
+      "lon": 120.44927,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Caotun",
+      "lat": 23.97699,
+      "lon": 120.68766,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Toufen",
+      "lat": 24.68753,
+      "lon": 120.90942,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Tianwei",
+      "lat": 23.8927,
+      "lon": 120.524,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Tianzhong",
+      "lat": 23.85808,
+      "lon": 120.5857,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Taoyuan",
+      "lat": 24.9896,
+      "lon": 121.3187,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Danshui",
+      "lat": 25.17196,
+      "lon": 121.4429,
+      "country": "Taiwan",
+      "cluster": "TW_Auto"
+    },
+    {
+      "nome": "Zanzibar",
+      "lat": -6.16394,
+      "lon": 39.19793,
+      "country": "Tanzania",
+      "cluster": "TZ_Auto"
+    },
+    {
+      "nome": "Wete",
+      "lat": -5.05589,
+      "lon": 39.72938,
+      "country": "Tanzania",
+      "cluster": "TZ_Auto"
+    },
+    {
+      "nome": "Vwawa",
+      "lat": -9.10806,
+      "lon": 32.93472,
+      "country": "Tanzania",
+      "cluster": "TZ_Auto"
+    },
+    {
+      "nome": "Vikindu",
+      "lat": -7.00667,
+      "lon": 39.29849,
+      "country": "Tanzania",
+      "cluster": "TZ_Auto"
+    },
+    {
+      "nome": "Uyovu",
+      "lat": -3.28333,
+      "lon": 31.52583,
+      "country": "Tanzania",
+      "cluster": "TZ_Auto"
+    },
+    {
+      "nome": "Uvinza",
+      "lat": -5.10361,
+      "lon": 30.39111,
+      "country": "Tanzania",
+      "cluster": "TZ_Auto"
+    },
+    {
+      "nome": "Utengule",
+      "lat": -8.9,
+      "lon": 33.33333,
+      "country": "Tanzania",
+      "cluster": "TZ_Auto"
+    },
+    {
+      "nome": "Ushirombo",
+      "lat": -3.49194,
+      "lon": 31.96389,
+      "country": "Tanzania",
+      "cluster": "TZ_Auto"
+    },
+    {
+      "nome": "Zdolbuniv",
+      "lat": 50.5206,
+      "lon": 26.24251,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Zaporizhzhya",
+      "lat": 47.85167,
+      "lon": 35.11714,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Pivdenne",
+      "lat": 46.62472,
+      "lon": 31.10182,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Katerynivka",
+      "lat": 48.55586,
+      "lon": 39.18277,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Yevpatoriya",
+      "lat": 45.20091,
+      "lon": 33.36655,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Yenakiieve",
+      "lat": 48.23857,
+      "lon": 38.20403,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Yasynuvata",
+      "lat": 48.1298,
+      "lon": 37.8594,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Yalta",
+      "lat": 44.50218,
+      "lon": 34.16624,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Yahotyn",
+      "lat": 50.27975,
+      "lon": 31.76246,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Vyshhorod",
+      "lat": 50.58476,
+      "lon": 30.4898,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Vynohradiv",
+      "lat": 48.14126,
+      "lon": 23.03623,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Vyhurivshchyna-Troieshchyna",
+      "lat": 50.51137,
+      "lon": 30.60251,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Voznesensk",
+      "lat": 47.56218,
+      "lon": 31.33602,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Volochysk",
+      "lat": 49.53606,
+      "lon": 26.20681,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Volnovakha",
+      "lat": 47.6016,
+      "lon": 37.49712,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Vilnohirsk",
+      "lat": 48.48416,
+      "lon": 34.01708,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Vovchansk",
+      "lat": 50.29078,
+      "lon": 36.94108,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Volodymyr-Volynskyi",
+      "lat": 50.85253,
+      "lon": 24.32364,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Vyshneve",
+      "lat": 50.38913,
+      "lon": 30.3705,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Vinnytsya",
+      "lat": 49.2322,
+      "lon": 28.46871,
+      "country": "Ukraine",
+      "cluster": "UA_Auto"
+    },
+    {
+      "nome": "Yumbe",
+      "lat": 3.46506,
+      "lon": 31.24689,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Wobulenzi",
+      "lat": 0.72833,
+      "lon": 32.51222,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Wakiso",
+      "lat": 0.40444,
+      "lon": 32.45944,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Tororo",
+      "lat": 0.69299,
+      "lon": 34.18085,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Soroti",
+      "lat": 1.71464,
+      "lon": 33.61113,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Sironko",
+      "lat": 1.23132,
+      "lon": 34.24773,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Nukus",
+      "lat": 42.45861,
+      "lon": 59.60576,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Qŭnghirot",
+      "lat": 43.04333,
+      "lon": 58.83944,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Xo‘jayli Shahri",
+      "lat": 42.40881,
+      "lon": 59.44544,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Oltinko‘l",
+      "lat": 43.06874,
+      "lon": 58.90372,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Zomin Shaharchasi",
+      "lat": 39.96056,
+      "lon": 68.39583,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Urgut Shahri",
+      "lat": 39.41902,
+      "lon": 67.26118,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Tirmiz",
+      "lat": 37.22417,
+      "lon": 67.27833,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Sho‘rchi",
+      "lat": 37.99944,
+      "lon": 67.7875,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "La Guardia",
+      "lat": 10.99742,
+      "lon": -64.0181,
+      "country": "Venezuela",
+      "cluster": "VE_Auto"
+    },
+    {
+      "nome": "La Asunción",
+      "lat": 11.03333,
+      "lon": -63.86278,
+      "country": "Venezuela",
+      "cluster": "VE_Auto"
+    },
+    {
+      "nome": "Anaco",
+      "lat": 9.42958,
+      "lon": -64.46428,
+      "country": "Venezuela",
+      "cluster": "VE_Auto"
+    },
+    {
+      "nome": "Alto Barinas",
+      "lat": 8.5931,
+      "lon": -70.2261,
+      "country": "Venezuela",
+      "cluster": "VE_Auto"
+    },
+    {
+      "nome": "Zaraza",
+      "lat": 9.35029,
+      "lon": -65.32452,
+      "country": "Venezuela",
+      "cluster": "VE_Auto"
+    },
+    {
+      "nome": "Yumare",
+      "lat": 10.59703,
+      "lon": -68.67328,
+      "country": "Venezuela",
+      "cluster": "VE_Auto"
+    },
+    {
+      "nome": "Yaritagua",
+      "lat": 10.08081,
+      "lon": -69.1242,
+      "country": "Venezuela",
+      "cluster": "VE_Auto"
+    },
+    {
+      "nome": "Villa de Cura",
+      "lat": 10.03863,
+      "lon": -67.48938,
+      "country": "Venezuela",
+      "cluster": "VE_Auto"
+    },
+    {
+      "nome": "Villa Bruzual",
+      "lat": 9.33186,
+      "lon": -69.11968,
+      "country": "Venezuela",
+      "cluster": "VE_Auto"
+    },
+    {
+      "nome": "Valle de La Pascua",
+      "lat": 9.21554,
+      "lon": -66.00734,
+      "country": "Venezuela",
+      "cluster": "VE_Auto"
+    },
+    {
+      "nome": "Valera",
+      "lat": 9.31778,
+      "lon": -70.60361,
+      "country": "Venezuela",
+      "cluster": "VE_Auto"
+    },
+    {
+      "nome": "Ureña",
+      "lat": 7.92162,
+      "lon": -72.44396,
+      "country": "Venezuela",
+      "cluster": "VE_Auto"
+    },
+    {
+      "nome": "Trảng Bom",
+      "lat": 10.95358,
+      "lon": 107.00589,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Xã Long Hải",
+      "lat": 10.38706,
+      "lon": 107.23884,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Vũng Tàu",
+      "lat": 10.34599,
+      "lon": 107.08426,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Vị Thanh",
+      "lat": 9.78449,
+      "lon": 105.47012,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Vĩnh Yên",
+      "lat": 21.30891,
+      "lon": 105.60489,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Vĩnh Tuy",
+      "lat": 21.0,
+      "lon": 105.88333,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Vĩnh Long",
+      "lat": 10.25369,
+      "lon": 105.9722,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Vĩnh Châu",
+      "lat": 9.32439,
+      "lon": 105.98006,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Vinh",
+      "lat": 18.67337,
+      "lon": 105.69232,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Việt Yên",
+      "lat": 21.26667,
+      "lon": 106.13333,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Việt Trì",
+      "lat": 21.32274,
+      "lon": 105.40198,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Thành Phố Uông Bí",
+      "lat": 21.03433,
+      "lon": 106.77049,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Tuy Hòa",
+      "lat": 13.09546,
+      "lon": 109.32094,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Tuyên Quang",
+      "lat": 21.82356,
+      "lon": 105.21424,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Tu Bông",
+      "lat": 12.76667,
+      "lon": 109.3,
+      "country": "Vietnam",
+      "cluster": "VN_Auto"
+    },
+    {
+      "nome": "Westonaria",
+      "lat": -26.31905,
+      "lon": 27.6486,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Wesselsbron",
+      "lat": -27.8549,
+      "lon": 26.36583,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Wembesi",
+      "lat": -29.04912,
+      "lon": 29.78232,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Welkom",
+      "lat": -27.97742,
+      "lon": 26.73506,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Warrenton",
+      "lat": -28.11396,
+      "lon": 24.84753,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Bela Bela",
+      "lat": -24.88333,
+      "lon": 28.28333,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Vryheid",
+      "lat": -27.76952,
+      "lon": 30.79165,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Vryburg",
+      "lat": -26.95659,
+      "lon": 24.7284,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Vredefort",
+      "lat": -27.00805,
+      "lon": 27.3646,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Vrede",
+      "lat": -27.42573,
+      "lon": 29.16585,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Volksrust",
+      "lat": -27.36541,
+      "lon": 29.88175,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Virginia",
+      "lat": -28.10391,
+      "lon": 26.86593,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Villiers",
+      "lat": -27.03026,
+      "lon": 28.60061,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Viljoenskroon",
+      "lat": -27.20841,
+      "lon": 26.94855,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Verena",
+      "lat": -25.48251,
+      "lon": 29.02763,
+      "country": "South Africa",
+      "cluster": "ZA_Auto"
     }
   ]
 }
