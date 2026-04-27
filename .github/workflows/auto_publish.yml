@@ -2,7 +2,7 @@ name: WeatherArb Auto-Publish
 
 on:
   schedule:
-    - cron: '0 */6 * * *'   # ogni 6 ore
+    - cron: '0 */4 * * *'   # ogni 4 ore
   workflow_dispatch:          # run manuale da GitHub UI
 
 jobs:
@@ -29,10 +29,10 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           API_BASE: https://api.weatherarb.com
-          SCORE_THRESHOLD: '3.0'
-          MAX_ARTICLES: '6'
-          KEEP_DAYS: '30'
-          MAX_TOTAL: '50'
+          SCORE_THRESHOLD: '2.0'
+          MAX_ARTICLES: '8'
+          KEEP_DAYS: '60'
+          MAX_TOTAL: '120'
         run: python tools/auto_publish.py
 
       - name: Commit & push if changed
