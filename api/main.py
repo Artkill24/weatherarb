@@ -65,7 +65,7 @@ def fetch_all_weather_batch(provinces):
     """Fetch weather for all provinces using Open-Meteo batch API"""
     global _weather_cache
     _weather_cache = {}
-    batch_size = 100
+    batch_size = 50
     
     for i in range(0, len(provinces), batch_size):
         batch = provinces[i:i+batch_size]
@@ -97,6 +97,7 @@ def fetch_all_weather_batch(provinces):
             logger.info(f"Open-Meteo batch {i//batch_size+1}: fetched {len(data)} cities")
         except Exception as e:
             logger.error(f"Open-Meteo batch error: {e}")
+        import time; time.sleep(0.5)  # avoid rate limiting
 
 def fetch_owm(lat, lon):
     """Lookup from pre-fetched batch cache"""
