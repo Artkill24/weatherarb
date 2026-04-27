@@ -65,7 +65,7 @@ def fetch_all_weather_batch(provinces):
     """Fetch weather for all provinces using Open-Meteo batch API"""
     global _weather_cache
     _weather_cache = {}
-    batch_size = 500  # Open-Meteo supports up to 1000
+    batch_size = 100
     
     for i in range(0, len(provinces), batch_size):
         batch = provinces[i:i+batch_size]
