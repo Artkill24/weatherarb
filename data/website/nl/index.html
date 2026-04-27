@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Nederland — WeatherArb Intelligence Network</title>
-  <meta name="description" content="WeatherArb weather anomaly monitoring network for Nederland. 6 active nodes.">
+  <title>Netherlands Weather Intelligence | 10 Monitored Cities | WeatherArb</title>
+  <meta name="description" content="Real-time weather anomaly monitoring for Netherlands. 10 active nodes with NASA POWER Z-Score 25-year baseline. HDD/CDD energy data. WeatherArb.">
+  <link rel="canonical" href="https://weatherarb.com/nl/">
   <style>
     :root{--bg:#040608;--surface:#0a0d12;--border:#141920;--text:#c8d6e5;--muted:#4a5568;--blue:#3b82f6}
     *{box-sizing:border-box;margin:0;padding:0}
     body{background:var(--bg);color:var(--text);font-family:-apple-system,sans-serif;min-height:100vh}
-    .hdr{border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+    .hdr{border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
     .logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none}.logo span{color:var(--blue)}
     .nav{display:flex;gap:20px}.nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-decoration:none}.nav a:hover{color:var(--text)}
     .wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}
     .bc{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:16px}.bc a{color:var(--muted);text-decoration:none}.bc a:hover{color:var(--blue)}
     h1{font-size:clamp(32px,4vw,56px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
-    .sub{font-size:13px;color:var(--muted);margin-bottom:48px}.sub span{color:var(--blue)}
+    .sub{font-size:13px;color:var(--muted);margin-bottom:12px}.sub span{color:var(--blue)}
+    .desc{font-size:13px;color:var(--muted);line-height:1.7;max-width:700px;margin-bottom:40px}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
     .nc{display:block;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;text-decoration:none;transition:border-color .2s,background .2s}.nc:hover{border-color:var(--blue);background:#0d1520}
     .nn{display:block;font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px}
@@ -27,21 +29,26 @@
 <body>
 <header class="hdr">
   <a href="/" class="logo">Weather<span>Arb</span></a>
-  <nav class="nav"><a href="/data/">Data</a><a href="/news/">News</a><a href="/api.html">API</a></nav>
+  <nav class="nav"><a href="/leaderboard">Leaderboard</a><a href="/news/">News</a><a href="/map">Map</a><a href="/pricing">API</a></nav>
 </header>
 <div class="wrap">
-  <div class="bc"><a href="/">WeatherArb</a> / Nederland</div>
-  <h1>Nederland <span style="color:var(--blue)">Network</span></h1>
-  <p class="sub"><span>6</span> nodi attivi · Baseline NASA POWER · Aggiornamento ogni ora</p>
+  <div class="bc"><a href="/">WeatherArb</a> / Netherlands</div>
+  <h1>Netherlands <span style="color:var(--blue)">Network</span></h1>
+  <p class="sub"><span>10</span> active nodes · NASA POWER 25y baseline · Updated hourly</p>
+  <p class="desc">WeatherArb monitors real-time weather anomalies across 10 cities in Netherlands, calculating Z-Score deviations from the NASA POWER 25-year climate baseline. HDD/CDD energy data available for each node.</p>
   <div class="grid">
 <a href="/nl/amsterdam/" class="nc"><span class="nn">Amsterdam</span><span class="ns">Node Active</span></a>
-<a href="/nl/rotterdam/" class="nc"><span class="nn">Rotterdam</span><span class="ns">Node Active</span></a>
+<a href="/nl/arnhem/" class="nc"><span class="nn">Arnhem</span><span class="ns">Node Active</span></a>
+<a href="/nl/breda/" class="nc"><span class="nn">Breda</span><span class="ns">Node Active</span></a>
 <a href="/nl/den-haag/" class="nc"><span class="nn">Den Haag</span><span class="ns">Node Active</span></a>
-<a href="/nl/utrecht/" class="nc"><span class="nn">Utrecht</span><span class="ns">Node Active</span></a>
 <a href="/nl/eindhoven/" class="nc"><span class="nn">Eindhoven</span><span class="ns">Node Active</span></a>
 <a href="/nl/groningen/" class="nc"><span class="nn">Groningen</span><span class="ns">Node Active</span></a>
+<a href="/nl/nijmegen/" class="nc"><span class="nn">Nijmegen</span><span class="ns">Node Active</span></a>
+<a href="/nl/rotterdam/" class="nc"><span class="nn">Rotterdam</span><span class="ns">Node Active</span></a>
+<a href="/nl/tilburg/" class="nc"><span class="nn">Tilburg</span><span class="ns">Node Active</span></a>
+<a href="/nl/utrecht/" class="nc"><span class="nn">Utrecht</span><span class="ns">Node Active</span></a>
   </div>
 </div>
-<footer class="ftr"><a href="/">WeatherArb</a> · <a href="/about.html">Methodology</a> · <a href="/api.html">API</a></footer>
+<footer class="ftr"><a href="/">WeatherArb</a> · <a href="/about.html">Methodology</a> · <a href="/pricing/">API Pro</a></footer>
 </body>
 </html>

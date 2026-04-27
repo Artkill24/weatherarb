@@ -1,1 +1,95 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Japan Weather Intelligence | WeatherArb</title><meta name="description" content="Real-time weather anomalies for 6 nodes in Japan. Z-Score NASA POWER. WeatherArb."><link rel="canonical" href="https://weatherarb.com/jp/"><style>*{box-sizing:border-box;margin:0;padding:0}body{background:#040608;color:#c8d6e5;font-family:-apple-system,sans-serif}.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95)}.logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}.logo span{color:#3b82f6}.nav a{font-size:11px;text-transform:uppercase;color:#4a5568;text-decoration:none;margin-left:16px}.wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}.bc{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-bottom:16px}.bc a{color:#4a5568;text-decoration:none}h1{font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px;color:#fff}.sub{font-size:13px;color:#4a5568;margin-bottom:32px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}.nc{display:block;padding:14px 16px;background:#0a0d12;border:1px solid #141920;border-radius:10px;text-decoration:none;transition:.15s}.nc:hover{border-color:#3b82f6}.nn{display:block;font-size:13px;font-weight:600;color:#c8d6e5;margin-bottom:3px}.ns{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#4a5568}.ftr{border-top:1px solid #141920;padding:20px;text-align:center;font-size:11px;color:#4a5568}.ftr a{color:#4a5568;text-decoration:none}</style></head><body><header class="hdr"><a href="/" class="logo">Weather<span>Arb</span></a><nav class="nav"><a href="/data/">Data</a><a href="/news/">News</a><a href="/pricing/">API</a></nav></header><div class="wrap"><div class="bc"><a href="/">WeatherArb</a> / Japan</div><h1>Japan</h1><p class="sub">6 nodes &middot; Z-Score NASA POWER 25y &middot; HDD/CDD energy data</p><div class="grid"><a href="/jp/fukuoka/" class="nc"><span class="nn">Fukuoka</span><span class="ns">Kyushu</span></a><a href="/jp/nagoya/" class="nc"><span class="nn">Nagoya</span><span class="ns">Chubu</span></a><a href="/jp/osaka/" class="nc"><span class="nn">Osaka</span><span class="ns">Kansai</span></a><a href="/jp/sapporo/" class="nc"><span class="nn">Sapporo</span><span class="ns">Hokkaido</span></a><a href="/jp/tokyo/" class="nc"><span class="nn">Tokyo</span><span class="ns">Kanto</span></a><a href="/jp/yokohama/" class="nc"><span class="nn">Yokohama</span><span class="ns">Kanto</span></a></div></div><footer class="ftr"><a href="/">WeatherArb</a> &middot; <a href="/pricing/">API Pro</a></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Japan Weather Intelligence | 51 Monitored Cities | WeatherArb</title>
+  <meta name="description" content="Real-time weather anomaly monitoring for Japan. 51 active nodes with NASA POWER Z-Score 25-year baseline. HDD/CDD energy data. WeatherArb.">
+  <link rel="canonical" href="https://weatherarb.com/jp/">
+  <style>
+    :root{--bg:#040608;--surface:#0a0d12;--border:#141920;--text:#c8d6e5;--muted:#4a5568;--blue:#3b82f6}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,sans-serif;min-height:100vh}
+    .hdr{border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+    .logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none}.logo span{color:var(--blue)}
+    .nav{display:flex;gap:20px}.nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-decoration:none}.nav a:hover{color:var(--text)}
+    .wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}
+    .bc{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:16px}.bc a{color:var(--muted);text-decoration:none}.bc a:hover{color:var(--blue)}
+    h1{font-size:clamp(32px,4vw,56px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+    .sub{font-size:13px;color:var(--muted);margin-bottom:12px}.sub span{color:var(--blue)}
+    .desc{font-size:13px;color:var(--muted);line-height:1.7;max-width:700px;margin-bottom:40px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+    .nc{display:block;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;text-decoration:none;transition:border-color .2s,background .2s}.nc:hover{border-color:var(--blue);background:#0d1520}
+    .nn{display:block;font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px}
+    .ns{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+    .ftr{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:11px;color:var(--muted)}
+    .ftr a{color:var(--muted);text-decoration:none}.ftr a:hover{color:var(--blue)}
+  </style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">Weather<span>Arb</span></a>
+  <nav class="nav"><a href="/leaderboard">Leaderboard</a><a href="/news/">News</a><a href="/map">Map</a><a href="/pricing">API</a></nav>
+</header>
+<div class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Japan</div>
+  <h1>Japan <span style="color:var(--blue)">Network</span></h1>
+  <p class="sub"><span>51</span> active nodes · NASA POWER 25y baseline · Updated hourly</p>
+  <p class="desc">WeatherArb monitors real-time weather anomalies across 51 cities in Japan, calculating Z-Score deviations from the NASA POWER 25-year climate baseline. HDD/CDD energy data available for each node.</p>
+  <div class="grid">
+<a href="/jp/akashi/" class="nc"><span class="nn">Akashi</span><span class="ns">Node Active</span></a>
+<a href="/jp/atsugi/" class="nc"><span class="nn">Atsugi</span><span class="ns">Node Active</span></a>
+<a href="/jp/fukuoka/" class="nc"><span class="nn">Fukuoka</span><span class="ns">Node Active</span></a>
+<a href="/jp/gero/" class="nc"><span class="nn">Gero</span><span class="ns">Node Active</span></a>
+<a href="/jp/honmachi/" class="nc"><span class="nn">Honmachi</span><span class="ns">Node Active</span></a>
+<a href="/jp/nagoya/" class="nc"><span class="nn">Nagoya</span><span class="ns">Node Active</span></a>
+<a href="/jp/osaka/" class="nc"><span class="nn">Osaka</span><span class="ns">Node Active</span></a>
+<a href="/jp/sapporo/" class="nc"><span class="nn">Sapporo</span><span class="ns">Node Active</span></a>
+<a href="/jp/shingu/" class="nc"><span class="nn">Shingū</span><span class="ns">Node Active</span></a>
+<a href="/jp/tokyo/" class="nc"><span class="nn">Tokyo</span><span class="ns">Node Active</span></a>
+<a href="/jp/tosayamadacho-nakano/" class="nc"><span class="nn">Tosayamadachō-nakano</span><span class="ns">Node Active</span></a>
+<a href="/jp/wadayama/" class="nc"><span class="nn">Wadayama</span><span class="ns">Node Active</span></a>
+<a href="/jp/wajima/" class="nc"><span class="nn">Wajima</span><span class="ns">Node Active</span></a>
+<a href="/jp/wakimachi/" class="nc"><span class="nn">Wakimachi</span><span class="ns">Node Active</span></a>
+<a href="/jp/yabase/" class="nc"><span class="nn">Yabase</span><span class="ns">Node Active</span></a>
+<a href="/jp/yabu/" class="nc"><span class="nn">Yabu</span><span class="ns">Node Active</span></a>
+<a href="/jp/yae/" class="nc"><span class="nn">Yae</span><span class="ns">Node Active</span></a>
+<a href="/jp/yaita/" class="nc"><span class="nn">Yaita</span><span class="ns">Node Active</span></a>
+<a href="/jp/yaizu/" class="nc"><span class="nn">Yaizu</span><span class="ns">Node Active</span></a>
+<a href="/jp/yamaga/" class="nc"><span class="nn">Yamaga</span><span class="ns">Node Active</span></a>
+<a href="/jp/yamaguchi/" class="nc"><span class="nn">Yamaguchi</span><span class="ns">Node Active</span></a>
+<a href="/jp/yamashita/" class="nc"><span class="nn">Yamashita</span><span class="ns">Node Active</span></a>
+<a href="/jp/yamato-takada/" class="nc"><span class="nn">Yamato-Takada</span><span class="ns">Node Active</span></a>
+<a href="/jp/yamazakicho-nakabirose/" class="nc"><span class="nn">Yamazakichō-nakabirose</span><span class="ns">Node Active</span></a>
+<a href="/jp/yanagawa/" class="nc"><span class="nn">Yanagawa</span><span class="ns">Node Active</span></a>
+<a href="/jp/yanai/" class="nc"><span class="nn">Yanai</span><span class="ns">Node Active</span></a>
+<a href="/jp/yao/" class="nc"><span class="nn">Yao</span><span class="ns">Node Active</span></a>
+<a href="/jp/yashio/" class="nc"><span class="nn">Yashio</span><span class="ns">Node Active</span></a>
+<a href="/jp/yashiro/" class="nc"><span class="nn">Yashiro</span><span class="ns">Node Active</span></a>
+<a href="/jp/yasugicho/" class="nc"><span class="nn">Yasugichō</span><span class="ns">Node Active</span></a>
+<a href="/jp/yatsuomachi-higashikumisaka/" class="nc"><span class="nn">Yatsuomachi-higashikumisaka</span><span class="ns">Node Active</span></a>
+<a href="/jp/yawata/" class="nc"><span class="nn">Yawata</span><span class="ns">Node Active</span></a>
+<a href="/jp/yokkaichi/" class="nc"><span class="nn">Yokkaichi</span><span class="ns">Node Active</span></a>
+<a href="/jp/yokohama/" class="nc"><span class="nn">Yokohama</span><span class="ns">Node Active</span></a>
+<a href="/jp/yokosuka/" class="nc"><span class="nn">Yokosuka</span><span class="ns">Node Active</span></a>
+<a href="/jp/yokota/" class="nc"><span class="nn">Yokota</span><span class="ns">Node Active</span></a>
+<a href="/jp/yonabaru/" class="nc"><span class="nn">Yonabaru</span><span class="ns">Node Active</span></a>
+<a href="/jp/yonago/" class="nc"><span class="nn">Yonago</span><span class="ns">Node Active</span></a>
+<a href="/jp/yono/" class="nc"><span class="nn">Yono</span><span class="ns">Node Active</span></a>
+<a href="/jp/yorii/" class="nc"><span class="nn">Yorii</span><span class="ns">Node Active</span></a>
+<a href="/jp/yoshida-kasugacho/" class="nc"><span class="nn">Yoshida-kasugachō</span><span class="ns">Node Active</span></a>
+<a href="/jp/yoshii/" class="nc"><span class="nn">Yoshii</span><span class="ns">Node Active</span></a>
+<a href="/jp/yoshikawa/" class="nc"><span class="nn">Yoshikawa</span><span class="ns">Node Active</span></a>
+<a href="/jp/yotsutsuji/" class="nc"><span class="nn">Yotsutsuji</span><span class="ns">Node Active</span></a>
+<a href="/jp/youkaichi/" class="nc"><span class="nn">Youkaichi</span><span class="ns">Node Active</span></a>
+<a href="/jp/yugawara/" class="nc"><span class="nn">Yugawara</span><span class="ns">Node Active</span></a>
+<a href="/jp/yukuhashi/" class="nc"><span class="nn">Yukuhashi</span><span class="ns">Node Active</span></a>
+<a href="/jp/yuki/" class="nc"><span class="nn">Yūki</span><span class="ns">Node Active</span></a>
+<a href="/jp/zama/" class="nc"><span class="nn">Zama</span><span class="ns">Node Active</span></a>
+<a href="/jp/zentsujicho/" class="nc"><span class="nn">Zentsujichó</span><span class="ns">Node Active</span></a>
+<a href="/jp/zushi/" class="nc"><span class="nn">Zushi</span><span class="ns">Node Active</span></a>
+  </div>
+</div>
+<footer class="ftr"><a href="/">WeatherArb</a> · <a href="/about.html">Methodology</a> · <a href="/pricing/">API Pro</a></footer>
+</body>
+</html>

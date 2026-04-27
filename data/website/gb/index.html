@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>United Kingdom — WeatherArb Intelligence Network</title>
-  <meta name="description" content="WeatherArb weather anomaly monitoring network for United Kingdom. 10 active nodes.">
+  <title>United Kingdom Weather Intelligence | 20 Monitored Cities | WeatherArb</title>
+  <meta name="description" content="Real-time weather anomaly monitoring for United Kingdom. 20 active nodes with NASA POWER Z-Score 25-year baseline. HDD/CDD energy data. WeatherArb.">
+  <link rel="canonical" href="https://weatherarb.com/gb/">
   <style>
     :root{--bg:#040608;--surface:#0a0d12;--border:#141920;--text:#c8d6e5;--muted:#4a5568;--blue:#3b82f6}
     *{box-sizing:border-box;margin:0;padding:0}
     body{background:var(--bg);color:var(--text);font-family:-apple-system,sans-serif;min-height:100vh}
-    .hdr{border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+    .hdr{border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
     .logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none}.logo span{color:var(--blue)}
     .nav{display:flex;gap:20px}.nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-decoration:none}.nav a:hover{color:var(--text)}
     .wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}
     .bc{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:16px}.bc a{color:var(--muted);text-decoration:none}.bc a:hover{color:var(--blue)}
     h1{font-size:clamp(32px,4vw,56px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
-    .sub{font-size:13px;color:var(--muted);margin-bottom:48px}.sub span{color:var(--blue)}
+    .sub{font-size:13px;color:var(--muted);margin-bottom:12px}.sub span{color:var(--blue)}
+    .desc{font-size:13px;color:var(--muted);line-height:1.7;max-width:700px;margin-bottom:40px}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
     .nc{display:block;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;text-decoration:none;transition:border-color .2s,background .2s}.nc:hover{border-color:var(--blue);background:#0d1520}
     .nn{display:block;font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px}
@@ -27,25 +29,36 @@
 <body>
 <header class="hdr">
   <a href="/" class="logo">Weather<span>Arb</span></a>
-  <nav class="nav"><a href="/data/">Data</a><a href="/news/">News</a><a href="/api.html">API</a></nav>
+  <nav class="nav"><a href="/leaderboard">Leaderboard</a><a href="/news/">News</a><a href="/map">Map</a><a href="/pricing">API</a></nav>
 </header>
 <div class="wrap">
   <div class="bc"><a href="/">WeatherArb</a> / United Kingdom</div>
   <h1>United Kingdom <span style="color:var(--blue)">Network</span></h1>
-  <p class="sub"><span>10</span> nodi attivi · Baseline NASA POWER · Aggiornamento ogni ora</p>
+  <p class="sub"><span>20</span> active nodes · NASA POWER 25y baseline · Updated hourly</p>
+  <p class="desc">WeatherArb monitors real-time weather anomalies across 20 cities in United Kingdom, calculating Z-Score deviations from the NASA POWER 25-year climate baseline. HDD/CDD energy data available for each node.</p>
   <div class="grid">
-<a href="/gb/london/" class="nc"><span class="nn">London</span><span class="ns">Node Active</span></a>
-<a href="/gb/manchester/" class="nc"><span class="nn">Manchester</span><span class="ns">Node Active</span></a>
+<a href="/gb/aberdeen/" class="nc"><span class="nn">Aberdeen</span><span class="ns">Node Active</span></a>
 <a href="/gb/birmingham/" class="nc"><span class="nn">Birmingham</span><span class="ns">Node Active</span></a>
+<a href="/gb/bradford/" class="nc"><span class="nn">Bradford</span><span class="ns">Node Active</span></a>
+<a href="/gb/bristol/" class="nc"><span class="nn">Bristol</span><span class="ns">Node Active</span></a>
+<a href="/gb/cardiff/" class="nc"><span class="nn">Cardiff</span><span class="ns">Node Active</span></a>
+<a href="/gb/coventry/" class="nc"><span class="nn">Coventry</span><span class="ns">Node Active</span></a>
 <a href="/gb/edinburgh/" class="nc"><span class="nn">Edinburgh</span><span class="ns">Node Active</span></a>
 <a href="/gb/glasgow/" class="nc"><span class="nn">Glasgow</span><span class="ns">Node Active</span></a>
 <a href="/gb/leeds/" class="nc"><span class="nn">Leeds</span><span class="ns">Node Active</span></a>
-<a href="/gb/bristol/" class="nc"><span class="nn">Bristol</span><span class="ns">Node Active</span></a>
-<a href="/gb/cardiff/" class="nc"><span class="nn">Cardiff</span><span class="ns">Node Active</span></a>
+<a href="/gb/leicester/" class="nc"><span class="nn">Leicester</span><span class="ns">Node Active</span></a>
 <a href="/gb/liverpool/" class="nc"><span class="nn">Liverpool</span><span class="ns">Node Active</span></a>
+<a href="/gb/london/" class="nc"><span class="nn">London</span><span class="ns">Node Active</span></a>
+<a href="/gb/manchester/" class="nc"><span class="nn">Manchester</span><span class="ns">Node Active</span></a>
+<a href="/gb/newcastle-upon-tyne/" class="nc"><span class="nn">Newcastle upon Tyne</span><span class="ns">Node Active</span></a>
+<a href="/gb/nottingham/" class="nc"><span class="nn">Nottingham</span><span class="ns">Node Active</span></a>
+<a href="/gb/plymouth/" class="nc"><span class="nn">Plymouth</span><span class="ns">Node Active</span></a>
+<a href="/gb/portsmouth/" class="nc"><span class="nn">Portsmouth</span><span class="ns">Node Active</span></a>
 <a href="/gb/sheffield/" class="nc"><span class="nn">Sheffield</span><span class="ns">Node Active</span></a>
+<a href="/gb/southampton/" class="nc"><span class="nn">Southampton</span><span class="ns">Node Active</span></a>
+<a href="/gb/swansea/" class="nc"><span class="nn">Swansea</span><span class="ns">Node Active</span></a>
   </div>
 </div>
-<footer class="ftr"><a href="/">WeatherArb</a> · <a href="/about.html">Methodology</a> · <a href="/api.html">API</a></footer>
+<footer class="ftr"><a href="/">WeatherArb</a> · <a href="/about.html">Methodology</a> · <a href="/pricing/">API Pro</a></footer>
 </body>
 </html>

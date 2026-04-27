@@ -1,1 +1,111 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>China Weather Intelligence | WeatherArb</title><meta name="description" content="Real-time weather anomalies for 7 nodes in China. Z-Score NASA POWER. WeatherArb."><link rel="canonical" href="https://weatherarb.com/cn/"><style>*{box-sizing:border-box;margin:0;padding:0}body{background:#040608;color:#c8d6e5;font-family:-apple-system,sans-serif}.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95)}.logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}.logo span{color:#3b82f6}.nav a{font-size:11px;text-transform:uppercase;color:#4a5568;text-decoration:none;margin-left:16px}.wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}.bc{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-bottom:16px}.bc a{color:#4a5568;text-decoration:none}h1{font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px;color:#fff}.sub{font-size:13px;color:#4a5568;margin-bottom:32px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}.nc{display:block;padding:14px 16px;background:#0a0d12;border:1px solid #141920;border-radius:10px;text-decoration:none;transition:.15s}.nc:hover{border-color:#3b82f6}.nn{display:block;font-size:13px;font-weight:600;color:#c8d6e5;margin-bottom:3px}.ns{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#4a5568}.ftr{border-top:1px solid #141920;padding:20px;text-align:center;font-size:11px;color:#4a5568}.ftr a{color:#4a5568;text-decoration:none}</style></head><body><header class="hdr"><a href="/" class="logo">Weather<span>Arb</span></a><nav class="nav"><a href="/data/">Data</a><a href="/news/">News</a><a href="/pricing/">API</a></nav></header><div class="wrap"><div class="bc"><a href="/">WeatherArb</a> / China</div><h1>China</h1><p class="sub">7 nodes &middot; Z-Score NASA POWER 25y &middot; HDD/CDD energy data</p><div class="grid"><a href="/cn/beijing/" class="nc"><span class="nn">Beijing</span><span class="ns">Beijing</span></a><a href="/cn/chengdu/" class="nc"><span class="nn">Chengdu</span><span class="ns">Sichuan</span></a><a href="/cn/chongqing/" class="nc"><span class="nn">Chongqing</span><span class="ns">Chongqing</span></a><a href="/cn/guangzhou/" class="nc"><span class="nn">Guangzhou</span><span class="ns">Guangdong</span></a><a href="/cn/hong-kong/" class="nc"><span class="nn">Hong Kong</span><span class="ns">Hong Kong</span></a><a href="/cn/shanghai/" class="nc"><span class="nn">Shanghai</span><span class="ns">Shanghai</span></a><a href="/cn/shenzhen/" class="nc"><span class="nn">Shenzhen</span><span class="ns">Guangdong</span></a></div></div><footer class="ftr"><a href="/">WeatherArb</a> &middot; <a href="/pricing/">API Pro</a></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>China Weather Intelligence | 67 Monitored Cities | WeatherArb</title>
+  <meta name="description" content="Real-time weather anomaly monitoring for China. 67 active nodes with NASA POWER Z-Score 25-year baseline. HDD/CDD energy data. WeatherArb.">
+  <link rel="canonical" href="https://weatherarb.com/cn/">
+  <style>
+    :root{--bg:#040608;--surface:#0a0d12;--border:#141920;--text:#c8d6e5;--muted:#4a5568;--blue:#3b82f6}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,sans-serif;min-height:100vh}
+    .hdr{border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+    .logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none}.logo span{color:var(--blue)}
+    .nav{display:flex;gap:20px}.nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-decoration:none}.nav a:hover{color:var(--text)}
+    .wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}
+    .bc{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:16px}.bc a{color:var(--muted);text-decoration:none}.bc a:hover{color:var(--blue)}
+    h1{font-size:clamp(32px,4vw,56px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+    .sub{font-size:13px;color:var(--muted);margin-bottom:12px}.sub span{color:var(--blue)}
+    .desc{font-size:13px;color:var(--muted);line-height:1.7;max-width:700px;margin-bottom:40px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+    .nc{display:block;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;text-decoration:none;transition:border-color .2s,background .2s}.nc:hover{border-color:var(--blue);background:#0d1520}
+    .nn{display:block;font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px}
+    .ns{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+    .ftr{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:11px;color:var(--muted)}
+    .ftr a{color:var(--muted);text-decoration:none}.ftr a:hover{color:var(--blue)}
+  </style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">Weather<span>Arb</span></a>
+  <nav class="nav"><a href="/leaderboard">Leaderboard</a><a href="/news/">News</a><a href="/map">Map</a><a href="/pricing">API</a></nav>
+</header>
+<div class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / China</div>
+  <h1>China <span style="color:var(--blue)">Network</span></h1>
+  <p class="sub"><span>67</span> active nodes · NASA POWER 25y baseline · Updated hourly</p>
+  <p class="desc">WeatherArb monitors real-time weather anomalies across 67 cities in China, calculating Z-Score deviations from the NASA POWER 25-year climate baseline. HDD/CDD energy data available for each node.</p>
+  <div class="grid">
+<a href="/cn/artux/" class="nc"><span class="nn">Artux</span><span class="ns">Node Active</span></a>
+<a href="/cn/baoshan/" class="nc"><span class="nn">Baoshan</span><span class="ns">Node Active</span></a>
+<a href="/cn/bayi/" class="nc"><span class="nn">Bayi</span><span class="ns">Node Active</span></a>
+<a href="/cn/beijing/" class="nc"><span class="nn">Beijing</span><span class="ns">Node Active</span></a>
+<a href="/cn/bonan/" class="nc"><span class="nn">Bonan</span><span class="ns">Node Active</span></a>
+<a href="/cn/chengdu/" class="nc"><span class="nn">Chengdu</span><span class="ns">Node Active</span></a>
+<a href="/cn/chongqing/" class="nc"><span class="nn">Chongqing</span><span class="ns">Node Active</span></a>
+<a href="/cn/dagze/" class="nc"><span class="nn">Dagzê</span><span class="ns">Node Active</span></a>
+<a href="/cn/damxung/" class="nc"><span class="nn">Damxung</span><span class="ns">Node Active</span></a>
+<a href="/cn/deqen/" class="nc"><span class="nn">Dêqên</span><span class="ns">Node Active</span></a>
+<a href="/cn/elixku/" class="nc"><span class="nn">Elixku</span><span class="ns">Node Active</span></a>
+<a href="/cn/gar/" class="nc"><span class="nn">Gar</span><span class="ns">Node Active</span></a>
+<a href="/cn/guangzhou/" class="nc"><span class="nn">Guangzhou</span><span class="ns">Node Active</span></a>
+<a href="/cn/gudong/" class="nc"><span class="nn">Gudong</span><span class="ns">Node Active</span></a>
+<a href="/cn/gujangbagh/" class="nc"><span class="nn">Gujangbagh</span><span class="ns">Node Active</span></a>
+<a href="/cn/hong-kong/" class="nc"><span class="nn">Hong Kong</span><span class="ns">Node Active</span></a>
+<a href="/cn/houqiao/" class="nc"><span class="nn">Houqiao</span><span class="ns">Node Active</span></a>
+<a href="/cn/huatugou/" class="nc"><span class="nn">Huatugou</span><span class="ns">Node Active</span></a>
+<a href="/cn/jiayuguan/" class="nc"><span class="nn">Jiayuguan</span><span class="ns">Node Active</span></a>
+<a href="/cn/jietou/" class="nc"><span class="nn">Jietou</span><span class="ns">Node Active</span></a>
+<a href="/cn/jinding/" class="nc"><span class="nn">Jinding</span><span class="ns">Node Active</span></a>
+<a href="/cn/jinhua/" class="nc"><span class="nn">Jinhua</span><span class="ns">Node Active</span></a>
+<a href="/cn/jiuquan/" class="nc"><span class="nn">Jiuquan</span><span class="ns">Node Active</span></a>
+<a href="/cn/judian/" class="nc"><span class="nn">Judian</span><span class="ns">Node Active</span></a>
+<a href="/cn/kaqun/" class="nc"><span class="nn">Kaqun</span><span class="ns">Node Active</span></a>
+<a href="/cn/kashgar/" class="nc"><span class="nn">Kashgar</span><span class="ns">Node Active</span></a>
+<a href="/cn/kokyar/" class="nc"><span class="nn">Kokyar</span><span class="ns">Node Active</span></a>
+<a href="/cn/langgar/" class="nc"><span class="nn">Langgar</span><span class="ns">Node Active</span></a>
+<a href="/cn/langru/" class="nc"><span class="nn">Langru</span><span class="ns">Node Active</span></a>
+<a href="/cn/laojunmiao/" class="nc"><span class="nn">Laojunmiao</span><span class="ns">Node Active</span></a>
+<a href="/cn/layka/" class="nc"><span class="nn">Layka</span><span class="ns">Node Active</span></a>
+<a href="/cn/lhasa/" class="nc"><span class="nn">Lhasa</span><span class="ns">Node Active</span></a>
+<a href="/cn/liuku/" class="nc"><span class="nn">Liuku</span><span class="ns">Node Active</span></a>
+<a href="/cn/lop/" class="nc"><span class="nn">Lop</span><span class="ns">Node Active</span></a>
+<a href="/cn/luobuqiongzi/" class="nc"><span class="nn">Luobuqiongzi</span><span class="ns">Node Active</span></a>
+<a href="/cn/maizhokunggar/" class="nc"><span class="nn">Maizhokunggar</span><span class="ns">Node Active</span></a>
+<a href="/cn/mangnai-zhen/" class="nc"><span class="nn">Mangnai Zhen</span><span class="ns">Node Active</span></a>
+<a href="/cn/mangshi/" class="nc"><span class="nn">Mangshi</span><span class="ns">Node Active</span></a>
+<a href="/cn/menglang/" class="nc"><span class="nn">Menglang</span><span class="ns">Node Active</span></a>
+<a href="/cn/mengmao/" class="nc"><span class="nn">Mengmao</span><span class="ns">Node Active</span></a>
+<a href="/cn/nagqu/" class="nc"><span class="nn">Nagqu</span><span class="ns">Node Active</span></a>
+<a href="/cn/nyemo/" class="nc"><span class="nn">Nyêmo</span><span class="ns">Node Active</span></a>
+<a href="/cn/oytograk/" class="nc"><span class="nn">Oytograk</span><span class="ns">Node Active</span></a>
+<a href="/cn/qamdo/" class="nc"><span class="nn">Qamdo</span><span class="ns">Node Active</span></a>
+<a href="/cn/qaraqash/" class="nc"><span class="nn">Qaraqash</span><span class="ns">Node Active</span></a>
+<a href="/cn/qarek/" class="nc"><span class="nn">Qarek</span><span class="ns">Node Active</span></a>
+<a href="/cn/qiemo/" class="nc"><span class="nn">Qiemo</span><span class="ns">Node Active</span></a>
+<a href="/cn/qushi/" class="nc"><span class="nn">Qushi</span><span class="ns">Node Active</span></a>
+<a href="/cn/quxu/" class="nc"><span class="nn">Quxu</span><span class="ns">Node Active</span></a>
+<a href="/cn/rikaze/" class="nc"><span class="nn">Rikaze</span><span class="ns">Node Active</span></a>
+<a href="/cn/ruidian/" class="nc"><span class="nn">Ruidian</span><span class="ns">Node Active</span></a>
+<a href="/cn/saybag/" class="nc"><span class="nn">Saybag</span><span class="ns">Node Active</span></a>
+<a href="/cn/shache/" class="nc"><span class="nn">Shache</span><span class="ns">Node Active</span></a>
+<a href="/cn/shanghai/" class="nc"><span class="nn">Shanghai</span><span class="ns">Node Active</span></a>
+<a href="/cn/shangpa/" class="nc"><span class="nn">Shangpa</span><span class="ns">Node Active</span></a>
+<a href="/cn/shangyun/" class="nc"><span class="nn">Shangyun</span><span class="ns">Node Active</span></a>
+<a href="/cn/shenzhen/" class="nc"><span class="nn">Shenzhen</span><span class="ns">Node Active</span></a>
+<a href="/cn/shigu/" class="nc"><span class="nn">Shigu</span><span class="ns">Node Active</span></a>
+<a href="/cn/tengyue/" class="nc"><span class="nn">Tengyue</span><span class="ns">Node Active</span></a>
+<a href="/cn/yengisar/" class="nc"><span class="nn">Yengisar</span><span class="ns">Node Active</span></a>
+<a href="/cn/yingjiang/" class="nc"><span class="nn">Yingjiang</span><span class="ns">Node Active</span></a>
+<a href="/cn/yingpan/" class="nc"><span class="nn">Yingpan</span><span class="ns">Node Active</span></a>
+<a href="/cn/yushu/" class="nc"><span class="nn">Yushu</span><span class="ns">Node Active</span></a>
+<a href="/cn/zepu/" class="nc"><span class="nn">Zepu</span><span class="ns">Node Active</span></a>
+<a href="/cn/zhangfeng/" class="nc"><span class="nn">Zhangfeng</span><span class="ns">Node Active</span></a>
+<a href="/cn/zhefang/" class="nc"><span class="nn">Zhefang</span><span class="ns">Node Active</span></a>
+<a href="/cn/zibihu/" class="nc"><span class="nn">Zibihu</span><span class="ns">Node Active</span></a>
+  </div>
+</div>
+<footer class="ftr"><a href="/">WeatherArb</a> · <a href="/about.html">Methodology</a> · <a href="/pricing/">API Pro</a></footer>
+</body>
+</html>
