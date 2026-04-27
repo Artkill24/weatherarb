@@ -324,11 +324,19 @@ def clear_cache():
 def get_nearby(lat: float, lon: float, key: Optional[str] = None):
     if key:
         _check_and_increment_key(key)
-    top = _top_cache.get("top", [])
-    if not top:
-        return {"error": "No data cached yet"}
     import math, unicodedata, re
-    nearest = min(top, key=lambda n: math.sqrt((n["lat"]-lat)**2 + (n["lon"]-lon)**2))
+    # Use all PROVINCES for precise geolocation, not just cached top
+    all_nodes = PROVINCES if PROVINCES else _top_cache.get("top", [])
+    if not all_nodes:
+        return {"error": "No data cached yet"}
+    nearest_p = min(all_nodes, key=lambda n: math.sqrt((n["lat"]-lat)**2 + (n["lon"]-lon)**2))
+    # Get weather data from cache
+    top = _top_cache.get("top", [])
+    nearest = next((n for n in top if n["location"]==nearest_p["nome"]), None)
+    if not nearest:
+        nearest = {"location": nearest_p["nome"], "country_code": _cc(nearest_p.get("country","Italy")),
+                   "lat": nearest_p["lat"], "lon": nearest_p["lon"],
+                   "z_score": 0, "anomaly_level": "NORMAL", "event_type": "normal", "score": 0}
     dist = round(math.sqrt((nearest["lat"]-lat)**2 + (nearest["lon"]-lon)**2) * 111, 1)
     slug = nearest["location"].lower().replace(" ", "-").replace("'", "")
     slug = unicodedata.normalize("NFKD", slug).encode("ascii","ignore").decode("ascii")
@@ -412,11 +420,19 @@ def get_top(limit: int = 10, key: Optional[str] = None):
 def get_nearby(lat: float, lon: float, key: Optional[str] = None):
     if key:
         _check_and_increment_key(key)
-    top = _top_cache.get("top", [])
-    if not top:
-        return {"error": "No data cached yet"}
     import math, unicodedata, re
-    nearest = min(top, key=lambda n: math.sqrt((n["lat"]-lat)**2 + (n["lon"]-lon)**2))
+    # Use all PROVINCES for precise geolocation, not just cached top
+    all_nodes = PROVINCES if PROVINCES else _top_cache.get("top", [])
+    if not all_nodes:
+        return {"error": "No data cached yet"}
+    nearest_p = min(all_nodes, key=lambda n: math.sqrt((n["lat"]-lat)**2 + (n["lon"]-lon)**2))
+    # Get weather data from cache
+    top = _top_cache.get("top", [])
+    nearest = next((n for n in top if n["location"]==nearest_p["nome"]), None)
+    if not nearest:
+        nearest = {"location": nearest_p["nome"], "country_code": _cc(nearest_p.get("country","Italy")),
+                   "lat": nearest_p["lat"], "lon": nearest_p["lon"],
+                   "z_score": 0, "anomaly_level": "NORMAL", "event_type": "normal", "score": 0}
     dist = round(math.sqrt((nearest["lat"]-lat)**2 + (nearest["lon"]-lon)**2) * 111, 1)
     slug = nearest["location"].lower().replace(" ", "-").replace("'", "")
     slug = unicodedata.normalize("NFKD", slug).encode("ascii","ignore").decode("ascii")
