@@ -58,24 +58,50 @@ def load_provinces():
 PROVINCES = load_provinces()
 logger.info(f"Loaded {len(PROVINCES)} provinces")
 
-# ─── OWM FETCHER ──────────────────────────────────────────────────────────────
+# ─── OPEN-METEO BATCH FETCHER (free, no key, 1000 cities/call) ───────────────
+_weather_cache = {}  # lat,lon -> weather data
+
+def fetch_all_weather_batch(provinces):
+    """Fetch weather for all provinces using Open-Meteo batch API"""
+    global _weather_cache
+    _weather_cache = {}
+    batch_size = 500  # Open-Meteo supports up to 1000
+    
+    for i in range(0, len(provinces), batch_size):
+        batch = provinces[i:i+batch_size]
+        lats = ",".join(str(p["lat"]) for p in batch)
+        lons = ",".join(str(p["lon"]) for p in batch)
+        try:
+            url = (f"https://api.open-meteo.com/v1/forecast"
+                   f"?latitude={lats}&longitude={lons}"
+                   f"&current=temperature_2m,relative_humidity_2m,wind_speed_10m"
+                   f"&wind_speed_unit=ms&timezone=auto&forecast_days=1")
+            r = req_lib.get(url, timeout=30)
+            data = r.json()
+            # Handle both single and multiple responses
+            if isinstance(data, dict): data = [data]
+            for j, d in enumerate(data):
+                p = batch[j]
+                key = (round(p["lat"],4), round(p["lon"],4))
+                cur = d.get("current", {})
+                temp = cur.get("temperature_2m", 15.0)
+                hum = cur.get("relative_humidity_2m", 60)
+                wind_ms = cur.get("wind_speed_10m", 0)
+                _weather_cache[key] = {
+                    "temperature_c": temp,
+                    "humidity_pct": hum,
+                    "wind_ms": wind_ms,
+                    "wind_kmh": round(wind_ms * 3.6, 1),
+                    "description": "",
+                }
+            logger.info(f"Open-Meteo batch {i//batch_size+1}: fetched {len(data)} cities")
+        except Exception as e:
+            logger.error(f"Open-Meteo batch error: {e}")
+
 def fetch_owm(lat, lon):
-    if not OWM_API_KEY:
-        return None
-    try:
-        url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OWM_API_KEY}&units=metric"
-        r = req_lib.get(url, timeout=10)
-        d = r.json()
-        return {
-            "temperature_c": d["main"]["temp"],
-            "humidity_pct": d["main"]["humidity"],
-            "wind_ms": d["wind"]["speed"],
-            "wind_kmh": round(d["wind"]["speed"] * 3.6, 1),
-            "description": d["weather"][0]["description"] if d.get("weather") else "",
-        }
-    except Exception as e:
-        logger.error(f"OWM error: {e}")
-        return None
+    """Lookup from pre-fetched batch cache"""
+    key = (round(lat,4), round(lon,4))
+    return _weather_cache.get(key)
 
 # ─── Z-SCORE & HDD/CDD ────────────────────────────────────────────────────────
 HISTORICAL_AVG = {
@@ -157,6 +183,11 @@ def refresh_all():
     month = now.month
     count = 0
     top_list = []
+
+    # Fetch all weather data in bulk (2-3 API calls instead of 1514)
+    logger.info("Fetching weather batch from Open-Meteo...")
+    fetch_all_weather_batch(PROVINCES)
+    logger.info(f"Weather cache loaded: {len(_weather_cache)} cities")
 
     for p in PROVINCES:
         slug = p["nome"].lower().replace(" ", "-").replace("'", "")
