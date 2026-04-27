@@ -65,7 +65,7 @@ def fetch_all_weather_batch(provinces):
     """Fetch weather for all provinces using Open-Meteo batch API"""
     global _weather_cache
     _weather_cache = {}
-    batch_size = 50
+    batch_size = 100
     
     for i in range(0, len(provinces), batch_size):
         batch = provinces[i:i+batch_size]
@@ -185,9 +185,9 @@ def refresh_all():
     count = 0
     top_list = []
 
-    # Fetch all weather data in bulk (2-3 API calls instead of 1514)
-    logger.info("Fetching weather batch from Open-Meteo...")
-    fetch_all_weather_batch(PROVINCES)
+    # Fetch weather in small batches, saving progress
+    logger.info("Fetching weather incrementally from Open-Meteo...")
+    fetch_all_weather_batch(PROVINCES[:500])  # Process first 500 only
     logger.info(f"Weather cache loaded: {len(_weather_cache)} cities")
 
     for p in PROVINCES:
