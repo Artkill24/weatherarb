@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WeatherArb Fortune — La tua Fortuna Meteorologica di Oggi</title>
+<meta name="description" content="Scopri la tua fortuna del giorno basata sulle anomalie meteo reali della tua città. Z-Score NASA POWER 25 anni. WeatherArb Fortune.">
+<meta property="og:title" content="WeatherArb Fortune — Fortuna Meteo di Oggi">
+<meta property="og:description" content="La tua fortuna del giorno basata su dati meteo reali NASA. Scopri cosa riserva il clima per te oggi.">
+<meta property="og:image" content="https://weatherarb.com/logo-192.png">
+<link rel="canonical" href="https://weatherarb.com/fortune">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800;900&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#030508;--s:#080c12;--b:#0f1623;--ba:#1a2535;
+  --t:#c8d6e5;--m:#4a6080;--bl:#3b82f6;--g:#10b981;
+  --r:#ef4444;--y:#f59e0b;--p:#8b5cf6;--o:#f97316
+}
+
+html,body{height:100%;background:var(--bg);color:var(--t);font-family:'Space Mono',monospace;overflow-x:hidden}
+
+/* Stars */
+#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
+.star{position:absolute;border-radius:50%;background:#fff;animation:twinkle var(--d) infinite}
+@keyframes twinkle{0%,100%{opacity:var(--o1)}50%{opacity:var(--o2)}}
+
+/* Header */
+.hdr{position:sticky;top:0;z-index:100;background:rgba(3,5,8,.92);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--b);padding:0 24px;height:52px;
+  display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--t);text-decoration:none}
+.logo b{color:var(--bl)}
+.nav a{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--m);
+  text-decoration:none;margin-left:14px;transition:.15s}
+.nav a:hover{color:var(--t)}
+
+/* Main */
+main{position:relative;z-index:1;min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;padding:60px 24px 80px}
+
+/* Intro */
+.intro{text-align:center;max-width:560px;margin-bottom:48px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;
+  background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25);
+  border-radius:100px;padding:5px 16px;font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;color:#a78bfa;margin-bottom:20px}
+.intro h1{font-family:'Syne',sans-serif;font-size:clamp(36px,7vw,72px);
+  font-weight:900;letter-spacing:-.03em;line-height:.95;color:#fff;margin-bottom:16px}
+.intro h1 em{font-style:normal;
+  background:linear-gradient(135deg,#8b5cf6,#3b82f6,#06b6d4);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.intro p{font-size:14px;color:var(--m);line-height:1.7}
+
+/* Fortune Card */
+#fortune-card{
+  width:100%;max-width:560px;
+  background:var(--s);border:1px solid var(--b);border-radius:20px;
+  overflow:hidden;position:relative;
+  box-shadow:0 32px 80px rgba(0,0,0,.6);
+  transition:transform .3s;
+}
+#fortune-card:hover{transform:translateY(-4px)}
+
+.card-glow{
+  position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 0%,rgba(139,92,246,.15),transparent 60%);
+  z-index:0;
+}
+
+.card-top{
+  padding:40px 36px 32px;position:relative;z-index:1;text-align:center;
+  border-bottom:1px solid var(--b);
+}
+
+.card-emoji{font-size:72px;line-height:1;margin-bottom:16px;display:block;
+  filter:drop-shadow(0 0 24px rgba(139,92,246,.5));
+  animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+.card-city{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--m);margin-bottom:8px}
+.card-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#fff;
+  margin-bottom:6px;letter-spacing:-.01em}
+.card-zscore{font-size:13px;font-weight:700;margin-bottom:0}
+
+.card-body{padding:28px 36px;position:relative;z-index:1}
+
+.fortune-text{
+  font-size:15px;line-height:1.8;color:#8899aa;margin-bottom:24px;
+  border-left:3px solid var(--p);padding-left:16px;
+}
+.fortune-text strong{color:var(--t)}
+
+/* Stats row */
+.stats-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;
+  background:var(--b);border:1px solid var(--b);border-radius:10px;
+  overflow:hidden;margin-bottom:24px}
+.stat{background:var(--s);padding:14px;text-align:center}
+.stat-l{font-size:9px;text-transform:uppercase;letter-spacing:.15em;color:var(--m);margin-bottom:4px}
+.stat-v{font-size:18px;font-weight:700;font-variant-numeric:tabular-nums}
+
+/* Lucky section */
+.lucky-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
+.lucky-item{background:var(--b);border-radius:10px;padding:14px}
+.lucky-label{font-size:9px;text-transform:uppercase;letter-spacing:.15em;color:var(--m);margin-bottom:6px}
+.lucky-val{font-size:13px;font-weight:700;color:var(--t)}
+
+/* Advice */
+.advice-box{background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.2);
+  border-radius:10px;padding:16px;margin-bottom:24px}
+.advice-title{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#a78bfa;margin-bottom:8px}
+.advice-text{font-size:12px;color:var(--m);line-height:1.6}
+
+/* Buttons */
+.btn-row{display:flex;gap:10px}
+.btn{flex:1;padding:13px 16px;border-radius:10px;font-size:11px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border:none;
+  text-decoration:none;text-align:center;transition:.2s;display:flex;align-items:center;justify-content:center;gap:6px}
+.btn-pri{background:var(--bl);color:#fff}
+.btn-pri:hover{background:#2563eb;transform:translateY(-1px)}
+.btn-sec{background:var(--b);color:var(--t);border:1px solid var(--ba)}
+.btn-sec:hover{border-color:var(--ba);transform:translateY(-1px)}
+.btn-share{background:rgba(139,92,246,.15);color:#a78bfa;border:1px solid rgba(139,92,246,.3)}
+.btn-share:hover{background:rgba(139,92,246,.25)}
+
+/* Loading */
+#loading{text-align:center;padding:60px 24px}
+.loading-emoji{font-size:48px;animation:spin 2s linear infinite;display:block;margin-bottom:16px}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.loading-text{font-size:12px;color:var(--m);letter-spacing:.1em}
+
+/* Error */
+#error-box{display:none;text-align:center;padding:40px 24px;
+  background:var(--s);border:1px solid var(--b);border-radius:20px;
+  max-width:420px;width:100%}
+
+/* Zodiac hint */
+.zodiac-row{display:flex;align-items:center;gap:12px;margin-bottom:24px;
+  padding:14px;background:var(--b);border-radius:10px}
+.zodiac-sign{font-size:28px}
+.zodiac-info{flex:1}
+.zodiac-name{font-size:12px;font-weight:700;color:var(--t)}
+.zodiac-compat{font-size:11px;color:var(--m);margin-top:2px}
+
+/* Share text */
+.share-preview{background:var(--b);border:1px solid var(--ba);border-radius:8px;
+  padding:12px 14px;margin-bottom:12px;font-size:11px;color:var(--m);line-height:1.6;
+  font-style:italic}
+
+/* Footer */
+.fortune-footer{margin-top:32px;text-align:center;font-size:10px;color:var(--m);line-height:1.7}
+.fortune-footer a{color:var(--m);text-decoration:none}
+.fortune-footer a:hover{color:var(--t)}
+
+/* Progress bar */
+.progress-wrap{height:3px;background:var(--b);border-radius:2px;margin-bottom:24px;overflow:hidden}
+.progress-bar{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--p),var(--bl));
+  transition:width 1s}
+
+@media(max-width:480px){
+  .card-top{padding:28px 20px 22px}
+  .card-body{padding:20px}
+  .lucky-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div id="stars"></div>
+
+<header class="hdr">
+  <a href="/" class="logo">Weather<b>Arb</b></a>
+  <nav class="nav">
+    <a href="/leaderboard">Leaderboard</a>
+    <a href="/news/">News</a>
+    <a href="/map">Mappa</a>
+  </nav>
+</header>
+
+<main>
+  <div class="intro">
+    <div class="eyebrow">✨ Fortune Meteo</div>
+    <h1>La tua <em>Fortuna</em><br>di Oggi</h1>
+    <p>Basata sulle anomalie meteo reali della tua città.<br>Dati NASA POWER · Z-Score 25 anni.</p>
+  </div>
+
+  <div id="loading">
+    <span class="loading-emoji">🌡️</span>
+    <div class="loading-text">Lettura delle stelle meteorologiche...</div>
+  </div>
+
+  <div id="error-box">
+    <div style="font-size:40px;margin-bottom:16px">🌫️</div>
+    <div style="font-size:14px;color:var(--t);margin-bottom:8px;font-weight:700">Posizione non disponibile</div>
+    <div style="font-size:12px;color:var(--m);margin-bottom:20px;line-height:1.6">Abilita la geolocalizzazione per ricevere la tua fortuna meteorologica personalizzata.</div>
+    <button class="btn btn-pri" onclick="retryLocation()" style="width:100%">🔄 Riprova</button>
+  </div>
+
+  <div id="fortune-card" style="display:none">
+    <div class="card-glow" id="card-glow"></div>
+    <div class="card-top">
+      <span class="card-emoji" id="f-emoji">🌤️</span>
+      <div class="card-city" id="f-city">—</div>
+      <div class="card-title" id="f-title">—</div>
+      <div class="card-zscore" id="f-zscore">—</div>
+    </div>
+    <div class="card-body">
+      <div class="progress-wrap">
+        <div class="progress-bar" id="f-progress" style="width:50%"></div>
+      </div>
+
+      <div class="fortune-text" id="f-text">—</div>
+
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-l">Z-Score</div>
+          <div class="stat-v" id="s-z">—</div>
+        </div>
+        <div class="stat">
+          <div class="stat-l">Temperatura</div>
+          <div class="stat-v" id="s-t">—</div>
+        </div>
+        <div class="stat">
+          <div class="stat-l">Score</div>
+          <div class="stat-v" id="s-sc">—</div>
+        </div>
+      </div>
+
+      <div class="zodiac-row" id="zodiac-row">
+        <span class="zodiac-sign" id="z-sign">♈</span>
+        <div class="zodiac-info">
+          <div class="zodiac-name" id="z-name">—</div>
+          <div class="zodiac-compat" id="z-compat">—</div>
+        </div>
+      </div>
+
+      <div class="lucky-grid">
+        <div class="lucky-item">
+          <div class="lucky-label">🍀 Numero Fortunato</div>
+          <div class="lucky-val" id="f-num">—</div>
+        </div>
+        <div class="lucky-item">
+          <div class="lucky-label">🎨 Colore del Giorno</div>
+          <div class="lucky-val" id="f-color">—</div>
+        </div>
+        <div class="lucky-item">
+          <div class="lucky-label">⚡ Energia</div>
+          <div class="lucky-val" id="f-energy">—</div>
+        </div>
+        <div class="lucky-item">
+          <div class="lucky-label">🕐 Ora Migliore</div>
+          <div class="lucky-val" id="f-time">—</div>
+        </div>
+      </div>
+
+      <div class="advice-box">
+        <div class="advice-title">🔮 Consiglio del Giorno</div>
+        <div class="advice-text" id="f-advice">—</div>
+      </div>
+
+      <div class="share-preview" id="f-share-text">—</div>
+
+      <div class="btn-row">
+        <button class="btn btn-share" onclick="shareTwitter()">🐦 Condividi</button>
+        <a class="btn btn-sec" id="f-city-link" href="/leaderboard">📊 Dati città</a>
+        <button class="btn btn-pri" onclick="reloadFortune()">🔄 Aggiorna</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="fortune-footer">
+    <p>La fortuna è basata su dati meteo reali · <a href="/about.html">Metodologia NASA POWER</a></p>
+    <p style="margin-top:6px"><a href="/">WeatherArb</a> · <a href="/leaderboard">Leaderboard Anomalie</a> · <a href="/pricing">API Pro</a></p>
+    <p style="margin-top:6px">Si aggiorna ogni ora · Non è astrologia, è scienza 🔬</p>
+  </div>
+</main>
+
+<script>
+// ─── Stars ────────────────────────────────────────────────────────────────────
+(function(){
+  const c = document.getElementById('stars');
+  for(let i=0;i<80;i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random()*2+.5;
+    s.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--d:${2+Math.random()*4}s;--o1:${.1+Math.random()*.4};--o2:${.4+Math.random()*.5}`;
+    c.appendChild(s);
+  }
+})();
+
+// ─── Fortune Data ─────────────────────────────────────────────────────────────
+const FORTUNES = {
+  extreme_heat: {
+    emoji: '🔥', title: 'Fuoco Cosmico', color: '#ef4444',
+    texts: [
+      'Il clima brucia di <strong>energia intensa</strong> intorno a te. Le forze termiche della natura sono al massimo — un giorno per azioni audaci, decisioni coraggiose e mosse che fanno la differenza. Il calore porta chiarezza.',
+      'La Terra stessa è in <strong>ebollizione creativa</strong> nella tua zona. Un\'anomalia così rara porta con sé una carica straordinaria — usa questa energia per superare ostacoli che sembravano insormontabili.',
+      'Z-Score ai massimi storici: sei al centro di un <strong>evento climatico raro</strong>. Chi vive in mezzo alla tempesta impara a danzare con essa. Oggi sei il fulcro dell\'energia planetaria.',
+    ],
+    advice: ['Idratati e prenditi cura di te. Le grandi energie vanno gestite con saggezza — fermati un momento prima di agire d\'impulso.','Il calore estremo amplifica emozioni e decisioni. Usa questa intensità per cose che contano davvero, non per conflitti.','Evita le ore più calde per attività fisiche intense. La tua energia mentale è al massimo — dedicala a progetti creativi o strategici.'],
+    colors: ['Rosso Fuoco','Arancio Solare','Ambra Dorata'],
+    times: ['07:30','06:45','08:15'],
+    energy: ['🔥 Massima','⚡ Esplosiva','🌋 Vulcanica'],
+    zodiac_compat: 'Questa energia favorisce Leone, Ariete e Sagittario — i segni di fuoco amplificano la loro naturale intensità oggi.',
+  },
+  high_heat: {
+    emoji: '☀️', title: 'Sole Anomalo', color: '#f97316',
+    texts: [
+      'La tua città è avvolta da un <strong>calore insolito</strong> — ben oltre la media storica di 25 anni. La natura ti sta dicendo che oggi è un giorno fuori dall\'ordinario. Abbraccia l\'eccezionale.',
+      'Temperature sopra la norma portano una <strong>vitalità amplificata</strong>. Il tuo corpo risponde al calore con una reattività aumentata — usala per costruire, creare, connettere.',
+      'Un\'ondata calda statisticamente rara avvolge la tua zona. La rarità porta <strong>opportunità uniche</strong> — quelle che non si ripresentano per anni.',
+    ],
+    advice: ['Sfrutta la mattina presto quando l\'energia è fresca e il sole non è ancora al culmine. I tuoi insight migliori arriveranno in quelle ore.','Il calore favorisce la socialità — incontri e conversazioni oggi potrebbero portare sviluppi inaspettati.','Porta una bottiglia d\'acqua ovunque tu vada. La mente idratata pensa più chiaramente.'],
+    colors: ['Arancio Caldo','Giallo Solare','Corallo Vivo'],
+    times: ['09:00','08:30','10:15'],
+    energy: ['☀️ Elevata','🌞 Solare','✨ Brillante'],
+    zodiac_compat: 'Il calore favorisce i segni di terra — Toro, Vergine e Capricorno trovano oggi la loro produttività al picco.',
+  },
+  normal: {
+    emoji: '🌤️', title: 'Equilibrio Perfetto', color: '#10b981',
+    texts: [
+      'Le condizioni meteo nella tua città sono in <strong>perfetto equilibrio</strong> con il baseline storico. Quando la natura è in armonia, anche tu puoi trovare il tuo centro. Un giorno di stabilità e chiarezza.',
+      'Il clima è nella sua zona di <strong>normalità statistica</strong> — raro nella sua perfezione. Oggi tutto funziona come dovrebbe funzionare. È il momento ideale per costruire su basi solide.',
+      'Z-Score vicino allo zero: sei nel cuore della <strong>norma climatica</strong> venticinquennale. La stabilità è il terreno su cui crescono le grandi cose. Non sottovalutare i giorni ordinari.',
+    ],
+    advice: ['I giorni equilibrati sono perfetti per routine e abitudini che durano. Inizia qualcosa che vuoi mantenere nel tempo.','Approfittane per i compiti che richiedono concentrazione prolungata — il clima non ti distrae.','Contatta qualcuno che non senti da un po\'. I giorni stabili sono perfetti per coltivare relazioni.'],
+    colors: ['Verde Smeraldo','Turchese Calmo','Azzurro Chiaro'],
+    times: ['10:30','09:45','11:00'],
+    energy: ['⚖️ Bilanciata','🌿 Armoniosa','💫 Stabile'],
+    zodiac_compat: 'L\'equilibrio favorisce i segni d\'aria — Gemelli, Bilancia e Acquario trovano oggi la loro fluidità naturale.',
+  },
+  mild_cold: {
+    emoji: '🌬️', title: 'Brezza Anomala', color: '#60a5fa',
+    texts: [
+      'Una <strong>frescura insolita</strong> soffia sulla tua città. Le temperature sotto la media portano una chiarezza mentale acuta — i pensieri fluiscono nitidi come aria pulita di montagna.',
+      'Il freddo anomalo porta con sé una <strong>lucidità straordinaria</strong>. I migliori inventori, scrittori e strateghi hanno sempre amato il freddo — il cervello lavora meglio quando il corpo è fresco.',
+      'Un\'anomalia fredda avvolge la tua zona. Il contrasto con la stagione porta una <strong>prospettiva unica</strong> — vedi le cose da un angolo che gli altri non riescono a vedere.',
+    ],
+    advice: ['Vestiti a strati — il corpo che mantiene la temperatura giusta permette alla mente di volare.','Il freddo favorisce la lettura, la scrittura e il pensiero analitico. Dedicati a progetti che richiedono profondità.','Una bevanda calda nelle mani aiuta la concentrazione. Piccoli rituali, grandi risultati.'],
+    colors: ['Blu Glaciale','Argento Nordico','Bianco Puro'],
+    times: ['14:00','13:30','15:00'],
+    energy: ['❄️ Cristallina','🌊 Fluida','🔵 Concentrata'],
+    zodiac_compat: 'Il fresco favorisce i segni d\'acqua — Cancro, Scorpione e Pesci trovano oggi la loro intuizione al massimo.',
+  },
+  extreme_cold: {
+    emoji: '🥶', title: 'Gelo Cosmico', color: '#818cf8',
+    texts: [
+      'La tua città vive un\'<strong>anomalia fredda rara</strong> — statisticamente fuori dalla norma di 25 anni. Il gelo porta concentrazione assoluta, silenzio interiore e una chiarezza che il caldo non può dare.',
+      'Temperature ai minimi storici nella tua zona. Il freddo estremo è da sempre associato alle <strong>grandi illuminazioni</strong> — i monaci tibetani meditano nel gelo non per caso.',
+      'Un evento freddo di questa intensità è <strong>statisticamente rarissimo</strong>. Sei in un momento unico — usa questa rarità per fare cose rare. Il gelo elimina le distrazioni e rivela l\'essenziale.',
+    ],
+    advice: ['Riscaldati bene prima di uscire. Il corpo che non disperde energia nel brivido può usarla per pensare.','Il silenzio del freddo è una risorsa preziosa. Usalo per decisioni importanti che richiedono chiarezza assoluta.','Condividi calore con chi ti è vicino — i giorni freddi rafforzano i legami.'],
+    colors: ['Viola Glaciale','Indaco Profondo','Blu Notte'],
+    times: ['15:30','16:00','14:45'],
+    energy: ['💎 Cristallina','🌌 Profonda','⭐ Rara'],
+    zodiac_compat: 'Il gelo cosmico amplifica Capricorno, Acquario e Gemelli — i segni più razionali trovano oggi la loro mente affilatissima.',
+  }
+};
+
+const ZODIAC = [
+  {s:'♑',n:'Capricorno'},{s:'♒',n:'Acquario'},{s:'♓',n:'Pesci'},
+  {s:'♈',n:'Ariete'},{s:'♉',n:'Toro'},{s:'♊',n:'Gemelli'},
+  {s:'♋',n:'Cancro'},{s:'♌',n:'Leone'},{s:'♍',n:'Vergine'},
+  {s:'♎',n:'Bilancia'},{s:'♏',n:'Scorpione'},{s:'♐',n:'Sagittario'}
+];
+
+// ─── Deterministic seed from date ────────────────────────────────────────────
+function dateSeed(){
+  const d = new Date();
+  return d.getFullYear()*10000 + (d.getMonth()+1)*100 + d.getDate();
+}
+
+function seededRand(seed, max){
+  const x = Math.sin(seed)*10000;
+  return Math.floor((x - Math.floor(x)) * max);
+}
+
+// ─── Get fortune category ────────────────────────────────────────────────────
+function getCategory(z){
+  if(z >= 3) return 'extreme_heat';
+  if(z >= 1.5) return 'high_heat';
+  if(z >= -1.5) return 'normal';
+  if(z >= -3) return 'mild_cold';
+  return 'extreme_cold';
+}
+
+// ─── Render fortune ───────────────────────────────────────────────────────────
+function renderFortune(data){
+  const z = data.z_score || 0;
+  const cat = getCategory(z);
+  const f = FORTUNES[cat];
+  const seed = dateSeed() + Math.abs(Math.round(z*100));
+  const cityName = data.comune || data.province || 'La tua città';
+  const cc = data.country_code || 'it';
+
+  // Pick deterministic variants
+  const ti = seededRand(seed, f.texts.length);
+  const ai = seededRand(seed+1, f.advice.length);
+  const ci = seededRand(seed+2, f.colors.length);
+  const tmi = seededRand(seed+3, f.times.length);
+  const ei = seededRand(seed+4, f.energy.length);
+  const zi = seededRand(seed+5, 12);
+  const luckyNum = seededRand(seed+6, 99) + 1;
+
+  // Progress (0-100 based on score intensity)
+  const progress = Math.min(100, Math.max(5, (Math.abs(z)/5)*100));
+
+  // Glow color
+  document.getElementById('card-glow').style.background =
+    `radial-gradient(ellipse at 50% 0%,${f.color}22,transparent 60%)`;
+  document.getElementById('fortune-card').style.borderColor = f.color+'33';
+
+  // Fill card
+  document.getElementById('f-emoji').textContent = f.emoji;
+  document.getElementById('f-city').textContent = `📍 ${cityName} · ${cc.toUpperCase()}`;
+  document.getElementById('f-title').textContent = f.title;
+  document.getElementById('f-title').style.color = f.color;
+  const zSign = z >= 0 ? '+' : '';
+  document.getElementById('f-zscore').textContent = `Z-Score ${zSign}${z.toFixed(2)}σ`;
+  document.getElementById('f-zscore').style.color = f.color;
+  document.getElementById('f-text').innerHTML = f.texts[ti];
+  document.getElementById('f-progress').style.width = progress + '%';
+
+  // Stats
+  const temp = data.temperature_c;
+  document.getElementById('s-z').textContent = zSign + z.toFixed(2) + 'σ';
+  document.getElementById('s-z').style.color = f.color;
+  document.getElementById('s-t').textContent = temp != null ? temp.toFixed(1) + '°C' : '—';
+  document.getElementById('s-sc').textContent = (data.score||0).toFixed(1) + '/10';
+
+  // Zodiac
+  const zod = ZODIAC[zi];
+  document.getElementById('z-sign').textContent = zod.s;
+  document.getElementById('z-name').textContent = zod.n + ' · Compatibilità oggi';
+  document.getElementById('z-compat').textContent = f.zodiac_compat;
+
+  // Lucky
+  document.getElementById('f-num').textContent = luckyNum;
+  document.getElementById('f-color').textContent = f.colors[ci];
+  document.getElementById('f-energy').textContent = f.energy[ei];
+  document.getElementById('f-time').textContent = f.times[tmi];
+
+  // Advice
+  document.getElementById('f-advice').textContent = f.advice[ai];
+
+  // City link
+  const citySlug = cityName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
+  document.getElementById('f-city-link').href = `/${cc}/${citySlug}/`;
+
+  // Share text
+  const shareText = `🌡️ Fortuna Meteo di oggi a ${cityName}: "${f.title}" (Z-Score ${zSign}${z.toFixed(2)}σ)\n\n${f.emoji} Scopri la tua su weatherarb.com/fortune`;
+  document.getElementById('f-share-text').textContent = shareText;
+  window._shareText = shareText;
+
+  // Show card
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('fortune-card').style.display = 'block';
+}
+
+// ─── Share ────────────────────────────────────────────────────────────────────
+function shareTwitter(){
+  const text = encodeURIComponent(window._shareText || 'Scopri la tua Fortuna Meteo su WeatherArb!');
+  const url = encodeURIComponent('https://weatherarb.com/fortune');
+  window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+}
+
+function reloadFortune(){
+  location.reload();
+}
+
+function retryLocation(){
+  document.getElementById('error-box').style.display = 'none';
+  document.getElementById('loading').style.display = 'block';
+  loadFortune();
+}
+
+// ─── Load ─────────────────────────────────────────────────────────────────────
+async function loadFortune(){
+  try {
+    if(!navigator.geolocation){
+      // Use IP-based fallback
+      const r = await fetch('https://api.weatherarb.com/api/v1/pulse/nearby?lat=45.46&lon=9.19');
+      const d = await r.json();
+      renderFortune(d);
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      async pos => {
+        try {
+          const {latitude: lat, longitude: lon} = pos.coords;
+          const r = await fetch(`https://api.weatherarb.com/api/v1/pulse/nearby?lat=${lat}&lon=${lon}`);
+          const d = await r.json();
+          renderFortune(d);
+        } catch(e) {
+          showError();
+        }
+      },
+      async err => {
+        // Geolocation denied — use default (Milan)
+        try {
+          const r = await fetch('https://api.weatherarb.com/api/v1/pulse/nearby?lat=45.46&lon=9.19');
+          const d = await r.json();
+          d.comune = 'Italia';
+          renderFortune(d);
+        } catch(e) {
+          showError();
+        }
+      },
+      {timeout: 8000, maximumAge: 300000}
+    );
+  } catch(e) {
+    showError();
+  }
+}
+
+function showError(){
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('error-box').style.display = 'block';
+}
+
+loadFortune();
+</script>
+</body>
+</html>
