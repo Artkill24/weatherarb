@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-04-28T21:54:38.380641+00:00",
+  "timestamp": "2026-04-29T02:38:40.576697+00:00",
   "space_weather": {
-    "timestamp": "2026-04-28T21:54:37.957029+00:00",
+    "timestamp": "2026-04-29T02:38:40.436059+00:00",
     "kp_current": 0.0,
     "kp_forecast_max_24h": 0,
-    "solar_flux": 1.0348828709538793e-06,
+    "solar_flux": 1.2839055898439256e-06,
     "flare_class": "M",
     "storm_probability": {
       "G1": 0,
@@ -23,10 +23,66 @@
       "kp_current": 0.0,
       "kp_forecast_max": 0,
       "flare_class": "M",
-      "location": "Miami",
-      "country_code": "us",
-      "z_score": 3.7,
-      "label": "Rischio rete elevato a Miami: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+      "location": "Umeå",
+      "country_code": "se",
+      "z_score": -3.83,
+      "label": "Rischio rete elevato a Umeå: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+    },
+    {
+      "grid_stress_score": 5.2,
+      "geo_component": 0.0,
+      "solar_component": 1.2,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "M",
+      "location": "Rostock",
+      "country_code": "de",
+      "z_score": -3.2,
+      "label": "Rischio rete elevato a Rostock: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+    },
+    {
+      "grid_stress_score": 5.2,
+      "geo_component": 0.0,
+      "solar_component": 1.2,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "M",
+      "location": "Tampere",
+      "country_code": "fi",
+      "z_score": -3.3,
+      "label": "Rischio rete elevato a Tampere: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+    },
+    {
+      "grid_stress_score": 5.2,
+      "geo_component": 0.0,
+      "solar_component": 1.2,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "M",
+      "location": "Turku",
+      "country_code": "fi",
+      "z_score": -3.27,
+      "label": "Rischio rete elevato a Turku: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+    },
+    {
+      "grid_stress_score": 5.2,
+      "geo_component": 0.0,
+      "solar_component": 1.2,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "M",
+      "location": "Oulu",
+      "country_code": "fi",
+      "z_score": -3.23,
+      "label": "Rischio rete elevato a Oulu: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
       "grid_stress_score": 5.2,
@@ -39,64 +95,8 @@
       "flare_class": "M",
       "location": "Tampa",
       "country_code": "us",
-      "z_score": 4.7,
+      "z_score": 3.1,
       "label": "Rischio rete elevato a Tampa: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
-    },
-    {
-      "grid_stress_score": 5.2,
-      "geo_component": 0.0,
-      "solar_component": 1.2,
-      "energy_component": 4.0,
-      "risk_level": "HIGH",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "M",
-      "location": "Orlando",
-      "country_code": "us",
-      "z_score": 4.12,
-      "label": "Rischio rete elevato a Orlando: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
-    },
-    {
-      "grid_stress_score": 5.2,
-      "geo_component": 0.0,
-      "solar_component": 1.2,
-      "energy_component": 4.0,
-      "risk_level": "HIGH",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "M",
-      "location": "Jacksonville",
-      "country_code": "us",
-      "z_score": 3.42,
-      "label": "Rischio rete elevato a Jacksonville: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
-    },
-    {
-      "grid_stress_score": 5.2,
-      "geo_component": 0.0,
-      "solar_component": 1.2,
-      "energy_component": 4.0,
-      "risk_level": "HIGH",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "M",
-      "location": "Houston",
-      "country_code": "us",
-      "z_score": 4.1,
-      "label": "Rischio rete elevato a Houston: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
-    },
-    {
-      "grid_stress_score": 5.2,
-      "geo_component": 0.0,
-      "solar_component": 1.2,
-      "energy_component": 4.0,
-      "risk_level": "HIGH",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "M",
-      "location": "Dallas",
-      "country_code": "us",
-      "z_score": 4.1,
-      "label": "Rischio rete elevato a Dallas: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
       "grid_stress_score": 5.2,
@@ -109,7 +109,7 @@
       "flare_class": "M",
       "location": "Austin",
       "country_code": "us",
-      "z_score": 3.75,
+      "z_score": 3.42,
       "label": "Rischio rete elevato a Austin: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -123,22 +123,8 @@
       "flare_class": "M",
       "location": "San Antonio",
       "country_code": "us",
-      "z_score": 4.85,
+      "z_score": 3.97,
       "label": "Rischio rete elevato a San Antonio: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
-    },
-    {
-      "grid_stress_score": 5.2,
-      "geo_component": 0.0,
-      "solar_component": 1.2,
-      "energy_component": 4.0,
-      "risk_level": "HIGH",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "M",
-      "location": "Fort Worth",
-      "country_code": "us",
-      "z_score": 4.62,
-      "label": "Rischio rete elevato a Fort Worth: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
       "grid_stress_score": 5.2,
@@ -151,64 +137,8 @@
       "flare_class": "M",
       "location": "El Paso",
       "country_code": "us",
-      "z_score": 4.1,
+      "z_score": 3.08,
       "label": "Rischio rete elevato a El Paso: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
-    },
-    {
-      "grid_stress_score": 5.2,
-      "geo_component": 0.0,
-      "solar_component": 1.2,
-      "energy_component": 4.0,
-      "risk_level": "HIGH",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "M",
-      "location": "New Orleans",
-      "country_code": "us",
-      "z_score": 4.12,
-      "label": "Rischio rete elevato a New Orleans: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
-    },
-    {
-      "grid_stress_score": 5.2,
-      "geo_component": 0.0,
-      "solar_component": 1.2,
-      "energy_component": 4.0,
-      "risk_level": "HIGH",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "M",
-      "location": "Nashville",
-      "country_code": "us",
-      "z_score": 3.58,
-      "label": "Rischio rete elevato a Nashville: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
-    },
-    {
-      "grid_stress_score": 5.2,
-      "geo_component": 0.0,
-      "solar_component": 1.2,
-      "energy_component": 4.0,
-      "risk_level": "HIGH",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "M",
-      "location": "Phoenix",
-      "country_code": "us",
-      "z_score": 3.97,
-      "label": "Rischio rete elevato a Phoenix: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
-    },
-    {
-      "grid_stress_score": 5.2,
-      "geo_component": 0.0,
-      "solar_component": 1.2,
-      "energy_component": 4.0,
-      "risk_level": "HIGH",
-      "kp_current": 0.0,
-      "kp_forecast_max": 0,
-      "flare_class": "M",
-      "location": "Tucson",
-      "country_code": "us",
-      "z_score": 4.15,
-      "label": "Rischio rete elevato a Tucson: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
       "grid_stress_score": 5.2,
@@ -221,8 +151,22 @@
       "flare_class": "M",
       "location": "Honolulu",
       "country_code": "us",
-      "z_score": 3.62,
+      "z_score": 3.17,
       "label": "Rischio rete elevato a Honolulu: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+    },
+    {
+      "grid_stress_score": 5.2,
+      "geo_component": 0.0,
+      "solar_component": 1.2,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "M",
+      "location": "Singapore",
+      "country_code": "sg",
+      "z_score": 4.47,
+      "label": "Rischio rete elevato a Singapore: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
       "grid_stress_score": 5.2,
@@ -235,7 +179,7 @@
       "flare_class": "M",
       "location": "Mumbai",
       "country_code": "in",
-      "z_score": 3.55,
+      "z_score": 3.75,
       "label": "Rischio rete elevato a Mumbai: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -249,7 +193,7 @@
       "flare_class": "M",
       "location": "Delhi",
       "country_code": "in",
-      "z_score": 3.75,
+      "z_score": 4.35,
       "label": "Rischio rete elevato a Delhi: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -263,7 +207,7 @@
       "flare_class": "M",
       "location": "Bangalore",
       "country_code": "in",
-      "z_score": 3.25,
+      "z_score": 3.05,
       "label": "Rischio rete elevato a Bangalore: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -277,7 +221,7 @@
       "flare_class": "M",
       "location": "Chennai",
       "country_code": "in",
-      "z_score": 3.88,
+      "z_score": 4.53,
       "label": "Rischio rete elevato a Chennai: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     },
     {
@@ -291,8 +235,64 @@
       "flare_class": "M",
       "location": "Kolkata",
       "country_code": "in",
-      "z_score": 3.72,
+      "z_score": 4.3,
       "label": "Rischio rete elevato a Kolkata: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+    },
+    {
+      "grid_stress_score": 5.2,
+      "geo_component": 0.0,
+      "solar_component": 1.2,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "M",
+      "location": "Bangkok",
+      "country_code": "th",
+      "z_score": 4.88,
+      "label": "Rischio rete elevato a Bangkok: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+    },
+    {
+      "grid_stress_score": 5.2,
+      "geo_component": 0.0,
+      "solar_component": 1.2,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "M",
+      "location": "Jakarta",
+      "country_code": "id",
+      "z_score": 4.35,
+      "label": "Rischio rete elevato a Jakarta: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+    },
+    {
+      "grid_stress_score": 5.2,
+      "geo_component": 0.0,
+      "solar_component": 1.2,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "M",
+      "location": "Kuala Lumpur",
+      "country_code": "my",
+      "z_score": 4.8,
+      "label": "Rischio rete elevato a Kuala Lumpur: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
+    },
+    {
+      "grid_stress_score": 5.2,
+      "geo_component": 0.0,
+      "solar_component": 1.2,
+      "energy_component": 4.0,
+      "risk_level": "HIGH",
+      "kp_current": 0.0,
+      "kp_forecast_max": 0,
+      "flare_class": "M",
+      "location": "Manila",
+      "country_code": "ph",
+      "z_score": 5.07,
+      "label": "Rischio rete elevato a Manila: combinazione domanda anomala + perturbazione magnetica (Kp=0.0)"
     }
   ],
   "total_nodes": 30
