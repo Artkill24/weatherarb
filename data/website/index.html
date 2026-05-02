@@ -4,171 +4,211 @@
 <link rel="preconnect" href="https://api.weatherarb.com">
 <link rel="preconnect" href="https://unpkg.com" crossorigin>
 <link rel="dns-prefetch" href="https://api.weatherarb.com">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>WeatherArb — Anomalie Meteo Globali in Tempo Reale | 1.514 Città Monitorate</title>
-  <meta name="description" content="Anomalie meteo in tempo reale per 1.514 città in 100+ paesi. Z-Score NASA POWER 25 anni, HDD/CDD energy data, Space Weather e Grid Risk. WeatherArb.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://weatherarb.com/">
-  <meta property="og:title" content="WeatherArb — Anomalie Meteo Globali in Tempo Reale">
-  <meta property="og:description" content="1.514 città monitorate in 100+ paesi. Z-Score NASA POWER 25 anni, HDD/CDD energy data, Space Weather e Grid Risk Intelligence.">
-  <meta property="og:image" content="https://weatherarb.com/logo-192.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="WeatherArb — Anomalie Meteo Globali">
-  <meta name="twitter:description" content="1.514 città monitorate. Z-Score NASA POWER 25 anni. HDD/CDD energy data.">
-  <meta name="twitter:image" content="https://weatherarb.com/logo-192.png">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"WeatherArb","url":"https://weatherarb.com","description":"Real-time weather anomaly intelligence for 1514 cities in 100+ countries","potentialAction":{"@type":"SearchAction","target":"https://weatherarb.com/map?q={search_term_string}","query-input":"required name=search_term_string"}}
-  </script>  <link rel="canonical" href="https://weatherarb.com/">
-  <style>
-    :root{--bg:#040608;--s:#0a0d12;--b:#141920;--ba:#1e2d3d;--t:#c8d6e5;--m:#4a5568;--bl:#3b82f6;--g:#10b981;--y:#f59e0b;--o:#f97316;--r:#ef4444;--shadow:rgba(0,0,0,.4)}
-    [data-theme="light"]{--bg:#f8fafc;--s:#fff;--b:#e2e8f0;--ba:#cbd5e1;--t:#0f172a;--m:#64748b;--bl:#2563eb;--g:#059669;--y:#d97706;--o:#ea580c;--r:#dc2626;--shadow:rgba(0,0,0,.1)}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--t);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;transition:background .3s,color .3s}
-    body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.02) 2px,rgba(0,0,0,.02) 4px);pointer-events:none;z-index:9999}
-    [data-theme="light"] body::before{display:none}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WeatherArb — Anomalie Meteo Globali in Tempo Reale | 3.367 Città Monitorate</title>
+<meta name="description" content="Monitoraggio anomalie meteo in tempo reale per 3.367 città in 100+ paesi. Z-Score NASA POWER 25 anni, HDD/CDD energy data, Space Weather e Grid Risk Intelligence. WeatherArb.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://weatherarb.com/">
+<meta property="og:title" content="WeatherArb — Anomalie Meteo Globali in Tempo Reale">
+<meta property="og:description" content="3.367 città monitorate in 100+ paesi. Z-Score NASA POWER 25 anni, HDD/CDD energy data, Space Weather e Grid Risk Intelligence.">
+<meta property="og:image" content="https://weatherarb.com/logo-192.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WeatherArb — Anomalie Meteo Globali">
+<meta name="twitter:description" content="3.367 città monitorate. Z-Score NASA POWER 25 anni. HDD/CDD energy data.">
+<meta name="twitter:image" content="https://weatherarb.com/logo-192.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"WeatherArb","url":"https://weatherarb.com","description":"Real-time weather anomaly intelligence for 3367 cities in 100+ countries","potentialAction":{"@type":"SearchAction","target":"https://weatherarb.com/map?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
+<link rel="canonical" href="https://weatherarb.com/">
+<style>
+  :root{--bg:#040608;--s:#0a0d12;--b:#141920;--ba:#1e2d3d;--t:#c8d6e5;--m:#4a5568;--bl:#3b82f6;--g:#10b981;--y:#f59e0b;--o:#f97316;--r:#ef4444;--p:#8b5cf6;--shadow:rgba(0,0,0,.4)}
+  [data-theme="light"]{--bg:#f8fafc;--s:#fff;--b:#e2e8f0;--ba:#cbd5e1;--t:#0f172a;--m:#64748b;--bl:#2563eb;--g:#059669;--y:#d97706;--o:#ea580c;--r:#dc2626;--p:#7c3aed;--shadow:rgba(0,0,0,.1)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--t);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;transition:background .3s,color .3s}
+  body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.02) 2px,rgba(0,0,0,.02) 4px);pointer-events:none;z-index:9999}
+  [data-theme="light"] body::before{display:none}
 
-    /* HEADER */
-    .hdr{position:sticky;top:0;z-index:100;background:rgba(4,6,8,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--b);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;transition:background .3s}
-    [data-theme="light"] .hdr{background:rgba(248,250,252,.92)}
-    .logo{font-size:14px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--t);text-decoration:none;display:flex;align-items:center;gap:2px}
-    .logo b{color:var(--bl)}
-    .nav{display:flex;align-items:center;gap:4px}
-    .nav a{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--m);text-decoration:none;padding:6px 10px;border-radius:6px;transition:.15s}
-    .nav a:hover{color:var(--t);background:rgba(255,255,255,.06)}
-    [data-theme="light"] .nav a:hover{background:rgba(0,0,0,.06)}
-    .theme-btn{background:var(--s);border:1px solid var(--b);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:15px;color:var(--t);transition:.2s;margin-left:8px}
-    .theme-btn:hover{border-color:var(--ba)}
-    .live-dot{width:7px;height:7px;background:var(--g);border-radius:50%;box-shadow:0 0 10px var(--g);animation:pulse 2s infinite;margin-left:8px}
-    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+  /* HEADER */
+  .hdr{position:sticky;top:0;z-index:100;background:rgba(4,6,8,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--b);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;transition:background .3s}
+  [data-theme="light"] .hdr{background:rgba(248,250,252,.92)}
+  .logo{font-size:14px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--t);text-decoration:none;display:flex;align-items:center;gap:2px}
+  .logo b{color:var(--bl)}
+  .nav{display:flex;align-items:center;gap:4px}
+  .nav a{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--m);text-decoration:none;padding:6px 10px;border-radius:6px;transition:.15s}
+  .nav a:hover{color:var(--t);background:rgba(255,255,255,.06)}
+  [data-theme="light"] .nav a:hover{background:rgba(0,0,0,.06)}
+  .theme-btn{background:var(--s);border:1px solid var(--b);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:15px;color:var(--t);transition:.2s;margin-left:8px}
+  .live-dot{width:7px;height:7px;background:var(--g);border-radius:50%;box-shadow:0 0 10px var(--g);animation:pulse 2s infinite;margin-left:8px}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
 
-    /* HERO */
-    .hero{max-width:1100px;margin:0 auto;padding:80px 24px 60px;text-align:center}
-    .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.18);border-radius:100px;padding:6px 16px;font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--bl);margin-bottom:24px}
-    .hero h1{font-size:clamp(40px,6vw,80px);font-weight:900;letter-spacing:-.03em;line-height:.95;color:#fff;margin-bottom:20px}
-    [data-theme="light"] .hero h1{color:#0f172a}
-    .hero h1 em{font-style:normal;color:var(--bl)}
-    .hero-sub{font-size:clamp(15px,2vw,18px);color:var(--m);max-width:580px;margin:0 auto 36px;line-height:1.6}
-    .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
-    .btn-pri{background:var(--bl);color:#fff;border:none;border-radius:10px;padding:14px 28px;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:.2s;display:inline-flex;align-items:center;gap:8px}
-    .btn-pri:hover{background:#2563eb;transform:translateY(-1px)}
-    .btn-sec{background:transparent;color:var(--t);border:1px solid var(--b);border-radius:10px;padding:14px 28px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:.2s;display:inline-flex;align-items:center;gap:8px}
-    .btn-sec:hover{border-color:var(--ba);transform:translateY(-1px)}
+  /* HERO */
+  .hero{max-width:1100px;margin:0 auto;padding:80px 24px 60px;text-align:center}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.18);border-radius:100px;padding:6px 16px;font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--bl);margin-bottom:24px}
+  .hero h1{font-size:clamp(40px,6vw,80px);font-weight:900;letter-spacing:-.03em;line-height:.95;color:#fff;margin-bottom:20px}
+  [data-theme="light"] .hero h1{color:#0f172a}
+  .hero h1 em{font-style:normal;color:var(--bl)}
+  .hero-sub{font-size:clamp(15px,2vw,18px);color:var(--m);max-width:620px;margin:0 auto 36px;line-height:1.6}
+  .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
+  .btn-pri{background:var(--bl);color:#fff;border:none;border-radius:10px;padding:14px 28px;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:.2s;display:inline-flex;align-items:center;gap:8px}
+  .btn-pri:hover{background:#2563eb;transform:translateY(-1px)}
+  .btn-sec{background:transparent;color:var(--t);border:1px solid var(--b);border-radius:10px;padding:14px 28px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:.2s;display:inline-flex;align-items:center;gap:8px}
+  .btn-sec:hover{border-color:var(--ba);transform:translateY(-1px)}
 
-    /* STATS */
-    .stats{max-width:1100px;margin:0 auto 60px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--b);border:1px solid var(--b);border-radius:14px;overflow:hidden}
-    .stat{background:var(--s);padding:24px 20px;text-align:center}
-    .stat-n{font-size:36px;font-weight:800;color:var(--t);font-variant-numeric:tabular-nums;line-height:1}
-    .stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--m);margin-top:6px}
+  /* STATS */
+  .stats{max-width:1100px;margin:0 auto 60px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--b);border:1px solid var(--b);border-radius:14px;overflow:hidden}
+  .stat{background:var(--s);padding:24px 20px;text-align:center}
+  .stat-n{font-size:36px;font-weight:800;color:var(--t);font-variant-numeric:tabular-nums;line-height:1}
+  .stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--m);margin-top:6px}
 
-    /* SECTION LABEL */
-    .section-label{max-width:1100px;margin:0 auto;padding:0 24px 14px;font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:var(--m);display:flex;align-items:center;gap:10px}
-    .section-label::after{content:'';flex:1;height:1px;background:var(--b)}
+  /* SECTION LABEL */
+  .section-label{max-width:1100px;margin:0 auto;padding:0 24px 14px;font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:var(--m);display:flex;align-items:center;gap:10px}
+  .section-label::after{content:'';flex:1;height:1px;background:var(--b)}
 
-    /* SPACE WEATHER */
-    .sw-panel{max-width:1100px;margin:0 auto;padding:0 24px 60px}
-    .sw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--b);border:1px solid var(--b);border-radius:14px;overflow:hidden;margin-bottom:12px}
-    @media(max-width:640px){.sw-grid{grid-template-columns:1fr 1fr}}
-    .sw-cell{background:var(--s);padding:18px;text-align:center}
-    .sw-icon{font-size:22px;margin-bottom:6px}
-    .sw-label{font-size:9px;text-transform:uppercase;letter-spacing:.15em;color:var(--m);margin-bottom:6px}
-    .sw-val{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
-    .sw-sub{font-size:10px;color:var(--m);margin-top:4px}
-    .sw-bar{height:3px;border-radius:2px;background:var(--b);margin-top:8px;overflow:hidden}
-    .sw-bar-fill{height:100%;border-radius:2px;transition:width .8s}
-    .kp-scale{display:flex;justify-content:space-between;font-size:9px;color:var(--m);margin-top:3px}
-    .sw-alert{background:var(--s);border:1px solid var(--b);border-radius:10px;padding:14px 18px;font-size:12px;color:var(--m);line-height:1.5}
+  /* GLOBE + SIDEBAR LAYOUT */
+  .globe-layout{max-width:1100px;margin:0 auto;padding:0 24px 60px;display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start}
+  @media(max-width:900px){.globe-layout{grid-template-columns:1fr}}
+  .globe-frame{position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(0,240,255,.15);background:#000103;height:380px;box-shadow:0 12px 40px rgba(0,0,0,.7)}
+  .globe-frame iframe{width:100%;height:100%;border:none;display:block}
+  .globe-open-btn{position:absolute;bottom:14px;right:14px;background:rgba(2,10,20,.85);border:1px solid rgba(0,240,255,.4);color:#00F0FF;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:9px 16px;border-radius:20px;text-decoration:none;backdrop-filter:blur(8px)}
+  .globe-sidebar{display:flex;flex-direction:column;gap:14px}
+  .sidebar-card{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:16px}
+  .sidebar-card-title{font-size:9px;text-transform:uppercase;letter-spacing:.18em;color:var(--m);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--b)}
+  .feed-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--b)}
+  .feed-item:last-child{border-bottom:none}
+  .feed-city{font-size:12px;font-weight:700;color:var(--t)}
+  .feed-cc{font-size:10px;color:var(--m);margin-left:4px}
+  .feed-z{font-size:13px;font-weight:800}
 
-    /* TICKER */
-    .ticker-wrap{max-width:1100px;margin:0 auto;padding:0 24px 60px}
-    .ticker{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
-    .tick-card{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;text-decoration:none;color:var(--t);transition:.2s}
-    .tick-card:hover{border-color:var(--ba);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow)}
-    .tick-left{flex:1;min-width:0}
-    .tick-city{font-size:15px;font-weight:700;margin-bottom:2px}
-    .tick-ev{font-size:11px;color:var(--m);text-transform:uppercase;letter-spacing:.08em}
-    .tick-z{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
-    .tick-score{font-size:10px;color:var(--m);text-align:right;margin-top:2px}
-    .tick-bar{height:3px;border-radius:2px;margin-top:10px;background:var(--b);overflow:hidden}
-    .tick-fill{height:100%;border-radius:2px;transition:width .6s}
-    .ticker-empty{text-align:center;padding:40px;color:var(--m);font-size:14px;grid-column:1/-1}
+  /* SPACE WEATHER */
+  .sw-panel{max-width:1100px;margin:0 auto;padding:0 24px 60px}
+  .sw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--b);border:1px solid var(--b);border-radius:14px;overflow:hidden;margin-bottom:12px}
+  @media(max-width:640px){.sw-grid{grid-template-columns:1fr 1fr}}
+  .sw-cell{background:var(--s);padding:18px;text-align:center}
+  .sw-icon{font-size:22px;margin-bottom:6px}
+  .sw-label{font-size:9px;text-transform:uppercase;letter-spacing:.15em;color:var(--m);margin-bottom:6px}
+  .sw-val{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+  .sw-sub{font-size:10px;color:var(--m);margin-top:4px}
+  .sw-bar{height:3px;border-radius:2px;background:var(--b);margin-top:8px;overflow:hidden}
+  .sw-bar-fill{height:100%;border-radius:2px;transition:width .8s}
+  .kp-scale{display:flex;justify-content:space-between;font-size:9px;color:var(--m);margin-top:3px}
+  .sw-alert{background:var(--s);border:1px solid var(--b);border-radius:10px;padding:14px 18px;font-size:12px;color:var(--m);line-height:1.5}
 
-    /* MAP */
-    .map-section{max-width:1100px;margin:0 auto;padding:0 24px 60px}
-    #map{height:380px;border-radius:14px;border:1px solid var(--b);background:var(--s);overflow:hidden}
-    .wa-popup{background:var(--s);border:1px solid var(--ba);border-radius:8px;padding:10px 14px;color:var(--t);font-family:-apple-system,sans-serif;min-width:160px;box-shadow:0 4px 20px var(--shadow)}
-    .wa-popup b{display:block;font-size:14px;margin-bottom:4px}
-    .wa-popup small{font-size:10px;color:var(--m);text-transform:uppercase}
-    .wa-popup a{display:block;margin-top:8px;font-size:11px;color:var(--bl);text-decoration:none}
-    .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:transparent!important;box-shadow:none!important;padding:0!important}
-    .leaflet-popup-content{margin:0!important}
+  /* TICKER */
+  .ticker-wrap{max-width:1100px;margin:0 auto;padding:0 24px 60px}
+  .ticker{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+  .tick-card{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;text-decoration:none;color:var(--t);transition:.2s}
+  .tick-card:hover{border-color:var(--ba);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow)}
+  .tick-left{flex:1;min-width:0}
+  .tick-city{font-size:15px;font-weight:700;margin-bottom:2px}
+  .tick-ev{font-size:11px;color:var(--m);text-transform:uppercase;letter-spacing:.08em}
+  .tick-z{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .tick-score{font-size:10px;color:var(--m);text-align:right;margin-top:2px}
+  .tick-bar{height:3px;border-radius:2px;margin-top:10px;background:var(--b);overflow:hidden}
+  .tick-fill{height:100%;border-radius:2px;transition:width .6s}
+  .ticker-empty{text-align:center;padding:40px;color:var(--m);font-size:14px;grid-column:1/-1}
 
-    /* NETWORK */
-    .network-section{max-width:1100px;margin:0 auto;padding:0 24px 60px}
-    .network-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
-    .country-card{background:var(--s);border:1px solid var(--b);border-radius:10px;padding:14px 10px;text-align:center;text-decoration:none;color:var(--t);transition:.2s}
-    .country-card:hover{border-color:var(--bl);transform:translateY(-2px)}
-    .country-code{font-size:20px;font-weight:800;letter-spacing:.05em;color:var(--bl)}
-    .country-name{font-size:10px;color:var(--m);margin:4px 0 2px;text-transform:uppercase;letter-spacing:.06em}
-    .country-nodes{font-size:10px;color:var(--m)}
+  /* FORTUNE CARD */
+  .fortune-banner{max-width:1100px;margin:0 auto;padding:0 24px 60px}
+  .fortune-inner{display:block;text-decoration:none;background:linear-gradient(135deg,rgba(139,92,246,.08),rgba(59,130,246,.05));border:1px solid rgba(139,92,246,.2);border-radius:16px;padding:28px 32px;transition:all .2s;position:relative;overflow:hidden}
+  .fortune-inner:hover{border-color:rgba(139,92,246,.5);transform:translateY(-2px);box-shadow:0 12px 40px rgba(139,92,246,.15)}
+  .fortune-inner::before{content:'';position:absolute;top:0;right:0;width:180px;height:180px;background:radial-gradient(circle,rgba(139,92,246,.12),transparent 70%);pointer-events:none}
+  .fortune-row{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+  .fortune-emoji{font-size:52px;line-height:1}
+  .fortune-text{flex:1;min-width:200px}
+  .fortune-tag{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#a78bfa;margin-bottom:8px}
+  .fortune-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:6px}
+  [data-theme="light"] .fortune-title{color:#0f172a}
+  .fortune-desc{font-size:13px;color:var(--m);line-height:1.6}
+  .fortune-cta{background:rgba(139,92,246,.2);border:1px solid rgba(139,92,246,.35);border-radius:10px;padding:12px 20px;font-size:11px;font-weight:700;color:#a78bfa;white-space:nowrap;letter-spacing:.08em}
 
-    /* REPORTS */
-    .reports-section{max-width:1100px;margin:0 auto;padding:0 24px 60px}
-    .reports-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-    .report-card{background:var(--s);border:1px solid var(--b);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--t);display:flex;flex-direction:column;transition:.2s}
-    .report-card:hover{border-color:var(--ba);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow)}
-    .rc-cover{width:100%;height:120px;object-fit:cover;display:block}
-    .rc-cover-placeholder{width:100%;height:60px;background:var(--b)}
-    .rc-body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
-    .rc-head{display:flex;align-items:center;gap:8px}
-    .rc-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:3px 10px;border-radius:100px}
-    .rc-date{font-size:11px;color:var(--m);margin-left:auto}
-    .rc-title{font-size:15px;font-weight:700;line-height:1.3}
-    .rc-lead{font-size:13px;color:var(--m);line-height:1.5;flex:1}
-    .rc-foot{display:flex;gap:10px;align-items:center;padding-top:10px;border-top:1px solid var(--b);font-size:12px}
-    .rc-z{font-weight:700}
-    .rc-more{margin-left:auto;color:var(--bl);font-size:11px}
+  /* SEO TEXT SECTIONS */
+  .seo-section{max-width:1100px;margin:0 auto;padding:0 24px 60px}
+  .seo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+  .seo-card{background:var(--s);border:1px solid var(--b);border-radius:14px;padding:24px}
+  .seo-icon{font-size:28px;margin-bottom:12px}
+  .seo-title{font-size:15px;font-weight:700;color:var(--t);margin-bottom:8px}
+  .seo-body{font-size:13px;color:var(--m);line-height:1.7}
+  .seo-body strong{color:var(--t)}
 
-    /* FOOTER */
-    .ftr{border-top:1px solid var(--b);padding:32px 24px;max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--m)}
-    .ftr a{color:var(--m);text-decoration:none;margin:0 8px}.ftr a:hover{color:var(--t)}
+  /* MAP */
+  .map-section{max-width:1100px;margin:0 auto;padding:0 24px 60px}
+  #map{height:360px;border-radius:14px;border:1px solid var(--b);background:var(--s);overflow:hidden}
+  .wa-popup{background:var(--s);border:1px solid var(--ba);border-radius:8px;padding:10px 14px;color:var(--t);font-family:-apple-system,sans-serif;min-width:160px;box-shadow:0 4px 20px var(--shadow)}
+  .wa-popup b{display:block;font-size:14px;margin-bottom:4px}
+  .wa-popup small{font-size:10px;color:var(--m);text-transform:uppercase}
+  .wa-popup a{display:block;margin-top:8px;font-size:11px;color:var(--bl);text-decoration:none}
+  .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:transparent!important;box-shadow:none!important;padding:0!important}
+  .leaflet-popup-content{margin:0!important}
 
-    @media(max-width:768px){.hero{padding:56px 24px 40px}.hero h1{font-size:40px}.nav a:not(.nav-keep){display:none}#map{height:260px}}
+  /* NETWORK */
+  .network-section{max-width:1100px;margin:0 auto;padding:0 24px 60px}
+  .network-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
+  .country-card{background:var(--s);border:1px solid var(--b);border-radius:10px;padding:14px 10px;text-align:center;text-decoration:none;color:var(--t);transition:.2s}
+  .country-card:hover{border-color:var(--bl);transform:translateY(-2px)}
+  .country-code{font-size:20px;font-weight:800;letter-spacing:.05em;color:var(--bl)}
+  .country-name{font-size:10px;color:var(--m);margin:4px 0 2px;text-transform:uppercase;letter-spacing:.06em}
+  .country-nodes{font-size:10px;color:var(--m)}
 
-    .nl-section{max-width:1100px;margin:0 auto;padding:0 24px 60px}
-    .nl-hero{background:linear-gradient(135deg,rgba(59,130,246,.1),rgba(16,185,129,.06));border:1px solid rgba(59,130,246,.2);border-radius:20px;padding:48px;text-align:center;position:relative;overflow:hidden}
-    .nl-tag{display:inline-block;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.25);border-radius:100px;padding:4px 14px;font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--bl);margin-bottom:16px}
-    .nl-hero h2{font-size:clamp(24px,4vw,38px);font-weight:800;letter-spacing:-.02em;color:#fff;margin-bottom:12px}
-    [data-theme="light"] .nl-hero h2{color:#0f172a}
-    .nl-hero p{font-size:15px;color:var(--m);max-width:480px;margin:0 auto 28px;line-height:1.6}
-    .nl-form{display:flex;gap:10px;max-width:480px;margin:0 auto 12px;flex-wrap:wrap}
-    .nl-email{flex:1;min-width:200px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:13px 18px;color:var(--t);font-size:14px;outline:none;transition:.2s}
-    [data-theme="light"] .nl-email{background:rgba(0,0,0,.04);border-color:var(--b)}
-    .nl-email:focus{border-color:var(--bl)}
-    .nl-submit{background:var(--bl);color:#fff;border:none;border-radius:10px;padding:13px 24px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.2s}
-    .nl-submit:hover{background:#2563eb;transform:translateY(-1px)}
-    .nl-note{font-size:11px;color:var(--m)}
-    .nl-success{display:none;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);border-radius:10px;padding:14px 20px;font-size:14px;color:var(--g);max-width:480px;margin:0 auto}
-    .nl-error{display:none;font-size:13px;color:var(--r);margin-top:8px}
-    .nl-stats{display:flex;justify-content:center;gap:32px;margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08)}
-    [data-theme="light"] .nl-stats{border-top-color:var(--b)}
-    .nl-stat-n{font-size:22px;font-weight:800;color:#fff;text-align:center}
-    [data-theme="light"] .nl-stat-n{color:#0f172a}
-    .nl-stat-l{font-size:10px;color:var(--m);text-transform:uppercase;letter-spacing:.1em;margin-top:2px;text-align:center}
-  </style>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  /* REPORTS */
+  .reports-section{max-width:1100px;margin:0 auto;padding:0 24px 60px}
+  .reports-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .report-card{background:var(--s);border:1px solid var(--b);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--t);display:flex;flex-direction:column;transition:.2s}
+  .report-card:hover{border-color:var(--ba);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow)}
+  .rc-cover{width:100%;height:120px;object-fit:cover;display:block}
+  .rc-cover-placeholder{width:100%;height:60px;background:var(--b)}
+  .rc-body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .rc-head{display:flex;align-items:center;gap:8px}
+  .rc-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:3px 10px;border-radius:100px}
+  .rc-date{font-size:11px;color:var(--m);margin-left:auto}
+  .rc-title{font-size:15px;font-weight:700;line-height:1.3}
+  .rc-lead{font-size:13px;color:var(--m);line-height:1.5;flex:1}
+  .rc-foot{display:flex;gap:10px;align-items:center;padding-top:10px;border-top:1px solid var(--b);font-size:12px}
+  .rc-z{font-weight:700}
+  .rc-more{margin-left:auto;color:var(--bl);font-size:11px}
+
+  /* NEWSLETTER */
+  .nl-section{max-width:1100px;margin:0 auto;padding:0 24px 60px}
+  .nl-hero{background:linear-gradient(135deg,rgba(59,130,246,.1),rgba(16,185,129,.06));border:1px solid rgba(59,130,246,.2);border-radius:20px;padding:48px;text-align:center;position:relative;overflow:hidden}
+  .nl-tag{display:inline-block;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.25);border-radius:100px;padding:4px 14px;font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--bl);margin-bottom:16px}
+  .nl-hero h2{font-size:clamp(24px,4vw,38px);font-weight:800;letter-spacing:-.02em;color:#fff;margin-bottom:12px}
+  [data-theme="light"] .nl-hero h2{color:#0f172a}
+  .nl-hero p{font-size:15px;color:var(--m);max-width:480px;margin:0 auto 28px;line-height:1.6}
+  .nl-form{display:flex;gap:10px;max-width:480px;margin:0 auto 12px;flex-wrap:wrap}
+  .nl-email{flex:1;min-width:200px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:13px 18px;color:var(--t);font-size:14px;outline:none;transition:.2s}
+  [data-theme="light"] .nl-email{background:rgba(0,0,0,.04);border-color:var(--b)}
+  .nl-email:focus{border-color:var(--bl)}
+  .nl-submit{background:var(--bl);color:#fff;border:none;border-radius:10px;padding:13px 24px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.2s}
+  .nl-submit:hover{background:#2563eb;transform:translateY(-1px)}
+  .nl-note{font-size:11px;color:var(--m)}
+  .nl-success{display:none;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);border-radius:10px;padding:14px 20px;font-size:14px;color:var(--g);max-width:480px;margin:0 auto}
+  .nl-error{display:none;font-size:13px;color:var(--r);margin-top:8px}
+  .nl-stats{display:flex;justify-content:center;gap:32px;margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08)}
+  [data-theme="light"] .nl-stats{border-top-color:var(--b)}
+  .nl-stat-n{font-size:22px;font-weight:800;color:#fff;text-align:center}
+  [data-theme="light"] .nl-stat-n{color:#0f172a}
+  .nl-stat-l{font-size:10px;color:var(--m);text-transform:uppercase;letter-spacing:.1em;margin-top:2px;text-align:center}
+
+  /* FOOTER */
+  .ftr{border-top:1px solid var(--b);padding:32px 24px;max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--m)}
+  .ftr a{color:var(--m);text-decoration:none;margin:0 8px}.ftr a:hover{color:var(--t)}
+
+  @media(max-width:768px){.hero{padding:56px 24px 40px}.hero h1{font-size:40px}.nav a:not(.nav-keep){display:none}#map{height:260px}.fortune-row{gap:16px}.fortune-emoji{font-size:40px}}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
 <body>
 
 <header class="hdr">
-  <a href="/" class="logo"><img src="/logo-192.png" style="height:32px;width:32px;border-radius:6px;margin-right:8px">Weather<b>Arb</b></a>
+  <a href="/" class="logo"><img src="/logo-192.png" style="height:32px;width:32px;border-radius:6px;margin-right:8px" alt="WeatherArb">Weather<b>Arb</b></a>
   <nav class="nav">
     <a href="/data/" class="nav-keep">Data</a>
-    <a href="/leaderboard/" style="font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--m);text-decoration:none;margin-left:20px">Leaderboard</a> <a href="/news/">News</a>
+    <a href="/leaderboard/">Leaderboard</a>
+    <a href="/news/">News</a>
+    <a href="/fortune">Fortune</a>
     <a href="/map.html">Map</a>
-    <a href="/api.html">API</a>
-    <a href="/pricing/">Pricing</a>
+    <a href="/pricing/">API</a>
     <div class="live-dot" title="Live"></div>
     <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle theme">🌙</button>
   </nav>
@@ -178,7 +218,7 @@
 <section class="hero">
   <div class="hero-eyebrow"><span>●</span> Intelligence Agency — Live</div>
   <h1>Weather<em>Arb</em><br>Intelligence</h1>
-  <p class="hero-sub">Anomalie meteo, Space Weather e Grid Risk per 1.514 città in 100+ paesi. Z-Score NASA POWER 25 anni. HDD/CDD energy data. Anomalie meteo in tempo reale.</p>
+  <p class="hero-sub">Anomalie meteo in tempo reale per <strong>3.367 città</strong> in <strong>100+ paesi</strong>. Z-Score NASA POWER 25 anni. HDD/CDD energy data. Space Weather e Grid Risk.</p>
   <div class="hero-btns">
     <a href="/data/" class="btn-pri">Dashboard Live →</a>
     <a href="/pricing/" class="btn-sec">API Pro</a>
@@ -187,30 +227,90 @@
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stat"><div class="stat-n" id="stat-nodes">1.514</div><div class="stat-l">Nodi Globali</div></div>
-  <div class="stat"><div class="stat-n" id="stat-countries">100+</div><div class="stat-l">Paesi</div></div>
+  <div class="stat"><div class="stat-n" id="stat-nodes">3.367</div><div class="stat-l">Nodi Globali</div></div>
+  <div class="stat"><div class="stat-n">100+</div><div class="stat-l">Paesi</div></div>
   <div class="stat"><div class="stat-n">25</div><div class="stat-l">Anni Baseline</div></div>
   <div class="stat"><div class="stat-n" id="live-anom" style="color:var(--g)">—</div><div class="stat-l">Anomalie Live</div></div>
   <div class="stat"><div class="stat-n" id="live-crit" style="color:var(--r)">—</div><div class="stat-l">Critical</div></div>
   <div class="stat"><div class="stat-n" id="live-avg" style="color:var(--bl)">—</div><div class="stat-l">Score Medio</div></div>
 </div>
 
-<!-- GLOBE SECTION -->
-<div style="max-width:1100px;margin:0 auto;padding:0 24px 80px">
-  <div style="font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;display:flex;align-items:center;gap:12px;margin-bottom:20px">
-    <span style="display:inline-block;width:8px;height:8px;background:#00F0FF;border-radius:50%;box-shadow:0 0 10px #00F0FF;animation:pulse 2s infinite"></span>
-    Global Intelligence Network (Live 3D)
-    <span style="flex:1;height:1px;background:linear-gradient(90deg, #141920, transparent);display:block"></span>
+<!-- GLOBE + SIDEBAR -->
+<div class="section-label">
+  <span style="display:inline-block;width:7px;height:7px;background:#00F0FF;border-radius:50%;box-shadow:0 0 8px #00F0FF;animation:pulse 2s infinite"></span>
+  Global Intelligence Network · Live 3D
+</div>
+<div class="globe-layout">
+  <div class="globe-frame">
+    <iframe src="/globe" loading="lazy" title="WeatherArb Globe — Anomalie Meteo Live"></iframe>
+    <a href="/globe" target="_blank" class="globe-open-btn">⛶ Terminale Completo</a>
   </div>
-  <div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(0,240,255,0.2);background:#000103;height:550px;box-shadow:0 15px 50px rgba(0,0,0,0.8), inset 0 0 30px rgba(0,240,255,0.05)">
-    <iframe src="/globe" loading="lazy" style="width:100%;height:100%;border:none;display:block;pointer-events:auto;" title="WeatherArb Metaverse" loading="lazy"></iframe>
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;box-shadow:inset 0 0 60px rgba(0,0,0,0.9);"></div>
-    <a href="/globe" target="_blank" style="position:absolute;bottom:24px;right:24px;background:rgba(2,10,20,0.85);border:1px solid rgba(0,240,255,0.5);color:#00F0FF;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;padding:12px 20px;border-radius:30px;text-decoration:none;z-index:10;backdrop-filter:blur(8px);transition:all 0.3s;box-shadow:0 0 20px rgba(0,240,255,0.15)">
-      ⛶ Apri Terminale Completo
+  <div class="globe-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">🔴 Top Anomalie &gt;3σ</div>
+      <div id="globe-feed"><div style="font-size:12px;color:var(--m)">Caricamento...</div></div>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">📊 Space Weather</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        <div style="text-align:center;padding:10px;background:var(--b);border-radius:8px">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--m);margin-bottom:4px">Kp Index</div>
+          <div id="sw-kp2" style="font-size:22px;font-weight:800;color:var(--g)">...</div>
+        </div>
+        <div style="text-align:center;padding:10px;background:var(--b);border-radius:8px">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--m);margin-bottom:4px">Solar Flare</div>
+          <div id="sw-flare2" style="font-size:22px;font-weight:800;color:var(--g)">...</div>
+        </div>
+      </div>
+      <div id="sw-alert2" style="margin-top:10px;font-size:11px;color:var(--m);line-height:1.5;padding:10px;background:var(--b);border-radius:8px">Caricamento...</div>
+    </div>
+    <a href="/fortune" style="display:block;text-decoration:none;background:linear-gradient(135deg,rgba(139,92,246,.1),rgba(59,130,246,.06));border:1px solid rgba(139,92,246,.25);border-radius:12px;padding:18px;transition:all .2s" onmouseover="this.style.borderColor='rgba(139,92,246,.5)'" onmouseout="this.style.borderColor='rgba(139,92,246,.25)'">
+      <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px">✨ Fortune Meteo</div>
+      <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:4px">La tua Fortuna di Oggi</div>
+      <div style="font-size:12px;color:var(--m)">Basata sui dati meteo reali della tua città →</div>
     </a>
   </div>
 </div>
 
+<!-- SEO CONTENT — Come Funziona -->
+<div class="section-label">Come Funziona WeatherArb</div>
+<div class="seo-section">
+  <div class="seo-grid">
+    <div class="seo-card">
+      <div class="seo-icon">🛰️</div>
+      <div class="seo-title">Dati NASA POWER</div>
+      <div class="seo-body">WeatherArb calcola il <strong>Z-Score climatico</strong> confrontando le temperature attuali con il baseline <strong>NASA POWER ERA5-Land degli ultimi 25 anni</strong>. Uno Z-Score di +3σ indica un evento statisticamente raro che si verifica meno dell'1% delle volte nella storia climatica della città.</div>
+    </div>
+    <div class="seo-card">
+      <div class="seo-icon">⚡</div>
+      <div class="seo-title">HDD/CDD Energy Data</div>
+      <div class="seo-body">I <strong>Heating Degree Days (HDD)</strong> e <strong>Cooling Degree Days (CDD)</strong> sono indicatori standard EN ISO 15927 per misurare la domanda energetica. WeatherArb calcola HDD/CDD in tempo reale e li confronta con il baseline storico per rilevare anomalie nella domanda di energia.</div>
+    </div>
+    <div class="seo-card">
+      <div class="seo-icon">🌍</div>
+      <div class="seo-title">3.367 Nodi Globali</div>
+      <div class="seo-body">La rete WeatherArb monitora <strong>3.367 città in 100+ paesi</strong>, dall'Italia alla Mongolia, dal Brasile alla Nigeria. Ogni nodo aggiorna i propri dati ogni ora tramite Open-Meteo, garantendo un'intelligenza meteorologica globale in tempo reale.</div>
+    </div>
+    <div class="seo-card">
+      <div class="seo-icon">🔭</div>
+      <div class="seo-title">Space Weather & Grid Risk</div>
+      <div class="seo-body">Il <strong>Kp Index geomagnetico</strong> (NOAA SWPC) e le classi di flare solari vengono integrati con i dati meteo terrestri per calcolare il <strong>Grid Risk</strong> — il rischio di perturbazioni sulle reti elettriche europee causate da eventi solari estremi.</div>
+    </div>
+    <div class="seo-card">
+      <div class="seo-icon">🏭</div>
+      <div class="seo-title">Per Energia & Agricoltura</div>
+      <div class="seo-body">WeatherArb è usato da <strong>energy trader</strong>, agronomi, responsabili logistici e analisti finanziari per anticipare variazioni nella domanda energetica, stress termico sui raccolti, e condizioni operative anomale. I dati HDD/CDD sono disponibili via <strong>API Pro</strong>.</div>
+    </div>
+    <div class="seo-card">
+      <div class="seo-icon">📍</div>
+      <div class="seo-title">854 Comuni Italiani</div>
+      <div class="seo-body">WeatherArb monitora <strong>854 comuni italiani</strong> con precisione sub-provinciale, dalle grandi città come Milano, Roma e Napoli ai comuni minori come Tortona, Voghera e Vigevano. Ogni comune ha una pagina dedicata con Z-Score, HDD/CDD e analisi settoriale in tempo reale.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SPACE WEATHER FULL -->
+<div class="section-label">Space Weather & Grid Risk</div>
 <div class="sw-panel">
   <div class="sw-grid">
     <div class="sw-cell">
@@ -244,11 +344,27 @@
 </div>
 
 <!-- TOP SIGNALS -->
-<div class="section-label">Top Segnali Europa</div>
+<div class="section-label">Top Segnali Globali</div>
 <div class="ticker-wrap">
   <div class="ticker" id="ticker">
     <div class="ticker-empty">⏳ Caricamento segnali...</div>
   </div>
+</div>
+
+<!-- FORTUNE BANNER -->
+<div class="section-label">Fortune Meteo del Giorno</div>
+<div class="fortune-banner">
+  <a href="/fortune" class="fortune-inner">
+    <div class="fortune-row">
+      <div class="fortune-emoji">✨</div>
+      <div class="fortune-text">
+        <div class="fortune-tag">Nuovo · Aggiornato ogni giorno</div>
+        <div class="fortune-title">La tua Fortuna Meteorologica di Oggi</div>
+        <div class="fortune-desc">Scopri cosa dicono le anomalie meteo reali della tua città. Basata su Z-Score NASA POWER, numero fortunato, energia del giorno e compatibilità zodiacale. Condivisibile su X/Twitter.</div>
+      </div>
+      <div class="fortune-cta">Scopri la tua →</div>
+    </div>
+  </a>
 </div>
 
 <!-- MAP -->
@@ -261,7 +377,7 @@
 <div class="section-label">Global Network</div>
 <div class="network-section">
   <div class="network-grid">
-    <a href="/it/" class="country-card"><div class="country-code">IT</div><div class="country-name">Italia</div><div class="country-nodes">120 nodi</div></a>
+    <a href="/it/" class="country-card"><div class="country-code">IT</div><div class="country-name">Italia</div><div class="country-nodes">854 pagine</div></a>
     <a href="/in/" class="country-card"><div class="country-code">IN</div><div class="country-name">India</div><div class="country-nodes">75 nodi</div></a>
     <a href="/cn/" class="country-card"><div class="country-code">CN</div><div class="country-name">China</div><div class="country-nodes">67 nodi</div></a>
     <a href="/br/" class="country-card"><div class="country-code">BR</div><div class="country-name">Brazil</div><div class="country-nodes">57 nodi</div></a>
@@ -298,62 +414,25 @@
     <a href="/bd/" class="country-card"><div class="country-code">BD</div><div class="country-name">Bangladesh</div><div class="country-nodes">16 nodi</div></a>
     <a href="/sa/" class="country-card"><div class="country-code">SA</div><div class="country-name">Saudi Arabia</div><div class="country-nodes">16 nodi</div></a>
     <a href="/pl/" class="country-card"><div class="country-code">PL</div><div class="country-name">Polska</div><div class="country-nodes">13 nodi</div></a>
-    <a href="/gh/" class="country-card"><div class="country-code">GH</div><div class="country-name">Ghana</div><div class="country-nodes">12 nodi</div></a>
-    <a href="/ve/" class="country-card"><div class="country-code">VE</div><div class="country-name">Venezuela</div><div class="country-nodes">12 nodi</div></a>
-    <a href="/ke/" class="country-card"><div class="country-code">KE</div><div class="country-name">Kenya</div><div class="country-nodes">11 nodi</div></a>
     <a href="/nl/" class="country-card"><div class="country-code">NL</div><div class="country-name">Nederland</div><div class="country-nodes">10 nodi</div></a>
-    <a href="/ec/" class="country-card"><div class="country-code">EC</div><div class="country-name">Ecuador</div><div class="country-nodes">10 nodi</div></a>
-    <a href="/iq/" class="country-card"><div class="country-code">IQ</div><div class="country-name">Iraq</div><div class="country-nodes">10 nodi</div></a>
-    <a href="/kz/" class="country-card"><div class="country-code">KZ</div><div class="country-name">Kazakhstan</div><div class="country-nodes">10 nodi</div></a>
+    <a href="/ro/" class="country-card"><div class="country-code">RO</div><div class="country-name">România</div><div class="country-nodes">6 nodi</div></a>
+    <a href="/gr/" class="country-card"><div class="country-code">GR</div><div class="country-name">Hellas</div><div class="country-nodes">5 nodi</div></a>
     <a href="/ch/" class="country-card"><div class="country-code">CH</div><div class="country-name">Schweiz</div><div class="country-nodes">8 nodi</div></a>
     <a href="/ca/" class="country-card"><div class="country-code">CA</div><div class="country-name">Canada</div><div class="country-nodes">8 nodi</div></a>
-    <a href="/bg/" class="country-card"><div class="country-code">BG</div><div class="country-name">Bulgaria</div><div class="country-nodes">8 nodi</div></a>
-    <a href="/bo/" class="country-card"><div class="country-code">BO</div><div class="country-name">Bolivia</div><div class="country-nodes">8 nodi</div></a>
-    <a href="/by/" class="country-card"><div class="country-code">BY</div><div class="country-name">Belarus</div><div class="country-nodes">8 nodi</div></a>
-    <a href="/cu/" class="country-card"><div class="country-code">CU</div><div class="country-name">Cuba</div><div class="country-nodes">8 nodi</div></a>
-    <a href="/do/" class="country-card"><div class="country-code">DO</div><div class="country-name">Dom. Rep.</div><div class="country-nodes">8 nodi</div></a>
-    <a href="/et/" class="country-card"><div class="country-code">ET</div><div class="country-name">Ethiopia</div><div class="country-nodes">8 nodi</div></a>
-    <a href="/gt/" class="country-card"><div class="country-code">GT</div><div class="country-name">Guatemala</div><div class="country-nodes">8 nodi</div></a>
-    <a href="/tz/" class="country-card"><div class="country-code">TZ</div><div class="country-name">Tanzania</div><div class="country-nodes">8 nodi</div></a>
+    <a href="/nz/" class="country-card"><div class="country-code">NZ</div><div class="country-name">New Zealand</div><div class="country-nodes">10 nodi</div></a>
+    <a href="/ae/" class="country-card"><div class="country-code">AE</div><div class="country-name">UAE</div><div class="country-nodes">8 nodi</div></a>
+    <a href="/il/" class="country-card"><div class="country-code">IL</div><div class="country-name">Israel</div><div class="country-nodes">10 nodi</div></a>
+    <a href="/kz/" class="country-card"><div class="country-code">KZ</div><div class="country-name">Kazakhstan</div><div class="country-nodes">10 nodi</div></a>
     <a href="/uz/" class="country-card"><div class="country-code">UZ</div><div class="country-name">Uzbekistan</div><div class="country-nodes">8 nodi</div></a>
-    <a href="/at/" class="country-card"><div class="country-code">AT</div><div class="country-name">Österreich</div><div class="country-nodes">7 nodi</div></a>
-    <a href="/be/" class="country-card"><div class="country-code">BE</div><div class="country-name">Belgique</div><div class="country-nodes">7 nodi</div></a>
-    <a href="/pt/" class="country-card"><div class="country-code">PT</div><div class="country-name">Portugal</div><div class="country-nodes">7 nodi</div></a>
-    <a href="/no/" class="country-card"><div class="country-code">NO</div><div class="country-name">Norge</div><div class="country-nodes">7 nodi</div></a>
-    <a href="/np/" class="country-card"><div class="country-code">NP</div><div class="country-name">Nepal</div><div class="country-nodes">7 nodi</div></a>
-    <a href="/ro/" class="country-card"><div class="country-code">RO</div><div class="country-name">România</div><div class="country-nodes">6 nodi</div></a>
-    <a href="/az/" class="country-card"><div class="country-code">AZ</div><div class="country-name">Azerbaijan</div><div class="country-nodes">6 nodi</div></a>
-    <a href="/ba/" class="country-card"><div class="country-code">BA</div><div class="country-name">Bosnia</div><div class="country-nodes">6 nodi</div></a>
-    <a href="/ge/" class="country-card"><div class="country-code">GE</div><div class="country-name">Georgia</div><div class="country-nodes">6 nodi</div></a>
-    <a href="/hn/" class="country-card"><div class="country-code">HN</div><div class="country-name">Honduras</div><div class="country-nodes">6 nodi</div></a>
-    <a href="/lt/" class="country-card"><div class="country-code">LT</div><div class="country-name">Lithuania</div><div class="country-nodes">6 nodi</div></a>
-    <a href="/ug/" class="country-card"><div class="country-code">UG</div><div class="country-name">Uganda</div><div class="country-nodes">6 nodi</div></a>
-    <a href="/dk/" class="country-card"><div class="country-code">DK</div><div class="country-name">Danmark</div><div class="country-nodes">5 nodi</div></a>
-    <a href="/gr/" class="country-card"><div class="country-code">GR</div><div class="country-name">Hellas</div><div class="country-nodes">5 nodi</div></a>
-    <a href="/hr/" class="country-card"><div class="country-code">HR</div><div class="country-name">Hrvatska</div><div class="country-nodes">5 nodi</div></a>
-    <a href="/hu/" class="country-card"><div class="country-code">HU</div><div class="country-name">Magyarország</div><div class="country-nodes">5 nodi</div></a>
-    <a href="/al/" class="country-card"><div class="country-code">AL</div><div class="country-name">Albania</div><div class="country-nodes">5 nodi</div></a>
-    <a href="/ee/" class="country-card"><div class="country-code">EE</div><div class="country-name">Estonia</div><div class="country-nodes">5 nodi</div></a>
-    <a href="/lv/" class="country-card"><div class="country-code">LV</div><div class="country-name">Latvia</div><div class="country-nodes">5 nodi</div></a>
-    <a href="/mk/" class="country-card"><div class="country-code">MK</div><div class="country-name">N. Macedonia</div><div class="country-nodes">5 nodi</div></a>
-    <a href="/cz/" class="country-card"><div class="country-code">CZ</div><div class="country-name">Česko</div><div class="country-nodes">4 nodi</div></a>
-    <a href="/fi/" class="country-card"><div class="country-code">FI</div><div class="country-name">Suomi</div><div class="country-nodes">4 nodi</div></a>
-    <a href="/si/" class="country-card"><div class="country-code">SI</div><div class="country-name">Slovenija</div><div class="country-nodes">2 nodi</div></a>
-    <a href="/sk/" class="country-card"><div class="country-code">SK</div><div class="country-name">Slovensko</div><div class="country-nodes">2 nodi</div></a>
-    <a href="/rs/" class="country-card"><div class="country-code">RS</div><div class="country-name">Srbija</div><div class="country-nodes">2 nodi</div></a>
-    <a href="/sg/" class="country-card"><div class="country-code">SG</div><div class="country-name">Singapore</div><div class="country-nodes">1 nodi</div></a>
-    <a href="/lk/" class="country-card"><div class="country-code">LK</div><div class="country-name">Sri Lanka</div><div class="country-nodes">1 nodi</div></a>
-    <a href="/mn/" class="country-card"><div class="country-code">MN</div><div class="country-name">Mongolia</div><div class="country-nodes">1 nodi</div></a>
-    <a href="/ae/" class="country-card"><div class="country-code">AE</div><div class="country-name">UAE</div><div class="country-nodes">1 nodi</div></a>
-    <a href="/il/" class="country-card"><div class="country-code">IL</div><div class="country-name">Israel</div><div class="country-nodes">1 nodi</div></a>
-    <a href="/nz/" class="country-card"><div class="country-code">NZ</div><div class="country-name">New Zealand</div><div class="country-nodes">1 nodi</div></a>
+    <a href="/ke/" class="country-card"><div class="country-code">KE</div><div class="country-name">Kenya</div><div class="country-nodes">11 nodi</div></a>
+    <a href="/et/" class="country-card"><div class="country-code">ET</div><div class="country-name">Ethiopia</div><div class="country-nodes">8 nodi</div></a>
   </div>
 </div>
 
 <!-- REPORTS -->
 <div class="section-label">
   Intelligence Reports
-  <a href="/leaderboard/" style="font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--m);text-decoration:none;margin-left:20px">Leaderboard</a> <a href="/news/" style="font-size:11px;color:var(--bl);text-decoration:none;margin-left:auto;letter-spacing:normal;text-transform:none">Archivio →</a>
+  <a href="/news/" style="font-size:11px;color:var(--bl);text-decoration:none;margin-left:auto;letter-spacing:normal;text-transform:none">Archivio →</a>
 </div>
 <div class="reports-section">
   <div class="reports-grid" id="reports-grid">
@@ -361,25 +440,24 @@
   </div>
 </div>
 
-
 <!-- NEWSLETTER -->
-<div class="section-label">Intelligence Alert &mdash; Gratuito</div>
+<div class="section-label">Intelligence Alert — Gratuito</div>
 <div class="nl-section">
   <div class="nl-hero">
-    <div class="nl-tag">&#128225; Newsletter</div>
+    <div class="nl-tag">📡 Newsletter</div>
     <h2>Ricevi le Anomalie Meteo<br>nella tua Inbox</h2>
-    <p>Z-Score, HDD/CDD, Space Weather e Grid Risk per l'Europa. Ogni settimana, gratis. Usato da energy trader, agronomi e logistici.</p>
+    <p>Z-Score, HDD/CDD, Space Weather e Grid Risk per 3.367 città globali. Ogni settimana, gratis. Usato da energy trader, agronomi e logistici.</p>
     <div class="nl-form" id="nl-home-form">
       <input id="nl-home-email" class="nl-email" type="email" placeholder="La tua email" onkeydown="if(event.key==='Enter')nlHomeSubmit()">
-      <button class="nl-submit" onclick="nlHomeSubmit()">Iscriviti &#8594;</button>
+      <button class="nl-submit" onclick="nlHomeSubmit()">Iscriviti →</button>
     </div>
     <div class="nl-error" id="nl-home-error"></div>
-    <div class="nl-success" id="nl-home-success">&#10003; Iscritto! Il prossimo briefing arriva luned&#236;.</div>
+    <div class="nl-success" id="nl-home-success">✓ Iscritto! Il prossimo briefing arriva lunedì.</div>
     <p class="nl-note">Nessuno spam. Cancellazione con un click.</p>
     <div class="nl-stats">
-      <div><div class="nl-stat-n">322</div><div class="nl-stat-l">Nodi EU</div></div>
-      <div><div class="nl-stat-n">23</div><div class="nl-stat-l">Paesi</div></div>
-      <div><div class="nl-stat-n">6h</div><div class="nl-stat-l">Update</div></div>
+      <div><div class="nl-stat-n">3.367</div><div class="nl-stat-l">Nodi Globali</div></div>
+      <div><div class="nl-stat-n">100+</div><div class="nl-stat-l">Paesi</div></div>
+      <div><div class="nl-stat-n">4h</div><div class="nl-stat-l">Update</div></div>
     </div>
   </div>
 </div>
@@ -389,18 +467,19 @@
   <span>WeatherArb © 2026 — Independent Weather Intelligence Agency</span>
   <div>
     <a href="/about.html">Methodology</a>
-    <a href="/api.html">API</a>
-    <a href="/pricing/">Pricing</a>
-    <a href="/leaderboard/" style="font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--m);text-decoration:none;margin-left:20px">Leaderboard</a> <a href="/news/">News</a>
+    <a href="/pricing/">API</a>
+    <a href="/fortune">Fortune</a>
+    <a href="/leaderboard/">Leaderboard</a>
+    <a href="/news/">News</a>
     <a href="/data/">Data</a>
   </div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-const API = 'https://api.weatherarb.com';
-const COL = {CRITICAL:'#ef4444',EXTREME:'#f97316',UNUSUAL:'#f59e0b',NORMAL:'#10b981'};
-const CC_FLAG = {it:'🇮🇹',de:'🇩🇪',fr:'🇫🇷',es:'🇪🇸',gb:'🇬🇧',se:'🇸🇪',nl:'🇳🇱',pl:'🇵🇱',at:'🇦🇹',ch:'🇨🇭',be:'🇧🇪',pt:'🇵🇹',dk:'🇩🇰',no:'🇳🇴',gr:'🇬🇷',hr:'🇭🇷',cz:'🇨🇿',hu:'🇭🇺',ro:'🇷🇴',fi:'🇫🇮',si:'🇸🇮',sk:'🇸🇰',rs:'🇷🇸'};
+const API='https://api.weatherarb.com';
+const COL={CRITICAL:'#ef4444',EXTREME:'#f97316',UNUSUAL:'#f59e0b',NORMAL:'#10b981'};
+const CC_FLAG={it:'🇮🇹',de:'🇩🇪',fr:'🇫🇷',es:'🇪🇸',gb:'🇬🇧',se:'🇸🇪',nl:'🇳🇱',pl:'🇵🇱',at:'🇦🇹',ch:'🇨🇭',be:'🇧🇪',pt:'🇵🇹',dk:'🇩🇰',no:'🇳🇴',gr:'🇬🇷',hr:'🇭🇷',cz:'🇨🇿',hu:'🇭🇺',ro:'🇷🇴',fi:'🇫🇮',si:'🇸🇮',sk:'🇸🇰',rs:'🇷🇸',us:'🇺🇸',ca:'🇨🇦',jp:'🇯🇵',cn:'🇨🇳',in:'🇮🇳',br:'🇧🇷',ru:'🇷🇺',au:'🇦🇺',mx:'🇲🇽',ar:'🇦🇷',tr:'🇹🇷',kr:'🇰🇷',sg:'🇸🇬',th:'🇹🇭',id:'🇮🇩',ph:'🇵🇭',vn:'🇻🇳',my:'🇲🇾',pk:'🇵🇰',bd:'🇧🇩',lk:'🇱🇰',np:'🇳🇵',mn:'🇲🇳',ae:'🇦🇪',sa:'🇸🇦',ir:'🇮🇷',il:'🇮🇱',ng:'🇳🇬',eg:'🇪🇬',ke:'🇰🇪',za:'🇿🇦',ma:'🇲🇦',dz:'🇩🇿',gh:'🇬🇭',co:'🇨🇴',cl:'🇨🇱',pe:'🇵🇪',nz:'🇳🇿',ua:'🇺🇦',tw:'🇹🇼'};
 
 // THEME
 function toggleTheme(){
@@ -417,9 +496,9 @@ function toggleTheme(){
 })();
 
 // MAP
-var mapTiles, map;
+var mapTiles,map;
 function initMap(){
-  map=L.map('map',{center:[30,0],zoom:2,zoomControl:true,attributionControl:false});
+  map=L.map('map',{center:[20,10],zoom:2,zoomControl:true,attributionControl:false});
   var isDark=document.documentElement.getAttribute('data-theme')==='dark';
   mapTiles=L.tileLayer(isDark?'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png':'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:18}).addTo(map);
 }
@@ -437,7 +516,7 @@ function addMarker(d){
   var lv=d.anomaly_level||'NORMAL';
   var col=COL[lv]||COL.NORMAL;
   var sc=d.score||0;
-  var r=5+sc*0.7;
+  var r=4+sc*0.6;
   var cc=(d.country_code||'it').toLowerCase();
   var slug=(d.location||'').toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
   var m=L.circleMarker([d.lat,d.lon],{radius:r,fillColor:col,color:col,weight:1,fillOpacity:sc>4?0.85:0.4})
@@ -445,14 +524,13 @@ function addMarker(d){
   m.addTo(map);markers.push(m);
 }
 
-// DATA
 var allData=[];
 async function loadData(){
   try{
     var r=await fetch(API+'/api/v1/europe/top?limit=50');
     var data=await r.json();
     allData=(data.reports||data.data||[]);
-    renderStats();renderTicker();renderMap();
+    renderStats();renderTicker();renderMap();renderGlobeFeed();
   }catch(e){setTimeout(loadData,30000);}
 }
 function renderStats(){
@@ -462,6 +540,18 @@ function renderStats(){
   var el=document.getElementById('live-anom'); if(el)el.textContent=crit+ext;
   var elc=document.getElementById('live-crit'); if(elc)elc.textContent=crit;
   var ela=document.getElementById('live-avg'); if(ela)ela.textContent=avg.toFixed(1);
+}
+function renderGlobeFeed(){
+  var feed=document.getElementById('globe-feed');
+  if(!feed)return;
+  var top=allData.filter(d=>Math.abs(d.z_score||0)>=3).slice(0,6);
+  if(!top.length){feed.innerHTML='<div style="font-size:12px;color:var(--m)">Nessuna anomalia critica</div>';return;}
+  feed.innerHTML=top.map(function(d){
+    var z=d.z_score||0,sign=z>=0?'+':'',col=z>=0?'#ef4444':'#3388FF';
+    var cc=(d.country_code||'it').toLowerCase();
+    var flag=CC_FLAG[cc]||'🌍';
+    return '<div class="feed-item"><div><span class="feed-city">'+flag+' '+(d.location||'—')+'</span><span class="feed-cc">'+cc.toUpperCase()+'</span></div><span class="feed-z" style="color:'+col+'">'+sign+z.toFixed(1)+'σ</span></div>';
+  }).join('');
 }
 function renderTicker(){
   var t=document.getElementById('ticker');
@@ -486,7 +576,6 @@ function renderTicker(){
 }
 function renderMap(){clearMarkers();allData.forEach(addMarker);}
 
-// SPACE WEATHER
 async function loadSpaceWeather(){
   try{
     var r=await fetch('/data/grid_stress.json');
@@ -506,19 +595,22 @@ async function loadSpaceWeather(){
     var gs_col=top.risk_level==='CRITICAL'?'#ef4444':top.risk_level==='HIGH'?'#f97316':top.risk_level==='MODERATE'?'#f59e0b':'#10b981';
     var e=function(id){return document.getElementById(id);};
     if(e('sw-kp')){e('sw-kp').textContent=kp.toFixed(1);e('sw-kp').style.color=kp_col;}
+    if(e('sw-kp2')){e('sw-kp2').textContent=kp.toFixed(1);e('sw-kp2').style.color=kp_col;}
     if(e('sw-kp-label'))e('sw-kp-label').textContent=kp_label;
     if(e('sw-kp-bar')){e('sw-kp-bar').style.width=kp_pct+'%';e('sw-kp-bar').style.background=kp_col;}
     if(e('sw-flare')){e('sw-flare').textContent=flare;e('sw-flare').style.color=flare_col;}
+    if(e('sw-flare2')){e('sw-flare2').textContent=flare;e('sw-flare2').style.color=flare_col;}
     if(e('sw-flare-label'))e('sw-flare-label').textContent=flare_desc;
     if(e('sw-grid-score')){e('sw-grid-score').textContent=top.grid_stress_score?top.grid_stress_score.toFixed(1)+'/10':'--';e('sw-grid-score').style.color=gs_col;}
     if(e('sw-grid-city'))e('sw-grid-city').textContent=top.location?(top.location+' · '+(top.risk_level||'')):'--';
     if(e('sw-kp-forecast')){e('sw-kp-forecast').textContent=kp_forecast.toFixed(1);e('sw-kp-forecast').style.color=kp_forecast>=5?'#f97316':'#10b981';}
     var alert_col=top.risk_level==='CRITICAL'?'#ef4444':top.risk_level==='HIGH'?'#f97316':'#10b981';
-    if(e('sw-alert'))e('sw-alert').innerHTML='<b style="color:'+alert_col+'">⚡ Grid Intelligence</b> — '+(top.label||'Condizioni normali — nessuna perturbazione geomagnetica significativa')+' <span style="color:var(--m);font-size:10px">· NOAA SWPC '+(sw.timestamp?sw.timestamp.slice(0,16).replace('T',' ')+' UTC':'')+'</span>';
+    var alert_txt='<b style="color:'+alert_col+'">⚡ Grid Intelligence</b> — '+(top.label||'Condizioni normali')+' <span style="color:var(--m);font-size:10px">· NOAA SWPC '+(sw.timestamp?sw.timestamp.slice(0,16).replace('T',' ')+' UTC':'')+'</span>';
+    if(e('sw-alert'))e('sw-alert').innerHTML=alert_txt;
+    if(e('sw-alert2'))e('sw-alert2').textContent=(top.label||'Condizioni normali — nessuna perturbazione significativa');
   }catch(e){console.warn('Space weather unavailable');}
 }
 
-// REPORTS
 async function loadReports(){
   try{
     var r=await fetch('/data/latest_reports.json');
@@ -530,7 +622,7 @@ async function loadReports(){
       var lv=p.anomaly_level||'NORMAL';
       var col=COL[lv]||COL.NORMAL;
       var z=p.z_score||0; var sign=z>=0?'+':'';
-      var cover=p.cover_url?'<img src="'+p.cover_url+'&w=600&q=70" alt="" class="rc-cover">':'<div class="rc-cover-placeholder"></div>';
+      var cover=p.cover_url?'<img src="'+p.cover_url+'&w=600&q=70" alt="" class="rc-cover" loading="lazy">':'<div class="rc-cover-placeholder"></div>';
       return '<a href="'+(p.url||'/news/'+p.slug+'/')+ '" class="report-card">'+cover+
         '<div class="rc-body"><div class="rc-head">'+
         '<span class="rc-tag" style="background:'+col+'22;color:'+col+'">'+p.location+'</span>'+
@@ -544,117 +636,70 @@ async function loadReports(){
   }catch(e){console.warn('Reports error',e);}
 }
 
-// BOOT
-loadData();
-loadSpaceWeather();
-loadReports();
-setInterval(loadData,300000);
-setInterval(loadSpaceWeather,900000);
+loadData();loadSpaceWeather();loadReports();
+setInterval(loadData,300000);setInterval(loadSpaceWeather,900000);
 
-async function nlHomeSubmit() {
-  var email = document.getElementById('nl-home-email').value.trim();
-  var errEl = document.getElementById('nl-home-error');
-  var okEl = document.getElementById('nl-home-success');
-  var formEl = document.getElementById('nl-home-form');
-  errEl.style.display = 'none';
-  if (!email || email.indexOf('@') < 0) {
-    errEl.textContent = 'Email non valida.';
-    errEl.style.display = 'block'; return;
-  }
-  try {
-    var r = await fetch('https://api.weatherarb.com/api/newsletter/subscribe?email=' + encodeURIComponent(email) + '&city=Europa&country_code=eu', {method: 'POST'});
-    var d = await r.json();
-    formEl.style.display = 'none';
-    okEl.style.display = 'block';
-    if (d.status === 'already_subscribed') okEl.textContent = 'Sei gia iscritto! Ti invieremo il prossimo briefing.';
-  } catch(e) {
-    errEl.textContent = 'Errore — riprova.'; errEl.style.display = 'block';
-  }
+async function nlHomeSubmit(){
+  var email=document.getElementById('nl-home-email').value.trim();
+  var errEl=document.getElementById('nl-home-error');
+  var okEl=document.getElementById('nl-home-success');
+  var formEl=document.getElementById('nl-home-form');
+  errEl.style.display='none';
+  if(!email||email.indexOf('@')<0){errEl.textContent='Email non valida.';errEl.style.display='block';return;}
+  try{
+    var r=await fetch('https://api.weatherarb.com/api/newsletter/subscribe?email='+encodeURIComponent(email)+'&city=Europa&country_code=eu',{method:'POST'});
+    var d=await r.json();
+    formEl.style.display='none';okEl.style.display='block';
+    if(d.status==='already_subscribed')okEl.textContent='Sei già iscritto!';
+  }catch(e){errEl.textContent='Errore — riprova.';errEl.style.display='block';}
 }
 
-
-// GEOLOCALIZZAZIONE AUTO
-async function loadGeoAlert() {
-  try {
-    // Usa Cloudflare per IP geolocation (gratis, già disponibile)
-    var r = await fetch('https://cloudflare.com/cdn-cgi/trace');
-    var t = await r.text();
-    var loc = {};
-    t.split('\n').forEach(function(l){ var p=l.split('='); if(p.length==2) loc[p[0]]=p[1]; });
-    var country = (loc.loc||'').toLowerCase();
-    
-    // Prova browser GPS (più preciso)
-    if(navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(async function(pos) {
-        var lat = pos.coords.latitude;
-        var lon = pos.coords.longitude;
-        
-        // Trova nodo più vicino dall'API
-        var top = await fetch(API+'/api/v1/europe/top?limit=200');
-        var data = await top.json();
-        var nodes = data.data || data.reports || [];
-        
-        // Calcola distanza
-        var nearest = null, minDist = Infinity;
-        nodes.forEach(function(n) {
-          if(!n.lat||!n.lon) return;
-          var d = Math.sqrt(Math.pow(n.lat-lat,2)+Math.pow(n.lon-lon,2));
-          if(d < minDist) { minDist=d; nearest=n; }
-        });
-        
-        if(nearest && nearest.score >= 3) {
-          showGeoAlert(nearest);
-        }
-      }, function(){}, {timeout:5000});
+// GEOALERT
+async function loadGeoAlert(){
+  try{
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(async function(pos){
+        var lat=pos.coords.latitude,lon=pos.coords.longitude;
+        var top=await fetch(API+'/api/v1/pulse/nearby?lat='+lat+'&lon='+lon);
+        var node=await top.json();
+        if(node&&node.score>=3)showGeoAlert(node);
+      },function(){},{ timeout:5000});
     }
-  } catch(e) {}
+  }catch(e){}
 }
-
-function showGeoAlert(node) {
-  var existing = document.getElementById('geo-alert');
-  if(existing) return;
-  
-  var z = node.z_score || 0;
-  var sc = node.score || 0;
-  var sign = z >= 0 ? '+' : '';
-  var col = sc>=7?'#ef4444':sc>=5?'#f97316':'#f59e0b';
-  var cc = (node.country_code||'it').toLowerCase();
-  var slug = (node.location||'').toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
-  var ev = (node.vertical||node.event_type||'anomalia').replace(/_/g,' ');
-  
-  var bar = document.createElement('div');
-  bar.id = 'geo-alert';
-  bar.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:1000;background:linear-gradient(135deg,rgba(4,6,8,.97),rgba(10,13,18,.97));border-top:1px solid '+col+';padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;backdrop-filter:blur(16px)';
-  bar.innerHTML = (
-    '<div style="display:flex;align-items:center;gap:12px">' +
-    '<div style="width:8px;height:8px;border-radius:50%;background:'+col+';box-shadow:0 0 10px '+col+';animation:pulse 2s infinite"></div>' +
-    '<div><div style="font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:'+col+';margin-bottom:2px">📍 Rilevato vicino a te</div>' +
-    '<div style="font-size:15px;font-weight:700;color:#fff">'+node.location+' — '+ev.charAt(0).toUpperCase()+ev.slice(1)+'</div>' +
-    '<div style="font-size:12px;color:#4a5568">Z-Score <span style="color:'+col+';font-weight:700">'+sign+z.toFixed(2)+'σ</span> · Score '+sc.toFixed(1)+'/10</div>' +
-    '</div></div>' +
-    '<div style="display:flex;gap:10px;align-items:center">' +
-    '<a href="/'+cc+'/'+slug+'/" style="background:'+col+';color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;white-space:nowrap">Analisi locale →</a>' +
-    '<button onclick="document.getElementById(&quot;geo-alert&quot;).remove()" style="background:transparent;border:1px solid #1e2d3d;border-radius:8px;padding:10px;color:#4a5568;cursor:pointer;font-size:16px">✕</button>' +
-    '</div>'
-  );
+function showGeoAlert(node){
+  if(document.getElementById('geo-alert'))return;
+  var z=node.z_score||0,sc=node.score||0,sign=z>=0?'+':'';
+  var col=sc>=7?'#ef4444':sc>=5?'#f97316':'#f59e0b';
+  var cc=(node.country_code||'it').toLowerCase();
+  var slug=(node.comune||node.province||node.location||'').toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
+  var ev=(node.event_type||'anomalia').replace(/_/g,' ');
+  var bar=document.createElement('div');
+  bar.id='geo-alert';
+  bar.style.cssText='position:fixed;bottom:0;left:0;right:0;z-index:1000;background:linear-gradient(135deg,rgba(4,6,8,.97),rgba(10,13,18,.97));border-top:1px solid '+col+';padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;backdrop-filter:blur(16px)';
+  bar.innerHTML='<div style="display:flex;align-items:center;gap:12px">'+
+    '<div style="width:8px;height:8px;border-radius:50%;background:'+col+';box-shadow:0 0 10px '+col+';animation:pulse 2s infinite"></div>'+
+    '<div><div style="font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:'+col+';margin-bottom:2px">📍 Rilevato vicino a te</div>'+
+    '<div style="font-size:15px;font-weight:700;color:#fff">'+(node.comune||node.province||node.location)+' — '+ev.charAt(0).toUpperCase()+ev.slice(1)+'</div>'+
+    '<div style="font-size:12px;color:#4a5568">Z-Score <span style="color:'+col+';font-weight:700">'+sign+z.toFixed(2)+'σ</span> · Score '+sc.toFixed(1)+'/10</div>'+
+    '</div></div>'+
+    '<div style="display:flex;gap:10px;align-items:center">'+
+    '<a href="/'+cc+'/'+slug+'/" style="background:'+col+';color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap">Analisi locale →</a>'+
+    '<button onclick="document.getElementById(\'geo-alert\').remove()" style="background:transparent;border:1px solid #1e2d3d;border-radius:8px;padding:10px;color:#4a5568;cursor:pointer;font-size:16px">✕</button>'+
+    '</div>';
   document.body.appendChild(bar);
 }
+setTimeout(loadGeoAlert,2000);
 
-// Lancia dopo 2 secondi
-setTimeout(loadGeoAlert, 2000);
-
-</script>
-
-<script>
-// Aggiorna stats in tempo reale dall'API
+// Live node count
 (async function(){
-  try {
-    const r = await fetch('https://api.weatherarb.com/api/v1/europe/top?limit=1');
-    const d = await r.json();
-    const total = d.count || 1514;
-    const el = document.getElementById('stat-nodes');
-    if(el) el.textContent = total.toLocaleString('it-IT');
-  } catch(e) {}
+  try{
+    const r=await fetch('https://api.weatherarb.com/api/v1/europe/top?limit=1');
+    const d=await r.json();
+    const total=d.count||3367;
+    const el=document.getElementById('stat-nodes');
+    if(el)el.textContent=total.toLocaleString('it-IT');
+  }catch(e){}
 })();
 </script>
 </body>
