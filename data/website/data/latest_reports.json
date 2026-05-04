@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-04T19:19:00.531828+00:00",
-  "count": 16,
+  "last_updated": "2026-05-04T21:04:46.761228+00:00",
+  "count": 22,
   "reports": [
     {
       "slug": "2026-05-04-winnipeg-cold-snap",
@@ -16,6 +16,36 @@
       "cover_url": "https://images.unsplash.com/photo-1597336996466-5279545aaa7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc4OTc1ODN8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-04-winnipeg-cold-snap/",
       "excerpt": "Winnipeg sta sperimentando un anomalo evento di freddo estremo. La temperatura e' scesa a livelli critici."
+    },
+    {
+      "slug": "2026-05-04-umea-heavy-rain",
+      "title": "Umea Heavy Rain",
+      "lead": "Umea is experiencing heavy rain with a Z-Score of -3.26, indicating a significant anomaly. The score of 10.0/10 and CRITICAL level indicate extreme conditions....",
+      "location": "Umeå",
+      "country_code": "se",
+      "vertical": "heavy-rain",
+      "z_score": -3.26,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-04",
+      "cover_url": "https://images.unsplash.com/photo-1631378726342-9097408d2b55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5Mjg2NjN8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-04-umea-heavy-rain/",
+      "excerpt": "Umea is experiencing heavy rain with a Z-Score of -3.26, indicating a significant anomaly. The score of 10.0/10 and CRITICAL level indicate extreme conditions."
+    },
+    {
+      "slug": "2026-05-04-trondheim-heavy-rain",
+      "title": "Trondheim Heavy Rain",
+      "lead": "Trondheim is experiencing heavy rain with a Z-Score of -3.69, indicating a significant anomaly. The Score of 10.0/10 and CRITICAL Level suggest extreme weather ...",
+      "location": "Trondheim",
+      "country_code": "no",
+      "vertical": "heavy-rain",
+      "z_score": -3.69,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-04",
+      "cover_url": "https://images.unsplash.com/photo-1731779456498-e8be10924bea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5Mjg2Njl8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-04-trondheim-heavy-rain/",
+      "excerpt": "Trondheim is experiencing heavy rain with a Z-Score of -3.69, indicating a significant anomaly. The Score of 10.0/10 and CRITICAL Level suggest extreme weather conditions."
     },
     {
       "slug": "2026-05-04-trondheim-cold-snap",
@@ -46,6 +76,36 @@
       "cover_url": "https://images.unsplash.com/photo-1771160014001-0570034fa269?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc4OTc1Njl8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-04-tromsoe-cold-snap/",
       "excerpt": "Tromsoe sta sperimentando un anomalo evento di cold snap con un Z-Score di -3.17. Le condizioni meteo estreme sono classificate come CRITICAL."
+    },
+    {
+      "slug": "2026-05-04-tampa-heat-wave",
+      "title": "Tampa Heat Wave",
+      "lead": "Tampa is experiencing a critical heat wave with a Z-Score of +3.34. This event has reached a score of 10.0/10, indicating extreme conditions....",
+      "location": "Tampa",
+      "country_code": "us",
+      "vertical": "heat-wave",
+      "z_score": 3.34,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-04",
+      "cover_url": "https://images.unsplash.com/photo-1645409229574-33c6d63ca81d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5Mjg2Nzh8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-04-tampa-heat-wave/",
+      "excerpt": "Tampa is experiencing a critical heat wave with a Z-Score of +3.34. This event has reached a score of 10.0/10, indicating extreme conditions."
+    },
+    {
+      "slug": "2026-05-04-stavanger-cold-snap",
+      "title": "Stavanger Cold Snap",
+      "lead": "A severe cold snap is affecting Stavanger with a Z-Score of -3.46. This event has a critical score of 10.0/10....",
+      "location": "Stavanger",
+      "country_code": "no",
+      "vertical": "cold-snap",
+      "z_score": -3.46,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-04",
+      "cover_url": "https://images.unsplash.com/photo-1571171307515-ea967318c581?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5Mjg2NzJ8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-04-stavanger-cold-snap/",
+      "excerpt": "A severe cold snap is affecting Stavanger with a Z-Score of -3.46. This event has a critical score of 10.0/10."
     },
     {
       "slug": "2026-05-04-sapporo-heavy-rain",
@@ -108,6 +168,21 @@
       "excerpt": "Una forte ondata di freddo colpisce Quebec City. La temperatura e' estremamente bassa."
     },
     {
+      "slug": "2026-05-04-orlando-heat-wave",
+      "title": "Orlando Heat Wave",
+      "lead": "Orlando is experiencing a critical heat wave with a Z-Score of +3.26. The city's temperature has reached extreme levels, scoring 10.0/10 on our severity scale....",
+      "location": "Orlando",
+      "country_code": "us",
+      "vertical": "heat-wave",
+      "z_score": 3.26,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-04",
+      "cover_url": "https://images.unsplash.com/photo-1772845448637-144f160a89b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5Mjg2ODF8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-04-orlando-heat-wave/",
+      "excerpt": "Orlando is experiencing a critical heat wave with a Z-Score of +3.26. The city's temperature has reached extreme levels, scoring 10.0/10 on our severity scale."
+    },
+    {
       "slug": "2026-05-04-mumbai-heat-wave",
       "title": "Mumbai heat wave",
       "lead": "Mumbai sta attraversando un'ondata di caldo estremo. La temperatura e' aumentata di molto....",
@@ -136,6 +211,21 @@
       "cover_url": "",
       "url": "/news/2026-05-04-miskolc-heat-wave/",
       "excerpt": "Miskolc is experiencing a critical heat wave with a Z-Score of +3.11. The city's temperature has reached extreme levels, posing a significant threat to its residents."
+    },
+    {
+      "slug": "2026-05-04-el-paso-heat-wave",
+      "title": "El Paso Heat Wave",
+      "lead": "El Paso is experiencing a severe heat wave with a Z-Score of +3.00. This critical event has a score of 10.0/10, indicating extreme conditions....",
+      "location": "El Paso",
+      "country_code": "us",
+      "vertical": "heat-wave",
+      "z_score": 3.0,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-04",
+      "cover_url": "https://images.unsplash.com/photo-1575481045729-5e85f7bde80a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5Mjg2ODR8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-04-el-paso-heat-wave/",
+      "excerpt": "El Paso is experiencing a severe heat wave with a Z-Score of +3.00. This critical event has a score of 10.0/10, indicating extreme conditions."
     },
     {
       "slug": "2026-05-04-edmonton-cold-snap",
@@ -211,36 +301,6 @@
       "cover_url": "https://images.unsplash.com/photo-1736709878158-25db376778df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5MTU2MDF8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-04-bergen-cold-snap/",
       "excerpt": "A severe cold snap is affecting Bergen, with a Z-Score of -3.23. This is a critical weather event with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-04-bangalore-heat-wave",
-      "title": "Bangalore heat wave",
-      "lead": "La citta di Bangalore sta registrando un anomalo picco di caldo con un Z-Score di +5.00. La situazione e critica con un indice di caldo estremo....",
-      "location": "Bangalore",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 5.0,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-04",
-      "cover_url": "https://images.unsplash.com/photo-1709904702743-c1696946c674?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc4OTc2MDR8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-04-bangalore-heat-wave/",
-      "excerpt": "La citta di Bangalore sta registrando un anomalo picco di caldo con un Z-Score di +5.00. La situazione e critica con un indice di caldo estremo."
-    },
-    {
-      "slug": "2026-05-04-anchorage-heavy-rain",
-      "title": "Anchorage: heavy rain",
-      "lead": "Anchorage sta sperimentando una pioggia intensa anomala. Il Z-Score di -3.77 indica un evento estremamente raro....",
-      "location": "Anchorage",
-      "country_code": "us",
-      "vertical": "heavy-rain",
-      "z_score": -3.77,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-04",
-      "cover_url": "https://images.unsplash.com/photo-1704243962389-6e57197ccf09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc4OTc1NzJ8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-04-anchorage-heavy-rain/",
-      "excerpt": "Anchorage sta sperimentando una pioggia intensa anomala. Il Z-Score di -3.77 indica un evento estremamente raro."
     }
   ]
 }
