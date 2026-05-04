@@ -187,7 +187,7 @@ def refresh_all():
 
     # Fetch weather in small batches, saving progress
     logger.info("Fetching weather incrementally from Open-Meteo...")
-    fetch_all_weather_batch(PROVINCES[:500])  # Process first 500 only
+    fetch_all_weather_batch(PROVINCES[:1000])  # Process first 500 only
     logger.info(f"Weather cache loaded: {len(_weather_cache)} cities")
 
     for p in PROVINCES:
