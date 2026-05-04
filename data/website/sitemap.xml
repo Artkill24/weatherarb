@@ -31,6 +31,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://weatherarb.com/news/2026-05-04-trondheim-cold-snap/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://weatherarb.com/news/2026-05-04-tromsoe-cold-snap/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -55,6 +61,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://weatherarb.com/news/2026-05-04-miskolc-heat-wave/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://weatherarb.com/news/2026-05-04-edmonton-cold-snap/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -68,6 +80,12 @@
   </url>
   <url>
     <loc>https://weatherarb.com/news/2026-05-04-calgary-cold-snap/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://weatherarb.com/news/2026-05-04-bergen-heavy-rain/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

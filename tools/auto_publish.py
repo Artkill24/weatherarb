@@ -159,6 +159,21 @@ def make_article(sig):
     if cdd is not None: energy_ctx += f", CDD={cdd:.1f} GG"
     if hum is not None: energy_ctx += f", Umidita={hum}%"
     if wind is not None: energy_ctx += f", Vento={wind} km/h"
+    # Bilingual: IT for italian cities, EN for global
+    _cc = sig.get("country_code","it")
+    if _cc != "it":
+        prompt = (
+            f"You are a senior weather analyst at WeatherArb. Write ~250 words in English about:\n"
+            f"City: {city}, Event: {vert}, Z-Score: {sign}{z:.2f}, Score: {sc:.1f}/10, Level: {lvl}{energy_ctx}\n"
+            f'Reply ONLY with valid JSON, no markdown, ASCII only:\n'
+            f'{{"title":"...","lead":"...","body":"...","conclusion":"...","agri_impact":"...","logistica_impact":"...","energia_impact":"..."}}\n'
+            f"- title: SEO title with city and event (max 70 chars)\n"
+            f"- lead: 2 clear sentences about the anomaly\n"
+            f"- body: 3 paragraphs separated by \\n\n"
+            f"- conclusion: 1 operational sentence\n"
+            f"- agri_impact, logistica_impact, energia_impact: max 20 words each"
+        )
+        return generate(prompt)
     prompt = (
         f"Sei un analista meteo senior di WeatherArb. Scrivi in italiano circa 250 parole su:\n"
         f"Citta: {city}, Evento: {vert}, Z-Score: {sign}{z:.2f}, Score: {sc:.1f}/10, Livello: {lvl}{energy_ctx}\n"
