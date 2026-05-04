@@ -3,432 +3,648 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>WeatherArb • Earth Intelligence v8</title>
+<title>WeatherArb • Cosmic Intelligence Terminal</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap');
-:root{--cyan:#00F0FF;--alert:#FF3366;--warn:#FF9933;--cold:#3388FF;--ok:#00FF88}
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800;900&display=swap');
+
+:root {
+  --cyan:#00F5FF;--magenta:#FF006E;--gold:#FFD60A;--violet:#7B2FFF;
+  --green:#00FF88;--orange:#FF6B35;--bg:#00010A;
+}
+
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:100%;height:100%;overflow:hidden;background:#000103;font-family:'Space Mono',monospace;color:#e2e8f0}
+html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);font-family:'Space Mono',monospace;color:#e2e8f0}
+
 #globe-container{position:fixed;inset:0;z-index:1}
 
+/* Cosmic nebula overlay */
+#nebula{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(123,47,255,.08) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 80% 70%, rgba(0,245,255,.06) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 30% at 60% 20%, rgba(255,0,110,.05) 0%, transparent 50%),
+    radial-gradient(ellipse 30% 50% at 10% 80%, rgba(0,255,136,.04) 0%, transparent 50%);}
+
 /* Scanlines */
-body::after{content:'';position:fixed;inset:0;z-index:2;pointer-events:none;
-  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.04) 3px,rgba(0,0,0,.04) 4px);opacity:.6}
+#scan{position:fixed;inset:0;z-index:2;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,245,255,.015) 3px,rgba(0,245,255,.015) 4px);
+  animation:scanroll 8s linear infinite;}
+@keyframes scanroll{from{background-position:0 0}to{background-position:0 200px}}
 
 /* Vignette */
-body::before{content:'';position:fixed;inset:0;z-index:2;pointer-events:none;
-  background:radial-gradient(ellipse 90% 90% at 50% 50%,transparent 35%,rgba(0,1,3,.88) 100%)}
+#vignette{position:fixed;inset:0;z-index:2;pointer-events:none;
+  background:radial-gradient(ellipse 85% 85% at 50% 50%,transparent 30%,rgba(0,1,10,.95) 100%);}
 
 /* HUD */
-#hud{position:fixed;inset:0;z-index:20;pointer-events:none;padding:20px 22px;display:flex;flex-direction:column;justify-content:space-between}
+#hud{position:fixed;inset:0;z-index:20;pointer-events:none;padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between}
 .pa{pointer-events:auto}
-.panel{background:rgba(4,12,28,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
-  border:1px solid rgba(0,240,255,.18);border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.6)}
 
-/* Top */
-#topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;position:relative}
+/* Top bar */
+#topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
 
-.logo-box{padding:14px 20px;display:flex;align-items:center;gap:14px;flex-shrink:0}
-.logo-icon{width:40px;height:40px;border-radius:50%;border:2px solid var(--cyan);
-  display:flex;align-items:center;justify-content:center;background:rgba(0,240,255,.1);
-  box-shadow:0 0 18px rgba(0,240,255,.35)}
-.logo-text{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;letter-spacing:.15em;color:#fff}
+/* Logo */
+.logo-box{
+  background:rgba(0,1,10,.85);
+  border:1px solid rgba(0,245,255,.2);
+  border-radius:10px;
+  padding:12px 18px;
+  display:flex;align-items:center;gap:12px;
+  backdrop-filter:blur(20px);
+  position:relative;overflow:hidden;
+}
+.logo-box::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,245,255,.05),transparent);pointer-events:none}
+.logo-icon{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--cyan);display:flex;align-items:center;justify-content:center;background:rgba(0,245,255,.08);box-shadow:0 0 15px rgba(0,245,255,.3),inset 0 0 10px rgba(0,245,255,.05);animation:iconpulse 3s ease-in-out infinite}
+@keyframes iconpulse{0%,100%{box-shadow:0 0 15px rgba(0,245,255,.3)}50%{box-shadow:0 0 25px rgba(0,245,255,.6),0 0 50px rgba(0,245,255,.2)}}
+.logo-text{font-family:'Syne',sans-serif;font-size:16px;font-weight:900;letter-spacing:.12em;color:#fff}
 .logo-text em{color:var(--cyan);font-style:normal}
-.logo-sub{font-size:8px;letter-spacing:.2em;color:rgba(0,240,255,.7);margin-top:3px;display:flex;align-items:center;gap:6px}
-.pulse{width:6px;height:6px;background:var(--ok);border-radius:50%;box-shadow:0 0 8px var(--ok);animation:blk 1.8s infinite}
-@keyframes blk{0%,100%{opacity:1}50%{opacity:.15}}
+.logo-sub{font-size:7px;letter-spacing:.25em;color:rgba(0,245,255,.5);margin-top:3px;text-transform:uppercase}
+.live-ring{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 8px var(--green);animation:blink 1.5s infinite;display:inline-block;margin-right:5px}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 
-/* Search */
-#sb-wrap{flex:1;max-width:310px;position:relative}
-#searchbox{display:flex;align-items:center;gap:9px;background:rgba(4,12,28,.92);
-  border:1px solid rgba(0,240,255,.28);border-radius:28px;padding:9px 16px;transition:border-color .2s}
-#searchbox:focus-within{border-color:rgba(0,240,255,.8);box-shadow:0 0 14px rgba(0,240,255,.18)}
-#cs{background:none;border:none;outline:none;color:#c8e6f0;font-family:'Space Mono',monospace;font-size:11px;width:100%}
-#cs::placeholder{color:#2a5a6a}
-#sr{position:absolute;top:50px;left:0;width:100%;background:rgba(4,12,28,.98);
-  border:1px solid rgba(0,240,255,.25);border-radius:10px;overflow:hidden;display:none;z-index:50;pointer-events:auto}
-.sri{padding:11px 15px;font-size:10px;cursor:pointer;border-bottom:1px solid rgba(0,240,255,.08);
-  display:flex;justify-content:space-between;align-items:center;transition:background .15s}
-.sri:hover{background:rgba(0,240,255,.1)}
-.sri-city{color:#c8e6f0;font-weight:700}
-.sri-z{font-size:11px;font-weight:700}
-.hot{color:var(--alert)}.warn{color:var(--warn)}.cold{color:var(--cold)}.norm{color:var(--ok)}
+/* Mode switcher */
+#modes{display:flex;gap:6px}
+.mode-btn{background:rgba(0,1,10,.8);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:8px 14px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);cursor:pointer;font-family:'Space Mono',monospace;transition:all .2s;backdrop-filter:blur(12px)}
+.mode-btn.active{border-color:var(--cyan);color:var(--cyan);background:rgba(0,245,255,.08);box-shadow:0 0 12px rgba(0,245,255,.15)}
+.mode-btn:hover{border-color:rgba(0,245,255,.4);color:rgba(0,245,255,.7)}
 
-/* Stats */
-#stats-row{display:flex;gap:10px;flex-shrink:0}
-.stat-box{padding:13px 18px;text-align:right}
-.stat-lbl{font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#2a6a7a}
-.stat-val{font-size:22px;font-weight:700;font-family:'Syne',sans-serif;color:#fff;line-height:1.1}
-.stat-val.c{color:var(--cyan);text-shadow:0 0 12px rgba(0,240,255,.4)}
-.stat-val.r{color:var(--alert);text-shadow:0 0 14px rgba(255,51,102,.5)}
-
-/* Bottom */
-#bottombar{display:flex;justify-content:space-between;align-items:flex-end;gap:14px}
-
-/* Alert feed */
-#feed-box{padding:14px 18px;width:270px}
-.feed-title{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);
-  margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid rgba(0,240,255,.18)}
-.fi{display:flex;justify-content:space-between;align-items:center;
-  background:rgba(0,240,255,.03);padding:9px 11px;border-radius:7px;
-  border:1px solid rgba(0,240,255,.08);margin-bottom:7px;cursor:pointer;transition:all .2s}
-.fi:hover{background:rgba(0,240,255,.08);border-color:rgba(0,240,255,.25)}
-.fi-left{display:flex;align-items:center;gap:9px}
-.fi-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
-.fi-city{font-size:10px;font-weight:700;color:#e2e8f0}
-.fi-z{font-size:12px;font-weight:800}
-
-/* Right controls */
-#right-col{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
-#legend-box{padding:13px 18px;display:flex;flex-direction:column;gap:7px}
-.leg-row{display:flex;align-items:center;gap:9px;font-size:8px;letter-spacing:.1em;color:#1e4a5a}
-.leg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-#btns{display:flex;gap:9px}
-.gbtn{padding:11px 18px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;
-  cursor:pointer;border-radius:10px;font-family:'Space Mono',monospace;font-weight:700;transition:all .2s}
-.gbtn-pri{background:rgba(0,240,255,.08);border:1px solid rgba(0,240,255,.35);color:var(--cyan)}
-.gbtn-pri:hover{background:rgba(0,240,255,.18);border-color:var(--cyan)}
-.gbtn-sec{background:none;border:1px solid rgba(255,255,255,.1);color:#4a7a8a}
+/* Stats row */
+#stats-row{display:flex;gap:8px}
+.stat-hex{background:rgba(0,1,10,.85);border:1px solid rgba(0,245,255,.15);border-radius:10px;padding:10px 14px;text-align:right;backdrop-filter:blur(20px);position:relative;overflow:hidden;min-width:80px}
+.stat-hex::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
+.stat-lbl{font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.stat-val{font-size:20px;font-weight:700;font-family:'Syne',sans-serif;line-height:1.1}
+.stat-val.c{color:var(--cyan)}
+.stat-val.r{color:var(--magenta);text-shadow:0 0 12px rgba(255,0,110,.4)}
+.stat-val.g{color:var(--green)}
 
 /* UTC */
-#utc-box{padding:11px 16px;font-size:12px;font-weight:700;color:var(--cyan);letter-spacing:.08em}
+#utc{font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.1em;padding:10px 14px;background:rgba(0,1,10,.85);border:1px solid rgba(0,245,255,.15);border-radius:10px;backdrop-filter:blur(20px);font-variant-numeric:tabular-nums}
+
+/* Search */
+#sb{display:flex;align-items:center;gap:8px;background:rgba(0,1,10,.9);border:1px solid rgba(0,245,255,.2);border-radius:24px;padding:9px 16px;flex:1;max-width:280px;transition:border-color .2s;backdrop-filter:blur(20px)}
+#sb:focus-within{border-color:rgba(0,245,255,.7);box-shadow:0 0 20px rgba(0,245,255,.1)}
+#cs{background:none;border:none;outline:none;color:#c8e6f0;font-family:'Space Mono',monospace;font-size:11px;width:100%}
+#cs::placeholder{color:rgba(0,245,255,.25)}
+#sr{position:absolute;top:46px;left:0;width:100%;background:rgba(0,1,10,.98);border:1px solid rgba(0,245,255,.2);border-radius:10px;overflow:hidden;display:none;z-index:50;pointer-events:auto;backdrop-filter:blur(20px)}
+.sri{padding:10px 14px;font-size:10px;cursor:pointer;border-bottom:1px solid rgba(0,245,255,.06);display:flex;justify-content:space-between;transition:background .15s}
+.sri:hover{background:rgba(0,245,255,.08)}
+
+/* Bottom */
+#bottombar{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+
+/* Feed */
+#feed-box{background:rgba(0,1,10,.85);border:1px solid rgba(0,245,255,.15);border-radius:12px;padding:14px 16px;width:260px;backdrop-filter:blur(20px);position:relative;overflow:hidden}
+#feed-box::before{content:'ANOMALY FEED';position:absolute;top:0;left:0;right:0;padding:6px 12px;font-size:7px;letter-spacing:.3em;color:rgba(0,245,255,.5);border-bottom:1px solid rgba(0,245,255,.1);background:rgba(0,245,255,.03)}
+#feed{margin-top:24px}
+.fi{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(0,245,255,.06);cursor:pointer;transition:all .15s}
+.fi:hover{padding-left:4px}
+.fi:last-child{border-bottom:none}
+.fi-left{display:flex;align-items:center;gap:8px}
+.fi-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;animation:dotpulse 2s infinite}
+@keyframes dotpulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.fi-city{font-size:10px;font-weight:700;color:#e2e8f0}
+.fi-cc{font-size:8px;color:rgba(255,255,255,.3);margin-left:3px}
+.fi-z{font-size:11px;font-weight:800;font-variant-numeric:tabular-nums}
+
+/* Right panel */
+#right-col{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+
+/* Legend */
+#legend{background:rgba(0,1,10,.85);border:1px solid rgba(0,245,255,.12);border-radius:12px;padding:14px 16px;backdrop-filter:blur(20px)}
+.leg-title{font-size:7px;letter-spacing:.25em;text-transform:uppercase;color:rgba(0,245,255,.4);margin-bottom:10px}
+.leg-row{display:flex;align-items:center;gap:8px;font-size:8px;color:rgba(255,255,255,.4);margin-bottom:6px}
+.leg-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+
+/* Buttons */
+#btns{display:flex;gap:8px}
+.gbtn{padding:10px 16px;border-radius:10px;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border:none;font-family:'Space Mono',monospace;transition:all .2s;backdrop-filter:blur(12px)}
+.gbtn-cyan{background:rgba(0,245,255,.1);border:1px solid rgba(0,245,255,.3);color:var(--cyan)}
+.gbtn-cyan:hover{background:rgba(0,245,255,.2);box-shadow:0 0 20px rgba(0,245,255,.2)}
+.gbtn-violet{background:rgba(123,47,255,.1);border:1px solid rgba(123,47,255,.3);color:#b57aff}
+.gbtn-violet:hover{background:rgba(123,47,255,.2)}
+.gbtn-ghost{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.4)}
+
+/* Cosmic data panel */
+#cosmic-panel{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:20;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.cosmic-cell{background:rgba(0,1,10,.85);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:12px 14px;backdrop-filter:blur(20px);text-align:center;min-width:90px;position:relative;overflow:hidden}
+.cosmic-cell::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent)}
+.cc-lbl{font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:6px}
+.cc-val{font-size:16px;font-weight:700;color:#fff}
+.cc-sub{font-size:8px;color:rgba(255,255,255,.25);margin-top:3px}
 
 /* Tooltip */
-#tip{position:fixed;z-index:60;pointer-events:none;
-  background:rgba(4,12,28,.97);border:1px solid rgba(0,240,255,.3);
-  border-radius:6px;padding:12px 16px;backdrop-filter:blur(14px);
-  opacity:0;transition:opacity .12s;min-width:180px}
+#tip{position:fixed;z-index:60;pointer-events:none;background:rgba(0,1,10,.97);border:1px solid rgba(0,245,255,.25);border-radius:8px;padding:14px 18px;backdrop-filter:blur(20px);opacity:0;transition:opacity .12s;min-width:200px;max-width:240px}
 #tip.on{opacity:1}
-.tip-city{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:7px}
-.tip-row{display:flex;justify-content:space-between;gap:14px;margin-top:4px}
-.tip-l{font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#1e5060}
-.tip-v{font-size:11px;font-weight:700;color:var(--cyan)}
+#tip::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
+.tip-city{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;color:#fff;margin-bottom:8px}
+.tip-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.tip-item{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:6px;padding:6px 8px}
+.tip-l{font-size:7px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.tip-v{font-size:12px;font-weight:700;color:var(--cyan);margin-top:2px}
 
 /* Toast */
-#toast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%);
-  background:rgba(0,240,255,.94);color:#000;font-family:'Space Mono',monospace;
-  font-size:10px;font-weight:700;letter-spacing:.1em;padding:11px 22px;
-  border-radius:24px;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;
-  z-index:100;white-space:nowrap;box-shadow:0 8px 28px rgba(0,240,255,.3)}
-#toast.show{opacity:1;transform:translate(-50%,-8px)}
+#toast{position:fixed;bottom:70px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,rgba(0,245,255,.9),rgba(123,47,255,.8));color:#000;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.1em;padding:10px 22px;border-radius:20px;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:100;white-space:nowrap}
+#toast.on{opacity:1;transform:translate(-50%,-8px)}
 
 /* Loader */
-#loader{position:fixed;inset:0;z-index:200;background:#000103;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
-  transition:opacity .7s}
+#loader{position:fixed;inset:0;z-index:300;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity .8s}
 #loader.gone{opacity:0;pointer-events:none}
-.lt{font-family:'Syne',sans-serif;font-size:34px;font-weight:800;letter-spacing:.15em;color:#fff}
+.lt{font-family:'Syne',sans-serif;font-size:42px;font-weight:900;letter-spacing:.1em;color:#fff;text-align:center}
 .lt em{color:var(--cyan);font-style:normal}
-.ltrack{width:220px;height:2px;background:rgba(0,240,255,.15);border-radius:2px;overflow:hidden}
-.lfill{height:100%;background:var(--cyan);width:0%;transition:width .12s;box-shadow:0 0 10px var(--cyan)}
-.lmsg{font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:#2a5a6a}
+.lt-sub{font-size:9px;letter-spacing:.3em;color:rgba(0,245,255,.4);text-transform:uppercase}
+.lbar{width:260px;height:1px;background:rgba(0,245,255,.12);border-radius:1px;overflow:hidden;position:relative}
+.lbar::after{content:'';position:absolute;top:0;left:-40%;width:40%;height:100%;background:linear-gradient(90deg,transparent,var(--cyan),transparent);animation:lscan 1.2s ease-in-out infinite}
+@keyframes lscan{from{left:-40%}to{left:100%}}
+.lmsg{font-size:8px;letter-spacing:.25em;color:rgba(0,245,255,.3);text-transform:uppercase}
+
+/* Constellation overlay */
+#constellation-canvas{position:fixed;inset:0;z-index:3;pointer-events:none}
+
+/* Mode: Solar system rings */
+#solar-rings{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity 1s}
+#solar-rings.visible{opacity:1}
+
+/* Search wrapper */
+#sb-wrap{position:relative;flex:1;max-width:280px}
+
+@media(max-width:768px){
+  .cosmic-cell{display:none}
+  #feed-box{width:220px}
+  .stat-val{font-size:16px}
+}
 </style>
 </head>
 <body>
 
+<div id="nebula"></div>
+<div id="scan"></div>
+<div id="vignette"></div>
+<canvas id="constellation-canvas"></canvas>
+<div id="globe-container"></div>
+
 <div id="loader">
   <div class="lt">Weather<em>Arb</em></div>
-  <div class="ltrack"><div class="lfill" id="fill"></div></div>
+  <div class="lt-sub">Cosmic Intelligence Terminal</div>
+  <div class="lbar"></div>
   <div class="lmsg" id="lmsg">Initializing orbital systems...</div>
 </div>
 
-<div id="globe-container"></div>
-
 <div id="hud">
+  <!-- TOP -->
   <div id="topbar">
-    <div class="panel logo-box pa">
+    <div class="logo-box pa">
       <div class="logo-icon">
-        <svg width="20" height="20" fill="none" stroke="var(--cyan)" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <svg width="18" height="18" fill="none" stroke="var(--cyan)" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
       </div>
       <div>
         <div class="logo-text">Weather<em>Arb</em></div>
-        <div class="logo-sub"><span class="pulse"></span>LIVE INTELLIGENCE</div>
+        <div class="logo-sub"><span class="live-ring"></span>Cosmic Intelligence · Live</div>
       </div>
     </div>
 
-    <div id="sb-wrap">
-      <div id="searchbox" class="pa">
-        <svg width="13" height="13" fill="none" stroke="var(--cyan)" stroke-width="2" opacity=".5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <div id="modes" class="pa">
+      <button class="mode-btn active" onclick="setMode('earth')" id="m-earth">🌍 Earth</button>
+      <button class="mode-btn" onclick="setMode('heat')" id="m-heat">🔥 Heat Map</button>
+      <button class="mode-btn" onclick="setMode('cold')" id="m-cold">❄️ Cold Map</button>
+      <button class="mode-btn" onclick="setMode('arcs')" id="m-arcs">⚡ Arcs</button>
+    </div>
+
+    <div id="sb-wrap" class="pa">
+      <div id="sb">
+        <svg width="12" height="12" fill="none" stroke="var(--cyan)" stroke-width="2" opacity=".4" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <input id="cs" type="text" placeholder="Search city...">
       </div>
       <div id="sr"></div>
     </div>
 
     <div id="stats-row">
-      <div class="panel stat-box pa">
+      <div class="stat-hex pa">
         <div class="stat-lbl">Nodes</div>
         <div class="stat-val c" id="sn">—</div>
       </div>
-      <div class="panel stat-box pa">
+      <div class="stat-hex pa">
         <div class="stat-lbl">Critical</div>
         <div class="stat-val r" id="sc">—</div>
       </div>
-      <div class="panel stat-box pa">
+      <div class="stat-hex pa">
         <div class="stat-lbl">Countries</div>
-        <div class="stat-val" id="scc">—</div>
+        <div class="stat-val g" id="scc">—</div>
       </div>
-      <div class="panel utc-box pa" id="utc-box">—</div>
+      <div id="utc" class="pa">—</div>
     </div>
   </div>
 
+  <!-- BOTTOM -->
   <div id="bottombar">
-    <div class="panel pa" id="feed-box">
-      <div class="feed-title">Top Anomalies (&gt;3σ)</div>
-      <div id="feed"></div>
+    <div class="pa" id="feed-box">
+      <div id="feed"><div style="font-size:10px;color:rgba(255,255,255,.3)">Loading...</div></div>
     </div>
 
     <div id="right-col">
-      <div class="panel pa" id="legend-box">
-        <div style="font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:#1e5060;margin-bottom:6px">Legend</div>
-        <div class="leg-row"><div class="leg-dot" style="background:var(--alert);box-shadow:0 0 7px var(--alert)"></div>Heat wave (Z > +2σ)</div>
-        <div class="leg-row"><div class="leg-dot" style="background:var(--warn);box-shadow:0 0 7px var(--warn)"></div>Warning (+1→+2σ)</div>
-        <div class="leg-row"><div class="leg-dot" style="background:var(--cold);box-shadow:0 0 7px var(--cold)"></div>Cold snap (Z < -2σ)</div>
-        <div class="leg-row"><div class="leg-dot" style="background:var(--ok);box-shadow:0 0 7px var(--ok)"></div>Normal</div>
+      <div id="legend" class="pa">
+        <div class="leg-title">Anomaly Spectrum</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#FF006E;box-shadow:0 0 6px #FF006E"></div>Heat wave (Z > +3σ)</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#FF6B35;box-shadow:0 0 6px #FF6B35"></div>Warning (+1→+3σ)</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#00F5FF;box-shadow:0 0 6px #00F5FF"></div>Normal (±1σ)</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#7B2FFF;box-shadow:0 0 6px #7B2FFF"></div>Cold snap (Z < -1σ)</div>
+        <div class="leg-row"><div class="leg-dot" style="background:#00FF88;box-shadow:0 0 6px #00FF88"></div>Deep freeze (Z < -3σ)</div>
       </div>
       <div id="btns">
-        <button class="panel gbtn gbtn-pri pa" onclick="goToMyCity()">📍 My Location</button>
-        <button class="panel gbtn gbtn-sec pa" onclick="globe.controls().autoRotate=!globe.controls().autoRotate">⟳ Auto</button>
+        <button class="gbtn gbtn-cyan pa" onclick="goToMyCity()">📍 My Location</button>
+        <button class="gbtn gbtn-violet pa" onclick="toggleConstellations()">✦ Constellations</button>
+        <button class="gbtn gbtn-ghost pa" onclick="globe.controls().autoRotate=!globe.controls().autoRotate">⟳ Rotate</button>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Cosmic side panel -->
+<div id="cosmic-panel">
+  <div class="cosmic-cell">
+    <div class="cc-lbl">Kp Index</div>
+    <div class="cc-val" id="cp-kp">—</div>
+    <div class="cc-sub">Geomagnetic</div>
+  </div>
+  <div class="cosmic-cell">
+    <div class="cc-lbl">Solar Flare</div>
+    <div class="cc-val" id="cp-flare">—</div>
+    <div class="cc-sub">X-Ray Class</div>
+  </div>
+  <div class="cosmic-cell">
+    <div class="cc-lbl">Grid Risk</div>
+    <div class="cc-val" id="cp-grid">—</div>
+    <div class="cc-sub">Top EU</div>
   </div>
 </div>
 
 <div id="tip">
   <div class="tip-city" id="tc"></div>
-  <div class="tip-row"><span class="tip-l">Z-Score</span><span class="tip-v" id="tz"></span></div>
-  <div class="tip-row"><span class="tip-l">Score</span><span class="tip-v" id="tsc"></span></div>
-  <div class="tip-row"><span class="tip-l">Temp</span><span class="tip-v" id="tt"></span></div>
-  <div class="tip-row"><span class="tip-l">Event</span><span class="tip-v" id="te"></span></div>
+  <div class="tip-grid">
+    <div class="tip-item"><div class="tip-l">Z-Score</div><div class="tip-v" id="tz"></div></div>
+    <div class="tip-item"><div class="tip-l">Score</div><div class="tip-v" id="tsc"></div></div>
+    <div class="tip-item"><div class="tip-l">Temp</div><div class="tip-v" id="tt"></div></div>
+    <div class="tip-item"><div class="tip-l">Event</div><div class="tip-v" id="te"></div></div>
+  </div>
 </div>
 <div id="toast"></div>
 
-<!-- Globe.gl -->
 <script src="https://unpkg.com/globe.gl@2.30.0/dist/globe.gl.min.js"></script>
 <script>
-const $=id=>document.getElementById(id);
-function prog(p,m){$('fill').style.width=p+'%';$('lmsg').textContent=m}
-function toast(msg,dur=2800){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur)}
+const $ = id => document.getElementById(id);
+const toast = (msg, d=2500) => { const t=$('toast'); t.textContent=msg; t.classList.add('on'); setTimeout(()=>t.classList.remove('on'),d); };
 
 let globe, nodesData=[], myLat=null, myLon=null;
+let currentMode='earth', showConstellations=false;
+let conCanvas, conCtx;
 
-function zColor(z){
-  if(z>=3) return '#FF3366';
-  if(z>=2) return '#FF9933';
-  if(z>=1) return '#FFDD22';
-  if(z<=-3) return '#0044FF';
-  if(z<=-2) return '#3388FF';
-  if(z<=-1) return '#66AAFF';
-  return '#00F0FF';
+// ── Color engine ──────────────────────────────────────────────────────────────
+function zColor(z, mode='earth') {
+  if(mode==='heat') {
+    if(z>=3) return '#FF006E';
+    if(z>=2) return '#FF3A5C';
+    if(z>=1) return '#FF6B35';
+    if(z>=0) return '#FFD60A';
+    return 'rgba(255,255,255,.05)';
+  }
+  if(mode==='cold') {
+    if(z<=-3) return '#00FF88';
+    if(z<=-2) return '#00D4FF';
+    if(z<=-1) return '#7B2FFF';
+    if(z<=0) return '#4B1FBF';
+    return 'rgba(255,255,255,.05)';
+  }
+  // earth mode
+  if(z>=3) return '#FF006E';
+  if(z>=2) return '#FF6B35';
+  if(z>=1) return '#FFD60A';
+  if(z<=-3) return '#00FF88';
+  if(z<=-2) return '#7B2FFF';
+  if(z<=-1) return '#00D4FF';
+  return '#00F5FF';
 }
 
-function zRadius(z){
-  const az=Math.abs(z||0);
+function zSize(z, mode) {
+  const az = Math.abs(z||0);
+  if(mode==='heat') return z>=0 ? 0.4 + az*0.25 : 0.1;
+  if(mode==='cold') return z<0 ? 0.4 + az*0.25 : 0.1;
   return 0.3 + az*0.18;
 }
 
-function zAltitude(z){
-  const az=Math.abs(z||0);
-  return 0.005 + az*0.008;
+function zAlt(z) {
+  return 0.004 + Math.abs(z||0)*0.007;
 }
 
-// ─── Init Globe ───────────────────────────────────────────────────────────────
-prog(10,'Building globe...');
+// ── Init Globe ────────────────────────────────────────────────────────────────
+$('lmsg').textContent = 'Building cosmic interface...';
 
 globe = Globe()
   .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
   .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
   .backgroundImageUrl('https://unpkg.com/three-globe/example/img/night-sky.png')
-  .atmosphereColor('rgba(0,160,255,0.25)')
-  .atmosphereAltitude(0.18)
+  .atmosphereColor('rgba(0,200,255,0.2)')
+  .atmosphereAltitude(0.22)
   .showGraticules(false)
-  .onGlobeReady(()=>{
-    prog(60,'Globe ready, loading anomaly data...');
-    loadNodes();
+  .onGlobeReady(() => {
+    $('lmsg').textContent = 'Loading anomaly data...';
+    loadData();
   })
   ($('globe-container'));
 
-// Camera & controls
 globe.controls().autoRotate = true;
-globe.controls().autoRotateSpeed = 0.4;
+globe.controls().autoRotateSpeed = 0.3;
 globe.controls().enableDamping = true;
-globe.controls().dampingFactor = 0.08;
-globe.controls().minDistance = 150;
-globe.controls().maxDistance = 700;
-globe.pointOfView({lat:20, lng:10, altitude:2.2}, 0);
+globe.controls().dampingFactor = 0.07;
+globe.controls().minDistance = 120;
+globe.controls().maxDistance = 600;
+globe.pointOfView({lat:25, lng:15, altitude:2.4}, 0);
 
-// Resize
-function resize(){
-  globe.width(innerWidth);
-  globe.height(innerHeight);
-}
-window.addEventListener('resize', resize);
-resize();
+window.addEventListener('resize', () => { globe.width(innerWidth); globe.height(innerHeight); });
+globe.width(innerWidth); globe.height(innerHeight);
 
-// ─── Load Data ────────────────────────────────────────────────────────────────
-async function loadNodes(){
-  try{
-    prog(65,'Fetching anomaly data...');
-    const r = await fetch('https://api.weatherarb.com/api/v1/europe/top?limit=750');
-    const data = await r.json();
-    nodesData = data.reports || [];
-    prog(85,'Rendering nodes...');
-    renderNodes(nodesData);
-    updateStats(nodesData);
-    buildFeed(nodesData);
-    prog(100,'Ready');
-    setTimeout(()=>$('loader').classList.add('gone'), 500);
-  } catch(e){
-    prog(100,'Demo mode');
-    setTimeout(()=>$('loader').classList.add('gone'), 500);
+// ── Load Data ─────────────────────────────────────────────────────────────────
+async function loadData() {
+  try {
+    const r = await fetch('https://api.weatherarb.com/api/v1/europe/top?limit=500');
+    const d = await r.json();
+    nodesData = d.reports || d.data || [];
+    renderGlobe();
+    updateStats();
+    buildFeed();
+    loadSpaceWeather();
+    $('loader').classList.add('gone');
+  } catch(e) {
+    $('lmsg').textContent = 'Demo mode activated';
+    nodesData = Array.from({length:200}, (_,i) => ({
+      location:`Node${i}`, country_code: ['it','us','de','in','br','jp','fr','cn'][i%8],
+      lat:(Math.random()-.5)*140, lon:(Math.random()-.5)*360,
+      z_score:(Math.random()-.5)*8, score:Math.random()*10,
+      anomaly_level:['CRITICAL','EXTREME','UNUSUAL','NORMAL'][i%4],
+      event_type:['heat_wave','cold_snap','normal','heavy_rain'][i%4],
+      temperature_c: 15+Math.random()*20
+    }));
+    renderGlobe(); updateStats(); buildFeed();
+    $('loader').classList.add('gone');
   }
 }
 
-function renderNodes(data){
-  // Points layer
+// ── Render Globe ──────────────────────────────────────────────────────────────
+function renderGlobe() {
+  const mode = currentMode;
+
+  // Points
   globe
-    .pointsData(data)
+    .pointsData(nodesData)
     .pointLat(d => d.lat)
     .pointLng(d => d.lon)
-    .pointAltitude(d => zAltitude(d.z_score))
-    .pointRadius(d => zRadius(d.z_score))
-    .pointColor(d => zColor(d.z_score))
+    .pointAltitude(d => zAlt(d.z_score))
+    .pointRadius(d => zSize(d.z_score, mode))
+    .pointColor(d => zColor(d.z_score, mode))
     .pointsMerge(false)
     .pointResolution(8)
     .onPointHover(handleHover)
     .onPointClick(d => {
       if(!d) return;
-      globe.pointOfView({lat: d.lat, lng: d.lon, altitude: 1.0}, 1200);
       globe.controls().autoRotate = false;
-      toast(`📍 ${d.location} — Z: ${(d.z_score||0)>0?'+':''}${(d.z_score||0).toFixed(2)}σ`);
+      globe.pointOfView({lat:d.lat, lng:d.lon, altitude:0.9}, 1400);
+      toast(`📍 ${d.location} · Z: ${(d.z_score||0)>0?'+':''}${(d.z_score||0).toFixed(2)}σ`);
     });
 
-  // Rings for critical anomalies (Z > 2.5)
-  const critical = data.filter(d => Math.abs(d.z_score||0) >= 2.5);
+  // Rings for critical nodes
+  const criticals = nodesData.filter(d => Math.abs(d.z_score||0) >= 2);
   globe
-    .ringsData(critical)
+    .ringsData(criticals)
     .ringLat(d => d.lat)
     .ringLng(d => d.lon)
-    .ringColor(d => t => `${zColor(d.z_score)}${Math.floor((1-t)*255).toString(16).padStart(2,'0')}`)
-    .ringMaxRadius(d => 2.5 + Math.abs(d.z_score||0)*0.4)
-    .ringPropagationSpeed(1.5)
-    .ringRepeatPeriod(d => 1200 + Math.random()*800);
+    .ringColor(d => t => {
+      const col = zColor(d.z_score, mode);
+      const alpha = Math.floor((1-t)*200).toString(16).padStart(2,'0');
+      return col + alpha;
+    })
+    .ringMaxRadius(d => 2 + Math.abs(d.z_score||0)*0.5)
+    .ringPropagationSpeed(1.2)
+    .ringRepeatPeriod(d => 1000 + Math.random()*600);
+
+  // Arcs mode
+  if(mode === 'arcs') {
+    const top = [...nodesData].sort((a,b) => Math.abs(b.z_score)-Math.abs(a.z_score)).slice(0,30);
+    const arcs = [];
+    for(let i=0; i<top.length-1; i+=2) {
+      if(top[i] && top[i+1]) {
+        arcs.push({
+          startLat: top[i].lat, startLng: top[i].lon,
+          endLat: top[i+1].lat, endLng: top[i+1].lon,
+          color: [zColor(top[i].z_score), zColor(top[i+1].z_score)],
+          z: Math.abs(top[i].z_score)
+        });
+      }
+    }
+    globe
+      .arcsData(arcs)
+      .arcStartLat(d => d.startLat).arcStartLng(d => d.startLng)
+      .arcEndLat(d => d.endLat).arcEndLng(d => d.endLng)
+      .arcColor(d => d.color)
+      .arcAltitude(d => 0.1 + d.z*0.05)
+      .arcStroke(d => 0.5 + d.z*0.1)
+      .arcDashLength(0.4).arcDashGap(0.1).arcDashAnimateTime(2000);
+  } else {
+    globe.arcsData([]);
+  }
 
   // Labels for top anomalies
-  const topLabels = [...data]
-    .filter(d => Math.abs(d.z_score||0) >= 3)
-    .sort((a,b) => Math.abs(b.z_score) - Math.abs(a.z_score))
-    .slice(0, 12);
+  const topLabels = [...nodesData]
+    .filter(d => Math.abs(d.z_score||0) >= 3.5)
+    .sort((a,b) => Math.abs(b.z_score)-Math.abs(a.z_score))
+    .slice(0, 8);
 
   globe
     .labelsData(topLabels)
-    .labelLat(d => d.lat)
-    .labelLng(d => d.lon)
-    .labelAltitude(0.035)
-    .labelText(d => `${d.location} ${(d.z_score||0)>0?'+':''}${(d.z_score||0).toFixed(1)}σ`)
-    .labelSize(d => 0.4 + Math.abs(d.z_score||0)*0.05)
-    .labelColor(d => zColor(d.z_score))
+    .labelLat(d => d.lat).labelLng(d => d.lon)
+    .labelAltitude(0.04)
+    .labelText(d => `${d.location} ${(d.z_score||0)>=0?'+':''}${(d.z_score||0).toFixed(1)}σ`)
+    .labelSize(0.5)
+    .labelColor(d => zColor(d.z_score, mode))
     .labelResolution(3)
-    .labelDotRadius(0)
     .labelIncludeDot(false);
+
+  // Constellations
+  if(showConstellations) drawConstellations();
 }
 
-// ─── Hover tooltip ────────────────────────────────────────────────────────────
+// ── Modes ─────────────────────────────────────────────────────────────────────
+function setMode(m) {
+  currentMode = m;
+  document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+  $('m-'+m)?.classList.add('active');
+
+  if(m === 'heat') {
+    globe.globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg');
+  } else if(m === 'cold') {
+    globe.globeImageUrl('https://unpkg.com/three-globe/example/img/earth-night.jpg');
+  } else if(m === 'arcs') {
+    globe.globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg');
+  } else {
+    globe.globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg');
+  }
+
+  renderGlobe();
+  toast(`Mode: ${m.toUpperCase()}`);
+}
+
+// ── Constellations ────────────────────────────────────────────────────────────
+function toggleConstellations() {
+  showConstellations = !showConstellations;
+  if(!showConstellations) {
+    const c = $('constellation-canvas');
+    const ctx = c.getContext('2d');
+    ctx.clearRect(0,0,c.width,c.height);
+  } else {
+    drawConstellations();
+  }
+}
+
+function drawConstellations() {
+  const c = $('constellation-canvas');
+  c.width = innerWidth; c.height = innerHeight;
+  const ctx = c.getContext('2d');
+  ctx.clearRect(0,0,c.width,c.height);
+
+  const top = [...nodesData].filter(d=>Math.abs(d.z_score||0)>=2)
+    .sort((a,b)=>Math.abs(b.z_score)-Math.abs(a.z_score)).slice(0,20);
+
+  // Project to screen (simplified)
+  function project(lat, lng) {
+    const x = (lng + 180) / 360 * innerWidth;
+    const y = (90 - lat) / 180 * innerHeight;
+    return {x, y};
+  }
+
+  ctx.setLineDash([3, 8]);
+  ctx.lineWidth = 0.5;
+
+  for(let i=0; i<top.length-1; i++) {
+    const a = project(top[i].lat, top[i].lon);
+    const b = project(top[i+1].lat, top[i+1].lon);
+    const col = zColor(top[i].z_score);
+    ctx.strokeStyle = col + '40';
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y);
+    ctx.lineTo(b.x, b.y);
+    ctx.stroke();
+
+    // Star dot
+    ctx.fillStyle = col + '80';
+    ctx.beginPath();
+    ctx.arc(a.x, a.y, 2, 0, Math.PI*2);
+    ctx.fill();
+  }
+}
+
+// ── Hover tooltip ─────────────────────────────────────────────────────────────
 const tip = $('tip');
-function handleHover(d, prevD, {x, y}){
-  if(!d){ tip.classList.remove('on'); return; }
-  $('tc').textContent = d.location + ' · ' + (d.country_code||'').toUpperCase();
-  const z = d.z_score||0;
+function handleHover(d) {
+  if(!d) { tip.classList.remove('on'); return; }
+  $('tc').textContent = `${d.location} · ${(d.country_code||'').toUpperCase()}`;
+  const z = d.z_score||0, col = zColor(z);
   $('tz').textContent = (z>=0?'+':'')+z.toFixed(2)+'σ';
+  $('tz').style.color = col;
   $('tsc').textContent = (d.score||0).toFixed(1)+'/10';
   $('tt').textContent = d.temperature_c!=null ? d.temperature_c.toFixed(1)+'°C' : '—';
-  $('te').textContent = (d.event_type||d.anomaly_level||'—').replace(/_/g,' ');
-  tip.style.left = (x+16)+'px';
-  tip.style.top = (y-10)+'px';
+  $('te').textContent = (d.event_type||'—').replace(/_/g,' ');
   tip.classList.add('on');
 }
-$('globe-container').addEventListener('mousemove', e=>{
-  if(!tip.classList.contains('on')) return;
-  tip.style.left=(e.clientX+16)+'px'; tip.style.top=(e.clientY-10)+'px';
+$('globe-container').addEventListener('mousemove', e => {
+  if(tip.classList.contains('on')) {
+    tip.style.left = (e.clientX+18)+'px';
+    tip.style.top = Math.max(10, e.clientY-60)+'px';
+  }
 });
 
-// ─── Stats ────────────────────────────────────────────────────────────────────
-function updateStats(data){
-  $('sn').textContent = data.length;
-  $('sc').textContent = data.filter(d=>Math.abs(d.z_score||0)>=3).length;
-  $('scc').textContent = new Set(data.map(d=>d.country_code)).size;
+// ── Stats ──────────────────────────────────────────────────────────────────────
+function updateStats() {
+  $('sn').textContent = nodesData.length;
+  $('sc').textContent = nodesData.filter(d=>Math.abs(d.z_score||0)>=3).length;
+  $('scc').textContent = new Set(nodesData.map(d=>d.country_code)).size;
 }
 
-// ─── Alert feed ───────────────────────────────────────────────────────────────
-function buildFeed(data){
-  const top = [...data].filter(d=>Math.abs(d.z_score||0)>=3)
-    .sort((a,b)=>Math.abs(b.z_score)-Math.abs(a.z_score)).slice(0,5);
-  $('feed').innerHTML = top.map(d=>{
-    const z=d.z_score||0, sign=z>=0?'+':'', col=z>=0?'var(--alert)':'var(--cold)';
+// ── Feed ──────────────────────────────────────────────────────────────────────
+function buildFeed() {
+  const top = [...nodesData].filter(d=>Math.abs(d.z_score||0)>=3)
+    .sort((a,b)=>Math.abs(b.z_score)-Math.abs(a.z_score)).slice(0,7);
+  $('feed').innerHTML = top.map(d => {
+    const z=d.z_score||0, col=zColor(z), sign=z>=0?'+':'';
+    const cc=(d.country_code||'').toUpperCase();
     return `<div class="fi" onclick="flyTo(${d.lat},${d.lon})">
       <div class="fi-left">
-        <span class="fi-dot" style="background:${col};box-shadow:0 0 8px ${col}"></span>
+        <span class="fi-dot" style="background:${col};box-shadow:0 0 6px ${col}"></span>
         <span class="fi-city">${d.location}</span>
-        <span style="font-size:8px;color:#1e5060">${(d.country_code||'').toUpperCase()}</span>
+        <span class="fi-cc">${cc}</span>
       </div>
       <span class="fi-z" style="color:${col}">${sign}${z.toFixed(1)}σ</span>
     </div>`;
-  }).join('');
+  }).join('') || '<div style="font-size:10px;color:rgba(255,255,255,.3)">No critical anomalies</div>';
 }
 
-// ─── Fly to ───────────────────────────────────────────────────────────────────
-function flyTo(lat, lng, alt=1.0){
+// ── Space Weather ─────────────────────────────────────────────────────────────
+async function loadSpaceWeather() {
+  try {
+    const r = await fetch('/data/grid_stress.json');
+    const d = await r.json();
+    const sw = d.space_weather||{};
+    const gs = d.grid_stress||[];
+    const kp = sw.kp_current||0;
+    const kpCol = kp>=5?'#FF006E':kp>=3?'#FFD60A':'#00FF88';
+    $('cp-kp').textContent = kp.toFixed(1);
+    $('cp-kp').style.color = kpCol;
+    $('cp-flare').textContent = sw.flare_class||'A';
+    $('cp-grid').textContent = gs[0]?.grid_stress_score?.toFixed(1)||'--';
+  } catch(e) {}
+}
+
+// ── Navigation ────────────────────────────────────────────────────────────────
+function flyTo(lat, lng, alt=0.9) {
   globe.controls().autoRotate = false;
-  globe.pointOfView({lat, lng, altitude: alt}, 1500);
+  globe.pointOfView({lat, lng, altitude:alt}, 1400);
 }
 
-// ─── Search ───────────────────────────────────────────────────────────────────
-const cs = $('cs'), sr = $('sr');
-cs.addEventListener('input', ()=>{
+function goToMyCity() {
+  if(myLat!==null) { flyTo(myLat, myLon, 0.8); return; }
+  if(!navigator.geolocation) { toast('⚠️ GPS not supported'); return; }
+  toast('📡 Detecting location...', 4000);
+  navigator.geolocation.getCurrentPosition(pos => {
+    myLat=pos.coords.latitude; myLon=pos.coords.longitude;
+    flyTo(myLat, myLon, 0.8);
+    let near=null, md=999;
+    nodesData.forEach(d=>{const dist=Math.sqrt((d.lat-myLat)**2+(d.lon-myLon)**2);if(dist<md){md=dist;near=d;}});
+    toast(`🌍 ${near?near.location:'Your location'}`);
+  }, ()=>toast('⚠️ Access denied'));
+}
+
+// ── Search ────────────────────────────────────────────────────────────────────
+const cs=$('cs'), sr=$('sr');
+cs.addEventListener('input', () => {
   const q = cs.value.trim().toLowerCase();
-  if(q.length < 2){ sr.style.display='none'; return; }
+  if(q.length<2){sr.style.display='none';return;}
   const m = nodesData.filter(d=>(d.location||'').toLowerCase().includes(q)).slice(0,7);
-  if(!m.length){ sr.style.display='none'; return; }
+  if(!m.length){sr.style.display='none';return;}
   sr.innerHTML = m.map(d=>{
-    const z=(d.z_score||0).toFixed(2), cls=d.z_score>=3?'hot':d.z_score>=2?'warn':d.z_score<=-2?'cold':'norm', sign=d.z_score>=0?'+':'';
-    return `<div class="sri" onclick="selectCity(${d.lat},${d.lon},'${(d.location||'').replace(/'/g,'')}')">
-      <span class="sri-city">${d.location} <span style="color:#1e4050;font-size:8px">${(d.country_code||'').toUpperCase()}</span></span>
-      <span class="sri-z ${cls}">${sign}${z}σ</span></div>`;
+    const z=(d.z_score||0).toFixed(2), col=zColor(d.z_score), sign=d.z_score>=0?'+':'';
+    return `<div class="sri" onclick="cs.value='${(d.location||'').replace(/'/g,'')}';sr.style.display='none';flyTo(${d.lat},${d.lon});toast('🔍 ${(d.location||'').replace(/'/g,'')}')" >
+      <span style="font-size:10px;font-weight:700;color:#e2e8f0">${d.location} <span style="color:rgba(255,255,255,.3);font-size:8px">${(d.country_code||'').toUpperCase()}</span></span>
+      <span style="font-size:11px;font-weight:800;color:${col}">${sign}${z}σ</span></div>`;
   }).join('');
   sr.style.display='block';
 });
-cs.addEventListener('keydown', e=>{ if(e.key==='Escape'){sr.style.display='none';cs.value='';} });
 document.addEventListener('click', e=>{ if(!e.target.closest('#sb-wrap')) sr.style.display='none'; });
 
-function selectCity(lat, lng, name){
-  cs.value=name; sr.style.display='none'; flyTo(lat,lng); toast(`🔍 ${name}`);
-}
-
-// ─── My Location ─────────────────────────────────────────────────────────────
-function goToMyCity(){
-  if(myLat !== null){ doFlyToMe(); return; }
-  if(!navigator.geolocation){ toast('⚠️ Geolocation not supported'); return; }
-  toast('📡 Detecting location...', 3500);
-  navigator.geolocation.getCurrentPosition(pos=>{
-    myLat=pos.coords.latitude; myLon=pos.coords.longitude; doFlyToMe();
-  }, ()=>toast('⚠️ Location access denied'));
-}
-
-function doFlyToMe(){
-  flyTo(myLat, myLon, 0.8);
-  // Add my location marker
-  const myNode = [{lat:myLat, lon:myLon, location:'You', z_score:0, _isMe:true}];
-  globe.ringsData([...nodesData.filter(d=>Math.abs(d.z_score||0)>=2.5), ...myNode.map(d=>({...d,_isMe:true}))]);
-  let nearest=null,minD=999;
-  nodesData.forEach(d=>{const dist=Math.sqrt((d.lat-myLat)**2+(d.lon-myLon)**2);if(dist<minD){minD=dist;nearest=d;}});
-  toast(`🌍 ${nearest?nearest.location:'Your location'}`);
-}
-
-// ─── UTC Clock ────────────────────────────────────────────────────────────────
-function tickClock(){
+// ── UTC Clock ──────────────────────────────────────────────────────────────────
+function tickClock() {
   const d=new Date();
-  $('utc-box').textContent=d.getUTCHours().toString().padStart(2,'0')+':'+d.getUTCMinutes().toString().padStart(2,'0')+':'+d.getUTCSeconds().toString().padStart(2,'0')+' UTC';
+  $('utc').textContent = d.getUTCHours().toString().padStart(2,'0')+':'+d.getUTCMinutes().toString().padStart(2,'0')+':'+d.getUTCSeconds().toString().padStart(2,'0')+' UTC';
 }
 tickClock(); setInterval(tickClock,1000);
+
+// Refresh data every 5 min
+setInterval(loadData, 300000);
 </script>
 </body>
 </html>
