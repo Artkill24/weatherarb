@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-04T17:27:07.155045+00:00",
-  "count": 24,
+  "last_updated": "2026-05-04T19:19:00.531828+00:00",
+  "count": 16,
   "reports": [
     {
       "slug": "2026-05-04-winnipeg-cold-snap",
@@ -241,66 +241,6 @@
       "cover_url": "https://images.unsplash.com/photo-1704243962389-6e57197ccf09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc4OTc1NzJ8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-04-anchorage-heavy-rain/",
       "excerpt": "Anchorage sta sperimentando una pioggia intensa anomala. Il Z-Score di -3.77 indica un evento estremamente raro."
-    },
-    {
-      "slug": "2026-04-27-vercelli-heat-wave",
-      "title": "Vercelli heat wave",
-      "lead": "Vercelli sta sperimentando un evento di heat wave estremo. Le condizioni meteo sono critiche con un Z-Score di +3.42....",
-      "location": "Vercelli",
-      "country_code": "it",
-      "vertical": "heat-wave",
-      "z_score": 3.42,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-04-27",
-      "cover_url": "",
-      "url": "/news/2026-04-27-vercelli-heat-wave/",
-      "excerpt": "Vercelli sta sperimentando un evento di heat wave estremo. Le condizioni meteo sono critiche con un Z-Score di +3.42."
-    },
-    {
-      "slug": "2026-04-27-torino-heat-wave",
-      "title": "Torino heat wave",
-      "lead": "Una heat wave anomala colpisce Torino con un Z-Score di +3.15. Le condizioni meteo sono estreme con un indice di calore molto alto....",
-      "location": "Torino",
-      "country_code": "it",
-      "vertical": "heat-wave",
-      "z_score": 3.15,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-04-27",
-      "cover_url": "https://images.unsplash.com/photo-1652359773857-3cf5bd932efe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzczMDA0NDR8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-04-27-torino-heat-wave/",
-      "excerpt": "Una heat wave anomala colpisce Torino con un Z-Score di +3.15. Le condizioni meteo sono estreme con un indice di calore molto alto."
-    },
-    {
-      "slug": "2026-04-27-sondrio-heat-wave",
-      "title": "Sondrio heat wave",
-      "lead": "Sondrio sta vivendo un'ondata di caldo estremo con un Z-Score di +3.20. La temperatura eccessiva sta causando condizioni critiche....",
-      "location": "Sondrio",
-      "country_code": "it",
-      "vertical": "heat-wave",
-      "z_score": 3.2,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-04-27",
-      "cover_url": "",
-      "url": "/news/2026-04-27-sondrio-heat-wave/",
-      "excerpt": "Sondrio sta vivendo un'ondata di caldo estremo con un Z-Score di +3.20. La temperatura eccessiva sta causando condizioni critiche."
-    },
-    {
-      "slug": "2026-04-27-novara-heat-wave",
-      "title": "Novara heat wave",
-      "lead": "La citta di Novara sta vivendo un'ondata di caldo estremo con un Z-Score di +3.40. Le condizioni meteo sono critiche con un indice di caldo molto alto....",
-      "location": "Novara",
-      "country_code": "it",
-      "vertical": "heat-wave",
-      "z_score": 3.4,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-04-27",
-      "cover_url": "",
-      "url": "/news/2026-04-27-novara-heat-wave/",
-      "excerpt": "La citta di Novara sta vivendo un'ondata di caldo estremo con un Z-Score di +3.40. Le condizioni meteo sono critiche con un indice di caldo molto alto."
     }
   ]
 }
