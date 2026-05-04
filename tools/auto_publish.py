@@ -9,7 +9,7 @@ log = logging.getLogger(__name__)
 
 API_BASE       = os.getenv("API_BASE", "https://api.weatherarb.com")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL   = "gemini-2.0-flash-lite"
+GEMINI_MODEL   = "gemini-1.5-flash"
 GROQ_API_KEY   = os.getenv("GROQ_API_KEY", "")
 GROQ_MODEL     = "llama-3.3-70b-versatile"
 UNSPLASH_KEY   = os.getenv("UNSPLASH_KEY", "TQKawFnfN84CU84RHdzVHWqFHMFsmjiNnPbktCcyjMw")
