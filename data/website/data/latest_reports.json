@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-05T07:59:16.167157+00:00",
-  "count": 33,
+  "last_updated": "2026-05-05T09:59:07.965616+00:00",
+  "count": 38,
   "reports": [
     {
       "slug": "2026-05-05-vasteras-cold-snap",
@@ -63,6 +63,36 @@
       "excerpt": "A severe cold snap is affecting Trondheim, with a Z-Score of -4.37. This event has reached a critical level with a score of 10.0/10."
     },
     {
+      "slug": "2026-05-05-tromsoe-heavy-rain",
+      "title": "Tromsoe Heavy Rain",
+      "lead": "Tromsoe is experiencing a critical rain event with a Z-Score of -3.77. This anomaly has a Score of 10.0/10, indicating extreme conditions....",
+      "location": "Tromsoe",
+      "country_code": "no",
+      "vertical": "heavy-rain",
+      "z_score": -3.77,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-05",
+      "cover_url": "https://images.unsplash.com/photo-1539634805404-c515d02557cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NzUxMzV8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-05-tromsoe-heavy-rain/",
+      "excerpt": "Tromsoe is experiencing a critical rain event with a Z-Score of -3.77. This anomaly has a Score of 10.0/10, indicating extreme conditions."
+    },
+    {
+      "slug": "2026-05-05-tampere-heavy-rain",
+      "title": "Tampere Heavy Rain",
+      "lead": "Tampere is experiencing a critical heavy rain event with a Z-Score of -3.74. This anomaly is expected to have significant impacts on the city....",
+      "location": "Tampere",
+      "country_code": "fi",
+      "vertical": "heavy-rain",
+      "z_score": -3.74,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-05",
+      "cover_url": "https://images.unsplash.com/photo-1637846306548-74428c8c80bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NzUxMzh8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-05-tampere-heavy-rain/",
+      "excerpt": "Tampere is experiencing a critical heavy rain event with a Z-Score of -3.74. This anomaly is expected to have significant impacts on the city."
+    },
+    {
       "slug": "2026-05-05-stavanger-cold-snap",
       "title": "Stavanger Cold Snap",
       "lead": "A severe cold snap is affecting Stavanger with a Z-Score of -4.20. This event has reached a critical level with a score of 10.0/10....",
@@ -76,6 +106,21 @@
       "cover_url": "https://images.unsplash.com/photo-1628326910400-ac8fb1b5fe0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NDc5MzR8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-05-stavanger-cold-snap/",
       "excerpt": "A severe cold snap is affecting Stavanger with a Z-Score of -4.20. This event has reached a critical level with a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-05-oulu-cold-snap",
+      "title": "Oulu Cold Snap",
+      "lead": "A severe cold snap is affecting Oulu, with extremely low temperatures. This event has a critical level with a Z-Score of -3.66....",
+      "location": "Oulu",
+      "country_code": "fi",
+      "vertical": "cold-snap",
+      "z_score": -3.66,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-05",
+      "cover_url": "https://images.unsplash.com/photo-1711651625768-8de9b8a5f00e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NzUxNDJ8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-05-oulu-cold-snap/",
+      "excerpt": "A severe cold snap is affecting Oulu, with extremely low temperatures. This event has a critical level with a Z-Score of -3.66."
     },
     {
       "slug": "2026-05-05-oslo-cold-snap",
@@ -106,6 +151,21 @@
       "cover_url": "https://images.unsplash.com/photo-1705589462591-512c67ee8c4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NjE1NTF8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-05-orebro-cold-snap/",
       "excerpt": "Örebro is experiencing a severe cold snap with a Z-Score of -3.03. This event has reached a critical level with a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-05-minneapolis-cold-snap",
+      "title": "Minneapolis Cold Snap",
+      "lead": "A severe cold snap is affecting Minneapolis with a Z-Score of -3.86. The event has reached a critical level with a score of 10.0/10....",
+      "location": "Minneapolis",
+      "country_code": "us",
+      "vertical": "cold-snap",
+      "z_score": -3.86,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-05",
+      "cover_url": "https://images.unsplash.com/photo-1610905532525-2fc7e3729f3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NzUxNDV8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-05-minneapolis-cold-snap/",
+      "excerpt": "A severe cold snap is affecting Minneapolis with a Z-Score of -3.86. The event has reached a critical level with a score of 10.0/10."
     },
     {
       "slug": "2026-05-05-larissa-heavy-rain",
@@ -151,6 +211,21 @@
       "cover_url": "https://images.unsplash.com/photo-1738574603764-bbe948d18fbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NDc5Mjh8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-05-bergen-heavy-rain/",
       "excerpt": "Bergen is experiencing heavy rain with a Z-Score of -4.63. This event has a critical score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-05-aberdeen-cold-snap",
+      "title": "Aberdeen Cold Snap",
+      "lead": "Aberdeen is experiencing a severe cold snap with a Z-Score of -3.00. This critical event has a score of 10.0/10, indicating extreme weather conditions....",
+      "location": "Aberdeen",
+      "country_code": "gb",
+      "vertical": "cold-snap",
+      "z_score": -3.0,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-05",
+      "cover_url": "https://images.unsplash.com/photo-1721549768829-d0d2e946e738?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NzUxMzF8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-05-aberdeen-cold-snap/",
+      "excerpt": "Aberdeen is experiencing a severe cold snap with a Z-Score of -3.00. This critical event has a score of 10.0/10, indicating extreme weather conditions."
     },
     {
       "slug": "2026-05-05-aarhus-heavy-rain",
@@ -226,81 +301,6 @@
       "cover_url": "https://images.unsplash.com/photo-1643939168885-5b472519306a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5MDA0MTV8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-04-trondheim-cold-snap/",
       "excerpt": "A severe cold snap is affecting Trondheim, with a Z-Score of -3.14. This event has a Score of 10.0/10, classified as CRITICAL."
-    },
-    {
-      "slug": "2026-05-04-tromsoe-cold-snap",
-      "title": "Tromsoe Cold Snap",
-      "lead": "Tromsoe sta sperimentando un anomalo evento di cold snap con un Z-Score di -3.17. Le condizioni meteo estreme sono classificate come CRITICAL....",
-      "location": "Tromsoe",
-      "country_code": "no",
-      "vertical": "cold-snap",
-      "z_score": -3.17,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-04",
-      "cover_url": "https://images.unsplash.com/photo-1771160014001-0570034fa269?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc4OTc1Njl8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-04-tromsoe-cold-snap/",
-      "excerpt": "Tromsoe sta sperimentando un anomalo evento di cold snap con un Z-Score di -3.17. Le condizioni meteo estreme sono classificate come CRITICAL."
-    },
-    {
-      "slug": "2026-05-04-tampa-heat-wave",
-      "title": "Tampa Heat Wave",
-      "lead": "Tampa is experiencing a critical heat wave with a Z-Score of +3.34. This event has reached a score of 10.0/10, indicating extreme conditions....",
-      "location": "Tampa",
-      "country_code": "us",
-      "vertical": "heat-wave",
-      "z_score": 3.34,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-04",
-      "cover_url": "https://images.unsplash.com/photo-1645409229574-33c6d63ca81d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5Mjg2Nzh8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-04-tampa-heat-wave/",
-      "excerpt": "Tampa is experiencing a critical heat wave with a Z-Score of +3.34. This event has reached a score of 10.0/10, indicating extreme conditions."
-    },
-    {
-      "slug": "2026-05-04-stavanger-cold-snap",
-      "title": "Stavanger Cold Snap",
-      "lead": "A severe cold snap is affecting Stavanger with a Z-Score of -3.46. This event has a critical score of 10.0/10....",
-      "location": "Stavanger",
-      "country_code": "no",
-      "vertical": "cold-snap",
-      "z_score": -3.46,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-04",
-      "cover_url": "https://images.unsplash.com/photo-1571171307515-ea967318c581?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5Mjg2NzJ8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-04-stavanger-cold-snap/",
-      "excerpt": "A severe cold snap is affecting Stavanger with a Z-Score of -3.46. This event has a critical score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-04-sapporo-heavy-rain",
-      "title": "Sapporo heavy rain",
-      "lead": "Sapporo sta sperimentando una pioggia intensa con un Z-Score di -3.09. La situazione e' critica con un punteggio di 10.0/10....",
-      "location": "Sapporo",
-      "country_code": "jp",
-      "vertical": "heavy-rain",
-      "z_score": -3.09,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-04",
-      "cover_url": "https://images.unsplash.com/photo-1770212646096-c1de6133970f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc4OTc1OTF8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-04-sapporo-heavy-rain/",
-      "excerpt": "Sapporo sta sperimentando una pioggia intensa con un Z-Score di -3.09. La situazione e' critica con un punteggio di 10.0/10."
-    },
-    {
-      "slug": "2026-05-04-sapporo-cold-snap",
-      "title": "Sapporo Cold Snap",
-      "lead": "A severe cold snap is affecting Sapporo, with a Z-Score of -3.54. This event has reached a critical level with a score of 10.0/10....",
-      "location": "Sapporo",
-      "country_code": "jp",
-      "vertical": "cold-snap",
-      "z_score": -3.54,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-04",
-      "cover_url": "https://images.unsplash.com/photo-1770358019465-c04c39c8547a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5MTU2MjV8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-04-sapporo-cold-snap/",
-      "excerpt": "A severe cold snap is affecting Sapporo, with a Z-Score of -3.54. This event has reached a critical level with a score of 10.0/10."
     }
   ]
 }
