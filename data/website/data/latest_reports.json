@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-05T19:08:59.502407+00:00",
-  "count": 45,
+  "last_updated": "2026-05-05T20:59:10.573646+00:00",
+  "count": 47,
   "reports": [
     {
       "slug": "2026-05-05-vasteras-cold-snap",
@@ -31,6 +31,21 @@
       "cover_url": "https://images.unsplash.com/photo-1618229051432-35a3a088f0ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NDc5MTh8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-05-umea-cold-snap/",
       "excerpt": "A severe cold snap is hitting Umea with a Z-Score of -4.57. This critical event has a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-05-turku-cold-snap",
+      "title": "Turku Cold Snap",
+      "lead": "Turku is experiencing a severe cold snap with a Z-Score of -3.06. This anomaly has reached a critical level with a score of 10.0/10....",
+      "location": "Turku",
+      "country_code": "fi",
+      "vertical": "cold-snap",
+      "z_score": -3.06,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-05",
+      "cover_url": "https://images.unsplash.com/photo-1703540219109-3c32c1143cef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgwMTQ3NDV8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-05-turku-cold-snap/",
+      "excerpt": "Turku is experiencing a severe cold snap with a Z-Score of -3.06. This anomaly has reached a critical level with a score of 10.0/10."
     },
     {
       "slug": "2026-05-05-trondheim-heavy-rain",
@@ -106,6 +121,21 @@
       "cover_url": "https://images.unsplash.com/photo-1637846306548-74428c8c80bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NzUxMzh8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-05-tampere-heavy-rain/",
       "excerpt": "Tampere is experiencing a critical heavy rain event with a Z-Score of -3.74. This anomaly is expected to have significant impacts on the city."
+    },
+    {
+      "slug": "2026-05-05-tampere-cold-snap",
+      "title": "Tampere Cold Snap",
+      "lead": "A severe cold snap is affecting Tampere with a Z-Score of -3.03. This event has a Score of 10.0/10, classified as CRITICAL....",
+      "location": "Tampere",
+      "country_code": "fi",
+      "vertical": "cold-snap",
+      "z_score": -3.03,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-05",
+      "cover_url": "https://images.unsplash.com/photo-1644143699411-7c0f6d13b819?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgwMTQ3NDJ8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-05-tampere-cold-snap/",
+      "excerpt": "A severe cold snap is affecting Tampere with a Z-Score of -3.03. This event has a Score of 10.0/10, classified as CRITICAL."
     },
     {
       "slug": "2026-05-05-tampa-heat-wave",
@@ -271,36 +301,6 @@
       "cover_url": "",
       "url": "/news/2026-05-05-esbjerg-cold-snap/",
       "excerpt": "A severe cold snap is hitting Esbjerg with a Z-Score of -3.11. This critical event has a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-05-debrecen-heat-wave",
-      "title": "Debrecen Heat Wave",
-      "lead": "Debrecen is experiencing a severe heat wave with a Z-Score of +3.06. This critical event has a score of 10.0/10....",
-      "location": "Debrecen",
-      "country_code": "hu",
-      "vertical": "heat-wave",
-      "z_score": 3.06,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-05",
-      "cover_url": "",
-      "url": "/news/2026-05-05-debrecen-heat-wave/",
-      "excerpt": "Debrecen is experiencing a severe heat wave with a Z-Score of +3.06. This critical event has a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-05-bergen-heavy-rain",
-      "title": "Bergen Heavy Rain",
-      "lead": "Bergen is experiencing heavy rain with a Z-Score of -4.63. This event has a critical score of 10.0/10....",
-      "location": "Bergen",
-      "country_code": "no",
-      "vertical": "heavy-rain",
-      "z_score": -4.63,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-05",
-      "cover_url": "https://images.unsplash.com/photo-1738574603764-bbe948d18fbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NDc5Mjh8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-05-bergen-heavy-rain/",
-      "excerpt": "Bergen is experiencing heavy rain with a Z-Score of -4.63. This event has a critical score of 10.0/10."
     }
   ]
 }
