@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-06T13:59:11.685951+00:00",
-  "count": 58,
+  "last_updated": "2026-05-06T17:27:15.139152+00:00",
+  "count": 63,
   "reports": [
     {
       "slug": "2026-05-06-vasteras-cold-snap",
@@ -93,6 +93,21 @@
       "excerpt": "A severe cold snap is affecting Tromsoe, with a Z-Score of -3.09. This event has reached a critical level with a score of 10.0/10."
     },
     {
+      "slug": "2026-05-06-tampa-heat-wave",
+      "title": "Tampa Heat Wave",
+      "lead": "A severe heat wave is affecting Tampa with a Z-Score of +3.97. This event has reached a critical level with a score of 10.0/10....",
+      "location": "Tampa",
+      "country_code": "us",
+      "vertical": "heat-wave",
+      "z_score": 3.97,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-06",
+      "cover_url": "https://images.unsplash.com/photo-1614056905561-0004a2bb2b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgwODg0MTl8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-06-tampa-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Tampa with a Z-Score of +3.97. This event has reached a critical level with a score of 10.0/10."
+    },
+    {
       "slug": "2026-05-06-stockholm-cold-snap",
       "title": "Stockholm Cold Snap",
       "lead": "A severe cold snap has hit Stockholm with a Z-Score of -3.54. The city is experiencing extremely cold temperatures....",
@@ -136,6 +151,21 @@
       "cover_url": "https://images.unsplash.com/photo-1705667181434-b3bc3aeeeec8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgwNzU5Mzl8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-06-oulu-cold-snap/",
       "excerpt": "A severe cold snap is affecting Oulu with a Z-Score of -3.06. Temperatures are critically low, scoring 10.0/10."
+    },
+    {
+      "slug": "2026-05-06-orlando-heat-wave",
+      "title": "Orlando Heat Wave",
+      "lead": "Orlando is experiencing a critical heat wave with a Z-Score of +4.14. This event has reached a score of 10.0/10, indicating extreme conditions....",
+      "location": "Orlando",
+      "country_code": "us",
+      "vertical": "heat-wave",
+      "z_score": 4.14,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-06",
+      "cover_url": "https://images.unsplash.com/photo-1578490445064-4d6bb52082f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgwODg0MjJ8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-06-orlando-heat-wave/",
+      "excerpt": "Orlando is experiencing a critical heat wave with a Z-Score of +4.14. This event has reached a score of 10.0/10, indicating extreme conditions."
     },
     {
       "slug": "2026-05-06-orebro-cold-snap",
@@ -271,36 +301,6 @@
       "cover_url": "https://images.unsplash.com/photo-1705781160851-17c045aafb83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgwMzQ1MzZ8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-06-jonkoping-cold-snap/",
       "excerpt": "A severe cold snap is affecting Jönköping with a Z-Score of -4.57. This event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-06-iasi-heat-wave",
-      "title": "Iasi Heat Wave",
-      "lead": "A severe heat wave is affecting Iasi with a Z-Score of +3.00. This critical event has a score of 10.0/10....",
-      "location": "Iasi",
-      "country_code": "ro",
-      "vertical": "heat-wave",
-      "z_score": 3.0,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-06",
-      "cover_url": "",
-      "url": "/news/2026-05-06-iasi-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Iasi with a Z-Score of +3.00. This critical event has a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-06-helsingborg-cold-snap",
-      "title": "Helsingborg Cold Snap",
-      "lead": "A severe cold snap is affecting Helsingborg, with a Z-Score of -3.03. This event has reached a critical level with a score of 10.0/10....",
-      "location": "Helsingborg",
-      "country_code": "se",
-      "vertical": "cold-snap",
-      "z_score": -3.03,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-06",
-      "cover_url": "",
-      "url": "/news/2026-05-06-helsingborg-cold-snap/",
-      "excerpt": "A severe cold snap is affecting Helsingborg, with a Z-Score of -3.03. This event has reached a critical level with a score of 10.0/10."
     }
   ]
 }
