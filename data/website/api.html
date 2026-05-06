@@ -2,535 +2,978 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WeatherArb — API Reference</title>
-<meta name="description" content="Free weather anomaly API. Z-Score vs ERA5-Land baselines for 65 European cities. No auth required.">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WeatherArb API — Weather Intelligence Platform</title>
+<meta name="description" content="WeatherArb API: Real-time weather anomaly intelligence for 10,000+ cities. Z-Score, HDD/CDD, NASA POWER 25-year baseline. Free tier available.">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#080c12;--surface:#0f1520;--surface2:#151d2e;--border:rgba(255,255,255,.07);
-  --text:#e2e8f0;--muted:#64748b;--electric:#3b82f6;--green:#10b981;
-  --critical:#ef4444;--extreme:#f97316;--unusual:#eab308;
+:root{
+  --bg:#050810;--s1:#0a0f1e;--s2:#0d1428;--s3:#111827;
+  --border:rgba(255,255,255,.06);--border2:rgba(59,130,246,.2);
+  --text:#e2e8f0;--muted:#4a5568;--muted2:#64748b;
+  --blue:#3b82f6;--cyan:#00d4ff;--green:#10b981;--red:#ef4444;
+  --orange:#f97316;--yellow:#fbbf24;--violet:#8b5cf6;
+  --get:#10b981;--post:#f97316;--del:#ef4444;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden}
 
-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;border-bottom:1px solid var(--border);background:rgba(8,12,18,.9);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100}
-.logo{font-family:'Instrument Serif',serif;font-size:18px;color:white;display:flex;align-items:center;gap:8px;text-decoration:none}
-.logo-icon{width:26px;height:26px;background:#1a3a5c;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:13px}
-.nav-links{display:flex;gap:24px}
-.nav-links a{color:var(--muted);font-size:13px;text-decoration:none}
-.nav-links a:hover{color:white}
-.nav-links a.active{color:var(--electric)}
+/* NAV */
+nav{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;border-bottom:1px solid var(--border);background:rgba(5,8,16,.95);backdrop-filter:blur(20px);position:sticky;top:0;z-index:100}
+.logo{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo-icon{width:28px;height:28px;background:linear-gradient(135deg,#1e3a5f,#2d6a9f);border-radius:7px;display:flex;align-items:center;justify-content:center}
+.logo em{color:var(--cyan);font-style:normal}
+.nav-right{display:flex;align-items:center;gap:20px}
+.nav-links{display:flex;gap:20px}
+.nav-links a{color:var(--muted2);font-size:13px;text-decoration:none;transition:color .15s}
+.nav-links a:hover{color:#fff}
+.nav-badge{background:linear-gradient(135deg,rgba(0,212,255,.15),rgba(59,130,246,.1));border:1px solid rgba(0,212,255,.25);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.12em;padding:4px 10px;border-radius:20px;text-transform:uppercase}
 
-.layout{display:flex;flex:1}
+/* LAYOUT */
+.layout{display:flex;flex:1;min-height:0}
 
 /* SIDEBAR */
-.sidebar{width:240px;border-right:1px solid var(--border);padding:24px 0;position:sticky;top:57px;height:calc(100vh - 57px);overflow-y:auto;flex-shrink:0}
-.sidebar-section{margin-bottom:8px}
-.sidebar-title{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:8px 20px;margin-bottom:4px}
-.sidebar-link{display:flex;align-items:center;gap:8px;padding:7px 20px;font-size:13px;color:var(--muted);text-decoration:none;transition:all .15s;border-left:2px solid transparent;cursor:pointer}
-.sidebar-link:hover{color:white;background:rgba(255,255,255,.03)}
-.sidebar-link.active{color:var(--electric);border-left-color:var(--electric);background:rgba(59,130,246,.05)}
-.method-tag{font-size:9px;font-weight:700;padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace}
-.get{background:rgba(16,185,129,.15);color:#10b981}
-.post{background:rgba(249,115,22,.15);color:#f97316}
+.sidebar{width:260px;border-right:1px solid var(--border);padding:20px 0;position:sticky;top:57px;height:calc(100vh - 57px);overflow-y:auto;flex-shrink:0;background:rgba(5,8,16,.5)}
+.sidebar::-webkit-scrollbar{width:3px}
+.sidebar::-webkit-scrollbar-track{background:transparent}
+.sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.08);border-radius:2px}
+.sb-section{margin-bottom:4px}
+.sb-title{font-size:9px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);padding:12px 20px 6px;display:flex;align-items:center;gap:6px}
+.sb-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.sb-link{display:flex;align-items:center;justify-content:space-between;padding:7px 20px;font-size:12px;color:var(--muted2);text-decoration:none;transition:all .12s;border-left:2px solid transparent;cursor:pointer}
+.sb-link:hover{color:#fff;background:rgba(255,255,255,.03);border-left-color:rgba(255,255,255,.15)}
+.sb-link.active{color:var(--cyan);border-left-color:var(--cyan);background:rgba(0,212,255,.04)}
+.method{font-size:8px;font-weight:800;padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;letter-spacing:.05em}
+.m-get{background:rgba(16,185,129,.15);color:var(--get)}
+.m-post{background:rgba(249,115,22,.15);color:var(--post)}
 
 /* CONTENT */
 .content{flex:1;overflow-y:auto;padding:0}
-.section{padding:48px;border-bottom:1px solid var(--border);max-width:900px}
+.content::-webkit-scrollbar{width:4px}
+.content::-webkit-scrollbar-thumb{background:rgba(255,255,255,.06)}
 
-.section h2{font-family:'Instrument Serif',serif;font-size:28px;margin-bottom:8px}
-.section p{color:var(--muted);font-size:14px;line-height:1.7;margin-bottom:20px}
-.section h3{font-size:15px;font-weight:600;margin-bottom:12px;margin-top:28px;color:white}
+/* HERO */
+.api-hero{padding:60px 56px 48px;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(0,212,255,.03) 0%,transparent 100%);position:relative;overflow:hidden}
+.api-hero::before{content:'API';position:absolute;right:40px;top:20px;font-family:'Syne',sans-serif;font-size:180px;font-weight:900;color:rgba(255,255,255,.015);pointer-events:none;line-height:1}
+.api-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.2em;padding:4px 12px;border-radius:20px;text-transform:uppercase;margin-bottom:20px}
+.api-hero h1{font-family:'Syne',sans-serif;font-size:44px;font-weight:900;letter-spacing:-.02em;line-height:1;color:#fff;margin-bottom:14px}
+.api-hero h1 em{color:var(--cyan);font-style:normal}
+.api-hero p{font-size:15px;color:var(--muted2);line-height:1.7;max-width:580px;margin-bottom:32px}
+.hero-stats{display:flex;gap:32px;flex-wrap:wrap}
+.hstat{text-align:center}
+.hstat-val{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:#fff;line-height:1}
+.hstat-lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-top:4px}
 
-/* ENDPOINT BLOCK */
-.endpoint-block{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:24px}
-.endpoint-header{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--border);cursor:pointer;user-select:none}
-.endpoint-header:hover{background:rgba(255,255,255,.02)}
-.endpoint-path{font-family:'JetBrains Mono',monospace;font-size:14px;color:white}
-.endpoint-desc{font-size:13px;color:var(--muted);margin-left:auto}
-.endpoint-body{padding:20px}
+/* BASE URL */
+.base-url-box{margin:32px 56px;background:var(--s1);border:1px solid var(--border2);border-radius:12px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.base-url-label{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--cyan);margin-bottom:6px}
+.base-url-val{font-family:'JetBrains Mono',monospace;font-size:14px;color:#fff}
+.copy-btn{background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);color:var(--cyan);font-size:11px;font-weight:600;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;white-space:nowrap}
+.copy-btn:hover{background:rgba(0,212,255,.15)}
 
-/* PARAMS */
-.params-table{width:100%;border-collapse:collapse;margin-bottom:16px}
-.params-table th{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);padding:8px 12px;text-align:left;border-bottom:1px solid var(--border)}
-.params-table td{padding:8px 12px;font-size:13px;border-bottom:1px solid rgba(255,255,255,.03);vertical-align:top}
-.params-table tr:last-child td{border-bottom:none}
-.param-name{font-family:'JetBrains Mono',monospace;color:white}
-.param-type{color:var(--unusual);font-size:11px}
-.param-required{color:var(--critical);font-size:10px;font-weight:700}
-.param-optional{color:var(--muted);font-size:10px}
+/* SECTION */
+.section{padding:48px 56px;border-bottom:1px solid var(--border)}
+.section-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:28px}
+.section-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.section h2{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:#fff;margin-bottom:6px}
+.section p{font-size:13px;color:var(--muted2);line-height:1.7}
 
-/* CODE */
-.code-block{background:#030712;border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:16px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.7;overflow-x:auto;position:relative}
-.code-block .copy-btn{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.08);border:none;color:var(--muted);padding:4px 10px;border-radius:4px;cursor:pointer;font-size:11px;font-family:'DM Sans',sans-serif}
-.code-block .copy-btn:hover{background:rgba(255,255,255,.12);color:white}
-.kw{color:#93c5fd}    /* keyword - blue */
-.str{color:#86efac}   /* string - green */
-.num{color:#fca5a5}   /* number - red */
-.key{color:#e2e8f0}   /* key - white */
-.cmt{color:#475569}   /* comment - gray */
+/* ENDPOINT */
+.endpoint{background:var(--s1);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:20px}
+.ep-header{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;user-select:none;transition:background .12s}
+.ep-header:hover{background:rgba(255,255,255,.02)}
+.ep-path{font-family:'JetBrains Mono',monospace;font-size:13px;color:#fff;flex:1}
+.ep-path .param{color:var(--orange)}
+.ep-desc{font-size:12px;color:var(--muted2);margin-left:auto}
+.ep-badge{display:flex;align-items:center;gap:6px}
+.ep-free{font-size:8px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2);color:var(--get);padding:2px 7px;border-radius:10px;font-weight:700;letter-spacing:.08em}
+.ep-pro{font-size:8px;background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.2);color:var(--violet);padding:2px 7px;border-radius:10px;font-weight:700;letter-spacing:.08em}
+.ep-body{display:none;border-top:1px solid var(--border);padding:24px}
+.ep-body.open{display:block}
+.ep-desc-full{font-size:13px;color:var(--muted2);line-height:1.7;margin-bottom:20px}
+
+/* PARAMS TABLE */
+.params-table{width:100%;border-collapse:collapse;margin-bottom:20px;font-size:12px}
+.params-table th{text-align:left;padding:8px 12px;font-size:9px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);border-bottom:1px solid var(--border);background:rgba(255,255,255,.02)}
+.params-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--muted2);vertical-align:top}
+.params-table td:first-child{font-family:'JetBrains Mono',monospace;color:var(--cyan);font-size:11px}
+.params-table td .req{font-size:8px;background:rgba(239,68,68,.12);color:var(--red);padding:1px 5px;border-radius:4px;font-weight:700;margin-left:4px}
+.params-table td .opt{font-size:8px;background:rgba(100,116,139,.12);color:var(--muted2);padding:1px 5px;border-radius:4px;font-weight:700;margin-left:4px}
+.type-badge{font-size:9px;background:rgba(59,130,246,.08);color:var(--blue);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace}
+
+/* CODE BLOCK */
+.code-block{background:#020409;border:1px solid rgba(255,255,255,.06);border-radius:10px;overflow:hidden;margin-bottom:16px}
+.code-tabs{display:flex;border-bottom:1px solid var(--border);overflow-x:auto}
+.code-tab{padding:8px 16px;font-size:11px;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .12s}
+.code-tab.active{color:var(--cyan);border-bottom-color:var(--cyan)}
+.code-tab:hover{color:#fff}
+.code-content{display:none}
+.code-content.active{display:block}
+pre{padding:20px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.7;overflow-x:auto;color:#a8b4c8}
+pre .kw{color:#c792ea}
+pre .str{color:#c3e88d}
+pre .num{color:#f78c6c}
+pre .fn{color:#82aaff}
+pre .cm{color:#546e7a}
+pre .key{color:#89ddff}
+pre .url{color:var(--cyan)}
+.copy-code{float:right;background:rgba(255,255,255,.06);border:none;color:var(--muted2);font-size:10px;padding:4px 10px;border-radius:5px;cursor:pointer;font-family:'Inter',sans-serif;margin:12px 12px 0 0;display:block}
+.copy-code:hover{color:#fff}
+
+/* RESPONSE */
+.response-label{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.status-badge{font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 8px;border-radius:5px;font-weight:700}
+.s200{background:rgba(16,185,129,.15);color:var(--get)}
+.s400{background:rgba(239,68,68,.15);color:var(--red)}
 
 /* PLAYGROUND */
-.playground{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:20px;margin-top:20px}
-.playground h4{font-size:13px;font-weight:600;margin-bottom:16px;color:white;display:flex;align-items:center;gap:8px}
-.pg-row{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
-.pg-input{flex:1;padding:9px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:6px;color:white;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;min-width:120px}
-.pg-input:focus{border-color:var(--electric)}
+.playground{background:var(--s1);border:1px solid var(--border2);border-radius:14px;padding:28px;margin-bottom:20px}
+.pg-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.pg-title::before{content:'⚡';font-size:16px}
+.pg-row{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.pg-input{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:8px;padding:9px 14px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#fff;outline:none;flex:1;min-width:160px;transition:border-color .15s}
+.pg-input:focus{border-color:rgba(0,212,255,.4)}
 .pg-input::placeholder{color:var(--muted)}
-.pg-select{padding:9px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:6px;color:white;font-size:13px;font-family:'DM Sans',sans-serif;outline:none}
-.pg-select option{background:#1e293b}
-.pg-btn{padding:9px 20px;background:var(--electric);color:white;border:none;border-radius:6px;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:500;white-space:nowrap}
-.pg-btn:hover{opacity:.9}
-.pg-btn:disabled{opacity:.5;cursor:not-allowed}
-.response-box{background:#030712;border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:16px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.7;min-height:80px;max-height:320px;overflow-y:auto;margin-top:12px;color:var(--muted)}
-.response-box.loaded{color:var(--text)}
-.response-meta{display:flex;gap:16px;margin-bottom:8px;font-size:11px}
-.status-ok{color:var(--green)}
-.status-err{color:var(--critical)}
+.pg-select{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:8px;padding:9px 14px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#fff;outline:none}
+.pg-btn{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;border:none;border-radius:8px;padding:9px 22px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:opacity .15s;white-space:nowrap}
+.pg-btn:hover{opacity:.85}
+.pg-url{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted2);margin-bottom:12px;padding:8px 12px;background:rgba(255,255,255,.02);border-radius:6px;word-break:break-all}
+.pg-result{background:#020409;border:1px solid var(--border);border-radius:10px;padding:16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#a8b4c8;line-height:1.6;max-height:320px;overflow-y:auto;display:none;white-space:pre-wrap;word-break:break-all}
+.pg-result.visible{display:block}
+.pg-result.loading{color:var(--muted2)}
+.pg-result.error{color:var(--red)}
+
+/* FIELDS TABLE */
+.fields-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.field-item{background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.field-name{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);margin-bottom:4px}
+.field-type{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.field-desc{font-size:11px;color:var(--muted2);margin-top:4px;line-height:1.5}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:24px}
+.plan{background:var(--s1);border:1px solid var(--border);border-radius:14px;padding:24px;position:relative;overflow:hidden}
+.plan.pro{border-color:var(--border2);background:linear-gradient(135deg,rgba(0,212,255,.04),rgba(59,130,246,.04))}
+.plan.pro::before{content:'MOST POPULAR';position:absolute;top:14px;right:-20px;background:var(--cyan);color:#000;font-size:8px;font-weight:900;letter-spacing:.15em;padding:3px 30px;transform:rotate(35deg)}
+.plan-name{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:#fff;margin-bottom:4px}
+.plan-price{font-family:'Syne',sans-serif;font-size:32px;font-weight:900;color:#fff;margin:12px 0 4px}
+.plan-price em{font-size:14px;color:var(--muted2);font-style:normal;font-weight:400}
+.plan-desc{font-size:12px;color:var(--muted2);margin-bottom:20px}
+.plan-features{list-style:none}
+.plan-features li{font-size:12px;color:var(--muted2);padding:5px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.plan-features li::before{content:'✓';color:var(--get);font-weight:700;font-size:11px}
+.plan-features li.no::before{content:'✗';color:var(--muted)}
+.plan-features li.no{color:var(--muted)}
+.plan-btn{display:block;text-align:center;margin-top:20px;padding:10px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .15s}
+.plan-btn-free{background:rgba(255,255,255,.06);border:1px solid var(--border);color:#fff}
+.plan-btn-pro{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;border:none}
+.plan-btn:hover{opacity:.85}
 
 /* RATE LIMIT */
-.rate-card{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
-.rate-item{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center}
-.rate-val{font-family:'Instrument Serif',serif;font-size:28px;margin-bottom:4px}
-.rate-label{font-size:11px;color:var(--muted)}
+.rl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.rl-item{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:16px}
+.rl-plan{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:8px}
+.rl-limit{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#fff}
+.rl-unit{font-size:11px;color:var(--muted2);margin-top:2px}
 
-/* SCHEMA */
-.schema{background:var(--surface2);border-radius:8px;padding:16px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.8}
-.schema .s-key{color:#93c5fd}
-.schema .s-type{color:#fbbf24}
-.schema .s-desc{color:#475569;font-family:'DM Sans',sans-serif;font-size:11px}
+/* ERROR TABLE */
+.error-item{background:var(--s1);border:1px solid var(--border);border-radius:8px;padding:14px 18px;margin-bottom:8px;display:flex;align-items:flex-start;gap:16px}
+.error-code{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;min-width:40px}
+.error-name{font-size:12px;font-weight:600;color:#fff;margin-bottom:4px}
+.error-desc{font-size:11px;color:var(--muted2)}
 
-footer{padding:20px 32px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:var(--muted);flex-wrap:wrap;gap:12px}
-footer a{color:var(--electric);text-decoration:none}
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:24px 56px;display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted)}
+footer a{color:var(--muted2);text-decoration:none}
 
-@media(max-width:768px){
+/* MOBILE */
+@media(max-width:900px){
   .sidebar{display:none}
-  .section{padding:24px 16px}
-  .rate-card{grid-template-columns:1fr 1fr}
+  .section,.api-hero{padding:32px 24px}
+  .base-url-box{margin:16px 24px}
+  .pricing-grid{grid-template-columns:1fr}
+  .fields-grid{grid-template-columns:1fr}
+  .rl-grid{grid-template-columns:1fr}
+  footer{padding:16px 24px}
 }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="/" class="logo"><div class="logo-icon">⛈</div>WeatherArb</a>
-  <div class="nav-links">
-    <a href="/">Home</a><a href="/data/">Data</a><a href="/map.html">Map</a>
-    <a href="/alerts.html">Alerts</a><a href="/api.html" class="active">API</a>
+  <a href="/" class="logo">
+    <div class="logo-icon">
+      <svg width="14" height="14" fill="none" stroke="#00d4ff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+    </div>
+    Weather<em>Arb</em>
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/data/">Data</a>
+      <a href="/news/">News</a>
+      <a href="/globe">Globe</a>
+    </div>
+    <div class="nav-badge">API v1</div>
   </div>
 </nav>
 
 <div class="layout">
-  <div class="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-title">Getting Started</div>
-      <a class="sidebar-link active" onclick="scrollTo('overview')">Overview</a>
-      <a class="sidebar-link" onclick="scrollTo('auth')">Authentication</a>
-      <a class="sidebar-link" onclick="scrollTo('ratelimit')">Rate Limits</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Endpoints</div>
-      <a class="sidebar-link" onclick="scrollTo('pulse')"><span class="method-tag get">GET</span> /pulse/{city}</a>
-      <a class="sidebar-link" onclick="scrollTo('top')"><span class="method-tag get">GET</span> /europe/top</a>
-      <a class="sidebar-link" onclick="scrollTo('nearby')"><span class="method-tag get">GET</span> /pulse/nearby</a>
-      <a class="sidebar-link" onclick="scrollTo('widget')"><span class="method-tag get">GET</span> /widget/{city}</a>
-      <a class="sidebar-link" onclick="scrollTo('newsletter')"><span class="method-tag post">POST</span> /newsletter</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Reference</div>
-      <a class="sidebar-link" onclick="scrollTo('schema')">Response Schema</a>
-      <a class="sidebar-link" onclick="scrollTo('levels')">Anomaly Levels</a>
-      <a class="sidebar-link" onclick="scrollTo('cities')">City List</a>
-    </div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sb-section">
+    <div class="sb-title">Overview</div>
+    <a class="sb-link active" href="#intro">Introduction</a>
+    <a class="sb-link" href="#base-url">Base URL</a>
+    <a class="sb-link" href="#auth">Authentication</a>
+    <a class="sb-link" href="#rate-limits">Rate Limits</a>
+    <a class="sb-link" href="#errors">Errors</a>
   </div>
+  <div class="sb-section">
+    <div class="sb-title">Pulse Endpoints</div>
+    <a class="sb-link" href="#ep-pulse-city"><span class="method m-get">GET</span> /pulse/{city}</a>
+    <a class="sb-link" href="#ep-pulse-latlon"><span class="method m-get">GET</span> /pulse/nearby</a>
+    <a class="sb-link" href="#ep-pulse-search"><span class="method m-get">GET</span> /pulse/search</a>
+  </div>
+  <div class="sb-section">
+    <div class="sb-title">Intelligence Endpoints</div>
+    <a class="sb-link" href="#ep-top"><span class="method m-get">GET</span> /v1/europe/top</a>
+    <a class="sb-link" href="#ep-global"><span class="method m-get">GET</span> /v1/global/top</a>
+    <a class="sb-link" href="#ep-country"><span class="method m-get">GET</span> /v1/country/{cc}</a>
+    <a class="sb-link" href="#ep-critical"><span class="method m-get">GET</span> /v1/critical</a>
+    <a class="sb-link" href="#ep-leaderboard"><span class="method m-get">GET</span> /v1/leaderboard</a>
+  </div>
+  <div class="sb-section">
+    <div class="sb-title">Analytics</div>
+    <a class="sb-link" href="#ep-stats"><span class="method m-get">GET</span> /v1/stats</a>
+    <a class="sb-link" href="#ep-grid"><span class="method m-get">GET</span> /v1/grid-stress</a>
+    <a class="sb-link" href="#ep-refresh"><span class="method m-post">POST</span> /pulse/refresh</a>
+  </div>
+  <div class="sb-section">
+    <div class="sb-title">Newsletter</div>
+    <a class="sb-link" href="#ep-newsletter"><span class="method m-post">POST</span> /newsletter/subscribe</a>
+  </div>
+  <div class="sb-section">
+    <div class="sb-title">Resources</div>
+    <a class="sb-link" href="#data-model">Data Model</a>
+    <a class="sb-link" href="#playground">Live Playground</a>
+    <a class="sb-link" href="#pricing">Pricing</a>
+  </div>
+</aside>
 
-  <div class="content">
+<!-- CONTENT -->
+<main class="content">
 
-    <!-- OVERVIEW -->
-    <div class="section" id="overview">
-      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);border-radius:20px;padding:4px 14px;font-size:12px;color:var(--green);margin-bottom:24px">
-        <span style="width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;display:inline-block"></span>
-        API operational · v1
-      </div>
-      <h2>WeatherArb Public API</h2>
-      <p>Free, open, no authentication required. Real-time weather anomaly data for 65 European cities, computed using Z-Score analysis against ERA5-Land 2000–2024 seasonal baselines.</p>
-
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:24px">
-        <div style="font-size:11px;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px">Base URL</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:15px;color:white">https://api.weatherarb.com</div>
-      </div>
-
-      <div class="code-block">
-        <button class="copy-btn" onclick="copyCode(this,'curl-overview')">Copy</button>
-        <pre id="curl-overview"><span class="cmt"># Quick start — no setup needed</span>
-<span class="kw">curl</span> https://api.weatherarb.com/api/v1/pulse/vicenza
-
-<span class="cmt"># Response</span>
-{
-  <span class="key">"province"</span>: <span class="str">"Vicenza"</span>,
-  <span class="key">"weather"</span>: {
-    <span class="key">"z_score"</span>: <span class="num">-0.53</span>,
-    <span class="key">"anomaly_level"</span>: <span class="str">"NORMAL"</span>,
-    <span class="key">"event_type"</span>: <span class="str">"Clear"</span>
-  },
-  <span class="key">"signal"</span>: { <span class="key">"score"</span>: <span class="num">4.9</span> }
-}</pre>
-      </div>
-    </div>
-
-    <!-- AUTH -->
-    <div class="section" id="auth">
-      <h2>Authentication</h2>
-      <p>No API key required for the free tier. All endpoints are publicly accessible. Simply make HTTP requests directly.</p>
-      <div style="background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.15);border-radius:8px;padding:14px 18px;font-size:13px;color:var(--green)">
-        ✅ <strong>Free tier:</strong> No registration, no API key, no credit card. Just call the API.
-      </div>
-    </div>
-
-    <!-- RATE LIMIT -->
-    <div class="section" id="ratelimit">
-      <h2>Rate Limits</h2>
-      <p>Fair use limits apply to prevent abuse. The free tier is sufficient for most applications.</p>
-      <div class="rate-card">
-        <div class="rate-item"><div class="rate-val" style="color:var(--green)">100</div><div class="rate-label">Requests / day</div></div>
-        <div class="rate-item"><div class="rate-val" style="color:var(--electric)">10</div><div class="rate-label">Requests / minute</div></div>
-        <div class="rate-item"><div class="rate-val" style="color:white">65</div><div class="rate-label">Cities available</div></div>
-      </div>
-      <p>Need higher limits? <a href="/alerts.html" style="color:var(--electric)">Contact us</a> for B2B access.</p>
-    </div>
-
-    <!-- PULSE ENDPOINT -->
-    <div class="section" id="pulse">
-      <h2>GET /api/v1/pulse/{city}</h2>
-      <p>Returns full weather anomaly data for a specific city.</p>
-
-      <div class="endpoint-block">
-        <div class="endpoint-header">
-          <span class="method-tag get">GET</span>
-          <span class="endpoint-path">/api/v1/pulse/{city}</span>
-          <span class="endpoint-desc">City anomaly data</span>
-        </div>
-        <div class="endpoint-body">
-          <h3>Path Parameters</h3>
-          <table class="params-table">
-            <tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr>
-            <tr><td class="param-name">city</td><td class="param-type">string</td><td class="param-required">required</td><td>City name (case-insensitive). E.g. <code>vicenza</code>, <code>münchen</code>, <code>paris</code></td></tr>
-          </table>
-          <h3>Query Parameters</h3>
-          <table class="params-table">
-            <tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr>
-            <tr><td class="param-name">force_refresh</td><td class="param-type">boolean</td><td class="param-optional">optional</td><td>Force cache refresh. Default: <code>false</code></td></tr>
-          </table>
-          <h3>Example Request</h3>
-          <div class="code-block">
-            <button class="copy-btn" onclick="copyCode(this,'ex-pulse')">Copy</button>
-            <pre id="ex-pulse"><span class="kw">curl</span> https://api.weatherarb.com/api/v1/pulse/hamburg</pre>
-          </div>
-          <h3>Playground</h3>
-          <div class="playground">
-            <h4>🔌 Try it live</h4>
-            <div class="pg-row">
-              <input class="pg-input" id="pg-city" placeholder="City name..." value="hamburg">
-              <button class="pg-btn" onclick="runPulse()">Run →</button>
-            </div>
-            <div class="response-meta" id="pulse-meta" style="display:none">
-              <span id="pulse-status"></span>
-              <span id="pulse-time" style="color:var(--muted)"></span>
-            </div>
-            <div class="response-box" id="pulse-response">Response will appear here...</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TOP ENDPOINT -->
-    <div class="section" id="top">
-      <h2>GET /api/v1/europe/top</h2>
-      <p>Returns the top anomaly signals across all monitored European cities, sorted by Z-Score magnitude.</p>
-
-      <div class="endpoint-block">
-        <div class="endpoint-header">
-          <span class="method-tag get">GET</span>
-          <span class="endpoint-path">/api/v1/europe/top</span>
-          <span class="endpoint-desc">Top signals</span>
-        </div>
-        <div class="endpoint-body">
-          <h3>Query Parameters</h3>
-          <table class="params-table">
-            <tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr>
-            <tr><td class="param-name">limit</td><td class="param-type">integer</td><td class="param-optional">optional</td><td>Number of results. Default: <code>10</code>. Max: <code>65</code></td></tr>
-          </table>
-          <h3>Playground</h3>
-          <div class="playground">
-            <h4>🔌 Try it live</h4>
-            <div class="pg-row">
-              <select class="pg-select" id="pg-limit">
-                <option value="5">limit=5</option>
-                <option value="10" selected>limit=10</option>
-                <option value="20">limit=20</option>
-                <option value="65">limit=65 (all)</option>
-              </select>
-              <button class="pg-btn" onclick="runTop()">Run →</button>
-            </div>
-            <div class="response-meta" id="top-meta" style="display:none">
-              <span id="top-status"></span><span id="top-time" style="color:var(--muted)"></span>
-            </div>
-            <div class="response-box" id="top-response">Response will appear here...</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- NEARBY ENDPOINT -->
-    <div class="section" id="nearby">
-      <h2>GET /api/v1/pulse/nearby</h2>
-      <p>Finds the closest monitored city to given coordinates and returns its anomaly data. Useful for browser geolocation.</p>
-
-      <div class="endpoint-block">
-        <div class="endpoint-header">
-          <span class="method-tag get">GET</span>
-          <span class="endpoint-path">/api/v1/pulse/nearby</span>
-          <span class="endpoint-desc">Geo-based lookup</span>
-        </div>
-        <div class="endpoint-body">
-          <h3>Query Parameters</h3>
-          <table class="params-table">
-            <tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr>
-            <tr><td class="param-name">lat</td><td class="param-type">float</td><td class="param-required">required</td><td>Latitude (decimal degrees)</td></tr>
-            <tr><td class="param-name">lon</td><td class="param-type">float</td><td class="param-required">required</td><td>Longitude (decimal degrees)</td></tr>
-            <tr><td class="param-name">radius_km</td><td class="param-type">float</td><td class="param-optional">optional</td><td>Search radius. Default: <code>100</code></td></tr>
-          </table>
-          <h3>Playground</h3>
-          <div class="playground">
-            <h4>🔌 Try it live — uses your browser location</h4>
-            <div class="pg-row">
-              <input class="pg-input" id="pg-lat" placeholder="Latitude" value="45.46">
-              <input class="pg-input" id="pg-lon" placeholder="Longitude" value="9.19">
-              <button class="pg-btn" onclick="useMyLocation()">📍 Use my location</button>
-              <button class="pg-btn" onclick="runNearby()">Run →</button>
-            </div>
-            <div class="response-box" id="nearby-response">Response will appear here...</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- WIDGET -->
-    <div class="section" id="widget">
-      <h2>GET /api/v1/widget/{city}</h2>
-      <p>Lightweight endpoint for embedded widgets. Returns minimal JSON for fast rendering.</p>
-      <div class="endpoint-block">
-        <div class="endpoint-header">
-          <span class="method-tag get">GET</span>
-          <span class="endpoint-path">/api/v1/widget/{city}</span>
-          <span class="endpoint-desc">Embed data</span>
-        </div>
-        <div class="endpoint-body">
-          <div class="code-block">
-            <pre><span class="cmt"># Embed on your website</span>
-<span class="kw">&lt;iframe</span> src=<span class="str">"https://weatherarb.com/widget.html?p=Milano"</span>
-        width=<span class="str">"260"</span> height=<span class="str">"180"</span> frameborder=<span class="str">"0"</span><span class="kw">&gt;&lt;/iframe&gt;</span>
-
-<span class="cmt"># Or fetch data directly</span>
-<span class="kw">curl</span> https://api.weatherarb.com/api/v1/widget/milano
-<span class="cmt"># → {"p":"Milano","z":-0.12,"a":"NORMAL","s":5.1,"t":"2026-04-10"}</span></pre>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- NEWSLETTER -->
-    <div class="section" id="newsletter">
-      <h2>POST /api/newsletter/subscribe</h2>
-      <p>Subscribe an email address to the weekly anomaly digest.</p>
-      <div class="endpoint-block">
-        <div class="endpoint-header">
-          <span class="method-tag post">POST</span>
-          <span class="endpoint-path">/api/newsletter/subscribe</span>
-          <span class="endpoint-desc">Subscribe</span>
-        </div>
-        <div class="endpoint-body">
-          <table class="params-table">
-            <tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr>
-            <tr><td class="param-name">email</td><td class="param-type">string</td><td class="param-required">required</td><td>Email address</td></tr>
-            <tr><td class="param-name">provincia</td><td class="param-type">string</td><td class="param-optional">optional</td><td>City to monitor. Empty = all Europe</td></tr>
-          </table>
-          <div class="code-block">
-            <pre><span class="kw">curl</span> -X POST \
-  "https://api.weatherarb.com/api/newsletter/subscribe?email=you@example.com&provincia=Milano"</pre>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SCHEMA -->
-    <div class="section" id="schema">
-      <h2>Response Schema</h2>
-      <p>Full response structure for the <code>/pulse/{city}</code> endpoint.</p>
-      <div class="schema">
-{<br>
-&nbsp;&nbsp;<span class="s-key">"api_version"</span>: <span class="s-type">string</span> &nbsp;<span class="s-desc">// "v1"</span><br>
-&nbsp;&nbsp;<span class="s-key">"province"</span>: <span class="s-type">string</span> &nbsp;<span class="s-desc">// City name</span><br>
-&nbsp;&nbsp;<span class="s-key">"region"</span>: <span class="s-type">string</span> &nbsp;<span class="s-desc">// Region/state</span><br>
-&nbsp;&nbsp;<span class="s-key">"country"</span>: <span class="s-type">string</span> &nbsp;<span class="s-desc">// "IT" | "DE" | "ES" | "FR"</span><br>
-&nbsp;&nbsp;<span class="s-key">"timestamp"</span>: <span class="s-type">string</span> &nbsp;<span class="s-desc">// ISO 8601</span><br>
-&nbsp;&nbsp;<span class="s-key">"weather"</span>: {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="s-key">"event_type"</span>: <span class="s-type">string</span> &nbsp;<span class="s-desc">// "Heat_Wave" | "Heavy_Rain" | "Clear" ...</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="s-key">"anomaly_level"</span>: <span class="s-type">string</span> &nbsp;<span class="s-desc">// "NORMAL" | "UNUSUAL" | "EXTREME" | "CRITICAL"</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="s-key">"z_score"</span>: <span class="s-type">float</span> &nbsp;<span class="s-desc">// Statistical deviation from ERA5 baseline</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="s-key">"temperature_c"</span>: <span class="s-type">float</span> &nbsp;<span class="s-desc">// Current temperature in Celsius</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="s-key">"historical_avg_c"</span>: <span class="s-type">float</span> &nbsp;<span class="s-desc">// ERA5 seasonal average</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="s-key">"severity"</span>: <span class="s-type">float</span> &nbsp;<span class="s-desc">// 0.0 – 1.0</span><br>
-&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;<span class="s-key">"signal"</span>: {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="s-key">"score"</span>: <span class="s-type">float</span> &nbsp;<span class="s-desc">// 0.0 – 10.0 composite signal</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="s-key">"confidence"</span>: <span class="s-type">float</span> &nbsp;<span class="s-desc">// 0.0 – 1.0</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="s-key">"actionable"</span>: <span class="s-type">boolean</span><br>
-&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;<span class="s-key">"attribution"</span>: <span class="s-type">string</span> &nbsp;<span class="s-desc">// "WeatherArb.com · ERA5-Land ECMWF + OpenWeatherMap"</span><br>
-}
-      </div>
-    </div>
-
-    <!-- ANOMALY LEVELS -->
-    <div class="section" id="levels">
-      <h2>Anomaly Levels</h2>
-      <p>Classification based on absolute Z-Score value.</p>
-      <table class="params-table" style="background:var(--surface);border-radius:10px;overflow:hidden">
-        <tr><th>Level</th><th>Z-Score</th><th>Frequency</th><th>Description</th></tr>
-        <tr><td><span style="color:var(--electric);font-weight:600">NORMAL</span></td><td class="param-name">&lt; 1.0</td><td>~68%</td><td>Within expected seasonal range</td></tr>
-        <tr><td><span style="color:var(--unusual);font-weight:600">UNUSUAL</span></td><td class="param-name">1.0 – 2.0</td><td>~27%</td><td>Statistically noteworthy deviation</td></tr>
-        <tr><td><span style="color:var(--extreme);font-weight:600">EXTREME</span></td><td class="param-name">2.0 – 3.0</td><td>~5%</td><td>Rare event, above 95th percentile</td></tr>
-        <tr><td><span style="color:var(--critical);font-weight:600">CRITICAL</span></td><td class="param-name">&gt; 3.0</td><td>~0.3%</td><td>Exceptional anomaly, 1-in-300 event</td></tr>
-      </table>
-    </div>
-
-    <!-- CITIES -->
-    <div class="section" id="cities">
-      <h2>City List</h2>
-      <p>All 65 monitored cities. Use the lowercase name in API calls.</p>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px" id="city-list">
-        <div style="color:var(--muted);font-size:13px">Loading...</div>
-      </div>
-    </div>
-
+<!-- HERO -->
+<div class="api-hero" id="intro">
+  <div class="api-tag">
+    <svg width="8" height="8" fill="var(--cyan)" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4"/></svg>
+    REST API · v1 · Live
+  </div>
+  <h1>Weather<em>Arb</em><br>Intelligence API</h1>
+  <p>Real-time weather anomaly intelligence for <strong>10,385+ cities</strong> across 120 countries. Z-Score climatological analysis against 25-year NASA POWER ERA5-Land baselines. HDD/CDD energy metrics, sector impact data, and space weather integration.</p>
+  <div class="hero-stats">
+    <div class="hstat"><div class="hstat-val">10,385</div><div class="hstat-lbl">Cities</div></div>
+    <div class="hstat"><div class="hstat-val">120+</div><div class="hstat-lbl">Countries</div></div>
+    <div class="hstat"><div class="hstat-val">25yr</div><div class="hstat-lbl">Baseline</div></div>
+    <div class="hstat"><div class="hstat-val">&lt;200ms</div><div class="hstat-lbl">Latency</div></div>
+    <div class="hstat"><div class="hstat-val">Free</div><div class="hstat-lbl">Tier</div></div>
   </div>
 </div>
 
+<!-- BASE URL -->
+<div class="base-url-box" id="base-url">
+  <div>
+    <div class="base-url-label">Base URL</div>
+    <div class="base-url-val">https://api.weatherarb.com</div>
+  </div>
+  <button class="copy-btn" onclick="copyText('https://api.weatherarb.com',this)">Copy URL</button>
+</div>
+
+<!-- AUTH -->
+<div class="section" id="auth">
+  <div class="section-head">
+    <div class="section-icon" style="background:rgba(139,92,246,.1)">🔑</div>
+    <div>
+      <h2>Authentication</h2>
+      <p>The Free tier requires no authentication. Simply call the endpoints directly. For Pro tier (higher rate limits and advanced endpoints), include your API key in the request header.</p>
+    </div>
+  </div>
+
+  <h3 style="font-size:13px;font-weight:600;color:#fff;margin-bottom:12px">Free Tier — No Auth Required</h3>
+  <div class="code-block">
+    <div class="code-tabs">
+      <div class="code-tab active" onclick="switchTab(this,'curl-auth')">cURL</div>
+    </div>
+    <div class="code-content active" id="curl-auth">
+      <button class="copy-code" onclick="copyCode(this)">Copy</button>
+      <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/pulse/milan"</span></pre>
+    </div>
+  </div>
+
+  <h3 style="font-size:13px;font-weight:600;color:#fff;margin:20px 0 12px">Pro Tier — API Key Header</h3>
+  <div class="code-block">
+    <div class="code-tabs">
+      <div class="code-tab active" onclick="switchTab(this,'curl-auth-pro')">cURL</div>
+      <div class="code-tab" onclick="switchTab(this,'py-auth-pro')">Python</div>
+      <div class="code-tab" onclick="switchTab(this,'js-auth-pro')">JavaScript</div>
+    </div>
+    <div class="code-content active" id="curl-auth-pro">
+      <pre><span class="fn">curl</span> <span class="kw">-H</span> <span class="str">"X-API-Key: your_key_here"</span> \
+     <span class="str">"https://api.weatherarb.com/api/v1/global/top?limit=100"</span></pre>
+    </div>
+    <div class="code-content" id="py-auth-pro">
+      <pre><span class="kw">import</span> requests
+
+headers = {<span class="str">"X-API-Key"</span>: <span class="str">"your_key_here"</span>}
+r = requests.<span class="fn">get</span>(
+    <span class="str">"https://api.weatherarb.com/api/v1/global/top"</span>,
+    headers=headers, params={<span class="str">"limit"</span>: <span class="num">100</span>}
+)
+data = r.<span class="fn">json</span>()
+<span class="fn">print</span>(data[<span class="str">"count"</span>], <span class="str">"anomalies detected"</span>)</pre>
+    </div>
+    <div class="code-content" id="js-auth-pro">
+      <pre><span class="kw">const</span> response = <span class="kw">await</span> <span class="fn">fetch</span>(
+  <span class="str">"https://api.weatherarb.com/api/v1/global/top?limit=100"</span>,
+  { headers: { <span class="str">"X-API-Key"</span>: <span class="str">"your_key_here"</span> } }
+);
+<span class="kw">const</span> data = <span class="kw">await</span> response.<span class="fn">json</span>();
+console.<span class="fn">log</span>(data.reports.<span class="fn">length</span>, <span class="str">"cities"</span>);</pre>
+    </div>
+  </div>
+</div>
+
+<!-- ENDPOINTS: PULSE -->
+<div class="section" id="ep-pulse-city">
+  <div class="section-head">
+    <div class="section-icon" style="background:rgba(0,212,255,.08)">⚡</div>
+    <div>
+      <h2>Pulse Endpoints</h2>
+      <p>Real-time weather anomaly data for individual cities. Returns Z-Score, temperature, HDD/CDD, wind, humidity, and sector impact analysis.</p>
+    </div>
+  </div>
+
+  <!-- GET /pulse/{city} -->
+  <div class="endpoint">
+    <div class="ep-header" onclick="toggleEp(this)">
+      <span class="method m-get">GET</span>
+      <span class="ep-path">/api/v1/pulse/<span class="param">{city_slug}</span></span>
+      <span class="ep-badge"><span class="ep-free">FREE</span></span>
+      <span class="ep-desc">City anomaly data</span>
+    </div>
+    <div class="ep-body">
+      <p class="ep-desc-full">Returns real-time weather anomaly data for a specific city. The <code>city_slug</code> is the URL-encoded city name (lowercase, hyphens). Z-Score is calculated against the 25-year NASA POWER ERA5-Land baseline for that exact location.</p>
+
+      <h3 style="font-size:12px;font-weight:600;color:#fff;margin-bottom:10px">Path Parameters</h3>
+      <table class="params-table">
+        <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+        <tr><td>city_slug<span class="req">required</span></td><td><span class="type-badge">string</span></td><td>City name slug (e.g. <code>milan</code>, <code>new-york</code>, <code>sao-paulo</code>)</td></tr>
+      </table>
+
+      <div class="code-block">
+        <div class="code-tabs">
+          <div class="code-tab active" onclick="switchTab(this,'curl-p1')">cURL</div>
+          <div class="code-tab" onclick="switchTab(this,'py-p1')">Python</div>
+          <div class="code-tab" onclick="switchTab(this,'js-p1')">JavaScript</div>
+          <div class="code-tab" onclick="switchTab(this,'go-p1')">Go</div>
+        </div>
+        <div class="code-content active" id="curl-p1">
+          <button class="copy-code" onclick="copyCode(this)">Copy</button>
+          <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/pulse/milan"</span></pre>
+        </div>
+        <div class="code-content" id="py-p1">
+          <pre><span class="kw">import</span> requests
+
+r = requests.<span class="fn">get</span>(<span class="str">"https://api.weatherarb.com/api/v1/pulse/milan"</span>)
+d = r.<span class="fn">json</span>()
+
+w = d[<span class="str">"weather"</span>]
+<span class="fn">print</span>(<span class="fn">f</span><span class="str">"Milan Z-Score: {w['z_score']:+.2f}σ"</span>)
+<span class="fn">print</span>(<span class="fn">f</span><span class="str">"Temperature: {w['temperature_c']}°C"</span>)
+<span class="fn">print</span>(<span class="fn">f</span><span class="str">"Anomaly: {w['anomaly_level']}"</span>)</pre>
+        </div>
+        <div class="code-content" id="js-p1">
+          <pre><span class="kw">const</span> r = <span class="kw">await</span> <span class="fn">fetch</span>(<span class="str">"https://api.weatherarb.com/api/v1/pulse/milan"</span>);
+<span class="kw">const</span> { weather, signal } = <span class="kw">await</span> r.<span class="fn">json</span>();
+
+console.<span class="fn">log</span>(<span class="str">`Z-Score: ${weather.z_score > 0 ? '+' : ''}${weather.z_score.toFixed(2)}σ`</span>);
+console.<span class="fn">log</span>(<span class="str">`Score: ${signal.score}/10`</span>);
+console.<span class="fn">log</span>(<span class="str">`Event: ${weather.anomaly_label}`</span>);</pre>
+        </div>
+        <div class="code-content" id="go-p1">
+          <pre><span class="kw">package</span> main
+
+<span class="kw">import</span> (
+    <span class="str">"encoding/json"</span>
+    <span class="str">"fmt"</span>
+    <span class="str">"net/http"</span>
+)
+
+<span class="kw">func</span> <span class="fn">main</span>() {
+    resp, _ := http.<span class="fn">Get</span>(<span class="str">"https://api.weatherarb.com/api/v1/pulse/milan"</span>)
+    <span class="kw">var</span> data <span class="kw">map</span>[<span class="kw">string</span>]<span class="kw">interface</span>{}
+    json.<span class="fn">NewDecoder</span>(resp.Body).<span class="fn">Decode</span>(&data)
+    weather := data[<span class="str">"weather"</span>].(<span class="kw">map</span>[<span class="kw">string</span>]<span class="kw">interface</span>{})
+    fmt.<span class="fn">Printf</span>(<span class="str">"Z-Score: %v\n"</span>, weather[<span class="str">"z_score"</span>])
+}</pre>
+        </div>
+      </div>
+
+      <div class="response-label"><span class="status-badge s200">200 OK</span> Response</div>
+      <div class="code-block">
+        <pre>{
+  <span class="key">"city"</span>: <span class="str">"milan"</span>,
+  <span class="key">"location"</span>: <span class="str">"Milan"</span>,
+  <span class="key">"country_code"</span>: <span class="str">"it"</span>,
+  <span class="key">"lat"</span>: <span class="num">45.46</span>,
+  <span class="key">"lon"</span>: <span class="num">9.19</span>,
+  <span class="key">"weather"</span>: {
+    <span class="key">"z_score"</span>: <span class="num">+2.14</span>,           <span class="cm">// Standard deviations from 25yr baseline</span>
+    <span class="key">"temperature_c"</span>: <span class="num">28.4</span>,      <span class="cm">// Current temperature (°C)</span>
+    <span class="key">"humidity_pct"</span>: <span class="num">62</span>,          <span class="cm">// Relative humidity (%)</span>
+    <span class="key">"wind_kmh"</span>: <span class="num">14</span>,              <span class="cm">// Wind speed (km/h)</span>
+    <span class="key">"hdd"</span>: <span class="num">0.0</span>,                  <span class="cm">// Heating degree days</span>
+    <span class="key">"cdd"</span>: <span class="num">3.4</span>,                  <span class="cm">// Cooling degree days</span>
+    <span class="key">"hdd_delta"</span>: <span class="num">-2.1</span>,           <span class="cm">// HDD vs historical average</span>
+    <span class="key">"anomaly_level"</span>: <span class="str">"EXTREME"</span>,  <span class="cm">// NORMAL|UNUSUAL|EXTREME|CRITICAL</span>
+    <span class="key">"anomaly_label"</span>: <span class="str">"Heat wave"</span>,
+    <span class="key">"event_type"</span>: <span class="str">"heat_wave"</span>
+  },
+  <span class="key">"signal"</span>: {
+    <span class="key">"score"</span>: <span class="num">7.8</span>,               <span class="cm">// 0-10 composite risk score</span>
+    <span class="key">"vertical"</span>: <span class="str">"heat_wave"</span>,
+    <span class="key">"agri_impact"</span>: <span class="str">"high"</span>,
+    <span class="key">"energy_impact"</span>: <span class="str">"high"</span>,
+    <span class="key">"logistics_impact"</span>: <span class="str">"moderate"</span>
+  },
+  <span class="key">"timestamp"</span>: <span class="str">"2026-05-06T18:00:00Z"</span>
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- GET /pulse/nearby -->
+  <div class="endpoint" id="ep-pulse-latlon">
+    <div class="ep-header" onclick="toggleEp(this)">
+      <span class="method m-get">GET</span>
+      <span class="ep-path">/api/v1/pulse/nearby</span>
+      <span class="ep-badge"><span class="ep-free">FREE</span></span>
+      <span class="ep-desc">Nearest city by coordinates</span>
+    </div>
+    <div class="ep-body">
+      <p class="ep-desc-full">Find the nearest monitored city to a given latitude/longitude and return its live anomaly data. Useful for geolocation-based applications.</p>
+
+      <table class="params-table">
+        <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+        <tr><td>lat<span class="req">required</span></td><td><span class="type-badge">float</span></td><td>Latitude (-90 to 90)</td></tr>
+        <tr><td>lon<span class="req">required</span></td><td><span class="type-badge">float</span></td><td>Longitude (-180 to 180)</td></tr>
+      </table>
+
+      <div class="code-block">
+        <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/pulse/nearby?lat=45.46&lon=9.19"</span></pre>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- INTELLIGENCE ENDPOINTS -->
+<div class="section" id="ep-top">
+  <div class="section-head">
+    <div class="section-icon" style="background:rgba(251,191,36,.08)">🌍</div>
+    <div>
+      <h2>Intelligence Endpoints</h2>
+      <p>Aggregate anomaly intelligence across regions, countries, and globally. Returns ranked lists of cities with active weather anomalies.</p>
+    </div>
+  </div>
+
+  <!-- /v1/europe/top -->
+  <div class="endpoint">
+    <div class="ep-header" onclick="toggleEp(this)">
+      <span class="method m-get">GET</span>
+      <span class="ep-path">/api/v1/europe/top</span>
+      <span class="ep-badge"><span class="ep-free">FREE</span></span>
+      <span class="ep-desc">Top European anomalies</span>
+    </div>
+    <div class="ep-body">
+      <p class="ep-desc-full">Returns the top anomalies across all monitored cities, sorted by absolute Z-Score. Default limit is 50.</p>
+      <table class="params-table">
+        <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+        <tr><td>limit<span class="opt">optional</span></td><td><span class="type-badge">integer</span></td><td>Max results (default: 50, max free: 100, max pro: 500)</td></tr>
+        <tr><td>min_score<span class="opt">optional</span></td><td><span class="type-badge">float</span></td><td>Minimum score filter (0-10)</td></tr>
+      </table>
+      <div class="code-block">
+        <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/europe/top?limit=10&min_score=5"</span></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- /v1/global/top -->
+  <div class="endpoint" id="ep-global">
+    <div class="ep-header" onclick="toggleEp(this)">
+      <span class="method m-get">GET</span>
+      <span class="ep-path">/api/v1/global/top</span>
+      <span class="ep-badge"><span class="ep-free">FREE</span></span>
+      <span class="ep-desc">Top global anomalies</span>
+    </div>
+    <div class="ep-body">
+      <p class="ep-desc-full">Returns top anomalies globally across all 10,385 monitored cities. Includes heat waves, cold snaps, heavy rain events ranked by severity.</p>
+      <table class="params-table">
+        <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+        <tr><td>limit<span class="opt">optional</span></td><td><span class="type-badge">integer</span></td><td>Max results (default: 50)</td></tr>
+        <tr><td>event_type<span class="opt">optional</span></td><td><span class="type-badge">string</span></td><td>Filter: <code>heat_wave</code>, <code>cold_snap</code>, <code>heavy_rain</code>, <code>drought</code></td></tr>
+      </table>
+      <div class="code-block">
+        <div class="code-tabs">
+          <div class="code-tab active" onclick="switchTab(this,'curl-gt')">cURL</div>
+          <div class="code-tab" onclick="switchTab(this,'py-gt')">Python</div>
+        </div>
+        <div class="code-content active" id="curl-gt">
+          <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/global/top?limit=20&event_type=heat_wave"</span></pre>
+        </div>
+        <div class="code-content" id="py-gt">
+          <pre><span class="kw">import</span> requests
+
+params = {<span class="str">"limit"</span>: <span class="num">20</span>, <span class="str">"event_type"</span>: <span class="str">"heat_wave"</span>}
+r = requests.<span class="fn">get</span>(<span class="str">"https://api.weatherarb.com/api/v1/global/top"</span>, params=params)
+data = r.<span class="fn">json</span>()
+
+<span class="kw">for</span> city <span class="kw">in</span> data[<span class="str">"reports"</span>]:
+    z = city[<span class="str">"z_score"</span>]
+    <span class="fn">print</span>(<span class="fn">f</span><span class="str">"{city['location']:20} Z={z:+.2f}σ  Score={city['score']:.1f}"</span>)</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- /v1/country/{cc} -->
+  <div class="endpoint" id="ep-country">
+    <div class="ep-header" onclick="toggleEp(this)">
+      <span class="method m-get">GET</span>
+      <span class="ep-path">/api/v1/country/<span class="param">{country_code}</span></span>
+      <span class="ep-badge"><span class="ep-free">FREE</span></span>
+      <span class="ep-desc">Country anomalies</span>
+    </div>
+    <div class="ep-body">
+      <p class="ep-desc-full">Returns all monitored cities and their anomaly data for a specific country (ISO 3166-1 alpha-2 code).</p>
+      <table class="params-table">
+        <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+        <tr><td>country_code<span class="req">required</span></td><td><span class="type-badge">string</span></td><td>ISO country code: <code>it</code>, <code>us</code>, <code>de</code>, <code>fr</code>, <code>in</code>...</td></tr>
+      </table>
+      <div class="code-block">
+        <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/country/it"</span>
+<span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/country/us"</span>
+<span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/country/in"</span></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- /v1/critical -->
+  <div class="endpoint" id="ep-critical">
+    <div class="ep-header" onclick="toggleEp(this)">
+      <span class="method m-get">GET</span>
+      <span class="ep-path">/api/v1/critical</span>
+      <span class="ep-badge"><span class="ep-free">FREE</span></span>
+      <span class="ep-desc">Critical anomalies only (|Z|≥3σ)</span>
+    </div>
+    <div class="ep-body">
+      <p class="ep-desc-full">Returns only cities with critical anomalies (absolute Z-Score ≥ 3σ). These represent statistically extreme weather events occurring less than 0.3% of the time historically.</p>
+      <div class="code-block">
+        <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/critical"</span></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- /v1/leaderboard -->
+  <div class="endpoint" id="ep-leaderboard">
+    <div class="ep-header" onclick="toggleEp(this)">
+      <span class="method m-get">GET</span>
+      <span class="ep-path">/api/v1/leaderboard</span>
+      <span class="ep-badge"><span class="ep-free">FREE</span></span>
+      <span class="ep-desc">Anomaly leaderboard</span>
+    </div>
+    <div class="ep-body">
+      <p class="ep-desc-full">Top anomalies ranked by composite score (0-10). Score combines Z-Score magnitude, HDD/CDD impact, wind, humidity, and duration.</p>
+      <div class="code-block">
+        <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/leaderboard?limit=20"</span></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ANALYTICS -->
+<div class="section" id="ep-stats">
+  <div class="section-head">
+    <div class="section-icon" style="background:rgba(139,92,246,.08)">📊</div>
+    <div>
+      <h2>Analytics Endpoints</h2>
+      <p>System statistics, grid stress analysis, and cache management.</p>
+    </div>
+  </div>
+
+  <div class="endpoint">
+    <div class="ep-header" onclick="toggleEp(this)">
+      <span class="method m-get">GET</span>
+      <span class="ep-path">/api/v1/stats</span>
+      <span class="ep-badge"><span class="ep-free">FREE</span></span>
+      <span class="ep-desc">Platform statistics</span>
+    </div>
+    <div class="ep-body">
+      <p class="ep-desc-full">Returns platform-wide statistics: total nodes, cached nodes, critical count, average Z-Score, and last update timestamp.</p>
+      <div class="code-block">
+        <div class="code-tabs">
+          <div class="code-tab active" onclick="switchTab(this,'curl-stats')">cURL</div>
+          <div class="code-tab" onclick="switchTab(this,'resp-stats')">Response</div>
+        </div>
+        <div class="code-content active" id="curl-stats">
+          <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/stats"</span></pre>
+        </div>
+        <div class="code-content" id="resp-stats">
+          <pre>{
+  <span class="key">"total_nodes"</span>: <span class="num">10385</span>,
+  <span class="key">"cached_nodes"</span>: <span class="num">500</span>,
+  <span class="key">"critical_count"</span>: <span class="num">27</span>,
+  <span class="key">"avg_z_score"</span>: <span class="num">1.24</span>,
+  <span class="key">"countries"</span>: <span class="num">120</span>,
+  <span class="key">"last_updated"</span>: <span class="str">"2026-05-06T18:00:00Z"</span>,
+  <span class="key">"cache_age_seconds"</span>: <span class="num">3240</span>
+}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="endpoint" id="ep-grid">
+    <div class="ep-header" onclick="toggleEp(this)">
+      <span class="method m-get">GET</span>
+      <span class="ep-path">/api/v1/grid-stress</span>
+      <span class="ep-badge"><span class="ep-pro">PRO</span></span>
+      <span class="ep-desc">Energy grid stress index</span>
+    </div>
+    <div class="ep-body">
+      <p class="ep-desc-full">Returns energy grid stress scores per country, space weather data (Kp index, solar flare class), and risk assessments for critical infrastructure.</p>
+      <div class="code-block">
+        <pre><span class="fn">curl</span> <span class="kw">-H</span> <span class="str">"X-API-Key: your_key"</span> \
+     <span class="str">"https://api.weatherarb.com/api/v1/grid-stress"</span></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="endpoint" id="ep-refresh">
+    <div class="ep-header" onclick="toggleEp(this)">
+      <span class="method m-post">POST</span>
+      <span class="ep-path">/pulse/refresh</span>
+      <span class="ep-badge"><span class="ep-free">FREE</span></span>
+      <span class="ep-desc">Trigger cache refresh</span>
+    </div>
+    <div class="ep-body">
+      <p class="ep-desc-full">Triggers a background refresh of all weather data from Open-Meteo. Returns immediately; data available after ~30 seconds.</p>
+      <div class="code-block">
+        <pre><span class="fn">curl</span> <span class="kw">-X POST</span> <span class="str">"https://api.weatherarb.com/pulse/refresh"</span>
+<span class="cm"># Response:</span>
+{
+  <span class="key">"status"</span>: <span class="str">"refresh_started"</span>,
+  <span class="key">"province_count"</span>: <span class="num">10385</span>,
+  <span class="key">"message"</span>: <span class="str">"Data available in ~30 seconds"</span>
+}</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DATA MODEL -->
+<div class="section" id="data-model">
+  <div class="section-head">
+    <div class="section-icon" style="background:rgba(0,212,255,.08)">🗂️</div>
+    <div>
+      <h2>Data Model</h2>
+      <p>Complete reference for all fields returned by the API.</p>
+    </div>
+  </div>
+
+  <h3 style="font-size:13px;font-weight:600;color:#fff;margin-bottom:14px">Weather Object</h3>
+  <div class="fields-grid">
+    <div class="field-item"><div class="field-name">z_score</div><div class="field-type">float</div><div class="field-desc">Standard deviations from 25-year NASA POWER baseline. |Z|≥2 = extreme, |Z|≥3 = critical</div></div>
+    <div class="field-item"><div class="field-name">temperature_c</div><div class="field-type">float</div><div class="field-desc">Current air temperature in Celsius</div></div>
+    <div class="field-item"><div class="field-name">humidity_pct</div><div class="field-type">integer</div><div class="field-desc">Relative humidity percentage (0-100)</div></div>
+    <div class="field-item"><div class="field-name">wind_kmh</div><div class="field-type">float</div><div class="field-desc">Wind speed in km/h at 10m height</div></div>
+    <div class="field-item"><div class="field-name">hdd</div><div class="field-type">float</div><div class="field-desc">Heating Degree Days (base 18°C, EN ISO 15927)</div></div>
+    <div class="field-item"><div class="field-name">cdd</div><div class="field-type">float</div><div class="field-desc">Cooling Degree Days (base 18°C)</div></div>
+    <div class="field-item"><div class="field-name">hdd_delta</div><div class="field-type">float</div><div class="field-desc">HDD deviation vs 25-year historical average</div></div>
+    <div class="field-item"><div class="field-name">anomaly_level</div><div class="field-type">string</div><div class="field-desc">NORMAL · UNUSUAL · EXTREME · CRITICAL</div></div>
+    <div class="field-item"><div class="field-name">anomaly_label</div><div class="field-type">string</div><div class="field-desc">Human-readable event: "Heat wave", "Cold snap", "Heavy rain"</div></div>
+    <div class="field-item"><div class="field-name">event_type</div><div class="field-type">string</div><div class="field-desc">Machine-readable: heat_wave · cold_snap · heavy_rain · drought · normal</div></div>
+  </div>
+
+  <h3 style="font-size:13px;font-weight:600;color:#fff;margin:20px 0 14px">Signal Object</h3>
+  <div class="fields-grid">
+    <div class="field-item"><div class="field-name">score</div><div class="field-type">float 0-10</div><div class="field-desc">Composite risk score combining all anomaly metrics</div></div>
+    <div class="field-item"><div class="field-name">agri_impact</div><div class="field-type">string</div><div class="field-desc">Agricultural impact: low · moderate · high · critical</div></div>
+    <div class="field-item"><div class="field-name">energy_impact</div><div class="field-type">string</div><div class="field-desc">Energy grid impact level</div></div>
+    <div class="field-item"><div class="field-name">logistics_impact</div><div class="field-type">string</div><div class="field-desc">Transportation/logistics risk level</div></div>
+  </div>
+</div>
+
+<!-- LIVE PLAYGROUND -->
+<div class="section" id="playground">
+  <div class="section-head">
+    <div class="section-icon" style="background:rgba(16,185,129,.08)">🧪</div>
+    <div>
+      <h2>Live Playground</h2>
+      <p>Test the API directly from your browser. No authentication required.</p>
+    </div>
+  </div>
+
+  <!-- Pulse by city -->
+  <div class="playground">
+    <div class="pg-title">City Pulse — /api/v1/pulse/{city}</div>
+    <div class="pg-row">
+      <input class="pg-input" id="pg1-city" placeholder="City slug (e.g. milan, paris, new-york)" value="milan">
+      <button class="pg-btn" onclick="runPg1()">▶ Run</button>
+    </div>
+    <div class="pg-url" id="pg1-url">https://api.weatherarb.com/api/v1/pulse/milan</div>
+    <div class="pg-result" id="pg1-result"></div>
+  </div>
+
+  <!-- Top anomalies -->
+  <div class="playground">
+    <div class="pg-title">Top Anomalies — /api/v1/europe/top</div>
+    <div class="pg-row">
+      <input class="pg-input" id="pg2-limit" placeholder="limit" value="5" style="max-width:80px">
+      <select class="pg-select" id="pg2-event" style="background:rgba(255,255,255,.04);border:1px solid var(--border);color:#fff;border-radius:8px;padding:9px 14px;font-size:12px">
+        <option value="">All events</option>
+        <option value="heat_wave">Heat wave</option>
+        <option value="cold_snap">Cold snap</option>
+        <option value="heavy_rain">Heavy rain</option>
+      </select>
+      <button class="pg-btn" onclick="runPg2()">▶ Run</button>
+    </div>
+    <div class="pg-url" id="pg2-url">https://api.weatherarb.com/api/v1/europe/top?limit=5</div>
+    <div class="pg-result" id="pg2-result"></div>
+  </div>
+
+  <!-- Nearby -->
+  <div class="playground">
+    <div class="pg-title">Nearest City — /api/v1/pulse/nearby</div>
+    <div class="pg-row">
+      <input class="pg-input" id="pg3-lat" placeholder="lat" value="45.46" style="max-width:120px">
+      <input class="pg-input" id="pg3-lon" placeholder="lon" value="9.19" style="max-width:120px">
+      <button class="pg-btn" onclick="runPg3()">▶ Run</button>
+      <button class="pg-btn" style="background:rgba(255,255,255,.06);border:1px solid var(--border);color:#fff" onclick="useMyLocation()">📍 My Location</button>
+    </div>
+    <div class="pg-url" id="pg3-url">https://api.weatherarb.com/api/v1/pulse/nearby?lat=45.46&lon=9.19</div>
+    <div class="pg-result" id="pg3-result"></div>
+  </div>
+</div>
+
+<!-- RATE LIMITS -->
+<div class="section" id="rate-limits">
+  <div class="section-head">
+    <div class="section-icon" style="background:rgba(251,191,36,.08)">⚡</div>
+    <div>
+      <h2>Rate Limits</h2>
+      <p>Rate limits are applied per IP address on the free tier and per API key on paid plans.</p>
+    </div>
+  </div>
+  <div class="rl-grid">
+    <div class="rl-item"><div class="rl-plan">Free</div><div class="rl-limit">60</div><div class="rl-unit">requests / hour</div></div>
+    <div class="rl-item"><div class="rl-plan">Starter</div><div class="rl-limit">1,000</div><div class="rl-unit">requests / hour</div></div>
+    <div class="rl-item"><div class="rl-plan">Pro</div><div class="rl-limit">10,000</div><div class="rl-unit">requests / hour</div></div>
+  </div>
+
+  <p style="font-size:12px;color:var(--muted2);margin-top:16px">Rate limit headers are included in every response: <code style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan)">X-RateLimit-Remaining</code>, <code style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan)">X-RateLimit-Reset</code>.</p>
+</div>
+
+<!-- ERRORS -->
+<div class="section" id="errors">
+  <div class="section-head">
+    <div class="section-icon" style="background:rgba(239,68,68,.08)">⚠️</div>
+    <div>
+      <h2>Error Codes</h2>
+      <p>All errors return JSON with <code>error</code> and <code>message</code> fields.</p>
+    </div>
+  </div>
+
+  <div class="error-item"><span class="error-code" style="color:var(--get)">200</span><div><div class="error-name">OK</div><div class="error-desc">Request succeeded. Data returned in response body.</div></div></div>
+  <div class="error-item"><span class="error-code" style="color:var(--yellow)">404</span><div><div class="error-name">City Not Found</div><div class="error-desc">The requested city slug does not exist in our database. Check spelling or try a nearby city.</div></div></div>
+  <div class="error-item"><span class="error-code" style="color:var(--orange)">429</span><div><div class="error-name">Rate Limit Exceeded</div><div class="error-desc">Too many requests. Wait for the reset window or upgrade to a paid plan.</div></div></div>
+  <div class="error-item"><span class="error-code" style="color:var(--red)">500</span><div><div class="error-name">Server Error</div><div class="error-desc">Internal server error. Weather data may be refreshing. Retry after 30 seconds.</div></div></div>
+  <div class="error-item"><span class="error-code" style="color:var(--violet)">503</span><div><div class="error-name">Cache Empty</div><div class="error-desc">Weather cache not yet populated. POST to /pulse/refresh and retry after 30 seconds.</div></div></div>
+</div>
+
+<!-- PRICING -->
+<div class="section" id="pricing">
+  <div class="section-head">
+    <div class="section-icon" style="background:rgba(0,212,255,.08)">💎</div>
+    <div>
+      <h2>Pricing</h2>
+      <p>Start free, scale as you grow. No credit card required for the free tier.</p>
+    </div>
+  </div>
+  <div class="pricing-grid">
+    <div class="plan">
+      <div class="plan-name">Free</div>
+      <div class="plan-price">€0<em>/month</em></div>
+      <div class="plan-desc">Perfect for personal projects and testing</div>
+      <ul class="plan-features">
+        <li>60 requests / hour</li>
+        <li>All pulse endpoints</li>
+        <li>Top 100 anomalies</li>
+        <li>JSON responses</li>
+        <li class="no">API key required</li>
+        <li class="no">Grid stress data</li>
+        <li class="no">Historical data</li>
+        <li class="no">Webhooks</li>
+      </ul>
+      <a href="#" class="plan-btn plan-btn-free">Get Started Free</a>
+    </div>
+    <div class="plan pro">
+      <div class="plan-name">Pro</div>
+      <div class="plan-price">€29<em>/month</em></div>
+      <div class="plan-desc">For businesses and production applications</div>
+      <ul class="plan-features">
+        <li>10,000 requests / hour</li>
+        <li>All endpoints</li>
+        <li>Full 10,385 city database</li>
+        <li>Grid stress & space weather</li>
+        <li>Sector impact analytics</li>
+        <li>Priority support</li>
+        <li class="no">Historical time series</li>
+        <li class="no">Custom baselines</li>
+      </ul>
+      <a href="/pricing/" class="plan-btn plan-btn-pro">Start Pro Trial</a>
+    </div>
+    <div class="plan">
+      <div class="plan-name">Enterprise</div>
+      <div class="plan-price">Custom</div>
+      <div class="plan-desc">For large-scale weather intelligence applications</div>
+      <ul class="plan-features">
+        <li>Unlimited requests</li>
+        <li>Custom city additions</li>
+        <li>Historical time series</li>
+        <li>Custom baselines</li>
+        <li>Dedicated infrastructure</li>
+        <li>SLA guarantee</li>
+        <li>White-label option</li>
+        <li>Custom integrations</li>
+      </ul>
+      <a href="mailto:api@weatherarb.com" class="plan-btn plan-btn-free">Contact Sales</a>
+    </div>
+  </div>
+</div>
+
+</main>
+</div>
+
 <footer>
-  <span>WeatherArb API v1 · <a href="/about.html">Methodology</a></span>
-  <span>Data: ERA5-Land ECMWF + OpenWeatherMap · Free & Open</span>
+  <div>© 2026 WeatherArb · Weather Intelligence Platform · <a href="/">weatherarb.com</a></div>
+  <div style="display:flex;gap:20px">
+    <a href="/news/">News</a>
+    <a href="/globe">Globe</a>
+    <a href="/fortune">Fortune</a>
+    <a href="mailto:api@weatherarb.com">api@weatherarb.com</a>
+  </div>
 </footer>
 
-<style>
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-code{font-family:'JetBrains Mono',monospace;background:rgba(255,255,255,.06);padding:1px 6px;border-radius:3px;font-size:12px}
-</style>
-
 <script>
-var BASE = 'https://api.weatherarb.com';
-
-function scrollTo(id){
-  document.getElementById(id).scrollIntoView({behavior:'smooth'});
-  document.querySelectorAll('.sidebar-link').forEach(function(l){l.classList.remove('active')});
-  event.target.closest('.sidebar-link').classList.add('active');
+// Toggle endpoint
+function toggleEp(header) {
+  const body = header.nextElementSibling;
+  body.classList.toggle('open');
 }
 
-function copyCode(btn, id){
-  var text = document.getElementById(id).textContent;
-  navigator.clipboard.writeText(text).then(function(){
-    btn.textContent='Copied!';
-    setTimeout(function(){btn.textContent='Copy'},2000);
+// Switch code tabs
+function switchTab(tab, targetId) {
+  const block = tab.closest('.code-block');
+  block.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+  block.querySelectorAll('.code-content').forEach(c => c.classList.remove('active'));
+  tab.classList.add('active');
+  const target = document.getElementById(targetId);
+  if(target) target.classList.add('active');
+}
+
+// Copy
+function copyText(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✓ Copied!';
+    setTimeout(() => btn.textContent = 'Copy URL', 1800);
+  });
+}
+function copyCode(btn) {
+  const pre = btn.closest('.code-block').querySelector('.code-content.active pre');
+  if(pre) navigator.clipboard.writeText(pre.innerText).then(() => {
+    btn.textContent = '✓ Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 1800);
   });
 }
 
-function fmt(obj){ return JSON.stringify(obj, null, 2); }
+// Sidebar highlight on scroll
+const sections = document.querySelectorAll('[id]');
+const sbLinks = document.querySelectorAll('.sb-link');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if(window.scrollY >= s.offsetTop - 100) cur = s.id; });
+  sbLinks.forEach(l => {
+    l.classList.toggle('active', l.getAttribute('href') === '#'+cur);
+  });
+}, {passive:true});
 
-async function runPulse(){
-  var city = document.getElementById('pg-city').value || 'hamburg';
-  var box = document.getElementById('pulse-response');
-  var meta = document.getElementById('pulse-meta');
-  box.textContent = 'Loading...'; box.classList.remove('loaded');
-  var t0 = Date.now();
+// Playground helpers
+function fmt(obj) { return JSON.stringify(obj, null, 2); }
+async function pg(url, resultId, urlId) {
+  const urlEl = document.getElementById(urlId);
+  const res = document.getElementById(resultId);
+  if(urlEl) urlEl.textContent = url;
+  res.classList.add('visible','loading');
+  res.classList.remove('error');
+  res.textContent = 'Loading...';
   try {
-    var r = await fetch(BASE+'/api/v1/pulse/'+encodeURIComponent(city));
-    var d = await r.json();
-    var ms = Date.now()-t0;
-    box.textContent = fmt(d); box.classList.add('loaded');
-    meta.style.display='flex';
-    document.getElementById('pulse-status').className = r.ok?'status-ok':'status-err';
-    document.getElementById('pulse-status').textContent = r.status+' '+(r.ok?'OK':'Error');
-    document.getElementById('pulse-time').textContent = ms+'ms';
-  } catch(e){
-    box.textContent = 'Error: '+e.message;
+    const r = await fetch(url);
+    const d = await r.json();
+    res.classList.remove('loading');
+    res.textContent = fmt(d);
+    if(!r.ok) res.classList.add('error');
+  } catch(e) {
+    res.classList.remove('loading');
+    res.classList.add('error');
+    res.textContent = 'Error: ' + e.message;
   }
 }
 
-async function runTop(){
-  var limit = document.getElementById('pg-limit').value;
-  var box = document.getElementById('top-response');
-  var meta = document.getElementById('top-meta');
-  box.textContent='Loading...'; box.classList.remove('loaded');
-  var t0=Date.now();
-  try{
-    var r=await fetch(BASE+'/api/v1/europe/top?limit='+limit);
-    var d=await r.json();
-    var ms=Date.now()-t0;
-    box.textContent=fmt(d); box.classList.add('loaded');
-    meta.style.display='flex';
-    document.getElementById('top-status').className=r.ok?'status-ok':'status-err';
-    document.getElementById('top-status').textContent=r.status+' '+(r.ok?'OK':'Error');
-    document.getElementById('top-time').textContent=ms+'ms';
-  }catch(e){box.textContent='Error: '+e.message;}
+function runPg1() {
+  const city = document.getElementById('pg1-city').value.trim().toLowerCase().replace(/\s+/g,'-') || 'milan';
+  pg(`https://api.weatherarb.com/api/v1/pulse/${city}`, 'pg1-result', 'pg1-url');
 }
-
-function useMyLocation(){
-  if(!navigator.geolocation){alert('Geolocation not supported');return;}
-  navigator.geolocation.getCurrentPosition(function(pos){
-    document.getElementById('pg-lat').value=pos.coords.latitude.toFixed(4);
-    document.getElementById('pg-lon').value=pos.coords.longitude.toFixed(4);
+function runPg2() {
+  const limit = document.getElementById('pg2-limit').value || 5;
+  const event = document.getElementById('pg2-event').value;
+  let url = `https://api.weatherarb.com/api/v1/europe/top?limit=${limit}`;
+  if(event) url += `&event_type=${event}`;
+  pg(url, 'pg2-result', 'pg2-url');
+}
+function runPg3() {
+  const lat = document.getElementById('pg3-lat').value || 45.46;
+  const lon = document.getElementById('pg3-lon').value || 9.19;
+  pg(`https://api.weatherarb.com/api/v1/pulse/nearby?lat=${lat}&lon=${lon}`, 'pg3-result', 'pg3-url');
+}
+function useMyLocation() {
+  if(!navigator.geolocation) return;
+  navigator.geolocation.getCurrentPosition(pos => {
+    document.getElementById('pg3-lat').value = pos.coords.latitude.toFixed(4);
+    document.getElementById('pg3-lon').value = pos.coords.longitude.toFixed(4);
+    runPg3();
   });
 }
 
-async function runNearby(){
-  var lat=document.getElementById('pg-lat').value;
-  var lon=document.getElementById('pg-lon').value;
-  var box=document.getElementById('nearby-response');
-  box.textContent='Loading...'; box.classList.remove('loaded');
-  try{
-    var r=await fetch(BASE+'/api/v1/pulse/nearby?lat='+lat+'&lon='+lon);
-    var d=await r.json();
-    box.textContent=fmt(d); box.classList.add('loaded');
-  }catch(e){box.textContent='Error: '+e.message;}
-}
-
-// Load city list
-fetch(BASE+'/api/v1/europe/top?limit=65')
-.then(function(r){return r.json();})
-.then(function(d){
-  if(!d.data) return;
-  var FLAGS={'IT':'🇮🇹','DE':'🇩🇪','ES':'🇪🇸','FR':'🇫🇷'};
-  var COUNTRIES={};
-  ['torino','aosta','milano','varese','como','bergamo','brescia','sondrio','trento','bolzano',
-   'vicenza','verona','venezia','padova','treviso','belluno','udine','trieste','gorizia',
-   'pordenone','genova','bologna','parma','modena','ferrara','biella','novara','vercelli',
-   'cuneo','asti','alessandria','pavia','lodi','cremona','mantova','lecco'].forEach(function(c){COUNTRIES[c]='IT';});
-  ['münchen','hamburg','berlin','frankfurt','stuttgart','köln','düsseldorf','nürnberg'].forEach(function(c){COUNTRIES[c]='DE';});
-  ['madrid','barcelona','valencia','sevilla','bilbao'].forEach(function(c){COUNTRIES[c]='ES';});
-  ['paris','lyon','marseille','bordeaux','nice'].forEach(function(c){COUNTRIES[c]='FR';});
-
-  document.getElementById('city-list').innerHTML = d.data.map(function(c){
-    var country = COUNTRIES[c.province.toLowerCase()]||'IT';
-    var flag = FLAGS[country]||'🌍';
-    var slug = c.province.toLowerCase().replace(/[üöä]/g,function(m){return{ü:'u',ö:'o',ä:'a'}[m];}).replace(/[^a-z0-9]/g,'-');
-    return '<div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:12px">'
-      + flag + ' <span style="color:white">' + c.province + '</span>'
-      + '<span style="font-family:JetBrains Mono,monospace;color:var(--muted);font-size:10px;display:block;margin-top:2px">' + slug + '</span>'
-      + '</div>';
-  }).join('');
-}).catch(function(){});
+// City input live URL update
+document.getElementById('pg1-city').addEventListener('input', e => {
+  const city = e.target.value.trim().toLowerCase().replace(/\s+/g,'-') || 'milan';
+  document.getElementById('pg1-url').textContent = `https://api.weatherarb.com/api/v1/pulse/${city}`;
+});
 </script>
 </body>
 </html>
