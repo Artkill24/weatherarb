@@ -1,2 +1,5 @@
 data/website/data/latest_reports.json merge=ours
 data/website/news/index.html merge=ours
+data/blog_posts/** merge=ours
+data/website/news/** merge=ours
+data/website/data/latest_reports.json merge=ours
