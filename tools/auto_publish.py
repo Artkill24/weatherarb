@@ -159,9 +159,49 @@ def make_article(sig):
     if cdd is not None: energy_ctx += f", CDD={cdd:.1f} GG"
     if hum is not None: energy_ctx += f", Umidita={hum}%"
     if wind is not None: energy_ctx += f", Vento={wind} km/h"
-    # Bilingual: IT for italian cities, EN for global
+    # Multilingual articles: IT, DE, ES, FR, EN
     _cc = sig.get("country_code","it")
-    if _cc != "it":
+    _de = ['de','at','ch']
+    _es = ['es','mx','ar','co','cl','pe','ve','ec','bo','gt','cu','do','hn','uy','py','ni','sv']
+    _fr = ['fr','ma','dz','tn','ci','sn','cm']
+
+    if _cc in _de:
+        prompt = (
+            f"Sie sind ein leitender Wetteranalyst bei WeatherArb. Schreiben Sie ~250 Woerter auf Deutsch ueber:\n"
+            f"Stadt: {city}, Ereignis: {vert}, Z-Score: {sign}{z:.2f}, Score: {sc:.1f}/10, Niveau: {lvl}{energy_ctx}\n"
+            f'Antworten Sie NUR mit gueltigem JSON, kein Markdown, nur ASCII:\n'
+            f'{{"title":"...","lead":"...","body":"...","conclusion":"...","agri_impact":"...","logistica_impact":"...","energia_impact":"..."}}\n'
+            f"- title: SEO-Titel mit Stadt und Ereignis (max 70 Zeichen)\n"
+            f"- lead: 2 klare Saetze zur Anomalie\n"
+            f"- body: 3 Absaetze getrennt durch \\n\n"
+            f"- conclusion: 1 operativer Satz\n"
+            f"- agri_impact, logistica_impact, energia_impact: max 20 Woerter"
+        )
+    elif _cc in _es:
+        prompt = (
+            f"Eres un analista meteorologico senior en WeatherArb. Escribe ~250 palabras en espanol sobre:\n"
+            f"Ciudad: {city}, Evento: {vert}, Z-Score: {sign}{z:.2f}, Score: {sc:.1f}/10, Nivel: {lvl}{energy_ctx}\n"
+            f'Responde SOLO con JSON valido, sin markdown, solo ASCII:\n'
+            f'{{"title":"...","lead":"...","body":"...","conclusion":"...","agri_impact":"...","logistica_impact":"...","energia_impact":"..."}}\n'
+            f"- title: titulo SEO con ciudad y evento (max 70 caracteres)\n"
+            f"- lead: 2 frases claras sobre la anomalia\n"
+            f"- body: 3 parrafos separados por \\n\n"
+            f"- conclusion: 1 frase operativa\n"
+            f"- agri_impact, logistica_impact, energia_impact: max 20 palabras"
+        )
+    elif _cc in _fr:
+        prompt = (
+            f"Vous etes un analyste meteorologique senior chez WeatherArb. Ecrivez ~250 mots en francais sur:\n"
+            f"Ville: {city}, Evenement: {vert}, Z-Score: {sign}{z:.2f}, Score: {sc:.1f}/10, Niveau: {lvl}{energy_ctx}\n"
+            f'Repondez UNIQUEMENT avec du JSON valide, pas de markdown, ASCII uniquement:\n'
+            f'{{"title":"...","lead":"...","body":"...","conclusion":"...","agri_impact":"...","logistica_impact":"...","energia_impact":"..."}}\n'
+            f"- title: titre SEO avec ville et evenement (max 70 caracteres)\n"
+            f"- lead: 2 phrases claires sur l anomalie\n"
+            f"- body: 3 paragraphes separes par \\n\n"
+            f"- conclusion: 1 phrase operationnelle\n"
+            f"- agri_impact, logistica_impact, energia_impact: max 20 mots"
+        )
+    elif _cc != "it":
         prompt = (
             f"You are a senior weather analyst at WeatherArb. Write ~250 words in English about:\n"
             f"City: {city}, Event: {vert}, Z-Score: {sign}{z:.2f}, Score: {sc:.1f}/10, Level: {lvl}{energy_ctx}\n"
