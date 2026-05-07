@@ -73259,6 +73259,9715 @@
       "lon": 40.03,
       "country": "Kenya",
       "cluster": "KE_Auto"
+    },
+    {
+      "nome": "Conakry",
+      "lat": 9.5092,
+      "lon": -13.7122,
+      "country": "Guinea",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Lomé",
+      "lat": 6.1308,
+      "lon": 1.2153,
+      "country": "Togo",
+      "cluster": "TO_Auto"
+    },
+    {
+      "nome": "Kigali",
+      "lat": -1.9536,
+      "lon": 30.0606,
+      "country": "Rwanda",
+      "cluster": "RW_Auto"
+    },
+    {
+      "nome": "Bujumbura",
+      "lat": -3.3833,
+      "lon": 29.3667,
+      "country": "Burundi",
+      "cluster": "BU_Auto"
+    },
+    {
+      "nome": "N’Djamena",
+      "lat": 12.1053,
+      "lon": 15.0447,
+      "country": "Chad",
+      "cluster": "CH_Auto"
+    },
+    {
+      "nome": "Cotonou",
+      "lat": 6.3667,
+      "lon": 2.4333,
+      "country": "Benin",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Abomey-Calavi",
+      "lat": 6.4486,
+      "lon": 2.3556,
+      "country": "Benin",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Talatona",
+      "lat": -8.9167,
+      "lon": 13.1833,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Berbera",
+      "lat": 10.4396,
+      "lon": 45.0143,
+      "country": "Somalia",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Lobito",
+      "lat": -12.35,
+      "lon": 13.5464,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Burco",
+      "lat": 9.5221,
+      "lon": 45.5336,
+      "country": "Somalia",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Saurimo",
+      "lat": -9.65,
+      "lon": 20.4,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Ceel Baraf",
+      "lat": 3.2072,
+      "lon": 45.7593,
+      "country": "Somalia",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Mamou",
+      "lat": 10.3833,
+      "lon": -12.0833,
+      "country": "Guinea",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Qardho",
+      "lat": 9.5004,
+      "lon": 49.166,
+      "country": "Somalia",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Buurhakaba",
+      "lat": 2.7837,
+      "lon": 44.0833,
+      "country": "Somalia",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Cubal",
+      "lat": -13.0333,
+      "lon": 14.25,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Luena",
+      "lat": -11.7918,
+      "lon": 19.9062,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Wad Medani",
+      "lat": 14.4,
+      "lon": 33.51,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Kūstī",
+      "lat": 13.17,
+      "lon": 32.66,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Uíge",
+      "lat": -7.6167,
+      "lon": 15.05,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Menongue",
+      "lat": -14.6556,
+      "lon": 17.6842,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Muhanga",
+      "lat": -2.0845,
+      "lon": 29.7527,
+      "country": "Rwanda",
+      "cluster": "RW_Auto"
+    },
+    {
+      "nome": "N’Zérékoré",
+      "lat": 7.7522,
+      "lon": -8.8217,
+      "country": "Guinea",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Vila Teixeira da Silva",
+      "lat": -12.1958,
+      "lon": 15.8556,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Sumbe",
+      "lat": -11.2053,
+      "lon": 13.8417,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Caála",
+      "lat": -12.85,
+      "lon": 15.55,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Gabela",
+      "lat": -10.85,
+      "lon": 14.3667,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Ed Daein",
+      "lat": 11.4672,
+      "lon": 26.1317,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Matala",
+      "lat": -14.7306,
+      "lon": 15.0367,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Singa",
+      "lat": 13.1483,
+      "lon": 33.9311,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Ndulo",
+      "lat": -11.4833,
+      "lon": 15.8333,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Andulo",
+      "lat": -11.4926,
+      "lon": 16.7035,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Moçâmedes",
+      "lat": -15.1953,
+      "lon": 12.1508,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Sab‘ al Būr",
+      "lat": 33.4617,
+      "lon": 44.1557,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Godomè",
+      "lat": 6.3667,
+      "lon": 2.35,
+      "country": "Benin",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Al Fallūjah",
+      "lat": 33.35,
+      "lon": 43.7833,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Kalār",
+      "lat": 34.6281,
+      "lon": 45.3185,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Kurmuk",
+      "lat": 10.5563,
+      "lon": 34.2848,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Banikoara",
+      "lat": 11.3,
+      "lon": 2.4333,
+      "country": "Benin",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Abī al Khaşīb",
+      "lat": 30.4464,
+      "lon": 47.9781,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Kasulu",
+      "lat": -4.58,
+      "lon": 30.1,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Djougou",
+      "lat": 9.7,
+      "lon": 1.6667,
+      "country": "Benin",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Ganda",
+      "lat": -13.0167,
+      "lon": 14.6333,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Singida",
+      "lat": -4.8167,
+      "lon": 34.75,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Kigoma",
+      "lat": -4.8833,
+      "lon": 29.6333,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Marka",
+      "lat": 1.7156,
+      "lon": 44.7703,
+      "country": "Somalia",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Uacu Cungo",
+      "lat": -11.3583,
+      "lon": 15.1194,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Barra do Dande",
+      "lat": -8.4728,
+      "lon": 13.3731,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Guéckédou",
+      "lat": 8.5667,
+      "lon": -10.1333,
+      "country": "Guinea",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Tchaourou",
+      "lat": 8.8833,
+      "lon": 2.6,
+      "country": "Benin",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Ar Ruseris",
+      "lat": 11.8633,
+      "lon": 34.3877,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "As Samāwah",
+      "lat": 31.3167,
+      "lon": 45.2833,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "‘Aqrah",
+      "lat": 36.7604,
+      "lon": 43.8943,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Parakou",
+      "lat": 9.35,
+      "lon": 2.6167,
+      "country": "Benin",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Bakaga",
+      "lat": 9.35,
+      "lon": 2.6167,
+      "country": "Benin",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Ifakara",
+      "lat": -8.1,
+      "lon": 36.6833,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Mpanda",
+      "lat": -6.35,
+      "lon": 31.0667,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Iringa",
+      "lat": -7.77,
+      "lon": 35.69,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Moshi",
+      "lat": -3.3349,
+      "lon": 37.3404,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Soio",
+      "lat": -6.1333,
+      "lon": 12.3667,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "At Tājī",
+      "lat": 33.5294,
+      "lon": 44.2775,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Kankan",
+      "lat": 10.3833,
+      "lon": -9.3,
+      "country": "Guinea",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Zākhū",
+      "lat": 37.1436,
+      "lon": 42.6819,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Tchitato",
+      "lat": -7.3667,
+      "lon": 20.8333,
+      "country": "Angola",
+      "cluster": "AN_Auto"
+    },
+    {
+      "nome": "Abū Ghurayb",
+      "lat": 33.3056,
+      "lon": 44.1848,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Sokodé",
+      "lat": 8.9833,
+      "lon": 1.1333,
+      "country": "Togo",
+      "cluster": "TO_Auto"
+    },
+    {
+      "nome": "Ed Damazin",
+      "lat": 11.7704,
+      "lon": 34.35,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Siguiri",
+      "lat": 11.4167,
+      "lon": -9.1667,
+      "country": "Guinea",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Kindia",
+      "lat": 10.0497,
+      "lon": -12.8542,
+      "country": "Guinea",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Al Kūfah",
+      "lat": 32.03,
+      "lon": 44.4,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Kismaayo",
+      "lat": -0.3603,
+      "lon": 42.5489,
+      "country": "Somalia",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Musoma",
+      "lat": -1.5,
+      "lon": 33.8,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Khōst",
+      "lat": 33.3331,
+      "lon": 69.9169,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Kisarawe",
+      "lat": -7.2622,
+      "lon": 38.7367,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Al Miqdādīyah",
+      "lat": 33.9786,
+      "lon": 44.9369,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Cap-Haïtien",
+      "lat": 19.75,
+      "lon": -72.2,
+      "country": "Haiti",
+      "cluster": "HA_Auto"
+    },
+    {
+      "nome": "Al Manāqil",
+      "lat": 14.2504,
+      "lon": 32.98,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Matanzas",
+      "lat": 23.0494,
+      "lon": -81.5736,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Kashikishi",
+      "lat": -9.3,
+      "lon": 28.7167,
+      "country": "Zambia",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Maīmanah",
+      "lat": 35.9333,
+      "lon": 64.75,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Jean-Rabel",
+      "lat": 19.85,
+      "lon": -73.2,
+      "country": "Haiti",
+      "cluster": "HA_Auto"
+    },
+    {
+      "nome": "La Lisa",
+      "lat": 23.0247,
+      "lon": -82.4631,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Vila Junqueiro",
+      "lat": -15.4669,
+      "lon": 36.9778,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Bukoba",
+      "lat": -1.3333,
+      "lon": 31.8167,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Mehtar Lām",
+      "lat": 34.6683,
+      "lon": 70.2089,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Ciego de Ávila",
+      "lat": 21.8481,
+      "lon": -78.7631,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Ghaznī",
+      "lat": 33.5492,
+      "lon": 68.4233,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Sannār",
+      "lat": 13.55,
+      "lon": 33.6,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Paghmān",
+      "lat": 34.5833,
+      "lon": 68.95,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Lichinga",
+      "lat": -13.3,
+      "lon": 35.2456,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Pemba",
+      "lat": -12.9667,
+      "lon": 40.5167,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Mtwara",
+      "lat": -10.2736,
+      "lon": 40.1828,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Nāḩiyat Ghammās",
+      "lat": 31.7422,
+      "lon": 44.6102,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Atbara",
+      "lat": 17.7167,
+      "lon": 33.9833,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Shinyanga",
+      "lat": -3.6619,
+      "lon": 33.4231,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Sancti Spíritus",
+      "lat": 21.9339,
+      "lon": -79.4439,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Jacmel",
+      "lat": 18.235,
+      "lon": -72.537,
+      "country": "Haiti",
+      "cluster": "HA_Auto"
+    },
+    {
+      "nome": "Moundou",
+      "lat": 8.5667,
+      "lon": 16.0833,
+      "country": "Chad",
+      "cluster": "CH_Auto"
+    },
+    {
+      "nome": "Gitega",
+      "lat": -3.4283,
+      "lon": 29.925,
+      "country": "Burundi",
+      "cluster": "BU_Auto"
+    },
+    {
+      "nome": "Ruhengeri",
+      "lat": -1.5,
+      "lon": 29.6333,
+      "country": "Rwanda",
+      "cluster": "RW_Auto"
+    },
+    {
+      "nome": "Livingstone",
+      "lat": -17.85,
+      "lon": 25.8667,
+      "country": "Zambia",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Marianao",
+      "lat": 23.0833,
+      "lon": -82.4333,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Luuq",
+      "lat": 3.8005,
+      "lon": 42.55,
+      "country": "Somalia",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Tarime",
+      "lat": -1.35,
+      "lon": 34.3833,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Centro Habana",
+      "lat": 23.1348,
+      "lon": -82.3701,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Arcahaie",
+      "lat": 18.7702,
+      "lon": -72.5123,
+      "country": "Haiti",
+      "cluster": "HA_Auto"
+    },
+    {
+      "nome": "Tabarre",
+      "lat": 18.5833,
+      "lon": -72.2667,
+      "country": "Haiti",
+      "cluster": "HA_Auto"
+    },
+    {
+      "nome": "Mansa",
+      "lat": -11.2,
+      "lon": 28.8833,
+      "country": "Zambia",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Jamaame",
+      "lat": 0.0722,
+      "lon": 42.7506,
+      "country": "Somalia",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Dessalines",
+      "lat": 19.2618,
+      "lon": -72.5161,
+      "country": "Haiti",
+      "cluster": "HA_Auto"
+    },
+    {
+      "nome": "Nāḩiyat Khān Banī Sa‘d",
+      "lat": 33.5656,
+      "lon": 44.5435,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Nzega",
+      "lat": -4.2169,
+      "lon": 33.1864,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Jilib",
+      "lat": 0.4883,
+      "lon": 42.7853,
+      "country": "Somalia",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Cerro",
+      "lat": 23.0881,
+      "lon": -82.395,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Ed Damer",
+      "lat": 17.59,
+      "lon": 33.96,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Port-de-Paix",
+      "lat": 19.95,
+      "lon": -72.8333,
+      "country": "Haiti",
+      "cluster": "HA_Auto"
+    },
+    {
+      "nome": "Palma Soriano",
+      "lat": 20.2139,
+      "lon": -75.9919,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Bwana Mkubwa",
+      "lat": -12.9833,
+      "lon": 28.7,
+      "country": "Zambia",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Salmān Bāk",
+      "lat": 33.102,
+      "lon": 44.5835,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Boké",
+      "lat": 10.94,
+      "lon": -14.3,
+      "country": "Guinea",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Ar Rumaythah",
+      "lat": 31.5283,
+      "lon": 45.2039,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Guanabacoa",
+      "lat": 23.1252,
+      "lon": -82.3007,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Pul-e Khumrī",
+      "lat": 35.95,
+      "lon": 68.7,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Kasempa",
+      "lat": -13.455,
+      "lon": 25.835,
+      "country": "Zambia",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Masindi",
+      "lat": 1.6836,
+      "lon": 31.7222,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Qal‘at Sukkar",
+      "lat": 31.8632,
+      "lon": 46.0732,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Handeni",
+      "lat": -5.4242,
+      "lon": 38.0194,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Maxixe",
+      "lat": -23.8597,
+      "lon": 35.3472,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "An Nuhūd",
+      "lat": 12.6904,
+      "lon": 28.42,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Contramaestre",
+      "lat": 20.3,
+      "lon": -76.2506,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Mityana",
+      "lat": 0.4006,
+      "lon": 32.0422,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Al Fāw",
+      "lat": 29.98,
+      "lon": 48.47,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Aquin",
+      "lat": 18.2797,
+      "lon": -73.3943,
+      "country": "Haiti",
+      "cluster": "HA_Auto"
+    },
+    {
+      "nome": "Mubende",
+      "lat": 0.5575,
+      "lon": 31.395,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Sarh",
+      "lat": 9.15,
+      "lon": 18.3833,
+      "country": "Chad",
+      "cluster": "CH_Auto"
+    },
+    {
+      "nome": "Hinche",
+      "lat": 19.143,
+      "lon": -72.004,
+      "country": "Haiti",
+      "cluster": "HA_Auto"
+    },
+    {
+      "nome": "Mayarí",
+      "lat": 20.6592,
+      "lon": -75.6781,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Kasama",
+      "lat": -10.2117,
+      "lon": 31.1783,
+      "country": "Zambia",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Nāḩiyat al Iskandarīyah",
+      "lat": 32.9,
+      "lon": 44.35,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Bāmyān",
+      "lat": 34.825,
+      "lon": 67.8333,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Ad Dujayl",
+      "lat": 33.8467,
+      "lon": 44.2344,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Lira",
+      "lat": 2.2472,
+      "lon": 32.9,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Mbale",
+      "lat": 1.0806,
+      "lon": 34.175,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Chārīkār",
+      "lat": 35.0131,
+      "lon": 69.1689,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Saint-Michel de l’Atalaye",
+      "lat": 19.3708,
+      "lon": -72.3347,
+      "country": "Haiti",
+      "cluster": "HA_Auto"
+    },
+    {
+      "nome": "Closepet",
+      "lat": 12.723,
+      "lon": 77.286,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Emmiganūr",
+      "lat": 15.7333,
+      "lon": 77.4833,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Yalamakūru",
+      "lat": 15.5103,
+      "lon": 77.5249,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Lindi",
+      "lat": -9.9969,
+      "lon": 39.7144,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Rawānduz",
+      "lat": 36.6121,
+      "lon": 44.5237,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Vāniyambādi",
+      "lat": 12.6825,
+      "lon": 78.6167,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nābha",
+      "lat": 30.37,
+      "lon": 76.15,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nāḩiyat al Karmah",
+      "lat": 33.3997,
+      "lon": 43.9089,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Kangan",
+      "lat": 34.263,
+      "lon": 74.903,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bhadohi",
+      "lat": 25.42,
+      "lon": 82.57,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Allinagaram",
+      "lat": 10.0119,
+      "lon": 77.4786,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vāsco Da Gāma",
+      "lat": 15.3981,
+      "lon": 73.8111,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Marmagao",
+      "lat": 15.4,
+      "lon": 73.8,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dhār",
+      "lat": 22.5972,
+      "lon": 75.3042,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dod Ballāpur",
+      "lat": 13.292,
+      "lon": 77.543,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kadugli",
+      "lat": 11.01,
+      "lon": 29.7,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Akot",
+      "lat": 21.1,
+      "lon": 77.06,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Contai",
+      "lat": 21.78,
+      "lon": 87.75,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kot Kapūra",
+      "lat": 30.5833,
+      "lon": 74.9,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Māndvi",
+      "lat": 22.8333,
+      "lon": 69.3556,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rāyachoti",
+      "lat": 14.0583,
+      "lon": 78.7517,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pāloncha",
+      "lat": 17.6018,
+      "lon": 80.7051,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Parli Vaijnāth",
+      "lat": 18.85,
+      "lon": 76.53,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Solwezi",
+      "lat": -12.1433,
+      "lon": 26.3858,
+      "country": "Zambia",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Sivaganga",
+      "lat": 9.8433,
+      "lon": 78.4809,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rāmagiri Udayagiri",
+      "lat": 19.1619,
+      "lon": 84.144,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chililabombwe",
+      "lat": -12.3667,
+      "lon": 27.8278,
+      "country": "Zambia",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Ponnāni",
+      "lat": 10.77,
+      "lon": 75.9,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jāmtāra",
+      "lat": 23.9633,
+      "lon": 86.8014,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Puerto Padre",
+      "lat": 21.195,
+      "lon": -76.6017,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Pollāchi",
+      "lat": 10.659,
+      "lon": 77.008,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kāvali",
+      "lat": 14.913,
+      "lon": 79.9929,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sankeshwar",
+      "lat": 16.27,
+      "lon": 74.48,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kadiri",
+      "lat": 14.12,
+      "lon": 78.17,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Léré",
+      "lat": 9.6572,
+      "lon": 14.2283,
+      "country": "Chad",
+      "cluster": "CH_Auto"
+    },
+    {
+      "nome": "Phusro",
+      "lat": 23.77,
+      "lon": 85.99,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kairāna",
+      "lat": 29.3953,
+      "lon": 77.2053,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rāsipuram",
+      "lat": 11.4618,
+      "lon": 78.1909,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Najībābād",
+      "lat": 29.6128,
+      "lon": 78.3425,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nirmal",
+      "lat": 19.1,
+      "lon": 78.35,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nirāla",
+      "lat": 19.8143,
+      "lon": 78.1662,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ootacamund",
+      "lat": 11.41,
+      "lon": 76.7,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jangipur",
+      "lat": 24.4691,
+      "lon": 88.1032,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sangrūr",
+      "lat": 30.2506,
+      "lon": 75.8442,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mettupālaiyam",
+      "lat": 11.2341,
+      "lon": 76.9067,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jumri Tilaiyā",
+      "lat": 24.4289,
+      "lon": 85.5355,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jagüey Grande",
+      "lat": 22.5292,
+      "lon": -81.1325,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Aruppukkottai",
+      "lat": 9.5139,
+      "lon": 78.1002,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Farīdkot",
+      "lat": 30.67,
+      "lon": 74.76,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Madgaon",
+      "lat": 15.2736,
+      "lon": 73.9581,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gitarama",
+      "lat": -2.0696,
+      "lon": 29.76,
+      "country": "Rwanda",
+      "cluster": "RW_Auto"
+    },
+    {
+      "nome": "Palangotu Adwār",
+      "lat": 32.7888,
+      "lon": 76.0009,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Consolación del Sur",
+      "lat": 22.5083,
+      "lon": -83.5172,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Jamūī",
+      "lat": 24.9278,
+      "lon": 86.2239,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ad Diwem",
+      "lat": 13.9904,
+      "lon": 32.3,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Norton",
+      "lat": -17.8833,
+      "lon": 30.7,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Kumārapālaiyam",
+      "lat": 11.4416,
+      "lon": 77.6907,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Hānsi",
+      "lat": 29.1,
+      "lon": 75.97,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Cárdenas",
+      "lat": 23.0428,
+      "lon": -81.2036,
+      "country": "Cuba",
+      "cluster": "CU_Auto"
+    },
+    {
+      "nome": "Shahdol",
+      "lat": 23.28,
+      "lon": 81.35,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Anakāpalle",
+      "lat": 17.6913,
+      "lon": 83.0039,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nīmbāhera",
+      "lat": 24.62,
+      "lon": 74.68,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nachchāndupatti",
+      "lat": 10.3238,
+      "lon": 78.7233,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Karanganyar",
+      "lat": -7.6033,
+      "lon": 110.9778,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Batticaloa",
+      "lat": 7.717,
+      "lon": 81.7,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Sārni",
+      "lat": 22.104,
+      "lon": 78.173,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bāsoda",
+      "lat": 23.8515,
+      "lon": 77.9365,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Maratturai",
+      "lat": 11.1536,
+      "lon": 79.5329,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Karād",
+      "lat": 17.285,
+      "lon": 74.184,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pariaman",
+      "lat": -0.6264,
+      "lon": 100.1178,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chinnachauku",
+      "lat": 14.4732,
+      "lon": 78.8451,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Garulia",
+      "lat": 22.82,
+      "lon": 88.37,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chanwari",
+      "lat": 23.1917,
+      "lon": 82.3542,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Krishnagiri",
+      "lat": 12.5317,
+      "lon": 78.2174,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Harda Khās",
+      "lat": 22.3441,
+      "lon": 77.0954,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mhow",
+      "lat": 22.55,
+      "lon": 75.76,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Atakpamé",
+      "lat": 7.5269,
+      "lon": 1.1267,
+      "country": "Togo",
+      "cluster": "TO_Auto"
+    },
+    {
+      "nome": "Chirundu",
+      "lat": -16.05,
+      "lon": 28.8333,
+      "country": "Zambia",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Sumenep",
+      "lat": -7.0049,
+      "lon": 113.8496,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sentani",
+      "lat": -2.5636,
+      "lon": 140.5146,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dhorāji",
+      "lat": 21.7337,
+      "lon": 70.4499,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vīrappanchathiram",
+      "lat": 11.3553,
+      "lon": 77.6678,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Athurugiriya",
+      "lat": 6.8687,
+      "lon": 79.9998,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Bangil",
+      "lat": -7.5978,
+      "lon": 112.7846,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Al Hindīyah",
+      "lat": 32.5467,
+      "lon": 44.2277,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Lāharpur",
+      "lat": 27.72,
+      "lon": 80.9,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Channapatna",
+      "lat": 12.6514,
+      "lon": 77.2067,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pilkhua",
+      "lat": 28.712,
+      "lon": 77.6545,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tiruppattūr",
+      "lat": 12.4915,
+      "lon": 78.5684,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Baghlān",
+      "lat": 36.1328,
+      "lon": 68.7,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Gokulgarh",
+      "lat": 28.2468,
+      "lon": 76.6176,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Maco",
+      "lat": 7.3619,
+      "lon": 125.8553,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Sirsilla",
+      "lat": 18.38,
+      "lon": 78.83,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Siaton",
+      "lat": 9.07,
+      "lon": 123.03,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Mānsa",
+      "lat": 29.9906,
+      "lon": 75.3996,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mabinay",
+      "lat": 9.73,
+      "lon": 122.92,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Al Ḩayy",
+      "lat": 32.1742,
+      "lon": 46.0433,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Chingleput",
+      "lat": 12.6918,
+      "lon": 79.9766,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bagamoyo",
+      "lat": -6.4444,
+      "lon": 38.9028,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Calatrava",
+      "lat": 10.6,
+      "lon": 123.48,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Ratodero",
+      "lat": 27.8,
+      "lon": 68.2833,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Jepara",
+      "lat": -6.5333,
+      "lon": 110.6667,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Saunda",
+      "lat": 23.66,
+      "lon": 85.35,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ashoknagar",
+      "lat": 24.58,
+      "lon": 77.73,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ubay",
+      "lat": 10.056,
+      "lon": 124.4729,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Banco Filipino International Village",
+      "lat": 14.4499,
+      "lon": 120.9996,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Siasi",
+      "lat": 5.5462,
+      "lon": 120.8145,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Kātoya",
+      "lat": 23.65,
+      "lon": 88.13,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Imam Qasim",
+      "lat": 32.298,
+      "lon": 44.6828,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Mandiraja Kulon",
+      "lat": -7.4722,
+      "lon": 109.5133,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kadi",
+      "lat": 23.3009,
+      "lon": 72.3322,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Matalam",
+      "lat": 7.08,
+      "lon": 124.9,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Buhi",
+      "lat": 13.4347,
+      "lon": 123.5167,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Lambunao",
+      "lat": 11.05,
+      "lon": 122.48,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Bulacan",
+      "lat": 14.7928,
+      "lon": 120.8789,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Mannārgudi",
+      "lat": 10.6653,
+      "lon": 79.4521,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kapalong",
+      "lat": 7.5854,
+      "lon": 125.7052,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Balrāmpur",
+      "lat": 27.43,
+      "lon": 82.18,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Khamānon Kalān",
+      "lat": 30.82,
+      "lon": 76.35,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dera Allahyar",
+      "lat": 28.4167,
+      "lon": 68.1667,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Kharan",
+      "lat": 28.5833,
+      "lon": 65.4167,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Malapatan",
+      "lat": 5.97,
+      "lon": 125.28,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Barili",
+      "lat": 10.12,
+      "lon": 123.53,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Bargarh",
+      "lat": 21.3333,
+      "lon": 83.6167,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dahegām",
+      "lat": 23.17,
+      "lon": 72.82,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rājula",
+      "lat": 21.05,
+      "lon": 71.43,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Cabadbaran",
+      "lat": 9.12,
+      "lon": 125.53,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Kāmāreddipet",
+      "lat": 18.3205,
+      "lon": 78.337,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Arni",
+      "lat": 12.6677,
+      "lon": 79.2853,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bolpur",
+      "lat": 23.67,
+      "lon": 87.72,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Peruvancha",
+      "lat": 17.1719,
+      "lon": 80.5839,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gumlā",
+      "lat": 23.0444,
+      "lon": 84.5417,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Simdega",
+      "lat": 22.62,
+      "lon": 84.52,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Manmād",
+      "lat": 20.251,
+      "lon": 74.439,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Piro",
+      "lat": 25.33,
+      "lon": 84.42,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sīra",
+      "lat": 13.745,
+      "lon": 76.909,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Arsikere",
+      "lat": 13.3139,
+      "lon": 76.2369,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tall ‘Afar",
+      "lat": 36.3792,
+      "lon": 42.4497,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Kathri",
+      "lat": 26.4583,
+      "lon": 68.3192,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Jamshoro",
+      "lat": 25.4244,
+      "lon": 68.2811,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Khewra",
+      "lat": 32.65,
+      "lon": 73.0167,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Jagannāthaprasād",
+      "lat": 19.97,
+      "lon": 84.77,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Paco",
+      "lat": 14.583,
+      "lon": 120.983,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Kottagūdem",
+      "lat": 17.55,
+      "lon": 80.63,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tissamaharama",
+      "lat": 6.2765,
+      "lon": 81.2865,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Patikul",
+      "lat": 6.07,
+      "lon": 121.1,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Robles",
+      "lat": 10.35,
+      "lon": 123.07,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Mangatarem",
+      "lat": 15.7874,
+      "lon": 120.2921,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Jaen",
+      "lat": 15.3392,
+      "lon": 120.9069,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Dobni Para",
+      "lat": 22.8347,
+      "lon": 74.2556,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tīkamgarh",
+      "lat": 24.7472,
+      "lon": 78.85,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Arāria",
+      "lat": 26.15,
+      "lon": 87.52,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Cuamba",
+      "lat": -14.82,
+      "lon": 36.5486,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Subulussalam",
+      "lat": 2.6422,
+      "lon": 98.0042,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pagbilao",
+      "lat": 13.972,
+      "lon": 121.687,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Bauang",
+      "lat": 16.53,
+      "lon": 120.33,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Dinga",
+      "lat": 32.641,
+      "lon": 73.7243,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Arkonam",
+      "lat": 13.0778,
+      "lon": 79.6667,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Samadiāla",
+      "lat": 21.337,
+      "lon": 71.31,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pototan",
+      "lat": 10.95,
+      "lon": 122.63,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Limay",
+      "lat": 14.5619,
+      "lon": 120.5983,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Argao",
+      "lat": 9.88,
+      "lon": 123.6,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Macabebe",
+      "lat": 14.9081,
+      "lon": 120.7156,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tanuku",
+      "lat": 16.7566,
+      "lon": 81.677,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Narra",
+      "lat": 9.28,
+      "lon": 118.42,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Koch Bihār",
+      "lat": 26.3242,
+      "lon": 89.451,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Maumere",
+      "lat": -8.6222,
+      "lon": 122.2122,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kuniyamuttūr",
+      "lat": 10.9638,
+      "lon": 76.9525,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kambam",
+      "lat": 9.7375,
+      "lon": 77.2823,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bodhan",
+      "lat": 18.67,
+      "lon": 77.9,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Santa Catalina",
+      "lat": 9.3331,
+      "lon": 122.8658,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Hermosa",
+      "lat": 14.83,
+      "lon": 120.5,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tirkākara",
+      "lat": 10.035,
+      "lon": 76.329,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pattoki",
+      "lat": 31.0167,
+      "lon": 73.85,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Harunabad",
+      "lat": 29.6097,
+      "lon": 73.1378,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Aş Şuwayrah",
+      "lat": 32.9256,
+      "lon": 44.7758,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Bustos",
+      "lat": 14.95,
+      "lon": 120.92,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Kabacan",
+      "lat": 7.12,
+      "lon": 124.82,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Umingan",
+      "lat": 15.9289,
+      "lon": 120.8419,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Talakag",
+      "lat": 8.2319,
+      "lon": 124.6025,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Balagtas",
+      "lat": 14.8145,
+      "lon": 120.9085,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Balkh",
+      "lat": 36.7581,
+      "lon": 66.8981,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Bongabong",
+      "lat": 12.7469,
+      "lon": 121.4881,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Baj Baj",
+      "lat": 22.4737,
+      "lon": 88.1739,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Surt",
+      "lat": 31.205,
+      "lon": 16.5886,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Atambua",
+      "lat": -9.1061,
+      "lon": 124.8925,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nipāni",
+      "lat": 16.399,
+      "lon": 74.3829,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Fāzilka",
+      "lat": 30.403,
+      "lon": 74.025,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Abéché",
+      "lat": 13.8331,
+      "lon": 20.8347,
+      "country": "Chad",
+      "cluster": "CH_Auto"
+    },
+    {
+      "nome": "Al Musayyib",
+      "lat": 32.7786,
+      "lon": 44.29,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Shājāpur",
+      "lat": 23.4264,
+      "lon": 76.2778,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Palo",
+      "lat": 11.1583,
+      "lon": 124.9917,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Keshod",
+      "lat": 21.3,
+      "lon": 70.25,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Infanta",
+      "lat": 14.7425,
+      "lon": 121.6494,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Montepuez",
+      "lat": -13.1167,
+      "lon": 39.0,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Kahror Pakka",
+      "lat": 29.6236,
+      "lon": 71.9167,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Chintāmani",
+      "lat": 13.4,
+      "lon": 78.066,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Manaoag",
+      "lat": 16.0439,
+      "lon": 120.4856,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Surendranagar",
+      "lat": 22.7,
+      "lon": 71.6833,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Malappuram",
+      "lat": 11.042,
+      "lon": 76.0815,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Garhi",
+      "lat": 28.6317,
+      "lon": 77.3186,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Srīvilliputtūr",
+      "lat": 9.512,
+      "lon": 77.633,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bhadarwāh",
+      "lat": 32.98,
+      "lon": 75.7137,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rānāghāt",
+      "lat": 23.18,
+      "lon": 88.58,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Moussoro",
+      "lat": 13.6431,
+      "lon": 16.4919,
+      "country": "Chad",
+      "cluster": "CH_Auto"
+    },
+    {
+      "nome": "Sehwan",
+      "lat": 26.4193,
+      "lon": 67.8594,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Dhrāngadhra",
+      "lat": 22.98,
+      "lon": 71.47,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pinamungahan",
+      "lat": 10.27,
+      "lon": 123.58,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Kpalimé",
+      "lat": 6.9,
+      "lon": 0.6333,
+      "country": "Togo",
+      "cluster": "TO_Auto"
+    },
+    {
+      "nome": "Mawatagama",
+      "lat": 7.4322,
+      "lon": 80.4479,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Libon",
+      "lat": 13.3,
+      "lon": 123.4333,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Gangammapeta",
+      "lat": 18.498,
+      "lon": 83.9642,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Khejroli",
+      "lat": 27.37,
+      "lon": 75.57,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Afak",
+      "lat": 32.0889,
+      "lon": 45.2506,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Bugallon",
+      "lat": 15.92,
+      "lon": 120.18,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Jaorā",
+      "lat": 23.63,
+      "lon": 75.13,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tura",
+      "lat": 25.52,
+      "lon": 90.22,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ambājogāi",
+      "lat": 18.73,
+      "lon": 76.38,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dabra",
+      "lat": 25.8857,
+      "lon": 78.3322,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pozorrubio",
+      "lat": 16.12,
+      "lon": 120.55,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Esperanza",
+      "lat": 6.7167,
+      "lon": 124.5167,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Mirpur Mathelo",
+      "lat": 28.0167,
+      "lon": 69.5333,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Dalaguete",
+      "lat": 9.7612,
+      "lon": 123.5349,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Balingasag",
+      "lat": 8.75,
+      "lon": 124.78,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Wandiwāsh",
+      "lat": 12.5,
+      "lon": 79.62,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pennepalli",
+      "lat": 14.1473,
+      "lon": 79.8477,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gūdūr",
+      "lat": 14.1473,
+      "lon": 79.8477,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Brookes Point",
+      "lat": 8.78,
+      "lon": 117.83,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Kahan",
+      "lat": 29.2982,
+      "lon": 68.9023,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Sarai Alamgir",
+      "lat": 32.9,
+      "lon": 73.75,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Singaparna",
+      "lat": -7.3497,
+      "lon": 108.1106,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Majalengka",
+      "lat": -6.8353,
+      "lon": 108.2278,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Samundri",
+      "lat": 31.0625,
+      "lon": 72.9542,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Dumangas",
+      "lat": 10.83,
+      "lon": 122.72,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Alicia",
+      "lat": 16.7787,
+      "lon": 121.6972,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Hāveri",
+      "lat": 14.7935,
+      "lon": 75.4045,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tarn Tāran",
+      "lat": 31.4519,
+      "lon": 74.9278,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mangalagiri",
+      "lat": 16.43,
+      "lon": 80.55,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kallakkurichchi",
+      "lat": 11.738,
+      "lon": 78.962,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bat Khela",
+      "lat": 34.62,
+      "lon": 71.97,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Kāsipālaiyam",
+      "lat": 11.3156,
+      "lon": 77.7092,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Lala",
+      "lat": 7.97,
+      "lon": 123.75,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Jose Abad Santos",
+      "lat": 5.92,
+      "lon": 125.65,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Bagan Si Api-api",
+      "lat": 2.1667,
+      "lon": 100.8167,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bula",
+      "lat": 13.4694,
+      "lon": 123.2775,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Pattukkottai",
+      "lat": 10.43,
+      "lon": 79.32,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gobindgarh",
+      "lat": 30.6709,
+      "lon": 76.3019,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chopda",
+      "lat": 21.25,
+      "lon": 75.3,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Catanauan",
+      "lat": 13.5917,
+      "lon": 122.325,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Yafran",
+      "lat": 32.0629,
+      "lon": 12.5267,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Carles",
+      "lat": 11.57,
+      "lon": 123.13,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "San Dionisio",
+      "lat": 14.4839,
+      "lon": 120.9925,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Siruguppa",
+      "lat": 15.6,
+      "lon": 77.0,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nepālgañj",
+      "lat": 28.05,
+      "lon": 81.6167,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Tangalla",
+      "lat": 6.024,
+      "lon": 80.7911,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Bacacay",
+      "lat": 13.2925,
+      "lon": 123.7917,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Sipalay",
+      "lat": 9.75,
+      "lon": 122.4,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Sangāreddi",
+      "lat": 17.6119,
+      "lon": 78.0819,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dambulla",
+      "lat": 7.86,
+      "lon": 80.6517,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Oroquieta",
+      "lat": 8.48,
+      "lon": 123.8,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Camalig",
+      "lat": 13.13,
+      "lon": 123.67,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Sakrand",
+      "lat": 26.1381,
+      "lon": 68.2731,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Chaklāsi",
+      "lat": 22.65,
+      "lon": 72.93,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nilanga",
+      "lat": 18.1161,
+      "lon": 76.7525,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Borongan",
+      "lat": 11.6094,
+      "lon": 125.4361,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Gumaca",
+      "lat": 13.921,
+      "lon": 122.1002,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Quilāndi",
+      "lat": 11.439,
+      "lon": 75.695,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Calauag",
+      "lat": 13.9575,
+      "lon": 122.2875,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Kresek",
+      "lat": -6.1314,
+      "lon": 106.38,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kabarore",
+      "lat": -1.6306,
+      "lon": 30.3787,
+      "country": "Rwanda",
+      "cluster": "RW_Auto"
+    },
+    {
+      "nome": "Sambrial",
+      "lat": 32.16,
+      "lon": 74.4,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Mazabuka",
+      "lat": -15.8467,
+      "lon": 27.7475,
+      "country": "Zambia",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Tarīn Kōṯ",
+      "lat": 32.6267,
+      "lon": 65.8733,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Mandlā",
+      "lat": 22.5978,
+      "lon": 80.3714,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Saymayl",
+      "lat": 36.8582,
+      "lon": 42.8482,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Pililla",
+      "lat": 14.48,
+      "lon": 121.3,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Rāyadrug",
+      "lat": 14.6997,
+      "lon": 76.8524,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Binalbagan",
+      "lat": 10.2,
+      "lon": 122.87,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Bilāra",
+      "lat": 26.1792,
+      "lon": 73.7056,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Goa",
+      "lat": 13.6983,
+      "lon": 123.4889,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Talibon",
+      "lat": 10.12,
+      "lon": 124.28,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Parappanangādi",
+      "lat": 11.0497,
+      "lon": 75.8575,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rāyagada",
+      "lat": 19.17,
+      "lon": 83.42,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Morong",
+      "lat": 14.5127,
+      "lon": 121.2385,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Ratangarh",
+      "lat": 28.0787,
+      "lon": 74.6219,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tāndūr",
+      "lat": 17.2576,
+      "lon": 77.5875,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Hala",
+      "lat": 25.81,
+      "lon": 68.43,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Mārkāpur",
+      "lat": 15.73,
+      "lon": 79.26,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mauban",
+      "lat": 14.1911,
+      "lon": 121.7308,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Alabang",
+      "lat": 14.4184,
+      "lon": 121.0385,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "An Nu‘mānīyah",
+      "lat": 32.5562,
+      "lon": 45.4129,
+      "country": "Iraq",
+      "cluster": "IR_Auto"
+    },
+    {
+      "nome": "Malaut",
+      "lat": 30.19,
+      "lon": 74.499,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kodungallūr",
+      "lat": 10.2338,
+      "lon": 76.1946,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gwadar",
+      "lat": 25.1264,
+      "lon": 62.3225,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Neyyāttinkara",
+      "lat": 8.4,
+      "lon": 77.08,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dondo",
+      "lat": -19.6167,
+      "lon": 34.75,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Bāpatla",
+      "lat": 15.9044,
+      "lon": 80.4675,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Fatehābād",
+      "lat": 29.52,
+      "lon": 75.45,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kalamasseri",
+      "lat": 10.052,
+      "lon": 76.3158,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tumauini",
+      "lat": 17.27,
+      "lon": 121.8,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Gardēz",
+      "lat": 33.6,
+      "lon": 69.2169,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Badvel",
+      "lat": 14.75,
+      "lon": 79.05,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vālpārai",
+      "lat": 10.3276,
+      "lon": 76.9553,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sankaranayinār Kovil",
+      "lat": 9.16,
+      "lon": 77.55,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tenkāsi",
+      "lat": 8.9564,
+      "lon": 77.3152,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sūratgarh",
+      "lat": 29.3177,
+      "lon": 73.8989,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Palni",
+      "lat": 10.45,
+      "lon": 77.5161,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mubārakpur",
+      "lat": 26.09,
+      "lon": 83.29,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nelamangala",
+      "lat": 13.102,
+      "lon": 77.374,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Aliaga",
+      "lat": 15.5036,
+      "lon": 120.845,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Dandeli",
+      "lat": 15.2667,
+      "lon": 74.6167,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Orani",
+      "lat": 14.8,
+      "lon": 120.53,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Hujra Shah Muqim",
+      "lat": 30.7333,
+      "lon": 73.8167,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Nāndūra Buzurg",
+      "lat": 20.8333,
+      "lon": 76.4597,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rizal",
+      "lat": 15.71,
+      "lon": 121.1047,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tinambac",
+      "lat": 13.8183,
+      "lon": 123.3244,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Kabirwala",
+      "lat": 30.2,
+      "lon": 70.43,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Gaura",
+      "lat": 25.4961,
+      "lon": 85.9709,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Satyamangalam",
+      "lat": 11.5167,
+      "lon": 77.25,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Madhipura",
+      "lat": 25.92,
+      "lon": 86.792,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bhattu Kolān",
+      "lat": 29.3872,
+      "lon": 75.3422,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kodoli",
+      "lat": 16.88,
+      "lon": 74.2,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Raha Tiga",
+      "lat": -4.8311,
+      "lon": 122.7239,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Raha",
+      "lat": -4.8311,
+      "lon": 122.7239,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Avaniyāpuram",
+      "lat": 9.8818,
+      "lon": 78.1125,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Entebbe",
+      "lat": 0.05,
+      "lon": 32.46,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Rohri",
+      "lat": 27.6831,
+      "lon": 68.9,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Ratnanagar",
+      "lat": 27.5833,
+      "lon": 84.5,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Basavakalyān",
+      "lat": 17.8728,
+      "lon": 76.9497,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Roxas",
+      "lat": 10.3197,
+      "lon": 119.3408,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Tripunittura",
+      "lat": 9.9439,
+      "lon": 76.3494,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nowrangapur",
+      "lat": 19.23,
+      "lon": 82.55,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Don Carlos",
+      "lat": 7.6808,
+      "lon": 124.9953,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Mansehra",
+      "lat": 34.3339,
+      "lon": 73.2014,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Bhawānipatna",
+      "lat": 19.91,
+      "lon": 83.128,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mocuba",
+      "lat": -16.8391,
+      "lon": 36.9855,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Dharmasāgaram",
+      "lat": 17.9933,
+      "lon": 79.4428,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "San Pascual",
+      "lat": 13.8,
+      "lon": 121.03,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Kireka",
+      "lat": 0.3467,
+      "lon": 32.5,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Varisshiyakuni",
+      "lat": 11.6325,
+      "lon": 75.584,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bagumbayan",
+      "lat": 6.5339,
+      "lon": 124.5633,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Pālghar",
+      "lat": 19.6969,
+      "lon": 72.7654,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Buenavista",
+      "lat": 8.97,
+      "lon": 125.41,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Aparri",
+      "lat": 18.3575,
+      "lon": 121.6372,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Pakribarawān",
+      "lat": 24.9516,
+      "lon": 85.7347,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Todupulai",
+      "lat": 9.9,
+      "lon": 76.7192,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Indang",
+      "lat": 14.2,
+      "lon": 120.88,
+      "country": "Philippines",
+      "cluster": "PH_Auto"
+    },
+    {
+      "nome": "Kāyankulam",
+      "lat": 9.172,
+      "lon": 76.501,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Solok",
+      "lat": -0.7997,
+      "lon": 100.6661,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Parādīp Garh",
+      "lat": 20.316,
+      "lon": 86.61,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ilkal",
+      "lat": 15.9592,
+      "lon": 76.1135,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nihtaur",
+      "lat": 29.33,
+      "lon": 78.38,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Anjangaon",
+      "lat": 21.15,
+      "lon": 77.28,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bardi̇̄bās",
+      "lat": 26.9917,
+      "lon": 85.8917,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Matara",
+      "lat": 5.95,
+      "lon": 80.5333,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Nghĩa Lộ",
+      "lat": 21.5758,
+      "lon": 104.5192,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Renukūt",
+      "lat": 24.2,
+      "lon": 83.03,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Siuri",
+      "lat": 23.91,
+      "lon": 87.527,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kamuli",
+      "lat": 0.945,
+      "lon": 33.125,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Rājsamand",
+      "lat": 25.07,
+      "lon": 73.88,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bishnupur",
+      "lat": 23.075,
+      "lon": 87.317,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Apac",
+      "lat": 1.985,
+      "lon": 32.535,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Modāsa",
+      "lat": 23.47,
+      "lon": 73.3,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Banepā",
+      "lat": 27.6333,
+      "lon": 85.5167,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Bāprola",
+      "lat": 28.6408,
+      "lon": 77.0104,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gauravaram",
+      "lat": 17.1,
+      "lon": 80.6,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sausar",
+      "lat": 21.65,
+      "lon": 78.78,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Babati",
+      "lat": -4.2167,
+      "lon": 35.75,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Dhenkānāl",
+      "lat": 20.67,
+      "lon": 85.6,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bongaigaon",
+      "lat": 26.4769,
+      "lon": 90.5583,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Lala Musa",
+      "lat": 32.7003,
+      "lon": 73.9578,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Dhārāpuram",
+      "lat": 10.7314,
+      "lon": 77.5189,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Guruvāyūr",
+      "lat": 10.5946,
+      "lon": 76.0369,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Aravattūr",
+      "lat": 10.6649,
+      "lon": 79.4507,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jagoniguda",
+      "lat": 17.32,
+      "lon": 78.52,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mīrpeta",
+      "lat": 17.32,
+      "lon": 78.52,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Phalodi",
+      "lat": 27.131,
+      "lon": 72.364,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kati",
+      "lat": 12.7504,
+      "lon": -8.08,
+      "country": "Mali",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Beypore",
+      "lat": 11.18,
+      "lon": 75.81,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Siddipet",
+      "lat": 18.1019,
+      "lon": 78.8519,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nālūt",
+      "lat": 31.8685,
+      "lon": 10.9812,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Koratla",
+      "lat": 18.8215,
+      "lon": 78.7119,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kampung Tengah",
+      "lat": 1.4836,
+      "lon": 101.9561,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bengkalis",
+      "lat": 1.4897,
+      "lon": 102.0797,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sahaswān",
+      "lat": 28.068,
+      "lon": 78.751,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Marondera",
+      "lat": -18.1897,
+      "lon": 31.5467,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Arāmbāgh",
+      "lat": 22.88,
+      "lon": 87.78,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pidugurālla",
+      "lat": 16.4793,
+      "lon": 79.8863,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Goz-Beida",
+      "lat": 12.2236,
+      "lon": 21.4144,
+      "country": "Chad",
+      "cluster": "CH_Auto"
+    },
+    {
+      "nome": "Puliyankudi",
+      "lat": 9.1725,
+      "lon": 77.3956,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Lahat",
+      "lat": -3.8,
+      "lon": 103.5333,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sangamner",
+      "lat": 19.5678,
+      "lon": 74.2115,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chegutu",
+      "lat": -18.14,
+      "lon": 30.15,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Gohna",
+      "lat": 29.13,
+      "lon": 76.9,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pulivendla",
+      "lat": 14.4194,
+      "lon": 78.225,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ruteng",
+      "lat": -8.6127,
+      "lon": 120.463,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kirtipur",
+      "lat": 27.6667,
+      "lon": 85.2833,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Kronjo",
+      "lat": -6.0667,
+      "lon": 106.4167,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kānhangād",
+      "lat": 12.3167,
+      "lon": 75.0667,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jaisalmer",
+      "lat": 26.913,
+      "lon": 70.915,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kurabūr",
+      "lat": 13.4,
+      "lon": 78.006,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Giddarbāha",
+      "lat": 30.2,
+      "lon": 74.67,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tamlūk",
+      "lat": 22.3,
+      "lon": 87.92,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sinnar",
+      "lat": 19.85,
+      "lon": 74.0,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jagraon",
+      "lat": 30.78,
+      "lon": 75.48,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Alīpur Duār",
+      "lat": 26.489,
+      "lon": 89.527,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dhūri",
+      "lat": 30.3685,
+      "lon": 75.8679,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Toboali",
+      "lat": -2.9997,
+      "lon": 106.4656,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rāth",
+      "lat": 25.58,
+      "lon": 79.57,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tāsgaon",
+      "lat": 17.03,
+      "lon": 74.6,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Saidu Sharif",
+      "lat": 34.75,
+      "lon": 72.3572,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Keitumkawn",
+      "lat": 23.31,
+      "lon": 92.85,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kolonnawa",
+      "lat": 6.9329,
+      "lon": 79.8848,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Faīẕābād",
+      "lat": 37.1166,
+      "lon": 70.58,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Narapalli",
+      "lat": 17.4167,
+      "lon": 78.6287,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pālitāna",
+      "lat": 21.52,
+      "lon": 71.83,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dharmapuri",
+      "lat": 12.1211,
+      "lon": 78.1582,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Idappādi",
+      "lat": 11.5835,
+      "lon": 77.8341,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Hiriyūr",
+      "lat": 13.9446,
+      "lon": 76.6172,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chunian",
+      "lat": 31.0167,
+      "lon": 73.85,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Sirsi",
+      "lat": 28.64,
+      "lon": 78.64,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kodād",
+      "lat": 16.9978,
+      "lon": 79.9653,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tādepalle",
+      "lat": 16.4803,
+      "lon": 80.6186,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Qal‘ah-ye Now",
+      "lat": 34.9867,
+      "lon": 63.1292,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Armūr",
+      "lat": 18.79,
+      "lon": 78.29,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kashmor",
+      "lat": 28.26,
+      "lon": 69.35,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Bankra",
+      "lat": 22.6086,
+      "lon": 88.2797,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nawalgarh",
+      "lat": 27.8458,
+      "lon": 75.268,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tohāna",
+      "lat": 29.7,
+      "lon": 75.9,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Inhambane",
+      "lat": -23.865,
+      "lon": 35.3833,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Khagaul",
+      "lat": 25.579,
+      "lon": 85.0456,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chakpi Karong",
+      "lat": 24.3167,
+      "lon": 93.9833,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ambarawa",
+      "lat": -7.2667,
+      "lon": 110.4,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sundapālaiyam",
+      "lat": 11.0014,
+      "lon": 76.8732,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jatani",
+      "lat": 20.17,
+      "lon": 85.7,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chokwé",
+      "lat": -24.5253,
+      "lon": 33.0086,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Chik Ballāpur",
+      "lat": 13.43,
+      "lon": 77.72,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Athni",
+      "lat": 16.73,
+      "lon": 75.07,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tanjung Selor",
+      "lat": 2.85,
+      "lon": 117.3833,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bhairāhawā",
+      "lat": 27.5,
+      "lon": 83.45,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Akurana",
+      "lat": 7.3667,
+      "lon": 80.6167,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Sumbawa Besar",
+      "lat": -8.5,
+      "lon": 117.4167,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dhuburi",
+      "lat": 26.02,
+      "lon": 90.0,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Galgamuwa",
+      "lat": 8.0,
+      "lon": 80.2831,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Anuradhapura",
+      "lat": 8.335,
+      "lon": 80.4108,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Gadwāl",
+      "lat": 16.23,
+      "lon": 77.8,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nankana Sahib",
+      "lat": 31.45,
+      "lon": 73.7067,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Pāmūru",
+      "lat": 15.097,
+      "lon": 79.409,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sheikhpura",
+      "lat": 25.1403,
+      "lon": 85.8508,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gampaha",
+      "lat": 7.0897,
+      "lon": 79.9925,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Nānpāra",
+      "lat": 27.87,
+      "lon": 81.5,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tân Phước Khánh",
+      "lat": 11.0,
+      "lon": 106.7167,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Bāri",
+      "lat": 26.63,
+      "lon": 77.62,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Koro",
+      "lat": 14.0639,
+      "lon": -3.0753,
+      "country": "Mali",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Phalia",
+      "lat": 32.4328,
+      "lon": 73.5778,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Rānipet",
+      "lat": 12.9247,
+      "lon": 79.3333,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kesamudram",
+      "lat": 17.6875,
+      "lon": 79.8944,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nagari",
+      "lat": 13.3214,
+      "lon": 79.5856,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sherkot",
+      "lat": 29.35,
+      "lon": 78.58,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mandi Dabwāli",
+      "lat": 29.9477,
+      "lon": 74.7322,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bannu",
+      "lat": 32.9864,
+      "lon": 70.6044,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Cyuve",
+      "lat": -1.4833,
+      "lon": 29.65,
+      "country": "Rwanda",
+      "cluster": "RW_Auto"
+    },
+    {
+      "nome": "Rāghogarh",
+      "lat": 24.4442,
+      "lon": 77.1986,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Narwāna",
+      "lat": 29.6167,
+      "lon": 76.1117,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Okha",
+      "lat": 22.4667,
+      "lon": 69.0667,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Korogwe",
+      "lat": -5.1558,
+      "lon": 38.4503,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Bhabhua",
+      "lat": 25.05,
+      "lon": 83.62,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Arua",
+      "lat": 3.0353,
+      "lon": 30.9108,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Nanjangūd",
+      "lat": 12.12,
+      "lon": 76.68,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Siddhapur",
+      "lat": 23.9167,
+      "lon": 72.3833,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Diphu",
+      "lat": 25.83,
+      "lon": 93.43,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jhārgrām",
+      "lat": 22.45,
+      "lon": 86.98,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rāmanāthapuram",
+      "lat": 9.3639,
+      "lon": 78.8395,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sawahlunto",
+      "lat": -0.6667,
+      "lon": 100.7833,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gia Nghĩa",
+      "lat": 11.9833,
+      "lon": 107.7,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Trikonavattam",
+      "lat": 8.9,
+      "lon": 76.65,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Halvad",
+      "lat": 23.02,
+      "lon": 71.18,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Udamalpet",
+      "lat": 10.5855,
+      "lon": 77.2513,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chāmrājnagar",
+      "lat": 11.926,
+      "lon": 76.9402,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Fort Portal",
+      "lat": 0.6544,
+      "lon": 30.2744,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Kukarmunda",
+      "lat": 21.5167,
+      "lon": 74.1333,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dumraon",
+      "lat": 25.5526,
+      "lon": 84.1515,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Panruti",
+      "lat": 11.77,
+      "lon": 79.55,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Velampālaiyam",
+      "lat": 11.1376,
+      "lon": 77.3106,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tirukkoyilūr",
+      "lat": 11.9675,
+      "lon": 79.2056,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rāzampeta",
+      "lat": 14.1954,
+      "lon": 79.159,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nedumangād",
+      "lat": 8.6033,
+      "lon": 77.0028,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nioro",
+      "lat": 15.1833,
+      "lon": -9.55,
+      "country": "Mali",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Manhiça",
+      "lat": -25.4,
+      "lon": 32.8,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Gunupur",
+      "lat": 19.08,
+      "lon": 83.82,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mehnājpur",
+      "lat": 25.6722,
+      "lon": 83.1181,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Faruka",
+      "lat": 31.8853,
+      "lon": 72.4153,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Thatri",
+      "lat": 33.1453,
+      "lon": 75.7911,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ponnūru",
+      "lat": 16.0667,
+      "lon": 80.5667,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kathua",
+      "lat": 32.3694,
+      "lon": 75.5254,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gohadi",
+      "lat": 26.4328,
+      "lon": 78.442,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Khagaria",
+      "lat": 25.5022,
+      "lon": 86.4671,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bougouni",
+      "lat": 11.4177,
+      "lon": -7.4832,
+      "country": "Mali",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Pāchora",
+      "lat": 20.67,
+      "lon": 75.35,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tiptūr",
+      "lat": 13.26,
+      "lon": 76.48,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gopichettipālaiyam",
+      "lat": 11.4549,
+      "lon": 77.4365,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Itānagar",
+      "lat": 27.1,
+      "lon": 93.62,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dhone",
+      "lat": 15.396,
+      "lon": 77.872,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rājgarh",
+      "lat": 28.64,
+      "lon": 75.38,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Panna",
+      "lat": 24.27,
+      "lon": 80.17,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Binnāguri",
+      "lat": 26.7641,
+      "lon": 89.0558,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Narasapur",
+      "lat": 16.4361,
+      "lon": 81.7016,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dosso",
+      "lat": 13.0505,
+      "lon": 3.2081,
+      "country": "Niger",
+      "cluster": "NI_Auto"
+    },
+    {
+      "nome": "Baguinéda",
+      "lat": 12.6129,
+      "lon": -7.7734,
+      "country": "Mali",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Sonabedha",
+      "lat": 18.73,
+      "lon": 82.83,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pasrur",
+      "lat": 32.2637,
+      "lon": 74.6628,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Mpondwe",
+      "lat": 0.04,
+      "lon": 29.725,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Pipariā",
+      "lat": 22.757,
+      "lon": 78.355,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sardhana",
+      "lat": 29.145,
+      "lon": 77.61,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Hastināpur",
+      "lat": 29.17,
+      "lon": 78.02,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sandīla",
+      "lat": 27.08,
+      "lon": 80.52,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pebane",
+      "lat": -17.2642,
+      "lon": 38.135,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Tiruvālūr",
+      "lat": 10.773,
+      "lon": 79.637,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sillod",
+      "lat": 20.3,
+      "lon": 75.65,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mulbāgal",
+      "lat": 13.1635,
+      "lon": 78.3935,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Beitbridge",
+      "lat": -22.2167,
+      "lon": 30.0,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Dapaong",
+      "lat": 10.8667,
+      "lon": 0.2,
+      "country": "Togo",
+      "cluster": "TO_Auto"
+    },
+    {
+      "nome": "Timargara",
+      "lat": 34.8278,
+      "lon": 71.8417,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Chibuto",
+      "lat": -24.6867,
+      "lon": 33.5306,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Hunsūr",
+      "lat": 12.3036,
+      "lon": 76.2927,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pānskura",
+      "lat": 22.417,
+      "lon": 87.7,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nanjakkād",
+      "lat": 9.2069,
+      "lon": 76.6319,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kolondiéba",
+      "lat": 11.0883,
+      "lon": -6.8925,
+      "country": "Mali",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Rāmpur Hat",
+      "lat": 24.17,
+      "lon": 87.78,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Khandāla",
+      "lat": 18.7481,
+      "lon": 73.4072,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Lonāvale",
+      "lat": 18.7481,
+      "lon": 73.4072,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dompu",
+      "lat": -8.5364,
+      "lon": 118.4633,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bilimora",
+      "lat": 20.75,
+      "lon": 72.95,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kothāpet",
+      "lat": 19.3333,
+      "lon": 79.4833,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Maduraivayal",
+      "lat": 13.0631,
+      "lon": 80.1719,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Taliwang",
+      "lat": -8.7336,
+      "lon": 116.8667,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Palāsa",
+      "lat": 18.7731,
+      "lon": 84.4078,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chintalapalli",
+      "lat": 18.331,
+      "lon": 79.674,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Lohārdagā",
+      "lat": 23.4331,
+      "lon": 84.6799,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mācherla",
+      "lat": 16.48,
+      "lon": 79.43,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kandukūr",
+      "lat": 15.2167,
+      "lon": 79.9042,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Keonjhargarh",
+      "lat": 21.63,
+      "lon": 85.58,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kollegāl",
+      "lat": 12.1539,
+      "lon": 77.101,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bail-Hongal",
+      "lat": 15.8137,
+      "lon": 74.8589,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nasīrabād",
+      "lat": 26.3,
+      "lon": 74.73,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gūdalur",
+      "lat": 11.5014,
+      "lon": 76.4916,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dina",
+      "lat": 33.0283,
+      "lon": 73.6011,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Sāmalkot",
+      "lat": 17.0531,
+      "lon": 82.1695,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Karīmganj",
+      "lat": 24.87,
+      "lon": 92.35,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bobbili",
+      "lat": 18.5667,
+      "lon": 83.3667,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bebandem",
+      "lat": -8.4046,
+      "lon": 115.5395,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kālna",
+      "lat": 23.22,
+      "lon": 88.37,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sattenapalle",
+      "lat": 16.3962,
+      "lon": 80.1497,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Diglipur",
+      "lat": 13.2667,
+      "lon": 93.0,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Naugaon Sādāt",
+      "lat": 28.9833,
+      "lon": 78.4167,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sendhwa",
+      "lat": 21.6847,
+      "lon": 75.0953,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Talegaon Dābhāde",
+      "lat": 18.72,
+      "lon": 73.68,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Narammala",
+      "lat": 7.4337,
+      "lon": 80.1971,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Pèlèngana",
+      "lat": 13.4275,
+      "lon": -6.2219,
+      "country": "Mali",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Poonamallee",
+      "lat": 13.0465,
+      "lon": 80.11,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gangārāmpur",
+      "lat": 25.4,
+      "lon": 88.52,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dongola",
+      "lat": 19.1769,
+      "lon": 30.4839,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Tilakpur",
+      "lat": 28.5278,
+      "lon": 81.1189,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Mandapeta",
+      "lat": 16.87,
+      "lon": 81.93,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tirur",
+      "lat": 10.9,
+      "lon": 75.92,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pithorāgarh",
+      "lat": 29.58,
+      "lon": 80.22,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kengri",
+      "lat": 12.9122,
+      "lon": 77.4827,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ropar",
+      "lat": 30.9664,
+      "lon": 76.5331,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ajodhya",
+      "lat": 26.7992,
+      "lon": 82.2044,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Belampalli",
+      "lat": 19.0756,
+      "lon": 79.4881,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kharar",
+      "lat": 30.74,
+      "lon": 76.65,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Biswān",
+      "lat": 27.4933,
+      "lon": 80.9964,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tsévié",
+      "lat": 6.4333,
+      "lon": 1.2167,
+      "country": "Togo",
+      "cluster": "TO_Auto"
+    },
+    {
+      "nome": "Gulariyā",
+      "lat": 28.2056,
+      "lon": 81.3472,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Umm Ruwaba",
+      "lat": 12.9058,
+      "lon": 31.2156,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Kannamangalam",
+      "lat": 10.05,
+      "lon": 77.05,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Atchampeta",
+      "lat": 15.5412,
+      "lon": 78.9503,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Barabai",
+      "lat": -2.5833,
+      "lon": 115.3833,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jambe",
+      "lat": -6.316,
+      "lon": 106.4853,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kāndi",
+      "lat": 23.95,
+      "lon": 88.03,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nyenga",
+      "lat": 0.38,
+      "lon": 33.15,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Kuala Kapuas",
+      "lat": -3.0013,
+      "lon": 114.3916,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Hà Giang",
+      "lat": 22.8333,
+      "lon": 104.9833,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Shendi",
+      "lat": 16.6805,
+      "lon": 33.42,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Barwāni",
+      "lat": 22.03,
+      "lon": 74.9,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Erumaippatti",
+      "lat": 11.58,
+      "lon": 77.85,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Harpanahalli",
+      "lat": 14.7877,
+      "lon": 75.9886,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Periya Semūr",
+      "lat": 11.37,
+      "lon": 77.6908,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Madhupur",
+      "lat": 24.26,
+      "lon": 86.65,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chālil",
+      "lat": 11.7519,
+      "lon": 75.5959,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Challakere",
+      "lat": 14.312,
+      "lon": 76.651,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Puthiyangādi",
+      "lat": 12.0189,
+      "lon": 75.2588,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Māngrol",
+      "lat": 21.12,
+      "lon": 70.12,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chonthrhu",
+      "lat": 32.4865,
+      "lon": 75.9941,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bhīmunipatnam",
+      "lat": 17.8846,
+      "lon": 83.4393,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rādhanpur",
+      "lat": 23.83,
+      "lon": 71.6,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rangewala",
+      "lat": 30.8222,
+      "lon": 74.2611,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Fālākāta",
+      "lat": 26.53,
+      "lon": 89.2,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Polūr",
+      "lat": 12.5119,
+      "lon": 79.1258,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nāndod",
+      "lat": 21.8706,
+      "lon": 73.5028,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pithāpuram",
+      "lat": 17.1167,
+      "lon": 82.2667,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Khurai",
+      "lat": 24.0437,
+      "lon": 78.3301,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Punganūru",
+      "lat": 13.3667,
+      "lon": 78.5833,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nargol",
+      "lat": 20.233,
+      "lon": 72.75,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ghātāl",
+      "lat": 22.67,
+      "lon": 87.72,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sāgar",
+      "lat": 14.1667,
+      "lon": 75.0333,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mūndka",
+      "lat": 28.6794,
+      "lon": 77.0284,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kouri",
+      "lat": 12.1833,
+      "lon": -4.8031,
+      "country": "Mali",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Tiruvallūr",
+      "lat": 13.1231,
+      "lon": 79.912,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bārāmati",
+      "lat": 18.15,
+      "lon": 74.58,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Karak",
+      "lat": -0.5298,
+      "lon": 101.5721,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dikwella South",
+      "lat": 5.9667,
+      "lon": 80.6833,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Islāmpur",
+      "lat": 26.27,
+      "lon": 88.2,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sidhi",
+      "lat": 24.42,
+      "lon": 81.88,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rāhuri",
+      "lat": 19.38,
+      "lon": 74.65,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kāsaragod",
+      "lat": 12.5,
+      "lon": 75.0,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jalor",
+      "lat": 25.35,
+      "lon": 72.62,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Samāna",
+      "lat": 30.15,
+      "lon": 76.19,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chèddra",
+      "lat": 13.4428,
+      "lon": 16.0508,
+      "country": "Chad",
+      "cluster": "CH_Auto"
+    },
+    {
+      "nome": "Kunnamkulam",
+      "lat": 10.65,
+      "lon": 76.08,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Palmaner",
+      "lat": 13.2,
+      "lon": 78.75,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Deolāli",
+      "lat": 19.951,
+      "lon": 73.834,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ghōriyān",
+      "lat": 34.34,
+      "lon": 61.47,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Chenab Nagar",
+      "lat": 31.7528,
+      "lon": 72.9222,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Sohna",
+      "lat": 28.25,
+      "lon": 77.07,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Iganga",
+      "lat": 0.615,
+      "lon": 33.485,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Pārvatipuram",
+      "lat": 18.78,
+      "lon": 83.425,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ullāl",
+      "lat": 12.8149,
+      "lon": 74.8429,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dholka",
+      "lat": 22.72,
+      "lon": 72.47,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ottappālam",
+      "lat": 10.77,
+      "lon": 76.38,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "A Yun Pa",
+      "lat": 13.3939,
+      "lon": 108.4408,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Hadali",
+      "lat": 32.2922,
+      "lon": 72.1922,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Manjeri",
+      "lat": 11.1202,
+      "lon": 76.12,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ashta",
+      "lat": 23.0175,
+      "lon": 76.7221,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gisenyi",
+      "lat": -1.7,
+      "lon": 29.25,
+      "country": "Rwanda",
+      "cluster": "RW_Auto"
+    },
+    {
+      "nome": "Ilindu Kothi",
+      "lat": 32.1461,
+      "lon": 76.2784,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kāliyāganj",
+      "lat": 25.63,
+      "lon": 88.32,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jaggayyapeta",
+      "lat": 16.892,
+      "lon": 80.0976,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Goālpāra",
+      "lat": 26.17,
+      "lon": 90.62,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Shāhpur",
+      "lat": 16.7,
+      "lon": 76.83,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bhongīr",
+      "lat": 17.51,
+      "lon": 78.89,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gorkhā",
+      "lat": 28.0,
+      "lon": 84.6333,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Amalāpuram",
+      "lat": 16.5787,
+      "lon": 82.0061,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kunnamangalam",
+      "lat": 11.3064,
+      "lon": 75.8789,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bakhtiyārpur",
+      "lat": 25.459,
+      "lon": 85.539,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kabale",
+      "lat": -1.25,
+      "lon": 29.99,
+      "country": "Uganda",
+      "cluster": "UG_Auto"
+    },
+    {
+      "nome": "Patancheruvu",
+      "lat": 17.5333,
+      "lon": 78.2645,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Lubuk Sikaping",
+      "lat": 0.15,
+      "lon": 100.1667,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bāruipur",
+      "lat": 22.3607,
+      "lon": 88.4323,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Puttūr",
+      "lat": 12.7648,
+      "lon": 75.1842,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Manglaur",
+      "lat": 29.8,
+      "lon": 77.87,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kadiolo",
+      "lat": 10.55,
+      "lon": -5.7667,
+      "country": "Mali",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Tilhar",
+      "lat": 27.9628,
+      "lon": 79.7383,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sultānganj",
+      "lat": 25.246,
+      "lon": 86.738,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tiruvalla",
+      "lat": 9.3856,
+      "lon": 76.5756,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pabbi",
+      "lat": 34.01,
+      "lon": 71.7975,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Sihor",
+      "lat": 21.7,
+      "lon": 71.97,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nerkunram",
+      "lat": 13.0619,
+      "lon": 80.2094,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Lalian",
+      "lat": 31.8253,
+      "lon": 72.8027,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Badūria",
+      "lat": 22.74,
+      "lon": 88.79,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sironj",
+      "lat": 24.1031,
+      "lon": 77.6905,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Padangpanjang",
+      "lat": -0.45,
+      "lon": 100.4167,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jangaon",
+      "lat": 17.7227,
+      "lon": 79.1518,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Daudnagar",
+      "lat": 25.03,
+      "lon": 84.4,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jiyyammavalasa",
+      "lat": 18.8186,
+      "lon": 83.5797,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mandamāri",
+      "lat": 18.9822,
+      "lon": 79.4811,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Lakhminia",
+      "lat": 25.4126,
+      "lon": 86.3253,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ellenabad",
+      "lat": 29.45,
+      "lon": 74.65,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Korāput",
+      "lat": 18.812,
+      "lon": 82.7105,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mudhol",
+      "lat": 16.35,
+      "lon": 75.2833,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bhajani",
+      "lat": 28.4924,
+      "lon": 80.9753,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Phaltan",
+      "lat": 17.98,
+      "lon": 74.43,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Diu",
+      "lat": 20.7158,
+      "lon": 70.9858,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ad Dabbah",
+      "lat": 18.05,
+      "lon": 30.95,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Khattan",
+      "lat": 33.3773,
+      "lon": 75.7254,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rāwatbhāta",
+      "lat": 24.93,
+      "lon": 75.58,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Vaisampākkal",
+      "lat": 9.4562,
+      "lon": 76.5241,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kumarankari",
+      "lat": 9.4596,
+      "lon": 76.4986,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Liaquatpur",
+      "lat": 28.9353,
+      "lon": 70.9508,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Arwal",
+      "lat": 25.2442,
+      "lon": 84.6631,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Choma",
+      "lat": -16.7711,
+      "lon": 26.9922,
+      "country": "Zambia",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Matta",
+      "lat": 35.0931,
+      "lon": 72.3097,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Burla",
+      "lat": 21.5098,
+      "lon": 83.8726,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gādarwāra",
+      "lat": 22.9235,
+      "lon": 78.7849,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pardigūda",
+      "lat": 17.3974,
+      "lon": 78.5783,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kālpi",
+      "lat": 26.12,
+      "lon": 79.73,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Irinjālakuda",
+      "lat": 10.3424,
+      "lon": 76.2112,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Menggala",
+      "lat": -4.475,
+      "lon": 105.2414,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tirupparangunram",
+      "lat": 9.8815,
+      "lon": 78.0731,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tulsīpur",
+      "lat": 28.1278,
+      "lon": 82.2956,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Zangāreddigūdem",
+      "lat": 17.1229,
+      "lon": 81.2953,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Abdul Hakim",
+      "lat": 30.55,
+      "lon": 72.1328,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Koumantou",
+      "lat": 11.4072,
+      "lon": -6.8467,
+      "country": "Mali",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Kalawana",
+      "lat": 6.5391,
+      "lon": 80.4039,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Peranāmpattu",
+      "lat": 12.9387,
+      "lon": 78.7028,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rongat",
+      "lat": 12.4667,
+      "lon": 92.9333,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dabhoi",
+      "lat": 22.1376,
+      "lon": 73.4162,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tirumangalam",
+      "lat": 9.8216,
+      "lon": 77.9891,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bhavāni",
+      "lat": 11.4455,
+      "lon": 77.6821,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Puthuppariyāram",
+      "lat": 10.8036,
+      "lon": 76.6221,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sidlaghatta",
+      "lat": 13.39,
+      "lon": 77.86,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Marpalli",
+      "lat": 17.5389,
+      "lon": 77.7708,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bowringpet",
+      "lat": 12.9912,
+      "lon": 78.178,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bestavārapeta",
+      "lat": 15.55,
+      "lon": 79.1167,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Hodal",
+      "lat": 27.894,
+      "lon": 77.369,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Fatwa",
+      "lat": 25.5096,
+      "lon": 85.305,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kot Mumin",
+      "lat": 32.1883,
+      "lon": 73.0286,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Pardwāl",
+      "lat": 32.3286,
+      "lon": 76.1153,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Repalle",
+      "lat": 16.0172,
+      "lon": 80.8294,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Banī Walīd",
+      "lat": 31.7619,
+      "lon": 14.0139,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Karamdiha",
+      "lat": 24.47,
+      "lon": 83.55,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mahmudābād",
+      "lat": 27.3,
+      "lon": 81.12,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bikramganj",
+      "lat": 25.2107,
+      "lon": 84.2551,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chinnamanūr",
+      "lat": 9.8422,
+      "lon": 77.3857,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Haskah Mēnah",
+      "lat": 34.1,
+      "lon": 70.4667,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Ānaiyūr",
+      "lat": 9.9615,
+      "lon": 78.1118,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kosamba",
+      "lat": 21.48,
+      "lon": 72.95,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jaspur",
+      "lat": 29.2833,
+      "lon": 78.8167,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Maḩmūd-e Rāqī",
+      "lat": 35.0206,
+      "lon": 69.3306,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Amahai",
+      "lat": -3.3439,
+      "lon": 128.9322,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Forbesganj",
+      "lat": 26.3,
+      "lon": 87.265,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Laksar",
+      "lat": 29.749,
+      "lon": 78.024,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bar Bigha",
+      "lat": 25.2186,
+      "lon": 85.7332,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tūndla",
+      "lat": 27.2146,
+      "lon": 78.2368,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bindura",
+      "lat": -17.3,
+      "lon": 31.3333,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Ma‘ān",
+      "lat": 30.1962,
+      "lon": 35.7341,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "Bāghpat",
+      "lat": 28.95,
+      "lon": 77.22,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bhawānīpur Rājdhām",
+      "lat": 25.6501,
+      "lon": 87.1396,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gombong",
+      "lat": -7.6,
+      "lon": 109.5167,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Déressia",
+      "lat": 9.7603,
+      "lon": 16.2697,
+      "country": "Chad",
+      "cluster": "CH_Auto"
+    },
+    {
+      "nome": "Metpalli",
+      "lat": 18.8492,
+      "lon": 78.6261,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bhadrāchalam",
+      "lat": 17.6669,
+      "lon": 80.8826,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Biaora",
+      "lat": 23.9163,
+      "lon": 76.9112,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Hassan Abdal",
+      "lat": 33.8195,
+      "lon": 72.689,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Chiplūn",
+      "lat": 17.53,
+      "lon": 73.52,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sāha",
+      "lat": 30.3,
+      "lon": 76.9667,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sujānpur",
+      "lat": 32.3127,
+      "lon": 75.6012,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Shiv",
+      "lat": 26.1831,
+      "lon": 71.25,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Wālidpur",
+      "lat": 26.0583,
+      "lon": 83.3778,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Aarsâl",
+      "lat": 34.1794,
+      "lon": 36.4208,
+      "country": "Lebanon",
+      "cluster": "LE_Auto"
+    },
+    {
+      "nome": "Chak Thirty-six North Branch",
+      "lat": 32.1261,
+      "lon": 72.7297,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Rukan",
+      "lat": 32.4236,
+      "lon": 73.2722,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Buni",
+      "lat": 36.2728,
+      "lon": 72.2597,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Chak Sixty-one Gugera Branch",
+      "lat": 31.5875,
+      "lon": 73.6897,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Abū Ḩamad",
+      "lat": 19.5375,
+      "lon": 33.3275,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Mao",
+      "lat": 14.1194,
+      "lon": 15.3133,
+      "country": "Chad",
+      "cluster": "CH_Auto"
+    },
+    {
+      "nome": "Sakubva",
+      "lat": -18.9833,
+      "lon": 32.65,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Sihorā",
+      "lat": 23.4871,
+      "lon": 80.104,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chatrā",
+      "lat": 24.2064,
+      "lon": 84.8708,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Parāsia",
+      "lat": 22.1913,
+      "lon": 78.759,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chake Chake",
+      "lat": -5.2395,
+      "lon": 39.77,
+      "country": "Tanzania",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Simraungaḍh",
+      "lat": 26.8893,
+      "lon": 85.1168,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Hilsa",
+      "lat": 25.32,
+      "lon": 85.28,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nohar",
+      "lat": 29.18,
+      "lon": 74.77,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chitral",
+      "lat": 35.8461,
+      "lon": 71.7858,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Bhainsa",
+      "lat": 19.1,
+      "lon": 77.9667,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Perintalmanna",
+      "lat": 10.9765,
+      "lon": 76.2269,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Padrauna",
+      "lat": 26.9,
+      "lon": 83.98,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Perambalūr",
+      "lat": 11.23,
+      "lon": 78.88,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kandangan",
+      "lat": -2.7833,
+      "lon": 115.2667,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Karunāgapalli",
+      "lat": 9.0544,
+      "lon": 76.5353,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kizhake Chālakudi",
+      "lat": 10.3,
+      "lon": 76.33,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sulleru",
+      "lat": 18.5333,
+      "lon": 83.2167,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Peddāpuram",
+      "lat": 17.08,
+      "lon": 82.13,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Payyoli",
+      "lat": 11.5333,
+      "lon": 75.6667,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mājalgaon",
+      "lat": 19.15,
+      "lon": 76.2333,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Haripur",
+      "lat": 33.9942,
+      "lon": 72.9333,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Kapadvanj",
+      "lat": 23.02,
+      "lon": 73.07,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tennala",
+      "lat": 11.0,
+      "lon": 75.9333,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Qalāt",
+      "lat": 32.1061,
+      "lon": 66.9069,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Notsé",
+      "lat": 6.9483,
+      "lon": 1.1681,
+      "country": "Togo",
+      "cluster": "TO_Auto"
+    },
+    {
+      "nome": "Naugachhia",
+      "lat": 25.4,
+      "lon": 87.1,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nizāmpur",
+      "lat": 21.1117,
+      "lon": 74.33,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sông Đốc",
+      "lat": 9.0333,
+      "lon": 104.8167,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Jaggisettigūdem",
+      "lat": 17.1167,
+      "lon": 81.3,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nāikankudi",
+      "lat": 9.843,
+      "lon": 77.1519,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Godda",
+      "lat": 24.827,
+      "lon": 87.2125,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tājūrā’",
+      "lat": 32.8818,
+      "lon": 13.3399,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Bādurpalle",
+      "lat": 17.5468,
+      "lon": 78.365,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nikaweratiya",
+      "lat": 7.7475,
+      "lon": 80.1156,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Tunglangan",
+      "lat": -8.4167,
+      "lon": 115.3,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Koduvalli",
+      "lat": 11.3594,
+      "lon": 75.9111,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Guntakal Junction",
+      "lat": 15.1711,
+      "lon": 77.3624,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gooty",
+      "lat": 15.121,
+      "lon": 77.634,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bantvāl",
+      "lat": 12.8905,
+      "lon": 75.0349,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nushki",
+      "lat": 29.5556,
+      "lon": 66.0217,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Kīlvishāram",
+      "lat": 12.9143,
+      "lon": 79.2854,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Khairābād",
+      "lat": 27.53,
+      "lon": 80.75,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jasdan",
+      "lat": 22.03,
+      "lon": 71.2,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Upperu",
+      "lat": 16.6427,
+      "lon": 77.4874,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mangalapādi",
+      "lat": 12.6431,
+      "lon": 74.9194,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Duyên Hải",
+      "lat": 9.6331,
+      "lon": 106.4975,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Homnābād",
+      "lat": 17.7707,
+      "lon": 77.1252,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Joshīmath",
+      "lat": 30.555,
+      "lon": 79.565,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gumia",
+      "lat": 23.8106,
+      "lon": 85.8232,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bokāro",
+      "lat": 23.7871,
+      "lon": 85.9564,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nāngal Township",
+      "lat": 31.385,
+      "lon": 76.375,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Soyāgaon",
+      "lat": 20.5514,
+      "lon": 74.5072,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sadāseopet",
+      "lat": 17.6203,
+      "lon": 77.9539,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Hoskote",
+      "lat": 13.0721,
+      "lon": 77.7892,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Birendranagar",
+      "lat": 28.6,
+      "lon": 81.6333,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Jalandhar Cantonment",
+      "lat": 31.286,
+      "lon": 75.615,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Luwuk",
+      "lat": -0.9396,
+      "lon": 122.79,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bhatkal",
+      "lat": 13.9853,
+      "lon": 74.5553,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dūngarpur",
+      "lat": 23.84,
+      "lon": 73.72,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chandrāwāda",
+      "lat": 21.6525,
+      "lon": 69.6746,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kefamenanu",
+      "lat": -9.4467,
+      "lon": 124.4781,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dumka",
+      "lat": 24.42,
+      "lon": 87.34,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Changanācheri",
+      "lat": 9.4667,
+      "lon": 76.55,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Poso",
+      "lat": -1.4,
+      "lon": 120.75,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Atarra",
+      "lat": 25.28,
+      "lon": 80.57,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Azhikkōd",
+      "lat": 11.9076,
+      "lon": 75.3446,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Azhikkal",
+      "lat": 11.9076,
+      "lon": 75.3446,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jiāganj",
+      "lat": 24.23,
+      "lon": 88.27,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Manappārai",
+      "lat": 10.6075,
+      "lon": 78.4253,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mattanūr",
+      "lat": 11.931,
+      "lon": 75.572,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Hagaribommanahalli",
+      "lat": 15.04,
+      "lon": 76.2,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pallipālaiyam",
+      "lat": 11.3679,
+      "lon": 77.7435,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nandikotkūr",
+      "lat": 15.8667,
+      "lon": 78.2667,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Selu",
+      "lat": 19.4551,
+      "lon": 76.4372,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mēla Gūdalūr",
+      "lat": 9.6806,
+      "lon": 77.2462,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Punalūr",
+      "lat": 9.017,
+      "lon": 76.926,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kampli",
+      "lat": 15.4063,
+      "lon": 76.6001,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nellikkuppam",
+      "lat": 11.7667,
+      "lon": 79.6833,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Padra",
+      "lat": 22.23,
+      "lon": 73.08,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Muara Teweh",
+      "lat": -0.9535,
+      "lon": 114.8981,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Obra",
+      "lat": 24.42,
+      "lon": 82.98,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Aland",
+      "lat": 17.5642,
+      "lon": 76.5685,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kadinamkulam",
+      "lat": 8.6,
+      "lon": 76.8167,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mānvi",
+      "lat": 15.9833,
+      "lon": 77.05,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nilambūr",
+      "lat": 11.2769,
+      "lon": 76.2258,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bhālki",
+      "lat": 18.0435,
+      "lon": 77.206,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Anandpur",
+      "lat": 21.2141,
+      "lon": 86.1249,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kouré",
+      "lat": 13.3106,
+      "lon": 2.576,
+      "country": "Niger",
+      "cluster": "NI_Auto"
+    },
+    {
+      "nome": "Jammalamadugu",
+      "lat": 14.85,
+      "lon": 78.38,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Garhwa",
+      "lat": 24.16,
+      "lon": 83.8075,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sikandra Rao",
+      "lat": 27.7,
+      "lon": 78.4,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nawāshahr",
+      "lat": 31.1167,
+      "lon": 76.1333,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rānāvāv",
+      "lat": 21.68,
+      "lon": 69.75,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bihāt",
+      "lat": 25.4253,
+      "lon": 86.0208,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gahini",
+      "lat": -1.8244,
+      "lon": 30.5175,
+      "country": "Rwanda",
+      "cluster": "RW_Auto"
+    },
+    {
+      "nome": "Coonoor",
+      "lat": 11.345,
+      "lon": 76.795,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Thoubāl",
+      "lat": 24.63,
+      "lon": 94.02,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dharmaragar",
+      "lat": 24.3785,
+      "lon": 92.1783,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pākaur",
+      "lat": 24.63,
+      "lon": 87.85,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Shertallai",
+      "lat": 9.6869,
+      "lon": 76.3361,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Phan Rí Cửa",
+      "lat": 11.1739,
+      "lon": 108.5661,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Nawai",
+      "lat": 26.3824,
+      "lon": 75.924,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Badrashni",
+      "lat": 33.9886,
+      "lon": 72.025,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Gollalagunta",
+      "lat": 17.1672,
+      "lon": 82.2847,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Farrukhnagar",
+      "lat": 17.0778,
+      "lon": 78.2011,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Puttalam",
+      "lat": 8.033,
+      "lon": 79.826,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Chattamangalam",
+      "lat": 11.296,
+      "lon": 75.915,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kumta",
+      "lat": 14.4264,
+      "lon": 74.4122,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pāndhurnā",
+      "lat": 21.6,
+      "lon": 78.52,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Birāk",
+      "lat": 27.5333,
+      "lon": 14.2834,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Ganapathivattam",
+      "lat": 11.67,
+      "lon": 76.28,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Gobārdānga",
+      "lat": 22.87,
+      "lon": 88.76,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jukal",
+      "lat": 18.3689,
+      "lon": 77.6169,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Seoni Mālwa",
+      "lat": 22.4508,
+      "lon": 77.4681,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chalungalpādam",
+      "lat": 9.549,
+      "lon": 76.3237,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Arantāngi",
+      "lat": 10.1686,
+      "lon": 78.992,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nāyudupet",
+      "lat": 13.9,
+      "lon": 79.9,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sundargarh",
+      "lat": 22.12,
+      "lon": 84.03,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bắc Kạn",
+      "lat": 22.1333,
+      "lon": 105.8333,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Mahālingpur",
+      "lat": 16.38,
+      "lon": 75.12,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bhāyala",
+      "lat": 22.8335,
+      "lon": 72.3643,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nalegaon",
+      "lat": 18.4167,
+      "lon": 76.8167,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Muddebihāl",
+      "lat": 16.33,
+      "lon": 76.13,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kedgaon",
+      "lat": 18.43,
+      "lon": 74.35,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sachīn",
+      "lat": 21.08,
+      "lon": 72.88,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ālamūru",
+      "lat": 16.7833,
+      "lon": 81.9,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Batroûn",
+      "lat": 34.25,
+      "lon": 35.65,
+      "country": "Lebanon",
+      "cluster": "LE_Auto"
+    },
+    {
+      "nome": "Shaḩḩāt",
+      "lat": 32.8167,
+      "lon": 21.85,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Kanganpur",
+      "lat": 30.9489,
+      "lon": 73.7433,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Kutum",
+      "lat": 14.2056,
+      "lon": 24.65,
+      "country": "Sudan",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Dīg",
+      "lat": 27.47,
+      "lon": 77.33,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Barnagar",
+      "lat": 23.0489,
+      "lon": 75.378,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Charkhi Dādri",
+      "lat": 28.59,
+      "lon": 76.27,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Guledagudda",
+      "lat": 16.0502,
+      "lon": 75.79,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Parigi",
+      "lat": -7.6914,
+      "lon": 108.5372,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rāmeswaram",
+      "lat": 9.288,
+      "lon": 79.313,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Barru",
+      "lat": -4.3587,
+      "lon": 119.6399,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pemangkat",
+      "lat": 1.1768,
+      "lon": 108.9624,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tiruttani",
+      "lat": 13.1746,
+      "lon": 79.6117,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Melūr",
+      "lat": 10.0313,
+      "lon": 78.3381,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dhupgāri",
+      "lat": 26.5889,
+      "lon": 89.0069,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dowlaiswaram",
+      "lat": 16.9556,
+      "lon": 81.7931,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sainthia",
+      "lat": 23.9451,
+      "lon": 87.6803,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jangamguda",
+      "lat": 17.6238,
+      "lon": 78.6251,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mach",
+      "lat": 29.8669,
+      "lon": 67.3264,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Cyanika I",
+      "lat": -1.3444,
+      "lon": 29.7422,
+      "country": "Rwanda",
+      "cluster": "RW_Auto"
+    },
+    {
+      "nome": "Shekhupur",
+      "lat": 28.35,
+      "lon": 79.02,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Karvārakundu",
+      "lat": 11.1167,
+      "lon": 76.3333,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rāpūr",
+      "lat": 14.2015,
+      "lon": 79.5351,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Siyāna",
+      "lat": 28.6269,
+      "lon": 78.0607,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Angul",
+      "lat": 20.8381,
+      "lon": 85.0956,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rājaldesar",
+      "lat": 28.03,
+      "lon": 74.47,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kandiaro",
+      "lat": 27.0581,
+      "lon": 68.2078,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Dalli Rājhara",
+      "lat": 20.58,
+      "lon": 81.08,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nandigāma",
+      "lat": 16.7833,
+      "lon": 80.3,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kaimana",
+      "lat": -3.6444,
+      "lon": 133.6953,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Barwāh",
+      "lat": 22.2539,
+      "lon": 76.0385,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Damān",
+      "lat": 20.42,
+      "lon": 72.85,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Medak",
+      "lat": 18.046,
+      "lon": 78.263,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Talipparamba",
+      "lat": 12.0368,
+      "lon": 75.3601,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jora",
+      "lat": 26.3421,
+      "lon": 77.8092,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ruyigi",
+      "lat": -3.4833,
+      "lon": 30.25,
+      "country": "Burundi",
+      "cluster": "BU_Auto"
+    },
+    {
+      "nome": "Ananipalle",
+      "lat": 13.4902,
+      "lon": 79.2895,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Majurwa",
+      "lat": 26.1036,
+      "lon": 86.9193,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Raisen",
+      "lat": 23.33,
+      "lon": 77.8,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jānakammapeta",
+      "lat": 15.0125,
+      "lon": 79.8439,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sihora",
+      "lat": 23.0,
+      "lon": 80.12,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Murshidābād",
+      "lat": 24.18,
+      "lon": 88.27,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ahmadpur",
+      "lat": 18.7,
+      "lon": 76.9333,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kāngayam",
+      "lat": 11.0054,
+      "lon": 77.562,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Seohāra",
+      "lat": 29.22,
+      "lon": 78.58,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bakamune",
+      "lat": 7.7833,
+      "lon": 80.8167,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Addanki",
+      "lat": 15.8167,
+      "lon": 79.9833,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nidadavole",
+      "lat": 16.92,
+      "lon": 81.67,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Anekal",
+      "lat": 12.7105,
+      "lon": 77.6967,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Shyorongi",
+      "lat": -1.8555,
+      "lon": 29.9702,
+      "country": "Rwanda",
+      "cluster": "RW_Auto"
+    },
+    {
+      "nome": "Kottangara",
+      "lat": 8.9167,
+      "lon": 76.6333,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Murzuq",
+      "lat": 25.9,
+      "lon": 13.9,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Porsa",
+      "lat": 26.67,
+      "lon": 78.37,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bodupāl",
+      "lat": 17.4139,
+      "lon": 78.5783,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rāmachandrapuram",
+      "lat": 16.85,
+      "lon": 82.02,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chembra",
+      "lat": 11.042,
+      "lon": 75.911,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Shōranūr",
+      "lat": 10.77,
+      "lon": 76.28,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Cimerak",
+      "lat": -7.7422,
+      "lon": 108.4244,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nilothi",
+      "lat": 28.8167,
+      "lon": 76.8667,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jambusar",
+      "lat": 22.05,
+      "lon": 72.8,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kōttōppādam",
+      "lat": 10.9979,
+      "lon": 76.3914,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ambāsamudram",
+      "lat": 8.7037,
+      "lon": 77.4527,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rantepao",
+      "lat": -2.969,
+      "lon": 119.9,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kāyalpattanam",
+      "lat": 8.5638,
+      "lon": 78.1246,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Rudauli",
+      "lat": 26.75,
+      "lon": 81.75,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dhāka",
+      "lat": 26.72,
+      "lon": 85.33,
+      "country": "India",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Betun",
+      "lat": -9.4953,
+      "lon": 124.9603,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Lai Châu",
+      "lat": 22.3992,
+      "lon": 103.4392,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Badulla",
+      "lat": 6.9847,
+      "lon": 81.0564,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Sevanagala",
+      "lat": 6.3635,
+      "lon": 80.9197,
+      "country": "Sri Lanka",
+      "cluster": "SR_Auto"
+    },
+    {
+      "nome": "Kalaiyā",
+      "lat": 27.0333,
+      "lon": 85.0,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Naranjo",
+      "lat": 10.1053,
+      "lon": -84.3885,
+      "country": "Costa Rica",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Kotabumi",
+      "lat": -4.8333,
+      "lon": 104.9,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Quesada",
+      "lat": 10.3441,
+      "lon": -84.4199,
+      "country": "Costa Rica",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Pā̃chkhāl",
+      "lat": 27.65,
+      "lon": 85.6167,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Tinpiple",
+      "lat": 27.6283,
+      "lon": 85.6136,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Hố Nai",
+      "lat": 10.9725,
+      "lon": 106.8789,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Palmares",
+      "lat": 10.0466,
+      "lon": -84.4373,
+      "country": "Costa Rica",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Larantuka",
+      "lat": -8.3133,
+      "lon": 123.0042,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Soe",
+      "lat": -9.8667,
+      "lon": 124.2833,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Amuntai",
+      "lat": -2.4177,
+      "lon": 115.2494,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Puntarenas",
+      "lat": 9.9667,
+      "lon": -84.8333,
+      "country": "Costa Rica",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Sansanné-Mango",
+      "lat": 10.3556,
+      "lon": 0.4756,
+      "country": "Togo",
+      "cluster": "TO_Auto"
+    },
+    {
+      "nome": "Alcalde Díaz",
+      "lat": 9.1227,
+      "lon": -79.5567,
+      "country": "Panama",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Guácimo",
+      "lat": 10.2025,
+      "lon": -83.6223,
+      "country": "Costa Rica",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Arraiján",
+      "lat": 8.9398,
+      "lon": -79.6404,
+      "country": "Panama",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Jalalpur Bhattian",
+      "lat": 32.0644,
+      "lon": 73.377,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Kualaserba",
+      "lat": 4.2333,
+      "lon": 97.8667,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ampana",
+      "lat": -0.8667,
+      "lon": 121.5833,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Leramatang",
+      "lat": -8.4,
+      "lon": 123.57,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chiredzi",
+      "lat": -21.0389,
+      "lon": 31.6778,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Jbaïl",
+      "lat": 34.1236,
+      "lon": 35.6519,
+      "country": "Lebanon",
+      "cluster": "LE_Auto"
+    },
+    {
+      "nome": "Barr Eliâs",
+      "lat": 33.775,
+      "lon": 35.9,
+      "country": "Lebanon",
+      "cluster": "LE_Auto"
+    },
+    {
+      "nome": "Safdarabad",
+      "lat": 31.7167,
+      "lon": 73.5667,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Jalalabad",
+      "lat": 35.88,
+      "lon": 74.493,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Choa Saidan Shah",
+      "lat": 32.7167,
+      "lon": 72.9833,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Ranipur",
+      "lat": 27.2889,
+      "lon": 68.5044,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Ngozi",
+      "lat": -2.9083,
+      "lon": 29.8269,
+      "country": "Burundi",
+      "cluster": "BU_Auto"
+    },
+    {
+      "nome": "Hangu",
+      "lat": 33.5333,
+      "lon": 71.0667,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Andkhōy",
+      "lat": 36.95,
+      "lon": 65.1167,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Charbagh",
+      "lat": 34.8333,
+      "lon": 72.4417,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Kalu Khan",
+      "lat": 34.2167,
+      "lon": 72.3,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Galkot",
+      "lat": 28.25,
+      "lon": 83.42,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Masamba",
+      "lat": -2.5531,
+      "lon": 120.3275,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Manggar",
+      "lat": -2.89,
+      "lon": 108.27,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Cakung",
+      "lat": -6.2138,
+      "lon": 106.9473,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Sujawal",
+      "lat": 24.6031,
+      "lon": 68.0792,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Coto Brus",
+      "lat": 8.889,
+      "lon": -82.9092,
+      "country": "Costa Rica",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Naushahro Firoz",
+      "lat": 26.85,
+      "lon": 68.1333,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Mantingan",
+      "lat": -7.3682,
+      "lon": 111.1644,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Shambhunāth",
+      "lat": 26.6316,
+      "lon": 86.6951,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Gūdārah",
+      "lat": 34.8169,
+      "lon": 69.0878,
+      "country": "Afghanistan",
+      "cluster": "AF_Auto"
+    },
+    {
+      "nome": "Namlea",
+      "lat": -3.25,
+      "lon": 127.0833,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bangkinang",
+      "lat": 0.35,
+      "lon": 101.0333,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Hanumānnagar",
+      "lat": 26.5394,
+      "lon": 86.7483,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Matina",
+      "lat": 10.0099,
+      "lon": -83.3096,
+      "country": "Costa Rica",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Allahabad",
+      "lat": 28.9333,
+      "lon": 70.9667,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Bayur",
+      "lat": -0.261,
+      "lon": 100.222,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pande",
+      "lat": -8.684,
+      "lon": 115.2264,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Risalpur Cantonment",
+      "lat": 34.0811,
+      "lon": 71.9725,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Bandhi",
+      "lat": 26.5833,
+      "lon": 68.3,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Songo",
+      "lat": -15.5958,
+      "lon": 32.7647,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Guápiles",
+      "lat": 10.207,
+      "lon": -83.8581,
+      "country": "Costa Rica",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Surab",
+      "lat": 28.4925,
+      "lon": 66.2597,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Rumonge",
+      "lat": -3.9736,
+      "lon": 29.4386,
+      "country": "Burundi",
+      "cluster": "BU_Auto"
+    },
+    {
+      "nome": "Tambolaka",
+      "lat": -9.4333,
+      "lon": 119.2333,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tam Hiệp",
+      "lat": 10.9497,
+      "lon": 106.8575,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Nawan Shahr",
+      "lat": 34.1642,
+      "lon": 73.2639,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Macomia",
+      "lat": -12.2467,
+      "lon": 40.1208,
+      "country": "Mozambique",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Sungaiselam",
+      "lat": -2.3839,
+      "lon": 105.98,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kundian",
+      "lat": 32.4522,
+      "lon": 71.4718,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Ratnapur",
+      "lat": 27.85,
+      "lon": 83.8667,
+      "country": "Nepal",
+      "cluster": "NE_Auto"
+    },
+    {
+      "nome": "Tahuna",
+      "lat": 3.6119,
+      "lon": 125.5008,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chandanais",
+      "lat": 22.2113,
+      "lon": 92.0111,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Praya",
+      "lat": -8.7223,
+      "lon": 116.2923,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Al Ḩişn",
+      "lat": 32.4583,
+      "lon": 35.8583,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "Aaley",
+      "lat": 33.8,
+      "lon": 35.6,
+      "country": "Lebanon",
+      "cluster": "LE_Auto"
+    },
+    {
+      "nome": "Awbārī",
+      "lat": 26.5833,
+      "lon": 12.7667,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Chakdarra",
+      "lat": 34.65,
+      "lon": 72.0333,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Chipinge",
+      "lat": -20.2,
+      "lon": 32.62,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Aţ Ţurrah",
+      "lat": 32.6368,
+      "lon": 35.99,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "Qaşr al Qarabūllī",
+      "lat": 32.75,
+      "lon": 13.7167,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Cativá",
+      "lat": 9.3624,
+      "lon": -79.8357,
+      "country": "Panama",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Pasni",
+      "lat": 25.2652,
+      "lon": 63.4698,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Sadda",
+      "lat": 33.7056,
+      "lon": 70.3292,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Saparua",
+      "lat": -3.5749,
+      "lon": 128.647,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Hatibanda",
+      "lat": 24.2155,
+      "lon": 90.16,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Merauke",
+      "lat": -8.4932,
+      "lon": 140.4018,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Pangururan",
+      "lat": 2.6075,
+      "lon": 98.6959,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Karoi",
+      "lat": -16.81,
+      "lon": 29.7,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Bintuni",
+      "lat": -2.1167,
+      "lon": 133.5333,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Cariari",
+      "lat": 10.4349,
+      "lon": -83.6851,
+      "country": "Costa Rica",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Desamparados",
+      "lat": 9.8967,
+      "lon": -84.0706,
+      "country": "Costa Rica",
+      "cluster": "CO_Auto"
+    },
+    {
+      "nome": "Waikabubak",
+      "lat": -9.6358,
+      "lon": 119.4131,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Landi Kotal",
+      "lat": 34.1053,
+      "lon": 71.1553,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Dāganbhuiya",
+      "lat": 22.9366,
+      "lon": 91.3036,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Bagh",
+      "lat": 33.9735,
+      "lon": 73.7918,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Ayorou",
+      "lat": 14.7318,
+      "lon": 0.9195,
+      "country": "Niger",
+      "cluster": "NI_Auto"
+    },
+    {
+      "nome": "Mỹ Hòa",
+      "lat": 10.3655,
+      "lon": 105.4011,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Barguna",
+      "lat": 22.1567,
+      "lon": 90.1176,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Kampong Speu",
+      "lat": 11.452,
+      "lon": 104.519,
+      "country": "Cambodia",
+      "cluster": "CA_Auto"
+    },
+    {
+      "nome": "Kusapín",
+      "lat": 9.18,
+      "lon": -81.89,
+      "country": "Panama",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Sanana",
+      "lat": -2.0545,
+      "lon": 125.9754,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kollo",
+      "lat": 13.0167,
+      "lon": 1.8833,
+      "country": "Niger",
+      "cluster": "NI_Auto"
+    },
+    {
+      "nome": "Sendawar",
+      "lat": 2.1833,
+      "lon": 98.3833,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ghuenke",
+      "lat": 32.4244,
+      "lon": 74.4603,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Kampong Thom",
+      "lat": 12.7,
+      "lon": 104.9,
+      "country": "Cambodia",
+      "cluster": "CA_Auto"
+    },
+    {
+      "nome": "Bửu Long",
+      "lat": 10.96,
+      "lon": 106.7967,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Airmadidi",
+      "lat": 1.4333,
+      "lon": 124.9833,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Nagdha Simla",
+      "lat": 24.6071,
+      "lon": 89.9151,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Changuinola",
+      "lat": 9.4333,
+      "lon": -82.5167,
+      "country": "Panama",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Diffa",
+      "lat": 13.3171,
+      "lon": 12.6089,
+      "country": "Niger",
+      "cluster": "NI_Auto"
+    },
+    {
+      "nome": "Lohāgāra",
+      "lat": 22.0112,
+      "lon": 92.1009,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Masho Khel",
+      "lat": 33.9103,
+      "lon": 71.5025,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Mukumbura",
+      "lat": -16.2,
+      "lon": 31.6833,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Banlung",
+      "lat": 13.7394,
+      "lon": 106.9873,
+      "country": "Cambodia",
+      "cluster": "CA_Auto"
+    },
+    {
+      "nome": "Bai Chay",
+      "lat": 20.9658,
+      "lon": 107.0347,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Majidpur",
+      "lat": 23.5797,
+      "lon": 90.7684,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Lewoleba",
+      "lat": -8.3833,
+      "lon": 123.4,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kulat",
+      "lat": -8.8243,
+      "lon": 115.0983,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chmistâr",
+      "lat": 33.9667,
+      "lon": 36.0167,
+      "country": "Lebanon",
+      "cluster": "LE_Auto"
+    },
+    {
+      "nome": "El Fanar",
+      "lat": 33.8667,
+      "lon": 35.5667,
+      "country": "Lebanon",
+      "cluster": "LE_Auto"
+    },
+    {
+      "nome": "Bent Jbaïl",
+      "lat": 33.1208,
+      "lon": 35.4336,
+      "country": "Lebanon",
+      "cluster": "LE_Auto"
+    },
+    {
+      "nome": "Zghartā",
+      "lat": 34.4,
+      "lon": 35.9,
+      "country": "Lebanon",
+      "cluster": "LE_Auto"
+    },
+    {
+      "nome": "Dulmial",
+      "lat": 32.7333,
+      "lon": 72.9167,
+      "country": "Pakistan",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Thuận Tiến",
+      "lat": 10.0894,
+      "lon": 105.8281,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Ancón",
+      "lat": 8.9627,
+      "lon": -79.5474,
+      "country": "Panama",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Phú Mỹ",
+      "lat": 10.5906,
+      "lon": 107.0481,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Parsuram",
+      "lat": 23.2114,
+      "lon": 91.4686,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Dayr Abū Sa‘īd",
+      "lat": 32.5025,
+      "lon": 35.6922,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "El Khiyam",
+      "lat": 33.3272,
+      "lon": 35.6111,
+      "country": "Lebanon",
+      "cluster": "LE_Auto"
+    },
+    {
+      "nome": "Mpika",
+      "lat": -11.83,
+      "lon": 31.46,
+      "country": "Zambia",
+      "cluster": "ZA_Auto"
+    },
+    {
+      "nome": "Mchinji",
+      "lat": -13.8167,
+      "lon": 32.9,
+      "country": "Malawi",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Ash Shajarah",
+      "lat": 32.6417,
+      "lon": 35.9417,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "Zanandore",
+      "lat": -3.25,
+      "lon": 30.1167,
+      "country": "Burundi",
+      "cluster": "BU_Auto"
+    },
+    {
+      "nome": "Di Linh",
+      "lat": 11.5778,
+      "lon": 108.0751,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Kariba",
+      "lat": -16.5167,
+      "lon": 28.8,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Waddān",
+      "lat": 29.1611,
+      "lon": 16.1436,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Daulatkhān",
+      "lat": 22.5998,
+      "lon": 90.7414,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Mu’tah",
+      "lat": 31.1,
+      "lon": 35.7,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "Rappang",
+      "lat": -3.8447,
+      "lon": 119.8205,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Long Thành",
+      "lat": 10.8667,
+      "lon": 106.9167,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Nsanje",
+      "lat": -16.9167,
+      "lon": 35.2667,
+      "country": "Malawi",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Gwanda",
+      "lat": -20.9389,
+      "lon": 29.0186,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Duptiair",
+      "lat": 23.9925,
+      "lon": 89.7973,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Nuevo Arraiján",
+      "lat": 8.92,
+      "lon": -79.72,
+      "country": "Panama",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Mzimba",
+      "lat": -11.9,
+      "lon": 33.6,
+      "country": "Malawi",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Lakshmīcharīpāra",
+      "lat": 22.7937,
+      "lon": 91.916,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Phulpur",
+      "lat": 24.9487,
+      "lon": 90.2495,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Bungku",
+      "lat": -2.5333,
+      "lon": 121.9667,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Chiromo",
+      "lat": -16.55,
+      "lon": 35.1332,
+      "country": "Malawi",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Tegalbuleud",
+      "lat": -7.3578,
+      "lon": 106.622,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ash Shūnah ash Shamālīyah",
+      "lat": 32.61,
+      "lon": 35.6081,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "Madaoua",
+      "lat": 14.0762,
+      "lon": 5.9586,
+      "country": "Niger",
+      "cluster": "NI_Auto"
+    },
+    {
+      "nome": "Mponela",
+      "lat": -13.531,
+      "lon": 33.7393,
+      "country": "Malawi",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Ấp Khánh Hòa",
+      "lat": 10.6333,
+      "lon": 105.2167,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Tbeng Meanchey",
+      "lat": 13.8167,
+      "lon": 104.9667,
+      "country": "Cambodia",
+      "cluster": "CA_Auto"
+    },
+    {
+      "nome": "Preah Vihear",
+      "lat": 13.8047,
+      "lon": 104.9783,
+      "country": "Cambodia",
+      "cluster": "CA_Auto"
+    },
+    {
+      "nome": "Kiên Lương",
+      "lat": 10.2856,
+      "lon": 104.6444,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Benua Baru",
+      "lat": 0.9878,
+      "lon": 117.98,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Dabaga",
+      "lat": 17.2682,
+      "lon": 8.1012,
+      "country": "Niger",
+      "cluster": "NI_Auto"
+    },
+    {
+      "nome": "Cibitoke",
+      "lat": -2.8886,
+      "lon": 29.12,
+      "country": "Burundi",
+      "cluster": "BU_Auto"
+    },
+    {
+      "nome": "Buôn Trấp",
+      "lat": 12.4833,
+      "lon": 108.0167,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Aţ Ţafīlah",
+      "lat": 30.8375,
+      "lon": 35.6044,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "Sakhipur",
+      "lat": 24.3199,
+      "lon": 90.1694,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Al ‘Azīzīyah",
+      "lat": 32.5308,
+      "lon": 13.0211,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Quảng Trị",
+      "lat": 16.7469,
+      "lon": 107.194,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Sai Mai",
+      "lat": 13.9207,
+      "lon": 100.6455,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Mizdah",
+      "lat": 31.445,
+      "lon": 12.9831,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Tūkrah",
+      "lat": 32.5322,
+      "lon": 20.5722,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Chanthaburi",
+      "lat": 12.6086,
+      "lon": 102.1039,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Tembagapura",
+      "lat": -4.1428,
+      "lon": 137.0906,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Wichian Buri",
+      "lat": 15.6578,
+      "lon": 101.106,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Blangmangat",
+      "lat": 5.1881,
+      "lon": 97.1403,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Tapaktuan",
+      "lat": 3.25,
+      "lon": 97.1667,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ban Pa Tueng",
+      "lat": 20.1339,
+      "lon": 99.8325,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ghāt",
+      "lat": 24.9644,
+      "lon": 10.1781,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Mundamāla",
+      "lat": 24.6081,
+      "lon": 88.4728,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Ấp Phú Mỹ",
+      "lat": 9.75,
+      "lon": 106.0,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Al Fuḩayş",
+      "lat": 32.0167,
+      "lon": 35.7667,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "Krathum Baen",
+      "lat": 13.6631,
+      "lon": 100.2572,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Amtali",
+      "lat": 22.1189,
+      "lon": 90.221,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Puruk Cahu",
+      "lat": -0.6384,
+      "lon": 114.5677,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kayanza",
+      "lat": -2.9167,
+      "lon": 29.6167,
+      "country": "Burundi",
+      "cluster": "BU_Auto"
+    },
+    {
+      "nome": "Al Karak",
+      "lat": 31.1833,
+      "lon": 35.7,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "Satun",
+      "lat": 6.6147,
+      "lon": 100.0681,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Shāhbāzpur",
+      "lat": 24.0517,
+      "lon": 91.1733,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Wang Nam Yen",
+      "lat": 13.5033,
+      "lon": 102.1812,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Hwange",
+      "lat": -18.3647,
+      "lon": 26.5,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Nang Rong",
+      "lat": 14.6283,
+      "lon": 102.7933,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ntcheu",
+      "lat": -14.8167,
+      "lon": 34.6333,
+      "country": "Malawi",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Yasothon",
+      "lat": 15.7972,
+      "lon": 104.1431,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Sadao",
+      "lat": 6.6388,
+      "lon": 100.4234,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Nong Bua Lamphu",
+      "lat": 17.2042,
+      "lon": 102.4444,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Loei",
+      "lat": 17.4853,
+      "lon": 101.7303,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Thuân An",
+      "lat": 16.5489,
+      "lon": 107.6436,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Chợ Phước Hải",
+      "lat": 10.4283,
+      "lon": 107.2953,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Mulanje",
+      "lat": -16.0333,
+      "lon": 35.5,
+      "country": "Malawi",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Sonāgāzi",
+      "lat": 22.8518,
+      "lon": 91.3916,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Na Klang",
+      "lat": 17.3072,
+      "lon": 102.1889,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Tân Phong",
+      "lat": 19.7322,
+      "lon": 105.7817,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Mường Lay",
+      "lat": 22.0678,
+      "lon": 103.1506,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Pak Phanang",
+      "lat": 8.3511,
+      "lon": 100.202,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Chepo",
+      "lat": 9.1678,
+      "lon": -79.0935,
+      "country": "Panama",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Kuala Pembuang",
+      "lat": -3.3871,
+      "lon": 112.5434,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Phichit",
+      "lat": 16.4431,
+      "lon": 100.3467,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ban Wiang Phan",
+      "lat": 20.4128,
+      "lon": 99.8853,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ban Tha Pha",
+      "lat": 13.8454,
+      "lon": 99.8652,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ban Klang",
+      "lat": 16.976,
+      "lon": 100.56,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Bueng Kan",
+      "lat": 18.3254,
+      "lon": 103.6704,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ban Wat Sala Daeng",
+      "lat": 13.8097,
+      "lon": 100.3589,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Nan",
+      "lat": 18.7833,
+      "lon": 100.7833,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Kampong Thum",
+      "lat": 12.712,
+      "lon": 104.889,
+      "country": "Cambodia",
+      "cluster": "CA_Auto"
+    },
+    {
+      "nome": "Ban Tha Ton",
+      "lat": 20.0608,
+      "lon": 99.3622,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Teminabuan",
+      "lat": -1.4333,
+      "lon": 132.0167,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Jagatpur",
+      "lat": 23.6075,
+      "lon": 90.766,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Ban Na San",
+      "lat": 8.8004,
+      "lon": 99.3637,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Puerto Armuelles",
+      "lat": 8.2833,
+      "lon": -82.8667,
+      "country": "Panama",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "El Coco",
+      "lat": 8.8701,
+      "lon": -79.8041,
+      "country": "Panama",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Ban Thap Kwang",
+      "lat": 14.6103,
+      "lon": 101.0753,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Kantharalak",
+      "lat": 14.6406,
+      "lon": 104.6499,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ban Bueng",
+      "lat": 13.3142,
+      "lon": 101.1114,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ban Patong",
+      "lat": 7.8931,
+      "lon": 98.2983,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ban Fang Tuen",
+      "lat": 19.5497,
+      "lon": 99.7566,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Tillabéri",
+      "lat": 14.212,
+      "lon": 1.4531,
+      "country": "Niger",
+      "cluster": "NI_Auto"
+    },
+    {
+      "nome": "Kalabahi",
+      "lat": -8.2167,
+      "lon": 124.5167,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Lumphat",
+      "lat": 13.507,
+      "lon": 106.981,
+      "country": "Cambodia",
+      "cluster": "CA_Auto"
+    },
+    {
+      "nome": "Ban Mon Pin",
+      "lat": 19.9168,
+      "lon": 99.1583,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ban Bueng Phra",
+      "lat": 16.746,
+      "lon": 100.275,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Svay Pak",
+      "lat": 11.646,
+      "lon": 104.8741,
+      "country": "Cambodia",
+      "cluster": "CA_Auto"
+    },
+    {
+      "nome": "Ban Na Yang",
+      "lat": 12.8849,
+      "lon": 99.9475,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Fakfak",
+      "lat": -2.9167,
+      "lon": 132.3,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Hūn",
+      "lat": 29.1268,
+      "lon": 15.9477,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Ấp Khánh Hưng",
+      "lat": 10.2,
+      "lon": 105.85,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Ban Bang Rin",
+      "lat": 9.9531,
+      "lon": 98.6342,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ban Bo Haeo",
+      "lat": 18.3048,
+      "lon": 99.4657,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Qaryat al Qī‘ān",
+      "lat": 32.0167,
+      "lon": 11.5,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Şammā",
+      "lat": 32.57,
+      "lon": 35.69,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "Al Jawf",
+      "lat": 24.2167,
+      "lon": 23.3,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Kasongan",
+      "lat": -1.8959,
+      "lon": 113.3878,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ban Mae Kha Tai",
+      "lat": 18.7352,
+      "lon": 98.9678,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ban Mae Hia Nai",
+      "lat": 18.7433,
+      "lon": 98.964,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Pathum Thani",
+      "lat": 14.05,
+      "lon": 100.4833,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Tha Bo",
+      "lat": 17.85,
+      "lon": 102.5814,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Ban Mai",
+      "lat": 14.9658,
+      "lon": 102.0205,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Sikhio",
+      "lat": 14.9,
+      "lon": 101.7167,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Bình Minh",
+      "lat": 10.0961,
+      "lon": 105.7894,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Kolonodale",
+      "lat": -1.9833,
+      "lon": 121.3333,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Kafr al Mā’",
+      "lat": 32.4839,
+      "lon": 35.6969,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "Ban Tha Kham",
+      "lat": 9.1059,
+      "lon": 99.2326,
+      "country": "Thailand",
+      "cluster": "TH_Auto"
+    },
+    {
+      "nome": "Zalţan",
+      "lat": 32.95,
+      "lon": 11.8658,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Harinākunda",
+      "lat": 23.65,
+      "lon": 89.0333,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Latifpur",
+      "lat": 24.1283,
+      "lon": 90.1398,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Buntok",
+      "lat": -1.719,
+      "lon": 114.8448,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Ocho Rios",
+      "lat": 18.4167,
+      "lon": -77.1167,
+      "country": "Jamaica",
+      "cluster": "JA_Auto"
+    },
+    {
+      "nome": "Murehwa",
+      "lat": -17.65,
+      "lon": 31.7833,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Thị Trấn Ngải Giao",
+      "lat": 10.6406,
+      "lon": 107.2478,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Piru",
+      "lat": -3.0811,
+      "lon": 128.1411,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Hương Canh",
+      "lat": 21.2833,
+      "lon": 105.65,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Ransiki",
+      "lat": -1.5,
+      "lon": 134.1667,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Az Zintān",
+      "lat": 31.9306,
+      "lon": 12.2483,
+      "country": "Libya",
+      "cluster": "LI_Auto"
+    },
+    {
+      "nome": "Al Mazār ash Shamālī",
+      "lat": 32.4725,
+      "lon": 35.7928,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "Mông Dương",
+      "lat": 21.0553,
+      "lon": 107.3431,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Melonguane",
+      "lat": 4.0045,
+      "lon": 126.6827,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Mvurwi",
+      "lat": -17.0167,
+      "lon": 30.85,
+      "country": "Zimbabwe",
+      "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Mỹ Lương",
+      "lat": 20.8667,
+      "lon": 105.6667,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Hiệp Hòa",
+      "lat": 10.9289,
+      "lon": 106.8378,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Cipanas",
+      "lat": -6.733,
+      "lon": 107.041,
+      "country": "Indonesia",
+      "cluster": "IN_Auto"
+    },
+    {
+      "nome": "Bāisāri",
+      "lat": 22.7959,
+      "lon": 90.1259,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Monkey Bay",
+      "lat": -14.0728,
+      "lon": 34.9201,
+      "country": "Malawi",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Port Antonio",
+      "lat": 18.1757,
+      "lon": -76.4503,
+      "country": "Jamaica",
+      "cluster": "JA_Auto"
+    },
+    {
+      "nome": "Muthallath al Azraq",
+      "lat": 31.8342,
+      "lon": 36.815,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "Bo",
+      "lat": 20.6736,
+      "lon": 105.5311,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Tân Vạn",
+      "lat": 10.9119,
+      "lon": 106.8261,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Khe Sanh",
+      "lat": 16.6193,
+      "lon": 106.7305,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Bog Walk",
+      "lat": 18.102,
+      "lon": -77.0054,
+      "country": "Jamaica",
+      "cluster": "JA_Auto"
+    },
+    {
+      "nome": "Hòa Thượng",
+      "lat": 21.6472,
+      "lon": 105.8278,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Ewarton",
+      "lat": 18.1833,
+      "lon": -77.0833,
+      "country": "Jamaica",
+      "cluster": "JA_Auto"
+    },
+    {
+      "nome": "Saint Ann’s Bay",
+      "lat": 18.436,
+      "lon": -77.202,
+      "country": "Jamaica",
+      "cluster": "JA_Auto"
+    },
+    {
+      "nome": "Ba Chúc",
+      "lat": 10.5,
+      "lon": 104.9,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Kafr ‘Awān",
+      "lat": 32.4167,
+      "lon": 35.6833,
+      "country": "Jordan",
+      "cluster": "JO_Auto"
+    },
+    {
+      "nome": "An Thành B",
+      "lat": 10.1958,
+      "lon": 106.3314,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Chợ Mới",
+      "lat": 10.55,
+      "lon": 105.4,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Dhubaria",
+      "lat": 24.0104,
+      "lon": 89.8404,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Ấp Bình Thành",
+      "lat": 10.1833,
+      "lon": 105.2,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Ấp Phú Hải",
+      "lat": 11.1667,
+      "lon": 108.5667,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Phước Long",
+      "lat": 9.4194,
+      "lon": 105.3842,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Cửa Lô",
+      "lat": 18.8167,
+      "lon": 105.7167,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Chợ Lách",
+      "lat": 10.2647,
+      "lon": 106.13,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Mương Theng",
+      "lat": 21.3869,
+      "lon": 103.0156,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Port Morant",
+      "lat": 17.9,
+      "lon": -76.3167,
+      "country": "Jamaica",
+      "cluster": "JA_Auto"
+    },
+    {
+      "nome": "Xuân Trùng",
+      "lat": 21.05,
+      "lon": 105.2833,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Hàng Trạm",
+      "lat": 20.3944,
+      "lon": 105.6222,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Morant Bay",
+      "lat": 17.8819,
+      "lon": -76.4074,
+      "country": "Jamaica",
+      "cluster": "JA_Auto"
+    },
+    {
+      "nome": "An Phú",
+      "lat": 10.85,
+      "lon": 105.0833,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Thanh Xuân",
+      "lat": 10.2308,
+      "lon": 106.3253,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Kiến Giang",
+      "lat": 17.225,
+      "lon": 106.7917,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Faradābād",
+      "lat": 23.7445,
+      "lon": 90.8772,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Thạnh Phú",
+      "lat": 9.9539,
+      "lon": 106.5069,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Fatikchari",
+      "lat": 22.6877,
+      "lon": 91.7812,
+      "country": "Bangladesh",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Tân Sơn",
+      "lat": 21.26,
+      "lon": 106.2681,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Thị Trấn Mậu A",
+      "lat": 21.8781,
+      "lon": 104.6956,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "An Châu",
+      "lat": 21.3333,
+      "lon": 106.85,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Ngọc Sơn",
+      "lat": 21.35,
+      "lon": 106.0,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Sa Pa",
+      "lat": 22.3356,
+      "lon": 103.8419,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Nhân Trạch",
+      "lat": 19.05,
+      "lon": 105.55,
+      "country": "Vietnam",
+      "cluster": "VI_Auto"
+    },
+    {
+      "nome": "Port Maria",
+      "lat": 18.3702,
+      "lon": -76.8903,
+      "country": "Jamaica",
+      "cluster": "JA_Auto"
+    },
+    {
+      "nome": "Sen Monorom",
+      "lat": 12.4558,
+      "lon": 107.1881,
+      "country": "Cambodia",
+      "cluster": "CA_Auto"
+    },
+    {
+      "nome": "Pailin",
+      "lat": 12.8489,
+      "lon": 102.6093,
+      "country": "Cambodia",
+      "cluster": "CA_Auto"
     }
   ]
 }
