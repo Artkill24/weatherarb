@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-07T19:29:16.915717+00:00",
-  "count": 50,
+  "last_updated": "2026-05-07T21:01:49.797534+00:00",
+  "count": 52,
   "reports": [
     {
       "slug": "2026-05-07-winnipeg-cold-snap",
@@ -46,6 +46,21 @@
       "cover_url": "https://images.unsplash.com/photo-1652033544086-b233d8588fcc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgxMjEwNTl8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-07-uppsala-cold-snap/",
       "excerpt": "A severe cold snap is affecting Uppsala with a Z-Score of -4.14. This event has reached a critical level with a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-07-umea-heavy-rain",
+      "title": "Umea Heavy Rain",
+      "lead": "Umea is experiencing a critical heavy rain event with a Z-Score of -3.03. The Score is 10.0/10, indicating a severe anomaly....",
+      "location": "Umeå",
+      "country_code": "se",
+      "vertical": "heavy-rain",
+      "z_score": -3.03,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-07",
+      "cover_url": "https://images.unsplash.com/photo-1631378726342-9097408d2b55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgxODc2ODd8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-07-umea-heavy-rain/",
+      "excerpt": "Umea is experiencing a critical heavy rain event with a Z-Score of -3.03. The Score is 10.0/10, indicating a severe anomaly."
     },
     {
       "slug": "2026-05-07-umea-cold-snap",
@@ -198,6 +213,21 @@
       "excerpt": "Phoenix is experiencing a severe heat wave with a Z-Score of +3.57. The city has reached a critical level with a score of 10.0/10."
     },
     {
+      "slug": "2026-05-07-oulu-cold-snap",
+      "title": "Oulu Cold Snap",
+      "lead": "A severe cold snap is affecting Oulu, with a Z-Score of -3.09. This event has reached a critical level with a score of 10.0/10....",
+      "location": "Oulu",
+      "country_code": "fi",
+      "vertical": "cold-snap",
+      "z_score": -3.09,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-07",
+      "cover_url": "https://images.unsplash.com/photo-1705667168964-0dbdea3f7cd4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgxODc2OTN8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-07-oulu-cold-snap/",
+      "excerpt": "A severe cold snap is affecting Oulu, with a Z-Score of -3.09. This event has reached a critical level with a score of 10.0/10."
+    },
+    {
       "slug": "2026-05-07-orlando-heat-wave",
       "title": "Orlando Heat Wave",
       "lead": "Orlando is experiencing a severe heat wave with a Z-Score of +3.14. The heat wave has reached a critical level with a score of 10.0/10....",
@@ -271,36 +301,6 @@
       "cover_url": "https://images.unsplash.com/photo-1624392445408-53ef496500cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgxNjIxNTh8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-07-miami-heat-wave/",
       "excerpt": "Miami is experiencing a critical heat wave with a Z-Score of +3.14. The city's temperature has reached extreme levels, scoring 10.0/10."
-    },
-    {
-      "slug": "2026-05-07-linkoping-cold-snap",
-      "title": "Linköping Cold Snap",
-      "lead": "A severe cold snap is hitting Linköping with a Z-Score of -3.69. This event has reached a critical level with a score of 10.0/10....",
-      "location": "Linköping",
-      "country_code": "se",
-      "vertical": "cold-snap",
-      "z_score": -3.69,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-07",
-      "cover_url": "https://images.unsplash.com/photo-1541430153849-b0263e560c83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgxMjEwNjl8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-07-linkoping-cold-snap/",
-      "excerpt": "A severe cold snap is hitting Linköping with a Z-Score of -3.69. This event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-07-leeds-cold-snap",
-      "title": "Leeds Cold Snap",
-      "lead": "A severe cold snap has hit Leeds with a Z-Score of -3.00. This critical event has a score of 10.0/10....",
-      "location": "Leeds",
-      "country_code": "gb",
-      "vertical": "cold-snap",
-      "z_score": -3.0,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-07",
-      "cover_url": "https://images.unsplash.com/photo-1561023844-82312b4eec99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgxMzU1NDF8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-07-leeds-cold-snap/",
-      "excerpt": "A severe cold snap has hit Leeds with a Z-Score of -3.00. This critical event has a score of 10.0/10."
     }
   ]
 }
