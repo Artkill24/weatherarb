@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-07T13:56:23.843133+00:00",
-  "count": 58,
+  "last_updated": "2026-05-07T17:44:38.647781+00:00",
+  "count": 63,
   "reports": [
     {
       "slug": "2026-05-07-winnipeg-cold-snap",
@@ -108,6 +108,21 @@
       "excerpt": "Torino sta sperimentando un anomalo evento di freddo. La temperatura e' scesa sotto la media stagionale."
     },
     {
+      "slug": "2026-05-07-tampa-heat-wave",
+      "title": "Tampa Heat Wave",
+      "lead": "Tampa is experiencing a severe heat wave with a Z-Score of +3.77. This event has reached a critical level with a score of 10.0/10....",
+      "location": "Tampa",
+      "country_code": "us",
+      "vertical": "heat-wave",
+      "z_score": 3.77,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-07",
+      "cover_url": "https://images.unsplash.com/photo-1591375873344-216a6a876f86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgxNzU4NjB8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-07-tampa-heat-wave/",
+      "excerpt": "Tampa is experiencing a severe heat wave with a Z-Score of +3.77. This event has reached a critical level with a score of 10.0/10."
+    },
+    {
       "slug": "2026-05-07-stockholm-cold-snap",
       "title": "Stockholm Cold Snap",
       "lead": "A severe cold snap is affecting Stockholm, with a Z-Score of -3.77. This event has a critical level with a score of 10.0/10....",
@@ -166,6 +181,21 @@
       "cover_url": "https://images.unsplash.com/photo-1729936372678-eab63b462d8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgxNDkyNzN8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-07-salzburg-cold-snap/",
       "excerpt": "Una ondata di freddo insolita colpisce Salzburg. Levento presenta un Z-Score di -1.50."
+    },
+    {
+      "slug": "2026-05-07-phoenix-heat-wave",
+      "title": "Phoenix Heat Wave",
+      "lead": "Phoenix is experiencing a severe heat wave with a Z-Score of +3.57. The city has reached a critical level with a score of 10.0/10....",
+      "location": "Phoenix",
+      "country_code": "us",
+      "vertical": "heat-wave",
+      "z_score": 3.57,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-07",
+      "cover_url": "https://images.unsplash.com/photo-1649261225523-805c90fb1114?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgxNzU4NzN8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-07-phoenix-heat-wave/",
+      "excerpt": "Phoenix is experiencing a severe heat wave with a Z-Score of +3.57. The city has reached a critical level with a score of 10.0/10."
     },
     {
       "slug": "2026-05-07-orlando-heat-wave",
@@ -271,36 +301,6 @@
       "cover_url": "https://images.unsplash.com/photo-1561023844-82312b4eec99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgxMzU1NDF8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-07-leeds-cold-snap/",
       "excerpt": "A severe cold snap has hit Leeds with a Z-Score of -3.00. This critical event has a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-07-jonkoping-cold-snap",
-      "title": "Jönköping Cold Snap",
-      "lead": "A severe cold snap is affecting Jönköping, with a Z-Score of -3.49. This event has a critical score of 10.0/10, indicating extreme conditions....",
-      "location": "Jönköping",
-      "country_code": "se",
-      "vertical": "cold-snap",
-      "z_score": -3.49,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-07",
-      "cover_url": "https://images.unsplash.com/photo-1635627408512-c0397095a4ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgxMjEwNzJ8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-07-jonkoping-cold-snap/",
-      "excerpt": "A severe cold snap is affecting Jönköping, with a Z-Score of -3.49. This event has a critical score of 10.0/10, indicating extreme conditions."
-    },
-    {
-      "slug": "2026-05-07-goteborg-cold-snap",
-      "title": "Göteborg Cold Snap",
-      "lead": "A severe cold snap is affecting Göteborg with a Z-Score of -3.71. This event has been classified as CRITICAL with a score of 10.0/10....",
-      "location": "Göteborg",
-      "country_code": "se",
-      "vertical": "cold-snap",
-      "z_score": -3.71,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-07",
-      "cover_url": "https://images.unsplash.com/photo-1618738359723-18dc37e6b125?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgxMjEwNTZ8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-07-goteborg-cold-snap/",
-      "excerpt": "A severe cold snap is affecting Göteborg with a Z-Score of -3.71. This event has been classified as CRITICAL with a score of 10.0/10."
     }
   ]
 }
