@@ -82968,6 +82968,2519 @@
       "lon": 102.6093,
       "country": "Cambodia",
       "cluster": "CA_Auto"
+    },
+    {
+      "nome": "Asmara",
+      "lat": 15.3358,
+      "lon": 38.9411,
+      "country": "Eritrea",
+      "cluster": "ER_Auto"
+    },
+    {
+      "nome": "Libreville",
+      "lat": 0.3901,
+      "lon": 9.4544,
+      "country": "Gabon",
+      "cluster": "GA_Auto"
+    },
+    {
+      "nome": "Manama",
+      "lat": 26.2233,
+      "lon": 50.5875,
+      "country": "Bahrain",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Chisinau",
+      "lat": 47.0228,
+      "lon": 28.8353,
+      "country": "Moldova",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Djibouti",
+      "lat": 11.5944,
+      "lon": 43.1481,
+      "country": "Djibouti",
+      "cluster": "DJ_Auto"
+    },
+    {
+      "nome": "Bissau",
+      "lat": 11.85,
+      "lon": -15.5667,
+      "country": "Guinea-Bissau",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Juba",
+      "lat": 4.83,
+      "lon": 31.58,
+      "country": "South Sudan",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Windhoek",
+      "lat": -22.57,
+      "lon": 17.0836,
+      "country": "Namibia",
+      "cluster": "NA_Auto"
+    },
+    {
+      "nome": "Nicosia",
+      "lat": 35.1725,
+      "lon": 33.365,
+      "country": "Cyprus",
+      "cluster": "CY_Auto"
+    },
+    {
+      "nome": "Port Moresby",
+      "lat": -9.4789,
+      "lon": 147.1494,
+      "country": "Papua New Guinea",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Paramaribo",
+      "lat": 5.8522,
+      "lon": -55.2039,
+      "country": "Suriname",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Gaborone",
+      "lat": -24.6569,
+      "lon": 25.9086,
+      "country": "Botswana",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Limassol",
+      "lat": 34.6747,
+      "lon": 33.0442,
+      "country": "Cyprus",
+      "cluster": "CY_Auto"
+    },
+    {
+      "nome": "Kŭlob",
+      "lat": 37.9092,
+      "lon": 69.7819,
+      "country": "Tajikistan",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Kajo Kaji",
+      "lat": 3.8863,
+      "lon": 31.667,
+      "country": "South Sudan",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Al Muḩarraq",
+      "lat": 26.25,
+      "lon": 50.6167,
+      "country": "Bahrain",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Magwe",
+      "lat": 4.1354,
+      "lon": 32.2869,
+      "country": "South Sudan",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Maridi",
+      "lat": 4.9151,
+      "lon": 29.4769,
+      "country": "South Sudan",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Malakal",
+      "lat": 9.5369,
+      "lon": 31.656,
+      "country": "South Sudan",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Keren",
+      "lat": 15.7778,
+      "lon": 38.4581,
+      "country": "Eritrea",
+      "cluster": "ER_Auto"
+    },
+    {
+      "nome": "Reykjavík",
+      "lat": 64.1458,
+      "lon": -21.9425,
+      "country": "Iceland",
+      "cluster": "IC_Auto"
+    },
+    {
+      "nome": "Port-Gentil",
+      "lat": -0.7167,
+      "lon": 8.7833,
+      "country": "Gabon",
+      "cluster": "GA_Auto"
+    },
+    {
+      "nome": "Tiraspol",
+      "lat": 46.85,
+      "lon": 29.6333,
+      "country": "Moldova",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Madīnat Ḩamad",
+      "lat": 26.1128,
+      "lon": 50.5139,
+      "country": "Bahrain",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Male",
+      "lat": 4.1753,
+      "lon": 73.5089,
+      "country": "Maldives",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Luxembourg",
+      "lat": 49.6117,
+      "lon": 6.1319,
+      "country": "Luxembourg",
+      "cluster": "LU_Auto"
+    },
+    {
+      "nome": "Rundu",
+      "lat": -17.9167,
+      "lon": 19.7667,
+      "country": "Namibia",
+      "cluster": "NA_Auto"
+    },
+    {
+      "nome": "Thimphu",
+      "lat": 27.4722,
+      "lon": 89.6361,
+      "country": "Bhutan",
+      "cluster": "BH_Auto"
+    },
+    {
+      "nome": "Franceville",
+      "lat": -1.6333,
+      "lon": 13.5833,
+      "country": "Gabon",
+      "cluster": "GA_Auto"
+    },
+    {
+      "nome": "Francistown",
+      "lat": -21.1736,
+      "lon": 27.5125,
+      "country": "Botswana",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Walvisbaai",
+      "lat": -22.9494,
+      "lon": 14.5069,
+      "country": "Namibia",
+      "cluster": "NA_Auto"
+    },
+    {
+      "nome": "Leer",
+      "lat": 8.3031,
+      "lon": 30.1406,
+      "country": "South Sudan",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Lae",
+      "lat": -6.7303,
+      "lon": 147.0008,
+      "country": "Papua New Guinea",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Chust",
+      "lat": 40.9978,
+      "lon": 71.2403,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Gwelej",
+      "lat": 14.75,
+      "lon": 36.7167,
+      "country": "Eritrea",
+      "cluster": "ER_Auto"
+    },
+    {
+      "nome": "Bălţi",
+      "lat": 47.7667,
+      "lon": 27.9167,
+      "country": "Moldova",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Quvasoy",
+      "lat": 40.3,
+      "lon": 71.9667,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Bekobod",
+      "lat": 40.2167,
+      "lon": 69.2167,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Larnaca",
+      "lat": 34.9167,
+      "lon": 33.6333,
+      "country": "Cyprus",
+      "cluster": "CY_Auto"
+    },
+    {
+      "nome": "Guliston",
+      "lat": 40.4833,
+      "lon": 68.7833,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Suva",
+      "lat": -18.1333,
+      "lon": 178.4333,
+      "country": "Fiji",
+      "cluster": "FI_Auto"
+    },
+    {
+      "nome": "Zarafshon Shahri",
+      "lat": 41.6081,
+      "lon": 64.2264,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Samā’il",
+      "lat": 23.2984,
+      "lon": 57.9531,
+      "country": "Oman",
+      "cluster": "OM_Auto"
+    },
+    {
+      "nome": "Taldyqorghan",
+      "lat": 45.0167,
+      "lon": 78.3667,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Owendo",
+      "lat": 0.2912,
+      "lon": 9.5047,
+      "country": "Gabon",
+      "cluster": "GA_Auto"
+    },
+    {
+      "nome": "Kuacjok",
+      "lat": 8.3028,
+      "lon": 27.98,
+      "country": "South Sudan",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Balqash",
+      "lat": 46.8481,
+      "lon": 74.995,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Bender",
+      "lat": 46.8333,
+      "lon": 29.4833,
+      "country": "Moldova",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Assab",
+      "lat": 13.0078,
+      "lon": 42.7411,
+      "country": "Eritrea",
+      "cluster": "ER_Auto"
+    },
+    {
+      "nome": "Shahrixon",
+      "lat": 40.7167,
+      "lon": 72.05,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Nadi",
+      "lat": -17.8,
+      "lon": 177.4167,
+      "country": "Fiji",
+      "cluster": "FI_Auto"
+    },
+    {
+      "nome": "Paphos",
+      "lat": 34.7667,
+      "lon": 32.4167,
+      "country": "Cyprus",
+      "cluster": "CY_Auto"
+    },
+    {
+      "nome": "Bayramaly",
+      "lat": 37.6167,
+      "lon": 62.15,
+      "country": "Turkmenistan",
+      "cluster": "TU_Auto"
+    },
+    {
+      "nome": "Al ‘Āmirāt",
+      "lat": 23.5224,
+      "lon": 58.4987,
+      "country": "Oman",
+      "cluster": "OM_Auto"
+    },
+    {
+      "nome": "Aqsū",
+      "lat": 52.0333,
+      "lon": 76.9167,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Renk",
+      "lat": 11.7431,
+      "lon": 32.8049,
+      "country": "South Sudan",
+      "cluster": "SO_Auto"
+    },
+    {
+      "nome": "Şəki",
+      "lat": 41.1919,
+      "lon": 47.1706,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Al Buraymī",
+      "lat": 24.2558,
+      "lon": 55.8025,
+      "country": "Oman",
+      "cluster": "OM_Auto"
+    },
+    {
+      "nome": "Molepolole",
+      "lat": -24.4066,
+      "lon": 25.4951,
+      "country": "Botswana",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Tejen",
+      "lat": 37.3833,
+      "lon": 60.5,
+      "country": "Turkmenistan",
+      "cluster": "TU_Auto"
+    },
+    {
+      "nome": "Tôlan̈aro",
+      "lat": -25.0325,
+      "lon": 46.9833,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Jidd Ḩafş",
+      "lat": 26.219,
+      "lon": 50.538,
+      "country": "Bahrain",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Madirovalo",
+      "lat": -16.4416,
+      "lon": 46.5456,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Popondetta",
+      "lat": -8.7656,
+      "lon": 148.2347,
+      "country": "Papua New Guinea",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Qurayyāt",
+      "lat": 23.2652,
+      "lon": 58.9034,
+      "country": "Oman",
+      "cluster": "OM_Auto"
+    },
+    {
+      "nome": "Ambilobe",
+      "lat": -13.1873,
+      "lon": 49.0524,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Kattagan",
+      "lat": 39.7167,
+      "lon": 64.55,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Analavory",
+      "lat": -18.9741,
+      "lon": 46.719,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Sätbayev",
+      "lat": 47.9,
+      "lon": 67.5333,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Yangiyŭl",
+      "lat": 41.1125,
+      "lon": 69.0467,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Norak",
+      "lat": 38.3833,
+      "lon": 69.3167,
+      "country": "Tajikistan",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Madīnat ‘Īsá",
+      "lat": 26.1736,
+      "lon": 50.5478,
+      "country": "Bahrain",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Oyem",
+      "lat": 1.6,
+      "lon": 11.5736,
+      "country": "Gabon",
+      "cluster": "GA_Auto"
+    },
+    {
+      "nome": "Ambanja",
+      "lat": -13.6786,
+      "lon": 48.4522,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Parkent",
+      "lat": 41.2944,
+      "lon": 69.6764,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Yevlax",
+      "lat": 40.6172,
+      "lon": 47.15,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Andoharanofotsy",
+      "lat": -18.9851,
+      "lon": 47.5364,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Qaskeleng",
+      "lat": 43.2,
+      "lon": 76.62,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Antsalova",
+      "lat": -18.6764,
+      "lon": 44.6227,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Ambahikily",
+      "lat": -21.605,
+      "lon": 43.6748,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Nausori",
+      "lat": -18.0244,
+      "lon": 178.5454,
+      "country": "Fiji",
+      "cluster": "FI_Auto"
+    },
+    {
+      "nome": "Mogoditshane",
+      "lat": -24.6333,
+      "lon": 25.8667,
+      "country": "Botswana",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Antsinanantsena",
+      "lat": -18.836,
+      "lon": 47.5564,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Moramanga",
+      "lat": -18.948,
+      "lon": 48.2297,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Maun",
+      "lat": -19.9833,
+      "lon": 23.4167,
+      "country": "Botswana",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Rîbniţa",
+      "lat": 47.7664,
+      "lon": 29.0006,
+      "country": "Moldova",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Binə",
+      "lat": 40.45,
+      "lon": 50.0833,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Mendi",
+      "lat": -6.1478,
+      "lon": 143.6572,
+      "country": "Papua New Guinea",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Beruniy",
+      "lat": 41.6833,
+      "lon": 60.75,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Antanifotsy",
+      "lat": -19.6641,
+      "lon": 47.3207,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Kapchagay",
+      "lat": 43.8833,
+      "lon": 77.0833,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Ankadinondry-Sakay",
+      "lat": -18.9667,
+      "lon": 46.45,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Louangphabang",
+      "lat": 19.89,
+      "lon": 102.1347,
+      "country": "Laos",
+      "cluster": "LA_Auto"
+    },
+    {
+      "nome": "Morondava",
+      "lat": -20.2833,
+      "lon": 44.2833,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Chortoq",
+      "lat": 41.0689,
+      "lon": 71.8153,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Lautoka",
+      "lat": -17.6242,
+      "lon": 177.4528,
+      "country": "Fiji",
+      "cluster": "FI_Auto"
+    },
+    {
+      "nome": "Ampanihy",
+      "lat": -24.6888,
+      "lon": 44.7483,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Ambohibary",
+      "lat": -19.6176,
+      "lon": 47.1398,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Ntoum",
+      "lat": 0.3905,
+      "lon": 9.761,
+      "country": "Gabon",
+      "cluster": "GA_Auto"
+    },
+    {
+      "nome": "M.Ə. Rəsulzadə",
+      "lat": 40.4344,
+      "lon": 49.8336,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Lənkəran",
+      "lat": 38.7536,
+      "lon": 48.8511,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Kosonsoy",
+      "lat": 41.25,
+      "lon": 71.55,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Tŭrtkŭl",
+      "lat": 41.55,
+      "lon": 61.0,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Tanjombato",
+      "lat": -18.9603,
+      "lon": 47.5332,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Ampitatafika",
+      "lat": -18.9388,
+      "lon": 47.4773,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Ghŭlakandoz",
+      "lat": 40.1617,
+      "lon": 69.4678,
+      "country": "Tajikistan",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Bandar Seri Begawan",
+      "lat": 4.8903,
+      "lon": 114.9422,
+      "country": "Brunei",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Ejeda",
+      "lat": -24.3415,
+      "lon": 44.5178,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Xankəndi",
+      "lat": 39.8153,
+      "lon": 46.7519,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Selibe Phikwe",
+      "lat": -21.9667,
+      "lon": 27.9167,
+      "country": "Botswana",
+      "cluster": "BO_Auto"
+    },
+    {
+      "nome": "Ridder",
+      "lat": 50.35,
+      "lon": 83.5167,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Zyryanovsk",
+      "lat": 49.7453,
+      "lon": 84.2548,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Zargar",
+      "lat": 37.8,
+      "lon": 68.65,
+      "country": "Tajikistan",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Levakant",
+      "lat": 37.8667,
+      "lon": 68.9167,
+      "country": "Tajikistan",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Al Madrah Samā’il",
+      "lat": 23.3103,
+      "lon": 57.9455,
+      "country": "Oman",
+      "cluster": "OM_Auto"
+    },
+    {
+      "nome": "Ambatondrazaka",
+      "lat": -17.8329,
+      "lon": 48.4167,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Talghar",
+      "lat": 43.3,
+      "lon": 77.2333,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Saranambana",
+      "lat": -17.273,
+      "lon": 49.1696,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Stepnogorsk",
+      "lat": 52.3497,
+      "lon": 71.89,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Faratsiho",
+      "lat": -19.4064,
+      "lon": 46.9519,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Quva",
+      "lat": 40.5247,
+      "lon": 72.07,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Farim",
+      "lat": 12.4833,
+      "lon": -15.2167,
+      "country": "Guinea-Bissau",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Uzynaghash",
+      "lat": 43.2297,
+      "lon": 76.31,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Amboasary",
+      "lat": -25.0364,
+      "lon": 46.3843,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Chimteppa",
+      "lat": 38.4667,
+      "lon": 68.7333,
+      "country": "Tajikistan",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Biləcəri",
+      "lat": 40.4444,
+      "lon": 49.8057,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Shchūchīnsk",
+      "lat": 52.9333,
+      "lon": 70.2,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Qarabulaq",
+      "lat": 42.5167,
+      "lon": 69.8,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Pakxan",
+      "lat": 18.3964,
+      "lon": 103.6558,
+      "country": "Laos",
+      "cluster": "LA_Auto"
+    },
+    {
+      "nome": "Tsiroanomandidy",
+      "lat": -18.7698,
+      "lon": 46.05,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Manakara",
+      "lat": -22.1455,
+      "lon": 48.008,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Yangiyer",
+      "lat": 40.2667,
+      "lon": 68.8167,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Roghun",
+      "lat": 38.6978,
+      "lon": 69.7522,
+      "country": "Tajikistan",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Talata-maty",
+      "lat": -18.8402,
+      "lon": 47.4635,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Xonobod",
+      "lat": 40.8,
+      "lon": 73.0,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Maştağa",
+      "lat": 40.5286,
+      "lon": 50.0103,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Gabú",
+      "lat": 12.2833,
+      "lon": -14.2167,
+      "country": "Guinea-Bissau",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "G’ijduvon Shahri",
+      "lat": 40.1,
+      "lon": 64.6667,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Shināş",
+      "lat": 24.7426,
+      "lon": 56.467,
+      "country": "Oman",
+      "cluster": "OM_Auto"
+    },
+    {
+      "nome": "Ağcabədi",
+      "lat": 40.0489,
+      "lon": 47.4502,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Quinhámel",
+      "lat": 11.8833,
+      "lon": -15.85,
+      "country": "Guinea-Bissau",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Zharkent",
+      "lat": 44.1667,
+      "lon": 80.0,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Maroantsetra",
+      "lat": -15.4333,
+      "lon": 49.7333,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Qapshaghay",
+      "lat": 43.8844,
+      "lon": 77.0687,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Morarano Chrome",
+      "lat": -17.7613,
+      "lon": 48.1655,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Fenoarivo Atsinanana",
+      "lat": -17.3819,
+      "lon": 49.409,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Ambohitrimanjaka",
+      "lat": -18.8589,
+      "lon": 47.4422,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Oqtosh Shahri",
+      "lat": 39.9269,
+      "lon": 65.9256,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Ayagöz",
+      "lat": 47.9667,
+      "lon": 80.4333,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Ambositra",
+      "lat": -20.5294,
+      "lon": 47.2425,
+      "country": "Madagascar",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Famagusta",
+      "lat": 35.125,
+      "lon": 33.9417,
+      "country": "Cyprus",
+      "cluster": "CY_Auto"
+    },
+    {
+      "nome": "Abadan",
+      "lat": 38.0517,
+      "lon": 58.21,
+      "country": "Turkmenistan",
+      "cluster": "TU_Auto"
+    },
+    {
+      "nome": "Arys",
+      "lat": 42.4333,
+      "lon": 68.8,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Şəmkir",
+      "lat": 40.8297,
+      "lon": 46.0189,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Beyneū",
+      "lat": 45.3247,
+      "lon": 55.1958,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Uchqŭrghon Shahri",
+      "lat": 41.1214,
+      "lon": 72.0936,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Xaçmaz",
+      "lat": 41.4681,
+      "lon": 48.8028,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Kópavogur",
+      "lat": 64.1108,
+      "lon": -21.9094,
+      "country": "Iceland",
+      "cluster": "IC_Auto"
+    },
+    {
+      "nome": "Massawa",
+      "lat": 15.6097,
+      "lon": 39.45,
+      "country": "Eritrea",
+      "cluster": "ER_Auto"
+    },
+    {
+      "nome": "Oshakati",
+      "lat": -17.7833,
+      "lon": 15.6995,
+      "country": "Namibia",
+      "cluster": "NA_Auto"
+    },
+    {
+      "nome": "Şamaxı",
+      "lat": 40.6339,
+      "lon": 48.6392,
+      "country": "Azerbaijan",
+      "cluster": "AZ_Auto"
+    },
+    {
+      "nome": "Isfisor",
+      "lat": 40.2433,
+      "lon": 69.7447,
+      "country": "Tajikistan",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Xonqa",
+      "lat": 41.4742,
+      "lon": 60.7822,
+      "country": "Uzbekistan",
+      "cluster": "UZ_Auto"
+    },
+    {
+      "nome": "Baikonur",
+      "lat": 45.6167,
+      "lon": 63.3167,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Qorday",
+      "lat": 43.0369,
+      "lon": 74.7114,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Saryaghash",
+      "lat": 41.4667,
+      "lon": 69.1667,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Belize City",
+      "lat": 17.4986,
+      "lon": -88.1886,
+      "country": "Belize",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Sarikishty",
+      "lat": 38.4667,
+      "lon": 68.7,
+      "country": "Tajikistan",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Navgilem",
+      "lat": 40.1333,
+      "lon": 70.65,
+      "country": "Tajikistan",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Qaratog",
+      "lat": 38.55,
+      "lon": 68.2833,
+      "country": "Tajikistan",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Ali Sabieh",
+      "lat": 11.15,
+      "lon": 42.7167,
+      "country": "Djibouti",
+      "cluster": "DJ_Auto"
+    },
+    {
+      "nome": "Shakhtīnsk",
+      "lat": 49.71,
+      "lon": 72.5872,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Yolöten",
+      "lat": 37.3,
+      "lon": 62.35,
+      "country": "Turkmenistan",
+      "cluster": "TU_Auto"
+    },
+    {
+      "nome": "Phônsavan",
+      "lat": 19.46,
+      "lon": 103.18,
+      "country": "Laos",
+      "cluster": "LA_Auto"
+    },
+    {
+      "nome": "Obburdon",
+      "lat": 40.4278,
+      "lon": 69.3047,
+      "country": "Tajikistan",
+      "cluster": "TA_Auto"
+    },
+    {
+      "nome": "Köneürgench",
+      "lat": 42.3333,
+      "lon": 59.15,
+      "country": "Turkmenistan",
+      "cluster": "TU_Auto"
+    },
+    {
+      "nome": "Esik",
+      "lat": 43.35,
+      "lon": 77.4667,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Esch-sur-Alzette",
+      "lat": 49.4969,
+      "lon": 5.9806,
+      "country": "Luxembourg",
+      "cluster": "LU_Auto"
+    },
+    {
+      "nome": "Zhetisay",
+      "lat": 40.7753,
+      "lon": 68.3272,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Arawa",
+      "lat": -6.228,
+      "lon": 155.566,
+      "country": "Papua New Guinea",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Bedēsa",
+      "lat": 6.883,
+      "lon": 37.9329,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Izkī",
+      "lat": 22.9339,
+      "lon": 57.775,
+      "country": "Oman",
+      "cluster": "OM_Auto"
+    },
+    {
+      "nome": "Dikhil",
+      "lat": 11.1167,
+      "lon": 42.3667,
+      "country": "Djibouti",
+      "cluster": "DJ_Auto"
+    },
+    {
+      "nome": "Shū",
+      "lat": 43.5983,
+      "lon": 73.7614,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Ibrā’",
+      "lat": 22.6906,
+      "lon": 58.5334,
+      "country": "Oman",
+      "cluster": "OM_Auto"
+    },
+    {
+      "nome": "Tsumeb",
+      "lat": -19.25,
+      "lon": 17.7,
+      "country": "Namibia",
+      "cluster": "NA_Auto"
+    },
+    {
+      "nome": "Zhitiqara",
+      "lat": 52.1908,
+      "lon": 61.2011,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Naryn",
+      "lat": 41.4333,
+      "lon": 76.0,
+      "country": "Kyrgyzstan",
+      "cluster": "KY_Auto"
+    },
+    {
+      "nome": "Swakopmund",
+      "lat": -22.6667,
+      "lon": 14.5333,
+      "country": "Namibia",
+      "cluster": "NA_Auto"
+    },
+    {
+      "nome": "Isfana",
+      "lat": 39.8389,
+      "lon": 69.5276,
+      "country": "Kyrgyzstan",
+      "cluster": "KY_Auto"
+    },
+    {
+      "nome": "Āzezo",
+      "lat": 12.5586,
+      "lon": 37.4308,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Butajīra",
+      "lat": 8.1208,
+      "lon": 38.3792,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Ālamat’ā",
+      "lat": 12.4167,
+      "lon": 39.55,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Kyrenia",
+      "lat": 35.3403,
+      "lon": 33.3192,
+      "country": "Cyprus",
+      "cluster": "CY_Auto"
+    },
+    {
+      "nome": "Gyzylgaya",
+      "lat": 40.6219,
+      "lon": 55.4656,
+      "country": "Turkmenistan",
+      "cluster": "TU_Auto"
+    },
+    {
+      "nome": "Aravan",
+      "lat": 40.5161,
+      "lon": 72.4996,
+      "country": "Kyrgyzstan",
+      "cluster": "KY_Auto"
+    },
+    {
+      "nome": "Aksay",
+      "lat": 51.1678,
+      "lon": 52.995,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Gostivar",
+      "lat": 41.8,
+      "lon": 20.9167,
+      "country": "North Macedonia",
+      "cluster": "NO_Auto"
+    },
+    {
+      "nome": "Sayram",
+      "lat": 42.3,
+      "lon": 69.7667,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Shiyeli",
+      "lat": 44.1789,
+      "lon": 66.7328,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Staryy Beyneu",
+      "lat": 45.1834,
+      "lon": 55.1,
+      "country": "Kazakhstan",
+      "cluster": "KA_Auto"
+    },
+    {
+      "nome": "Āreka",
+      "lat": 7.071,
+      "lon": 37.7076,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Gīmbī",
+      "lat": 9.1667,
+      "lon": 35.8333,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Chagne",
+      "lat": 10.95,
+      "lon": 36.5,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Ungheni",
+      "lat": 47.2167,
+      "lon": 27.8167,
+      "country": "Moldova",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Hafnarfjörður",
+      "lat": 64.02,
+      "lon": -21.97,
+      "country": "Iceland",
+      "cluster": "IC_Auto"
+    },
+    {
+      "nome": "Sokuluk",
+      "lat": 42.854,
+      "lon": 74.3026,
+      "country": "Kyrgyzstan",
+      "cluster": "KY_Auto"
+    },
+    {
+      "nome": "Suzak",
+      "lat": 40.8982,
+      "lon": 72.9048,
+      "country": "Kyrgyzstan",
+      "cluster": "KY_Auto"
+    },
+    {
+      "nome": "Ondangwa",
+      "lat": -17.9167,
+      "lon": 15.95,
+      "country": "Namibia",
+      "cluster": "NA_Auto"
+    },
+    {
+      "nome": "Jinka",
+      "lat": 5.7833,
+      "lon": 36.5667,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Degeh Bur",
+      "lat": 8.2167,
+      "lon": 43.5667,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Cahul",
+      "lat": 45.9075,
+      "lon": 28.1944,
+      "country": "Moldova",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Änew",
+      "lat": 37.8833,
+      "lon": 58.5333,
+      "country": "Turkmenistan",
+      "cluster": "TU_Auto"
+    },
+    {
+      "nome": "Mount Hagen",
+      "lat": -5.8667,
+      "lon": 144.2167,
+      "country": "Papua New Guinea",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Dembī Dolo",
+      "lat": 8.5353,
+      "lon": 34.8003,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Madang",
+      "lat": -5.2248,
+      "lon": 145.7853,
+      "country": "Papua New Guinea",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Cottica",
+      "lat": 3.8542,
+      "lon": -54.2281,
+      "country": "Suriname",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Asipovichy",
+      "lat": 53.2933,
+      "lon": 28.4756,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Horki",
+      "lat": 54.2667,
+      "lon": 30.9833,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Rehoboth",
+      "lat": -23.3167,
+      "lon": 17.0833,
+      "country": "Namibia",
+      "cluster": "NA_Auto"
+    },
+    {
+      "nome": "Metu",
+      "lat": 8.3,
+      "lon": 35.5833,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Linden",
+      "lat": 6.0,
+      "lon": -58.3,
+      "country": "Guyana",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Dubăsari",
+      "lat": 47.2667,
+      "lon": 29.1667,
+      "country": "Moldova",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Mendefera",
+      "lat": 14.8833,
+      "lon": 38.8167,
+      "country": "Eritrea",
+      "cluster": "ER_Auto"
+    },
+    {
+      "nome": "Byaroza",
+      "lat": 52.55,
+      "lon": 24.9667,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Kočani",
+      "lat": 41.9167,
+      "lon": 22.4125,
+      "country": "North Macedonia",
+      "cluster": "NO_Auto"
+    },
+    {
+      "nome": "Shakīso",
+      "lat": 5.75,
+      "lon": 38.9167,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Hazar",
+      "lat": 39.445,
+      "lon": 53.115,
+      "country": "Turkmenistan",
+      "cluster": "TU_Auto"
+    },
+    {
+      "nome": "Hāra Gebeya",
+      "lat": 11.8333,
+      "lon": 39.7333,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Nakhal",
+      "lat": 23.3985,
+      "lon": 57.8218,
+      "country": "Oman",
+      "cluster": "OM_Auto"
+    },
+    {
+      "nome": "Labasa",
+      "lat": -16.4333,
+      "lon": 179.3667,
+      "country": "Fiji",
+      "cluster": "FI_Auto"
+    },
+    {
+      "nome": "Navahrudak",
+      "lat": 53.5833,
+      "lon": 25.8167,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Batken",
+      "lat": 40.0625,
+      "lon": 70.8194,
+      "country": "Kyrgyzstan",
+      "cluster": "KY_Auto"
+    },
+    {
+      "nome": "Koewarasan",
+      "lat": 5.7697,
+      "lon": -55.2922,
+      "country": "Suriname",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Phuntsholing",
+      "lat": 26.85,
+      "lon": 89.3833,
+      "country": "Bhutan",
+      "cluster": "BH_Auto"
+    },
+    {
+      "nome": "Fichē",
+      "lat": 9.8,
+      "lon": 38.7333,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "K’olīto",
+      "lat": 7.3122,
+      "lon": 38.0892,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Kimbe",
+      "lat": -5.55,
+      "lon": 150.143,
+      "country": "Papua New Guinea",
+      "cluster": "PA_Auto"
+    },
+    {
+      "nome": "Vilyeyka",
+      "lat": 54.4972,
+      "lon": 26.9111,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Dolo Odo",
+      "lat": 4.1667,
+      "lon": 42.0667,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Iradan",
+      "lat": 40.2667,
+      "lon": 72.1,
+      "country": "Kyrgyzstan",
+      "cluster": "KY_Auto"
+    },
+    {
+      "nome": "Mota",
+      "lat": 11.0833,
+      "lon": 37.8667,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Finote Selam",
+      "lat": 10.7,
+      "lon": 37.2667,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Genet",
+      "lat": 9.05,
+      "lon": 38.5,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Āgaro",
+      "lat": 7.8558,
+      "lon": 36.5858,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Burē",
+      "lat": 10.7,
+      "lon": 37.0667,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Moyalē",
+      "lat": 3.527,
+      "lon": 39.056,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Vangviang",
+      "lat": 18.9267,
+      "lon": 102.4494,
+      "country": "Laos",
+      "cluster": "LA_Auto"
+    },
+    {
+      "nome": "Kobo",
+      "lat": 12.15,
+      "lon": 39.6333,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Ādīs Zemen",
+      "lat": 12.1167,
+      "lon": 37.7833,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Dangila",
+      "lat": 11.2667,
+      "lon": 36.8333,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Dodola",
+      "lat": 6.9833,
+      "lon": 39.1833,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Baharly",
+      "lat": 38.4303,
+      "lon": 57.4369,
+      "country": "Turkmenistan",
+      "cluster": "TU_Auto"
+    },
+    {
+      "nome": "Mórfou",
+      "lat": 35.1981,
+      "lon": 32.9939,
+      "country": "Cyprus",
+      "cluster": "CY_Auto"
+    },
+    {
+      "nome": "Luninyets",
+      "lat": 52.25,
+      "lon": 26.8,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Muang Sing",
+      "lat": 21.2,
+      "lon": 101.15,
+      "country": "Laos",
+      "cluster": "LA_Auto"
+    },
+    {
+      "nome": "Ḑank",
+      "lat": 23.5505,
+      "lon": 56.2573,
+      "country": "Oman",
+      "cluster": "OM_Auto"
+    },
+    {
+      "nome": "Gazojak",
+      "lat": 41.1833,
+      "lon": 61.4,
+      "country": "Turkmenistan",
+      "cluster": "TU_Auto"
+    },
+    {
+      "nome": "Maychew",
+      "lat": 12.7833,
+      "lon": 39.5333,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Keflavík",
+      "lat": 64.0167,
+      "lon": -22.5667,
+      "country": "Iceland",
+      "cluster": "IC_Auto"
+    },
+    {
+      "nome": "Krychaw",
+      "lat": 53.7194,
+      "lon": 31.7139,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Kant",
+      "lat": 42.8833,
+      "lon": 74.85,
+      "country": "Kyrgyzstan",
+      "cluster": "KY_Auto"
+    },
+    {
+      "nome": "Sevan",
+      "lat": 40.555,
+      "lon": 44.9536,
+      "country": "Armenia",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Asaita",
+      "lat": 11.5667,
+      "lon": 41.4333,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Horad Smalyavichy",
+      "lat": 54.1,
+      "lon": 28.0667,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Ivatsevichy",
+      "lat": 52.7167,
+      "lon": 25.3333,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Káto Polemídia",
+      "lat": 34.6931,
+      "lon": 32.9992,
+      "country": "Cyprus",
+      "cluster": "CY_Auto"
+    },
+    {
+      "nome": "Sek’ot’a",
+      "lat": 12.6253,
+      "lon": 39.035,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Soroca",
+      "lat": 48.1667,
+      "lon": 28.3,
+      "country": "Moldova",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Dudelange",
+      "lat": 49.4833,
+      "lon": 6.0833,
+      "country": "Luxembourg",
+      "cluster": "LU_Auto"
+    },
+    {
+      "nome": "Himora",
+      "lat": 14.2861,
+      "lon": 36.6097,
+      "country": "Ethiopia",
+      "cluster": "ET_Auto"
+    },
+    {
+      "nome": "Novopokrovka",
+      "lat": 42.8686,
+      "lon": 74.7368,
+      "country": "Kyrgyzstan",
+      "cluster": "KY_Auto"
+    },
+    {
+      "nome": "Ashtarak",
+      "lat": 40.2975,
+      "lon": 44.3617,
+      "country": "Armenia",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Masis",
+      "lat": 40.0633,
+      "lon": 44.4408,
+      "country": "Armenia",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Belovodskoe",
+      "lat": 42.8333,
+      "lon": 74.1167,
+      "country": "Kyrgyzstan",
+      "cluster": "KY_Auto"
+    },
+    {
+      "nome": "Obock",
+      "lat": 11.9667,
+      "lon": 43.2833,
+      "country": "Djibouti",
+      "cluster": "DJ_Auto"
+    },
+    {
+      "nome": "Seria",
+      "lat": 4.6141,
+      "lon": 114.3302,
+      "country": "Brunei",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Orhei",
+      "lat": 47.3831,
+      "lon": 28.8231,
+      "country": "Moldova",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Gavarr",
+      "lat": 40.3667,
+      "lon": 45.1333,
+      "country": "Armenia",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Lami",
+      "lat": -18.1167,
+      "lon": 178.4167,
+      "country": "Fiji",
+      "cluster": "FI_Auto"
+    },
+    {
+      "nome": "Kavajë",
+      "lat": 41.1842,
+      "lon": 19.5619,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Mar’’ina Horka",
+      "lat": 53.5072,
+      "lon": 28.1522,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Sitrah",
+      "lat": 26.12,
+      "lon": 50.65,
+      "country": "Bahrain",
+      "cluster": "BA_Auto"
+    },
+    {
+      "nome": "Ulcinj",
+      "lat": 41.92,
+      "lon": 19.2,
+      "country": "Montenegro",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Akureyri",
+      "lat": 65.6833,
+      "lon": -18.1,
+      "country": "Iceland",
+      "cluster": "IC_Auto"
+    },
+    {
+      "nome": "Artik",
+      "lat": 40.6167,
+      "lon": 43.95,
+      "country": "Armenia",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Dračevo",
+      "lat": 41.9335,
+      "lon": 21.5247,
+      "country": "North Macedonia",
+      "cluster": "NO_Auto"
+    },
+    {
+      "nome": "Ijevan",
+      "lat": 40.8756,
+      "lon": 45.1492,
+      "country": "Armenia",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Attapu",
+      "lat": 14.8,
+      "lon": 106.8333,
+      "country": "Laos",
+      "cluster": "LA_Auto"
+    },
+    {
+      "nome": "Garðabær",
+      "lat": 64.0902,
+      "lon": -21.9264,
+      "country": "Iceland",
+      "cluster": "IC_Auto"
+    },
+    {
+      "nome": "Lelydorp",
+      "lat": 5.6967,
+      "lon": -55.2167,
+      "country": "Suriname",
+      "cluster": "SU_Auto"
+    },
+    {
+      "nome": "Fushë-Krujë",
+      "lat": 41.4833,
+      "lon": 19.7167,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Fanipal’",
+      "lat": 53.75,
+      "lon": 27.3333,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Dobrush",
+      "lat": 52.4167,
+      "lon": 31.3167,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Hlybokaye",
+      "lat": 55.1333,
+      "lon": 27.6833,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Ban Houayxay",
+      "lat": 20.2631,
+      "lon": 100.4336,
+      "country": "Laos",
+      "cluster": "LA_Auto"
+    },
+    {
+      "nome": "Budva",
+      "lat": 42.2881,
+      "lon": 18.8425,
+      "country": "Montenegro",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "New Amsterdam",
+      "lat": 6.25,
+      "lon": -57.5167,
+      "country": "Guyana",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Lyepyel",
+      "lat": 54.875,
+      "lon": 28.6944,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Laç",
+      "lat": 41.6353,
+      "lon": 19.7131,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Ashmyany",
+      "lat": 54.425,
+      "lon": 25.9375,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Dilijan",
+      "lat": 40.7408,
+      "lon": 44.8631,
+      "country": "Armenia",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Bykhaw",
+      "lat": 53.5167,
+      "lon": 30.25,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Ivanava",
+      "lat": 52.1333,
+      "lon": 25.55,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Nyasvizh",
+      "lat": 53.2167,
+      "lon": 26.6667,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Sukth",
+      "lat": 41.3833,
+      "lon": 19.5333,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Zhytkavichy",
+      "lat": 52.2333,
+      "lon": 27.8667,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Bar",
+      "lat": 42.1,
+      "lon": 19.1,
+      "country": "Montenegro",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Buçimas",
+      "lat": 40.8914,
+      "lon": 20.6814,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Lahoysk",
+      "lat": 54.2,
+      "lon": 27.85,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Lezhë",
+      "lat": 41.7819,
+      "lon": 19.6444,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Differdange",
+      "lat": 49.5222,
+      "lon": 5.8917,
+      "country": "Luxembourg",
+      "cluster": "LU_Auto"
+    },
+    {
+      "nome": "Astravyets",
+      "lat": 54.6136,
+      "lon": 25.9553,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Phôngsali",
+      "lat": 21.6833,
+      "lon": 102.1,
+      "country": "Laos",
+      "cluster": "LA_Auto"
+    },
+    {
+      "nome": "Klimavichy",
+      "lat": 53.6167,
+      "lon": 31.95,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Spitak",
+      "lat": 40.8372,
+      "lon": 44.2675,
+      "country": "Armenia",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Sisian",
+      "lat": 39.5208,
+      "lon": 46.0322,
+      "country": "Armenia",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Kastsyukovichy",
+      "lat": 53.3333,
+      "lon": 32.05,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Shklow",
+      "lat": 54.2236,
+      "lon": 30.2864,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Drahichyn",
+      "lat": 52.1833,
+      "lon": 25.15,
+      "country": "Belarus",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Debar",
+      "lat": 41.525,
+      "lon": 20.5272,
+      "country": "North Macedonia",
+      "cluster": "NO_Auto"
+    },
+    {
+      "nome": "Radoviš",
+      "lat": 41.6381,
+      "lon": 22.4644,
+      "country": "North Macedonia",
+      "cluster": "NO_Auto"
+    },
+    {
+      "nome": "Plav",
+      "lat": 42.6,
+      "lon": 19.94,
+      "country": "Montenegro",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Orange Walk",
+      "lat": 18.075,
+      "lon": -88.5583,
+      "country": "Belize",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Rožaje",
+      "lat": 42.84,
+      "lon": 20.16,
+      "country": "Montenegro",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Vedi",
+      "lat": 39.91,
+      "lon": 44.73,
+      "country": "Armenia",
+      "cluster": "AR_Auto"
+    },
+    {
+      "nome": "Kriva Palanka",
+      "lat": 42.2017,
+      "lon": 22.3317,
+      "country": "North Macedonia",
+      "cluster": "NO_Auto"
+    },
+    {
+      "nome": "Kotor",
+      "lat": 42.43,
+      "lon": 18.77,
+      "country": "Montenegro",
+      "cluster": "MO_Auto"
+    },
+    {
+      "nome": "Peshkopi",
+      "lat": 41.6833,
+      "lon": 20.4281,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Librazhd-Qendër",
+      "lat": 41.1969,
+      "lon": 20.3356,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Kuçovë",
+      "lat": 40.8039,
+      "lon": 19.9144,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Negotino",
+      "lat": 41.4839,
+      "lon": 22.0892,
+      "country": "North Macedonia",
+      "cluster": "NO_Auto"
+    },
+    {
+      "nome": "Anna Regina",
+      "lat": 7.2633,
+      "lon": -58.4806,
+      "country": "Guyana",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Princetown",
+      "lat": 5.9049,
+      "lon": -57.1391,
+      "country": "Guyana",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Sveti Nikole",
+      "lat": 41.865,
+      "lon": 21.9425,
+      "country": "North Macedonia",
+      "cluster": "NO_Auto"
+    },
+    {
+      "nome": "Krujë",
+      "lat": 41.5108,
+      "lon": 19.7925,
+      "country": "Albania",
+      "cluster": "AL_Auto"
+    },
+    {
+      "nome": "Hithadhoo",
+      "lat": -0.6094,
+      "lon": 73.0899,
+      "country": "Maldives",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Kulhudhuffushi",
+      "lat": 6.6225,
+      "lon": 73.0703,
+      "country": "Maldives",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Dangriga",
+      "lat": 16.9667,
+      "lon": -88.2167,
+      "country": "Belize",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Tutong",
+      "lat": 4.8067,
+      "lon": 114.6592,
+      "country": "Brunei",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Geylegphug",
+      "lat": 26.8706,
+      "lon": 90.4856,
+      "country": "Bhutan",
+      "cluster": "BH_Auto"
+    },
+    {
+      "nome": "Selfoss",
+      "lat": 63.9333,
+      "lon": -21.0,
+      "country": "Iceland",
+      "cluster": "IC_Auto"
+    },
+    {
+      "nome": "Samdrup Jongkhar",
+      "lat": 26.8,
+      "lon": 91.505,
+      "country": "Bhutan",
+      "cluster": "BH_Auto"
+    },
+    {
+      "nome": "Kampong Tunah Jambu",
+      "lat": 4.9957,
+      "lon": 115.0019,
+      "country": "Brunei",
+      "cluster": "BR_Auto"
+    },
+    {
+      "nome": "Bartica",
+      "lat": 6.4,
+      "lon": -58.6167,
+      "country": "Guyana",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Foammulah",
+      "lat": -0.2932,
+      "lon": 73.4236,
+      "country": "Maldives",
+      "cluster": "MA_Auto"
+    },
+    {
+      "nome": "Mtskheta",
+      "lat": 41.8431,
+      "lon": 44.7194,
+      "country": "Georgia",
+      "cluster": "GE_Auto"
+    },
+    {
+      "nome": "Diekirch",
+      "lat": 49.8681,
+      "lon": 6.1567,
+      "country": "Luxembourg",
+      "cluster": "LU_Auto"
+    },
+    {
+      "nome": "Punta Gorda",
+      "lat": 16.1,
+      "lon": -88.8,
+      "country": "Belize",
+      "cluster": "BE_Auto"
+    },
+    {
+      "nome": "Lethem",
+      "lat": 3.3833,
+      "lon": -59.8,
+      "country": "Guyana",
+      "cluster": "GU_Auto"
+    },
+    {
+      "nome": "Ísafjörður",
+      "lat": 66.0758,
+      "lon": -23.1267,
+      "country": "Iceland",
+      "cluster": "IC_Auto"
+    },
+    {
+      "nome": "Ambrolauri",
+      "lat": 42.5194,
+      "lon": 43.15,
+      "country": "Georgia",
+      "cluster": "GE_Auto"
+    },
+    {
+      "nome": "Ozurgeti",
+      "lat": 41.923,
+      "lon": 42.005,
+      "country": "Georgia",
+      "cluster": "GE_Auto"
+    },
+    {
+      "nome": "Anouvông",
+      "lat": 18.8989,
+      "lon": 103.0919,
+      "country": "Laos",
+      "cluster": "LA_Auto"
+    },
+    {
+      "nome": "Xékong",
+      "lat": 15.3503,
+      "lon": 106.7286,
+      "country": "Laos",
+      "cluster": "LA_Auto"
+    },
+    {
+      "nome": "Phôn-Hông",
+      "lat": 18.4953,
+      "lon": 102.4153,
+      "country": "Laos",
+      "cluster": "LA_Auto"
+    },
+    {
+      "nome": "Az̧ Z̧a‘āyin",
+      "lat": 25.5669,
+      "lon": 51.4847,
+      "country": "Qatar",
+      "cluster": "QA_Auto"
+    },
+    {
+      "nome": "Umm Şalāl ‘Alī",
+      "lat": 25.4697,
+      "lon": 51.3975,
+      "country": "Qatar",
+      "cluster": "QA_Auto"
+    },
+    {
+      "nome": "Madīnat ash Shamāl",
+      "lat": 26.1167,
+      "lon": 51.2167,
+      "country": "Qatar",
+      "cluster": "QA_Auto"
     }
   ]
 }
