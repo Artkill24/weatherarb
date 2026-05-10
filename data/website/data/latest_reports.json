@@ -1,7 +1,22 @@
 {
-  "last_updated": "2026-05-10T08:00:23.426960+00:00",
-  "count": 50,
+  "last_updated": "2026-05-10T09:26:04.254176+00:00",
+  "count": 58,
   "reports": [
+    {
+      "slug": "2026-05-10-winnipeg-cold-snap",
+      "title": "Winnipeg Cold Snap",
+      "lead": "A severe cold snap is affecting Winnipeg, with a Z-Score of -4.89. This event has a critical level of 10.0/10....",
+      "location": "Winnipeg",
+      "country_code": "ca",
+      "vertical": "cold-snap",
+      "z_score": -4.89,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-10",
+      "cover_url": "https://images.unsplash.com/photo-1672851991244-b0acea44154f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxNTJ8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-10-winnipeg-cold-snap/",
+      "excerpt": "A severe cold snap is affecting Winnipeg, with a Z-Score of -4.89. This event has a critical level of 10.0/10."
+    },
     {
       "slug": "2026-05-10-vasteras-cold-snap",
       "title": "Vasteras Cold Snap",
@@ -48,6 +63,21 @@
       "excerpt": "A severe cold snap is affecting Umea, with a Z-Score of -3.31. This event has been classified as CRITICAL with a Score of 10.0/10."
     },
     {
+      "slug": "2026-05-10-toronto-cold-snap",
+      "title": "Toronto Cold Snap Hits",
+      "lead": "A severe cold snap has hit Toronto with a Z-Score of -3.29. The city is experiencing extremely cold conditions with a Score of 10.0/10 and a CRITICAL Level....",
+      "location": "Toronto",
+      "country_code": "ca",
+      "vertical": "cold-snap",
+      "z_score": -3.29,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-10",
+      "cover_url": "https://images.unsplash.com/photo-1600829156778-fbcb570f2f4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxNDl8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-10-toronto-cold-snap/",
+      "excerpt": "A severe cold snap has hit Toronto with a Z-Score of -3.29. The city is experiencing extremely cold conditions with a Score of 10.0/10 and a CRITICAL Level."
+    },
+    {
       "slug": "2026-05-10-stockholm-cold-snap",
       "title": "Stockholm Cold Snap",
       "lead": "A severe cold snap has hit Stockholm with a Z-Score of -3.17. This event has a critical level with a score of 10.0/10....",
@@ -78,6 +108,21 @@
       "excerpt": "A severe cold snap has hit Stavanger, with a Z-Score of -3.37. This event has reached a critical level with a score of 10.0/10."
     },
     {
+      "slug": "2026-05-10-singapore-heat-wave",
+      "title": "Singapore Heat Wave",
+      "lead": "A severe heat wave is affecting Singapore with a Z-Score of +4.34. The city is experiencing extremely high temperatures, with a Score of 10.0/10 and a CRITICAL ...",
+      "location": "Singapore",
+      "country_code": "sg",
+      "vertical": "heat-wave",
+      "z_score": 4.34,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-10",
+      "cover_url": "https://images.unsplash.com/photo-1532936401-57caa44b3d26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxNjJ8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-10-singapore-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Singapore with a Z-Score of +4.34. The city is experiencing extremely high temperatures, with a Score of 10.0/10 and a CRITICAL Level."
+    },
+    {
       "slug": "2026-05-10-orebro-cold-snap",
       "title": "Örebro Cold Snap",
       "lead": "Örebro is experiencing a severe cold snap with a Z-Score of -3.26. This event has reached a critical level with a score of 10.0/10....",
@@ -106,6 +151,36 @@
       "cover_url": "https://images.unsplash.com/photo-1603119136713-c80d8ec48f7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzOTQ2NTJ8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-10-newcastle-upon-tyne-heavy-rain/",
       "excerpt": "Newcastle upon Tyne is experiencing heavy rain with a Z-Score of -3.74. This event is extremely rare and has a Score of 10.0/10, classified as CRITICAL."
+    },
+    {
+      "slug": "2026-05-10-minneapolis-cold-snap",
+      "title": "Minneapolis Cold Snap",
+      "lead": "A severe cold snap is hitting Minneapolis with a Z-Score of -3.09. This event has a critical score of 10.0/10....",
+      "location": "Minneapolis",
+      "country_code": "us",
+      "vertical": "cold-snap",
+      "z_score": -3.09,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-10",
+      "cover_url": "https://images.unsplash.com/photo-1706485899122-e41d721976bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxMzh8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-10-minneapolis-cold-snap/",
+      "excerpt": "A severe cold snap is hitting Minneapolis with a Z-Score of -3.09. This event has a critical score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-10-milwaukee-cold-snap",
+      "title": "Milwaukee Cold Snap",
+      "lead": "A severe cold snap is affecting Milwaukee, with a Z-Score of -3.43. This event has a critical score of 10.0/10....",
+      "location": "Milwaukee",
+      "country_code": "us",
+      "vertical": "cold-snap",
+      "z_score": -3.43,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-10",
+      "cover_url": "https://images.unsplash.com/photo-1548652031-66cb2a376f86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxNDJ8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-10-milwaukee-cold-snap/",
+      "excerpt": "A severe cold snap is affecting Milwaukee, with a Z-Score of -3.43. This event has a critical score of 10.0/10."
     },
     {
       "slug": "2026-05-10-linkoping-cold-snap",
@@ -183,6 +258,21 @@
       "excerpt": "A severe cold snap is affecting Edinburgh, with a Z-Score of -3.20. This critical event has a score of 10.0/10, indicating extreme conditions."
     },
     {
+      "slug": "2026-05-10-chengdu-heat-wave",
+      "title": "Chengdu Heat Wave",
+      "lead": "A severe heat wave is affecting Chengdu with a Z-Score of +4.11. The city is experiencing extreme temperatures, scoring 10.0/10 in severity....",
+      "location": "Chengdu",
+      "country_code": "cn",
+      "vertical": "heat-wave",
+      "z_score": 4.11,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-10",
+      "cover_url": "https://images.unsplash.com/photo-1712112186023-5b62eab0c693?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxNTh8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-10-chengdu-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Chengdu with a Z-Score of +4.11. The city is experiencing extreme temperatures, scoring 10.0/10 in severity."
+    },
+    {
       "slug": "2026-05-10-bradford-cold-snap",
       "title": "Bradford Cold Snap",
       "lead": "A severe cold snap is affecting Bradford, with a Z-Score of -3.23. This event has a critical score of 10.0/10....",
@@ -211,96 +301,6 @@
       "cover_url": "https://images.unsplash.com/photo-1612820200277-ea04147c37c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzOTQ2NDV8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-10-bergen-heavy-rain/",
       "excerpt": "Bergen is experiencing heavy rain with a critical level. The Z-Score of -3.57 indicates a significant anomaly."
-    },
-    {
-      "slug": "2026-05-10-aberdeen-cold-snap",
-      "title": "Aberdeen Cold Snap",
-      "lead": "Aberdeen is experiencing a severe cold snap with a Z-Score of -3.57. This event has reached a critical level with a score of 10.0/10....",
-      "location": "Aberdeen",
-      "country_code": "gb",
-      "vertical": "cold-snap",
-      "z_score": -3.57,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-10",
-      "cover_url": "https://images.unsplash.com/photo-1734355502965-f02a70d23f66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzOTQ2NTh8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-10-aberdeen-cold-snap/",
-      "excerpt": "Aberdeen is experiencing a severe cold snap with a Z-Score of -3.57. This event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-09-winnipeg-cold-snap",
-      "title": "Winnipeg Cold Snap",
-      "lead": "A severe cold snap hits Winnipeg with a Z-Score of -3.77. Temperatures are extremely low, scoring 10.0/10 in severity....",
-      "location": "Winnipeg",
-      "country_code": "ca",
-      "vertical": "cold-snap",
-      "z_score": -3.77,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-09",
-      "cover_url": "https://images.unsplash.com/photo-1600444965458-f536fa978a87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzMzIwMjF8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-09-winnipeg-cold-snap/",
-      "excerpt": "A severe cold snap hits Winnipeg with a Z-Score of -3.77. Temperatures are extremely low, scoring 10.0/10 in severity."
-    },
-    {
-      "slug": "2026-05-09-vasteras-cold-snap",
-      "title": "Vasteras Cold Snap",
-      "lead": "A severe cold snap is affecting Vasteras, with a Z-Score of -3.83. This event has reached a critical level with a score of 10.0/10....",
-      "location": "Västerås",
-      "country_code": "se",
-      "vertical": "cold-snap",
-      "z_score": -3.83,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-09",
-      "cover_url": "https://images.unsplash.com/photo-1613404040238-49587344a9b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgyOTM4NzJ8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-09-vasteras-cold-snap/",
-      "excerpt": "A severe cold snap is affecting Vasteras, with a Z-Score of -3.83. This event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-09-uppsala-cold-snap",
-      "title": "Uppsala Cold Snap",
-      "lead": "A severe cold snap is affecting Uppsala with a Z-Score of -3.71. This event has been classified as CRITICAL with a score of 10.0/10....",
-      "location": "Uppsala",
-      "country_code": "se",
-      "vertical": "cold-snap",
-      "z_score": -3.71,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-09",
-      "cover_url": "https://images.unsplash.com/photo-1518892383208-347332432268?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgyOTM4Njl8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-09-uppsala-cold-snap/",
-      "excerpt": "A severe cold snap is affecting Uppsala with a Z-Score of -3.71. This event has been classified as CRITICAL with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-09-toronto-cold-snap",
-      "title": "Toronto Cold Snap",
-      "lead": "A severe cold snap has hit Toronto with a Z-Score of -3.54. This event has a critical score of 10.0/10....",
-      "location": "Toronto",
-      "country_code": "ca",
-      "vertical": "cold-snap",
-      "z_score": -3.54,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-09",
-      "cover_url": "https://images.unsplash.com/photo-1577920263204-481b414e5825?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzMTgxMzB8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-09-toronto-cold-snap/",
-      "excerpt": "A severe cold snap has hit Toronto with a Z-Score of -3.54. This event has a critical score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-09-tampa-heat-wave",
-      "title": "Tampa Heat Wave",
-      "lead": "Tampa is experiencing a critical heat wave with a Z-Score of +4.29. The city's temperature has reached extreme levels, with a Score of 10.0/10....",
-      "location": "Tampa",
-      "country_code": "us",
-      "vertical": "heat-wave",
-      "z_score": 4.29,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-09",
-      "cover_url": "https://images.unsplash.com/photo-1661891477960-a2a96c4a6564?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzNDU0MTJ8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-09-tampa-heat-wave/",
-      "excerpt": "Tampa is experiencing a critical heat wave with a Z-Score of +4.29. The city's temperature has reached extreme levels, with a Score of 10.0/10."
     }
   ]
 }
