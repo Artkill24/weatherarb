@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>WeatherArb — Weather Intelligence News</title>
+    <link>https://weatherarb.com/news/</link>
+    <description>Real-time weather anomaly intelligence: Z-Score, HDD/CDD, heat waves and cold snaps across 18,000+ global cities.</description>
+    <language>en</language>
+    <lastBuildDate>Sun, 10 May 2026 22:27:19 +0000</lastBuildDate>
+    <atom:link href="https://weatherarb.com/news/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://weatherarb.com/favicon.ico</url>
+      <title>WeatherArb</title>
+      <link>https://weatherarb.com</link>
+    </image>
+    <item>
+      <title>Winnipeg Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-winnipeg-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-winnipeg-cold-snap/</guid>
+      <description>A severe cold snap is affecting Winnipeg, with a Z-Score of -4.89. This event has a critical level of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1672851991244-b0acea44154f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxNTJ8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Washington DC Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-washington-dc-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-washington-dc-heat-wave/</guid>
+      <description>A severe heat wave is affecting Washington DC, with a Z-Score of +3.14. This event has reached a critical level with a score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1638927837763-5c3e2d8f014b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0NDU3NDB8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Vasteras Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-vasteras-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-vasteras-cold-snap/</guid>
+      <description>A severe cold snap is affecting Vasteras with a Z-Score of -3.17. This event has reached a critical level with a score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1613404040238-49587344a9b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzODA0NjF8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Uppsala Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-uppsala-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-uppsala-cold-snap/</guid>
+      <description>A severe cold snap is affecting Uppsala, with a Z-Score of -3.54. This extreme weather event has a critical level of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1775906542114-f64464615b53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzODA0NTh8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Umea Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-umea-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-umea-cold-snap/</guid>
+      <description>A severe cold snap is affecting Umea, with a Z-Score of -3.31. This event has been classified as CRITICAL with a Score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1636375087163-a50760084891?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzODA0NzR8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Tucson Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-tucson-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-tucson-heat-wave/</guid>
+      <description>A critical heat wave is affecting Tucson with a Z-Score of +3.34. The event has reached a score of 10.0/10, indicating extreme conditions.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1702584590310-ccc6e7a11c37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MzE3OTR8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Tromsoe Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-tromsoe-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-tromsoe-cold-snap/</guid>
+      <description>A severe cold snap is affecting Tromsoe, with a Z-Score of -3.03. This event has a critical score of 10.0/10, indicating extreme weather conditions.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1619101986994-db5c7cbdfd8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0NDU3MzZ8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Toronto Cold Snap Hits</title>
+      <link>https://weatherarb.com/news/2026-05-10-toronto-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-toronto-cold-snap/</guid>
+      <description>A severe cold snap has hit Toronto with a Z-Score of -3.29. The city is experiencing extremely cold conditions with a Score of 10.0/10 and a CRITICAL Level.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1600829156778-fbcb570f2f4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxNDl8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Tampa Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-tampa-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-tampa-heat-wave/</guid>
+      <description>Tampa is experiencing a critical heat wave with a Z-Score of +3.00. The city's temperature has reached extreme levels, scoring 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1622051554739-fcdeb5499f8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MTg1MzR8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Stockholm Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-stockholm-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-stockholm-cold-snap/</guid>
+      <description>A severe cold snap has hit Stockholm with a Z-Score of -3.17. This event has a critical level with a score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1552729434-cd6c86ce3378?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzODA0NTR8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Stavanger Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-stavanger-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-stavanger-cold-snap/</guid>
+      <description>A severe cold snap has hit Stavanger, with a Z-Score of -3.37. This event has reached a critical level with a score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1571171307515-ea967318c581?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzOTQ2NDh8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Singapore Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-singapore-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-singapore-heat-wave/</guid>
+      <description>A severe heat wave is affecting Singapore with a Z-Score of +4.34. The city is experiencing extremely high temperatures, with a Score of 10.0/10 and a CRITICAL Level.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1532936401-57caa44b3d26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxNjJ8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Phoenix Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-phoenix-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-phoenix-heat-wave/</guid>
+      <description>A severe heat wave is affecting Phoenix with a Z-Score of +4.34. The city is experiencing extremely high temperatures.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1644721133152-55a3a4aa37d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MzE3OTF8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Orlando Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-orlando-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-orlando-heat-wave/</guid>
+      <description>Orlando is experiencing a critical heat wave with a Z-Score of +4.49. This event has a score of 10.0/10, indicating extreme conditions.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1609184889226-60abcd51ad33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MzE3ODF8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Örebro Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-orebro-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-orebro-cold-snap/</guid>
+      <description>Örebro is experiencing a severe cold snap with a Z-Score of -3.26. This event has reached a critical level with a score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1707325015215-92bbc0109d7f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzODA0NjR8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Newcastle Heavy Rain</title>
+      <link>https://weatherarb.com/news/2026-05-10-newcastle-upon-tyne-heavy-rain/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-newcastle-upon-tyne-heavy-rain/</guid>
+      <description>Newcastle upon Tyne is experiencing heavy rain with a Z-Score of -3.74. This event is extremely rare and has a Score of 10.0/10, classified as CRITICAL.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1603119136713-c80d8ec48f7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzOTQ2NTJ8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Mumbai Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-mumbai-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-mumbai-heat-wave/</guid>
+      <description>Mumbai is experiencing a severe heat wave with a Z-Score of +4.57. The city's temperature is significantly higher than usual.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1725122902667-5fb85fed2150?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MTg1NDZ8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Minneapolis Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-minneapolis-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-minneapolis-cold-snap/</guid>
+      <description>A severe cold snap is hitting Minneapolis with a Z-Score of -3.09. This event has a critical score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1706485899122-e41d721976bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxMzh8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Milwaukee Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-milwaukee-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-milwaukee-cold-snap/</guid>
+      <description>A severe cold snap is affecting Milwaukee, with a Z-Score of -3.43. This event has a critical score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1548652031-66cb2a376f86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxNDJ8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Miami Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-miami-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-miami-heat-wave/</guid>
+      <description>Miami is experiencing a severe heat wave with a Z-Score of +3.37. This critical event has a score of 10.0/10, indicating extreme conditions.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1560443797-0b2389cb632b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MTg1MzF8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Linköping Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-linkoping-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-linkoping-cold-snap/</guid>
+      <description>A severe cold snap is affecting Linköping, with a Z-Score of -3.54. This event has reached a critical level with a score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1541430153849-b0263e560c83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzODA0Njd8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Leeds Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-leeds-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-leeds-cold-snap/</guid>
+      <description>A severe cold snap is hitting Leeds with a Z-Score of -3.09. This critical event has a score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1767620695367-9507d2994865?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzOTQ2NDJ8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Las Vegas Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-las-vegas-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-las-vegas-heat-wave/</guid>
+      <description>A severe heat wave is affecting Las Vegas, with a Z-Score of +4.14. This critical event has a score of 10.0/10, indicating extreme conditions.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1660166376836-dc0e11ce4d47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MzE3ODh8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Jönköping Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-jonkoping-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-jonkoping-cold-snap/</guid>
+      <description>A severe cold snap is affecting Jönköping with a Z-Score of -3.26. This event has a critical score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1735910154249-ddd1e574d7f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzODA0NzF8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Glasgow Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-glasgow-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-glasgow-cold-snap/</guid>
+      <description>A severe cold snap has hit Glasgow, with a Z-Score of -3.34. This anomaly is classified as CRITICAL with a Score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1704024335685-8d5258ccf6e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzOTQ2Mzh8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>El Paso Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-el-paso-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-el-paso-heat-wave/</guid>
+      <description>A critical heat wave is affecting El Paso with a Z-Score of +3.66. Temperatures are extremely high, causing severe conditions.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1621483074146-2a2f6f1e68bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MzE3ODV8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Edinburgh Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-edinburgh-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-edinburgh-cold-snap/</guid>
+      <description>A severe cold snap is affecting Edinburgh, with a Z-Score of -3.20. This critical event has a score of 10.0/10, indicating extreme conditions.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1706648067717-4da9d73fc0b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzODA0Nzd8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Delhi Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-delhi-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-delhi-heat-wave/</guid>
+      <description>Delhi is experiencing a severe heat wave with a Z-Score of +4.86. The city's temperature is extremely high, scoring 10.0/10 on the heat index.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1597212638108-68d3b2ad3905?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MTg1NDl8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Chengdu Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-chengdu-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-chengdu-heat-wave/</guid>
+      <description>A severe heat wave is affecting Chengdu with a Z-Score of +4.11. The city is experiencing extreme temperatures, scoring 10.0/10 in severity.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1712112186023-5b62eab0c693?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxNTh8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Charlotte Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-charlotte-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-charlotte-heat-wave/</guid>
+      <description>A severe heat wave is affecting Charlotte with a Z-Score of +3.14. This critical event has a score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1652236795482-88964a4db901?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0NDU3NDN8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Bradford Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-bradford-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-bradford-cold-snap/</guid>
+      <description>A severe cold snap is affecting Bradford, with a Z-Score of -3.23. This event has a critical score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1681590096245-e4d1ee5e907e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzOTQ2NTV8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Bergen Heavy Rain</title>
+      <link>https://weatherarb.com/news/2026-05-10-bergen-heavy-rain/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-bergen-heavy-rain/</guid>
+      <description>Bergen is experiencing heavy rain with a critical level. The Z-Score of -3.57 indicates a significant anomaly.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1612820200277-ea04147c37c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzOTQ2NDV8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Bergen Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-bergen-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-bergen-cold-snap/</guid>
+      <description>A severe cold snap is affecting Bergen, with a Z-Score of -3.43. This event is rated as CRITICAL with a score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1747576062407-e29a3986b1aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MTg1Mjh8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Beijing Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-10-beijing-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-beijing-heat-wave/</guid>
+      <description>Beijing is experiencing a severe heat wave with a Z-Score of +4.49. This critical event has a score of 10.0/10, indicating extreme conditions.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1605543799040-b004b7396acc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxNTV8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Anchorage Heavy Rain</title>
+      <link>https://weatherarb.com/news/2026-05-10-anchorage-heavy-rain/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-anchorage-heavy-rain/</guid>
+      <description>Anchorage is experiencing a critical heavy rain event with a Z-Score of -3.66. This anomaly has a score of 10.0/10, indicating extreme conditions.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1658085047315-134fd61861d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDUxNDZ8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Aberdeen Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-10-aberdeen-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-10-aberdeen-cold-snap/</guid>
+      <description>Aberdeen is experiencing a severe cold snap with a Z-Score of -3.57. This event has reached a critical level with a score of 10.0/10.</description>
+      <pubDate>Sun, 10 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1734355502965-f02a70d23f66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzOTQ2NTh8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Winnipeg Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-09-winnipeg-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-winnipeg-cold-snap/</guid>
+      <description>A severe cold snap hits Winnipeg with a Z-Score of -3.77. Temperatures are extremely low, scoring 10.0/10 in severity.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1600444965458-f536fa978a87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzMzIwMjF8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Vasteras Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-09-vasteras-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-vasteras-cold-snap/</guid>
+      <description>A severe cold snap is affecting Vasteras, with a Z-Score of -3.83. This event has reached a critical level with a score of 10.0/10.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1613404040238-49587344a9b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgyOTM4NzJ8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Uppsala Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-09-uppsala-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-uppsala-cold-snap/</guid>
+      <description>A severe cold snap is affecting Uppsala with a Z-Score of -3.71. This event has been classified as CRITICAL with a score of 10.0/10.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1518892383208-347332432268?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgyOTM4Njl8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Toronto Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-09-toronto-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-toronto-cold-snap/</guid>
+      <description>A severe cold snap has hit Toronto with a Z-Score of -3.54. This event has a critical score of 10.0/10.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1577920263204-481b414e5825?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzMTgxMzB8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Tampa Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-09-tampa-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-tampa-heat-wave/</guid>
+      <description>Tampa is experiencing a critical heat wave with a Z-Score of +4.29. The city's temperature has reached extreme levels, with a Score of 10.0/10.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1661891477960-a2a96c4a6564?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzNDU0MTJ8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Stockholm Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-09-stockholm-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-stockholm-cold-snap/</guid>
+      <description>A severe cold snap has hit Stockholm with a Z-Score of -3.06. This event has been classified as CRITICAL with a Score of 10.0/10.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1615125771712-01adef9caf6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgyOTM4NjN8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Stavanger Heavy Rain</title>
+      <link>https://weatherarb.com/news/2026-05-09-stavanger-heavy-rain/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-stavanger-heavy-rain/</guid>
+      <description>Stavanger is experiencing a critical heavy rain event with a Z-Score of -3.17. This anomaly has a significant impact on the city's operations.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1733010687935-f087bfef3813?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzNDU0MDZ8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Stavanger Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-09-stavanger-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-stavanger-cold-snap/</guid>
+      <description>A severe cold snap is affecting Stavanger, with a Z-Score of -3.23. This event has reached a critical level with a score of 10.0/10.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1571171307515-ea967318c581?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzNTkxODZ8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Sapporo Heavy Rain</title>
+      <link>https://weatherarb.com/news/2026-05-09-sapporo-heavy-rain/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-sapporo-heavy-rain/</guid>
+      <description>Sapporo is experiencing a critical heavy rain event with a Z-Score of -3.40. The city's weather is severely impacted with a Score of 10.0/10.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1770212646096-c1de6133970f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzNDU0Mjh8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>San Antonio Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-09-san-antonio-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-san-antonio-heat-wave/</guid>
+      <description>A critical heat wave is affecting San Antonio with a Z-Score of +4.23. The city is experiencing extremely high temperatures, with a Score of 10.0/10.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1645022482101-baebffb94f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzNTkyMDh8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Rostock Heavy Rain</title>
+      <link>https://weatherarb.com/news/2026-05-09-rostock-heavy-rain/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-rostock-heavy-rain/</guid>
+      <description>Rostock sta sperimentando una pioggia intensa anomala. Il Z-Score di -3.11 indica un evento estremo.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>de</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1720116987659-62d53b55b159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzMDcxNzV8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Phoenix Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-09-phoenix-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-phoenix-heat-wave/</guid>
+      <description>A severe heat wave is affecting Phoenix with a Z-Score of +3.14. This event has reached a critical level with a score of 10.0/10.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1632081973678-1ac9412494f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzMTgxMjR8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Orlando Heat Wave</title>
+      <link>https://weatherarb.com/news/2026-05-09-orlando-heat-wave/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-orlando-heat-wave/</guid>
+      <description>Orlando is experiencing a critical heat wave with a Z-Score of +4.49. The city's temperature has reached extreme levels, posing a threat to residents and infrastructure.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1730053921262-2219d61c847a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzNDU0MTV8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+    <item>
+      <title>Örebro Cold Snap</title>
+      <link>https://weatherarb.com/news/2026-05-09-orebro-cold-snap/</link>
+      <guid isPermaLink="true">https://weatherarb.com/news/2026-05-09-orebro-cold-snap/</guid>
+      <description>Örebro is experiencing a severe cold snap with a Z-Score of -3.49. This event has reached a critical level with a score of 10.0/10.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+      <language>en</language>
+      <category>Weather</category>
+      <media:content url="https://images.unsplash.com/photo-1705589462591-512c67ee8c4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgyOTM4NzZ8&ixlib=rb-4.1.0&q=80&w=1080&amp;w=1200&amp;q=80" medium="image"/>
+    </item>
+  </channel>
+</rss>
