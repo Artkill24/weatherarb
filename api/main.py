@@ -187,7 +187,16 @@ def refresh_all():
 
     # Fetch weather in small batches, saving progress
     logger.info("Fetching weather incrementally from Open-Meteo...")
-    fetch_all_weather_batch(PROVINCES[:500])  # Process first 500 only
+    # Rotating cache: load different 500-city group each refresh
+    import time
+    batch_size = 500
+    total = len(PROVINCES)
+    num_groups = (total + batch_size - 1) // batch_size
+    group_idx = int(time.time() / 3600) % num_groups  # rotates every hour
+    start = group_idx * batch_size
+    end = min(start + batch_size, total)
+    logger.info(f"Loading group {group_idx+1}/{num_groups} ({start}-{end} of {total})")
+    fetch_all_weather_batch(PROVINCES[start:end])
     logger.info(f"Weather cache loaded: {len(_weather_cache)} cities")
 
     for p in PROVINCES:
