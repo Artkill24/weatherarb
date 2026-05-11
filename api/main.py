@@ -189,7 +189,7 @@ def refresh_all():
     logger.info("Fetching weather incrementally from Open-Meteo...")
     # Rotating cache: load different 500-city group each refresh
     import time
-    batch_size = 500
+    batch_size = 750
     total = len(PROVINCES)
     num_groups = (total + batch_size - 1) // batch_size
     group_idx = int(time.time() / 3600) % num_groups  # rotates every hour
