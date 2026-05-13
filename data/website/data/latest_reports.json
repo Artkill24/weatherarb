@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-13T19:44:52.790354+00:00",
-  "count": 50,
+  "last_updated": "2026-05-13T21:23:49.596707+00:00",
+  "count": 58,
   "reports": [
     {
       "slug": "2026-05-13-zira-heat-wave",
@@ -183,6 +183,21 @@
       "excerpt": "A severe heat wave is affecting Tulangan Utara with a Z-Score of +3.17. The city is experiencing extremely high temperatures with a Score of 10.0/10."
     },
     {
+      "slug": "2026-05-13-trollhattan-heavy-rain",
+      "title": "Trollhättan Heavy Rain",
+      "lead": "Trollhättan is experiencing extreme heavy rain with a Z-Score of -3.20. The event has reached a critical level with a score of 10.0/10....",
+      "location": "Trollhättan",
+      "country_code": "se",
+      "vertical": "heavy-rain",
+      "z_score": -3.2,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-13",
+      "cover_url": "",
+      "url": "/news/2026-05-13-trollhattan-heavy-rain/",
+      "excerpt": "Trollhättan is experiencing extreme heavy rain with a Z-Score of -3.20. The event has reached a critical level with a score of 10.0/10."
+    },
+    {
       "slug": "2026-05-13-thana-bhawan-heat-wave",
       "title": "Thāna Bhawan Heat Wave",
       "lead": "Thāna Bhawan is experiencing a severe heat wave with a Z-Score of +4.71. This critical event has a score of 10.0/10, indicating extreme temperatures....",
@@ -243,6 +258,21 @@
       "excerpt": "Santarém is experiencing a critical heat wave with a Z-Score of +3.09. The city's temperature has reached extreme levels, causing severe conditions."
     },
     {
+      "slug": "2026-05-13-samut-sakhon-heavy-rain",
+      "title": "Samut Sakhon Heavy Rain",
+      "lead": "Samut Sakhon is experiencing heavy rain with a Z-Score of +3.14. This is a critical weather event with a score of 10.0/10....",
+      "location": "Samut Sakhon",
+      "country_code": "th",
+      "vertical": "heavy-rain",
+      "z_score": 3.14,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-13",
+      "cover_url": "",
+      "url": "/news/2026-05-13-samut-sakhon-heavy-rain/",
+      "excerpt": "Samut Sakhon is experiencing heavy rain with a Z-Score of +3.14. This is a critical weather event with a score of 10.0/10."
+    },
+    {
       "slug": "2026-05-13-sambalpur-heat-wave",
       "title": "Sambalpur Heat Wave",
       "lead": "Sambalpur is experiencing a severe heat wave with a Z-Score of +3.46. The city's temperature has reached critical levels with a score of 10.0/10....",
@@ -271,36 +301,6 @@
       "cover_url": "",
       "url": "/news/2026-05-13-robertsganj-heat-wave/",
       "excerpt": "A severe heat wave is affecting Robertsganj, with a Z-Score of +5.94. This event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-13-navalyal-heat-wave",
-      "title": "Navalyal Heat Wave",
-      "lead": "Navalyal is experiencing a severe heat wave with a Z-Score of +5.11. This critical event has a score of 10.0/10....",
-      "location": "Navalyal",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 5.11,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-13",
-      "cover_url": "",
-      "url": "/news/2026-05-13-navalyal-heat-wave/",
-      "excerpt": "Navalyal is experiencing a severe heat wave with a Z-Score of +5.11. This critical event has a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-13-navahrudak-heavy-rain",
-      "title": "Navahrudak Heavy Rain",
-      "lead": "Navahrudak is experiencing a critical heavy rain event with a Z-Score of -3.03. This anomaly has a Score of 10.0/10, indicating extreme weather conditions....",
-      "location": "Navahrudak",
-      "country_code": "eu",
-      "vertical": "heavy-rain",
-      "z_score": -3.03,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-13",
-      "cover_url": "",
-      "url": "/news/2026-05-13-navahrudak-heavy-rain/",
-      "excerpt": "Navahrudak is experiencing a critical heavy rain event with a Z-Score of -3.03. This anomaly has a Score of 10.0/10, indicating extreme weather conditions."
     }
   ]
 }
