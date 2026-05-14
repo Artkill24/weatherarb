@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-14T14:00:15.378764+00:00",
-  "count": 58,
+  "last_updated": "2026-05-14T17:46:13.763774+00:00",
+  "count": 66,
   "reports": [
     {
       "slug": "2026-05-14-urbano-santos-heat-wave",
@@ -31,6 +31,21 @@
       "cover_url": "",
       "url": "/news/2026-05-14-tundla-heat-wave/",
       "excerpt": "A severe heat wave is affecting Tūndla with a Z-Score of +3.83. This critical event has a Score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-14-trichinopoly-heat-wave",
+      "title": "Trichinopoly Heat Wave",
+      "lead": "A severe heat wave is affecting Trichinopoly with a Z-Score of +3.14. This critical event has a score of 10.0/10....",
+      "location": "Trichinopoly",
+      "country_code": "in",
+      "vertical": "heat-wave",
+      "z_score": 3.14,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-14",
+      "cover_url": "",
+      "url": "/news/2026-05-14-trichinopoly-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Trichinopoly with a Z-Score of +3.14. This critical event has a score of 10.0/10."
     },
     {
       "slug": "2026-05-14-thol-heat-wave",
@@ -153,6 +168,21 @@
       "excerpt": "A severe heat wave is affecting Sātkhira, with a Z-Score of +3.40. The city is experiencing extremely high temperatures, with a Score of 10.0/10."
     },
     {
+      "slug": "2026-05-14-sao-goncalo-heat-wave",
+      "title": "São Gonçalo Heat Wave",
+      "lead": "São Gonçalo is experiencing a severe heat wave with a Z-Score of +3.09. This critical event has a score of 10.0/10, indicating extreme conditions....",
+      "location": "São Gonçalo",
+      "country_code": "br",
+      "vertical": "heat-wave",
+      "z_score": 3.09,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-14",
+      "cover_url": "",
+      "url": "/news/2026-05-14-sao-goncalo-heat-wave/",
+      "excerpt": "São Gonçalo is experiencing a severe heat wave with a Z-Score of +3.09. This critical event has a score of 10.0/10, indicating extreme conditions."
+    },
+    {
       "slug": "2026-05-14-sandwip-heat-wave",
       "title": "Sandwīp Heat Wave",
       "lead": "Sandwīp is experiencing a critical heat wave with a Z-Score of +3.29. The city has reached a Score of 10.0/10, indicating extreme conditions....",
@@ -243,6 +273,21 @@
       "excerpt": "Rahatgarh is experiencing a critical heat wave with a Z-Score of +6.63. This event has reached a Score of 10.0/10, indicating extreme conditions."
     },
     {
+      "slug": "2026-05-14-mushin-heat-wave",
+      "title": "Mushin Heat Wave",
+      "lead": "Mushin is experiencing a severe heat wave with a Z-Score of +3.17. The city's heat wave has reached a critical level with a score of 10.0/10....",
+      "location": "Mushin",
+      "country_code": "ng",
+      "vertical": "heat-wave",
+      "z_score": 3.17,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-14",
+      "cover_url": "",
+      "url": "/news/2026-05-14-mushin-heat-wave/",
+      "excerpt": "Mushin is experiencing a severe heat wave with a Z-Score of +3.17. The city's heat wave has reached a critical level with a score of 10.0/10."
+    },
+    {
       "slug": "2026-05-14-mondoro-heat-wave",
       "title": "Mondoro Heat Wave",
       "lead": "Mondoro is experiencing a critical heat wave with a Z-Score of +3.60. This event has reached a score of 10.0/10, indicating extreme conditions....",
@@ -256,51 +301,6 @@
       "cover_url": "",
       "url": "/news/2026-05-14-mondoro-heat-wave/",
       "excerpt": "Mondoro is experiencing a critical heat wave with a Z-Score of +3.60. This event has reached a score of 10.0/10, indicating extreme conditions."
-    },
-    {
-      "slug": "2026-05-14-metpalli-heat-wave",
-      "title": "Metpalli Heat Wave",
-      "lead": "A severe heat wave is affecting Metpalli with a Z-Score of +3.69. The city is experiencing extremely high temperatures....",
-      "location": "Metpalli",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 3.69,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-14",
-      "cover_url": "",
-      "url": "/news/2026-05-14-metpalli-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Metpalli with a Z-Score of +3.69. The city is experiencing extremely high temperatures."
-    },
-    {
-      "slug": "2026-05-14-limbdi-heat-wave",
-      "title": "Limbdi Heat Wave",
-      "lead": "A severe heat wave is affecting Limbdi with a Z-Score of +6.91. This event has reached a critical level with a score of 10.0/10....",
-      "location": "Limbdi",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 6.91,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-14",
-      "cover_url": "",
-      "url": "/news/2026-05-14-limbdi-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Limbdi with a Z-Score of +6.91. This event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-14-kurivikod-heat-wave",
-      "title": "Kurivikod Heat Wave",
-      "lead": "Kurivikod is experiencing a critical heat wave with a Z-Score of +3.43. The city's temperature has reached extreme levels, earning a Score of 10.0/10....",
-      "location": "Kurivikod",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 3.43,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-14",
-      "cover_url": "",
-      "url": "/news/2026-05-14-kurivikod-heat-wave/",
-      "excerpt": "Kurivikod is experiencing a critical heat wave with a Z-Score of +3.43. The city's temperature has reached extreme levels, earning a Score of 10.0/10."
     }
   ]
 }
