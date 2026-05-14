@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-14T19:30:47.019931+00:00",
-  "count": 50,
+  "last_updated": "2026-05-14T21:06:40.013482+00:00",
+  "count": 58,
   "reports": [
     {
       "slug": "2026-05-14-urbano-santos-heat-wave",
@@ -46,6 +46,21 @@
       "cover_url": "",
       "url": "/news/2026-05-14-trichinopoly-heat-wave/",
       "excerpt": "A severe heat wave is affecting Trichinopoly with a Z-Score of +3.14. This critical event has a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-14-tonacatepeque-heat-wave",
+      "title": "Tonacatepeque Heat Wave",
+      "lead": "A severe heat wave is affecting Tonacatepeque, with a Z-Score of +5.37. This extreme weather event has reached a critical level....",
+      "location": "Tonacatepeque",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 5.37,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-14",
+      "cover_url": "",
+      "url": "/news/2026-05-14-tonacatepeque-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Tonacatepeque, with a Z-Score of +5.37. This extreme weather event has reached a critical level."
     },
     {
       "slug": "2026-05-14-thol-heat-wave",
@@ -273,34 +288,19 @@
       "excerpt": "Rahatgarh is experiencing a critical heat wave with a Z-Score of +6.63. This event has reached a Score of 10.0/10, indicating extreme conditions."
     },
     {
-      "slug": "2026-05-14-mushin-heat-wave",
-      "title": "Mushin Heat Wave",
-      "lead": "Mushin is experiencing a severe heat wave with a Z-Score of +3.17. The city's heat wave has reached a critical level with a score of 10.0/10....",
-      "location": "Mushin",
-      "country_code": "ng",
-      "vertical": "heat-wave",
-      "z_score": 3.17,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-14",
-      "cover_url": "",
-      "url": "/news/2026-05-14-mushin-heat-wave/",
-      "excerpt": "Mushin is experiencing a severe heat wave with a Z-Score of +3.17. The city's heat wave has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-14-mondoro-heat-wave",
-      "title": "Mondoro Heat Wave",
-      "lead": "Mondoro is experiencing a critical heat wave with a Z-Score of +3.60. This event has reached a score of 10.0/10, indicating extreme conditions....",
-      "location": "Mondoro",
+      "slug": "2026-05-14-petite-riviere-de-lartibonite-heat-wave",
+      "title": "Petite Rivière Heat Wave",
+      "lead": "A severe heat wave is affecting Petite Rivière de l’Artibonite, with a Z-Score of +4.37. This extreme weather event has reached a critical level with a score of...",
+      "location": "Petite Rivière de l’Artibonite",
       "country_code": "eu",
       "vertical": "heat-wave",
-      "z_score": 3.6,
+      "z_score": 4.37,
       "score": 10.0,
       "anomaly_level": "CRITICAL",
       "date": "2026-05-14",
       "cover_url": "",
-      "url": "/news/2026-05-14-mondoro-heat-wave/",
-      "excerpt": "Mondoro is experiencing a critical heat wave with a Z-Score of +3.60. This event has reached a score of 10.0/10, indicating extreme conditions."
+      "url": "/news/2026-05-14-petite-riviere-de-lartibonite-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Petite Rivière de l’Artibonite, with a Z-Score of +4.37. This extreme weather event has reached a critical level with a score of 10.0/10."
     }
   ]
 }
