@@ -74,7 +74,7 @@ def fetch_all_weather_batch(provinces):
         try:
             url = (f"https://api.open-meteo.com/v1/forecast"
                    f"?latitude={lats}&longitude={lons}"
-                   f"&current=temperature_2m,relative_humidity_2m,wind_speed_10m"
+                   f"&current=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation,weather_code,cloud_cover"
                    f"&wind_speed_unit=ms&timezone=auto&forecast_days=1")
             r = req_lib.get(url, timeout=30)
             data = r.json()
@@ -92,6 +92,9 @@ def fetch_all_weather_batch(provinces):
                     "humidity_pct": hum,
                     "wind_ms": wind_ms,
                     "wind_kmh": round(wind_ms * 3.6, 1),
+                    "precipitation_mm": cur.get("precipitation", 0) or 0,
+                    "cloud_cover_pct": cur.get("cloud_cover", 0) or 0,
+                    "weather_code": cur.get("weather_code", 0) or 0,
                     "description": "",
                 }
             logger.info(f"Open-Meteo batch {i//batch_size+1}: fetched {len(data)} cities")
@@ -270,7 +273,33 @@ def refresh_all():
         kp_data = r_sw.json()
         recent = [x for x in kp_data[-30:] if x.get("kp_index") is not None]
         kp = sum(x["kp_index"] for x in recent) / len(recent) if recent else 0
-        _top_cache["space_weather"] = {"kp_current": round(kp, 2), "flare_class": "C", "solar_flux": 0, "timestamp": datetime.now(timezone.utc).isoformat()}
+        # Solar flare real data
+        flare_class = "A"
+        try:
+            r_flare = req_lib.get("https://services.swpc.noaa.gov/json/goes/primary/xrays-7-day.json", timeout=8)
+            xray = r_flare.json()
+            if xray:
+                flux = max((x.get("flux",0) or 0) for x in xray[-60:])
+                if flux >= 1e-4: flare_class = "X"
+                elif flux >= 1e-5: flare_class = "M"
+                elif flux >= 1e-6: flare_class = "C"
+                elif flux >= 1e-7: flare_class = "B"
+                else: flare_class = "A"
+        except: pass
+        # NOAA alerts count
+        alerts_count = 0
+        try:
+            r_alerts = req_lib.get("https://api.weather.gov/alerts/active?status=actual&message_type=alert&limit=50", timeout=8)
+            alerts_data = r_alerts.json()
+            alerts_count = len(alerts_data.get("features", []))
+        except: pass
+        _top_cache["space_weather"] = {
+            "kp_current": round(kp, 2),
+            "flare_class": flare_class,
+            "solar_flux": 0,
+            "noaa_alerts_us": alerts_count,
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
     except:
         pass
     _last_refresh = now
