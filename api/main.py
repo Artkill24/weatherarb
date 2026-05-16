@@ -779,3 +779,103 @@ async def linkedin_callback(code: str = "", error: str = ""):
         logger.info(f"LinkedIn token saved")
         return {"status": "ok", "message": "Token salvato! Puoi chiudere questa pagina."}
     return {"error": data}
+
+# ─── ENRICHED SIGNALS ENDPOINT ───────────────────────────────────────────────
+@app.get("/api/v1/signals/{slug}")
+async def get_signals(slug: str):
+    """Enriched signals: weather + air quality + earthquakes nearby"""
+    import re, unicodedata
+    s = unicodedata.normalize("NFKD", slug.lower()).encode("ascii","ignore").decode("ascii")
+    s = re.sub(r"[^\w-]","", s.replace(" ","-"))
+
+    # Find province
+    province = None
+    for p in PROVINCES:
+        pslug = unicodedata.normalize("NFKD", p["nome"].lower()).encode("ascii","ignore").decode("ascii")
+        pslug = re.sub(r"[^\w-]","", pslug.replace(" ","-"))
+        if pslug == s:
+            province = p
+            break
+
+    if not province:
+        raise HTTPException(404, "City not found")
+
+    lat, lon = province["lat"], province["lon"]
+    result = {"city": province["nome"], "lat": lat, "lon": lon}
+
+    # 1. Weather from cache
+    cached = _cache.get(s, {})
+    result["weather"] = cached.get("weather", {})
+    result["signal"] = cached.get("signal", {})
+
+    # 2. Air Quality from Open-Meteo (free)
+    try:
+        r_aq = req_lib.get(
+            f"https://air-quality-api.open-meteo.com/v1/air-quality"
+            f"?latitude={lat}&longitude={lon}"
+            f"&current=pm10,pm2_5,carbon_monoxide,nitrogen_dioxide,ozone,european_aqi"
+            f"&timezone=auto",
+            timeout=8
+        )
+        aq = r_aq.json().get("current", {})
+        result["air_quality"] = {
+            "pm10": aq.get("pm10"),
+            "pm2_5": aq.get("pm2_5"),
+            "ozone": aq.get("ozone"),
+            "nitrogen_dioxide": aq.get("nitrogen_dioxide"),
+            "european_aqi": aq.get("european_aqi"),
+            "aqi_label": (
+                "Good" if (aq.get("european_aqi") or 0) <= 20 else
+                "Fair" if (aq.get("european_aqi") or 0) <= 40 else
+                "Moderate" if (aq.get("european_aqi") or 0) <= 60 else
+                "Poor" if (aq.get("european_aqi") or 0) <= 80 else "Very Poor"
+            )
+        }
+    except Exception as e:
+        result["air_quality"] = {"error": str(e)}
+
+    # 3. Recent earthquakes nearby (USGS, free)
+    try:
+        r_eq = req_lib.get(
+            f"https://earthquake.usgs.gov/fdsnws/event/1/query"
+            f"?format=geojson&latitude={lat}&longitude={lon}"
+            f"&maxradius=3&minmagnitude=2.0&limit=5&orderby=time",
+            timeout=8
+        )
+        eq_data = r_eq.json()
+        quakes = []
+        for f in eq_data.get("features", [])[:5]:
+            p = f.get("properties", {})
+            quakes.append({
+                "magnitude": p.get("mag"),
+                "place": p.get("place"),
+                "time": p.get("time"),
+                "depth_km": f.get("geometry",{}).get("coordinates",[None,None,None])[2]
+            })
+        result["earthquakes_nearby"] = quakes
+    except Exception as e:
+        result["earthquakes_nearby"] = []
+
+    # 4. UV Index from Open-Meteo
+    try:
+        r_uv = req_lib.get(
+            f"https://api.open-meteo.com/v1/forecast"
+            f"?latitude={lat}&longitude={lon}"
+            f"&daily=uv_index_max,precipitation_sum,wind_speed_10m_max"
+            f"&timezone=auto&forecast_days=3",
+            timeout=8
+        )
+        uv_data = r_uv.json()
+        daily = uv_data.get("daily", {})
+        result["forecast_3d"] = {
+            "uv_index_max": daily.get("uv_index_max", []),
+            "precipitation_mm": daily.get("precipitation_sum", []),
+            "wind_max_kmh": [round(w*3.6,1) for w in (daily.get("wind_speed_10m_max") or [])],
+            "dates": daily.get("time", [])
+        }
+    except Exception as e:
+        result["forecast_3d"] = {}
+
+    result["sources"] = ["WeatherArb/Open-Meteo", "Open-Meteo AQ", "USGS Earthquakes"]
+    result["timestamp"] = datetime.now(timezone.utc).isoformat()
+    return result
