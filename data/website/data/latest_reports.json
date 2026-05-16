@@ -1,7 +1,22 @@
 {
-  "last_updated": "2026-05-16T13:06:18.684342+00:00",
-  "count": 50,
+  "last_updated": "2026-05-16T13:13:48.479796+00:00",
+  "count": 58,
   "reports": [
+    {
+      "slug": "2026-05-16-wanaka-heavy-rain",
+      "title": "Wanaka Heavy Rain",
+      "lead": "Wanaka is experiencing heavy rain with a Z-Score of -3.00, indicating a significant anomaly. This event has a Score of 10.0/10, classified as CRITICAL....",
+      "location": "Wanaka",
+      "country_code": "nz",
+      "vertical": "heavy-rain",
+      "z_score": -3.0,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-16",
+      "cover_url": "https://images.unsplash.com/photo-1734683746283-8f2eaa49ee19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg5MzcyMDV8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-16-wanaka-heavy-rain/",
+      "excerpt": "Wanaka is experiencing heavy rain with a Z-Score of -3.00, indicating a significant anomaly. This event has a Score of 10.0/10, classified as CRITICAL."
+    },
     {
       "slug": "2026-05-16-vangviang-heat-wave",
       "title": "Vangviang Heat Wave",
@@ -16,6 +31,21 @@
       "cover_url": "https://images.unsplash.com/photo-1572938899308-aa5e243e294e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg5MTIzNTV8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-16-vangviang-heat-wave/",
       "excerpt": "A severe heat wave is affecting Vangviang with a Z-Score of +3.83. This event has reached a critical level with a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-16-toulou-heat-wave",
+      "title": "Toulou Heat Wave",
+      "lead": "A severe heat wave is affecting Toulou with a Z-Score of +5.77. This extreme weather event has reached a critical level with a score of 10.0/10....",
+      "location": "Toulou",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 5.77,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-16",
+      "cover_url": "",
+      "url": "/news/2026-05-16-toulou-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Toulou with a Z-Score of +5.77. This extreme weather event has reached a critical level with a score of 10.0/10."
     },
     {
       "slug": "2026-05-16-thol-heat-wave",
@@ -168,6 +198,21 @@
       "excerpt": "La citta di Molina e colpita da forti piogge. Il livello di criticita e alto."
     },
     {
+      "slug": "2026-05-16-marrupa-heat-wave",
+      "title": "Marrupa Heat Wave",
+      "lead": "A severe heat wave is affecting Marrupa, with a Z-Score of +3.46. This extreme weather event has reached a critical level....",
+      "location": "Marrupa",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 3.46,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-16",
+      "cover_url": "",
+      "url": "/news/2026-05-16-marrupa-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Marrupa, with a Z-Score of +3.46. This extreme weather event has reached a critical level."
+    },
+    {
       "slug": "2026-05-16-maha-sarakham-heat-wave",
       "title": "Maha Sarakham Heat Wave",
       "lead": "Maha Sarakham is experiencing a severe heat wave with a Z-Score of +3.83. The city's heat wave has reached a critical level with a score of 10.0/10....",
@@ -256,51 +301,6 @@
       "cover_url": "",
       "url": "/news/2026-05-16-herstal-heavy-rain/",
       "excerpt": "Herstal is experiencing heavy rain with a Z-Score of -3.09, indicating a significant anomaly. This event has a critical score of 10.0/10, requiring immediate attention."
-    },
-    {
-      "slug": "2026-05-16-dolo-odo-heat-wave",
-      "title": "Dolo Odo Heat Wave",
-      "lead": "Dolo Odo is experiencing a severe heat wave with a Z-Score of +3.71. This critical event has a score of 10.0/10, indicating extreme conditions....",
-      "location": "Dolo Odo",
-      "country_code": "eu",
-      "vertical": "heat-wave",
-      "z_score": 3.71,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-16",
-      "cover_url": "https://images.unsplash.com/photo-1569361248297-57f7c7df72cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg5MTIzNTJ8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-16-dolo-odo-heat-wave/",
-      "excerpt": "Dolo Odo is experiencing a severe heat wave with a Z-Score of +3.71. This critical event has a score of 10.0/10, indicating extreme conditions."
-    },
-    {
-      "slug": "2026-05-16-dohazari-heat-wave",
-      "title": "Dohazāri Heat Wave",
-      "lead": "A severe heat wave is affecting Dohazāri, with a Z-Score of +3.54. This anomaly has reached a critical level with a score of 10.0/10....",
-      "location": "Dohazāri",
-      "country_code": "bd",
-      "vertical": "heat-wave",
-      "z_score": 3.54,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-16",
-      "cover_url": "",
-      "url": "/news/2026-05-16-dohazari-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Dohazāri, with a Z-Score of +3.54. This anomaly has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-16-dank-heat-wave",
-      "title": "Ḑank Heat Wave",
-      "lead": "Ḑank is experiencing a severe heat wave with a Z-Score of +5.09. This extreme weather event has reached a critical level with a score of 10.0/10....",
-      "location": "Ḑank",
-      "country_code": "eu",
-      "vertical": "heat-wave",
-      "z_score": 5.09,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-16",
-      "cover_url": "https://images.unsplash.com/photo-1768805465533-418fb993e46c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg5MTIzNjZ8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-16-dank-heat-wave/",
-      "excerpt": "Ḑank is experiencing a severe heat wave with a Z-Score of +5.09. This extreme weather event has reached a critical level with a score of 10.0/10."
     }
   ]
 }
