@@ -879,3 +879,114 @@ async def get_signals(slug: str):
     result["sources"] = ["WeatherArb/Open-Meteo", "Open-Meteo AQ", "USGS Earthquakes"]
     result["timestamp"] = datetime.now(timezone.utc).isoformat()
     return result
+
+# ─── DAILY WEATHER CARD ───────────────────────────────────────────────────────
+@app.get("/api/v1/today/{slug}")
+async def daily_card(slug: str):
+    """Daily Weather Card: rarity + health score + world rank"""
+    import re, unicodedata, math
+
+    s = unicodedata.normalize("NFKD", slug.lower()).encode("ascii","ignore").decode("ascii")
+    s = re.sub(r"[^\w-]","", s.replace(" ","-"))
+
+    # Find in cache
+    top = _top_cache.get("top", [])
+    city_data = next((n for n in top if
+        re.sub(r"[^\w-]","", unicodedata.normalize("NFKD", n["location"].lower()).encode("ascii","ignore").decode("ascii").replace(" ","-")) == s
+    ), None)
+
+    if not city_data:
+        raise HTTPException(404, "City not found or not yet cached")
+
+    z = city_data.get("z_score", 0)
+    score = city_data.get("score", 0)
+    temp = city_data.get("temperature_c", 20)
+    hum = city_data.get("humidity_pct", 60)
+    wind = city_data.get("wind_kmh", 10)
+    az = abs(z)
+
+    # 1. RARITY — how rare is today's weather
+    if az >= 4:   rarity_pct, rarity_label, rarity_color = 0.003, "Evento storico", "#FF006E"
+    elif az >= 3: rarity_pct, rarity_label, rarity_color = 0.3,   "Rarissimo", "#ef4444"
+    elif az >= 2: rarity_pct, rarity_label, rarity_color = 2.3,   "Insolito", "#f97316"
+    elif az >= 1: rarity_pct, rarity_label, rarity_color = 15.9,  "Non comune", "#f59e0b"
+    else:         rarity_pct, rarity_label, rarity_color = 68.0,  "Normale", "#10b981"
+    occurs_per_year = round(365 * rarity_pct / 100, 1)
+
+    # 2. OUTDOOR ACTIVITY SCORE (0-100)
+    activity = 100
+    if temp > 35: activity -= 40
+    elif temp > 30: activity -= 20
+    elif temp < 0: activity -= 35
+    elif temp < 5: activity -= 15
+    if wind > 60: activity -= 30
+    elif wind > 40: activity -= 15
+    elif wind > 25: activity -= 5
+    if hum > 85: activity -= 15
+    elif hum > 70: activity -= 5
+    if hum < 20: activity -= 10
+    activity = max(0, min(100, activity))
+    if activity >= 80:   activity_label, activity_icon = "Perfetto per uscire", "🏃"
+    elif activity >= 60: activity_label, activity_icon = "Buono", "🚶"
+    elif activity >= 40: activity_label, activity_icon = "Discreto", "⚠️"
+    elif activity >= 20: activity_label, activity_icon = "Difficile", "🌧️"
+    else:                activity_label, activity_icon = "Resta a casa", "🏠"
+
+    # 3. HEALTH SCORE
+    health = 100
+    if temp > 38: health -= 40
+    elif temp > 33: health -= 20
+    elif temp < -10: health -= 35
+    elif temp < 0: health -= 15
+    if hum > 90: health -= 20
+    elif hum > 80: health -= 10
+    if wind > 70: health -= 15
+    if az >= 3: health -= 20
+    elif az >= 2: health -= 10
+    health = max(0, min(100, health))
+    if health >= 80:   health_label = "Ottimale per la salute"
+    elif health >= 60: health_label = "Accettabile"
+    elif health >= 40: health_label = "Attenzione"
+    else:              health_label = "Rischio per la salute"
+
+    # 4. WORLD RANK
+    sorted_top = sorted(top, key=lambda x: -abs(x.get("z_score",0)))
+    world_rank = next((i+1 for i,n in enumerate(sorted_top) if
+        re.sub(r"[^\w-]","", unicodedata.normalize("NFKD", n["location"].lower()).encode("ascii","ignore").decode("ascii").replace(" ","-")) == s
+    ), None)
+    total_cities = len(top)
+
+    # 5. HUMAN DESCRIPTION
+    city_name = city_data["location"]
+    if z >= 3:   desc = f"🔥 {city_name} vive oggi un'ondata di calore estrema che accade meno di {rarity_pct:.1f}% delle volte — circa {occurs_per_year} giorni all'anno."
+    elif z >= 2: desc = f"🌡️ {city_name} è significativamente più calda del solito. Un evento che si verifica circa {occurs_per_year} giorni l'anno."
+    elif z <= -3: desc = f"❄️ {city_name} vive oggi un'ondata di freddo estrema rarissima — circa {occurs_per_year} giorni all'anno."
+    elif z <= -2: desc = f"🧊 {city_name} è significativamente più fredda del normale, circa {occurs_per_year} giorni così all'anno."
+    else:         desc = f"✅ Il meteo di {city_name} oggi è nella norma stagionale. Nessuna anomalia rilevante."
+
+    return {
+        "city": city_name,
+        "country_code": city_data.get("country_code",""),
+        "z_score": round(z, 2),
+        "rarity": {
+            "percent": rarity_pct,
+            "label": rarity_label,
+            "color": rarity_color,
+            "occurs_per_year": occurs_per_year,
+            "description": desc
+        },
+        "outdoor": {
+            "score": activity,
+            "label": activity_label,
+            "icon": activity_icon
+        },
+        "health": {
+            "score": health,
+            "label": health_label
+        },
+        "world_rank": world_rank,
+        "total_cities": total_cities,
+        "top_percentile": round((1 - (world_rank or total_cities)/total_cities)*100, 1) if world_rank else 0,
+        "temperature_c": temp,
+        "timestamp": datetime.now(timezone.utc).isoformat()
+    }
