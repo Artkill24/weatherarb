@@ -304,6 +304,30 @@ def refresh_all():
         pass
     _last_refresh = now
     logger.info(f"Refresh complete: {count} provinces cached")
+    # Save to Supabase for persistence
+    if top_list:
+        sb_data = []
+        for city in top_list:
+            import unicodedata, re
+            slug = unicodedata.normalize("NFKD", city["location"].lower()).encode("ascii","ignore").decode("ascii")
+            slug = re.sub(r"[^\w-]","", slug.replace(" ","-"))
+            sb_data.append({
+                "slug": slug,
+                "location": city.get("location",""),
+                "country_code": city.get("country_code",""),
+                "lat": city.get("lat",0), "lon": city.get("lon",0),
+                "z_score": city.get("z_score",0), "score": city.get("score",0),
+                "anomaly_level": city.get("anomaly_level","NORMAL"),
+                "event_type": city.get("event_type","normal"),
+                "temperature_c": city.get("temperature_c"),
+                "humidity_pct": city.get("humidity_pct"),
+                "wind_kmh": city.get("wind_kmh"),
+                "hdd": city.get("hdd"), "cdd": city.get("cdd"),
+                "hdd_delta": city.get("hdd_delta"),
+                "precipitation_mm": city.get("precipitation_mm",0),
+                "updated_at": datetime.now(timezone.utc).isoformat()
+            })
+        save_weather_cache_supabase(sb_data)
 
 def _cc(country):
     m = {"Italy":"it","Germany":"de","France":"fr","Spain":"es","United Kingdom":"gb",
@@ -315,6 +339,59 @@ def _cc(country):
     return m.get(country, "eu")
 
 # ─── SUPABASE HELPERS ─────────────────────────────────────────────────────────
+def save_weather_cache_supabase(cities_data: list):
+    """Save weather cache to Supabase for persistence"""
+    if not SUPABASE_URL or not SUPABASE_KEY: return
+    try:
+        url = f"{SUPABASE_URL}/rest/v1/weather_cache"
+        headers = {"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}",
+                   "Content-Type": "application/json", "Prefer": "resolution=merge-duplicates"}
+        batch_size = 200
+        for i in range(0, len(cities_data), batch_size):
+            batch = cities_data[i:i+batch_size]
+            req_lib.post(url, json=batch, headers=headers, timeout=15)
+        logger.info(f"Saved {len(cities_data)} cities to Supabase cache")
+    except Exception as e:
+        logger.error(f"Supabase cache save error: {e}")
+
+def load_weather_cache_supabase(slug: str) -> dict:
+    """Load single city from Supabase cache"""
+    if not SUPABASE_URL or not SUPABASE_KEY: return {}
+    try:
+        url = f"{SUPABASE_URL}/rest/v1/weather_cache"
+        headers = {"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"}
+        r = req_lib.get(url, headers=headers,
+                        params={"slug": f"eq.{slug}", "select": "*", "limit": "1"}, timeout=8)
+        data = r.json()
+        if data and isinstance(data, list) and len(data) > 0:
+            d = data[0]
+            return {
+                "location": d.get("location",""),
+                "country_code": d.get("country_code",""),
+                "lat": d.get("lat",0), "lon": d.get("lon",0),
+                "z_score": d.get("z_score",0), "score": d.get("score",0),
+                "anomaly_level": d.get("anomaly_level","NORMAL"),
+                "event_type": d.get("event_type","normal"),
+                "temperature_c": d.get("temperature_c"), "humidity_pct": d.get("humidity_pct"),
+                "wind_kmh": d.get("wind_kmh"), "hdd": d.get("hdd"), "cdd": d.get("cdd"),
+                "hdd_delta": d.get("hdd_delta"), "precipitation_mm": d.get("precipitation_mm"),
+            }
+    except Exception as e:
+        logger.error(f"Supabase cache load error: {e}")
+    return {}
+
+def load_top_from_supabase(limit=500) -> list:
+    """Load top anomalies from Supabase"""
+    if not SUPABASE_URL or not SUPABASE_KEY: return []
+    try:
+        url = f"{SUPABASE_URL}/rest/v1/weather_cache"
+        headers = {"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"}
+        r = req_lib.get(url, headers=headers,
+                        params={"select": "*", "order": "score.desc", "limit": str(limit)}, timeout=10)
+        return r.json() if r.json() else []
+    except: return []
+
+
 def sb(method, table, data=None, params=None):
     if not SUPABASE_URL or not SUPABASE_KEY:
         return []
@@ -896,7 +973,12 @@ async def daily_card(slug: str):
     ), None)
 
     if not city_data:
-        raise HTTPException(404, "City not found or not yet cached")
+        # Try Supabase cache
+        sb = load_weather_cache_supabase(s)
+        if sb:
+            city_data = sb
+        else:
+            raise HTTPException(404, "City not found or not yet cached")
 
     z = city_data.get("z_score", 0)
     score = city_data.get("score", 0)
