@@ -429,7 +429,7 @@ def save(sig, content):
     </div>
     <div class="sidebar-box">
       <div class="sidebar-title">Intelligence per {city}</div>
-      <a href="/{cc}/{city_slug}/" style="display:block;background:var(--bl);color:#fff;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:700">Dashboard {city} &#8594;</a>
+      <a href="/globe" style="display:block;background:var(--bl);color:#fff;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:700">Dashboard {city} &#8594;</a>
     </div>
   </aside>
 </div>
