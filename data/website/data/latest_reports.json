@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-16T07:54:32.473663+00:00",
-  "count": 50,
+  "last_updated": "2026-05-16T09:26:57.060307+00:00",
+  "count": 58,
   "reports": [
     {
       "slug": "2026-05-16-vangviang-heat-wave",
@@ -18,6 +18,36 @@
       "excerpt": "A severe heat wave is affecting Vangviang with a Z-Score of +3.83. This event has reached a critical level with a score of 10.0/10."
     },
     {
+      "slug": "2026-05-16-thol-heat-wave",
+      "title": "Thol Heat Wave",
+      "lead": "Thol is experiencing a severe heat wave with a Z-Score of +6.46. This extreme weather event has reached a critical level with a score of 10.0/10....",
+      "location": "Thol",
+      "country_code": "in",
+      "vertical": "heat-wave",
+      "z_score": 6.46,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-16",
+      "cover_url": "",
+      "url": "/news/2026-05-16-thol-heat-wave/",
+      "excerpt": "Thol is experiencing a severe heat wave with a Z-Score of +6.46. This extreme weather event has reached a critical level with a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-16-sokoura-heat-wave",
+      "title": "Sokoura Heat Wave",
+      "lead": "A severe heat wave is affecting Sokoura, with a Z-Score of +4.57. This extreme weather event has reached a critical level....",
+      "location": "Sokoura",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 4.57,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-16",
+      "cover_url": "",
+      "url": "/news/2026-05-16-sokoura-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Sokoura, with a Z-Score of +4.57. This extreme weather event has reached a critical level."
+    },
+    {
       "slug": "2026-05-16-si-sa-ket-heat-wave",
       "title": "Si Sa Ket Heat Wave",
       "lead": "A severe heat wave is affecting Si Sa Ket with a Z-Score of +3.74. The city is experiencing extremely high temperatures with a Score of 10.0/10....",
@@ -31,6 +61,21 @@
       "cover_url": "https://images.unsplash.com/photo-1593738839183-19a0e208c30f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg4OTg4Mzd8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-16-si-sa-ket-heat-wave/",
       "excerpt": "A severe heat wave is affecting Si Sa Ket with a Z-Score of +3.74. The city is experiencing extremely high temperatures with a Score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-16-salar-heat-wave",
+      "title": "Sālār heat wave",
+      "lead": "A severe heat wave is affecting Sālār with a Z-Score of +5.57. The city is experiencing extremely high temperatures, with a Score of 10.0/10....",
+      "location": "Sālār",
+      "country_code": "in",
+      "vertical": "heat-wave",
+      "z_score": 5.57,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-16",
+      "cover_url": "https://images.unsplash.com/photo-1735810565927-e1ba7468e4af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg5MjM2MDh8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-16-salar-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Sālār with a Z-Score of +5.57. The city is experiencing extremely high temperatures, with a Score of 10.0/10."
     },
     {
       "slug": "2026-05-16-narathiwat-heat-wave",
@@ -93,6 +138,21 @@
       "excerpt": "Montelimar sta sperimentando piogge intense con uno Z-Score di -3.06. Le condizioni meteo sono critiche."
     },
     {
+      "slug": "2026-05-16-mondoro-heat-wave",
+      "title": "Mondoro Heat Wave",
+      "lead": "Mondoro is experiencing a critical heat wave with a Z-Score of +4.66. This event has reached a score of 10.0/10, indicating extreme conditions....",
+      "location": "Mondoro",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 4.66,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-16",
+      "cover_url": "",
+      "url": "/news/2026-05-16-mondoro-heat-wave/",
+      "excerpt": "Mondoro is experiencing a critical heat wave with a Z-Score of +4.66. This event has reached a score of 10.0/10, indicating extreme conditions."
+    },
+    {
       "slug": "2026-05-16-molina-heavy-rain",
       "title": "Molina: Heavy Rain",
       "lead": "La citta di Molina e colpita da forti piogge. Il livello di criticita e alto....",
@@ -123,6 +183,21 @@
       "excerpt": "Maha Sarakham is experiencing a severe heat wave with a Z-Score of +3.83. The city's heat wave has reached a critical level with a score of 10.0/10."
     },
     {
+      "slug": "2026-05-16-limbdi-heat-wave",
+      "title": "Limbdi Heat Wave",
+      "lead": "A severe heat wave is affecting Limbdi with a Z-Score of +6.63. The heat wave has reached a critical level with a score of 10.0/10....",
+      "location": "Limbdi",
+      "country_code": "in",
+      "vertical": "heat-wave",
+      "z_score": 6.63,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-16",
+      "cover_url": "",
+      "url": "/news/2026-05-16-limbdi-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Limbdi with a Z-Score of +6.63. The heat wave has reached a critical level with a score of 10.0/10."
+    },
+    {
       "slug": "2026-05-16-kimbe-heat-wave",
       "title": "Kimbe Heat Wave",
       "lead": "Kimbe is experiencing a critical heat wave with a Z-Score of +3.69. This event has a score of 10.0/10, indicating extreme conditions....",
@@ -136,6 +211,36 @@
       "cover_url": "",
       "url": "/news/2026-05-16-kimbe-heat-wave/",
       "excerpt": "Kimbe is experiencing a critical heat wave with a Z-Score of +3.69. This event has a score of 10.0/10, indicating extreme conditions."
+    },
+    {
+      "slug": "2026-05-16-kharik-heat-wave",
+      "title": "Kharik Heat Wave",
+      "lead": "A severe heat wave is affecting Kharik, with a Z-Score of +4.66. This event has reached a critical level with a score of 10.0/10....",
+      "location": "Kharik",
+      "country_code": "in",
+      "vertical": "heat-wave",
+      "z_score": 4.66,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-16",
+      "cover_url": "https://images.unsplash.com/photo-1664934997719-c54094834122?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg5MjM2MDJ8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-16-kharik-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Kharik, with a Z-Score of +4.66. This event has reached a critical level with a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-16-jajpur-heat-wave",
+      "title": "Jajpur Heat Wave",
+      "lead": "Jajpur is experiencing a critical heat wave with a Z-Score of +5.97. This anomaly has reached a score of 10.0/10, indicating extreme conditions....",
+      "location": "Jājpur",
+      "country_code": "in",
+      "vertical": "heat-wave",
+      "z_score": 5.97,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-16",
+      "cover_url": "",
+      "url": "/news/2026-05-16-jajpur-heat-wave/",
+      "excerpt": "Jajpur is experiencing a critical heat wave with a Z-Score of +5.97. This anomaly has reached a score of 10.0/10, indicating extreme conditions."
     },
     {
       "slug": "2026-05-16-herstal-heavy-rain",
@@ -196,111 +301,6 @@
       "cover_url": "https://images.unsplash.com/photo-1768805465533-418fb993e46c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg5MTIzNjZ8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-16-dank-heat-wave/",
       "excerpt": "Ḑank is experiencing a severe heat wave with a Z-Score of +5.09. This extreme weather event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-16-dacun-heat-wave",
-      "title": "Dacun Heat Wave",
-      "lead": "A severe heat wave is affecting Dacun with a Z-Score of +3.66. This critical event has a score of 10.0/10....",
-      "location": "Dacun",
-      "country_code": "tw",
-      "vertical": "heat-wave",
-      "z_score": 3.66,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-16",
-      "cover_url": "",
-      "url": "/news/2026-05-16-dacun-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Dacun with a Z-Score of +3.66. This critical event has a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-16-batken-heat-wave",
-      "title": "Batken heat wave",
-      "lead": "A severe heat wave is affecting Batken, with a Z-Score of +3.29. This critical event has a score of 10.0/10, indicating extreme conditions....",
-      "location": "Batken",
-      "country_code": "eu",
-      "vertical": "heat-wave",
-      "z_score": 3.29,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-16",
-      "cover_url": "",
-      "url": "/news/2026-05-16-batken-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Batken, with a Z-Score of +3.29. This critical event has a score of 10.0/10, indicating extreme conditions."
-    },
-    {
-      "slug": "2026-05-16-baharly-heat-wave",
-      "title": "Baharly Heat Wave",
-      "lead": "A severe heat wave is affecting Baharly, with a Z-Score of +3.14. The city is experiencing extremely high temperatures, with a Score of 10.0/10....",
-      "location": "Baharly",
-      "country_code": "eu",
-      "vertical": "heat-wave",
-      "z_score": 3.14,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-16",
-      "cover_url": "https://images.unsplash.com/photo-1724320572821-2c0b73357e0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg5MTIzNTl8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-16-baharly-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Baharly, with a Z-Score of +3.14. The city is experiencing extremely high temperatures, with a Score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-15-zira-cold-snap",
-      "title": "Zira Cold Snap Hits",
-      "lead": "A cold snap has hit Zira with a Z-Score of -1.50, indicating an unusual weather event. The city is experiencing a significant drop in temperature, with an HDD o...",
-      "location": "Zīra",
-      "country_code": "in",
-      "vertical": "cold-snap",
-      "z_score": -1.5,
-      "score": 5.0,
-      "anomaly_level": "UNUSUAL",
-      "date": "2026-05-15",
-      "cover_url": "https://images.unsplash.com/photo-1579584928936-c1a8f43ed3e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg4NDAyNzd8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-15-zira-cold-snap/",
-      "excerpt": "A cold snap has hit Zira with a Z-Score of -1.50, indicating an unusual weather event. The city is experiencing a significant drop in temperature, with an HDD of 3.0 GG."
-    },
-    {
-      "slug": "2026-05-15-yalamakuru-heat-wave",
-      "title": "Yalamakūru Heat Wave",
-      "lead": "A severe heat wave is affecting Yalamakūru with a Z-Score of +3.63. This critical event has a score of 10.0/10....",
-      "location": "Yalamakūru",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 3.63,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-15",
-      "cover_url": "",
-      "url": "/news/2026-05-15-yalamakuru-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Yalamakūru with a Z-Score of +3.63. This critical event has a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-15-vellakkovil-heat-wave",
-      "title": "Vellakkovil Heat Wave",
-      "lead": "A severe heat wave is affecting Vellakkovil with a Z-Score of +3.09. The city is experiencing extremely high temperatures, with a Score of 10.0/10....",
-      "location": "Vellakkovil",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 3.09,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-15",
-      "cover_url": "",
-      "url": "/news/2026-05-15-vellakkovil-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Vellakkovil with a Z-Score of +3.09. The city is experiencing extremely high temperatures, with a Score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-15-vejalpur-heat-wave",
-      "title": "Vejalpur Heat Wave",
-      "lead": "Vejalpur is experiencing a severe heat wave with a Z-Score of +4.34. This critical event has reached a score of 10.0/10....",
-      "location": "Vejalpur",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 4.34,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-15",
-      "cover_url": "",
-      "url": "/news/2026-05-15-vejalpur-heat-wave/",
-      "excerpt": "Vejalpur is experiencing a severe heat wave with a Z-Score of +4.34. This critical event has reached a score of 10.0/10."
     }
   ]
 }
