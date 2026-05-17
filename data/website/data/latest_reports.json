@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-17T13:03:57.689068+00:00",
-  "count": 50,
+  "last_updated": "2026-05-17T13:10:53.060139+00:00",
+  "count": 58,
   "reports": [
     {
       "slug": "2026-05-17-vangviang-heat-wave",
@@ -91,6 +91,21 @@
       "cover_url": "",
       "url": "/news/2026-05-17-phuntsholing-heat-wave/",
       "excerpt": "Phuntsholing is experiencing a critical heat wave with a Z-Score of +3.06. The city's temperature has reached extreme levels, with a Score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-17-phularwan-heat-wave",
+      "title": "Phularwan Heat Wave",
+      "lead": "Phularwan is experiencing a severe heat wave with a Z-Score of +4.69. This critical event has a score of 10.0/10....",
+      "location": "Phularwan",
+      "country_code": "pk",
+      "vertical": "heat-wave",
+      "z_score": 4.69,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-17",
+      "cover_url": "",
+      "url": "/news/2026-05-17-phularwan-heat-wave/",
+      "excerpt": "Phularwan is experiencing a severe heat wave with a Z-Score of +4.69. This critical event has a score of 10.0/10."
     },
     {
       "slug": "2026-05-17-panchari-bazar-heat-wave",
@@ -198,6 +213,36 @@
       "excerpt": "A severe heat wave is affecting Lower Bicutan with a Z-Score of +3.23. The event has reached a critical level with a score of 10.0/10."
     },
     {
+      "slug": "2026-05-17-los-bajos-heavy-rain",
+      "title": "Los Bajos pioggia forte",
+      "lead": "La citta di Los Bajos sta subendo un evento di pioggia forte. Il Z-Score di -3.17 indica un evento estremamente anomalo....",
+      "location": "Los Bajos",
+      "country_code": "cl",
+      "vertical": "heavy-rain",
+      "z_score": -3.17,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-17",
+      "cover_url": "",
+      "url": "/news/2026-05-17-los-bajos-heavy-rain/",
+      "excerpt": "La citta di Los Bajos sta subendo un evento di pioggia forte. Il Z-Score di -3.17 indica un evento estremamente anomalo."
+    },
+    {
+      "slug": "2026-05-17-lodhran-heat-wave",
+      "title": "Lodhran Heat Wave",
+      "lead": "A severe heat wave is affecting Lodhran, with a Z-Score of +6.23. This critical event has a Score of 10.0/10, indicating extreme conditions....",
+      "location": "Lodhran",
+      "country_code": "pk",
+      "vertical": "heat-wave",
+      "z_score": 6.23,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-17",
+      "cover_url": "",
+      "url": "/news/2026-05-17-lodhran-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Lodhran, with a Z-Score of +6.23. This critical event has a Score of 10.0/10, indicating extreme conditions."
+    },
+    {
       "slug": "2026-05-17-libungan-heat-wave",
       "title": "Libungan Heat Wave",
       "lead": "A severe heat wave is affecting Libungan with a Z-Score of +3.14. The score of 10.0/10 indicates a critical level event....",
@@ -256,51 +301,6 @@
       "cover_url": "https://images.unsplash.com/photo-1588097968756-647112637f13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzkwMTEwMjF8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-17-kut-e-abdollah-heat-wave/",
       "excerpt": "A severe heat wave is affecting Kūt-e ‘Abdollāh with a Z-Score of +4.29. This event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-17-kobo-heat-wave",
-      "title": "Kobo Heat Wave",
-      "lead": "A severe heat wave is affecting Kobo with a Z-Score of +3.26. The heat wave has reached a critical level with a score of 10.0/10....",
-      "location": "Kobo",
-      "country_code": "eu",
-      "vertical": "heat-wave",
-      "z_score": 3.26,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-17",
-      "cover_url": "",
-      "url": "/news/2026-05-17-kobo-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Kobo with a Z-Score of +3.26. The heat wave has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-17-iradan-heat-wave",
-      "title": "Iradan Heat Wave",
-      "lead": "Iradan is experiencing a critical heat wave with a Z-Score of +3.63. This event has reached a score of 10.0/10, indicating extreme conditions....",
-      "location": "Iradan",
-      "country_code": "eu",
-      "vertical": "heat-wave",
-      "z_score": 3.63,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-17",
-      "cover_url": "",
-      "url": "/news/2026-05-17-iradan-heat-wave/",
-      "excerpt": "Iradan is experiencing a critical heat wave with a Z-Score of +3.63. This event has reached a score of 10.0/10, indicating extreme conditions."
-    },
-    {
-      "slug": "2026-05-17-general-tinio-heat-wave",
-      "title": "General Tinio Heat Wave",
-      "lead": "A severe heat wave is affecting General Tinio with a Z-Score of +3.43. This critical event has a score of 10.0/10....",
-      "location": "General Tinio",
-      "country_code": "ph",
-      "vertical": "heat-wave",
-      "z_score": 3.43,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-17",
-      "cover_url": "",
-      "url": "/news/2026-05-17-general-tinio-heat-wave/",
-      "excerpt": "A severe heat wave is affecting General Tinio with a Z-Score of +3.43. This critical event has a score of 10.0/10."
     }
   ]
 }
