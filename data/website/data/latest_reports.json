@@ -1,7 +1,22 @@
 {
-  "last_updated": "2026-05-19T14:44:10.440794+00:00",
-  "count": 50,
+  "last_updated": "2026-05-19T14:52:05.199250+00:00",
+  "count": 58,
   "reports": [
+    {
+      "slug": "2026-05-19-zalingei-heat-wave",
+      "title": "Zalingei Heat Wave",
+      "lead": "A severe heat wave is affecting Zalingei with a Z-Score of +6.06. This event is classified as CRITICAL with a Score of 10.0/10....",
+      "location": "Zalingei",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 6.06,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-19",
+      "cover_url": "",
+      "url": "/news/2026-05-19-zalingei-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Zalingei with a Z-Score of +6.06. This event is classified as CRITICAL with a Score of 10.0/10."
+    },
     {
       "slug": "2026-05-19-wisil-heat-wave",
       "title": "Wisil Heat Wave",
@@ -153,6 +168,21 @@
       "excerpt": "Pithampur is experiencing a severe heat wave with a Z-Score of +4.37. This event has reached a critical level with a score of 10.0/10."
     },
     {
+      "slug": "2026-05-19-moron-de-la-frontera-heat-wave",
+      "title": "Moron de la Frontera heat wave",
+      "lead": "Una forte ondata di caldo colpisce Moron de la Frontera con un Z-Score di +3.49. La situazione e' critica con un punteggio di 10.0/10....",
+      "location": "Morón de la Frontera",
+      "country_code": "es",
+      "vertical": "heat-wave",
+      "z_score": 3.49,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-19",
+      "cover_url": "",
+      "url": "/news/2026-05-19-moron-de-la-frontera-heat-wave/",
+      "excerpt": "Una forte ondata di caldo colpisce Moron de la Frontera con un Z-Score di +3.49. La situazione e' critica con un punteggio di 10.0/10."
+    },
+    {
       "slug": "2026-05-19-magelang-heat-wave",
       "title": "Magelang Heat Wave",
       "lead": "A severe heat wave is affecting Magelang with a Z-Score of +3.14. The city is experiencing extremely high temperatures....",
@@ -166,6 +196,36 @@
       "cover_url": "",
       "url": "/news/2026-05-19-magelang-heat-wave/",
       "excerpt": "A severe heat wave is affecting Magelang with a Z-Score of +3.14. The city is experiencing extremely high temperatures."
+    },
+    {
+      "slug": "2026-05-19-kot-mumin-heat-wave",
+      "title": "Kot Mumin Heat Wave",
+      "lead": "A severe heat wave is affecting Kot Mumin with a Z-Score of +4.09. This event has reached a critical level with a score of 10.0/10....",
+      "location": "Kot Mumin",
+      "country_code": "pk",
+      "vertical": "heat-wave",
+      "z_score": 4.09,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-19",
+      "cover_url": "",
+      "url": "/news/2026-05-19-kot-mumin-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Kot Mumin with a Z-Score of +4.09. This event has reached a critical level with a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-19-khejroli-heat-wave",
+      "title": "Khejroli Heat Wave",
+      "lead": "Khejroli is experiencing a severe heat wave with a Z-Score of +5.06. This extreme weather event has reached a critical level with a score of 10.0/10....",
+      "location": "Khejroli",
+      "country_code": "in",
+      "vertical": "heat-wave",
+      "z_score": 5.06,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-19",
+      "cover_url": "",
+      "url": "/news/2026-05-19-khejroli-heat-wave/",
+      "excerpt": "Khejroli is experiencing a severe heat wave with a Z-Score of +5.06. This extreme weather event has reached a critical level with a score of 10.0/10."
     },
     {
       "slug": "2026-05-19-ijui-heavy-rain",
@@ -241,66 +301,6 @@
       "cover_url": "",
       "url": "/news/2026-05-19-gashua-heat-wave/",
       "excerpt": "A severe heat wave is affecting Gashua, with a Z-Score of +3.29. This critical event has a score of 10.0/10, indicating extreme conditions."
-    },
-    {
-      "slug": "2026-05-19-ed-damer-heat-wave",
-      "title": "Ed Damer Heat Wave",
-      "lead": "A severe heat wave is affecting Ed Damer with a Z-Score of +5.91. This critical event has a score of 10.0/10....",
-      "location": "Ed Damer",
-      "country_code": "eu",
-      "vertical": "heat-wave",
-      "z_score": 5.91,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-19",
-      "cover_url": "",
-      "url": "/news/2026-05-19-ed-damer-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Ed Damer with a Z-Score of +5.91. This critical event has a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-19-chirala-heat-wave",
-      "title": "Chirala Heat Wave",
-      "lead": "A severe heat wave is affecting Chirala with a Z-Score of +4.57. This critical event has a score of 10.0/10....",
-      "location": "Chīrāla",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 4.57,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-19",
-      "cover_url": "",
-      "url": "/news/2026-05-19-chirala-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Chirala with a Z-Score of +4.57. This critical event has a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-19-broomfield-heavy-rain",
-      "title": "Broomfield Heavy Rain",
-      "lead": "A critical heavy rain event is affecting Broomfield, with a Z-Score of -4.11. This extreme weather anomaly has a score of 10.0/10, indicating a highly unusual o...",
-      "location": "Broomfield",
-      "country_code": "us",
-      "vertical": "heavy-rain",
-      "z_score": -4.11,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-19",
-      "cover_url": "",
-      "url": "/news/2026-05-19-broomfield-heavy-rain/",
-      "excerpt": "A critical heavy rain event is affecting Broomfield, with a Z-Score of -4.11. This extreme weather anomaly has a score of 10.0/10, indicating a highly unusual occurrence."
-    },
-    {
-      "slug": "2026-05-19-basirhat-heat-wave",
-      "title": "Basirhat Heat Wave",
-      "lead": "A severe heat wave is affecting Basirhat with a Z-Score of +4.14. The city is experiencing extremely high temperatures, with a Score of 10.0/10....",
-      "location": "Basīrhat",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 4.14,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-19",
-      "cover_url": "",
-      "url": "/news/2026-05-19-basirhat-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Basirhat with a Z-Score of +4.14. The city is experiencing extremely high temperatures, with a Score of 10.0/10."
     }
   ]
 }
