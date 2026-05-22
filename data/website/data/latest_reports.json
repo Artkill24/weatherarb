@@ -1,7 +1,22 @@
 {
-  "last_updated": "2026-05-22T14:30:22.603576+00:00",
-  "count": 58,
+  "last_updated": "2026-05-22T17:48:58.969327+00:00",
+  "count": 66,
   "reports": [
+    {
+      "slug": "2026-05-22-zalingei-heat-wave",
+      "title": "Zalingei Heat Wave",
+      "lead": "A severe heat wave is affecting Zalingei with a Z-Score of +3.63. Temperatures are critically high, reaching a Score of 10.0/10....",
+      "location": "Zalingei",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 3.63,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-22",
+      "cover_url": "",
+      "url": "/news/2026-05-22-zalingei-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Zalingei with a Z-Score of +3.63. Temperatures are critically high, reaching a Score of 10.0/10."
+    },
     {
       "slug": "2026-05-22-thol-heat-wave",
       "title": "Thol Heat Wave",
@@ -78,6 +93,21 @@
       "excerpt": "A severe heat wave is affecting Shaqra, with a Z-Score of +5.26. This event has reached a critical level with a score of 10.0/10."
     },
     {
+      "slug": "2026-05-22-sens-heat-wave",
+      "title": "Sens: ondata di caldo",
+      "lead": "Sens sta vivendo un'ondata di caldo estremo con un Z-Score di +3.14. Le condizioni sono critiche con un punteggio di 10.0/10....",
+      "location": "Sens",
+      "country_code": "fr",
+      "vertical": "heat-wave",
+      "z_score": 3.14,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-22",
+      "cover_url": "https://images.unsplash.com/photo-1687159827919-eb6127a4240c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk0NzIxMjN8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-22-sens-heat-wave/",
+      "excerpt": "Sens sta vivendo un'ondata di caldo estremo con un Z-Score di +3.14. Le condizioni sono critiche con un punteggio di 10.0/10."
+    },
+    {
       "slug": "2026-05-22-salar-heavy-rain",
       "title": "Sālār Heavy Rain",
       "lead": "Sālār is experiencing a critical heavy rain event with a Z-Score of +3.34. The Score is 10.0/10, indicating extreme conditions....",
@@ -138,6 +168,21 @@
       "excerpt": "La citta di Rafaela e colpita da una pioggia forte con uno Z-Score di -3.40. Questo evento e classificato come critico con un punteggio di 10.0/10."
     },
     {
+      "slug": "2026-05-22-paracuellos-de-jarama-heat-wave",
+      "title": "Paracuellos de Jarama heat wave",
+      "lead": "Ondata di caldo estrema a Paracuellos de Jarama con Z-Score +3.89. La temperatura e' criticamente alta....",
+      "location": "Paracuellos de Jarama",
+      "country_code": "es",
+      "vertical": "heat-wave",
+      "z_score": 3.89,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-22",
+      "cover_url": "",
+      "url": "/news/2026-05-22-paracuellos-de-jarama-heat-wave/",
+      "excerpt": "Ondata di caldo estrema a Paracuellos de Jarama con Z-Score +3.89. La temperatura e' criticamente alta."
+    },
+    {
       "slug": "2026-05-22-palimbang-heavy-rain",
       "title": "Palimbang Heavy Rain",
       "lead": "Palimbang is experiencing a critical heavy rain event with a Z-Score of +3.03. The Score is 10.0/10, indicating extreme weather conditions....",
@@ -166,6 +211,21 @@
       "cover_url": "",
       "url": "/news/2026-05-22-narathiwat-heat-wave/",
       "excerpt": "Narathiwat is experiencing a severe heat wave with a Z-Score of +4.23. The city's heat wave has reached a critical level with a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-22-moron-de-la-frontera-heat-wave",
+      "title": "Moron de la Frontera onda di caldo",
+      "lead": "Ondata di caldo estrema a Moron de la Frontera. Z-Score di +4.97....",
+      "location": "Morón de la Frontera",
+      "country_code": "es",
+      "vertical": "heat-wave",
+      "z_score": 4.97,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-22",
+      "cover_url": "",
+      "url": "/news/2026-05-22-moron-de-la-frontera-heat-wave/",
+      "excerpt": "Ondata di caldo estrema a Moron de la Frontera. Z-Score di +4.97."
     },
     {
       "slug": "2026-05-22-mondoro-heat-wave",
@@ -241,66 +301,6 @@
       "cover_url": "",
       "url": "/news/2026-05-22-lemery-heat-wave/",
       "excerpt": "A critical heat wave is affecting Lemery with a Z-Score of +4.71. This extreme weather event has a score of 10.0/10, indicating severe conditions."
-    },
-    {
-      "slug": "2026-05-22-kharik-heat-wave",
-      "title": "Kharik Heat Wave",
-      "lead": "A severe heat wave is affecting Kharik with a Z-Score of +3.86. This event has reached a critical level with a score of 10.0/10....",
-      "location": "Kharik",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 3.86,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-22",
-      "cover_url": "https://images.unsplash.com/photo-1700463108339-de321b153f94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk0NjAyMDN8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-22-kharik-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Kharik with a Z-Score of +3.86. This event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-22-jose-maria-ezeiza-cold-snap",
-      "title": "Jose Maria Ezeiza cold snap",
-      "lead": "La citta di Jose Maria Ezeiza sta sperimentando un anomalo evento di cold snap. Il Z-Score di -3.29 indica una deviazione estremamente bassa dalle condizioni cl...",
-      "location": "José María Ezeiza",
-      "country_code": "ar",
-      "vertical": "cold-snap",
-      "z_score": -3.29,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-22",
-      "cover_url": "https://images.unsplash.com/photo-1704783901517-1d260411497e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk0MTgzNzZ8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-22-jose-maria-ezeiza-cold-snap/",
-      "excerpt": "La citta di Jose Maria Ezeiza sta sperimentando un anomalo evento di cold snap. Il Z-Score di -3.29 indica una deviazione estremamente bassa dalle condizioni climatiche normali."
-    },
-    {
-      "slug": "2026-05-22-jajpur-heat-wave",
-      "title": "Jājpur Heat Wave",
-      "lead": "A severe heat wave is affecting Jājpur, with a Z-Score of +4.94. This critical event has a score of 10.0/10, indicating extreme conditions....",
-      "location": "Jājpur",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 4.94,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-22",
-      "cover_url": "",
-      "url": "/news/2026-05-22-jajpur-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Jājpur, with a Z-Score of +4.94. This critical event has a score of 10.0/10, indicating extreme conditions."
-    },
-    {
-      "slug": "2026-05-22-general-mariano-alvarez-heat-wave",
-      "title": "General Mariano Alvarez Heat Wave",
-      "lead": "A severe heat wave is affecting General Mariano Alvarez, with extreme temperatures. The Z-Score of +4.34 indicates a highly unusual event....",
-      "location": "General Mariano Alvarez",
-      "country_code": "ph",
-      "vertical": "heat-wave",
-      "z_score": 4.34,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-22",
-      "cover_url": "https://images.unsplash.com/photo-1695574335279-b962607311ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk0MTgzNTN8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-22-general-mariano-alvarez-heat-wave/",
-      "excerpt": "A severe heat wave is affecting General Mariano Alvarez, with extreme temperatures. The Z-Score of +4.34 indicates a highly unusual event."
     }
   ]
 }
