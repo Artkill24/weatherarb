@@ -1,7 +1,37 @@
 {
-  "last_updated": "2026-05-23T13:08:15.694103+00:00",
-  "count": 50,
+  "last_updated": "2026-05-23T13:15:45.508416+00:00",
+  "count": 58,
   "reports": [
+    {
+      "slug": "2026-05-23-tiko-heat-wave",
+      "title": "Tiko Heat Wave",
+      "lead": "A severe heat wave is affecting Tiko with a Z-Score of +3.83. This critical event has a score of 10.0/10....",
+      "location": "Tiko",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 3.83,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-23",
+      "cover_url": "",
+      "url": "/news/2026-05-23-tiko-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Tiko with a Z-Score of +3.83. This critical event has a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-23-tambacounda-heat-wave",
+      "title": "Tambacounda Heat Wave",
+      "lead": "Tambacounda is experiencing a critical heat wave with a Z-Score of +6.20. This event has reached a score of 10.0/10, indicating extreme conditions....",
+      "location": "Tambacounda",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 6.2,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-23",
+      "cover_url": "",
+      "url": "/news/2026-05-23-tambacounda-heat-wave/",
+      "excerpt": "Tambacounda is experiencing a critical heat wave with a Z-Score of +6.20. This event has reached a score of 10.0/10, indicating extreme conditions."
+    },
     {
       "slug": "2026-05-23-sonipat-heat-wave",
       "title": "Sonipat Heat Wave",
@@ -168,6 +198,36 @@
       "excerpt": "Muzaffarpur is experiencing a severe heat wave with a Z-Score of +3.66. The city's temperature has reached critically high levels, scoring 10.0/10."
     },
     {
+      "slug": "2026-05-23-moju-heat-wave",
+      "title": "Moju Heat Wave",
+      "lead": "Moju is experiencing a severe heat wave with a Z-Score of +3.46. This critical event has a score of 10.0/10, indicating extreme conditions....",
+      "location": "Moju",
+      "country_code": "br",
+      "vertical": "heat-wave",
+      "z_score": 3.46,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-23",
+      "cover_url": "",
+      "url": "/news/2026-05-23-moju-heat-wave/",
+      "excerpt": "Moju is experiencing a severe heat wave with a Z-Score of +3.46. This critical event has a score of 10.0/10, indicating extreme conditions."
+    },
+    {
+      "slug": "2026-05-23-medenine-heat-wave",
+      "title": "Medenine Heat Wave",
+      "lead": "A severe heat wave is affecting Medenine, with a Z-Score of +3.14. This critical event has a score of 10.0/10....",
+      "location": "Medenine",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 3.14,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-23",
+      "cover_url": "https://images.unsplash.com/photo-1627936581689-51d511e520fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk1NDIxMjB8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-23-medenine-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Medenine, with a Z-Score of +3.14. This critical event has a score of 10.0/10."
+    },
+    {
       "slug": "2026-05-23-lalmonirhat-heat-wave",
       "title": "Lalmonirhat Heat Wave",
       "lead": "Lalmonirhat is experiencing a severe heat wave with a Z-Score of +4.00. This critical weather event has a score of 10.0/10....",
@@ -241,66 +301,6 @@
       "cover_url": "",
       "url": "/news/2026-05-23-kamarhati-heat-wave/",
       "excerpt": "A severe heat wave is affecting Kāmārhāti with a Z-Score of +4.00. This critical event has a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-23-guntakal-heat-wave",
-      "title": "Guntakal Heat Wave",
-      "lead": "A severe heat wave is affecting Guntakal, with a Z-Score of +4.86. This event has reached a critical level with a score of 10.0/10....",
-      "location": "Guntakal",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 4.86,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-23",
-      "cover_url": "",
-      "url": "/news/2026-05-23-guntakal-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Guntakal, with a Z-Score of +4.86. This event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-23-gashua-heat-wave",
-      "title": "Gashua Heat Wave",
-      "lead": "A severe heat wave is affecting Gashua with a Z-Score of +3.43. The city is experiencing extremely high temperatures....",
-      "location": "Gashua",
-      "country_code": "ng",
-      "vertical": "heat-wave",
-      "z_score": 3.43,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-23",
-      "cover_url": "",
-      "url": "/news/2026-05-23-gashua-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Gashua with a Z-Score of +3.43. The city is experiencing extremely high temperatures."
-    },
-    {
-      "slug": "2026-05-23-el-wak-heat-wave",
-      "title": "El Wak Heat Wave",
-      "lead": "El Wak is experiencing a severe heat wave with a Z-Score of +4.06. This extreme weather event has reached a critical level with a score of 10.0/10....",
-      "location": "El Wak",
-      "country_code": "ke",
-      "vertical": "heat-wave",
-      "z_score": 4.06,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-23",
-      "cover_url": "",
-      "url": "/news/2026-05-23-el-wak-heat-wave/",
-      "excerpt": "El Wak is experiencing a severe heat wave with a Z-Score of +4.06. This extreme weather event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-23-coyhaique-cold-snap",
-      "title": "Coyhaique cold snap",
-      "lead": "Una forte ondata di freddo colpisce Coyhaique. La temperatura e' anomala....",
-      "location": "Coyhaique",
-      "country_code": "cl",
-      "vertical": "cold-snap",
-      "z_score": -4.89,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-23",
-      "cover_url": "https://images.unsplash.com/photo-1709146785955-e3d738288b8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk1Mjk2Njd8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-23-coyhaique-cold-snap/",
-      "excerpt": "Una forte ondata di freddo colpisce Coyhaique. La temperatura e' anomala."
     }
   ]
 }
