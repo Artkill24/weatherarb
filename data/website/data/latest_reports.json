@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-24T13:07:41.854955+00:00",
-  "count": 50,
+  "last_updated": "2026-05-24T13:16:41.613507+00:00",
+  "count": 58,
   "reports": [
     {
       "slug": "2026-05-24-sablayan-heat-wave",
@@ -78,6 +78,21 @@
       "excerpt": "Nandyal is experiencing a severe heat wave with a Z-Score of +6.06. The event has reached a critical level with a score of 10.0/10."
     },
     {
+      "slug": "2026-05-24-nakhal-heat-wave",
+      "title": "Nakhal Heat Wave",
+      "lead": "Nakhal is experiencing a severe heat wave with a Z-Score of +6.34. This event has reached a critical level with a score of 10.0/10....",
+      "location": "Nakhal",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 6.34,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-24",
+      "cover_url": "",
+      "url": "/news/2026-05-24-nakhal-heat-wave/",
+      "excerpt": "Nakhal is experiencing a severe heat wave with a Z-Score of +6.34. This event has reached a critical level with a score of 10.0/10."
+    },
+    {
       "slug": "2026-05-24-morena-heat-wave",
       "title": "Morena Heat Wave",
       "lead": "A severe heat wave is affecting Morena with a Z-Score of +7.20. This extreme weather event has reached a critical level....",
@@ -138,6 +153,21 @@
       "excerpt": "La Reina sta sperimentando un anomalo abbassamento delle temperature. Il Z-Score di -3.20 indica un evento estremamente raro."
     },
     {
+      "slug": "2026-05-24-kobo-heat-wave",
+      "title": "Kobo Heat Wave",
+      "lead": "Kobo is experiencing a severe heat wave with a Z-Score of +4.40. This anomaly has reached a critical level with a score of 10.0/10....",
+      "location": "Kobo",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 4.4,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-24",
+      "cover_url": "",
+      "url": "/news/2026-05-24-kobo-heat-wave/",
+      "excerpt": "Kobo is experiencing a severe heat wave with a Z-Score of +4.40. This anomaly has reached a critical level with a score of 10.0/10."
+    },
+    {
       "slug": "2026-05-24-ketapang-heat-wave",
       "title": "Ketapang Heat Wave",
       "lead": "Ketapang is experiencing a severe heat wave with a Z-Score of +3.57. This critical event has a score of 10.0/10, indicating extreme conditions....",
@@ -183,6 +213,36 @@
       "excerpt": "A severe heat wave is affecting Karjat, with a Z-Score of +5.34. This critical event has a score of 10.0/10, indicating extreme conditions."
     },
     {
+      "slug": "2026-05-24-hara-gebeya-heat-wave",
+      "title": "Hāra Gebeya Heat Wave",
+      "lead": "A severe heat wave is affecting Hāra Gebeya with a Z-Score of +3.86. The city is experiencing extremely high temperatures, with a Score of 10.0/10....",
+      "location": "Hāra Gebeya",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 3.86,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-24",
+      "cover_url": "",
+      "url": "/news/2026-05-24-hara-gebeya-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Hāra Gebeya with a Z-Score of +3.86. The city is experiencing extremely high temperatures, with a Score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-24-finote-selam-heat-wave",
+      "title": "Finote Selam Heat Wave",
+      "lead": "Finote Selam is experiencing a critical heat wave with a Z-Score of +3.14. This extreme weather event has a Score of 10.0/10, indicating severe conditions....",
+      "location": "Finote Selam",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 3.14,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-24",
+      "cover_url": "",
+      "url": "/news/2026-05-24-finote-selam-heat-wave/",
+      "excerpt": "Finote Selam is experiencing a critical heat wave with a Z-Score of +3.14. This extreme weather event has a Score of 10.0/10, indicating severe conditions."
+    },
+    {
       "slug": "2026-05-24-durgapur-cold-snap",
       "title": "Durgapur Cold Snap",
       "lead": "Durgapur is experiencing a cold snap with a Z-Score of -1.50. This unusual event has a score of 5.0/10....",
@@ -198,6 +258,36 @@
       "excerpt": "Durgapur is experiencing a cold snap with a Z-Score of -1.50. This unusual event has a score of 5.0/10."
     },
     {
+      "slug": "2026-05-24-dolo-odo-heat-wave",
+      "title": "Dolo Odo Heat Wave",
+      "lead": "A severe heat wave is affecting Dolo Odo with a Z-Score of +5.00. The city is experiencing extremely high temperatures....",
+      "location": "Dolo Odo",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 5.0,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-24",
+      "cover_url": "https://images.unsplash.com/photo-1658503606413-9d822871835c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk2Mjg1ODF8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-24-dolo-odo-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Dolo Odo with a Z-Score of +5.00. The city is experiencing extremely high temperatures."
+    },
+    {
+      "slug": "2026-05-24-dank-heat-wave",
+      "title": "Ḑank Heat Wave",
+      "lead": "Ḑank is experiencing a severe heat wave with a Z-Score of +6.86. This anomaly has reached a critical level with a score of 10.0/10....",
+      "location": "Ḑank",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 6.86,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-24",
+      "cover_url": "https://images.unsplash.com/photo-1644221063262-0b09582c4c2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk2Mjg1OTl8&ixlib=rb-4.1.0&q=80&w=1080",
+      "url": "/news/2026-05-24-dank-heat-wave/",
+      "excerpt": "Ḑank is experiencing a severe heat wave with a Z-Score of +6.86. This anomaly has reached a critical level with a score of 10.0/10."
+    },
+    {
       "slug": "2026-05-24-daanbantayan-heat-wave",
       "title": "Daanbantayan Heat Wave",
       "lead": "A severe heat wave is affecting Daanbantayan with a Z-Score of +4.09. This critical event has a score of 10.0/10, indicating extreme conditions....",
@@ -211,96 +301,6 @@
       "cover_url": "",
       "url": "/news/2026-05-24-daanbantayan-heat-wave/",
       "excerpt": "A severe heat wave is affecting Daanbantayan with a Z-Score of +4.09. This critical event has a score of 10.0/10, indicating extreme conditions."
-    },
-    {
-      "slug": "2026-05-24-cusco-cold-snap",
-      "title": "Cusco Cold Snap",
-      "lead": "A cold snap is affecting Cusco, with temperatures lower than average. The Z-Score of -1.50 indicates an unusual event....",
-      "location": "Cusco",
-      "country_code": "eu",
-      "vertical": "cold-snap",
-      "z_score": -1.5,
-      "score": 5.0,
-      "anomaly_level": "UNUSUAL",
-      "date": "2026-05-24",
-      "cover_url": "https://images.unsplash.com/photo-1645740718470-c0fff41a1dc4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk1OTA5NjV8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-24-cusco-cold-snap/",
-      "excerpt": "A cold snap is affecting Cusco, with temperatures lower than average. The Z-Score of -1.50 indicates an unusual event."
-    },
-    {
-      "slug": "2026-05-24-city-of-calamba-cold-snap",
-      "title": "Calamba Cold Snap",
-      "lead": "A cold snap has hit Calamba with a Z-Score of -1.50. This unusual event has a score of 5.0/10....",
-      "location": "City of Calamba",
-      "country_code": "ph",
-      "vertical": "cold-snap",
-      "z_score": -1.5,
-      "score": 5.0,
-      "anomaly_level": "UNUSUAL",
-      "date": "2026-05-24",
-      "cover_url": "",
-      "url": "/news/2026-05-24-city-of-calamba-cold-snap/",
-      "excerpt": "A cold snap has hit Calamba with a Z-Score of -1.50. This unusual event has a score of 5.0/10."
-    },
-    {
-      "slug": "2026-05-24-chiniot-cold-snap",
-      "title": "Chiniot Cold Snap",
-      "lead": "A cold snap is affecting Chiniot with a Z-Score of -1.50. This unusual event has a score of 5.0/10....",
-      "location": "Chiniot",
-      "country_code": "pk",
-      "vertical": "cold-snap",
-      "z_score": -1.5,
-      "score": 5.0,
-      "anomaly_level": "UNUSUAL",
-      "date": "2026-05-24",
-      "cover_url": "https://images.unsplash.com/photo-1599125081616-3fee428fb52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk1OTA5NjF8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-24-chiniot-cold-snap/",
-      "excerpt": "A cold snap is affecting Chiniot with a Z-Score of -1.50. This unusual event has a score of 5.0/10."
-    },
-    {
-      "slug": "2026-05-24-chakradharpur-heat-wave",
-      "title": "Chakradharpur Heat Wave",
-      "lead": "Chakradharpur is experiencing a severe heat wave with a Z-Score of +6.29. This event has reached a critical level with a score of 10.0/10....",
-      "location": "Chakradharpur",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 6.29,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-24",
-      "cover_url": "",
-      "url": "/news/2026-05-24-chakradharpur-heat-wave/",
-      "excerpt": "Chakradharpur is experiencing a severe heat wave with a Z-Score of +6.29. This event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-24-cankaya-cold-snap",
-      "title": "Cankaya Cold Snap",
-      "lead": "A cold snap is affecting Cankaya with unusual temperatures. The Z-Score of -1.50 indicates a significant deviation from the norm....",
-      "location": "Çankaya",
-      "country_code": "tr",
-      "vertical": "cold-snap",
-      "z_score": -1.5,
-      "score": 5.0,
-      "anomaly_level": "UNUSUAL",
-      "date": "2026-05-24",
-      "cover_url": "",
-      "url": "/news/2026-05-24-cankaya-cold-snap/",
-      "excerpt": "A cold snap is affecting Cankaya with unusual temperatures. The Z-Score of -1.50 indicates a significant deviation from the norm."
-    },
-    {
-      "slug": "2026-05-24-bihta-cold-snap",
-      "title": "Bihtā Cold Snap",
-      "lead": "A cold snap has hit Bihtā with unusual temperatures. The Z-Score of -1.50 indicates a significant deviation from the norm....",
-      "location": "Bihtā",
-      "country_code": "in",
-      "vertical": "cold-snap",
-      "z_score": -1.5,
-      "score": 5.0,
-      "anomaly_level": "UNUSUAL",
-      "date": "2026-05-24",
-      "cover_url": "https://images.unsplash.com/photo-1642490128141-376b8bd6f3f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk1OTA5NTR8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-24-bihta-cold-snap/",
-      "excerpt": "A cold snap has hit Bihtā with unusual temperatures. The Z-Score of -1.50 indicates a significant deviation from the norm."
     }
   ]
 }
