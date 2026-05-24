@@ -1,7 +1,22 @@
 {
-  "last_updated": "2026-05-24T19:06:46.689566+00:00",
-  "count": 50,
+  "last_updated": "2026-05-24T20:50:31.167179+00:00",
+  "count": 58,
   "reports": [
+    {
+      "slug": "2026-05-24-zalingei-heat-wave",
+      "title": "Zalingei Heat Wave",
+      "lead": "A severe heat wave is affecting Zalingei with a Z-Score of +3.89. This event has reached a critical level with a score of 10.0/10....",
+      "location": "Zalingei",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 3.89,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-24",
+      "cover_url": "",
+      "url": "/news/2026-05-24-zalingei-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Zalingei with a Z-Score of +3.89. This event has reached a critical level with a score of 10.0/10."
+    },
     {
       "slug": "2026-05-24-thol-heat-wave",
       "title": "Thol Heat Wave",
@@ -46,6 +61,21 @@
       "cover_url": "https://images.unsplash.com/photo-1754343876496-b4255f79df16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk2NDE3Njd8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-24-schwabisch-hall-heat-wave/",
       "excerpt": "Schwaebsch Hall sta attraversando un evento di heat wave con un Z-Score di +3.34. La situazione e' critica con un punteggio di 10.0 su 10."
+    },
+    {
+      "slug": "2026-05-24-san-juan-de-uraba-heat-wave",
+      "title": "San Juan de Uraba heat wave",
+      "lead": "San Juan de Uraba sta vivendo un evento di heat wave estremo con un Z-Score di +3.60. Le condizioni meteorologiche attuali sono critiche con un indice di calore...",
+      "location": "San Juan de Urabá",
+      "country_code": "co",
+      "vertical": "heat-wave",
+      "z_score": 3.6,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-24",
+      "cover_url": "",
+      "url": "/news/2026-05-24-san-juan-de-uraba-heat-wave/",
+      "excerpt": "San Juan de Uraba sta vivendo un evento di heat wave estremo con un Z-Score di +3.60. Le condizioni meteorologiche attuali sono critiche con un indice di calore molto alto."
     },
     {
       "slug": "2026-05-24-sablayan-heat-wave",
@@ -93,6 +123,21 @@
       "excerpt": "La citta di Rafaela e' colpita da piogge intense con un Z-Score di -3.31. Le condizioni meteo sono critiche con un livello di allarme alto."
     },
     {
+      "slug": "2026-05-24-paracuellos-de-jarama-heat-wave",
+      "title": "Paracuellos de Jarama onda calda",
+      "lead": "Paracuellos de Jarama sperimenta un'ondata di caldo estrema con Z-Score di +3.03. Le condizioni sono critiche con un indice di caldo molto alto....",
+      "location": "Paracuellos de Jarama",
+      "country_code": "es",
+      "vertical": "heat-wave",
+      "z_score": 3.03,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-24",
+      "cover_url": "",
+      "url": "/news/2026-05-24-paracuellos-de-jarama-heat-wave/",
+      "excerpt": "Paracuellos de Jarama sperimenta un'ondata di caldo estrema con Z-Score di +3.03. Le condizioni sono critiche con un indice di caldo molto alto."
+    },
+    {
       "slug": "2026-05-24-palimbang-heat-wave",
       "title": "Palimbang Heat Wave",
       "lead": "Palimbang is experiencing a critical heat wave with a Z-Score of +3.31. The city's temperature anomaly is at a record high, with a Score of 10.0/10....",
@@ -136,6 +181,21 @@
       "cover_url": "",
       "url": "/news/2026-05-24-nakhal-heat-wave/",
       "excerpt": "Nakhal is experiencing a severe heat wave with a Z-Score of +6.34. This event has reached a critical level with a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-24-moron-de-la-frontera-heat-wave",
+      "title": "Moron de la Frontera ondata di caldo",
+      "lead": "Ondata di caldo estrema a Moron de la Frontera con Z-Score +3.49. La situazione e' critica con score 10.0/10....",
+      "location": "Morón de la Frontera",
+      "country_code": "es",
+      "vertical": "heat-wave",
+      "z_score": 3.49,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-24",
+      "cover_url": "",
+      "url": "/news/2026-05-24-moron-de-la-frontera-heat-wave/",
+      "excerpt": "Ondata di caldo estrema a Moron de la Frontera con Z-Score +3.49. La situazione e' critica con score 10.0/10."
     },
     {
       "slug": "2026-05-24-morena-heat-wave",
@@ -241,66 +301,6 @@
       "cover_url": "",
       "url": "/news/2026-05-24-kobo-heat-wave/",
       "excerpt": "Kobo is experiencing a severe heat wave with a Z-Score of +4.40. This anomaly has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-24-kharik-heat-wave",
-      "title": "Kharik Heat Wave",
-      "lead": "Kharik is experiencing a severe heat wave with a Z-Score of +3.89. This critical event has a score of 10.0/10....",
-      "location": "Kharik",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 3.89,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-24",
-      "cover_url": "https://images.unsplash.com/photo-1596021876043-3ec2658c4477?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk2NDE3ODB8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-24-kharik-heat-wave/",
-      "excerpt": "Kharik is experiencing a severe heat wave with a Z-Score of +3.89. This critical event has a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-24-ketapang-heat-wave",
-      "title": "Ketapang Heat Wave",
-      "lead": "Ketapang is experiencing a severe heat wave with a Z-Score of +3.57. This critical event has a score of 10.0/10, indicating extreme conditions....",
-      "location": "Ketapang",
-      "country_code": "id",
-      "vertical": "heat-wave",
-      "z_score": 3.57,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-24",
-      "cover_url": "",
-      "url": "/news/2026-05-24-ketapang-heat-wave/",
-      "excerpt": "Ketapang is experiencing a severe heat wave with a Z-Score of +3.57. This critical event has a score of 10.0/10, indicating extreme conditions."
-    },
-    {
-      "slug": "2026-05-24-kasba-pataspur-heat-wave",
-      "title": "Kasba Patāspur Heat Wave",
-      "lead": "A severe heat wave is affecting Kasba Patāspur with a Z-Score of +5.14. This critical event has a score of 10.0/10, indicating extreme conditions....",
-      "location": "Kasba Patāspur",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 5.14,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-24",
-      "cover_url": "",
-      "url": "/news/2026-05-24-kasba-pataspur-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Kasba Patāspur with a Z-Score of +5.14. This critical event has a score of 10.0/10, indicating extreme conditions."
-    },
-    {
-      "slug": "2026-05-24-karjat-heat-wave",
-      "title": "Karjat Heat Wave",
-      "lead": "A severe heat wave is affecting Karjat, with a Z-Score of +5.34. This critical event has a score of 10.0/10, indicating extreme conditions....",
-      "location": "Karjat",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 5.34,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-24",
-      "cover_url": "",
-      "url": "/news/2026-05-24-karjat-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Karjat, with a Z-Score of +5.34. This critical event has a score of 10.0/10, indicating extreme conditions."
     }
   ]
 }
