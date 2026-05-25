@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-25T19:18:47.656980+00:00",
-  "count": 50,
+  "last_updated": "2026-05-25T21:02:12.451774+00:00",
+  "count": 58,
   "reports": [
     {
       "slug": "2026-05-25-zacatecoluca-heavy-rain",
@@ -108,6 +108,51 @@
       "excerpt": "A severe heat wave is affecting Saylac, with a Z-Score of +3.29. This event has reached a critical level with a score of 10.0/10."
     },
     {
+      "slug": "2026-05-25-samdhin-heat-wave",
+      "title": "Samdhin Heat Wave",
+      "lead": "A severe heat wave is affecting Samdhin, with a Z-Score of +3.66. This event has reached a critical level with a score of 10.0/10....",
+      "location": "Samdhin",
+      "country_code": "in",
+      "vertical": "heat-wave",
+      "z_score": 3.66,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-25",
+      "cover_url": "",
+      "url": "/news/2026-05-25-samdhin-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Samdhin, with a Z-Score of +3.66. This event has reached a critical level with a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-25-rahatgarh-heat-wave",
+      "title": "Rahatgarh Heat Wave",
+      "lead": "Rahatgarh is experiencing a severe heat wave with a Z-Score of +4.37. The city's temperature has reached critically high levels, scoring 10.0/10 on the heat wav...",
+      "location": "Rāhatgarh",
+      "country_code": "in",
+      "vertical": "heat-wave",
+      "z_score": 4.37,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-25",
+      "cover_url": "",
+      "url": "/news/2026-05-25-rahatgarh-heat-wave/",
+      "excerpt": "Rahatgarh is experiencing a severe heat wave with a Z-Score of +4.37. The city's temperature has reached critically high levels, scoring 10.0/10 on the heat wave index."
+    },
+    {
+      "slug": "2026-05-25-puerto-wilches-heat-wave",
+      "title": "Puerto Wilches heat wave",
+      "lead": "Puerto Wilches sta sperimentando un'ondata di caldo estremamente anomala con un Z-Score di +4.63. La temperatura eccessiva sta causando condizioni critiche....",
+      "location": "Puerto Wilches",
+      "country_code": "co",
+      "vertical": "heat-wave",
+      "z_score": 4.63,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-25",
+      "cover_url": "",
+      "url": "/news/2026-05-25-puerto-wilches-heat-wave/",
+      "excerpt": "Puerto Wilches sta sperimentando un'ondata di caldo estremamente anomala con un Z-Score di +4.63. La temperatura eccessiva sta causando condizioni critiche."
+    },
+    {
       "slug": "2026-05-25-phuket-heat-wave",
       "title": "Phuket Heat Wave",
       "lead": "Phuket is experiencing a critical heat wave with a Z-Score of +3.09. Temperatures are extremely high, reaching a score of 10.0/10....",
@@ -166,6 +211,21 @@
       "cover_url": "https://images.unsplash.com/photo-1693712151026-55c465bb2c21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk2OTcwMTl8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-25-moradabad-heat-wave/",
       "excerpt": "A severe heat wave is affecting Moradabad with a Z-Score of +4.51. The city is experiencing extremely high temperatures, with a Score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-25-mont-de-marsan-heat-wave",
+      "title": "Mont-de-Marsan heat wave",
+      "lead": "Una forte ondata di caldo colpisce Mont-de-Marsan con un Z-Score di +4.09. La situazione è critica con un punteggio di 10.0/10....",
+      "location": "Mont-de-Marsan",
+      "country_code": "fr",
+      "vertical": "heat-wave",
+      "z_score": 4.09,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-25",
+      "cover_url": "",
+      "url": "/news/2026-05-25-mont-de-marsan-heat-wave/",
+      "excerpt": "Una forte ondata di caldo colpisce Mont-de-Marsan con un Z-Score di +4.09. La situazione è critica con un punteggio di 10.0/10."
     },
     {
       "slug": "2026-05-25-mondoro-heat-wave",
@@ -241,66 +301,6 @@
       "cover_url": "",
       "url": "/news/2026-05-25-kobo-heat-wave/",
       "excerpt": "A severe heat wave is affecting Kobo, with a Z-Score of +3.69. Temperatures are extremely high, reaching critical levels."
-    },
-    {
-      "slug": "2026-05-25-kiruna-heavy-rain",
-      "title": "Kiruna Heavy Rain",
-      "lead": "Kiruna is experiencing heavy rain with a Z-Score of -3.34, indicating a significant anomaly. The Score of 10.0/10 and CRITICAL level signify extreme weather con...",
-      "location": "Kiruna",
-      "country_code": "se",
-      "vertical": "heavy-rain",
-      "z_score": -3.34,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-25",
-      "cover_url": "https://images.unsplash.com/photo-1624624341760-445fa3fa17b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk2Nzc4NzR8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-25-kiruna-heavy-rain/",
-      "excerpt": "Kiruna is experiencing heavy rain with a Z-Score of -3.34, indicating a significant anomaly. The Score of 10.0/10 and CRITICAL level signify extreme weather conditions."
-    },
-    {
-      "slug": "2026-05-25-khulna-heat-wave",
-      "title": "Khulna Heat Wave",
-      "lead": "Khulna is experiencing a severe heat wave with a Z-Score of +4.57. This extreme weather event has reached a critical level with a score of 10.0/10....",
-      "location": "Khulna",
-      "country_code": "bd",
-      "vertical": "heat-wave",
-      "z_score": 4.57,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-25",
-      "cover_url": "https://images.unsplash.com/photo-1697021176167-e89abc24db28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk2OTY5OTl8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-25-khulna-heat-wave/",
-      "excerpt": "Khulna is experiencing a severe heat wave with a Z-Score of +4.57. This extreme weather event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-25-khartoum-north-heat-wave",
-      "title": "Khartoum North Heat Wave",
-      "lead": "A severe heat wave is affecting Khartoum North with a Z-Score of +3.80. This critical event has a score of 10.0/10, indicating extreme conditions....",
-      "location": "Khartoum North",
-      "country_code": "eu",
-      "vertical": "heat-wave",
-      "z_score": 3.8,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-25",
-      "cover_url": "",
-      "url": "/news/2026-05-25-khartoum-north-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Khartoum North with a Z-Score of +3.80. This critical event has a score of 10.0/10, indicating extreme conditions."
-    },
-    {
-      "slug": "2026-05-25-kharik-heat-wave",
-      "title": "Kharik Heat Wave",
-      "lead": "A severe heat wave is affecting Kharik, with a Z-Score of +3.40. This extreme weather event has reached a critical level, scoring 10.0/10....",
-      "location": "Kharik",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 3.4,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-25",
-      "cover_url": "https://images.unsplash.com/photo-1714061867335-c95b239fb5aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk3MzA3ODN8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-25-kharik-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Kharik, with a Z-Score of +3.40. This extreme weather event has reached a critical level, scoring 10.0/10."
     }
   ]
 }
