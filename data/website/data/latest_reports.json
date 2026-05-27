@@ -1,7 +1,37 @@
 {
-  "last_updated": "2026-05-27T20:05:19.212904+00:00",
-  "count": 50,
+  "last_updated": "2026-05-27T21:50:45.457510+00:00",
+  "count": 58,
   "reports": [
+    {
+      "slug": "2026-05-27-zira-heat-wave",
+      "title": "Zira Heat Wave",
+      "lead": "A severe heat wave is affecting Zira with a Z-Score of +3.66. This critical event has a score of 10.0/10....",
+      "location": "Zīra",
+      "country_code": "in",
+      "vertical": "heat-wave",
+      "z_score": 3.66,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-27",
+      "cover_url": "",
+      "url": "/news/2026-05-27-zira-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Zira with a Z-Score of +3.66. This critical event has a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-27-zinzana-heat-wave",
+      "title": "Zinzana Heat Wave",
+      "lead": "Zinzana is experiencing a severe heat wave with a Z-Score of +4.17. This critical event has a score of 10.0/10....",
+      "location": "Zinzana",
+      "country_code": "eu",
+      "vertical": "heat-wave",
+      "z_score": 4.17,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-27",
+      "cover_url": "",
+      "url": "/news/2026-05-27-zinzana-heat-wave/",
+      "excerpt": "Zinzana is experiencing a severe heat wave with a Z-Score of +4.17. This critical event has a score of 10.0/10."
+    },
     {
       "slug": "2026-05-27-zaranj-heat-wave",
       "title": "Zaranj Heat Wave",
@@ -168,6 +198,21 @@
       "excerpt": "A severe heat wave is affecting Tulangan Utara with a Z-Score of +3.94. This critical event has a score of 10.0/10."
     },
     {
+      "slug": "2026-05-27-thana-bhawan-heat-wave",
+      "title": "Thāna Bhawan Heat Wave",
+      "lead": "Thāna Bhawan is experiencing a critical heat wave with a Z-Score of +3.37. The city's temperature has reached extreme levels, posing a significant threat to its...",
+      "location": "Thāna Bhawan",
+      "country_code": "in",
+      "vertical": "heat-wave",
+      "z_score": 3.37,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-27",
+      "cover_url": "",
+      "url": "/news/2026-05-27-thana-bhawan-heat-wave/",
+      "excerpt": "Thāna Bhawan is experiencing a critical heat wave with a Z-Score of +3.37. The city's temperature has reached extreme levels, posing a significant threat to its residents."
+    },
+    {
       "slug": "2026-05-27-tarif-kalba-heat-wave",
       "title": "Tarif Kalba heat wave",
       "lead": "A severe heat wave is affecting Tarif Kalba with a Z-Score of +4.43. This extreme weather event has reached a critical level with a score of 10.0/10....",
@@ -181,6 +226,21 @@
       "cover_url": "",
       "url": "/news/2026-05-27-tarif-kalba-heat-wave/",
       "excerpt": "A severe heat wave is affecting Tarif Kalba with a Z-Score of +4.43. This extreme weather event has reached a critical level with a score of 10.0/10."
+    },
+    {
+      "slug": "2026-05-27-robertsganj-heat-wave",
+      "title": "Robertsganj Heat Wave",
+      "lead": "A severe heat wave is affecting Robertsganj, with a Z-Score of +3.46. This event has reached a critical level with a score of 10.0/10....",
+      "location": "Robertsganj",
+      "country_code": "in",
+      "vertical": "heat-wave",
+      "z_score": 3.46,
+      "score": 10.0,
+      "anomaly_level": "CRITICAL",
+      "date": "2026-05-27",
+      "cover_url": "",
+      "url": "/news/2026-05-27-robertsganj-heat-wave/",
+      "excerpt": "A severe heat wave is affecting Robertsganj, with a Z-Score of +3.46. This event has reached a critical level with a score of 10.0/10."
     },
     {
       "slug": "2026-05-27-ras-al-khaimah-heat-wave",
@@ -228,79 +288,19 @@
       "excerpt": "Patiya is experiencing a severe heat wave with a Z-Score of +3.00. This critical event has a score of 10.0/10."
     },
     {
-      "slug": "2026-05-27-nasim-shahr-heat-wave",
-      "title": "Nasim Shahr Heat Wave",
-      "lead": "A severe heat wave is affecting Nasim Shahr with a Z-Score of +3.83. The city is experiencing extremely high temperatures....",
-      "location": "Nasīm Shahr",
-      "country_code": "ir",
-      "vertical": "heat-wave",
-      "z_score": 3.83,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-27",
-      "cover_url": "",
-      "url": "/news/2026-05-27-nasim-shahr-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Nasim Shahr with a Z-Score of +3.83. The city is experiencing extremely high temperatures."
-    },
-    {
-      "slug": "2026-05-27-nandyal-heat-wave",
-      "title": "Nandyal Heat Wave",
-      "lead": "A severe heat wave is affecting Nandyal with a Z-Score of +5.51. This event has reached a critical level with a score of 10.0/10....",
-      "location": "Nandyāl",
+      "slug": "2026-05-27-patamundai-heavy-rain",
+      "title": "Patāmundai Heavy Rain",
+      "lead": "Patāmundai is experiencing a critical heavy rain event with a Z-Score of +3.00. The city is under a high alert with a Score of 10.0/10....",
+      "location": "Patāmundai",
       "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 5.51,
+      "vertical": "heavy-rain",
+      "z_score": 3.0,
       "score": 10.0,
       "anomaly_level": "CRITICAL",
       "date": "2026-05-27",
       "cover_url": "",
-      "url": "/news/2026-05-27-nandyal-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Nandyal with a Z-Score of +5.51. This event has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-27-morena-heat-wave",
-      "title": "Morena Heat Wave",
-      "lead": "A severe heat wave is affecting Morena with a Z-Score of +7.66. This extreme weather event has reached a critical level....",
-      "location": "Morena",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 7.66,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-27",
-      "cover_url": "https://images.unsplash.com/photo-1566519167653-a4d39af0b120?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk4ODIxNjd8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-27-morena-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Morena with a Z-Score of +7.66. This extreme weather event has reached a critical level."
-    },
-    {
-      "slug": "2026-05-27-metpalli-heat-wave",
-      "title": "Metpalli Heat Wave",
-      "lead": "Metpalli is experiencing a severe heat wave with a Z-Score of +4.86. The heat wave has reached a critical level with a score of 10.0/10....",
-      "location": "Metpalli",
-      "country_code": "in",
-      "vertical": "heat-wave",
-      "z_score": 4.86,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-27",
-      "cover_url": "",
-      "url": "/news/2026-05-27-metpalli-heat-wave/",
-      "excerpt": "Metpalli is experiencing a severe heat wave with a Z-Score of +4.86. The heat wave has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-27-makassar-heat-wave",
-      "title": "Makassar Heat Wave",
-      "lead": "A severe heat wave is affecting Makassar with a Z-Score of +3.69. The city is experiencing extremely high temperatures....",
-      "location": "Makassar",
-      "country_code": "id",
-      "vertical": "heat-wave",
-      "z_score": 3.69,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-27",
-      "cover_url": "",
-      "url": "/news/2026-05-27-makassar-heat-wave/",
-      "excerpt": "A severe heat wave is affecting Makassar with a Z-Score of +3.69. The city is experiencing extremely high temperatures."
+      "url": "/news/2026-05-27-patamundai-heavy-rain/",
+      "excerpt": "Patāmundai is experiencing a critical heavy rain event with a Z-Score of +3.00. The city is under a high alert with a Score of 10.0/10."
     }
   ]
 }
