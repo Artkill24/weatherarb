@@ -1072,3 +1072,147 @@ async def daily_card(slug: str):
         "temperature_c": temp,
         "timestamp": datetime.now(timezone.utc).isoformat()
     }
+
+# ─── FREE GLOBAL SIGNALS ENDPOINT ────────────────────────────────────────────
+@app.get("/api/v1/global-signals")
+async def global_signals():
+    """Aggregated free global signals: fires, volcanoes, floods, ocean, pollen"""
+    result = {}
+
+    # 1. NASA FIRMS — Active wildfires (free, no key needed for basic)
+    try:
+        r = req_lib.get(
+            "https://eonet.gsfc.nasa.gov/api/v3/events?status=open&limit=20&category=wildfires",
+            timeout=8
+        )
+        fires = r.json().get("events", [])
+        result["wildfires"] = [{
+            "title": f.get("title"),
+            "date": f.get("geometry",[{}])[-1].get("date","") if f.get("geometry") else "",
+            "lat": f.get("geometry",[{}])[-1].get("coordinates",[None,None])[1] if f.get("geometry") else None,
+            "lon": f.get("geometry",[{}])[-1].get("coordinates",[None,None])[0] if f.get("geometry") else None,
+        } for f in fires[:10]]
+    except Exception as e:
+        result["wildfires"] = []
+
+    # 2. NASA EONET — Volcanoes
+    try:
+        r = req_lib.get(
+            "https://eonet.gsfc.nasa.gov/api/v3/events?status=open&limit=10&category=volcanoes",
+            timeout=8
+        )
+        volcs = r.json().get("events", [])
+        result["volcanoes"] = [{
+            "title": v.get("title"),
+            "date": v.get("geometry",[{}])[-1].get("date","") if v.get("geometry") else "",
+        } for v in volcs[:5]]
+    except:
+        result["volcanoes"] = []
+
+    # 3. NASA EONET — Floods & Severe Storms
+    try:
+        r = req_lib.get(
+            "https://eonet.gsfc.nasa.gov/api/v3/events?status=open&limit=20&category=severeStorms",
+            timeout=8
+        )
+        storms = r.json().get("events", [])
+        result["severe_storms"] = [{
+            "title": s.get("title"),
+            "date": s.get("geometry",[{}])[-1].get("date","") if s.get("geometry") else "",
+            "lat": s.get("geometry",[{}])[-1].get("coordinates",[None,None])[1] if s.get("geometry") else None,
+            "lon": s.get("geometry",[{}])[-1].get("coordinates",[None,None])[0] if s.get("geometry") else None,
+        } for s in storms[:10]]
+    except:
+        result["severe_storms"] = []
+
+    # 4. USGS — Major earthquakes M5+ last 24h
+    try:
+        r = req_lib.get(
+            "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minmagnitude=5.0&limit=10&orderby=time",
+            timeout=8
+        )
+        quakes = r.json().get("features", [])
+        result["major_earthquakes"] = [{
+            "magnitude": q["properties"].get("mag"),
+            "place": q["properties"].get("place"),
+            "time": q["properties"].get("time"),
+            "depth_km": q["geometry"]["coordinates"][2] if q.get("geometry") else None,
+        } for q in quakes[:10]]
+    except:
+        result["major_earthquakes"] = []
+
+    # 5. Open-Meteo Marine — Ocean wave height for coastal cities
+    try:
+        r = req_lib.get(
+            "https://marine-api.open-meteo.com/v1/marine"
+            "?latitude=41.9,48.9,51.5,40.7,35.7"
+            "&longitude=12.5,2.3,-0.1,-74.0,139.7"
+            "&current=wave_height,wave_period,wind_wave_height"
+            "&timezone=auto",
+            timeout=8
+        )
+        marine = r.json()
+        if isinstance(marine, list):
+            cities = ["Rome","Paris","London","New York","Tokyo"]
+            result["marine"] = [{
+                "city": cities[i],
+                "wave_height_m": m.get("current",{}).get("wave_height"),
+                "wave_period_s": m.get("current",{}).get("wave_period"),
+            } for i,m in enumerate(marine)]
+        else:
+            result["marine"] = []
+    except:
+        result["marine"] = []
+
+    # 6. Open-Meteo Flood — River discharge for major rivers
+    try:
+        r = req_lib.get(
+            "https://flood-api.open-meteo.com/v1/flood"
+            "?latitude=51.5,48.9,41.9,28.6,35.7"
+            "&longitude=-0.1,2.3,12.5,77.2,139.7"
+            "&daily=river_discharge"
+            "&forecast_days=3",
+            timeout=8
+        )
+        floods = r.json()
+        if isinstance(floods, list):
+            cities = ["London","Paris","Rome","Delhi","Tokyo"]
+            result["river_discharge"] = [{
+                "city": cities[i],
+                "discharge_m3s": f.get("daily",{}).get("river_discharge",[None])[0],
+            } for i,f in enumerate(floods)]
+        else:
+            result["river_discharge"] = []
+    except:
+        result["river_discharge"] = []
+
+    # 7. NOAA Space Weather — Aurora forecast
+    try:
+        r = req_lib.get(
+            "https://services.swpc.noaa.gov/json/ovation_aurora_latest.json",
+            timeout=8
+        )
+        aurora = r.json()
+        # Get max aurora probability
+        coords = aurora.get("coordinates", [])
+        max_aurora = max((c[2] for c in coords if len(c)>2), default=0)
+        result["aurora"] = {
+            "max_probability_pct": round(max_aurora, 1),
+            "active": max_aurora > 20,
+            "label": "Aurora possibile" if max_aurora > 30 else "Attività bassa"
+        }
+    except:
+        result["aurora"] = {}
+
+    # 8. WeatherArb internal — Current top anomalies
+    top = _top_cache.get("top", [])
+    sw = _top_cache.get("space_weather", {})
+    result["top_anomalies"] = top[:5] if top else []
+    result["space_weather"] = sw
+    result["timestamp"] = datetime.now(timezone.utc).isoformat()
+    result["sources"] = [
+        "NASA EONET", "USGS Earthquakes",
+        "Open-Meteo Marine", "Open-Meteo Flood",
+        "NOAA Space Weather", "WeatherArb"
+    ]
+    return result
