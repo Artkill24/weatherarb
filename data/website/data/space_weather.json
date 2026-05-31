@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-05-31T13:29:33.456764+00:00",
-  "kp_current": 0.37,
+  "timestamp": "2026-05-31T16:04:19.660243+00:00",
+  "kp_current": 1.0,
   "kp_forecast_max_24h": 0,
-  "solar_flux": 7.159844699344831e-07,
+  "solar_flux": 6.653964987890504e-07,
   "flare_class": "C",
   "storm_probability": {
     "G1": 0,
