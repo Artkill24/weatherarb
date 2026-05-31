@@ -199,7 +199,7 @@ function addMarkers(data){
 }
 
 // Load data
-fetch('https://api.weatherarb.com/api/v1/europe/top?limit=500')
+fetch('https://artkill24-weatherarb-api.hf.space/api/v1/europe/top?limit=500')
   .then(function(r){return r.json();})
   .then(function(d){
     var data=(d.reports||d.data||[]);
@@ -214,7 +214,7 @@ fetch('https://api.weatherarb.com/api/v1/europe/top?limit=500')
 // Geo card
 if(navigator.geolocation){
   navigator.geolocation.getCurrentPosition(function(pos){
-    fetch('https://api.weatherarb.com/api/v1/pulse/nearby?lat='+pos.coords.latitude+'&lon='+pos.coords.longitude)
+    fetch('https://artkill24-weatherarb-api.hf.space/api/v1/pulse/nearby?lat='+pos.coords.latitude+'&lon='+pos.coords.longitude)
     .then(function(r){return r.json();})
     .then(function(d){
       if(!d.province) return;

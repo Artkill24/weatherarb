@@ -122,7 +122,7 @@
 <script>
 async function loadLive(){
   try{
-    var r=await fetch('https://api.weatherarb.com/api/v1/pulse/pittsburgh');
+    var r=await fetch('https://artkill24-weatherarb-api.hf.space/api/v1/pulse/pittsburgh');
     var d=await r.json(); var w=d.weather||{};
     var z=w.z_score||0; var sc=d.signal?d.signal.score:0;
     var lbl=w.anomaly_label||w.anomaly_level||'';
@@ -140,7 +140,7 @@ function nlsub(){
   var e=document.getElementById('nl-email').value.trim();
   var m=document.getElementById('nl-msg');
   if(!e||e.indexOf('@')<0){m.style.display='block';m.style.background='rgba(239,68,68,.1)';m.style.color='#ef4444';m.textContent='Email non valida';return;}
-  fetch('https://api.weatherarb.com/api/newsletter/subscribe?email='+encodeURIComponent(e)+'&city=Pittsburgh&country_code=us',{method:'POST'})
+  fetch('https://artkill24-weatherarb-api.hf.space/api/newsletter/subscribe?email='+encodeURIComponent(e)+'&city=Pittsburgh&country_code=us',{method:'POST'})
     .then(r=>r.json())
     .then(d=>{m.style.display='block';m.style.background='rgba(16,185,129,.1)';m.style.color='#10b981';
       m.textContent=d.status==='already_subscribed'?'Sei gia iscritto!':'Iscritto!';

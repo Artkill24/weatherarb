@@ -320,7 +320,7 @@ function joinWaitlist() {
   }
   // Salva su newsletter con tag piano
   var city = modalType === 'ent' ? 'enterprise' : 'pro_waitlist';
-  fetch('https://api.weatherarb.com/api/newsletter/subscribe?email=' + encodeURIComponent(email) + '&city=' + city + '&country_code=b2b', {method: 'POST'})
+  fetch('https://artkill24-weatherarb-api.hf.space/api/newsletter/subscribe?email=' + encodeURIComponent(email) + '&city=' + city + '&country_code=b2b', {method: 'POST'})
     .then(function() {
       document.getElementById('modal-form-content').style.display = 'none';
       document.getElementById('modal-success').style.display = 'block';

@@ -1,7 +1,7 @@
 const COMUNI_PROVINCES = {"torino":"Torino","milano":"Milano","roma":"Roma","napoli":"Napoli","bologna":"Bologna","firenze":"Firenze","venezia":"Venezia","genova":"Genova","palermo":"Palermo","bari":"Bari"};
 
 async function handleComune(provincia, comune, request) {
-  const API = "https://api.weatherarb.com";
+  const API = "https://artkill24-weatherarb-api.hf.space";
   
   // Fetch dati meteo provincia più vicina
   let weatherData = null;

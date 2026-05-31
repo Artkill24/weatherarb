@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="it" data-theme="dark">
 <head>
-<link rel="preconnect" href="https://api.weatherarb.com">
+<link rel="preconnect" href="https://artkill24-weatherarb-api.hf.space">
 <link rel="preconnect" href="https://unpkg.com" crossorigin>
-<link rel="dns-prefetch" href="https://api.weatherarb.com">
+<link rel="dns-prefetch" href="https://artkill24-weatherarb-api.hf.space">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WeatherArb — Anomalie Meteo Globali in Tempo Reale | 3.367 Città Monitorate</title>
@@ -479,7 +479,7 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-const API='https://api.weatherarb.com';
+const API='https://artkill24-weatherarb-api.hf.space';
 const COL={CRITICAL:'#ef4444',EXTREME:'#f97316',UNUSUAL:'#f59e0b',NORMAL:'#10b981'};
 const CC_FLAG={it:'🇮🇹',de:'🇩🇪',fr:'🇫🇷',es:'🇪🇸',gb:'🇬🇧',se:'🇸🇪',nl:'🇳🇱',pl:'🇵🇱',at:'🇦🇹',ch:'🇨🇭',be:'🇧🇪',pt:'🇵🇹',dk:'🇩🇰',no:'🇳🇴',gr:'🇬🇷',hr:'🇭🇷',cz:'🇨🇿',hu:'🇭🇺',ro:'🇷🇴',fi:'🇫🇮',si:'🇸🇮',sk:'🇸🇰',rs:'🇷🇸',us:'🇺🇸',ca:'🇨🇦',jp:'🇯🇵',cn:'🇨🇳',in:'🇮🇳',br:'🇧🇷',ru:'🇷🇺',au:'🇦🇺',mx:'🇲🇽',ar:'🇦🇷',tr:'🇹🇷',kr:'🇰🇷',sg:'🇸🇬',th:'🇹🇭',id:'🇮🇩',ph:'🇵🇭',vn:'🇻🇳',my:'🇲🇾',pk:'🇵🇰',bd:'🇧🇩',lk:'🇱🇰',np:'🇳🇵',mn:'🇲🇳',ae:'🇦🇪',sa:'🇸🇦',ir:'🇮🇷',il:'🇮🇱',ng:'🇳🇬',eg:'🇪🇬',ke:'🇰🇪',za:'🇿🇦',ma:'🇲🇦',dz:'🇩🇿',gh:'🇬🇭',co:'🇨🇴',cl:'🇨🇱',pe:'🇵🇪',nz:'🇳🇿',ua:'🇺🇦',tw:'🇹🇼'};
 
@@ -649,7 +649,7 @@ async function nlHomeSubmit(){
   errEl.style.display='none';
   if(!email||email.indexOf('@')<0){errEl.textContent='Email non valida.';errEl.style.display='block';return;}
   try{
-    var r=await fetch('https://api.weatherarb.com/api/newsletter/subscribe?email='+encodeURIComponent(email)+'&city=Europa&country_code=eu',{method:'POST'});
+    var r=await fetch('https://artkill24-weatherarb-api.hf.space/api/newsletter/subscribe?email='+encodeURIComponent(email)+'&city=Europa&country_code=eu',{method:'POST'});
     var d=await r.json();
     formEl.style.display='none';okEl.style.display='block';
     if(d.status==='already_subscribed')okEl.textContent='Sei già iscritto!';
@@ -696,7 +696,7 @@ setTimeout(loadGeoAlert,2000);
 // Live node count
 (async function(){
   try{
-    const r=await fetch('https://api.weatherarb.com/api/v1/europe/top?limit=1');
+    const r=await fetch('https://artkill24-weatherarb-api.hf.space/api/v1/europe/top?limit=1');
     const d=await r.json();
     const total=d.count||6308;
     const el=document.getElementById('stat-nodes');

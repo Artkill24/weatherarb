@@ -481,7 +481,7 @@ async function loadFortune(){
   try {
     if(!navigator.geolocation){
       // Use IP-based fallback
-      const r = await fetch('https://api.weatherarb.com/api/v1/pulse/nearby?lat=45.46&lon=9.19');
+      const r = await fetch('https://artkill24-weatherarb-api.hf.space/api/v1/pulse/nearby?lat=45.46&lon=9.19');
       const d = await r.json();
       renderFortune(d);
       return;
@@ -491,7 +491,7 @@ async function loadFortune(){
       async pos => {
         try {
           const {latitude: lat, longitude: lon} = pos.coords;
-          const r = await fetch(`https://api.weatherarb.com/api/v1/pulse/nearby?lat=${lat}&lon=${lon}`);
+          const r = await fetch(`https://artkill24-weatherarb-api.hf.space/api/v1/pulse/nearby?lat=${lat}&lon=${lon}`);
           const d = await r.json();
           renderFortune(d);
         } catch(e) {
@@ -501,7 +501,7 @@ async function loadFortune(){
       async err => {
         // Geolocation denied — use default (Milan)
         try {
-          const r = await fetch('https://api.weatherarb.com/api/v1/pulse/nearby?lat=45.46&lon=9.19');
+          const r = await fetch('https://artkill24-weatherarb-api.hf.space/api/v1/pulse/nearby?lat=45.46&lon=9.19');
           const d = await r.json();
           d.comune = 'Italia';
           renderFortune(d);

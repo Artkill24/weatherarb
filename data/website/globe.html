@@ -364,7 +364,7 @@ globe.width(innerWidth); globe.height(innerHeight);
 // ── Load Data ─────────────────────────────────────────────────────────────────
 async function loadData() {
   try {
-    const r = await fetch('https://api.weatherarb.com/api/v1/europe/top?limit=500');
+    const r = await fetch('https://artkill24-weatherarb-api.hf.space/api/v1/europe/top?limit=500');
     const d = await r.json();
     nodesData = d.reports || d.data || [];
     renderGlobe();

@@ -26,7 +26,7 @@
     document.head.appendChild(styleSheet);
 
     // Fetch dei dati
-    fetch('https://api.weatherarb.com/api/v1/pulse/' + city.toLowerCase())
+    fetch('https://artkill24-weatherarb-api.hf.space/api/v1/pulse/' + city.toLowerCase())
         .then(response => response.json())
         .then(data => {
             var z = data.weather.z_score;

@@ -288,9 +288,9 @@ footer a{color:var(--muted2);text-decoration:none}
 <div class="base-url-box" id="base-url">
   <div>
     <div class="base-url-label">Base URL</div>
-    <div class="base-url-val">https://api.weatherarb.com</div>
+    <div class="base-url-val">https://artkill24-weatherarb-api.hf.space</div>
   </div>
-  <button class="copy-btn" onclick="copyText('https://api.weatherarb.com',this)">Copy URL</button>
+  <button class="copy-btn" onclick="copyText('https://artkill24-weatherarb-api.hf.space',this)">Copy URL</button>
 </div>
 
 <!-- AUTH -->
@@ -310,7 +310,7 @@ footer a{color:var(--muted2);text-decoration:none}
     </div>
     <div class="code-content active" id="curl-auth">
       <button class="copy-code" onclick="copyCode(this)">Copy</button>
-      <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/pulse/milan"</span></pre>
+      <pre><span class="fn">curl</span> <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/pulse/milan"</span></pre>
     </div>
   </div>
 
@@ -323,14 +323,14 @@ footer a{color:var(--muted2);text-decoration:none}
     </div>
     <div class="code-content active" id="curl-auth-pro">
       <pre><span class="fn">curl</span> <span class="kw">-H</span> <span class="str">"X-API-Key: your_key_here"</span> \
-     <span class="str">"https://api.weatherarb.com/api/v1/global/top?limit=100"</span></pre>
+     <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/global/top?limit=100"</span></pre>
     </div>
     <div class="code-content" id="py-auth-pro">
       <pre><span class="kw">import</span> requests
 
 headers = {<span class="str">"X-API-Key"</span>: <span class="str">"your_key_here"</span>}
 r = requests.<span class="fn">get</span>(
-    <span class="str">"https://api.weatherarb.com/api/v1/global/top"</span>,
+    <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/global/top"</span>,
     headers=headers, params={<span class="str">"limit"</span>: <span class="num">100</span>}
 )
 data = r.<span class="fn">json</span>()
@@ -338,7 +338,7 @@ data = r.<span class="fn">json</span>()
     </div>
     <div class="code-content" id="js-auth-pro">
       <pre><span class="kw">const</span> response = <span class="kw">await</span> <span class="fn">fetch</span>(
-  <span class="str">"https://api.weatherarb.com/api/v1/global/top?limit=100"</span>,
+  <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/global/top?limit=100"</span>,
   { headers: { <span class="str">"X-API-Key"</span>: <span class="str">"your_key_here"</span> } }
 );
 <span class="kw">const</span> data = <span class="kw">await</span> response.<span class="fn">json</span>();
@@ -383,12 +383,12 @@ console.<span class="fn">log</span>(data.reports.<span class="fn">length</span>,
         </div>
         <div class="code-content active" id="curl-p1">
           <button class="copy-code" onclick="copyCode(this)">Copy</button>
-          <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/pulse/milan"</span></pre>
+          <pre><span class="fn">curl</span> <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/pulse/milan"</span></pre>
         </div>
         <div class="code-content" id="py-p1">
           <pre><span class="kw">import</span> requests
 
-r = requests.<span class="fn">get</span>(<span class="str">"https://api.weatherarb.com/api/v1/pulse/milan"</span>)
+r = requests.<span class="fn">get</span>(<span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/pulse/milan"</span>)
 d = r.<span class="fn">json</span>()
 
 w = d[<span class="str">"weather"</span>]
@@ -397,7 +397,7 @@ w = d[<span class="str">"weather"</span>]
 <span class="fn">print</span>(<span class="fn">f</span><span class="str">"Anomaly: {w['anomaly_level']}"</span>)</pre>
         </div>
         <div class="code-content" id="js-p1">
-          <pre><span class="kw">const</span> r = <span class="kw">await</span> <span class="fn">fetch</span>(<span class="str">"https://api.weatherarb.com/api/v1/pulse/milan"</span>);
+          <pre><span class="kw">const</span> r = <span class="kw">await</span> <span class="fn">fetch</span>(<span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/pulse/milan"</span>);
 <span class="kw">const</span> { weather, signal } = <span class="kw">await</span> r.<span class="fn">json</span>();
 
 console.<span class="fn">log</span>(<span class="str">`Z-Score: ${weather.z_score > 0 ? '+' : ''}${weather.z_score.toFixed(2)}σ`</span>);
@@ -414,7 +414,7 @@ console.<span class="fn">log</span>(<span class="str">`Event: ${weather.anomaly_
 )
 
 <span class="kw">func</span> <span class="fn">main</span>() {
-    resp, _ := http.<span class="fn">Get</span>(<span class="str">"https://api.weatherarb.com/api/v1/pulse/milan"</span>)
+    resp, _ := http.<span class="fn">Get</span>(<span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/pulse/milan"</span>)
     <span class="kw">var</span> data <span class="kw">map</span>[<span class="kw">string</span>]<span class="kw">interface</span>{}
     json.<span class="fn">NewDecoder</span>(resp.Body).<span class="fn">Decode</span>(&data)
     weather := data[<span class="str">"weather"</span>].(<span class="kw">map</span>[<span class="kw">string</span>]<span class="kw">interface</span>{})
@@ -474,7 +474,7 @@ console.<span class="fn">log</span>(<span class="str">`Event: ${weather.anomaly_
       </table>
 
       <div class="code-block">
-        <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/pulse/nearby?lat=45.46&lon=9.19"</span></pre>
+        <pre><span class="fn">curl</span> <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/pulse/nearby?lat=45.46&lon=9.19"</span></pre>
       </div>
     </div>
   </div>
@@ -507,7 +507,7 @@ console.<span class="fn">log</span>(<span class="str">`Event: ${weather.anomaly_
         <tr><td>min_score<span class="opt">optional</span></td><td><span class="type-badge">float</span></td><td>Minimum score filter (0-10)</td></tr>
       </table>
       <div class="code-block">
-        <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/europe/top?limit=10&min_score=5"</span></pre>
+        <pre><span class="fn">curl</span> <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/europe/top?limit=10&min_score=5"</span></pre>
       </div>
     </div>
   </div>
@@ -533,13 +533,13 @@ console.<span class="fn">log</span>(<span class="str">`Event: ${weather.anomaly_
           <div class="code-tab" onclick="switchTab(this,'py-gt')">Python</div>
         </div>
         <div class="code-content active" id="curl-gt">
-          <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/global/top?limit=20&event_type=heat_wave"</span></pre>
+          <pre><span class="fn">curl</span> <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/global/top?limit=20&event_type=heat_wave"</span></pre>
         </div>
         <div class="code-content" id="py-gt">
           <pre><span class="kw">import</span> requests
 
 params = {<span class="str">"limit"</span>: <span class="num">20</span>, <span class="str">"event_type"</span>: <span class="str">"heat_wave"</span>}
-r = requests.<span class="fn">get</span>(<span class="str">"https://api.weatherarb.com/api/v1/global/top"</span>, params=params)
+r = requests.<span class="fn">get</span>(<span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/global/top"</span>, params=params)
 data = r.<span class="fn">json</span>()
 
 <span class="kw">for</span> city <span class="kw">in</span> data[<span class="str">"reports"</span>]:
@@ -565,9 +565,9 @@ data = r.<span class="fn">json</span>()
         <tr><td>country_code<span class="req">required</span></td><td><span class="type-badge">string</span></td><td>ISO country code: <code>it</code>, <code>us</code>, <code>de</code>, <code>fr</code>, <code>in</code>...</td></tr>
       </table>
       <div class="code-block">
-        <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/country/it"</span>
-<span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/country/us"</span>
-<span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/country/in"</span></pre>
+        <pre><span class="fn">curl</span> <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/country/it"</span>
+<span class="fn">curl</span> <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/country/us"</span>
+<span class="fn">curl</span> <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/country/in"</span></pre>
       </div>
     </div>
   </div>
@@ -583,7 +583,7 @@ data = r.<span class="fn">json</span>()
     <div class="ep-body">
       <p class="ep-desc-full">Returns only cities with critical anomalies (absolute Z-Score ≥ 3σ). These represent statistically extreme weather events occurring less than 0.3% of the time historically.</p>
       <div class="code-block">
-        <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/critical"</span></pre>
+        <pre><span class="fn">curl</span> <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/critical"</span></pre>
       </div>
     </div>
   </div>
@@ -599,7 +599,7 @@ data = r.<span class="fn">json</span>()
     <div class="ep-body">
       <p class="ep-desc-full">Top anomalies ranked by composite score (0-10). Score combines Z-Score magnitude, HDD/CDD impact, wind, humidity, and duration.</p>
       <div class="code-block">
-        <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/leaderboard?limit=20"</span></pre>
+        <pre><span class="fn">curl</span> <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/leaderboard?limit=20"</span></pre>
       </div>
     </div>
   </div>
@@ -630,7 +630,7 @@ data = r.<span class="fn">json</span>()
           <div class="code-tab" onclick="switchTab(this,'resp-stats')">Response</div>
         </div>
         <div class="code-content active" id="curl-stats">
-          <pre><span class="fn">curl</span> <span class="str">"https://api.weatherarb.com/api/v1/stats"</span></pre>
+          <pre><span class="fn">curl</span> <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/stats"</span></pre>
         </div>
         <div class="code-content" id="resp-stats">
           <pre>{
@@ -658,7 +658,7 @@ data = r.<span class="fn">json</span>()
       <p class="ep-desc-full">Returns energy grid stress scores per country, space weather data (Kp index, solar flare class), and risk assessments for critical infrastructure.</p>
       <div class="code-block">
         <pre><span class="fn">curl</span> <span class="kw">-H</span> <span class="str">"X-API-Key: your_key"</span> \
-     <span class="str">"https://api.weatherarb.com/api/v1/grid-stress"</span></pre>
+     <span class="str">"https://artkill24-weatherarb-api.hf.space/api/v1/grid-stress"</span></pre>
       </div>
     </div>
   </div>
@@ -673,7 +673,7 @@ data = r.<span class="fn">json</span>()
     <div class="ep-body">
       <p class="ep-desc-full">Triggers a background refresh of all weather data from Open-Meteo. Returns immediately; data available after ~30 seconds.</p>
       <div class="code-block">
-        <pre><span class="fn">curl</span> <span class="kw">-X POST</span> <span class="str">"https://api.weatherarb.com/pulse/refresh"</span>
+        <pre><span class="fn">curl</span> <span class="kw">-X POST</span> <span class="str">"https://artkill24-weatherarb-api.hf.space/pulse/refresh"</span>
 <span class="cm"># Response:</span>
 {
   <span class="key">"status"</span>: <span class="str">"refresh_started"</span>,
@@ -735,7 +735,7 @@ data = r.<span class="fn">json</span>()
       <input class="pg-input" id="pg1-city" placeholder="City slug (e.g. milan, paris, new-york)" value="milan">
       <button class="pg-btn" onclick="runPg1()">▶ Run</button>
     </div>
-    <div class="pg-url" id="pg1-url">https://api.weatherarb.com/api/v1/pulse/milan</div>
+    <div class="pg-url" id="pg1-url">https://artkill24-weatherarb-api.hf.space/api/v1/pulse/milan</div>
     <div class="pg-result" id="pg1-result"></div>
   </div>
 
@@ -752,7 +752,7 @@ data = r.<span class="fn">json</span>()
       </select>
       <button class="pg-btn" onclick="runPg2()">▶ Run</button>
     </div>
-    <div class="pg-url" id="pg2-url">https://api.weatherarb.com/api/v1/europe/top?limit=5</div>
+    <div class="pg-url" id="pg2-url">https://artkill24-weatherarb-api.hf.space/api/v1/europe/top?limit=5</div>
     <div class="pg-result" id="pg2-result"></div>
   </div>
 
@@ -765,7 +765,7 @@ data = r.<span class="fn">json</span>()
       <button class="pg-btn" onclick="runPg3()">▶ Run</button>
       <button class="pg-btn" style="background:rgba(255,255,255,.06);border:1px solid var(--border);color:#fff" onclick="useMyLocation()">📍 My Location</button>
     </div>
-    <div class="pg-url" id="pg3-url">https://api.weatherarb.com/api/v1/pulse/nearby?lat=45.46&lon=9.19</div>
+    <div class="pg-url" id="pg3-url">https://artkill24-weatherarb-api.hf.space/api/v1/pulse/nearby?lat=45.46&lon=9.19</div>
     <div class="pg-result" id="pg3-result"></div>
   </div>
 </div>
@@ -946,19 +946,19 @@ async function pg(url, resultId, urlId) {
 
 function runPg1() {
   const city = document.getElementById('pg1-city').value.trim().toLowerCase().replace(/\s+/g,'-') || 'milan';
-  pg(`https://api.weatherarb.com/api/v1/pulse/${city}`, 'pg1-result', 'pg1-url');
+  pg(`https://artkill24-weatherarb-api.hf.space/api/v1/pulse/${city}`, 'pg1-result', 'pg1-url');
 }
 function runPg2() {
   const limit = document.getElementById('pg2-limit').value || 5;
   const event = document.getElementById('pg2-event').value;
-  let url = `https://api.weatherarb.com/api/v1/europe/top?limit=${limit}`;
+  let url = `https://artkill24-weatherarb-api.hf.space/api/v1/europe/top?limit=${limit}`;
   if(event) url += `&event_type=${event}`;
   pg(url, 'pg2-result', 'pg2-url');
 }
 function runPg3() {
   const lat = document.getElementById('pg3-lat').value || 45.46;
   const lon = document.getElementById('pg3-lon').value || 9.19;
-  pg(`https://api.weatherarb.com/api/v1/pulse/nearby?lat=${lat}&lon=${lon}`, 'pg3-result', 'pg3-url');
+  pg(`https://artkill24-weatherarb-api.hf.space/api/v1/pulse/nearby?lat=${lat}&lon=${lon}`, 'pg3-result', 'pg3-url');
 }
 function useMyLocation() {
   if(!navigator.geolocation) return;
@@ -972,7 +972,7 @@ function useMyLocation() {
 // City input live URL update
 document.getElementById('pg1-city').addEventListener('input', e => {
   const city = e.target.value.trim().toLowerCase().replace(/\s+/g,'-') || 'milan';
-  document.getElementById('pg1-url').textContent = `https://api.weatherarb.com/api/v1/pulse/${city}`;
+  document.getElementById('pg1-url').textContent = `https://artkill24-weatherarb-api.hf.space/api/v1/pulse/${city}`;
 });
 </script>
 </body>

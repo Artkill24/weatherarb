@@ -144,15 +144,15 @@
     <div class="box-title">Esempi di utilizzo</div>
     <div class="example">
       <div class="ex-label">Pulse con Z-Score + HDD/CDD per Milano</div>
-      <pre id="ex-pulse">curl "https://api.weatherarb.com/api/v1/pulse/milano?key=..."</pre>
+      <pre id="ex-pulse">curl "https://artkill24-weatherarb-api.hf.space/api/v1/pulse/milano?key=..."</pre>
     </div>
     <div class="example">
       <div class="ex-label">Top anomalie Europa</div>
-      <pre id="ex-top">curl "https://api.weatherarb.com/api/v1/europe/top?limit=10&key=..."</pre>
+      <pre id="ex-top">curl "https://artkill24-weatherarb-api.hf.space/api/v1/europe/top?limit=10&key=..."</pre>
     </div>
     <div class="example">
       <div class="ex-label">Grid Stress Score</div>
-      <pre id="ex-grid">curl "https://api.weatherarb.com/api/space-weather?key=..."</pre>
+      <pre id="ex-grid">curl "https://artkill24-weatherarb-api.hf.space/api/space-weather?key=..."</pre>
     </div>
   </div>
 
@@ -203,7 +203,7 @@
 </footer>
 
 <script>
-const API = 'https://api.weatherarb.com';
+const API = 'https://artkill24-weatherarb-api.hf.space';
 var currentKey = '';
 
 // Check saved key
@@ -258,10 +258,10 @@ async function loadDashboard(key){
     document.getElementById('d-bar-label').textContent = d.calls_remaining.toLocaleString() + ' disponibili';
     
     // Examples with real key
-    document.getElementById('ex-pulse').textContent = 'curl "https://api.weatherarb.com/api/v1/pulse/milano?key=' + key + '"';
-    document.getElementById('ex-top').textContent = 'curl "https://api.weatherarb.com/api/v1/europe/top?limit=10&key=' + key + '"';
+    document.getElementById('ex-pulse').textContent = 'curl "https://artkill24-weatherarb-api.hf.space/api/v1/pulse/milano?key=' + key + '"';
+    document.getElementById('ex-top').textContent = 'curl "https://artkill24-weatherarb-api.hf.space/api/v1/europe/top?limit=10&key=' + key + '"';
     loadAlerts();
-    document.getElementById('ex-grid').textContent = 'curl "https://api.weatherarb.com/api/space-weather?key=' + key + '"';
+    document.getElementById('ex-grid').textContent = 'curl "https://artkill24-weatherarb-api.hf.space/api/space-weather?key=' + key + '"';
     
   }catch(e){
     document.getElementById('login-err').textContent = 'Errore di connessione — riprova.';
@@ -272,7 +272,7 @@ async function loadDashboard(key){
 
 async function loadAlerts(){
   try{
-    var r = await fetch('https://api.weatherarb.com/api/alerts/list?key='+currentKey);
+    var r = await fetch('https://artkill24-weatherarb-api.hf.space/api/alerts/list?key='+currentKey);
     var d = await r.json();
     var list = d.alerts || [];
     var el = document.getElementById('alert-list');
@@ -292,7 +292,7 @@ async function addAlert(){
   var threshold = parseFloat(document.getElementById('alert-threshold').value) || 2.0;
   if(!city) return;
   try{
-    await fetch('https://api.weatherarb.com/api/alerts/subscribe', {
+    await fetch('https://artkill24-weatherarb-api.hf.space/api/alerts/subscribe', {
       method:'POST', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({api_key:currentKey, city:city, country_code:cc, threshold_zscore:threshold})
     });
@@ -302,7 +302,7 @@ async function addAlert(){
 }
 async function deleteAlert(city){
   try{
-    await fetch('https://api.weatherarb.com/api/alerts/delete', {
+    await fetch('https://artkill24-weatherarb-api.hf.space/api/alerts/delete', {
       method:'DELETE', headers:{'Content-Type':'application/json'},
       body: JSON.stringify({api_key:currentKey, city:city})
     });

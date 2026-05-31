@@ -168,9 +168,9 @@
 async function loadLive(){
   try{
 <<<<<<<< HEAD:data/website/news/2026-05-11-umea-cold-snap/index.html
-    var r=await fetch('https://api.weatherarb.com/api/v1/pulse/umea');
+    var r=await fetch('https://artkill24-weatherarb-api.hf.space/api/v1/pulse/umea');
 ========
-    var r=await fetch('https://api.weatherarb.com/api/v1/pulse/minneapolis');
+    var r=await fetch('https://artkill24-weatherarb-api.hf.space/api/v1/pulse/minneapolis');
 >>>>>>>> 6fed78aa (feat: internal linking nearby cities + new articles):data/website/news/2026-05-11-minneapolis-cold-snap/index.html
     var d=await r.json(); var w=d.weather||{};
     var z=w.z_score||0; var sc=d.signal?d.signal.score:0;
@@ -190,9 +190,9 @@ function nlsub(){
   var m=document.getElementById('nl-msg');
   if(!e||e.indexOf('@')<0){m.style.display='block';m.style.background='rgba(239,68,68,.1)';m.style.color='#ef4444';m.textContent='Email non valida';return;}
 <<<<<<<< HEAD:data/website/news/2026-05-11-umea-cold-snap/index.html
-  fetch('https://api.weatherarb.com/api/newsletter/subscribe?email='+encodeURIComponent(e)+'&city=Umeå&country_code=se',{method:'POST'})
+  fetch('https://artkill24-weatherarb-api.hf.space/api/newsletter/subscribe?email='+encodeURIComponent(e)+'&city=Umeå&country_code=se',{method:'POST'})
 ========
-  fetch('https://api.weatherarb.com/api/newsletter/subscribe?email='+encodeURIComponent(e)+'&city=Minneapolis&country_code=us',{method:'POST'})
+  fetch('https://artkill24-weatherarb-api.hf.space/api/newsletter/subscribe?email='+encodeURIComponent(e)+'&city=Minneapolis&country_code=us',{method:'POST'})
 >>>>>>>> 6fed78aa (feat: internal linking nearby cities + new articles):data/website/news/2026-05-11-minneapolis-cold-snap/index.html
     .then(r=>r.json())
     .then(d=>{m.style.display='block';m.style.background='rgba(16,185,129,.1)';m.style.color='#10b981';

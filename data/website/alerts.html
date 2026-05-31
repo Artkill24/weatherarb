@@ -300,7 +300,7 @@ function subscribeEmail() {
   var city = document.getElementById('city-select').value;
   if (!email || !email.includes('@')) { alert('Please enter a valid email'); return; }
 
-  fetch('https://api.weatherarb.com/api/newsletter/subscribe?email=' +
+  fetch('https://artkill24-weatherarb-api.hf.space/api/newsletter/subscribe?email=' +
     encodeURIComponent(email) + '&provincia=' + encodeURIComponent(city), {method:'POST'})
   .then(function() {})
   .catch(function() {});
@@ -329,7 +329,7 @@ var FLAGS = {};
 
 async function loadSignals() {
   try {
-    var r = await fetch('https://api.weatherarb.com/api/v1/europe/top?limit=65');
+    var r = await fetch('https://artkill24-weatherarb-api.hf.space/api/v1/europe/top?limit=65');
     var d = await r.json();
     if (!d.data) return;
 
