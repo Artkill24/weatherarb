@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>World Weather Anomaly Index (WWAI) — Live Global Climate Pulse | WeatherArb</title>
+<meta name="description" content="The WWAI is the world's first real-time global weather anomaly index. Tracks 18,222+ cities using NASA POWER Z-Score baseline. Updated hourly by WeatherArb.">
+<link rel="canonical" href="https://weatherarb.com/wwai/">
+<meta property="og:title" content="World Weather Anomaly Index (WWAI) — WeatherArb">
+<meta property="og:description" content="Real-time global climate pulse tracking 18,222+ cities. How anomalous is Earth's weather today?">
+<meta property="og:url" content="https://weatherarb.com/wwai/">
+<meta property="og:type" content="website">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.nav a{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#4a5568;text-decoration:none;margin-left:16px}
+.hero{max-width:1000px;margin:0 auto;padding:48px 24px 32px;text-align:center}
+.badge{display:inline-block;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);color:#3b82f6;font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:20px}
+h1{font-size:clamp(28px,5vw,52px);font-weight:800;color:#fff;line-height:1.15;margin-bottom:12px}
+h1 em{color:#3b82f6;font-style:normal}
+.hero-sub{font-size:15px;color:#4a5568;max-width:600px;margin:0 auto;line-height:1.7}
+.main{max-width:1000px;margin:0 auto;padding:0 24px 80px}
+
+/* WWAI METER */
+.wwai-card{background:#0a0d12;border:1px solid #141920;border-radius:20px;padding:40px 32px;margin-bottom:24px;text-align:center;position:relative;overflow:hidden}
+.wwai-label{font-size:11px;text-transform:uppercase;letter-spacing:.3em;color:#4a5568;margin-bottom:16px}
+.wwai-score{font-size:96px;font-weight:800;line-height:1;margin-bottom:8px;transition:color .5s}
+.wwai-status{font-size:18px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:24px}
+.wwai-bar-wrap{background:#141920;border-radius:8px;height:12px;margin:0 auto 12px;max-width:400px;overflow:hidden}
+.wwai-bar{height:100%;border-radius:8px;transition:width 1s,background .5s}
+.wwai-desc{font-size:13px;color:#4a5568;max-width:500px;margin:0 auto;line-height:1.6}
+.pulse{animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+
+/* STATS GRID */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:24px}
+.stat-card{background:#0a0d12;border:1px solid #141920;border-radius:14px;padding:20px;text-align:center}
+.stat-label{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-bottom:8px}
+.stat-val{font-size:28px;font-weight:800;color:#fff;line-height:1}
+.stat-sub{font-size:11px;color:#4a5568;margin-top:6px}
+
+/* ANOMALY LISTS */
+.anomaly-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.anomaly-box{background:#0a0d12;border:1px solid #141920;border-radius:14px;padding:20px}
+.abox-title{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid #141920}
+.acity{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(20,25,32,.5)}
+.acity:last-child{border-bottom:none}
+.acity-name{font-size:13px;font-weight:700;color:#fff}
+.acity-cc{font-size:10px;color:#4a5568}
+.acity-z{font-size:16px;font-weight:800}
+
+/* EMBED */
+.embed-box{background:#0a0d12;border:1px solid #141920;border-radius:14px;padding:24px;margin-bottom:24px}
+.embed-title{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:12px}
+.embed-code{background:#040608;border:1px solid #141920;border-radius:8px;padding:12px;font-family:monospace;font-size:12px;color:#10b981;overflow-x:auto;word-break:break-all}
+.copy-btn{background:#141920;color:#c8d6e5;border:1px solid #1e2d3d;border-radius:8px;padding:8px 16px;font-size:12px;cursor:pointer;margin-top:10px}
+.copy-btn:hover{background:#1e2d3d}
+
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:11px;color:#4a5568}
+.ftr a{color:#4a5568;text-decoration:none}
+
+@media(max-width:640px){
+  .anomaly-grid{grid-template-columns:1fr}
+  .wwai-score{font-size:72px}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <a href="/" class="logo">Weather<span>Arb</span></a>
+  <nav class="nav">
+    <a href="/globe">Globe</a>
+    <a href="/oggi/">Today</a>
+    <a href="/api.html">API</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="badge">Live · Updated every hour</div>
+  <h1>World Weather<br><em>Anomaly Index</em></h1>
+  <p class="hero-sub">The first real-time global climate pulse — tracking <strong style="color:#fff">18,222+ cities</strong> across 150+ countries using NASA POWER Z-Score methodology.</p>
+</div>
+
+<main class="main">
+
+  <!-- WWAI METER -->
+  <div class="wwai-card">
+    <div class="wwai-label">WWAI — World Weather Anomaly Index</div>
+    <div class="wwai-score" id="wwai-score" style="color:#10b981">—</div>
+    <div class="wwai-status" id="wwai-status" style="color:#10b981">Loading...</div>
+    <div class="wwai-bar-wrap"><div class="wwai-bar" id="wwai-bar" style="width:0%;background:#10b981"></div></div>
+    <div class="wwai-desc" id="wwai-desc">Calculating global weather anomaly index...</div>
+    <div style="font-size:11px;color:#4a5568;margin-top:16px" id="wwai-time"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-label">Cities Monitored</div>
+      <div class="stat-val" id="s-total">—</div>
+      <div class="stat-sub">18,222+ global nodes</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Critical Anomalies</div>
+      <div class="stat-val" id="s-critical" style="color:#ef4444">—</div>
+      <div class="stat-sub">|Z-Score| ≥ 3σ</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Severe Anomalies</div>
+      <div class="stat-val" id="s-severe" style="color:#f97316">—</div>
+      <div class="stat-sub">|Z-Score| ≥ 2σ</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Kp Index</div>
+      <div class="stat-val" id="s-kp" style="color:#8b5cf6">—</div>
+      <div class="stat-sub">Geomagnetic activity</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Solar Flare</div>
+      <div class="stat-val" id="s-flare" style="color:#f59e0b">—</div>
+      <div class="stat-sub">NOAA GOES class</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">US Alerts</div>
+      <div class="stat-val" id="s-alerts" style="color:#ef4444">—</div>
+      <div class="stat-sub">NOAA active warnings</div>
+    </div>
+  </div>
+
+  <!-- TOP ANOMALIES -->
+  <div class="anomaly-grid">
+    <div class="anomaly-box">
+      <div class="abox-title">🔥 Top Heat Anomalies</div>
+      <div id="heat-list"><div style="color:#4a5568;font-size:13px">Loading...</div></div>
+    </div>
+    <div class="anomaly-box">
+      <div class="abox-title">❄️ Top Cold Anomalies</div>
+      <div id="cold-list"><div style="color:#4a5568;font-size:13px">Loading...</div></div>
+    </div>
+  </div>
+
+  <!-- API EMBED -->
+  <div class="embed-box">
+    <div class="embed-title">Free API — Use WWAI in your projects</div>
+    <div class="embed-code" id="api-url">https://artkill24-weatherarb-api.hf.space/api/v1/wwai</div>
+    <button class="copy-btn" onclick="copyApi()">📋 Copy API URL</button>
+    <div style="font-size:12px;color:#4a5568;margin-top:12px">Returns: WWAI score, status, breakdown, top anomalies, space weather. Free tier: 60 req/hour.</div>
+  </div>
+
+  <!-- METHODOLOGY -->
+  <div style="background:#0a0d12;border:1px solid #141920;border-radius:14px;padding:24px;margin-bottom:24px">
+    <div style="font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px">Methodology</div>
+    <p style="font-size:13px;color:#4a5568;line-height:1.8;margin-bottom:12px">The WWAI is calculated hourly from WeatherArb's network of 18,222 meteorological nodes. Each city receives a Z-Score — the number of standard deviations from the NASA POWER ERA5-Land 25-year baseline (2000-2024).</p>
+    <p style="font-size:13px;color:#4a5568;line-height:1.8">WWAI = Σ(critical×40 + severe×15 + moderate×5) / total_cities × 100. A score of 0 means perfectly normal global weather. A score of 100 would mean every city is in extreme anomaly — historically unprecedented.</p>
+  </div>
+
+</main>
+
+<footer class="ftr">
+  <a href="/">WeatherArb</a> · <a href="/api.html">API Docs</a> · <a href="/globe">Globe</a> · <a href="/privacy.html">Privacy</a>
+  <div style="margin-top:8px">© 2026 WeatherArb — World Weather Anomaly Index (WWAI)</div>
+</footer>
+
+<script>
+const API = 'https://artkill24-weatherarb-api.hf.space';
+
+async function loadWWAI() {
+  try {
+    const r = await fetch(`${API}/api/v1/wwai`);
+    const d = await r.json();
+
+    // Main score
+    const score = d.wwai || 0;
+    const color = d.color || '#10b981';
+    document.getElementById('wwai-score').textContent = score.toFixed(1);
+    document.getElementById('wwai-score').style.color = color;
+    document.getElementById('wwai-status').textContent = d.status || '';
+    document.getElementById('wwai-status').style.color = color;
+    document.getElementById('wwai-bar').style.width = Math.min(100, score) + '%';
+    document.getElementById('wwai-bar').style.background = color;
+    document.getElementById('wwai-desc').textContent = d.description || '';
+
+    const t = new Date(d.timestamp);
+    document.getElementById('wwai-time').textContent = 'Last updated: ' + t.toUTCString();
+
+    // Stats
+    const b = d.breakdown || {};
+    document.getElementById('s-total').textContent = (d.cities_monitored||0).toLocaleString();
+    document.getElementById('s-critical').textContent = b.critical_count || '0';
+    document.getElementById('s-severe').textContent = b.severe_count || '0';
+
+    const sw = d.space_weather || {};
+    document.getElementById('s-kp').textContent = sw.kp_current != null ? sw.kp_current.toFixed(1) : '—';
+    document.getElementById('s-flare').textContent = sw.flare_class || '—';
+    document.getElementById('s-alerts').textContent = sw.noaa_alerts_us != null ? sw.noaa_alerts_us : '—';
+
+    // Heat
+    const heat = d.top_heat || [];
+    document.getElementById('heat-list').innerHTML = heat.map(c =>
+      `<div class="acity">
+        <div><div class="acity-name">${c.city}</div><div class="acity-cc">${c.cc.toUpperCase()}</div></div>
+        <div class="acity-z" style="color:#ef4444">+${c.z.toFixed(2)}σ</div>
+      </div>`).join('') || '<div style="color:#4a5568;font-size:13px">No data</div>';
+
+    // Cold
+    const cold = d.top_cold || [];
+    document.getElementById('cold-list').innerHTML = cold.map(c =>
+      `<div class="acity">
+        <div><div class="acity-name">${c.city}</div><div class="acity-cc">${c.cc.toUpperCase()}</div></div>
+        <div class="acity-z" style="color:#7b2fff">${c.z.toFixed(2)}σ</div>
+      </div>`).join('') || '<div style="color:#4a5568;font-size:13px">No data</div>';
+
+  } catch(e) {
+    document.getElementById('wwai-desc').textContent = 'Error loading data. Retrying...';
+    setTimeout(loadWWAI, 5000);
+  }
+}
+
+function copyApi() {
+  navigator.clipboard.writeText('https://artkill24-weatherarb-api.hf.space/api/v1/wwai');
+  const btn = document.querySelector('.copy-btn');
+  btn.textContent = '✓ Copied!';
+  setTimeout(() => btn.textContent = '📋 Copy API URL', 2000);
+}
+
+loadWWAI();
+setInterval(loadWWAI, 3600000);
+</script>
+</body>
+</html>
