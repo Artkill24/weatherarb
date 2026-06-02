@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>طقس بن سليمان اليوم — مؤشر الشذوذ المناخي | WeatherArb</title>
+<meta name="description" content="بيانات الطقس الحية لمدينة بن سليمان، المغرب. مؤشر Z-Score مقارنةً بخط الأساس NASA POWER لـ 25 سنة. درجة الحرارة، الرطوبة، الرياح. يتحدث كل ساعة.">
+<meta property="og:title" content="طقس بن سليمان | WeatherArb">
+<meta property="og:description" content="شذوذات مناخية لحظية لمدينة بن سليمان، المغرب">
+<link rel="canonical" href="https://weatherarb.com/ar/ma/benslimane/">
+<link rel="alternate" hreflang="en" href="https://weatherarb.com/ma/benslimane/">
+<link rel="alternate" hreflang="ar" href="https://weatherarb.com/ar/ma/benslimane/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:'Segoe UI',Tahoma,Arial,sans-serif;direction:rtl;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:900px;margin:0 auto;padding:48px 24px}
+.breadcrumb{font-size:12px;color:#4a5568;margin-bottom:24px}
+.breadcrumb a{color:#4a5568;text-decoration:none}
+h1{font-size:42px;font-weight:900;color:#fff;margin-bottom:8px;line-height:1.2}
+.subtitle{font-size:15px;color:#4a5568;margin-bottom:32px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:24px}
+.card{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:24px}
+.card-label{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-bottom:8px}
+.card-val{font-size:36px;font-weight:900;color:#fff}
+.card-unit{font-size:13px;color:#4a5568;margin-top:4px}
+.zscore{color:#f97316}
+.section{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:28px;margin-bottom:20px}
+.section-title{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px}
+.loading{color:#4a5568;font-size:14px}
+.badge{display:inline-block;padding:6px 16px;border-radius:100px;font-size:12px;font-weight:700;margin-bottom:16px}
+.nav a{font-size:11px;color:#4a5568;text-decoration:none;margin-right:16px}
+.nav a:hover{color:#3b82f6}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <nav class="nav">
+    <a href="/ar/ma/benslimane/">العربية</a>
+    <a href="/ma/benslimane/">English</a>
+  </nav>
+</header>
+<main class="wrap">
+  <div class="breadcrumb">
+    <a href="/">WeatherArb</a> / <a href="/ar/">عربي</a> / <a href="/ar/ma/">المغرب</a> / Benslimane
+  </div>
+  
+  <h1>طقس بن سليمان اليوم</h1>
+  <p class="subtitle">المغرب · 33.62°N -7.12°E · خط الأساس NASA POWER 25 سنة</p>
+  
+  <div id="badge-wrap"></div>
+  
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">مؤشر Z-Score</div>
+      <div class="card-val zscore" id="z-val">...</div>
+      <div class="card-unit">مقارنةً بالمعدل التاريخي</div>
+    </div>
+    <div class="card">
+      <div class="card-label">درجة الحرارة</div>
+      <div class="card-val" id="temp-val">...</div>
+      <div class="card-unit">درجة مئوية</div>
+    </div>
+    <div class="card">
+      <div class="card-label">الرطوبة</div>
+      <div class="card-val" id="hum-val">...</div>
+      <div class="card-unit">%</div>
+    </div>
+    <div class="card">
+      <div class="card-label">الرياح</div>
+      <div class="card-val" id="wind-val">...</div>
+      <div class="card-unit">كم/س</div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <div class="section-title">تحليل WeatherArb</div>
+    <div id="analysis" class="loading">جاري تحميل البيانات...</div>
+  </div>
+  
+  <div class="section">
+    <div class="section-title">بيانات الطاقة</div>
+    <div class="cards" style="margin:0">
+      <div class="card">
+        <div class="card-label">HDD اليوم</div>
+        <div class="card-val" id="hdd-val">...</div>
+        <div class="card-unit">درجة-يوم تدفئة</div>
+      </div>
+      <div class="card">
+        <div class="card-label">CDD اليوم</div>
+        <div class="card-val" id="cdd-val">...</div>
+        <div class="card-unit">درجة-يوم تبريد</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">المنهجية</div>
+    <p style="font-size:14px;color:#4a5568;line-height:1.8">
+      تحسب WeatherArb مؤشر Z-Score ودرجات HDD/CDD مقارنةً بخط الأساس NASA POWER لـ 25 سنة 
+      لمدينة بن سليمان (33.62°N، -7.12°E). 
+      يُعبّر مؤشر Z-Score عن مدى انحراف درجة الحرارة الحالية عن المعدل التاريخي بوحدات الانحراف المعياري.
+      القياس وفق معيار EN ISO 15927.
+    </p>
+  </div>
+</main>
+
+<script>
+const API = 'https://artkill24-weatherarb-api.hf.space';
+const slug = 'benslimane';
+
+const LEVELS_AR = {
+  CRITICAL: ['حرج', '#ef4444'],
+  EXTREME: ['شديد', '#f97316'],
+  UNUSUAL: ['غير معتاد', '#eab308'],
+  NORMAL: ['طبيعي', '#10b981'],
+};
+
+async function load() {
+  try {
+    const r = await fetch(`${API}/api/v1/pulse/${slug}`);
+    if (!r.ok) throw new Error('not cached');
+    const d = await r.json();
+    
+    const z = d.z_score || 0;
+    const level = d.anomaly_level || 'NORMAL';
+    const [label, color] = LEVELS_AR[level] || ['طبيعي', '#10b981'];
+    
+    document.getElementById('z-val').textContent = (z >= 0 ? '+' : '') + z.toFixed(2) + 'σ';
+    document.getElementById('z-val').style.color = color;
+    document.getElementById('temp-val').textContent = d.temperature_c?.toFixed(1) || '--';
+    document.getElementById('hum-val').textContent = d.humidity_pct || '--';
+    document.getElementById('wind-val').textContent = d.wind_kmh?.toFixed(0) || '--';
+    document.getElementById('hdd-val').textContent = d.hdd?.toFixed(1) || '0';
+    document.getElementById('cdd-val').textContent = d.cdd?.toFixed(1) || '0';
+    
+    document.getElementById('badge-wrap').innerHTML = 
+      `<span class="badge" style="background:${color}22;color:${color};border:1px solid ${color}44">${label}</span>`;
+    
+    const event = (d.event_type || 'clear').replace(/_/g, ' ');
+    const absZ = Math.abs(z);
+    let analysis = '';
+    if (absZ >= 3) analysis = `تسجّل مدينة بن سليمان شذوذاً مناخياً حرجاً اليوم بمؤشر Z-Score يبلغ ${z.toFixed(2)}σ. هذا يعني أن درجات الحرارة الحالية تنحرف بشكل ملحوظ عن المعدل التاريخي لـ 25 سنة.`;
+    else if (absZ >= 2) analysis = `تسجّل مدينة بن سليمان شذوذاً مناخياً غير معتاد بمؤشر Z-Score يبلغ ${z.toFixed(2)}σ.`;
+    else analysis = `الطقس في مدينة بن سليمان ضمن النطاق الطبيعي اليوم بمؤشر Z-Score يبلغ ${z.toFixed(2)}σ.`;
+    
+    document.getElementById('analysis').textContent = analysis;
+  } catch(e) {
+    document.getElementById('analysis').textContent = 'البيانات غير متوفرة حالياً. يرجى المحاولة لاحقاً.';
+  }
+}
+load();
+</script>
+</body>
+</html>
