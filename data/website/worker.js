@@ -116,6 +116,29 @@ async function handleComune(provincia, comune, request) {
   });
 }
 
+// Slug redirect map per 404 comuni
+async function trySlugRedirect(pathname, env) {
+    // Es: /eu/viacha/ → cerca in tutti i cc
+    const parts = pathname.split('/').filter(Boolean)
+    if (parts.length === 2) {
+        const [cc, slug] = parts
+        // Lista cc validi
+        const VALID_CC = ['bo','ar','br','cl','co','pe','ve','mx','us','ca','gb','de','fr','it','es','pt','pl','ro','gr','tr','ma','eg','ng','za','in','pk','bd','cn','jp','kr','id','ph','vn','th','au']
+        if (!VALID_CC.includes(cc)) {
+            // Prova a trovare lo slug in altri cc
+            for (const trycc of VALID_CC) {
+                try {
+                    const r = await env.ASSETS.fetch(new Request(`https://fake/${trycc}/${slug}/`))
+                    if (r.status === 200) {
+                        return Response.redirect(`https://weatherarb.com/${trycc}/${slug}/`, 301)
+                    }
+                } catch(e) {}
+            }
+        }
+    }
+    return null
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
