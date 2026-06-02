@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://weatherarb.com/sitemap-index.xml
 Sitemap: https://weatherarb.com/sitemap.xml
+Sitemap: https://weatherarb.com/sitemap-ar.xml
