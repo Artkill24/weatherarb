@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cuaca Ban Hari Ini — Indeks Anomali Z-Score | WeatherArb</title>
+<meta name="description" content="Data cuaca real-time untuk Ban, Indonesia. Z-Score vs baseline NASA POWER 25 tahun. Suhu, kelembaban, angin. Diperbarui setiap jam.">
+<link rel="canonical" href="https://weatherarb.com/id/id/ban/">
+<link rel="alternate" hreflang="en" href="https://weatherarb.com/id/ban/">
+<link rel="alternate" hreflang="id" href="https://weatherarb.com/id/id/ban/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:900px;margin:0 auto;padding:48px 24px}
+.breadcrumb{font-size:12px;color:#4a5568;margin-bottom:24px}
+.breadcrumb a{color:#4a5568;text-decoration:none}
+h1{font-size:38px;font-weight:900;color:#fff;margin-bottom:8px;line-height:1.2}
+.subtitle{font-size:15px;color:#4a5568;margin-bottom:32px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:24px}
+.card{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:24px}
+.card-label{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-bottom:8px}
+.card-val{font-size:36px;font-weight:900;color:#fff}
+.card-unit{font-size:13px;color:#4a5568;margin-top:4px}
+.section{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:28px;margin-bottom:20px}
+.stitle{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <nav><a style="font-size:11px;color:#4a5568;text-decoration:none;margin-left:16px" href="/id/id/ban/">Indonesia</a> <a style="font-size:11px;color:#4a5568;text-decoration:none;margin-left:16px" href="/id/id/ban/">English</a></nav>
+</header>
+<main class="wrap">
+  <div class="breadcrumb">
+    <a href="/">WeatherArb</a>  /  <span>Indonesia</span>  /  <span>Indonesia</span> / Ban
+  </div>
+  <h1>Cuaca Ban Hari Ini</h1>
+  <p class="subtitle">Indonesia · Baseline NASA POWER 25 Tahun · -8.23°N 115.48°E</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Indeks Z-Score</div>
+      <div class="card-val" id="z-val" style="color:#f97316">...</div>
+      <div class="card-unit">vs rata-rata historis</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Suhu</div>
+      <div class="card-val" id="temp-val">...</div>
+      <div class="card-unit">derajat Celsius</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Kelembaban</div>
+      <div class="card-val" id="hum-val">...</div>
+      <div class="card-unit">%</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Angin</div>
+      <div class="card-val" id="wind-val">...</div>
+      <div class="card-unit">km/jam</div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="stitle">WeatherArb Analysis</div>
+    <div id="analysis" style="font-size:14px;color:#4a5568;line-height:1.7">Memuat data...</div>
+  </div>
+  <div class="section">
+    <div class="stitle">Methodology</div>
+    <p style="font-size:14px;color:#4a5568;line-height:1.8">WeatherArb menghitung Z-Score dan data HDD/CDD dibandingkan dengan baseline NASA POWER 25 tahun untuk Ban.</p>
+  </div>
+</main>
+<script>
+const API = 'https://artkill24-weatherarb-api.hf.space';
+const slug = 'ban';
+const LEVELS = {"CRITICAL": ["Kritis", "#ef4444"], "EXTREME": ["Ekstrem", "#f97316"], "UNUSUAL": ["Tidak Biasa", "#eab308"], "NORMAL": ["Normal", "#10b981"]};
+async function load() {
+  try {
+    const r = await fetch(`${API}/api/v1/pulse/${slug}`);
+    if (!r.ok) throw new Error();
+    const d = await r.json();
+    const z = d.z_score || 0;
+    const level = d.anomaly_level || 'NORMAL';
+    const [label, color] = LEVELS[level] || ['Normal', '#10b981'];
+    document.getElementById('z-val').textContent = (z>=0?'+':'') + z.toFixed(2) + 'σ';
+    document.getElementById('z-val').style.color = color;
+    document.getElementById('temp-val').textContent = d.temperature_c?.toFixed(1) || '--';
+    document.getElementById('hum-val').textContent = d.humidity_pct || '--';
+    document.getElementById('wind-val').textContent = d.wind_kmh?.toFixed(0) || '--';
+    const absZ = Math.abs(z);
+    let analysis = '';
+    if (absZ >= 3) analysis = `Ban mencatat anomali iklim kritis hari ini dengan Z-Score ${{z.toFixed(2)}}σ.`;
+    else if (absZ >= 2) analysis = `Ban menunjukkan kondisi cuaca tidak biasa dengan Z-Score ${{z.toFixed(2)}}σ.`;
+    else analysis = `Cuaca di Ban hari ini dalam kisaran normal dengan Z-Score ${{z.toFixed(2)}}σ.`;
+    document.getElementById('analysis').textContent = analysis;
+  } catch(e) {
+    document.getElementById('analysis').textContent = 'Data tidak tersedia saat ini.';
+  }
+}
+load();
+</script>
+</body>
+</html>

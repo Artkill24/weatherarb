@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kolār आज का मौसम — Z-Score जलवायु सूचकांक | WeatherArb</title>
+<meta name="description" content="Kolār, भारत के लिए रियल-टाइम मौसम डेटा। NASA POWER 25-वर्ष बेसलाइन के मुकाबले Z-Score। तापमान, आर्द्रता, हवा। हर घंटे अपडेट।">
+<link rel="canonical" href="https://weatherarb.com/hi/in/kolar/">
+<link rel="alternate" hreflang="en" href="https://weatherarb.com/in/kolar/">
+<link rel="alternate" hreflang="hi" href="https://weatherarb.com/hi/in/kolar/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:900px;margin:0 auto;padding:48px 24px}
+.breadcrumb{font-size:12px;color:#4a5568;margin-bottom:24px}
+.breadcrumb a{color:#4a5568;text-decoration:none}
+h1{font-size:38px;font-weight:900;color:#fff;margin-bottom:8px;line-height:1.2}
+.subtitle{font-size:15px;color:#4a5568;margin-bottom:32px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:24px}
+.card{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:24px}
+.card-label{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-bottom:8px}
+.card-val{font-size:36px;font-weight:900;color:#fff}
+.card-unit{font-size:13px;color:#4a5568;margin-top:4px}
+.section{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:28px;margin-bottom:20px}
+.stitle{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <nav><a style="font-size:11px;color:#4a5568;text-decoration:none;margin-left:16px" href="/hi/in/kolar/">हिंदी</a> <a style="font-size:11px;color:#4a5568;text-decoration:none;margin-left:16px" href="/hi/in/kolar/">English</a></nav>
+</header>
+<main class="wrap">
+  <div class="breadcrumb">
+    <a href="/">WeatherArb</a>  /  <span>हिंदी</span>  /  <span>भारत</span> / Kolār
+  </div>
+  <h1>Kolār आज का मौसम</h1>
+  <p class="subtitle">भारत · NASA POWER 25-वर्ष बेसलाइन · 13.13°N 78.13°E</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Z-Score सूचकांक</div>
+      <div class="card-val" id="z-val" style="color:#f97316">...</div>
+      <div class="card-unit">ऐतिहासिक औसत के मुकाबले</div>
+    </div>
+    <div class="card">
+      <div class="card-label">तापमान</div>
+      <div class="card-val" id="temp-val">...</div>
+      <div class="card-unit">डिग्री सेल्सियस</div>
+    </div>
+    <div class="card">
+      <div class="card-label">आर्द्रता</div>
+      <div class="card-val" id="hum-val">...</div>
+      <div class="card-unit">%</div>
+    </div>
+    <div class="card">
+      <div class="card-label">हवा</div>
+      <div class="card-val" id="wind-val">...</div>
+      <div class="card-unit">किमी/घंटा</div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="stitle">WeatherArb Analysis</div>
+    <div id="analysis" style="font-size:14px;color:#4a5568;line-height:1.7">डेटा लोड हो रहा है...</div>
+  </div>
+  <div class="section">
+    <div class="stitle">Methodology</div>
+    <p style="font-size:14px;color:#4a5568;line-height:1.8">WeatherArb Kolār के लिए NASA POWER 25-वर्ष बेसलाइन की तुलना में Z-Score और HDD/CDD डेटा की गणना करता है।</p>
+  </div>
+</main>
+<script>
+const API = 'https://artkill24-weatherarb-api.hf.space';
+const slug = 'kolar';
+const LEVELS = {"CRITICAL": ["\u0917\u0902\u092d\u0940\u0930", "#ef4444"], "EXTREME": ["\u0905\u0924\u094d\u092f\u0927\u093f\u0915", "#f97316"], "UNUSUAL": ["\u0905\u0938\u093e\u092e\u093e\u0928\u094d\u092f", "#eab308"], "NORMAL": ["\u0938\u093e\u092e\u093e\u0928\u094d\u092f", "#10b981"]};
+async function load() {
+  try {
+    const r = await fetch(`${API}/api/v1/pulse/${slug}`);
+    if (!r.ok) throw new Error();
+    const d = await r.json();
+    const z = d.z_score || 0;
+    const level = d.anomaly_level || 'NORMAL';
+    const [label, color] = LEVELS[level] || ['Normal', '#10b981'];
+    document.getElementById('z-val').textContent = (z>=0?'+':'') + z.toFixed(2) + 'σ';
+    document.getElementById('z-val').style.color = color;
+    document.getElementById('temp-val').textContent = d.temperature_c?.toFixed(1) || '--';
+    document.getElementById('hum-val').textContent = d.humidity_pct || '--';
+    document.getElementById('wind-val').textContent = d.wind_kmh?.toFixed(0) || '--';
+    const absZ = Math.abs(z);
+    let analysis = '';
+    if (absZ >= 3) analysis = `Kolār आज Z-Score ${{z.toFixed(2)}}σ के साथ गंभीर जलवायु विसंगति दर्ज कर रहा है।`;
+    else if (absZ >= 2) analysis = `Kolār Z-Score ${{z.toFixed(2)}}σ के साथ असामान्य मौसम की स्थिति दिखा रहा है।`;
+    else analysis = `Kolār का आज का मौसम Z-Score ${{z.toFixed(2)}}σ के साथ सामान्य सीमा में है।`;
+    document.getElementById('analysis').textContent = analysis;
+  } catch(e) {
+    document.getElementById('analysis').textContent = 'डेटा अभी उपलब्ध नहीं है।';
+  }
+}
+load();
+</script>
+</body>
+</html>

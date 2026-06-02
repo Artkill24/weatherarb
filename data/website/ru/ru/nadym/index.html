@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Погода Nadym Сегодня — Индекс аномалии Z-Score | WeatherArb</title>
+<meta name="description" content="Данные о погоде в реальном времени для Nadym, Россия. Z-Score vs базовый уровень NASA POWER за 25 лет. Температура, влажность, ветер.">
+<link rel="canonical" href="https://weatherarb.com/ru/ru/nadym/">
+<link rel="alternate" hreflang="en" href="https://weatherarb.com/ru/nadym/">
+<link rel="alternate" hreflang="ru" href="https://weatherarb.com/ru/ru/nadym/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:900px;margin:0 auto;padding:48px 24px}
+.breadcrumb{font-size:12px;color:#4a5568;margin-bottom:24px}
+.breadcrumb a{color:#4a5568;text-decoration:none}
+h1{font-size:38px;font-weight:900;color:#fff;margin-bottom:8px;line-height:1.2}
+.subtitle{font-size:15px;color:#4a5568;margin-bottom:32px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:24px}
+.card{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:24px}
+.card-label{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-bottom:8px}
+.card-val{font-size:36px;font-weight:900;color:#fff}
+.card-unit{font-size:13px;color:#4a5568;margin-top:4px}
+.section{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:28px;margin-bottom:20px}
+.stitle{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <nav><a style="font-size:11px;color:#4a5568;text-decoration:none;margin-left:16px" href="/ru/ru/nadym/">Русский</a> <a style="font-size:11px;color:#4a5568;text-decoration:none;margin-left:16px" href="/ru/ru/nadym/">English</a></nav>
+</header>
+<main class="wrap">
+  <div class="breadcrumb">
+    <a href="/">WeatherArb</a>  /  <span>Русский</span>  /  <span>Россия</span> / Nadym
+  </div>
+  <h1>Погода Nadym Сегодня</h1>
+  <p class="subtitle">Россия · Базовый уровень NASA POWER 25 лет · 65.53°N 72.52°E</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Индекс Z-Score</div>
+      <div class="card-val" id="z-val" style="color:#f97316">...</div>
+      <div class="card-unit">vs исторический средний</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Температура</div>
+      <div class="card-val" id="temp-val">...</div>
+      <div class="card-unit">градусов Цельсия</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Влажность</div>
+      <div class="card-val" id="hum-val">...</div>
+      <div class="card-unit">%</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Ветер</div>
+      <div class="card-val" id="wind-val">...</div>
+      <div class="card-unit">км/ч</div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="stitle">WeatherArb Analysis</div>
+    <div id="analysis" style="font-size:14px;color:#4a5568;line-height:1.7">Загрузка данных...</div>
+  </div>
+  <div class="section">
+    <div class="stitle">Methodology</div>
+    <p style="font-size:14px;color:#4a5568;line-height:1.8">WeatherArb рассчитывает Z-Score и данные HDD/CDD по сравнению с базовым уровнем NASA POWER за 25 лет для Nadym.</p>
+  </div>
+</main>
+<script>
+const API = 'https://artkill24-weatherarb-api.hf.space';
+const slug = 'nadym';
+const LEVELS = {"CRITICAL": ["\u041a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439", "#ef4444"], "EXTREME": ["\u042d\u043a\u0441\u0442\u0440\u0435\u043c\u0430\u043b\u044c\u043d\u044b\u0439", "#f97316"], "UNUSUAL": ["\u041d\u0435\u043e\u0431\u044b\u0447\u043d\u044b\u0439", "#eab308"], "NORMAL": ["\u041d\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u044b\u0439", "#10b981"]};
+async function load() {
+  try {
+    const r = await fetch(`${API}/api/v1/pulse/${slug}`);
+    if (!r.ok) throw new Error();
+    const d = await r.json();
+    const z = d.z_score || 0;
+    const level = d.anomaly_level || 'NORMAL';
+    const [label, color] = LEVELS[level] || ['Normal', '#10b981'];
+    document.getElementById('z-val').textContent = (z>=0?'+':'') + z.toFixed(2) + 'σ';
+    document.getElementById('z-val').style.color = color;
+    document.getElementById('temp-val').textContent = d.temperature_c?.toFixed(1) || '--';
+    document.getElementById('hum-val').textContent = d.humidity_pct || '--';
+    document.getElementById('wind-val').textContent = d.wind_kmh?.toFixed(0) || '--';
+    const absZ = Math.abs(z);
+    let analysis = '';
+    if (absZ >= 3) analysis = `Nadym фиксирует критическую климатическую аномалию с Z-Score ${{z.toFixed(2)}}σ.`;
+    else if (absZ >= 2) analysis = `Nadym показывает необычные погодные условия с Z-Score ${{z.toFixed(2)}}σ.`;
+    else analysis = `Погода в Nadym сегодня в пределах нормы с Z-Score ${{z.toFixed(2)}}σ.`;
+    document.getElementById('analysis').textContent = analysis;
+  } catch(e) {
+    document.getElementById('analysis').textContent = 'Данные временно недоступны.';
+  }
+}
+load();
+</script>
+</body>
+</html>
