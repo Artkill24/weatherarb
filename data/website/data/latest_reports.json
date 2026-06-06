@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-06T06:49:44.238753+00:00",
-  "count": 24,
+  "last_updated": "2026-06-06T08:26:10.223162+00:00",
+  "count": 16,
   "reports": [
     {
       "slug": "2026-06-01-zaslawye-heavy-rain",
@@ -241,66 +241,6 @@
       "cover_url": "https://images.unsplash.com/photo-1594253726659-1564fd716639?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAxOTYzMDl8&ixlib=rb-4.1.0&q=80&w=1080",
       "url": "/news/2026-05-31-nagqu-cold-snap/",
       "excerpt": "A severe cold snap has hit Nagqu, with a Z-Score of -4.40. This event is rated as CRITICAL with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-30-zaslawye-heavy-rain",
-      "title": "Zaslawye Heavy Rain",
-      "lead": "Zaslawye is experiencing a critical weather event with heavy rain. The Z-Score of -3.06 indicates a significant anomaly....",
-      "location": "Zaslawye",
-      "country_code": "eu",
-      "vertical": "heavy-rain",
-      "z_score": -3.06,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-30",
-      "cover_url": "https://images.unsplash.com/photo-1701788035857-b6e8d5eb8f66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAxMDg4OTV8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-30-zaslawye-heavy-rain/",
-      "excerpt": "Zaslawye is experiencing a critical weather event with heavy rain. The Z-Score of -3.06 indicates a significant anomaly."
-    },
-    {
-      "slug": "2026-05-30-vitebsk-heavy-rain",
-      "title": "Vitebsk Heavy Rain",
-      "lead": "A critical heavy rain event is affecting Vitebsk with a Z-Score of -3.00. The Score is 10.0/10, indicating an extreme anomaly....",
-      "location": "Vitebsk",
-      "country_code": "eu",
-      "vertical": "heavy-rain",
-      "z_score": -3.0,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-30",
-      "cover_url": "https://images.unsplash.com/photo-1726524098694-56d45ab87cbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MjU5Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAxMDg4OTl8&ixlib=rb-4.1.0&q=80&w=1080",
-      "url": "/news/2026-05-30-vitebsk-heavy-rain/",
-      "excerpt": "A critical heavy rain event is affecting Vitebsk with a Z-Score of -3.00. The Score is 10.0/10, indicating an extreme anomaly."
-    },
-    {
-      "slug": "2026-05-30-villazon-cold-snap",
-      "title": "Villazón Cold Snap",
-      "lead": "Villazón is experiencing a severe cold snap with a Z-Score of -3.40. This anomaly has reached a critical level with a score of 10.0/10....",
-      "location": "Villazón",
-      "country_code": "eu",
-      "vertical": "cold-snap",
-      "z_score": -3.4,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-30",
-      "cover_url": "",
-      "url": "/news/2026-05-30-villazon-cold-snap/",
-      "excerpt": "Villazón is experiencing a severe cold snap with a Z-Score of -3.40. This anomaly has reached a critical level with a score of 10.0/10."
-    },
-    {
-      "slug": "2026-05-30-viacha-cold-snap",
-      "title": "Viacha Cold Snap",
-      "lead": "A severe cold snap has hit Viacha with a Z-Score of -4.23. This event is rated as CRITICAL with a score of 10.0/10....",
-      "location": "Viacha",
-      "country_code": "eu",
-      "vertical": "cold-snap",
-      "z_score": -4.23,
-      "score": 10.0,
-      "anomaly_level": "CRITICAL",
-      "date": "2026-05-30",
-      "cover_url": "",
-      "url": "/news/2026-05-30-viacha-cold-snap/",
-      "excerpt": "A severe cold snap has hit Viacha with a Z-Score of -4.23. This event is rated as CRITICAL with a score of 10.0/10."
     }
   ]
 }
