@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Jipijapa Today — Z-Score Climate Anomaly | WeatherArb</title>
+<meta name="description" content="Real-time weather anomalies for Jipijapa, Ecuador. Z-Score vs NASA POWER 25-year baseline. Updated hourly.">
+<meta property="og:title" content="WeatherArb — Jipijapa">
+<meta property="og:description" content="Real-time weather anomalies for Jipijapa, Ecuador. Z-Score vs NASA POWER 25-year baseline. Updated hourly.">
+<link rel="canonical" href="https://weatherarb.com/ec/jipijapa/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:900px;margin:0 auto;padding:48px 24px}
+.breadcrumb{font-size:12px;color:#4a5568;margin-bottom:24px}
+.breadcrumb a{color:#4a5568;text-decoration:none}
+.breadcrumb a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,48px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.subtitle{font-size:15px;color:#4a5568;margin-bottom:32px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:24px}
+.card{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:24px}
+.card-label{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-bottom:8px}
+.card-val{font-size:36px;font-weight:900;color:#fff;line-height:1}
+.card-unit{font-size:12px;color:#4a5568;margin-top:6px}
+.section{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:28px;margin-bottom:20px}
+.section-title{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px}
+.badge{display:inline-block;padding:6px 16px;border-radius:100px;font-size:12px;font-weight:700;margin-bottom:20px;border:1px solid}
+.nearby-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:12px}
+.nearby-card{background:#141920;border:1px solid #1e2d3d;border-radius:10px;padding:14px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.nearby-card:hover{border-color:#3b82f6}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/ec/" style="font-size:12px;color:#4a5568;text-decoration:none">Ecuador →</a>
+</header>
+<main class="wrap">
+  <div class="breadcrumb">
+    <a href="/">WeatherArb</a> / <a href="/ec/">Ecuador</a> / Jipijapa
+  </div>
+  <h1>Jipijapa</h1>
+  <p class="subtitle">Ecuador · -1.35°N -80.58°E · NASA POWER 25y baseline</p>
+  <div id="badge-wrap"></div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-label">Z-Score</div>
+      <div class="card-val" id="z-val" style="color:#f97316">—</div>
+      <div class="card-unit">σ vs 25y baseline</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Temperature</div>
+      <div class="card-val" id="temp-val">—</div>
+      <div class="card-unit">°C</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Humidity</div>
+      <div class="card-val" id="hum-val">—</div>
+      <div class="card-unit">%</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Wind</div>
+      <div class="card-val" id="wind-val">—</div>
+      <div class="card-unit">km/h</div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">WeatherArb Analysis</div>
+    <div id="analysis" style="font-size:14px;color:#4a5568;line-height:1.7">Loading...</div>
+  </div>
+  <div class="section">
+    <div class="section-title">Nearby Cities</div>
+    <div id="nearby" class="nearby-grid"></div>
+  </div>
+</main>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var slug='jipijapa';
+var lat=-1.3486;
+var lon=-80.5786;
+var LEVELS={CRITICAL:['Critical','#ef4444'],EXTREME:['Extreme','#f97316'],UNUSUAL:['Unusual','#eab308'],NORMAL:['Normal','#10b981']};
+async function load(){
+  try{
+    var r=await fetch(API+'/api/v1/pulse/'+slug);
+    if(!r.ok)throw new Error();
+    var d=await r.json();
+    var z=d.z_score||0;
+    var lv=LEVELS[d.anomaly_level]||LEVELS.NORMAL;
+    document.getElementById('z-val').textContent=(z>=0?'+':'')+z.toFixed(2)+'σ';
+    document.getElementById('z-val').style.color=lv[1];
+    document.getElementById('temp-val').textContent=d.temperature_c!=null?d.temperature_c.toFixed(1):'—';
+    document.getElementById('hum-val').textContent=d.humidity_pct||'—';
+    document.getElementById('wind-val').textContent=d.wind_kmh!=null?d.wind_kmh.toFixed(0):'—';
+    document.getElementById('badge-wrap').innerHTML='<span class="badge" style="background:'+lv[1]+'22;color:'+lv[1]+';border-color:'+lv[1]+'44">'+lv[0]+'</span>';
+    var absZ=Math.abs(z);
+    var txt=absZ>=3?'Jipijapa is recording a critical climate anomaly ('+z.toFixed(2)+'σ). Current conditions deviate significantly from the 25-year NASA baseline.':absZ>=2?'Jipijapa shows an unusual weather pattern today ('+z.toFixed(2)+'σ) compared to historical averages.':'Jipijapa weather is within normal range today ('+z.toFixed(2)+'σ vs NASA POWER 25-year baseline).';
+    document.getElementById('analysis').textContent=txt;
+  }catch(e){document.getElementById('analysis').textContent='Data loading...';}
+  try{
+    var r2=await fetch(API+'/api/v1/pulse/nearby?lat='+lat+'&lon='+lon+'&limit=6');
+    var nearby=await r2.json();
+    if(Array.isArray(nearby)){
+      document.getElementById('nearby').innerHTML=nearby.map(function(c){
+        var z2=c.z_score||0;
+        var col=z2>=3?'#ef4444':z2>=2?'#f97316':z2>=1?'#eab308':z2<=-2?'#3b82f6':'#10b981';
+        var s2=(c.comune||c.province||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+        return '<a href="/'+( c.country_code||'').toLowerCase()+'/'+s2+'/" class="nearby-card"><span>'+( c.comune||c.province)+'</span><span style="font-weight:800;color:'+col+'">'+(z2>=0?'+':'')+z2.toFixed(1)+'σ</span></a>';
+      }).join('');
+    }
+  }catch(e){}
+}
+load();
+</script>
+</body>
+</html>
