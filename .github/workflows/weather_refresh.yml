@@ -1,0 +1,28 @@
+name: WeatherArb — Hourly Refresh & Keep Alive
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # ogni ora — refresh completo
+    - cron: '*/30 * * * *' # ogni 30 min — keep alive
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Keep HF Space alive
+        run: |
+          curl -s https://artkill24-weatherarb-api.hf.space/health
+          echo "Space pinged at $(date)"
+
+      - name: Trigger weather refresh (ogni ora)
+        if: ${{ github.event.schedule == '0 * * * *' || github.event_name == 'workflow_dispatch' }}
+        run: |
+          echo "Triggering full refresh..."
+          curl -s -X POST https://artkill24-weatherarb-api.hf.space/pulse/refresh
+          echo "Refresh triggered at $(date)"
+          
+          # Aspetta 4 minuti e verifica
+          sleep 240
+          CACHE=$(curl -s https://artkill24-weatherarb-api.hf.space/debug/fetch-test | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('cache_size',0))" 2>/dev/null)
+          echo "Cache size after refresh: $CACHE cities"
