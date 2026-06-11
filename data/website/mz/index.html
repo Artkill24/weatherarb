@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Mozambique — 51 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 51 cities in Mozambique. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/mz/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Mozambique</div>
+  <h1>Mozambique</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 51 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">51</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Mozambique</div>
+  <div class="city-grid">
+<a href="/mz/xai-xai/" class="city-card"><span class="city-name">Xai-Xai</span><span class="city-z" id="z-xai-xai">—σ</span></a>
+<a href="/mz/gorongosa/" class="city-card"><span class="city-name">Gorongosa</span><span class="city-z" id="z-gorongosa">—σ</span></a>
+<a href="/mz/vilankulo/" class="city-card"><span class="city-name">Vilankulo</span><span class="city-z" id="z-vilankulo">—σ</span></a>
+<a href="/mz/moatize/" class="city-card"><span class="city-name">Moatize</span><span class="city-z" id="z-moatize">—σ</span></a>
+<a href="/mz/nhamatanda/" class="city-card"><span class="city-name">Nhamatanda</span><span class="city-z" id="z-nhamatanda">—σ</span></a>
+<a href="/mz/caia/" class="city-card"><span class="city-name">Caia</span><span class="city-z" id="z-caia">—σ</span></a>
+<a href="/mz/maputo/" class="city-card"><span class="city-name">Maputo</span><span class="city-z" id="z-maputo">—σ</span></a>
+<a href="/mz/matola/" class="city-card"><span class="city-name">Matola</span><span class="city-z" id="z-matola">—σ</span></a>
+<a href="/mz/nampula/" class="city-card"><span class="city-name">Nampula</span><span class="city-z" id="z-nampula">—σ</span></a>
+<a href="/mz/beira/" class="city-card"><span class="city-name">Beira</span><span class="city-z" id="z-beira">—σ</span></a>
+<a href="/mz/antonio-enes/" class="city-card"><span class="city-name">António Enes</span><span class="city-z" id="z-antonio-enes">—σ</span></a>
+<a href="/mz/chimoio/" class="city-card"><span class="city-name">Chimoio</span><span class="city-z" id="z-chimoio">—σ</span></a>
+<a href="/mz/cidade-de-nacala/" class="city-card"><span class="city-name">Cidade de Nacala</span><span class="city-z" id="z-cidade-de-nacala">—σ</span></a>
+<a href="/mz/malema/" class="city-card"><span class="city-name">Malema</span><span class="city-z" id="z-malema">—σ</span></a>
+<a href="/mz/quelimane/" class="city-card"><span class="city-name">Quelimane</span><span class="city-z" id="z-quelimane">—σ</span></a>
+<a href="/mz/tete/" class="city-card"><span class="city-name">Tete</span><span class="city-z" id="z-tete">—σ</span></a>
+<a href="/mz/vila-junqueiro/" class="city-card"><span class="city-name">Vila Junqueiro</span><span class="city-z" id="z-vila-junqueiro">—σ</span></a>
+<a href="/mz/lichinga/" class="city-card"><span class="city-name">Lichinga</span><span class="city-z" id="z-lichinga">—σ</span></a>
+<a href="/mz/pemba/" class="city-card"><span class="city-name">Pemba</span><span class="city-z" id="z-pemba">—σ</span></a>
+<a href="/mz/maxixe/" class="city-card"><span class="city-name">Maxixe</span><span class="city-z" id="z-maxixe">—σ</span></a>
+<a href="/mz/cuamba/" class="city-card"><span class="city-name">Cuamba</span><span class="city-z" id="z-cuamba">—σ</span></a>
+<a href="/mz/montepuez/" class="city-card"><span class="city-name">Montepuez</span><span class="city-z" id="z-montepuez">—σ</span></a>
+<a href="/mz/dondo/" class="city-card"><span class="city-name">Dondo</span><span class="city-z" id="z-dondo">—σ</span></a>
+<a href="/mz/mocuba/" class="city-card"><span class="city-name">Mocuba</span><span class="city-z" id="z-mocuba">—σ</span></a>
+<a href="/mz/inhambane/" class="city-card"><span class="city-name">Inhambane</span><span class="city-z" id="z-inhambane">—σ</span></a>
+<a href="/mz/chokwe/" class="city-card"><span class="city-name">Chokwé</span><span class="city-z" id="z-chokwe">—σ</span></a>
+<a href="/mz/manhica/" class="city-card"><span class="city-name">Manhiça</span><span class="city-z" id="z-manhica">—σ</span></a>
+<a href="/mz/pebane/" class="city-card"><span class="city-name">Pebane</span><span class="city-z" id="z-pebane">—σ</span></a>
+<a href="/mz/chibuto/" class="city-card"><span class="city-name">Chibuto</span><span class="city-z" id="z-chibuto">—σ</span></a>
+<a href="/mz/songo/" class="city-card"><span class="city-name">Songo</span><span class="city-z" id="z-songo">—σ</span></a>
+<a href="/mz/macomia/" class="city-card"><span class="city-name">Macomia</span><span class="city-z" id="z-macomia">—σ</span></a>
+<a href="/mz/zumbo/" class="city-card"><span class="city-name">Zumbo</span><span class="city-z" id="z-zumbo">—σ</span></a>
+<a href="/mz/mocimboa-da-praia/" class="city-card"><span class="city-name">Mocímboa da Praia</span><span class="city-z" id="z-mocimboa-da-praia">—σ</span></a>
+<a href="/mz/namaacha/" class="city-card"><span class="city-name">Namaacha</span><span class="city-z" id="z-namaacha">—σ</span></a>
+<a href="/mz/catandica/" class="city-card"><span class="city-name">Catandica</span><span class="city-z" id="z-catandica">—σ</span></a>
+<a href="/mz/mocimboa/" class="city-card"><span class="city-name">Mocímboa</span><span class="city-z" id="z-mocimboa">—σ</span></a>
+<a href="/mz/manjacaze/" class="city-card"><span class="city-name">Manjacaze</span><span class="city-z" id="z-manjacaze">—σ</span></a>
+<a href="/mz/ulongue/" class="city-card"><span class="city-name">Ulongué</span><span class="city-z" id="z-ulongue">—σ</span></a>
+<a href="/mz/catembe/" class="city-card"><span class="city-name">Catembe</span><span class="city-z" id="z-catembe">—σ</span></a>
+<a href="/mz/macia/" class="city-card"><span class="city-name">Macia</span><span class="city-z" id="z-macia">—σ</span></a>
+<a href="/mz/mapai/" class="city-card"><span class="city-name">Mapai</span><span class="city-z" id="z-mapai">—σ</span></a>
+<a href="/mz/chinde/" class="city-card"><span class="city-name">Chinde</span><span class="city-z" id="z-chinde">—σ</span></a>
+<a href="/mz/ilha-de-mocambique/" class="city-card"><span class="city-name">Ilha de Moçambique</span><span class="city-z" id="z-ilha-de-mocambique">—σ</span></a>
+<a href="/mz/ancuabe/" class="city-card"><span class="city-name">Ancuabe</span><span class="city-z" id="z-ancuabe">—σ</span></a>
+<a href="/mz/inhassoro/" class="city-card"><span class="city-name">Inhassoro</span><span class="city-z" id="z-inhassoro">—σ</span></a>
+<a href="/mz/regedor-zavala/" class="city-card"><span class="city-name">Regedor Zavala</span><span class="city-z" id="z-regedor-zavala">—σ</span></a>
+<a href="/mz/zavora/" class="city-card"><span class="city-name">Závora</span><span class="city-z" id="z-zavora">—σ</span></a>
+<a href="/mz/marrupa/" class="city-card"><span class="city-name">Marrupa</span><span class="city-z" id="z-marrupa">—σ</span></a>
+<a href="/mz/nicoadala/" class="city-card"><span class="city-name">Nicoadala</span><span class="city-z" id="z-nicoadala">—σ</span></a>
+<a href="/mz/manica/" class="city-card"><span class="city-name">Manica</span><span class="city-z" id="z-manica">—σ</span></a>
+<a href="/mz/ligonha/" class="city-card"><span class="city-name">Ligonha</span><span class="city-z" id="z-ligonha">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='mz';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

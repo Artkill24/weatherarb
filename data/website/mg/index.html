@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Madagascar — 101 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 101 cities in Madagascar. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/mg/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Madagascar</div>
+  <h1>Madagascar</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 101 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">101</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Madagascar</div>
+  <div class="city-grid">
+<a href="/mg/toamasina/" class="city-card"><span class="city-name">Toamasina</span><span class="city-z" id="z-toamasina">—σ</span></a>
+<a href="/mg/vondrozo/" class="city-card"><span class="city-name">Vondrozo</span><span class="city-z" id="z-vondrozo">—σ</span></a>
+<a href="/mg/vohipeno/" class="city-card"><span class="city-name">Vohipeno</span><span class="city-z" id="z-vohipeno">—σ</span></a>
+<a href="/mg/vohipaho/" class="city-card"><span class="city-name">Vohipaho</span><span class="city-z" id="z-vohipaho">—σ</span></a>
+<a href="/mg/vohibinany/" class="city-card"><span class="city-name">Vohibinany</span><span class="city-z" id="z-vohibinany">—σ</span></a>
+<a href="/mg/vavatenina/" class="city-card"><span class="city-name">Vavatenina</span><span class="city-z" id="z-vavatenina">—σ</span></a>
+<a href="/mg/antananarivo/" class="city-card"><span class="city-name">Antananarivo</span><span class="city-z" id="z-antananarivo">—σ</span></a>
+<a href="/mg/betsiboka/" class="city-card"><span class="city-name">Betsiboka</span><span class="city-z" id="z-betsiboka">—σ</span></a>
+<a href="/mg/antsirabe/" class="city-card"><span class="city-name">Antsirabe</span><span class="city-z" id="z-antsirabe">—σ</span></a>
+<a href="/mg/mahajanga/" class="city-card"><span class="city-name">Mahajanga</span><span class="city-z" id="z-mahajanga">—σ</span></a>
+<a href="/mg/fianarantsoa/" class="city-card"><span class="city-name">Fianarantsoa</span><span class="city-z" id="z-fianarantsoa">—σ</span></a>
+<a href="/mg/toliara/" class="city-card"><span class="city-name">Toliara</span><span class="city-z" id="z-toliara">—σ</span></a>
+<a href="/mg/antsiranana/" class="city-card"><span class="city-name">Antsiranana</span><span class="city-z" id="z-antsiranana">—σ</span></a>
+<a href="/mg/ambovombe/" class="city-card"><span class="city-name">Ambovombe</span><span class="city-z" id="z-ambovombe">—σ</span></a>
+<a href="/mg/ambohimangakely/" class="city-card"><span class="city-name">Ambohimangakely</span><span class="city-z" id="z-ambohimangakely">—σ</span></a>
+<a href="/mg/sambava/" class="city-card"><span class="city-name">Sambava</span><span class="city-z" id="z-sambava">—σ</span></a>
+<a href="/mg/antehiroka/" class="city-card"><span class="city-name">Antehiroka</span><span class="city-z" id="z-antehiroka">—σ</span></a>
+<a href="/mg/belo-tsiribihina/" class="city-card"><span class="city-name">Belo Tsiribihina</span><span class="city-z" id="z-belo-tsiribihina">—σ</span></a>
+<a href="/mg/imerintsiatosika/" class="city-card"><span class="city-name">Imerintsiatosika</span><span class="city-z" id="z-imerintsiatosika">—σ</span></a>
+<a href="/mg/antalaha/" class="city-card"><span class="city-name">Antalaha</span><span class="city-z" id="z-antalaha">—σ</span></a>
+<a href="/mg/ankazoabokely/" class="city-card"><span class="city-name">Ankazoabokely</span><span class="city-z" id="z-ankazoabokely">—σ</span></a>
+<a href="/mg/tolanaro/" class="city-card"><span class="city-name">Tôlan̈aro</span><span class="city-z" id="z-tolanaro">—σ</span></a>
+<a href="/mg/madirovalo/" class="city-card"><span class="city-name">Madirovalo</span><span class="city-z" id="z-madirovalo">—σ</span></a>
+<a href="/mg/ambilobe/" class="city-card"><span class="city-name">Ambilobe</span><span class="city-z" id="z-ambilobe">—σ</span></a>
+<a href="/mg/analavory/" class="city-card"><span class="city-name">Analavory</span><span class="city-z" id="z-analavory">—σ</span></a>
+<a href="/mg/ambanja/" class="city-card"><span class="city-name">Ambanja</span><span class="city-z" id="z-ambanja">—σ</span></a>
+<a href="/mg/andoharanofotsy/" class="city-card"><span class="city-name">Andoharanofotsy</span><span class="city-z" id="z-andoharanofotsy">—σ</span></a>
+<a href="/mg/antsalova/" class="city-card"><span class="city-name">Antsalova</span><span class="city-z" id="z-antsalova">—σ</span></a>
+<a href="/mg/ambahikily/" class="city-card"><span class="city-name">Ambahikily</span><span class="city-z" id="z-ambahikily">—σ</span></a>
+<a href="/mg/antsinanantsena/" class="city-card"><span class="city-name">Antsinanantsena</span><span class="city-z" id="z-antsinanantsena">—σ</span></a>
+<a href="/mg/moramanga/" class="city-card"><span class="city-name">Moramanga</span><span class="city-z" id="z-moramanga">—σ</span></a>
+<a href="/mg/antanifotsy/" class="city-card"><span class="city-name">Antanifotsy</span><span class="city-z" id="z-antanifotsy">—σ</span></a>
+<a href="/mg/ankadinondry-sakay/" class="city-card"><span class="city-name">Ankadinondry-Sakay</span><span class="city-z" id="z-ankadinondry-sakay">—σ</span></a>
+<a href="/mg/morondava/" class="city-card"><span class="city-name">Morondava</span><span class="city-z" id="z-morondava">—σ</span></a>
+<a href="/mg/ampanihy/" class="city-card"><span class="city-name">Ampanihy</span><span class="city-z" id="z-ampanihy">—σ</span></a>
+<a href="/mg/ambohibary/" class="city-card"><span class="city-name">Ambohibary</span><span class="city-z" id="z-ambohibary">—σ</span></a>
+<a href="/mg/tanjombato/" class="city-card"><span class="city-name">Tanjombato</span><span class="city-z" id="z-tanjombato">—σ</span></a>
+<a href="/mg/ampitatafika/" class="city-card"><span class="city-name">Ampitatafika</span><span class="city-z" id="z-ampitatafika">—σ</span></a>
+<a href="/mg/ejeda/" class="city-card"><span class="city-name">Ejeda</span><span class="city-z" id="z-ejeda">—σ</span></a>
+<a href="/mg/ambatondrazaka/" class="city-card"><span class="city-name">Ambatondrazaka</span><span class="city-z" id="z-ambatondrazaka">—σ</span></a>
+<a href="/mg/saranambana/" class="city-card"><span class="city-name">Saranambana</span><span class="city-z" id="z-saranambana">—σ</span></a>
+<a href="/mg/faratsiho/" class="city-card"><span class="city-name">Faratsiho</span><span class="city-z" id="z-faratsiho">—σ</span></a>
+<a href="/mg/amboasary/" class="city-card"><span class="city-name">Amboasary</span><span class="city-z" id="z-amboasary">—σ</span></a>
+<a href="/mg/tsiroanomandidy/" class="city-card"><span class="city-name">Tsiroanomandidy</span><span class="city-z" id="z-tsiroanomandidy">—σ</span></a>
+<a href="/mg/manakara/" class="city-card"><span class="city-name">Manakara</span><span class="city-z" id="z-manakara">—σ</span></a>
+<a href="/mg/talata-maty/" class="city-card"><span class="city-name">Talata-maty</span><span class="city-z" id="z-talata-maty">—σ</span></a>
+<a href="/mg/maroantsetra/" class="city-card"><span class="city-name">Maroantsetra</span><span class="city-z" id="z-maroantsetra">—σ</span></a>
+<a href="/mg/morarano-chrome/" class="city-card"><span class="city-name">Morarano Chrome</span><span class="city-z" id="z-morarano-chrome">—σ</span></a>
+<a href="/mg/fenoarivo-atsinanana/" class="city-card"><span class="city-name">Fenoarivo Atsinanana</span><span class="city-z" id="z-fenoarivo-atsinanana">—σ</span></a>
+<a href="/mg/ambohitrimanjaka/" class="city-card"><span class="city-name">Ambohitrimanjaka</span><span class="city-z" id="z-ambohitrimanjaka">—σ</span></a>
+<a href="/mg/ambositra/" class="city-card"><span class="city-name">Ambositra</span><span class="city-z" id="z-ambositra">—σ</span></a>
+<a href="/mg/soavinandriana/" class="city-card"><span class="city-name">Soavinandriana</span><span class="city-z" id="z-soavinandriana">—σ</span></a>
+<a href="/mg/matsoandakana/" class="city-card"><span class="city-name">Matsoandakana</span><span class="city-z" id="z-matsoandakana">—σ</span></a>
+<a href="/mg/benenitra/" class="city-card"><span class="city-name">Benenitra</span><span class="city-z" id="z-benenitra">—σ</span></a>
+<a href="/mg/ihosy/" class="city-card"><span class="city-name">Ihosy</span><span class="city-z" id="z-ihosy">—σ</span></a>
+<a href="/mg/marovoay/" class="city-card"><span class="city-name">Marovoay</span><span class="city-z" id="z-marovoay">—σ</span></a>
+<a href="/mg/androka/" class="city-card"><span class="city-name">Androka</span><span class="city-z" id="z-androka">—σ</span></a>
+<a href="/mg/ambatomainty/" class="city-card"><span class="city-name">Ambatomainty</span><span class="city-z" id="z-ambatomainty">—σ</span></a>
+<a href="/mg/vangaindrano/" class="city-card"><span class="city-name">Vangaindrano</span><span class="city-z" id="z-vangaindrano">—σ</span></a>
+<a href="/mg/antsohihy/" class="city-card"><span class="city-name">Antsohihy</span><span class="city-z" id="z-antsohihy">—σ</span></a>
+<a href="/mg/mahanoro/" class="city-card"><span class="city-name">Mahanoro</span><span class="city-z" id="z-mahanoro">—σ</span></a>
+<a href="/mg/ambatofinandrahana/" class="city-card"><span class="city-name">Ambatofinandrahana</span><span class="city-z" id="z-ambatofinandrahana">—σ</span></a>
+<a href="/mg/andilamena/" class="city-card"><span class="city-name">Andilamena</span><span class="city-z" id="z-andilamena">—σ</span></a>
+<a href="/mg/mandoto/" class="city-card"><span class="city-name">Mandoto</span><span class="city-z" id="z-mandoto">—σ</span></a>
+<a href="/mg/manazary/" class="city-card"><span class="city-name">Manazary</span><span class="city-z" id="z-manazary">—σ</span></a>
+<a href="/mg/anosiala/" class="city-card"><span class="city-name">Anosiala</span><span class="city-z" id="z-anosiala">—σ</span></a>
+<a href="/mg/ikongo/" class="city-card"><span class="city-name">Ikongo</span><span class="city-z" id="z-ikongo">—σ</span></a>
+<a href="/mg/ampasina-maningory/" class="city-card"><span class="city-name">Ampasina-Maningory</span><span class="city-z" id="z-ampasina-maningory">—σ</span></a>
+<a href="/mg/mahabo/" class="city-card"><span class="city-name">Mahabo</span><span class="city-z" id="z-mahabo">—σ</span></a>
+<a href="/mg/mahasolo/" class="city-card"><span class="city-name">Mahasolo</span><span class="city-z" id="z-mahasolo">—σ</span></a>
+<a href="/mg/mananara-avaratra/" class="city-card"><span class="city-name">Mananara Avaratra</span><span class="city-z" id="z-mananara-avaratra">—σ</span></a>
+<a href="/mg/ikalamavony/" class="city-card"><span class="city-name">Ikalamavony</span><span class="city-z" id="z-ikalamavony">—σ</span></a>
+<a href="/mg/firavahana/" class="city-card"><span class="city-name">Firavahana</span><span class="city-z" id="z-firavahana">—σ</span></a>
+<a href="/mg/fotadrevo/" class="city-card"><span class="city-name">Fotadrevo</span><span class="city-z" id="z-fotadrevo">—σ</span></a>
+<a href="/mg/farafangana/" class="city-card"><span class="city-name">Farafangana</span><span class="city-z" id="z-farafangana">—σ</span></a>
+<a href="/mg/andapa/" class="city-card"><span class="city-name">Andapa</span><span class="city-z" id="z-andapa">—σ</span></a>
+<a href="/mg/betafo/" class="city-card"><span class="city-name">Betafo</span><span class="city-z" id="z-betafo">—σ</span></a>
+<a href="/mg/ankazomiriotra/" class="city-card"><span class="city-name">Ankazomiriotra</span><span class="city-z" id="z-ankazomiriotra">—σ</span></a>
+<a href="/mg/maromandia/" class="city-card"><span class="city-name">Maromandia</span><span class="city-z" id="z-maromandia">—σ</span></a>
+<a href="/mg/mahasoabe/" class="city-card"><span class="city-name">Mahasoabe</span><span class="city-z" id="z-mahasoabe">—σ</span></a>
+<a href="/mg/amparafaravola/" class="city-card"><span class="city-name">Amparafaravola</span><span class="city-z" id="z-amparafaravola">—σ</span></a>
+<a href="/mg/didy/" class="city-card"><span class="city-name">Didy</span><span class="city-z" id="z-didy">—σ</span></a>
+<a href="/mg/ambodimanga-ii/" class="city-card"><span class="city-name">Ambodimanga II</span><span class="city-z" id="z-ambodimanga-ii">—σ</span></a>
+<a href="/mg/vohitromby/" class="city-card"><span class="city-name">Vohitromby</span><span class="city-z" id="z-vohitromby">—σ</span></a>
+<a href="/mg/kiranomena/" class="city-card"><span class="city-name">Kiranomena</span><span class="city-z" id="z-kiranomena">—σ</span></a>
+<a href="/mg/antsohimbondrona/" class="city-card"><span class="city-name">Antsohimbondrona</span><span class="city-z" id="z-antsohimbondrona">—σ</span></a>
+<a href="/mg/andriba/" class="city-card"><span class="city-name">Andriba</span><span class="city-z" id="z-andriba">—σ</span></a>
+<a href="/mg/bekoratsaka/" class="city-card"><span class="city-name">Bekoratsaka</span><span class="city-z" id="z-bekoratsaka">—σ</span></a>
+<a href="/mg/vohilava/" class="city-card"><span class="city-name">Vohilava</span><span class="city-z" id="z-vohilava">—σ</span></a>
+<a href="/mg/itampolo/" class="city-card"><span class="city-name">Itampolo</span><span class="city-z" id="z-itampolo">—σ</span></a>
+<a href="/mg/ambano/" class="city-card"><span class="city-name">Ambano</span><span class="city-z" id="z-ambano">—σ</span></a>
+<a href="/mg/sakaraha/" class="city-card"><span class="city-name">Sakaraha</span><span class="city-z" id="z-sakaraha">—σ</span></a>
+<a href="/mg/ambatomiady/" class="city-card"><span class="city-name">Ambatomiady</span><span class="city-z" id="z-ambatomiady">—σ</span></a>
+<a href="/mg/manaratsandry/" class="city-card"><span class="city-name">Manaratsandry</span><span class="city-z" id="z-manaratsandry">—σ</span></a>
+<a href="/mg/vohitrandriana/" class="city-card"><span class="city-name">Vohitrandriana</span><span class="city-z" id="z-vohitrandriana">—σ</span></a>
+<a href="/mg/andranovory/" class="city-card"><span class="city-name">Andranovory</span><span class="city-z" id="z-andranovory">—σ</span></a>
+<a href="/mg/andranomanelatra/" class="city-card"><span class="city-name">Andranomanelatra</span><span class="city-z" id="z-andranomanelatra">—σ</span></a>
+<a href="/mg/tsitondroina/" class="city-card"><span class="city-name">Tsitondroina</span><span class="city-z" id="z-tsitondroina">—σ</span></a>
+<a href="/mg/ambinanitelo/" class="city-card"><span class="city-name">Ambinanitelo</span><span class="city-z" id="z-ambinanitelo">—σ</span></a>
+<a href="/mg/ambalavao/" class="city-card"><span class="city-name">Ambalavao</span><span class="city-z" id="z-ambalavao">—σ</span></a>
+<a href="/mg/antsampandrano/" class="city-card"><span class="city-name">Antsampandrano</span><span class="city-z" id="z-antsampandrano">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='mg';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

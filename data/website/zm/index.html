@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Zambia — 42 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 42 cities in Zambia. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/zm/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Zambia</div>
+  <h1>Zambia</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 42 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">42</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Zambia</div>
+  <div class="city-grid">
+<a href="/zm/nchelenge/" class="city-card"><span class="city-name">Nchelenge</span><span class="city-z" id="z-nchelenge">—σ</span></a>
+<a href="/zm/nakonde/" class="city-card"><span class="city-name">Nakonde</span><span class="city-z" id="z-nakonde">—σ</span></a>
+<a href="/zm/mpulungu/" class="city-card"><span class="city-name">Mpulungu</span><span class="city-z" id="z-mpulungu">—σ</span></a>
+<a href="/zm/mporokoso/" class="city-card"><span class="city-name">Mporokoso</span><span class="city-z" id="z-mporokoso">—σ</span></a>
+<a href="/zm/mbala/" class="city-card"><span class="city-name">Mbala</span><span class="city-z" id="z-mbala">—σ</span></a>
+<a href="/zm/kawambwa/" class="city-card"><span class="city-name">Kawambwa</span><span class="city-z" id="z-kawambwa">—σ</span></a>
+<a href="/zm/lusaka/" class="city-card"><span class="city-name">Lusaka</span><span class="city-z" id="z-lusaka">—σ</span></a>
+<a href="/zm/kitwe/" class="city-card"><span class="city-name">Kitwe</span><span class="city-z" id="z-kitwe">—σ</span></a>
+<a href="/zm/ndola/" class="city-card"><span class="city-name">Ndola</span><span class="city-z" id="z-ndola">—σ</span></a>
+<a href="/zm/chipata/" class="city-card"><span class="city-name">Chipata</span><span class="city-z" id="z-chipata">—σ</span></a>
+<a href="/zm/kabwe/" class="city-card"><span class="city-name">Kabwe</span><span class="city-z" id="z-kabwe">—σ</span></a>
+<a href="/zm/chingola/" class="city-card"><span class="city-name">Chingola</span><span class="city-z" id="z-chingola">—σ</span></a>
+<a href="/zm/kafue/" class="city-card"><span class="city-name">Kafue</span><span class="city-z" id="z-kafue">—σ</span></a>
+<a href="/zm/mongu/" class="city-card"><span class="city-name">Mongu</span><span class="city-z" id="z-mongu">—σ</span></a>
+<a href="/zm/luanshya/" class="city-card"><span class="city-name">Luanshya</span><span class="city-z" id="z-luanshya">—σ</span></a>
+<a href="/zm/mufulira/" class="city-card"><span class="city-name">Mufulira</span><span class="city-z" id="z-mufulira">—σ</span></a>
+<a href="/zm/kashikishi/" class="city-card"><span class="city-name">Kashikishi</span><span class="city-z" id="z-kashikishi">—σ</span></a>
+<a href="/zm/livingstone/" class="city-card"><span class="city-name">Livingstone</span><span class="city-z" id="z-livingstone">—σ</span></a>
+<a href="/zm/mansa/" class="city-card"><span class="city-name">Mansa</span><span class="city-z" id="z-mansa">—σ</span></a>
+<a href="/zm/bwana-mkubwa/" class="city-card"><span class="city-name">Bwana Mkubwa</span><span class="city-z" id="z-bwana-mkubwa">—σ</span></a>
+<a href="/zm/kasempa/" class="city-card"><span class="city-name">Kasempa</span><span class="city-z" id="z-kasempa">—σ</span></a>
+<a href="/zm/kasama/" class="city-card"><span class="city-name">Kasama</span><span class="city-z" id="z-kasama">—σ</span></a>
+<a href="/zm/solwezi/" class="city-card"><span class="city-name">Solwezi</span><span class="city-z" id="z-solwezi">—σ</span></a>
+<a href="/zm/chililabombwe/" class="city-card"><span class="city-name">Chililabombwe</span><span class="city-z" id="z-chililabombwe">—σ</span></a>
+<a href="/zm/chirundu/" class="city-card"><span class="city-name">Chirundu</span><span class="city-z" id="z-chirundu">—σ</span></a>
+<a href="/zm/mazabuka/" class="city-card"><span class="city-name">Mazabuka</span><span class="city-z" id="z-mazabuka">—σ</span></a>
+<a href="/zm/choma/" class="city-card"><span class="city-name">Choma</span><span class="city-z" id="z-choma">—σ</span></a>
+<a href="/zm/mpika/" class="city-card"><span class="city-name">Mpika</span><span class="city-z" id="z-mpika">—σ</span></a>
+<a href="/zm/sesheke/" class="city-card"><span class="city-name">Sesheke</span><span class="city-z" id="z-sesheke">—σ</span></a>
+<a href="/zm/mumbwa/" class="city-card"><span class="city-name">Mumbwa</span><span class="city-z" id="z-mumbwa">—σ</span></a>
+<a href="/zm/mwinilunga/" class="city-card"><span class="city-name">Mwinilunga</span><span class="city-z" id="z-mwinilunga">—σ</span></a>
+<a href="/zm/chinsali/" class="city-card"><span class="city-name">Chinsali</span><span class="city-z" id="z-chinsali">—σ</span></a>
+<a href="/zm/kapiri-mposhi/" class="city-card"><span class="city-name">Kapiri Mposhi</span><span class="city-z" id="z-kapiri-mposhi">—σ</span></a>
+<a href="/zm/kaoma/" class="city-card"><span class="city-name">Kaoma</span><span class="city-z" id="z-kaoma">—σ</span></a>
+<a href="/zm/chifubu/" class="city-card"><span class="city-name">Chifubu</span><span class="city-z" id="z-chifubu">—σ</span></a>
+<a href="/zm/chilonga/" class="city-card"><span class="city-name">Chilonga</span><span class="city-z" id="z-chilonga">—σ</span></a>
+<a href="/zm/lundazi/" class="city-card"><span class="city-name">Lundazi</span><span class="city-z" id="z-lundazi">—σ</span></a>
+<a href="/zm/senanga/" class="city-card"><span class="city-name">Senanga</span><span class="city-z" id="z-senanga">—σ</span></a>
+<a href="/zm/kalabo/" class="city-card"><span class="city-name">Kalabo</span><span class="city-z" id="z-kalabo">—σ</span></a>
+<a href="/zm/zambezi/" class="city-card"><span class="city-name">Zambezi</span><span class="city-z" id="z-zambezi">—σ</span></a>
+<a href="/zm/lukulu/" class="city-card"><span class="city-name">Lukulu</span><span class="city-z" id="z-lukulu">—σ</span></a>
+<a href="/zm/nyimba/" class="city-card"><span class="city-name">Nyimba</span><span class="city-z" id="z-nyimba">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='zm';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Sudan — 45 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 45 cities in Sudan. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/sd/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Sudan</div>
+  <h1>Sudan</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 45 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">45</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Sudan</div>
+  <div class="city-grid">
+<a href="/sd/khartoum/" class="city-card"><span class="city-name">Khartoum</span><span class="city-z" id="z-khartoum">—σ</span></a>
+<a href="/sd/omdurman/" class="city-card"><span class="city-name">Omdurman</span><span class="city-z" id="z-omdurman">—σ</span></a>
+<a href="/sd/khartoum-north/" class="city-card"><span class="city-name">Khartoum North</span><span class="city-z" id="z-khartoum-north">—σ</span></a>
+<a href="/sd/port-sudan/" class="city-card"><span class="city-name">Port Sudan</span><span class="city-z" id="z-port-sudan">—σ</span></a>
+<a href="/sd/el-geneina/" class="city-card"><span class="city-name">El Geneina</span><span class="city-z" id="z-el-geneina">—σ</span></a>
+<a href="/sd/kassala/" class="city-card"><span class="city-name">Kassala</span><span class="city-z" id="z-kassala">—σ</span></a>
+<a href="/sd/el-fasher/" class="city-card"><span class="city-name">El Fasher</span><span class="city-z" id="z-el-fasher">—σ</span></a>
+<a href="/sd/nyala/" class="city-card"><span class="city-name">Nyala</span><span class="city-z" id="z-nyala">—σ</span></a>
+<a href="/sd/el-obeid/" class="city-card"><span class="city-name">El Obeid</span><span class="city-z" id="z-el-obeid">—σ</span></a>
+<a href="/sd/gedaref/" class="city-card"><span class="city-name">Gedaref</span><span class="city-z" id="z-gedaref">—σ</span></a>
+<a href="/sd/wad-medani/" class="city-card"><span class="city-name">Wad Medani</span><span class="city-z" id="z-wad-medani">—σ</span></a>
+<a href="/sd/kusti/" class="city-card"><span class="city-name">Kūstī</span><span class="city-z" id="z-kusti">—σ</span></a>
+<a href="/sd/ed-daein/" class="city-card"><span class="city-name">Ed Daein</span><span class="city-z" id="z-ed-daein">—σ</span></a>
+<a href="/sd/singa/" class="city-card"><span class="city-name">Singa</span><span class="city-z" id="z-singa">—σ</span></a>
+<a href="/sd/kurmuk/" class="city-card"><span class="city-name">Kurmuk</span><span class="city-z" id="z-kurmuk">—σ</span></a>
+<a href="/sd/ar-ruseris/" class="city-card"><span class="city-name">Ar Ruseris</span><span class="city-z" id="z-ar-ruseris">—σ</span></a>
+<a href="/sd/ed-damazin/" class="city-card"><span class="city-name">Ed Damazin</span><span class="city-z" id="z-ed-damazin">—σ</span></a>
+<a href="/sd/al-manaqil/" class="city-card"><span class="city-name">Al Manāqil</span><span class="city-z" id="z-al-manaqil">—σ</span></a>
+<a href="/sd/sannar/" class="city-card"><span class="city-name">Sannār</span><span class="city-z" id="z-sannar">—σ</span></a>
+<a href="/sd/atbara/" class="city-card"><span class="city-name">Atbara</span><span class="city-z" id="z-atbara">—σ</span></a>
+<a href="/sd/ed-damer/" class="city-card"><span class="city-name">Ed Damer</span><span class="city-z" id="z-ed-damer">—σ</span></a>
+<a href="/sd/an-nuhud/" class="city-card"><span class="city-name">An Nuhūd</span><span class="city-z" id="z-an-nuhud">—σ</span></a>
+<a href="/sd/kadugli/" class="city-card"><span class="city-name">Kadugli</span><span class="city-z" id="z-kadugli">—σ</span></a>
+<a href="/sd/ad-diwem/" class="city-card"><span class="city-name">Ad Diwem</span><span class="city-z" id="z-ad-diwem">—σ</span></a>
+<a href="/sd/dongola/" class="city-card"><span class="city-name">Dongola</span><span class="city-z" id="z-dongola">—σ</span></a>
+<a href="/sd/umm-ruwaba/" class="city-card"><span class="city-name">Umm Ruwaba</span><span class="city-z" id="z-umm-ruwaba">—σ</span></a>
+<a href="/sd/shendi/" class="city-card"><span class="city-name">Shendi</span><span class="city-z" id="z-shendi">—σ</span></a>
+<a href="/sd/ad-dabbah/" class="city-card"><span class="city-name">Ad Dabbah</span><span class="city-z" id="z-ad-dabbah">—σ</span></a>
+<a href="/sd/abu-hamad/" class="city-card"><span class="city-name">Abū Ḩamad</span><span class="city-z" id="z-abu-hamad">—σ</span></a>
+<a href="/sd/kutum/" class="city-card"><span class="city-name">Kutum</span><span class="city-z" id="z-kutum">—σ</span></a>
+<a href="/sd/sawakin/" class="city-card"><span class="city-name">Sawākin</span><span class="city-z" id="z-sawakin">—σ</span></a>
+<a href="/sd/tokar/" class="city-card"><span class="city-name">Tokār</span><span class="city-z" id="z-tokar">—σ</span></a>
+<a href="/sd/zalingei/" class="city-card"><span class="city-name">Zalingei</span><span class="city-z" id="z-zalingei">—σ</span></a>
+<a href="/sd/al-qitena/" class="city-card"><span class="city-name">Al Qiţena</span><span class="city-z" id="z-al-qitena">—σ</span></a>
+<a href="/sd/babanusah/" class="city-card"><span class="city-name">Babanūsah</span><span class="city-z" id="z-babanusah">—σ</span></a>
+<a href="/sd/wadi-halfa/" class="city-card"><span class="city-name">Wādī Ḩalfā’</span><span class="city-z" id="z-wadi-halfa">—σ</span></a>
+<a href="/sd/berber/" class="city-card"><span class="city-name">Berber</span><span class="city-z" id="z-berber">—σ</span></a>
+<a href="/sd/kuraymah/" class="city-card"><span class="city-name">Kuraymah</span><span class="city-z" id="z-kuraymah">—σ</span></a>
+<a href="/sd/umm-badr/" class="city-card"><span class="city-name">Umm Badr</span><span class="city-z" id="z-umm-badr">—σ</span></a>
+<a href="/sd/marawi/" class="city-card"><span class="city-name">Marawī</span><span class="city-z" id="z-marawi">—σ</span></a>
+<a href="/sd/karmah-an-nuzul/" class="city-card"><span class="city-name">Karmah an Nuzul</span><span class="city-z" id="z-karmah-an-nuzul">—σ</span></a>
+<a href="/sd/haya/" class="city-card"><span class="city-name">Haya</span><span class="city-z" id="z-haya">—σ</span></a>
+<a href="/sd/rabak/" class="city-card"><span class="city-name">Rabak</span><span class="city-z" id="z-rabak">—σ</span></a>
+<a href="/sd/al-mijlad/" class="city-card"><span class="city-name">Al Mijlad</span><span class="city-z" id="z-al-mijlad">—σ</span></a>
+<a href="/sd/el-fula/" class="city-card"><span class="city-name">El Fula</span><span class="city-z" id="z-el-fula">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='sd';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Rwanda — 20 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 20 cities in Rwanda. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/rw/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Rwanda</div>
+  <h1>Rwanda</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 20 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">20</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Rwanda</div>
+  <div class="city-grid">
+<a href="/rw/kigali/" class="city-card"><span class="city-name">Kigali</span><span class="city-z" id="z-kigali">—σ</span></a>
+<a href="/rw/muhanga/" class="city-card"><span class="city-name">Muhanga</span><span class="city-z" id="z-muhanga">—σ</span></a>
+<a href="/rw/ruhengeri/" class="city-card"><span class="city-name">Ruhengeri</span><span class="city-z" id="z-ruhengeri">—σ</span></a>
+<a href="/rw/gitarama/" class="city-card"><span class="city-name">Gitarama</span><span class="city-z" id="z-gitarama">—σ</span></a>
+<a href="/rw/kabarore/" class="city-card"><span class="city-name">Kabarore</span><span class="city-z" id="z-kabarore">—σ</span></a>
+<a href="/rw/cyuve/" class="city-card"><span class="city-name">Cyuve</span><span class="city-z" id="z-cyuve">—σ</span></a>
+<a href="/rw/gisenyi/" class="city-card"><span class="city-name">Gisenyi</span><span class="city-z" id="z-gisenyi">—σ</span></a>
+<a href="/rw/gahini/" class="city-card"><span class="city-name">Gahini</span><span class="city-z" id="z-gahini">—σ</span></a>
+<a href="/rw/cyanika-i/" class="city-card"><span class="city-name">Cyanika I</span><span class="city-z" id="z-cyanika-i">—σ</span></a>
+<a href="/rw/shyorongi/" class="city-card"><span class="city-name">Shyorongi</span><span class="city-z" id="z-shyorongi">—σ</span></a>
+<a href="/rw/gatunda/" class="city-card"><span class="city-name">Gatunda</span><span class="city-z" id="z-gatunda">—σ</span></a>
+<a href="/rw/rubengera/" class="city-card"><span class="city-name">Rubengera</span><span class="city-z" id="z-rubengera">—σ</span></a>
+<a href="/rw/bugarama/" class="city-card"><span class="city-name">Bugarama</span><span class="city-z" id="z-bugarama">—σ</span></a>
+<a href="/rw/kabuga/" class="city-card"><span class="city-name">Kabuga</span><span class="city-z" id="z-kabuga">—σ</span></a>
+<a href="/rw/ngororero/" class="city-card"><span class="city-name">Ngororero</span><span class="city-z" id="z-ngororero">—σ</span></a>
+<a href="/rw/byumba/" class="city-card"><span class="city-name">Byumba</span><span class="city-z" id="z-byumba">—σ</span></a>
+<a href="/rw/nyamata/" class="city-card"><span class="city-name">Nyamata</span><span class="city-z" id="z-nyamata">—σ</span></a>
+<a href="/rw/save/" class="city-card"><span class="city-name">Save</span><span class="city-z" id="z-save">—σ</span></a>
+<a href="/rw/ndora/" class="city-card"><span class="city-name">Ndora</span><span class="city-z" id="z-ndora">—σ</span></a>
+<a href="/rw/busogo/" class="city-card"><span class="city-name">Busogo</span><span class="city-z" id="z-busogo">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='rw';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

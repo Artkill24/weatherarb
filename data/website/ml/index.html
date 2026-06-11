@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Mali — 53 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 53 cities in Mali. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/ml/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Mali</div>
+  <h1>Mali</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 53 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">53</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Mali</div>
+  <div class="city-grid">
+<a href="/ml/zegoua/" class="city-card"><span class="city-name">Zégoua</span><span class="city-z" id="z-zegoua">—σ</span></a>
+<a href="/ml/yorosso/" class="city-card"><span class="city-name">Yorosso</span><span class="city-z" id="z-yorosso">—σ</span></a>
+<a href="/ml/yanfolila/" class="city-card"><span class="city-name">Yanfolila</span><span class="city-z" id="z-yanfolila">—σ</span></a>
+<a href="/ml/toubakoura/" class="city-card"><span class="city-name">Toubakoura</span><span class="city-z" id="z-toubakoura">—σ</span></a>
+<a href="/ml/timbuktu/" class="city-card"><span class="city-name">Timbuktu</span><span class="city-z" id="z-timbuktu">—σ</span></a>
+<a href="/ml/bamako/" class="city-card"><span class="city-name">Bamako</span><span class="city-z" id="z-bamako">—σ</span></a>
+<a href="/ml/sikasso/" class="city-card"><span class="city-name">Sikasso</span><span class="city-z" id="z-sikasso">—σ</span></a>
+<a href="/ml/koutiala/" class="city-card"><span class="city-name">Koutiala</span><span class="city-z" id="z-koutiala">—σ</span></a>
+<a href="/ml/segou/" class="city-card"><span class="city-name">Ségou</span><span class="city-z" id="z-segou">—σ</span></a>
+<a href="/ml/kayes/" class="city-card"><span class="city-name">Kayes</span><span class="city-z" id="z-kayes">—σ</span></a>
+<a href="/ml/mopti/" class="city-card"><span class="city-name">Mopti</span><span class="city-z" id="z-mopti">—σ</span></a>
+<a href="/ml/niono/" class="city-card"><span class="city-name">Niono</span><span class="city-z" id="z-niono">—σ</span></a>
+<a href="/ml/somasso/" class="city-card"><span class="city-name">Somasso</span><span class="city-z" id="z-somasso">—σ</span></a>
+<a href="/ml/kati/" class="city-card"><span class="city-name">Kati</span><span class="city-z" id="z-kati">—σ</span></a>
+<a href="/ml/koro/" class="city-card"><span class="city-name">Koro</span><span class="city-z" id="z-koro">—σ</span></a>
+<a href="/ml/nioro/" class="city-card"><span class="city-name">Nioro</span><span class="city-z" id="z-nioro">—σ</span></a>
+<a href="/ml/bougouni/" class="city-card"><span class="city-name">Bougouni</span><span class="city-z" id="z-bougouni">—σ</span></a>
+<a href="/ml/baguineda/" class="city-card"><span class="city-name">Baguinéda</span><span class="city-z" id="z-baguineda">—σ</span></a>
+<a href="/ml/kolondieba/" class="city-card"><span class="city-name">Kolondiéba</span><span class="city-z" id="z-kolondieba">—σ</span></a>
+<a href="/ml/pelengana/" class="city-card"><span class="city-name">Pèlèngana</span><span class="city-z" id="z-pelengana">—σ</span></a>
+<a href="/ml/kouri/" class="city-card"><span class="city-name">Kouri</span><span class="city-z" id="z-kouri">—σ</span></a>
+<a href="/ml/kadiolo/" class="city-card"><span class="city-name">Kadiolo</span><span class="city-z" id="z-kadiolo">—σ</span></a>
+<a href="/ml/koumantou/" class="city-card"><span class="city-name">Koumantou</span><span class="city-z" id="z-koumantou">—σ</span></a>
+<a href="/ml/wolossebougou/" class="city-card"><span class="city-name">Wolossébougou</span><span class="city-z" id="z-wolossebougou">—σ</span></a>
+<a href="/ml/gao/" class="city-card"><span class="city-name">Gao</span><span class="city-z" id="z-gao">—σ</span></a>
+<a href="/ml/dyero/" class="city-card"><span class="city-name">Dyero</span><span class="city-z" id="z-dyero">—σ</span></a>
+<a href="/ml/kita/" class="city-card"><span class="city-name">Kita</span><span class="city-z" id="z-kita">—σ</span></a>
+<a href="/ml/markala/" class="city-card"><span class="city-name">Markala</span><span class="city-z" id="z-markala">—σ</span></a>
+<a href="/ml/dialakorodji/" class="city-card"><span class="city-name">Dialakorodji</span><span class="city-z" id="z-dialakorodji">—σ</span></a>
+<a href="/ml/sangarebougou/" class="city-card"><span class="city-name">Sangarébougou</span><span class="city-z" id="z-sangarebougou">—σ</span></a>
+<a href="/ml/misseni/" class="city-card"><span class="city-name">Misséni</span><span class="city-z" id="z-misseni">—σ</span></a>
+<a href="/ml/massigui/" class="city-card"><span class="city-name">Massigui</span><span class="city-z" id="z-massigui">—σ</span></a>
+<a href="/ml/mondoro/" class="city-card"><span class="city-name">Mondoro</span><span class="city-z" id="z-mondoro">—σ</span></a>
+<a href="/ml/sokoura/" class="city-card"><span class="city-name">Sokoura</span><span class="city-z" id="z-sokoura">—σ</span></a>
+<a href="/ml/danderesso/" class="city-card"><span class="city-name">Dandéresso</span><span class="city-z" id="z-danderesso">—σ</span></a>
+<a href="/ml/san/" class="city-card"><span class="city-name">San</span><span class="city-z" id="z-san">—σ</span></a>
+<a href="/ml/fourou/" class="city-card"><span class="city-name">Fourou</span><span class="city-z" id="z-fourou">—σ</span></a>
+<a href="/ml/djidian-kenieba/" class="city-card"><span class="city-name">Djidian Kéniéba</span><span class="city-z" id="z-djidian-kenieba">—σ</span></a>
+<a href="/ml/sadiola/" class="city-card"><span class="city-name">Sadiola</span><span class="city-z" id="z-sadiola">—σ</span></a>
+<a href="/ml/sebekoro/" class="city-card"><span class="city-name">Sébékoro</span><span class="city-z" id="z-sebekoro">—σ</span></a>
+<a href="/ml/garalo/" class="city-card"><span class="city-name">Garalo</span><span class="city-z" id="z-garalo">—σ</span></a>
+<a href="/ml/kolongo-bozo/" class="city-card"><span class="city-name">Kolongo-Bozo</span><span class="city-z" id="z-kolongo-bozo">—σ</span></a>
+<a href="/ml/sanankoroba/" class="city-card"><span class="city-name">Sanankoroba</span><span class="city-z" id="z-sanankoroba">—σ</span></a>
+<a href="/ml/siribala/" class="city-card"><span class="city-name">Siribala</span><span class="city-z" id="z-siribala">—σ</span></a>
+<a href="/ml/kona/" class="city-card"><span class="city-name">Kona</span><span class="city-z" id="z-kona">—σ</span></a>
+<a href="/ml/zinzana/" class="city-card"><span class="city-name">Zinzana</span><span class="city-z" id="z-zinzana">—σ</span></a>
+<a href="/ml/mpessoba/" class="city-card"><span class="city-name">Mpessoba</span><span class="city-z" id="z-mpessoba">—σ</span></a>
+<a href="/ml/dinangorou/" class="city-card"><span class="city-name">Dinangorou</span><span class="city-z" id="z-dinangorou">—σ</span></a>
+<a href="/ml/niamina/" class="city-card"><span class="city-name">Niamina</span><span class="city-z" id="z-niamina">—σ</span></a>
+<a href="/ml/diabali/" class="city-card"><span class="city-name">Diabali</span><span class="city-z" id="z-diabali">—σ</span></a>
+<a href="/ml/diakon/" class="city-card"><span class="city-name">Diakon</span><span class="city-z" id="z-diakon">—σ</span></a>
+<a href="/ml/kignan/" class="city-card"><span class="city-name">Kignan</span><span class="city-z" id="z-kignan">—σ</span></a>
+<a href="/ml/katiena/" class="city-card"><span class="city-name">Katiéna</span><span class="city-z" id="z-katiena">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='ml';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

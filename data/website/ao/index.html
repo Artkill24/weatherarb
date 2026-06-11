@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Angola — 50 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 50 cities in Angola. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/ao/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Angola</div>
+  <h1>Angola</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 50 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">50</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Angola</div>
+  <div class="city-grid">
+<a href="/ao/luanda/" class="city-card"><span class="city-name">Luanda</span><span class="city-z" id="z-luanda">—σ</span></a>
+<a href="/ao/cacuaco/" class="city-card"><span class="city-name">Cacuaco</span><span class="city-z" id="z-cacuaco">—σ</span></a>
+<a href="/ao/cazenga/" class="city-card"><span class="city-name">Cazenga</span><span class="city-z" id="z-cazenga">—σ</span></a>
+<a href="/ao/lubango/" class="city-card"><span class="city-name">Lubango</span><span class="city-z" id="z-lubango">—σ</span></a>
+<a href="/ao/cabinda/" class="city-card"><span class="city-name">Cabinda</span><span class="city-z" id="z-cabinda">—σ</span></a>
+<a href="/ao/huambo/" class="city-card"><span class="city-name">Huambo</span><span class="city-z" id="z-huambo">—σ</span></a>
+<a href="/ao/malanje/" class="city-card"><span class="city-name">Malanje</span><span class="city-z" id="z-malanje">—σ</span></a>
+<a href="/ao/benguela/" class="city-card"><span class="city-name">Benguela</span><span class="city-z" id="z-benguela">—σ</span></a>
+<a href="/ao/cuito/" class="city-card"><span class="city-name">Cuito</span><span class="city-z" id="z-cuito">—σ</span></a>
+<a href="/ao/belas/" class="city-card"><span class="city-name">Belas</span><span class="city-z" id="z-belas">—σ</span></a>
+<a href="/ao/talatona/" class="city-card"><span class="city-name">Talatona</span><span class="city-z" id="z-talatona">—σ</span></a>
+<a href="/ao/lobito/" class="city-card"><span class="city-name">Lobito</span><span class="city-z" id="z-lobito">—σ</span></a>
+<a href="/ao/saurimo/" class="city-card"><span class="city-name">Saurimo</span><span class="city-z" id="z-saurimo">—σ</span></a>
+<a href="/ao/cubal/" class="city-card"><span class="city-name">Cubal</span><span class="city-z" id="z-cubal">—σ</span></a>
+<a href="/ao/luena/" class="city-card"><span class="city-name">Luena</span><span class="city-z" id="z-luena">—σ</span></a>
+<a href="/ao/uige/" class="city-card"><span class="city-name">Uíge</span><span class="city-z" id="z-uige">—σ</span></a>
+<a href="/ao/menongue/" class="city-card"><span class="city-name">Menongue</span><span class="city-z" id="z-menongue">—σ</span></a>
+<a href="/ao/vila-teixeira-da-silva/" class="city-card"><span class="city-name">Vila Teixeira da Silva</span><span class="city-z" id="z-vila-teixeira-da-silva">—σ</span></a>
+<a href="/ao/sumbe/" class="city-card"><span class="city-name">Sumbe</span><span class="city-z" id="z-sumbe">—σ</span></a>
+<a href="/ao/caala/" class="city-card"><span class="city-name">Caála</span><span class="city-z" id="z-caala">—σ</span></a>
+<a href="/ao/gabela/" class="city-card"><span class="city-name">Gabela</span><span class="city-z" id="z-gabela">—σ</span></a>
+<a href="/ao/matala/" class="city-card"><span class="city-name">Matala</span><span class="city-z" id="z-matala">—σ</span></a>
+<a href="/ao/ndulo/" class="city-card"><span class="city-name">Ndulo</span><span class="city-z" id="z-ndulo">—σ</span></a>
+<a href="/ao/andulo/" class="city-card"><span class="city-name">Andulo</span><span class="city-z" id="z-andulo">—σ</span></a>
+<a href="/ao/mocamedes/" class="city-card"><span class="city-name">Moçâmedes</span><span class="city-z" id="z-mocamedes">—σ</span></a>
+<a href="/ao/ganda/" class="city-card"><span class="city-name">Ganda</span><span class="city-z" id="z-ganda">—σ</span></a>
+<a href="/ao/uacu-cungo/" class="city-card"><span class="city-name">Uacu Cungo</span><span class="city-z" id="z-uacu-cungo">—σ</span></a>
+<a href="/ao/barra-do-dande/" class="city-card"><span class="city-name">Barra do Dande</span><span class="city-z" id="z-barra-do-dande">—σ</span></a>
+<a href="/ao/soio/" class="city-card"><span class="city-name">Soio</span><span class="city-z" id="z-soio">—σ</span></a>
+<a href="/ao/tchitato/" class="city-card"><span class="city-name">Tchitato</span><span class="city-z" id="z-tchitato">—σ</span></a>
+<a href="/ao/chibia/" class="city-card"><span class="city-name">Chibia</span><span class="city-z" id="z-chibia">—σ</span></a>
+<a href="/ao/ucu-seles/" class="city-card"><span class="city-name">Ucu Seles</span><span class="city-z" id="z-ucu-seles">—σ</span></a>
+<a href="/ao/cuango/" class="city-card"><span class="city-name">Cuango</span><span class="city-z" id="z-cuango">—σ</span></a>
+<a href="/ao/mbanza-kongo/" class="city-card"><span class="city-name">Mbanza Kongo</span><span class="city-z" id="z-mbanza-kongo">—σ</span></a>
+<a href="/ao/caluquembe/" class="city-card"><span class="city-name">Caluquembe</span><span class="city-z" id="z-caluquembe">—σ</span></a>
+<a href="/ao/dundo/" class="city-card"><span class="city-name">Dundo</span><span class="city-z" id="z-dundo">—σ</span></a>
+<a href="/ao/catumbela/" class="city-card"><span class="city-name">Catumbela</span><span class="city-z" id="z-catumbela">—σ</span></a>
+<a href="/ao/cazanga/" class="city-card"><span class="city-name">Cazanga</span><span class="city-z" id="z-cazanga">—σ</span></a>
+<a href="/ao/catape/" class="city-card"><span class="city-name">Catape</span><span class="city-z" id="z-catape">—σ</span></a>
+<a href="/ao/caconda/" class="city-card"><span class="city-name">Caconda</span><span class="city-z" id="z-caconda">—σ</span></a>
+<a href="/ao/ebo/" class="city-card"><span class="city-name">Ebo</span><span class="city-z" id="z-ebo">—σ</span></a>
+<a href="/ao/bocoio/" class="city-card"><span class="city-name">Bocoio</span><span class="city-z" id="z-bocoio">—σ</span></a>
+<a href="/ao/quibala/" class="city-card"><span class="city-name">Quibala</span><span class="city-z" id="z-quibala">—σ</span></a>
+<a href="/ao/ndalatando/" class="city-card"><span class="city-name">Ndalatando</span><span class="city-z" id="z-ndalatando">—σ</span></a>
+<a href="/ao/quipungo/" class="city-card"><span class="city-name">Quipungo</span><span class="city-z" id="z-quipungo">—σ</span></a>
+<a href="/ao/lucapa/" class="city-card"><span class="city-name">Lucapa</span><span class="city-z" id="z-lucapa">—σ</span></a>
+<a href="/ao/maquela-do-zombo/" class="city-card"><span class="city-name">Maquela do Zombo</span><span class="city-z" id="z-maquela-do-zombo">—σ</span></a>
+<a href="/ao/namacunde/" class="city-card"><span class="city-name">Namacunde</span><span class="city-z" id="z-namacunde">—σ</span></a>
+<a href="/ao/negage/" class="city-card"><span class="city-name">Negage</span><span class="city-z" id="z-negage">—σ</span></a>
+<a href="/ao/porto-amboim/" class="city-card"><span class="city-name">Porto Amboim</span><span class="city-z" id="z-porto-amboim">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='ao';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

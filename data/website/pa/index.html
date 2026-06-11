@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Panama — 36 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 36 cities in Panama. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/pa/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Panama</div>
+  <h1>Panama</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 36 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">36</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Panama</div>
+  <div class="city-grid">
+<a href="/pa/tocumen/" class="city-card"><span class="city-name">Tocumen</span><span class="city-z" id="z-tocumen">—σ</span></a>
+<a href="/pa/santiago-de-veraguas/" class="city-card"><span class="city-name">Santiago de Veraguas</span><span class="city-z" id="z-santiago-de-veraguas">—σ</span></a>
+<a href="/pa/san-miguelito/" class="city-card"><span class="city-name">San Miguelito</span><span class="city-z" id="z-san-miguelito">—σ</span></a>
+<a href="/pa/sabanitas/" class="city-card"><span class="city-name">Sabanitas</span><span class="city-z" id="z-sabanitas">—σ</span></a>
+<a href="/pa/rio-abajo/" class="city-card"><span class="city-name">Río Abajo</span><span class="city-z" id="z-rio-abajo">—σ</span></a>
+<a href="/pa/penonome/" class="city-card"><span class="city-name">Penonomé</span><span class="city-z" id="z-penonome">—σ</span></a>
+<a href="/pa/panama-city/" class="city-card"><span class="city-name">Panama City</span><span class="city-z" id="z-panama-city">—σ</span></a>
+<a href="/pa/david/" class="city-card"><span class="city-name">David</span><span class="city-z" id="z-david">—σ</span></a>
+<a href="/pa/colon/" class="city-card"><span class="city-name">Colón</span><span class="city-z" id="z-colon">—σ</span></a>
+<a href="/pa/la-chorrera/" class="city-card"><span class="city-name">La Chorrera</span><span class="city-z" id="z-la-chorrera">—σ</span></a>
+<a href="/pa/balboa-heights/" class="city-card"><span class="city-name">Balboa Heights</span><span class="city-z" id="z-balboa-heights">—σ</span></a>
+<a href="/pa/chilibre/" class="city-card"><span class="city-name">Chilibre</span><span class="city-z" id="z-chilibre">—σ</span></a>
+<a href="/pa/pacora/" class="city-card"><span class="city-name">Pacora</span><span class="city-z" id="z-pacora">—σ</span></a>
+<a href="/pa/aguadulce/" class="city-card"><span class="city-name">Aguadulce</span><span class="city-z" id="z-aguadulce">—σ</span></a>
+<a href="/pa/alcalde-diaz/" class="city-card"><span class="city-name">Alcalde Díaz</span><span class="city-z" id="z-alcalde-diaz">—σ</span></a>
+<a href="/pa/arraijan/" class="city-card"><span class="city-name">Arraiján</span><span class="city-z" id="z-arraijan">—σ</span></a>
+<a href="/pa/cativa/" class="city-card"><span class="city-name">Cativá</span><span class="city-z" id="z-cativa">—σ</span></a>
+<a href="/pa/kusapin/" class="city-card"><span class="city-name">Kusapín</span><span class="city-z" id="z-kusapin">—σ</span></a>
+<a href="/pa/changuinola/" class="city-card"><span class="city-name">Changuinola</span><span class="city-z" id="z-changuinola">—σ</span></a>
+<a href="/pa/ancon/" class="city-card"><span class="city-name">Ancón</span><span class="city-z" id="z-ancon">—σ</span></a>
+<a href="/pa/nuevo-arraijan/" class="city-card"><span class="city-name">Nuevo Arraiján</span><span class="city-z" id="z-nuevo-arraijan">—σ</span></a>
+<a href="/pa/chepo/" class="city-card"><span class="city-name">Chepo</span><span class="city-z" id="z-chepo">—σ</span></a>
+<a href="/pa/puerto-armuelles/" class="city-card"><span class="city-name">Puerto Armuelles</span><span class="city-z" id="z-puerto-armuelles">—σ</span></a>
+<a href="/pa/el-coco/" class="city-card"><span class="city-name">El Coco</span><span class="city-z" id="z-el-coco">—σ</span></a>
+<a href="/pa/bajo-boquete/" class="city-card"><span class="city-name">Bajo Boquete</span><span class="city-z" id="z-bajo-boquete">—σ</span></a>
+<a href="/pa/puerto-caimito/" class="city-card"><span class="city-name">Puerto Caimito</span><span class="city-z" id="z-puerto-caimito">—σ</span></a>
+<a href="/pa/puerto-pilon/" class="city-card"><span class="city-name">Puerto Pilón</span><span class="city-z" id="z-puerto-pilon">—σ</span></a>
+<a href="/pa/bocas-del-toro/" class="city-card"><span class="city-name">Bocas del Toro</span><span class="city-z" id="z-bocas-del-toro">—σ</span></a>
+<a href="/pa/almirante/" class="city-card"><span class="city-name">Almirante</span><span class="city-z" id="z-almirante">—σ</span></a>
+<a href="/pa/paso-canoas/" class="city-card"><span class="city-name">Paso Canoas</span><span class="city-z" id="z-paso-canoas">—σ</span></a>
+<a href="/pa/las-tablas/" class="city-card"><span class="city-name">Las Tablas</span><span class="city-z" id="z-las-tablas">—σ</span></a>
+<a href="/pa/la-palma/" class="city-card"><span class="city-name">La Palma</span><span class="city-z" id="z-la-palma">—σ</span></a>
+<a href="/pa/jaque/" class="city-card"><span class="city-name">Jaqué</span><span class="city-z" id="z-jaque">—σ</span></a>
+<a href="/pa/buabidi/" class="city-card"><span class="city-name">Buabidi</span><span class="city-z" id="z-buabidi">—σ</span></a>
+<a href="/pa/chitre/" class="city-card"><span class="city-name">Chitré</span><span class="city-z" id="z-chitre">—σ</span></a>
+<a href="/pa/gaigirgordub/" class="city-card"><span class="city-name">Gaigirgordub</span><span class="city-z" id="z-gaigirgordub">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='pa';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

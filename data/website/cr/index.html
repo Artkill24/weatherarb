@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Costa Rica — 36 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 36 cities in Costa Rica. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/cr/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Costa Rica</div>
+  <h1>Costa Rica</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 36 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">36</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Costa Rica</div>
+  <div class="city-grid">
+<a href="/cr/turrialba/" class="city-card"><span class="city-name">Turrialba</span><span class="city-z" id="z-turrialba">—σ</span></a>
+<a href="/cr/tejar/" class="city-card"><span class="city-name">Tejar</span><span class="city-z" id="z-tejar">—σ</span></a>
+<a href="/cr/siquirres/" class="city-card"><span class="city-name">Siquirres</span><span class="city-z" id="z-siquirres">—σ</span></a>
+<a href="/cr/san-rafael-arriba/" class="city-card"><span class="city-name">San Rafael Arriba</span><span class="city-z" id="z-san-rafael-arriba">—σ</span></a>
+<a href="/cr/san-rafael-abajo/" class="city-card"><span class="city-name">San Rafael Abajo</span><span class="city-z" id="z-san-rafael-abajo">—σ</span></a>
+<a href="/cr/san-rafael/" class="city-card"><span class="city-name">San Rafael</span><span class="city-z" id="z-san-rafael">—σ</span></a>
+<a href="/cr/san-jose/" class="city-card"><span class="city-name">San José</span><span class="city-z" id="z-san-jose">—σ</span></a>
+<a href="/cr/san-marcos/" class="city-card"><span class="city-name">San Marcos</span><span class="city-z" id="z-san-marcos">—σ</span></a>
+<a href="/cr/san-ramon/" class="city-card"><span class="city-name">San Ramón</span><span class="city-z" id="z-san-ramon">—σ</span></a>
+<a href="/cr/sarapiqui/" class="city-card"><span class="city-name">Sarapiquí</span><span class="city-z" id="z-sarapiqui">—σ</span></a>
+<a href="/cr/mora/" class="city-card"><span class="city-name">Mora</span><span class="city-z" id="z-mora">—σ</span></a>
+<a href="/cr/liberia/" class="city-card"><span class="city-name">Liberia</span><span class="city-z" id="z-liberia">—σ</span></a>
+<a href="/cr/nicoya/" class="city-card"><span class="city-name">Nicoya</span><span class="city-z" id="z-nicoya">—σ</span></a>
+<a href="/cr/alajuela/" class="city-card"><span class="city-name">Alajuela</span><span class="city-z" id="z-alajuela">—σ</span></a>
+<a href="/cr/naranjo/" class="city-card"><span class="city-name">Naranjo</span><span class="city-z" id="z-naranjo">—σ</span></a>
+<a href="/cr/quesada/" class="city-card"><span class="city-name">Quesada</span><span class="city-z" id="z-quesada">—σ</span></a>
+<a href="/cr/palmares/" class="city-card"><span class="city-name">Palmares</span><span class="city-z" id="z-palmares">—σ</span></a>
+<a href="/cr/puntarenas/" class="city-card"><span class="city-name">Puntarenas</span><span class="city-z" id="z-puntarenas">—σ</span></a>
+<a href="/cr/guacimo/" class="city-card"><span class="city-name">Guácimo</span><span class="city-z" id="z-guacimo">—σ</span></a>
+<a href="/cr/coto-brus/" class="city-card"><span class="city-name">Coto Brus</span><span class="city-z" id="z-coto-brus">—σ</span></a>
+<a href="/cr/matina/" class="city-card"><span class="city-name">Matina</span><span class="city-z" id="z-matina">—σ</span></a>
+<a href="/cr/guapiles/" class="city-card"><span class="city-name">Guápiles</span><span class="city-z" id="z-guapiles">—σ</span></a>
+<a href="/cr/cariari/" class="city-card"><span class="city-name">Cariari</span><span class="city-z" id="z-cariari">—σ</span></a>
+<a href="/cr/desamparados/" class="city-card"><span class="city-name">Desamparados</span><span class="city-z" id="z-desamparados">—σ</span></a>
+<a href="/cr/la-uruca/" class="city-card"><span class="city-name">La Uruca</span><span class="city-z" id="z-la-uruca">—σ</span></a>
+<a href="/cr/poas/" class="city-card"><span class="city-name">Poás</span><span class="city-z" id="z-poas">—σ</span></a>
+<a href="/cr/curridabat/" class="city-card"><span class="city-name">Curridabat</span><span class="city-z" id="z-curridabat">—σ</span></a>
+<a href="/cr/esparza/" class="city-card"><span class="city-name">Esparza</span><span class="city-z" id="z-esparza">—σ</span></a>
+<a href="/cr/purral/" class="city-card"><span class="city-name">Purral</span><span class="city-z" id="z-purral">—σ</span></a>
+<a href="/cr/canas/" class="city-card"><span class="city-name">Cañas</span><span class="city-z" id="z-canas">—σ</span></a>
+<a href="/cr/horquetas/" class="city-card"><span class="city-name">Horquetas</span><span class="city-z" id="z-horquetas">—σ</span></a>
+<a href="/cr/rita/" class="city-card"><span class="city-name">Rita</span><span class="city-z" id="z-rita">—σ</span></a>
+<a href="/cr/sartalillo/" class="city-card"><span class="city-name">Sartalillo</span><span class="city-z" id="z-sartalillo">—σ</span></a>
+<a href="/cr/aguas-zarcas/" class="city-card"><span class="city-name">Aguas Zarcas</span><span class="city-z" id="z-aguas-zarcas">—σ</span></a>
+<a href="/cr/puerto-viejo/" class="city-card"><span class="city-name">Puerto Viejo</span><span class="city-z" id="z-puerto-viejo">—σ</span></a>
+<a href="/cr/guacima/" class="city-card"><span class="city-name">Guácima</span><span class="city-z" id="z-guacima">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='cr';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

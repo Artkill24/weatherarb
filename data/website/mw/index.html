@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Malawi — 31 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 31 cities in Malawi. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/mw/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Malawi</div>
+  <h1>Malawi</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 31 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">31</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Malawi</div>
+  <div class="city-grid">
+<a href="/mw/karonga/" class="city-card"><span class="city-name">Karonga</span><span class="city-z" id="z-karonga">—σ</span></a>
+<a href="/mw/chitipa/" class="city-card"><span class="city-name">Chitipa</span><span class="city-z" id="z-chitipa">—σ</span></a>
+<a href="/mw/zomba/" class="city-card"><span class="city-name">Zomba</span><span class="city-z" id="z-zomba">—σ</span></a>
+<a href="/mw/salima/" class="city-card"><span class="city-name">Salima</span><span class="city-z" id="z-salima">—σ</span></a>
+<a href="/mw/rumphi/" class="city-card"><span class="city-name">Rumphi</span><span class="city-z" id="z-rumphi">—σ</span></a>
+<a href="/mw/lilongwe/" class="city-card"><span class="city-name">Lilongwe</span><span class="city-z" id="z-lilongwe">—σ</span></a>
+<a href="/mw/blantyre/" class="city-card"><span class="city-name">Blantyre</span><span class="city-z" id="z-blantyre">—σ</span></a>
+<a href="/mw/mzuzu/" class="city-card"><span class="city-name">Mzuzu</span><span class="city-z" id="z-mzuzu">—σ</span></a>
+<a href="/mw/kasungu/" class="city-card"><span class="city-name">Kasungu</span><span class="city-z" id="z-kasungu">—σ</span></a>
+<a href="/mw/mangochi/" class="city-card"><span class="city-name">Mangochi</span><span class="city-z" id="z-mangochi">—σ</span></a>
+<a href="/mw/liwonde/" class="city-card"><span class="city-name">Liwonde</span><span class="city-z" id="z-liwonde">—σ</span></a>
+<a href="/mw/dedza/" class="city-card"><span class="city-name">Dedza</span><span class="city-z" id="z-dedza">—σ</span></a>
+<a href="/mw/nkhotakota/" class="city-card"><span class="city-name">Nkhotakota</span><span class="city-z" id="z-nkhotakota">—σ</span></a>
+<a href="/mw/mchinji/" class="city-card"><span class="city-name">Mchinji</span><span class="city-z" id="z-mchinji">—σ</span></a>
+<a href="/mw/nsanje/" class="city-card"><span class="city-name">Nsanje</span><span class="city-z" id="z-nsanje">—σ</span></a>
+<a href="/mw/mzimba/" class="city-card"><span class="city-name">Mzimba</span><span class="city-z" id="z-mzimba">—σ</span></a>
+<a href="/mw/chiromo/" class="city-card"><span class="city-name">Chiromo</span><span class="city-z" id="z-chiromo">—σ</span></a>
+<a href="/mw/mponela/" class="city-card"><span class="city-name">Mponela</span><span class="city-z" id="z-mponela">—σ</span></a>
+<a href="/mw/ntcheu/" class="city-card"><span class="city-name">Ntcheu</span><span class="city-z" id="z-ntcheu">—σ</span></a>
+<a href="/mw/mulanje/" class="city-card"><span class="city-name">Mulanje</span><span class="city-z" id="z-mulanje">—σ</span></a>
+<a href="/mw/monkey-bay/" class="city-card"><span class="city-name">Monkey Bay</span><span class="city-z" id="z-monkey-bay">—σ</span></a>
+<a href="/mw/nkhata-bay/" class="city-card"><span class="city-name">Nkhata Bay</span><span class="city-z" id="z-nkhata-bay">—σ</span></a>
+<a href="/mw/luchenza/" class="city-card"><span class="city-name">Luchenza</span><span class="city-z" id="z-luchenza">—σ</span></a>
+<a href="/mw/ntchisi/" class="city-card"><span class="city-name">Ntchisi</span><span class="city-z" id="z-ntchisi">—σ</span></a>
+<a href="/mw/dowa/" class="city-card"><span class="city-name">Dowa</span><span class="city-z" id="z-dowa">—σ</span></a>
+<a href="/mw/thyolo/" class="city-card"><span class="city-name">Thyolo</span><span class="city-z" id="z-thyolo">—σ</span></a>
+<a href="/mw/phalombe/" class="city-card"><span class="city-name">Phalombe</span><span class="city-z" id="z-phalombe">—σ</span></a>
+<a href="/mw/chiradzulu/" class="city-card"><span class="city-name">Chiradzulu</span><span class="city-z" id="z-chiradzulu">—σ</span></a>
+<a href="/mw/machinga/" class="city-card"><span class="city-name">Machinga</span><span class="city-z" id="z-machinga">—σ</span></a>
+<a href="/mw/balaka/" class="city-card"><span class="city-name">Balaka</span><span class="city-z" id="z-balaka">—σ</span></a>
+<a href="/mw/neno/" class="city-card"><span class="city-name">Neno</span><span class="city-z" id="z-neno">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='mw';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

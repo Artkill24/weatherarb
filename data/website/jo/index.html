@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Jordan — 39 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 39 cities in Jordan. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/jo/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Jordan</div>
+  <h1>Jordan</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 39 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">39</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Jordan</div>
+  <div class="city-grid">
+<a href="/jo/wadi-as-sir/" class="city-card"><span class="city-name">Wādī as Sīr</span><span class="city-z" id="z-wadi-as-sir">—σ</span></a>
+<a href="/jo/umm-as-summaq/" class="city-card"><span class="city-name">Umm as Summāq</span><span class="city-z" id="z-umm-as-summaq">—σ</span></a>
+<a href="/jo/sahab/" class="city-card"><span class="city-name">Saḩāb</span><span class="city-z" id="z-sahab">—σ</span></a>
+<a href="/jo/mahis/" class="city-card"><span class="city-name">Māḩiş</span><span class="city-z" id="z-mahis">—σ</span></a>
+<a href="/jo/madaba/" class="city-card"><span class="city-name">Mādabā</span><span class="city-z" id="z-madaba">—σ</span></a>
+<a href="/jo/ma-an/" class="city-card"><span class="city-name">Ma'an</span><span class="city-z" id="z-ma-an">—σ</span></a>
+<a href="/jo/kurayyimah/" class="city-card"><span class="city-name">Kurayyimah</span><span class="city-z" id="z-kurayyimah">—σ</span></a>
+<a href="/jo/khuraybat-as-suq/" class="city-card"><span class="city-name">Khuraybat as Sūq</span><span class="city-z" id="z-khuraybat-as-suq">—σ</span></a>
+<a href="/jo/amman/" class="city-card"><span class="city-name">Amman</span><span class="city-z" id="z-amman">—σ</span></a>
+<a href="/jo/al-mafraq/" class="city-card"><span class="city-name">Al Mafraq</span><span class="city-z" id="z-al-mafraq">—σ</span></a>
+<a href="/jo/irbid/" class="city-card"><span class="city-name">Irbid</span><span class="city-z" id="z-irbid">—σ</span></a>
+<a href="/jo/az-zarqa/" class="city-card"><span class="city-name">Az Zarqā’</span><span class="city-z" id="z-az-zarqa">—σ</span></a>
+<a href="/jo/ar-rusayfah/" class="city-card"><span class="city-name">Ar Ruşayfah</span><span class="city-z" id="z-ar-rusayfah">—σ</span></a>
+<a href="/jo/al-juwayyidah/" class="city-card"><span class="city-name">Al Juwayyidah</span><span class="city-z" id="z-al-juwayyidah">—σ</span></a>
+<a href="/jo/ar-ramtha/" class="city-card"><span class="city-name">Ar Ramthā</span><span class="city-z" id="z-ar-ramtha">—σ</span></a>
+<a href="/jo/ajlun/" class="city-card"><span class="city-name">‘Ajlūn</span><span class="city-z" id="z-ajlun">—σ</span></a>
+<a href="/jo/al-aqabah/" class="city-card"><span class="city-name">Al ‘Aqabah</span><span class="city-z" id="z-al-aqabah">—σ</span></a>
+<a href="/jo/al-jizah/" class="city-card"><span class="city-name">Al Jīzah</span><span class="city-z" id="z-al-jizah">—σ</span></a>
+<a href="/jo/as-salt/" class="city-card"><span class="city-name">As Salţ</span><span class="city-z" id="z-as-salt">—σ</span></a>
+<a href="/jo/jarash/" class="city-card"><span class="city-name">Jarash</span><span class="city-z" id="z-jarash">—σ</span></a>
+<a href="/jo/maan/" class="city-card"><span class="city-name">Ma‘ān</span><span class="city-z" id="z-maan">—σ</span></a>
+<a href="/jo/al-hisn/" class="city-card"><span class="city-name">Al Ḩişn</span><span class="city-z" id="z-al-hisn">—σ</span></a>
+<a href="/jo/at-turrah/" class="city-card"><span class="city-name">Aţ Ţurrah</span><span class="city-z" id="z-at-turrah">—σ</span></a>
+<a href="/jo/dayr-abu-said/" class="city-card"><span class="city-name">Dayr Abū Sa‘īd</span><span class="city-z" id="z-dayr-abu-said">—σ</span></a>
+<a href="/jo/ash-shajarah/" class="city-card"><span class="city-name">Ash Shajarah</span><span class="city-z" id="z-ash-shajarah">—σ</span></a>
+<a href="/jo/mutah/" class="city-card"><span class="city-name">Mu’tah</span><span class="city-z" id="z-mutah">—σ</span></a>
+<a href="/jo/ash-shunah-ash-shamaliyah/" class="city-card"><span class="city-name">Ash Shūnah ash Shamālīyah</span><span class="city-z" id="z-ash-shunah-ash-shamaliyah">—σ</span></a>
+<a href="/jo/at-tafilah/" class="city-card"><span class="city-name">Aţ Ţafīlah</span><span class="city-z" id="z-at-tafilah">—σ</span></a>
+<a href="/jo/al-fuhays/" class="city-card"><span class="city-name">Al Fuḩayş</span><span class="city-z" id="z-al-fuhays">—σ</span></a>
+<a href="/jo/al-karak/" class="city-card"><span class="city-name">Al Karak</span><span class="city-z" id="z-al-karak">—σ</span></a>
+<a href="/jo/samma/" class="city-card"><span class="city-name">Şammā</span><span class="city-z" id="z-samma">—σ</span></a>
+<a href="/jo/kafr-al-ma/" class="city-card"><span class="city-name">Kafr al Mā’</span><span class="city-z" id="z-kafr-al-ma">—σ</span></a>
+<a href="/jo/al-mazar-ash-shamali/" class="city-card"><span class="city-name">Al Mazār ash Shamālī</span><span class="city-z" id="z-al-mazar-ash-shamali">—σ</span></a>
+<a href="/jo/muthallath-al-azraq/" class="city-card"><span class="city-name">Muthallath al Azraq</span><span class="city-z" id="z-muthallath-al-azraq">—σ</span></a>
+<a href="/jo/kafr-awan/" class="city-card"><span class="city-name">Kafr ‘Awān</span><span class="city-z" id="z-kafr-awan">—σ</span></a>
+<a href="/jo/malka/" class="city-card"><span class="city-name">Malkā</span><span class="city-z" id="z-malka">—σ</span></a>
+<a href="/jo/sakib/" class="city-card"><span class="city-name">Sākib</span><span class="city-z" id="z-sakib">—σ</span></a>
+<a href="/jo/busayra/" class="city-card"><span class="city-name">Buşayrā</span><span class="city-z" id="z-busayra">—σ</span></a>
+<a href="/jo/halawah/" class="city-card"><span class="city-name">Ḩalāwah</span><span class="city-z" id="z-halawah">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='jo';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

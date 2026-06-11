@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Cameroon — 32 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 32 cities in Cameroon. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/cm/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Cameroon</div>
+  <h1>Cameroon</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 32 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">32</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Cameroon</div>
+  <div class="city-grid">
+<a href="/cm/douala/" class="city-card"><span class="city-name">Douala</span><span class="city-z" id="z-douala">—σ</span></a>
+<a href="/cm/yaounde/" class="city-card"><span class="city-name">Yaoundé</span><span class="city-z" id="z-yaounde">—σ</span></a>
+<a href="/cm/garoua/" class="city-card"><span class="city-name">Garoua</span><span class="city-z" id="z-garoua">—σ</span></a>
+<a href="/cm/bamenda/" class="city-card"><span class="city-name">Bamenda</span><span class="city-z" id="z-bamenda">—σ</span></a>
+<a href="/cm/bafoussam/" class="city-card"><span class="city-name">Bafoussam</span><span class="city-z" id="z-bafoussam">—σ</span></a>
+<a href="/cm/maroua/" class="city-card"><span class="city-name">Maroua</span><span class="city-z" id="z-maroua">—σ</span></a>
+<a href="/cm/ngaoundere/" class="city-card"><span class="city-name">Ngaoundéré</span><span class="city-z" id="z-ngaoundere">—σ</span></a>
+<a href="/cm/nkongsamba/" class="city-card"><span class="city-name">Nkongsamba</span><span class="city-z" id="z-nkongsamba">—σ</span></a>
+<a href="/cm/bibemi/" class="city-card"><span class="city-name">Bibémi</span><span class="city-z" id="z-bibemi">—σ</span></a>
+<a href="/cm/buea/" class="city-card"><span class="city-name">Buea</span><span class="city-z" id="z-buea">—σ</span></a>
+<a href="/cm/kousseri/" class="city-card"><span class="city-name">Kousséri</span><span class="city-z" id="z-kousseri">—σ</span></a>
+<a href="/cm/bogo/" class="city-card"><span class="city-name">Bogo</span><span class="city-z" id="z-bogo">—σ</span></a>
+<a href="/cm/bertoua/" class="city-card"><span class="city-name">Bertoua</span><span class="city-z" id="z-bertoua">—σ</span></a>
+<a href="/cm/widekum/" class="city-card"><span class="city-name">Widekum</span><span class="city-z" id="z-widekum">—σ</span></a>
+<a href="/cm/maga/" class="city-card"><span class="city-name">Maga</span><span class="city-z" id="z-maga">—σ</span></a>
+<a href="/cm/foumban/" class="city-card"><span class="city-name">Foumban</span><span class="city-z" id="z-foumban">—σ</span></a>
+<a href="/cm/bafut/" class="city-card"><span class="city-name">Bafut</span><span class="city-z" id="z-bafut">—σ</span></a>
+<a href="/cm/kumbo/" class="city-card"><span class="city-name">Kumbo</span><span class="city-z" id="z-kumbo">—σ</span></a>
+<a href="/cm/eseka/" class="city-card"><span class="city-name">Eséka</span><span class="city-z" id="z-eseka">—σ</span></a>
+<a href="/cm/tiko/" class="city-card"><span class="city-name">Tiko</span><span class="city-z" id="z-tiko">—σ</span></a>
+<a href="/cm/ebolowa/" class="city-card"><span class="city-name">Ébolowa</span><span class="city-z" id="z-ebolowa">—σ</span></a>
+<a href="/cm/dschang/" class="city-card"><span class="city-name">Dschang</span><span class="city-z" id="z-dschang">—σ</span></a>
+<a href="/cm/edea/" class="city-card"><span class="city-name">Edéa</span><span class="city-z" id="z-edea">—σ</span></a>
+<a href="/cm/tibati/" class="city-card"><span class="city-name">Tibati</span><span class="city-z" id="z-tibati">—σ</span></a>
+<a href="/cm/melong/" class="city-card"><span class="city-name">Melong</span><span class="city-z" id="z-melong">—σ</span></a>
+<a href="/cm/bafia/" class="city-card"><span class="city-name">Bafia</span><span class="city-z" id="z-bafia">—σ</span></a>
+<a href="/cm/guider/" class="city-card"><span class="city-name">Guider</span><span class="city-z" id="z-guider">—σ</span></a>
+<a href="/cm/sangmelima/" class="city-card"><span class="city-name">Sangmélima</span><span class="city-z" id="z-sangmelima">—σ</span></a>
+<a href="/cm/mbalmayo/" class="city-card"><span class="city-name">Mbalmayo</span><span class="city-z" id="z-mbalmayo">—σ</span></a>
+<a href="/cm/kribi/" class="city-card"><span class="city-name">Kribi</span><span class="city-z" id="z-kribi">—σ</span></a>
+<a href="/cm/foumbot/" class="city-card"><span class="city-name">Foumbot</span><span class="city-z" id="z-foumbot">—σ</span></a>
+<a href="/cm/baham/" class="city-card"><span class="city-name">Baham</span><span class="city-z" id="z-baham">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='cm';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

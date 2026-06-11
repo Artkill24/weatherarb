@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Tunisia — 60 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 60 cities in Tunisia. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/tn/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Tunisia</div>
+  <h1>Tunisia</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 60 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">60</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Tunisia</div>
+  <div class="city-grid">
+<a href="/tn/zaouiet-sousse/" class="city-card"><span class="city-name">Zaouiet Sousse</span><span class="city-z" id="z-zaouiet-sousse">—σ</span></a>
+<a href="/tn/zaghouan/" class="city-card"><span class="city-name">Zaghouan</span><span class="city-z" id="z-zaghouan">—σ</span></a>
+<a href="/tn/oued-lill/" class="city-card"><span class="city-name">Oued Lill</span><span class="city-z" id="z-oued-lill">—σ</span></a>
+<a href="/tn/moulares/" class="city-card"><span class="city-name">Moularès</span><span class="city-z" id="z-moulares">—σ</span></a>
+<a href="/tn/tunis/" class="city-card"><span class="city-name">Tunis</span><span class="city-z" id="z-tunis">—σ</span></a>
+<a href="/tn/tinja/" class="city-card"><span class="city-name">Tinja</span><span class="city-z" id="z-tinja">—σ</span></a>
+<a href="/tn/tozeur/" class="city-card"><span class="city-name">Tozeur</span><span class="city-z" id="z-tozeur">—σ</span></a>
+<a href="/tn/tataouine/" class="city-card"><span class="city-name">Tataouine</span><span class="city-z" id="z-tataouine">—σ</span></a>
+<a href="/tn/thala/" class="city-card"><span class="city-name">Thala</span><span class="city-z" id="z-thala">—σ</span></a>
+<a href="/tn/takelsa/" class="city-card"><span class="city-name">Takelsa</span><span class="city-z" id="z-takelsa">—σ</span></a>
+<a href="/tn/sfax/" class="city-card"><span class="city-name">Sfax</span><span class="city-z" id="z-sfax">—σ</span></a>
+<a href="/tn/sousse/" class="city-card"><span class="city-name">Sousse</span><span class="city-z" id="z-sousse">—σ</span></a>
+<a href="/tn/kairouan/" class="city-card"><span class="city-name">Kairouan</span><span class="city-z" id="z-kairouan">—σ</span></a>
+<a href="/tn/gabes/" class="city-card"><span class="city-name">Gabès</span><span class="city-z" id="z-gabes">—σ</span></a>
+<a href="/tn/bizerte/" class="city-card"><span class="city-name">Bizerte</span><span class="city-z" id="z-bizerte">—σ</span></a>
+<a href="/tn/sukrah/" class="city-card"><span class="city-name">Sukrah</span><span class="city-z" id="z-sukrah">—σ</span></a>
+<a href="/tn/sakiet-ed-daier/" class="city-card"><span class="city-name">Sakiet ed Daier</span><span class="city-z" id="z-sakiet-ed-daier">—σ</span></a>
+<a href="/tn/ariana/" class="city-card"><span class="city-name">Ariana</span><span class="city-z" id="z-ariana">—σ</span></a>
+<a href="/tn/gafsa/" class="city-card"><span class="city-name">Gafsa</span><span class="city-z" id="z-gafsa">—σ</span></a>
+<a href="/tn/kasserine/" class="city-card"><span class="city-name">Kasserine</span><span class="city-z" id="z-kasserine">—σ</span></a>
+<a href="/tn/monastir/" class="city-card"><span class="city-name">Monastir</span><span class="city-z" id="z-monastir">—σ</span></a>
+<a href="/tn/hammamet/" class="city-card"><span class="city-name">Hammamet</span><span class="city-z" id="z-hammamet">—σ</span></a>
+<a href="/tn/sakiet-ez-zit/" class="city-card"><span class="city-name">Sakiet ez Zit</span><span class="city-z" id="z-sakiet-ez-zit">—σ</span></a>
+<a href="/tn/la-marsa/" class="city-card"><span class="city-name">La Marsa</span><span class="city-z" id="z-la-marsa">—σ</span></a>
+<a href="/tn/ben-arous/" class="city-card"><span class="city-name">Ben Arous</span><span class="city-z" id="z-ben-arous">—σ</span></a>
+<a href="/tn/msaken/" class="city-card"><span class="city-name">Msaken</span><span class="city-z" id="z-msaken">—σ</span></a>
+<a href="/tn/beja/" class="city-card"><span class="city-name">Béja</span><span class="city-z" id="z-beja">—σ</span></a>
+<a href="/tn/ben-gardane/" class="city-card"><span class="city-name">Ben Gardane</span><span class="city-z" id="z-ben-gardane">—σ</span></a>
+<a href="/tn/houmt-souk/" class="city-card"><span class="city-name">Houmt Souk</span><span class="city-z" id="z-houmt-souk">—σ</span></a>
+<a href="/tn/nabeul/" class="city-card"><span class="city-name">Nabeul</span><span class="city-z" id="z-nabeul">—σ</span></a>
+<a href="/tn/medenine/" class="city-card"><span class="city-name">Medenine</span><span class="city-z" id="z-medenine">—σ</span></a>
+<a href="/tn/zarzis/" class="city-card"><span class="city-name">Zarzis</span><span class="city-z" id="z-zarzis">—σ</span></a>
+<a href="/tn/mahdia/" class="city-card"><span class="city-name">Mahdia</span><span class="city-z" id="z-mahdia">—σ</span></a>
+<a href="/tn/feriana/" class="city-card"><span class="city-name">Feriana</span><span class="city-z" id="z-feriana">—σ</span></a>
+<a href="/tn/fouchana/" class="city-card"><span class="city-name">Fouchana</span><span class="city-z" id="z-fouchana">—σ</span></a>
+<a href="/tn/le-kram/" class="city-card"><span class="city-name">Le Kram</span><span class="city-z" id="z-le-kram">—σ</span></a>
+<a href="/tn/le-bardo/" class="city-card"><span class="city-name">Le Bardo</span><span class="city-z" id="z-le-bardo">—σ</span></a>
+<a href="/tn/rades/" class="city-card"><span class="city-name">Radès</span><span class="city-z" id="z-rades">—σ</span></a>
+<a href="/tn/midoun/" class="city-card"><span class="city-name">Midoun</span><span class="city-z" id="z-midoun">—σ</span></a>
+<a href="/tn/kelaa-kebira/" class="city-card"><span class="city-name">Kelaa Kebira</span><span class="city-z" id="z-kelaa-kebira">—σ</span></a>
+<a href="/tn/kelibia/" class="city-card"><span class="city-name">Kélibia</span><span class="city-z" id="z-kelibia">—σ</span></a>
+<a href="/tn/moknine/" class="city-card"><span class="city-name">Moknine</span><span class="city-z" id="z-moknine">—σ</span></a>
+<a href="/tn/menzel-temime/" class="city-card"><span class="city-name">Menzel Temime</span><span class="city-z" id="z-menzel-temime">—σ</span></a>
+<a href="/tn/menzel-bourguiba/" class="city-card"><span class="city-name">Menzel Bourguiba</span><span class="city-z" id="z-menzel-bourguiba">—σ</span></a>
+<a href="/tn/ksar-hellal/" class="city-card"><span class="city-name">Ksar Hellal</span><span class="city-z" id="z-ksar-hellal">—σ</span></a>
+<a href="/tn/djemmal/" class="city-card"><span class="city-name">Djemmal</span><span class="city-z" id="z-djemmal">—σ</span></a>
+<a href="/tn/el-kef/" class="city-card"><span class="city-name">El Kef</span><span class="city-z" id="z-el-kef">—σ</span></a>
+<a href="/tn/bir-ali-ben-khalifa/" class="city-card"><span class="city-name">Bir Ali Ben Khalifa</span><span class="city-z" id="z-bir-ali-ben-khalifa">—σ</span></a>
+<a href="/tn/dar-chabanne/" class="city-card"><span class="city-name">Dar Chabanne</span><span class="city-z" id="z-dar-chabanne">—σ</span></a>
+<a href="/tn/sidi-bouzid/" class="city-card"><span class="city-name">Sidi Bouzid</span><span class="city-z" id="z-sidi-bouzid">—σ</span></a>
+<a href="/tn/jendouba/" class="city-card"><span class="city-name">Jendouba</span><span class="city-z" id="z-jendouba">—σ</span></a>
+<a href="/tn/hammam-sousse/" class="city-card"><span class="city-name">Hammam Sousse</span><span class="city-z" id="z-hammam-sousse">—σ</span></a>
+<a href="/tn/el-hamma/" class="city-card"><span class="city-name">El Hamma</span><span class="city-z" id="z-el-hamma">—σ</span></a>
+<a href="/tn/la-goulette/" class="city-card"><span class="city-name">La Goulette</span><span class="city-z" id="z-la-goulette">—σ</span></a>
+<a href="/tn/soliman/" class="city-card"><span class="city-name">Soliman</span><span class="city-z" id="z-soliman">—σ</span></a>
+<a href="/tn/jedeida/" class="city-card"><span class="city-name">Jedeïda</span><span class="city-z" id="z-jedeida">—σ</span></a>
+<a href="/tn/kalaa-srira/" class="city-card"><span class="city-name">Kalaa Srira</span><span class="city-z" id="z-kalaa-srira">—σ</span></a>
+<a href="/tn/hammam-lif/" class="city-card"><span class="city-name">Hammam-Lif</span><span class="city-z" id="z-hammam-lif">—σ</span></a>
+<a href="/tn/teboulba/" class="city-card"><span class="city-name">Teboulba</span><span class="city-z" id="z-teboulba">—σ</span></a>
+<a href="/tn/metlaoui/" class="city-card"><span class="city-name">Metlaoui</span><span class="city-z" id="z-metlaoui">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='tn';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

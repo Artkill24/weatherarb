@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Afghanistan — 53 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 53 cities in Afghanistan. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/af/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Afghanistan</div>
+  <h1>Afghanistan</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 53 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">53</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Afghanistan</div>
+  <div class="city-grid">
+<a href="/af/zaranj/" class="city-card"><span class="city-name">Zaranj</span><span class="city-z" id="z-zaranj">—σ</span></a>
+<a href="/af/bazar-e-yakawlang/" class="city-card"><span class="city-name">Bāzār-e Yakāwlang</span><span class="city-z" id="z-bazar-e-yakawlang">—σ</span></a>
+<a href="/af/taloqan/" class="city-card"><span class="city-name">Taloqan</span><span class="city-z" id="z-taloqan">—σ</span></a>
+<a href="/af/shindand/" class="city-card"><span class="city-name">Shīnḏanḏ</span><span class="city-z" id="z-shindand">—σ</span></a>
+<a href="/af/shibirghan/" class="city-card"><span class="city-name">Shibirghān</span><span class="city-z" id="z-shibirghan">—σ</span></a>
+<a href="/af/shahrak/" class="city-card"><span class="city-name">Shahrak</span><span class="city-z" id="z-shahrak">—σ</span></a>
+<a href="/af/sar-e-pul/" class="city-card"><span class="city-name">Sar-e Pul</span><span class="city-z" id="z-sar-e-pul">—σ</span></a>
+<a href="/af/sang-e-charak/" class="city-card"><span class="city-name">Sang-e Chārak</span><span class="city-z" id="z-sang-e-charak">—σ</span></a>
+<a href="/af/kabul/" class="city-card"><span class="city-name">Kabul</span><span class="city-z" id="z-kabul">—σ</span></a>
+<a href="/af/aqchah/" class="city-card"><span class="city-name">Āqchah</span><span class="city-z" id="z-aqchah">—σ</span></a>
+<a href="/af/kandahar/" class="city-card"><span class="city-name">Kandahār</span><span class="city-z" id="z-kandahar">—σ</span></a>
+<a href="/af/herat/" class="city-card"><span class="city-name">Herāt</span><span class="city-z" id="z-herat">—σ</span></a>
+<a href="/af/farah/" class="city-card"><span class="city-name">Farāh</span><span class="city-z" id="z-farah">—σ</span></a>
+<a href="/af/mazar-e-sharif/" class="city-card"><span class="city-name">Mazār-e Sharīf</span><span class="city-z" id="z-mazar-e-sharif">—σ</span></a>
+<a href="/af/lashkar-gah/" class="city-card"><span class="city-name">Lashkar Gāh</span><span class="city-z" id="z-lashkar-gah">—σ</span></a>
+<a href="/af/kunduz/" class="city-card"><span class="city-name">Kunduz</span><span class="city-z" id="z-kunduz">—σ</span></a>
+<a href="/af/jalalabad/" class="city-card"><span class="city-name">Jalālābād</span><span class="city-z" id="z-jalalabad">—σ</span></a>
+<a href="/af/taluqan/" class="city-card"><span class="city-name">Tāluqān</span><span class="city-z" id="z-taluqan">—σ</span></a>
+<a href="/af/khost/" class="city-card"><span class="city-name">Khōst</span><span class="city-z" id="z-khost">—σ</span></a>
+<a href="/af/maimanah/" class="city-card"><span class="city-name">Maīmanah</span><span class="city-z" id="z-maimanah">—σ</span></a>
+<a href="/af/mehtar-lam/" class="city-card"><span class="city-name">Mehtar Lām</span><span class="city-z" id="z-mehtar-lam">—σ</span></a>
+<a href="/af/ghazni/" class="city-card"><span class="city-name">Ghaznī</span><span class="city-z" id="z-ghazni">—σ</span></a>
+<a href="/af/paghman/" class="city-card"><span class="city-name">Paghmān</span><span class="city-z" id="z-paghman">—σ</span></a>
+<a href="/af/pul-e-khumri/" class="city-card"><span class="city-name">Pul-e Khumrī</span><span class="city-z" id="z-pul-e-khumri">—σ</span></a>
+<a href="/af/bamyan/" class="city-card"><span class="city-name">Bāmyān</span><span class="city-z" id="z-bamyan">—σ</span></a>
+<a href="/af/charikar/" class="city-card"><span class="city-name">Chārīkār</span><span class="city-z" id="z-charikar">—σ</span></a>
+<a href="/af/baghlan/" class="city-card"><span class="city-name">Baghlān</span><span class="city-z" id="z-baghlan">—σ</span></a>
+<a href="/af/balkh/" class="city-card"><span class="city-name">Balkh</span><span class="city-z" id="z-balkh">—σ</span></a>
+<a href="/af/tarin-kot/" class="city-card"><span class="city-name">Tarīn Kōṯ</span><span class="city-z" id="z-tarin-kot">—σ</span></a>
+<a href="/af/gardez/" class="city-card"><span class="city-name">Gardēz</span><span class="city-z" id="z-gardez">—σ</span></a>
+<a href="/af/faizabad/" class="city-card"><span class="city-name">Faīẕābād</span><span class="city-z" id="z-faizabad">—σ</span></a>
+<a href="/af/qalah-ye-now/" class="city-card"><span class="city-name">Qal‘ah-ye Now</span><span class="city-z" id="z-qalah-ye-now">—σ</span></a>
+<a href="/af/ghoriyan/" class="city-card"><span class="city-name">Ghōriyān</span><span class="city-z" id="z-ghoriyan">—σ</span></a>
+<a href="/af/haskah-menah/" class="city-card"><span class="city-name">Haskah Mēnah</span><span class="city-z" id="z-haskah-menah">—σ</span></a>
+<a href="/af/mahmud-e-raqi/" class="city-card"><span class="city-name">Maḩmūd-e Rāqī</span><span class="city-z" id="z-mahmud-e-raqi">—σ</span></a>
+<a href="/af/qalat/" class="city-card"><span class="city-name">Qalāt</span><span class="city-z" id="z-qalat">—σ</span></a>
+<a href="/af/andkhoy/" class="city-card"><span class="city-name">Andkhōy</span><span class="city-z" id="z-andkhoy">—σ</span></a>
+<a href="/af/gudarah/" class="city-card"><span class="city-name">Gūdārah</span><span class="city-z" id="z-gudarah">—σ</span></a>
+<a href="/af/aibak/" class="city-card"><span class="city-name">Aībak</span><span class="city-z" id="z-aibak">—σ</span></a>
+<a href="/af/kotah-ye-ashro/" class="city-card"><span class="city-name">Kōṯah-ye ‘As̲h̲rō</span><span class="city-z" id="z-kotah-ye-ashro">—σ</span></a>
+<a href="/af/maidan-shahr/" class="city-card"><span class="city-name">Maīdān Shahr</span><span class="city-z" id="z-maidan-shahr">—σ</span></a>
+<a href="/af/bagrami/" class="city-card"><span class="city-name">Bagrāmī</span><span class="city-z" id="z-bagrami">—σ</span></a>
+<a href="/af/bala-koh/" class="city-card"><span class="city-name">Bālā Kōh</span><span class="city-z" id="z-bala-koh">—σ</span></a>
+<a href="/af/khulm/" class="city-card"><span class="city-name">Khulm</span><span class="city-z" id="z-khulm">—σ</span></a>
+<a href="/af/khanabad/" class="city-card"><span class="city-name">Khānābād</span><span class="city-z" id="z-khanabad">—σ</span></a>
+<a href="/af/hukumati-baghran/" class="city-card"><span class="city-name">Ḩukūmatī Baghrān</span><span class="city-z" id="z-hukumati-baghran">—σ</span></a>
+<a href="/af/bazarak/" class="city-card"><span class="city-name">Bāzārak</span><span class="city-z" id="z-bazarak">—σ</span></a>
+<a href="/af/sheghnan/" class="city-card"><span class="city-name">Sheghnān</span><span class="city-z" id="z-sheghnan">—σ</span></a>
+<a href="/af/pul-e-alam/" class="city-card"><span class="city-name">Pul-e ‘Alam</span><span class="city-z" id="z-pul-e-alam">—σ</span></a>
+<a href="/af/baraki-barak/" class="city-card"><span class="city-name">Barakī Barak</span><span class="city-z" id="z-baraki-barak">—σ</span></a>
+<a href="/af/sangin/" class="city-card"><span class="city-name">Sangīn</span><span class="city-z" id="z-sangin">—σ</span></a>
+<a href="/af/qalah-ye-zal/" class="city-card"><span class="city-name">Qal‘ah-ye Zāl</span><span class="city-z" id="z-qalah-ye-zal">—σ</span></a>
+<a href="/af/karukh/" class="city-card"><span class="city-name">Karukh</span><span class="city-z" id="z-karukh">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='af';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>

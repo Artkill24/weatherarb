@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather Anomalies Libya — 59 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly monitoring for 59 cities in Libya. Z-Score vs NASA POWER 25-year baseline. Live temperature, humidity and wind anomaly data.">
+<link rel="canonical" href="https://weatherarb.com/ly/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-name{font-size:14px;font-weight:600}
+.city-z{font-size:15px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/" style="font-size:12px;color:#4a5568;text-decoration:none">← Global Map</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / Libya</div>
+  <h1>Libya</h1>
+  <p class="sub">Real-time weather anomaly intelligence · 59 cities monitored · NASA POWER 25-year baseline</p>
+  
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">59</div><div class="stat-l">Cities</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalies Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Avg Z-Score</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomaly</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">All Cities in Libya</div>
+  <div class="city-grid">
+<a href="/ly/tobruk/" class="city-card"><span class="city-name">Tobruk</span><span class="city-z" id="z-tobruk">—σ</span></a>
+<a href="/ly/qaryat-suluq/" class="city-card"><span class="city-name">Qaryat Sulūq</span><span class="city-z" id="z-qaryat-suluq">—σ</span></a>
+<a href="/ly/darnah/" class="city-card"><span class="city-name">Darnah</span><span class="city-z" id="z-darnah">—σ</span></a>
+<a href="/ly/benghazi/" class="city-card"><span class="city-name">Benghazi</span><span class="city-z" id="z-benghazi">—σ</span></a>
+<a href="/ly/az-zuwaytinah/" class="city-card"><span class="city-name">Az Zuwaytīnah</span><span class="city-z" id="z-az-zuwaytinah">—σ</span></a>
+<a href="/ly/at-taj/" class="city-card"><span class="city-name">At Tāj</span><span class="city-z" id="z-at-taj">—σ</span></a>
+<a href="/ly/al-qubbah/" class="city-card"><span class="city-name">Al Qubbah</span><span class="city-z" id="z-al-qubbah">—σ</span></a>
+<a href="/ly/al-marj/" class="city-card"><span class="city-name">Al Marj</span><span class="city-z" id="z-al-marj">—σ</span></a>
+<a href="/ly/ajdabiya/" class="city-card"><span class="city-name">Ajdābiyā</span><span class="city-z" id="z-ajdabiya">—σ</span></a>
+<a href="/ly/misratah/" class="city-card"><span class="city-name">Mişrātah</span><span class="city-z" id="z-misratah">—σ</span></a>
+<a href="/ly/al-bayda/" class="city-card"><span class="city-name">Al Bayḑā’</span><span class="city-z" id="z-al-bayda">—σ</span></a>
+<a href="/ly/al-khums/" class="city-card"><span class="city-name">Al Khums</span><span class="city-z" id="z-al-khums">—σ</span></a>
+<a href="/ly/az-zawiyah/" class="city-card"><span class="city-name">Az Zāwīyah</span><span class="city-z" id="z-az-zawiyah">—σ</span></a>
+<a href="/ly/gharyan/" class="city-card"><span class="city-name">Gharyān</span><span class="city-z" id="z-gharyan">—σ</span></a>
+<a href="/ly/sabha/" class="city-card"><span class="city-name">Sabhā</span><span class="city-z" id="z-sabha">—σ</span></a>
+<a href="/ly/sabratah/" class="city-card"><span class="city-name">Şabrātah</span><span class="city-z" id="z-sabratah">—σ</span></a>
+<a href="/ly/al-jumayl/" class="city-card"><span class="city-name">Al Jumayl</span><span class="city-z" id="z-al-jumayl">—σ</span></a>
+<a href="/ly/janzur/" class="city-card"><span class="city-name">Janzūr</span><span class="city-z" id="z-janzur">—σ</span></a>
+<a href="/ly/zuwarah/" class="city-card"><span class="city-name">Zuwārah</span><span class="city-z" id="z-zuwarah">—σ</span></a>
+<a href="/ly/masallatah/" class="city-card"><span class="city-name">Masallātah</span><span class="city-z" id="z-masallatah">—σ</span></a>
+<a href="/ly/surt/" class="city-card"><span class="city-name">Surt</span><span class="city-z" id="z-surt">—σ</span></a>
+<a href="/ly/yafran/" class="city-card"><span class="city-name">Yafran</span><span class="city-z" id="z-yafran">—σ</span></a>
+<a href="/ly/nalut/" class="city-card"><span class="city-name">Nālūt</span><span class="city-z" id="z-nalut">—σ</span></a>
+<a href="/ly/bani-walid/" class="city-card"><span class="city-name">Banī Walīd</span><span class="city-z" id="z-bani-walid">—σ</span></a>
+<a href="/ly/tajura/" class="city-card"><span class="city-name">Tājūrā’</span><span class="city-z" id="z-tajura">—σ</span></a>
+<a href="/ly/birak/" class="city-card"><span class="city-name">Birāk</span><span class="city-z" id="z-birak">—σ</span></a>
+<a href="/ly/shahhat/" class="city-card"><span class="city-name">Shaḩḩāt</span><span class="city-z" id="z-shahhat">—σ</span></a>
+<a href="/ly/murzuq/" class="city-card"><span class="city-name">Murzuq</span><span class="city-z" id="z-murzuq">—σ</span></a>
+<a href="/ly/awbari/" class="city-card"><span class="city-name">Awbārī</span><span class="city-z" id="z-awbari">—σ</span></a>
+<a href="/ly/qasr-al-qarabulli/" class="city-card"><span class="city-name">Qaşr al Qarabūllī</span><span class="city-z" id="z-qasr-al-qarabulli">—σ</span></a>
+<a href="/ly/waddan/" class="city-card"><span class="city-name">Waddān</span><span class="city-z" id="z-waddan">—σ</span></a>
+<a href="/ly/al-aziziyah/" class="city-card"><span class="city-name">Al ‘Azīzīyah</span><span class="city-z" id="z-al-aziziyah">—σ</span></a>
+<a href="/ly/mizdah/" class="city-card"><span class="city-name">Mizdah</span><span class="city-z" id="z-mizdah">—σ</span></a>
+<a href="/ly/tukrah/" class="city-card"><span class="city-name">Tūkrah</span><span class="city-z" id="z-tukrah">—σ</span></a>
+<a href="/ly/ghat/" class="city-card"><span class="city-name">Ghāt</span><span class="city-z" id="z-ghat">—σ</span></a>
+<a href="/ly/hun/" class="city-card"><span class="city-name">Hūn</span><span class="city-z" id="z-hun">—σ</span></a>
+<a href="/ly/qaryat-al-qian/" class="city-card"><span class="city-name">Qaryat al Qī‘ān</span><span class="city-z" id="z-qaryat-al-qian">—σ</span></a>
+<a href="/ly/al-jawf/" class="city-card"><span class="city-name">Al Jawf</span><span class="city-z" id="z-al-jawf">—σ</span></a>
+<a href="/ly/zaltan/" class="city-card"><span class="city-name">Zalţan</span><span class="city-z" id="z-zaltan">—σ</span></a>
+<a href="/ly/az-zintan/" class="city-card"><span class="city-name">Az Zintān</span><span class="city-z" id="z-az-zintan">—σ</span></a>
+<a href="/ly/tarhunah/" class="city-card"><span class="city-name">Tarhūnah</span><span class="city-z" id="z-tarhunah">—σ</span></a>
+<a href="/ly/umm-ar-rizam/" class="city-card"><span class="city-name">Umm ar Rizam</span><span class="city-z" id="z-umm-ar-rizam">—σ</span></a>
+<a href="/ly/qaminis/" class="city-card"><span class="city-name">Qamīnis</span><span class="city-z" id="z-qaminis">—σ</span></a>
+<a href="/ly/kiklah/" class="city-card"><span class="city-name">Kiklah</span><span class="city-z" id="z-kiklah">—σ</span></a>
+<a href="/ly/ghadamis/" class="city-card"><span class="city-name">Ghadāmis</span><span class="city-z" id="z-ghadamis">—σ</span></a>
+<a href="/ly/suknah/" class="city-card"><span class="city-name">Sūknah</span><span class="city-z" id="z-suknah">—σ</span></a>
+<a href="/ly/as-sidrah/" class="city-card"><span class="city-name">As Sidrah</span><span class="city-z" id="z-as-sidrah">—σ</span></a>
+<a href="/ly/al-bardiyah/" class="city-card"><span class="city-name">Al Bardīyah</span><span class="city-z" id="z-al-bardiyah">—σ</span></a>
+<a href="/ly/al-abraq/" class="city-card"><span class="city-name">Al Abraq</span><span class="city-z" id="z-al-abraq">—σ</span></a>
+<a href="/ly/awjilah/" class="city-card"><span class="city-name">Awjilah</span><span class="city-z" id="z-awjilah">—σ</span></a>
+<a href="/ly/al-jaghbub/" class="city-card"><span class="city-name">Al Jaghbūb</span><span class="city-z" id="z-al-jaghbub">—σ</span></a>
+<a href="/ly/maradah/" class="city-card"><span class="city-name">Marādah</span><span class="city-z" id="z-maradah">—σ</span></a>
+<a href="/ly/tajarhi/" class="city-card"><span class="city-name">Tajarhī</span><span class="city-z" id="z-tajarhi">—σ</span></a>
+<a href="/ly/daraj/" class="city-card"><span class="city-name">Daraj</span><span class="city-z" id="z-daraj">—σ</span></a>
+<a href="/ly/tmassah/" class="city-card"><span class="city-name">Tmassah</span><span class="city-z" id="z-tmassah">—σ</span></a>
+<a href="/ly/umm-al-abid/" class="city-card"><span class="city-name">Umm al ‘Abīd</span><span class="city-z" id="z-umm-al-abid">—σ</span></a>
+<a href="/ly/al-uqaylah/" class="city-card"><span class="city-name">Al ‘Uqaylah</span><span class="city-z" id="z-al-uqaylah">—σ</span></a>
+<a href="/ly/zillah/" class="city-card"><span class="city-name">Zillah</span><span class="city-z" id="z-zillah">—σ</span></a>
+<a href="/ly/idri/" class="city-card"><span class="city-name">Idrī</span><span class="city-z" id="z-idri">—σ</span></a>
+
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a><a href="/about.html">About</a>
+  <br><br>© 2026 WeatherArb · NASA POWER Data · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var CC='ly';
+async function loadStats(){
+  try{
+    var r=await fetch(API+'/api/v1/europe/top?limit=50&cc='+CC);
+    var d=await r.json();
+    var cities=d.cities||d||[];
+    if(!Array.isArray(cities))return;
+    var anom=cities.filter(function(c){return Math.abs(c.z_score||0)>=1;}).length;
+    var avgZ=cities.length?cities.reduce(function(a,c){return a+(c.z_score||0);},0)/cities.length:0;
+    var top=cities.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.location||top.city||'—';
+    cities.forEach(function(c){
+      var slug=(c.location||c.city||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=c.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+loadStats();
+</script>
+</body>
+</html>
