@@ -32,6 +32,15 @@ h1{font-size:clamp(28px,5vw,48px);font-weight:900;color:#fff;margin-bottom:8px;l
 .nearby-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:12px}
 .nearby-card{background:#141920;border:1px solid #1e2d3d;border-radius:10px;padding:14px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
 .nearby-card:hover{border-color:#3b82f6}
+
+  .chart-wrap{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:28px;margin-bottom:20px}
+  .chart-title{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px}
+  .chart-container{position:relative;height:120px;display:flex;align-items:flex-end;gap:4px}
+  .chart-bar{flex:1;border-radius:4px 4px 0 0;min-height:4px;transition:.3s;cursor:pointer;position:relative}
+  .chart-bar:hover::after{content:attr(data-tip);position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:#1e2d3d;color:#c8d6e5;font-size:10px;padding:4px 8px;border-radius:6px;white-space:nowrap;margin-bottom:4px}
+  .chart-labels{display:flex;justify-content:space-between;margin-top:6px;font-size:9px;color:#4a5568}
+  .chart-zero{position:absolute;bottom:50%;left:0;right:0;height:1px;background:rgba(255,255,255,.1)}
+  .no-data{font-size:13px;color:#4a5568;text-align:center;padding:40px 0}
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
 </head>
@@ -119,6 +128,48 @@ async function load(){
     }
   }catch(e){}
 }
+
+async function loadHistory() {
+  try {
+    const r = await fetch('https://artkill24-weatherarb-api.hf.space/api/v1/history/' + slug);
+    const d = await r.json();
+    const pts = d.history || [];
+    if (!pts.length) {
+      document.getElementById('zscore-chart').innerHTML = '<div class="no-data">Dati storici in accumulo — riprova tra qualche ora</div>';
+      return;
+    }
+    const days = {};
+    pts.forEach(p => {
+      const day = p.recorded_at.slice(0,10);
+      if (!days[day] || Math.abs(p.z_score) > Math.abs(days[day].z))
+        days[day] = {z: p.z_score, t: p.temperature_c};
+    });
+    const entries = Object.entries(days).slice(-7);
+    const maxZ = Math.max(...entries.map(e => Math.abs(e[1].z)), 1);
+    const chart = document.getElementById('zscore-chart');
+    const labels = document.getElementById('chart-labels');
+    chart.innerHTML = '<div class="chart-zero"></div>';
+    labels.innerHTML = '';
+    entries.forEach(([day, val]) => {
+      const z = val.z;
+      const pct = Math.abs(z) / maxZ * 45;
+      const col = z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      const bar = document.createElement('div');
+      bar.className = 'chart-bar';
+      bar.style.background = col;
+      bar.style.height = (pct+5)+'%';
+      bar.style.alignSelf = z < 0 ? 'flex-start' : 'flex-end';
+      bar.setAttribute('data-tip', (z>=0?'+':'')+z.toFixed(1)+'σ'+(val.t?' · '+val.t.toFixed(1)+'°C':''));
+      chart.appendChild(bar);
+      const lbl = document.createElement('span');
+      lbl.textContent = day.slice(5);
+      labels.appendChild(lbl);
+    });
+  } catch(e) {
+    document.getElementById('zscore-chart').innerHTML = '<div class="no-data">Dati in arrivo...</div>';
+  }
+}
+loadHistory();
 load();
 </script>
 </body>

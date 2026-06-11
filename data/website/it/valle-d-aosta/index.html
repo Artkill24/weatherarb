@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meteo Valle d'Aosta Oggi — Anomalie Climatiche 1 Città | WeatherArb</title>
+<meta name="description" content="Anomalie meteo in tempo reale per 1 città della Valle d'Aosta. Z-Score vs baseline NASA POWER 25 anni. Temperatura, umidità e vento aggiornati ogni ora.">
+<link rel="canonical" href="https://weatherarb.com/it/valle-d-aosta/">
+<link rel="alternate" hreflang="it" href="https://weatherarb.com/it/valle-d-aosta/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G66EMFP6GM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-G66EMFP6GM");</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#040608;color:#c8d6e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh}
+.hdr{border-bottom:1px solid #141920;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(4,6,8,.95);backdrop-filter:blur(12px);z-index:10}
+.logo{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c8d6e5;text-decoration:none}
+.logo span{color:#3b82f6}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px}
+.bc{font-size:12px;color:#4a5568;margin-bottom:24px}
+.bc a{color:#4a5568;text-decoration:none}
+.bc a:hover{color:#3b82f6}
+h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;line-height:1.1}
+.sub{font-size:15px;color:#4a5568;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:#141920;border:1px solid #141920;border-radius:14px;overflow:hidden;margin-bottom:40px}
+.stat{background:#0a0d12;padding:20px;text-align:center}
+.stat-n{font-size:32px;font-weight:800;color:#fff}
+.stat-l{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#4a5568;margin-top:4px}
+.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-label::after{content:'';flex:1;height:1px;background:#141920}
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:40px}
+.city-card{background:#0a0d12;border:1px solid #141920;border-radius:12px;padding:16px 18px;text-decoration:none;color:#c8d6e5;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.city-card:hover{border-color:#3b82f6;transform:translateY(-1px)}
+.city-left{display:flex;flex-direction:column;gap:2px}
+.city-name{font-size:14px;font-weight:700}
+.city-pop{font-size:11px;color:#4a5568}
+.city-z{font-size:16px;font-weight:800;color:#4a5568}
+.ad-wrap{margin:32px 0;text-align:center}
+.seo-box{background:#0a0d12;border:1px solid #141920;border-radius:14px;padding:28px;margin-bottom:32px}
+.seo-box h2{font-size:18px;font-weight:700;color:#fff;margin-bottom:12px}
+.seo-box p{font-size:13px;color:#4a5568;line-height:1.7}
+.ftr{border-top:1px solid #141920;padding:24px;text-align:center;font-size:12px;color:#4a5568;margin-top:40px}
+.ftr a{color:#4a5568;text-decoration:none;margin:0 8px}
+
+  .chart-wrap{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:28px;margin-bottom:20px}
+  .chart-title{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#4a5568;margin-bottom:16px}
+  .chart-container{position:relative;height:120px;display:flex;align-items:flex-end;gap:4px}
+  .chart-bar{flex:1;border-radius:4px 4px 0 0;min-height:4px;transition:.3s;cursor:pointer;position:relative}
+  .chart-bar:hover::after{content:attr(data-tip);position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:#1e2d3d;color:#c8d6e5;font-size:10px;padding:4px 8px;border-radius:6px;white-space:nowrap;margin-bottom:4px}
+  .chart-labels{display:flex;justify-content:space-between;margin-top:6px;font-size:9px;color:#4a5568}
+  .chart-zero{position:absolute;bottom:50%;left:0;right:0;height:1px;background:rgba(255,255,255,.1)}
+  .no-data{font-size:13px;color:#4a5568;text-align:center;padding:40px 0}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/" class="logo">WEATHER<span>ARB</span></a>
+  <a href="/it/" style="font-size:12px;color:#4a5568;text-decoration:none">← Italia</a>
+</header>
+<main class="wrap">
+  <div class="bc"><a href="/">WeatherArb</a> / <a href="/it/">Italia</a> / Valle d'Aosta</div>
+  <h1>Valle d'Aosta</h1>
+  <p class="sub">Anomalie meteo in tempo reale · 1 città monitorate · Baseline NASA POWER 25 anni</p>
+
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">1</div><div class="stat-l">Città</div></div>
+    <div class="stat"><div class="stat-n" id="anom-count">—</div><div class="stat-l">Anomalie Live</div></div>
+    <div class="stat"><div class="stat-n" id="avg-z">—</div><div class="stat-l">Z-Score Medio</div></div>
+    <div class="stat"><div class="stat-n" id="top-city">—</div><div class="stat-l">Top Anomalia</div></div>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+
+  <div class="section-label">Città della Valle d'Aosta</div>
+  <div class="city-grid">
+    <a href="/it/aosta/" class="city-card">
+      <div class="city-left">
+        <span class="city-name">Aosta</span>
+        <span class="city-pop">128,000 ab.</span>
+      </div>
+      <span class="city-z" id="z-aosta">—σ</span>
+    </a>
+
+  </div>
+
+  <div class="seo-box">
+    <h2>Anomalie Meteo in Valle d'Aosta</h2>
+    <p>WeatherArb monitora le anomalie climatiche in 1 città della Valle d'Aosta utilizzando il metodo Z-Score confrontato con il baseline NASA POWER degli ultimi 25 anni. Un valore Z-Score superiore a +2σ indica una temperatura significativamente superiore alla norma storica, mentre valori inferiori a -2σ segnalano freddo anomalo. I dati vengono aggiornati ogni ora tramite le stazioni meteorologiche di MET Norway, NOAA e WeatherAPI.</p>
+  </div>
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</main>
+<footer class="ftr">
+  <a href="/">Home</a><a href="/it/">Italia</a><a href="/data/">Dashboard</a><a href="/pricing/">API</a>
+  <br><br>© 2026 WeatherArb · Dati NASA POWER · Z-Score Climate Intelligence
+</footer>
+<script>
+var API='https://artkill24-weatherarb-api.hf.space';
+var slugs=["aosta"];
+async function load(){
+  try{
+    var results=await Promise.all(slugs.map(function(s){
+      return fetch(API+'/api/v1/pulse/'+s).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});
+    }));
+    var valid=results.filter(Boolean);
+    var anom=valid.filter(function(d){return Math.abs(d.z_score||0)>=1;}).length;
+    var avgZ=valid.length?valid.reduce(function(a,d){return a+(d.z_score||0);},0)/valid.length:0;
+    var top=valid.sort(function(a,b){return Math.abs(b.z_score||0)-Math.abs(a.z_score||0);})[0];
+    document.getElementById('anom-count').textContent=anom;
+    document.getElementById('avg-z').textContent=(avgZ>=0?'+':'')+avgZ.toFixed(2)+'σ';
+    if(top)document.getElementById('top-city').textContent=top.province||top.comune||'—';
+    valid.forEach(function(d){
+      var slug=(d.province||d.comune||'').toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      var el=document.getElementById('z-'+slug);
+      if(el){
+        var z=d.z_score||0;
+        el.textContent=(z>=0?'+':'')+z.toFixed(1)+'σ';
+        el.style.color=z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      }
+    });
+  }catch(e){}
+}
+
+async function loadHistory() {
+  try {
+    const r = await fetch('https://artkill24-weatherarb-api.hf.space/api/v1/history/' + slug);
+    const d = await r.json();
+    const pts = d.history || [];
+    if (!pts.length) {
+      document.getElementById('zscore-chart').innerHTML = '<div class="no-data">Dati storici in accumulo — riprova tra qualche ora</div>';
+      return;
+    }
+    const days = {};
+    pts.forEach(p => {
+      const day = p.recorded_at.slice(0,10);
+      if (!days[day] || Math.abs(p.z_score) > Math.abs(days[day].z))
+        days[day] = {z: p.z_score, t: p.temperature_c};
+    });
+    const entries = Object.entries(days).slice(-7);
+    const maxZ = Math.max(...entries.map(e => Math.abs(e[1].z)), 1);
+    const chart = document.getElementById('zscore-chart');
+    const labels = document.getElementById('chart-labels');
+    chart.innerHTML = '<div class="chart-zero"></div>';
+    labels.innerHTML = '';
+    entries.forEach(([day, val]) => {
+      const z = val.z;
+      const pct = Math.abs(z) / maxZ * 45;
+      const col = z>=3?'#ef4444':z>=2?'#f97316':z>=1?'#eab308':z<=-2?'#3b82f6':'#10b981';
+      const bar = document.createElement('div');
+      bar.className = 'chart-bar';
+      bar.style.background = col;
+      bar.style.height = (pct+5)+'%';
+      bar.style.alignSelf = z < 0 ? 'flex-start' : 'flex-end';
+      bar.setAttribute('data-tip', (z>=0?'+':'')+z.toFixed(1)+'σ'+(val.t?' · '+val.t.toFixed(1)+'°C':''));
+      chart.appendChild(bar);
+      const lbl = document.createElement('span');
+      lbl.textContent = day.slice(5);
+      labels.appendChild(lbl);
+    });
+  } catch(e) {
+    document.getElementById('zscore-chart').innerHTML = '<div class="no-data">Dati in arrivo...</div>';
+  }
+}
+loadHistory();
+load();
+</script>
+</body>
+</html>
