@@ -1,0 +1,19 @@
+name: NASA POWER Baseline Migration
+
+on:
+  workflow_dispatch:
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - name: Migrate all cities to NASA POWER baseline
+        run: |
+          for start in $(seq 420 100 18222); do
+            echo "Batch start=$start..."
+            RESULT=$(curl -s -X POST "https://artkill24-weatherarb-api.hf.space/admin/migrate-nasa-baseline?start=$start&limit=100")
+            echo "  $RESULT"
+            sleep 35
+          done
+          echo "Migration complete"
