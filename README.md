@@ -1,90 +1,96 @@
-# ⚡ Nano-Arbitrage Engine — The Pulse
-## Sprint 1: Weather Signal → Actionable JSON
+# 🌍 WeatherArb — Weather Anomaly Intelligence Platform
 
-Sistema di rilevamento anomalie meteo per affiliate marketing geo-localizzato.
-Copre **47 province del Nord Italia** (bacino Padano + Alpi + Liguria + Emilia-Romagna).
+Piattaforma di rilevamento anomalie meteorologiche in tempo reale per **18.222+ città in 162+ paesi**, basata su Z-Score climatico confrontato con baseline storiche reali.
 
----
-
-## Architettura Sprint 1
-
-```
-Copernicus ERA5-Land (baseline storica)
-         +
-OpenWeatherMap API (previsione 72h)
-         ↓
-    [The Ingestor]
-    WeatherSnapshot × Provincia
-         ↓
-  [Delta Calculator]
-  Z-Score + Arbitrage Score
-         ↓
-  [Product Mapper]
-  ChromaDB semantic search
-         ↓
-    Pulse-JSON pronto per The Architect
-```
+🔗 **Live**: [weatherarb.com](https://weatherarb.com)
+📡 **API**: [weatherarb.com/pricing](https://weatherarb.com/pricing)
 
 ---
 
-## Setup
+## Cos'è WeatherArb
 
-### 1. Ambiente Python
+WeatherArb calcola un indice proprietario **WWAI (World Weather Anomaly Index, 0-100)** per ogni città monitorata, confrontando i dati meteo attuali con baseline climatiche storiche per identificare deviazioni statisticamente significative (Z-Score).
+
+**Use case principali:**
+- 🌾 Agricoltura — stress idrico, rischio raccolto
+- ⚡ Energia — domanda HDD/CDD anomala
+- 🚚 Logistica — rischio meteo su rotte
+- 🏦 Assicurazioni — climate risk scoring
+
+---
+
+## Architettura
+
+```
+NASA POWER (baseline climatica 20 anni, per città)
+MET Norway / NOAA NWS / Open-Meteo / WeatherAPI (dati live)
+         ↓
+    [FastAPI Backend — HuggingFace Spaces]
+    Z-Score Calculator + HDD/CDD Engine
+         ↓
+    [Supabase — Postgres]
+    weather_cache (snapshot live)
+    weather_history (serie storica oraria)
+    city_baseline (climatologia NASA POWER per città)
+         ↓
+    [Cloudflare Workers — Frontend statico]
+    19.000+ pagine SEO multilingua (IT/EN/DE/ES/FR/PT/AR)
+         ↓
+    Pulse-JSON via API pubblica
+```
+
+---
+
+## Stack Tecnico
+
+| Layer | Tecnologia |
+|---|---|
+| Backend API | FastAPI (Python), deploy su HuggingFace Spaces |
+| Frontend | HTML statico + JS vanilla, Cloudflare Workers |
+| Database | Supabase (PostgreSQL) |
+| Dati meteo live | MET Norway, NOAA NWS, Open-Meteo, WeatherAPI |
+| Baseline climatica | NASA POWER Climatology API (MERRA-2, 2001-2020) |
+| AI / NLP | Groq (Llama 3) per articoli multilingua |
+| Automazione | GitHub Actions (refresh orario, migrazioni batch) |
+| Monetizzazione | Google AdSense |
+| Email | Resend (newsletter, alert) |
+
+---
+
+## Setup Locale
+
+### Backend (HuggingFace Spaces repo separato)
 
 ```bash
-cd nano_pulse
-python -m venv venv
-source venv/bin/activate          # Linux/Mac
-# venv\Scripts\activate           # Windows
+cd /path/to/hf-weatherarb
 pip install -r requirements.txt
 ```
 
-### 2. API Keys
-
-**OpenWeatherMap** (gratuito fino a 1.000 calls/giorno):
-- Registrati su https://openweathermap.org/api
-- Ottieni la API key dalla dashboard
-
-**Copernicus CDS** (gratuito, richiede accettazione ToS):
-- Registrati su https://cds.climate.copernicus.eu
-- Crea il file `~/.cdsapirc`:
-```
-url: https://cds.climate.copernicus.eu/api/v2
-key: UID:API-KEY
-```
-
-### 3. Environment Variables
+### Environment Variables (secrets su HF Spaces)
 
 ```bash
-export OWM_API_KEY="la_tua_api_key_owm"
-export CDS_API_KEY="la_tua_api_key_copernicus"
+SUPABASE_URL=https://xxxxx.supabase.co
+SUPABASE_ANON_KEY=xxxxx
+GROQ_API_KEY=xxxxx
+WEATHER_API_KEY=xxxxx
+RESEND_API_KEY=xxxxx
 ```
 
-> ⚠️ **Senza API key**: il sistema gira in modalità MOCK con dati simulati realistici.
-> Perfetto per validare l'architettura prima di attivare le API.
-
----
-
-## Avvio
-
-### Backend FastAPI
+### Avvio locale
 
 ```bash
-# Dalla root del progetto
-uvicorn api.main:app --reload --port 8000
+uvicorn main:app --reload --port 7860
 ```
 
-API disponibile su: http://localhost:8000
-Docs interattive: http://localhost:8000/docs
+API: `http://localhost:7860`
+Docs: `http://localhost:7860/docs`
 
-### Dashboard Streamlit
+### Frontend (Cloudflare Workers)
 
 ```bash
-# In un secondo terminale
-streamlit run dashboard/app.py
+cd data/website
+npx wrangler deploy
 ```
-
-Dashboard su: http://localhost:8501
 
 ---
 
@@ -92,99 +98,101 @@ Dashboard su: http://localhost:8501
 
 | Endpoint | Metodo | Descrizione |
 |---|---|---|
-| `/` | GET | Status sistema |
-| `/pulse/{provincia}` | GET | Pulse-JSON per una provincia |
-| `/pulse/refresh` | POST | Refresh globale in background |
-| `/pulse/heatmap/scores` | GET | Tutti gli score per la heatmap |
-| `/pulse/heatmap/opportunities` | GET | Solo province azionabili |
-| `/province` | GET | Lista province disponibili |
+| `/health` | GET | Status sistema |
+| `/api/v1/pulse/{slug}` | GET | Dati anomalia per città |
+| `/api/v1/pulse/nearby` | GET | Città più vicina a lat/lon |
+| `/api/v1/europe/top` | GET | Top anomalie per regione |
+| `/api/v1/global-signals` | GET | Wildfires, eventi NASA EONET |
+| `/api/v1/history/{slug}` | GET | Serie storica Z-Score (7gg) |
+| `/api/v1/wwai` | GET | World Weather Anomaly Index globale |
+| `/api/space-weather` | GET | Kp Index, solar flare (NOAA SWPC) |
+| `/pulse/refresh` | POST | Refresh completo cache (18k città) |
+| `/api/newsletter/subscribe` | POST | Iscrizione alert email |
 
-### Esempio risposta `/pulse/vicenza`
+### Esempio risposta `/api/v1/pulse/torino`
 
 ```json
 {
-  "timestamp": "2026-04-03T22:00:00Z",
-  "location": {
-    "provincia": "Vicenza",
-    "regione": "Veneto",
-    "codice_istat": "024",
-    "cluster": "NE_Industrial",
-    "popolazione": 859000
-  },
-  "weather_trigger": {
-    "type": "Heavy_Rain",
-    "severity": 0.75,
-    "anomaly_level": "EXTREME",
-    "z_score": 2.34,
-    "delta_historical": "+85.2%",
-    "peak_expected_in": "42h"
-  },
-  "arbitrage_score": {
-    "score": 8.2,
-    "confidence": 0.91,
-    "historical_roi_estimate": 3.4,
-    "actionable": true,
-    "aggressive_scale": true
-  },
-  "action_plan": {
-    "phase": "PRE_EVENT_PREP",
-    "guardrail": "APPROVED",
-    "recommended_vertical": "Home_Maintenance",
-    "top_product_categories": ["Deumidificatori", "Impermeabili", "Stivali"],
-    "budget_recommendation": {
-      "daily_eur": 50.0,
-      "strategy": "AGGRESSIVE_SCALE_THOMPSON_BANDIT"
-    }
-  }
+  "province": "Torino",
+  "comune": "Torino",
+  "country_code": "it",
+  "lat": 45.0703,
+  "lon": 7.6869,
+  "z_score": -1.5,
+  "anomaly_level": "UNUSUAL",
+  "event_type": "heavy_rain",
+  "score": 5.0,
+  "temperature_c": 17.7,
+  "precipitation": 0,
+  "humidity_pct": 94.6,
+  "wind_kmh": 12.2
 }
 ```
 
 ---
 
-## Logica del Guardrail Etico
+## Metodologia Z-Score
 
-Il sistema implementa **Temporal Decoupling**:
+Lo Z-Score misura quante deviazioni standard la temperatura attuale si trova rispetto alla media storica per quel mese e quella città specifica:
 
-| Timing | Fase | Azione |
-|---|---|---|
-| 72h - 24h pre-evento | PRE_EVENT_PREP | Campagne educative |
-| 24h - 6h pre-evento | PRE_EVENT_LAUNCH | Campagne prodotto |
-| < 6h pre-evento | BLACKOUT | Solo contenuto informativo |
-| Durante evento attivo | BLACKOUT | Zero spend pubblicitario |
-| 24h - 7g post-evento | POST_EVENT_RECOVERY | Vertical recovery |
+```
+Z = (temp_attuale - media_storica_NASA_POWER) / deviazione_standard
+```
 
-Le categorie "Pompe idrauliche" e "Generatori" sono **hardcoded-bloccate** durante anomalie CRITICAL (Z > 3.0) per prevenire gouging pricing.
+**Baseline**: climatologia NASA POWER (MERRA-2), 20 anni di dati (2001-2020), per ogni singola città — non una media globale generica.
+
+| Z-Score | Livello |
+|---|---|
+| \|Z\| < 1 | NORMAL |
+| 1 ≤ \|Z\| < 2 | UNUSUAL |
+| 2 ≤ \|Z\| < 3 | EXTREME |
+| \|Z\| ≥ 3 | CRITICAL |
 
 ---
 
-## Roadmap Sprint 2
+## Roadmap
 
-- [ ] Integrazione CDS API reale per baseline ERA5-Land (vs cluster simulati)
-- [ ] LangGraph orchestration per The Architect (landing page generator)
-- [ ] Taboola API integration per The Media Buyer
-- [ ] Weather-Product Ledger su PostgreSQL + TimescaleDB
-- [ ] Thompson Sampling bandit per ottimizzazione creative
-- [ ] Backtesting 24 mesi con Volume di Opportunità Mensile
+- [x] 18.222+ città in 162+ paesi
+- [x] Baseline NASA POWER reale per città (migrazione in corso)
+- [x] AdSense attivo
+- [x] Pagine regione/paese con aggregazione live
+- [x] Grafico storico Z-Score (7 giorni)
+- [ ] API pubblica a pagamento (tier Pro)
+- [ ] Widget embeddabile per siti terzi
+- [ ] Climate Risk Index regionale a lungo termine
+- [ ] App mobile
 
 ---
 
-## Struttura File
+## Struttura File (Frontend — questo repo)
 
 ```
-nano_pulse/
-├── config.py                    # Soglie, API keys, costanti
-├── requirements.txt
-├── core/
-│   ├── ingestor.py              # OWM fetcher + ERA5 baseline
-│   ├── delta_calculator.py      # Z-Score + Arbitrage Score
-│   └── product_mapper.py        # ChromaDB semantic search
-├── api/
-│   └── main.py                  # FastAPI endpoints
-├── dashboard/
-│   └── app.py                   # Streamlit heatmap
-└── data/
-    ├── province_coords.json      # 47 province Nord Italia
-    ├── products_seed.csv         # 30 prodotti affiliate evergreen
-    ├── chroma_db/               # Vector DB (auto-generato)
-    └── era5_cache/              # Cache NetCDF (auto-generato)
+nano_pulse/data/website/
+├── index.html                   # Homepage
+├── {cc}/                        # Pagine indice paese (162 paesi)
+│   ├── index.html
+│   └── {slug}/                  # Pagine città (18.222+)
+│       └── index.html
+├── it/{regione}/                # Pagine regione italiane (20)
+├── ar/ma/{slug}/                 # Pagine arabe Marocco (214)
+├── sitemap-*.xml                 # Sitemap per lingua/area
+├── ads.txt                       # Google AdSense authorized sellers
+└── worker.js                     # Cloudflare Worker entry point
 ```
+
+## Struttura File (Backend — repo separato hf-weatherarb)
+
+```
+hf-weatherarb/
+├── main.py                       # FastAPI app, tutti gli endpoint
+├── data/
+│   └── province_coords.json      # 18.222 città con lat/lon/country
+├── Dockerfile
+└── requirements.txt
+```
+
+---
+
+## Note
+
+Progetto indie, costruito e mantenuto da un solo sviluppatore. Pre-revenue al momento, con traffico organico reale (~800 query/giorno su Google) e monetizzazione AdSense attiva.
