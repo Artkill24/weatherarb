@@ -621,7 +621,7 @@ async function loadWWAI(){
     const anom=document.getElementById('live-anom');
     if(anom) anom.textContent=(d.breakdown?.critical_count||0)+(d.breakdown?.severe_count||0);
     const nodes=document.getElementById('stat-nodes');
-    if(nodes) nodes.textContent=(d.cities_monitored||18,742).toLocaleString('it-IT');
+    if(nodes) nodes.textContent=(d.cities_monitored||18742).toLocaleString('it-IT');
   }catch(e){}
 }
 async function loadData(){
