@@ -399,8 +399,8 @@ function renderGlobe() {
     .pointAltitude(d => zAlt(d.z_score))
     .pointRadius(d => zSize(d.z_score, mode))
     .pointColor(d => zColor(d.z_score, mode))
-    .pointsMerge(false)
-    .pointResolution(8)
+    .pointsMerge(true)
+    .pointResolution(4)
     .onPointHover(handleHover)
     .onPointClick(d => {
       if(!d) return;
@@ -410,7 +410,7 @@ function renderGlobe() {
     });
 
   // Rings for critical nodes
-  const criticals = nodesData.filter(d => Math.abs(d.z_score||0) >= 2);
+  const criticals = nodesData.filter(d => Math.abs(d.z_score||0) >= 3).slice(0, 80);
   globe
     .ringsData(criticals)
     .ringLat(d => d.lat)
