@@ -831,12 +831,14 @@ setTimeout(loadGeoAlert,2000);
               var z=pulse.z_score||0;
               var col=z>=3?'var(--r)':z>=2?'var(--o)':z>=1?'var(--y)':z<=-2?'var(--bl)':'var(--g)';
               var cc=(pulse.country_code||'').toLowerCase();
-              var cityName=pulse.comune||place.display_name.split(',')[0];
-              var slug=cityName.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+              var searchedName=place.name||place.display_name.split(',')[0];
+              var slug=searchedName.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+              var nearestName=pulse.comune||searchedName;
               var country=place.address&&place.address.country?place.address.country:cc.toUpperCase();
+              var nearbyNote=(nearestName.toLowerCase()!==searchedName.toLowerCase())?' (dati da '+nearestName+')':'';
               return '<a href="/'+(cc?cc+'/':'')+slug+'" class="search-result-item">'
-                +'<div class="sri-left"><span class="sri-city">'+cityName+'</span>'
-                +'<span class="sri-country">'+country+' &middot; '+pulse.event_type+'</span></div>'
+                +'<div class="sri-left"><span class="sri-city">'+searchedName+'</span>'
+                +'<span class="sri-country">'+country+' &middot; '+pulse.event_type+nearbyNote+'</span></div>'
                 +'<span class="sri-z" style="color:'+col+'">'+z.toFixed(1)+'&sigma;</span></a>';
             }).join('');
             results.style.display='block';
