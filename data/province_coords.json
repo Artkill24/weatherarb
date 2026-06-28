@@ -128118,6 +128118,5666 @@
       "lon": 27.807,
       "country": "Zimbabwe",
       "cluster": "ZI_Auto"
+    },
+    {
+      "nome": "Zibido San Giacomo",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.383,
+      "lon": 9.117,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Vimodrone",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.517,
+      "lon": 9.283,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ostuni",
+      "codice_istat": "999",
+      "regione": "Brindisi",
+      "lat": 40.728,
+      "lon": 17.578,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ceva",
+      "codice_istat": "999",
+      "regione": "Savona",
+      "lat": 44.383,
+      "lon": 8.033,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Silea",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.65,
+      "lon": 12.317,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Busnago",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.633,
+      "lon": 9.433,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Assago",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.4,
+      "lon": 9.133,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Limone Piemonte",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.2,
+      "lon": 7.567,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castellamonte",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.383,
+      "lon": 7.7,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Russi",
+      "codice_istat": "999",
+      "regione": "Ravenna",
+      "lat": 44.378,
+      "lon": 12.029,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Gorgonzola",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.531,
+      "lon": 9.401,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Giuseppe Vesuviano",
+      "codice_istat": "999",
+      "regione": "Napoli",
+      "lat": 40.839,
+      "lon": 14.501,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Correggio",
+      "codice_istat": "999",
+      "regione": "Reggio Emilia",
+      "lat": 44.774,
+      "lon": 10.78,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Elmas",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.267,
+      "lon": 9.05,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Scillato",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 37.933,
+      "lon": 13.883,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Tribano",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.233,
+      "lon": 11.967,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Dronero",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.467,
+      "lon": 7.367,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castellana Grotte",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 40.883,
+      "lon": 17.167,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Misilmeri",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 38.033,
+      "lon": 13.45,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Montanaro",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.233,
+      "lon": 7.867,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bovezzo",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.617,
+      "lon": 10.2,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Reggello",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.683,
+      "lon": 11.5,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Roncade",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.617,
+      "lon": 12.383,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Marineo",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 37.95,
+      "lon": 13.417,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Augusta",
+      "codice_istat": "999",
+      "regione": "Siracusa",
+      "lat": 37.234,
+      "lon": 15.218,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rodengo Saiano",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.6,
+      "lon": 10.167,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Paese",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.7,
+      "lon": 12.167,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sarezzo",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.682,
+      "lon": 10.199,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castellanza",
+      "codice_istat": "999",
+      "regione": "Varese",
+      "lat": 45.612,
+      "lon": 8.891,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Narni",
+      "codice_istat": "999",
+      "regione": "Terni",
+      "lat": 42.521,
+      "lon": 12.519,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Quartu Sant Elena",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.238,
+      "lon": 9.181,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cusago",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.45,
+      "lon": 9.017,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Isola di Capo Rizzuto",
+      "codice_istat": "999",
+      "regione": "Crotone",
+      "lat": 38.958,
+      "lon": 17.092,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Merate",
+      "codice_istat": "999",
+      "regione": "Lecco",
+      "lat": 45.698,
+      "lon": 9.426,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castiglione della Pescaia",
+      "codice_istat": "999",
+      "regione": "Grosseto",
+      "lat": 42.761,
+      "lon": 10.88,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castellaneta",
+      "codice_istat": "999",
+      "regione": "Matera",
+      "lat": 40.633,
+      "lon": 16.933,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Medolago",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.717,
+      "lon": 9.517,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Susegana",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.85,
+      "lon": 12.25,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Pietro in Casale",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.683,
+      "lon": 11.4,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Barano d'Ischia",
+      "codice_istat": "999",
+      "regione": "Giugliano in Campania",
+      "lat": 40.717,
+      "lon": 13.917,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Peschiera Borromeo",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.433,
+      "lon": 9.333,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Stezzano",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.667,
+      "lon": 9.65,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pelago",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.75,
+      "lon": 11.5,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Tolentino",
+      "codice_istat": "999",
+      "regione": "Macerata",
+      "lat": 43.209,
+      "lon": 13.286,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Genzano di Roma",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.702,
+      "lon": 12.693,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sorisole",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.75,
+      "lon": 9.683,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Canegrate",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.567,
+      "lon": 8.933,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rocchetta Tanaro",
+      "codice_istat": "999",
+      "regione": "Asti",
+      "lat": 44.767,
+      "lon": 8.3,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Noicattaro",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 41.033,
+      "lon": 16.983,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Medicina",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.483,
+      "lon": 11.633,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Decimoputzu",
+      "codice_istat": "999",
+      "regione": "Sud Sardegna",
+      "lat": 39.317,
+      "lon": 8.883,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Nova Milanese",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.583,
+      "lon": 9.2,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Villasanta",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.6,
+      "lon": 9.3,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Londa",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.833,
+      "lon": 11.567,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Crevalcore",
+      "codice_istat": "999",
+      "regione": "Modena",
+      "lat": 44.733,
+      "lon": 11.15,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Forte dei Marmi",
+      "codice_istat": "999",
+      "regione": "Lucca",
+      "lat": 43.962,
+      "lon": 10.174,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ome",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.633,
+      "lon": 10.167,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Tradate",
+      "codice_istat": "999",
+      "regione": "Varese",
+      "lat": 45.709,
+      "lon": 8.909,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Chivasso",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.19,
+      "lon": 7.89,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Valdagno",
+      "codice_istat": "999",
+      "regione": "Vicenza",
+      "lat": 45.65,
+      "lon": 11.301,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Patti",
+      "codice_istat": "999",
+      "regione": "Messina",
+      "lat": 38.139,
+      "lon": 14.966,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Roseto degli Abruzzi",
+      "codice_istat": "999",
+      "regione": "Teramo",
+      "lat": 42.682,
+      "lon": 14.017,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Argelato",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.633,
+      "lon": 11.35,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Partanna",
+      "codice_istat": "999",
+      "regione": "Trapani",
+      "lat": 37.728,
+      "lon": 12.89,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Valenza",
+      "codice_istat": "999",
+      "regione": "Alessandria",
+      "lat": 45.019,
+      "lon": 8.641,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Casamicciola Terme",
+      "codice_istat": "999",
+      "regione": "Giugliano in Campania",
+      "lat": 40.75,
+      "lon": 13.9,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Campofelice di Roccella",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 38.0,
+      "lon": 13.867,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Benigno Canavese",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.233,
+      "lon": 7.8,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Palazzuolo sul Senio",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.117,
+      "lon": 11.55,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Nave",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.6,
+      "lon": 10.283,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Mondovi",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.39,
+      "lon": 7.818,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Artena",
+      "codice_istat": "999",
+      "regione": "Latina",
+      "lat": 41.733,
+      "lon": 12.917,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Lastra a Signa",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.766,
+      "lon": 11.107,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Luino",
+      "codice_istat": "999",
+      "regione": "Varese",
+      "lat": 46.004,
+      "lon": 8.744,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Garessio",
+      "codice_istat": "999",
+      "regione": "Imperia",
+      "lat": 44.2,
+      "lon": 8.017,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pavullo nel Frignano",
+      "codice_istat": "999",
+      "regione": "Modena",
+      "lat": 44.336,
+      "lon": 10.834,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Carmagnola",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 44.849,
+      "lon": 7.716,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bonate Sotto",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.7,
+      "lon": 9.567,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Nogara",
+      "codice_istat": "999",
+      "regione": "Verona",
+      "lat": 45.183,
+      "lon": 11.06,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Gardone Val Trompia",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.683,
+      "lon": 10.183,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Salsomaggiore Terme",
+      "codice_istat": "999",
+      "regione": "Parma",
+      "lat": 44.814,
+      "lon": 9.981,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Orosei",
+      "codice_istat": "999",
+      "regione": "Nuoro",
+      "lat": 40.375,
+      "lon": 9.7,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sulzano",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.65,
+      "lon": 10.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Burcei",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.35,
+      "lon": 9.35,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sasso Marconi",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.396,
+      "lon": 11.246,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Comiso",
+      "codice_istat": "999",
+      "regione": "Ragusa",
+      "lat": 36.946,
+      "lon": 14.602,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sannicandro di Bari",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 41.0,
+      "lon": 16.783,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Magenta",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.464,
+      "lon": 8.883,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sammichele di Bari",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 40.867,
+      "lon": 17.0,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Porto San Giorgio",
+      "codice_istat": "999",
+      "regione": "Fermo",
+      "lat": 43.185,
+      "lon": 13.799,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Zanica",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.633,
+      "lon": 9.7,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Borgo San Lorenzo",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.95,
+      "lon": 11.383,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Chiaravalle",
+      "codice_istat": "999",
+      "regione": "Ancona",
+      "lat": 43.599,
+      "lon": 13.328,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Monselice",
+      "codice_istat": "999",
+      "regione": "Rovigo",
+      "lat": 45.233,
+      "lon": 11.75,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Miniato",
+      "codice_istat": "999",
+      "regione": "Pisa",
+      "lat": 43.68,
+      "lon": 10.856,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Saonara",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.383,
+      "lon": 11.967,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Noto",
+      "codice_istat": "999",
+      "regione": "Siracusa",
+      "lat": 36.891,
+      "lon": 15.071,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Molinella",
+      "codice_istat": "999",
+      "regione": "Ferrara",
+      "lat": 44.617,
+      "lon": 11.667,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Vignola",
+      "codice_istat": "999",
+      "regione": "Modena",
+      "lat": 44.479,
+      "lon": 11.005,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Uta",
+      "codice_istat": "999",
+      "regione": "Sud Sardegna",
+      "lat": 39.283,
+      "lon": 8.95,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Albignasego",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.35,
+      "lon": 11.883,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bracciano",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 42.104,
+      "lon": 12.175,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Falconara Marittima",
+      "codice_istat": "999",
+      "regione": "Ancona",
+      "lat": 43.629,
+      "lon": 13.397,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Lentini",
+      "codice_istat": "999",
+      "regione": "Siracusa",
+      "lat": 37.287,
+      "lon": 14.996,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Abano Terme",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.362,
+      "lon": 11.786,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bovisio-Masciago",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.617,
+      "lon": 9.167,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Desenzano del Garda",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.468,
+      "lon": 10.535,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Muggio",
+      "codice_istat": "999",
+      "regione": "Monza e della Brianza",
+      "lat": 45.596,
+      "lon": 9.228,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Granarolo dell'Emilia",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.55,
+      "lon": 11.433,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Baricella",
+      "codice_istat": "999",
+      "regione": "Ferrara",
+      "lat": 44.683,
+      "lon": 11.55,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Villa San Pietro",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 38.967,
+      "lon": 9.033,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Fabriano",
+      "codice_istat": "999",
+      "regione": "Ancona",
+      "lat": 43.336,
+      "lon": 12.903,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Soazza",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.7,
+      "lon": 9.733,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Copertino",
+      "codice_istat": "999",
+      "regione": "Lecce",
+      "lat": 40.273,
+      "lon": 18.049,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Trezzano sul Naviglio",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.417,
+      "lon": 9.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Altavilla Milicia",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 38.033,
+      "lon": 13.55,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cellatica",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.583,
+      "lon": 10.217,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Guidonia Montecelio",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 42.0,
+      "lon": 12.733,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pisogne",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.8,
+      "lon": 10.1,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sanremo",
+      "codice_istat": "999",
+      "regione": "Imperia",
+      "lat": 43.816,
+      "lon": 7.776,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Villa d'Almè",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.75,
+      "lon": 9.6,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sulbiate",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.65,
+      "lon": 9.467,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Leinì",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.183,
+      "lon": 7.717,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Romano di Lombardia",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.522,
+      "lon": 9.751,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Orzinuovi",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.401,
+      "lon": 9.922,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Monte Compatri",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.8,
+      "lon": 12.75,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bentivoglio",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.633,
+      "lon": 11.417,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Mogliano Veneto",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.567,
+      "lon": 12.233,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Turi",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 40.917,
+      "lon": 17.017,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Asola",
+      "codice_istat": "999",
+      "regione": "Mantova",
+      "lat": 45.216,
+      "lon": 10.409,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Lacco Ameno",
+      "codice_istat": "999",
+      "regione": "Giugliano in Campania",
+      "lat": 40.75,
+      "lon": 13.9,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ficarazzi",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 38.083,
+      "lon": 13.483,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ponte San Pietro",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.683,
+      "lon": 9.583,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Saluzzo",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.645,
+      "lon": 7.49,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Jesi",
+      "codice_istat": "999",
+      "regione": "Ancona",
+      "lat": 43.524,
+      "lon": 13.244,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Crescentino",
+      "codice_istat": "999",
+      "regione": "Asti",
+      "lat": 45.183,
+      "lon": 8.1,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Preganziol",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.6,
+      "lon": 12.233,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Caltabellotta",
+      "codice_istat": "999",
+      "regione": "Agrigento",
+      "lat": 37.578,
+      "lon": 13.217,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Calvignasco",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.35,
+      "lon": 9.0,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Termini Imerese",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 38.0,
+      "lon": 13.7,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castrovillari",
+      "codice_istat": "999",
+      "regione": "Cosenza",
+      "lat": 39.813,
+      "lon": 16.201,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Salvo",
+      "codice_istat": "999",
+      "regione": "Chieti",
+      "lat": 42.044,
+      "lon": 14.734,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Impruneta",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.683,
+      "lon": 11.267,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bitetto",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 41.05,
+      "lon": 16.733,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rufina",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.817,
+      "lon": 11.483,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Legnago",
+      "codice_istat": "999",
+      "regione": "Verona",
+      "lat": 45.191,
+      "lon": 11.321,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bolognetta",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 37.967,
+      "lon": 13.45,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Aspra",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 38.1,
+      "lon": 13.567,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Vicchio",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.933,
+      "lon": 11.467,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Mezzojuso",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 37.933,
+      "lon": 13.467,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Mentana",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 42.025,
+      "lon": 12.64,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Casandrino",
+      "codice_istat": "999",
+      "regione": "Giugliano in Campania",
+      "lat": 40.933,
+      "lon": 14.233,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Roncello",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.633,
+      "lon": 9.483,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Alzano Lombardo",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.727,
+      "lon": 9.728,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Barberino Tavarnelle",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.533,
+      "lon": 11.167,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Irma",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.783,
+      "lon": 10.283,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pedrengo",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.7,
+      "lon": 9.767,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bacoli",
+      "codice_istat": "999",
+      "regione": "Giugliano in Campania",
+      "lat": 40.8,
+      "lon": 14.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castel San Giovanni",
+      "codice_istat": "999",
+      "regione": "Piacenza",
+      "lat": 45.062,
+      "lon": 9.433,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Piazza Armerina",
+      "codice_istat": "999",
+      "regione": "Enna",
+      "lat": 37.383,
+      "lon": 14.365,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Volpiano",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.183,
+      "lon": 7.783,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Chiavari",
+      "codice_istat": "999",
+      "regione": "Genova",
+      "lat": 44.317,
+      "lon": 9.317,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rapallo",
+      "codice_istat": "999",
+      "regione": "Genova",
+      "lat": 44.35,
+      "lon": 9.233,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Concesio",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.604,
+      "lon": 10.222,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Montelupo Fiorentino",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.734,
+      "lon": 11.019,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Triggiano",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 41.083,
+      "lon": 16.917,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Vinadio",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.3,
+      "lon": 7.167,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Casalmaggiore",
+      "codice_istat": "999",
+      "regione": "Cremona",
+      "lat": 44.985,
+      "lon": 10.42,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Lascari",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 38.0,
+      "lon": 13.933,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Trabia",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 38.0,
+      "lon": 13.65,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Parabiago",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.55,
+      "lon": 8.95,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Foglizzo",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.2,
+      "lon": 7.867,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Francavilla al Mare",
+      "codice_istat": "999",
+      "regione": "Chieti",
+      "lat": 42.424,
+      "lon": 14.292,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Mezzago",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.667,
+      "lon": 9.45,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Buccinasco",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.4,
+      "lon": 9.1,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Brandizzo",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.167,
+      "lon": 7.833,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Legnaro",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.35,
+      "lon": 11.967,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Monastir",
+      "codice_istat": "999",
+      "regione": "Sud Sardegna",
+      "lat": 39.383,
+      "lon": 9.05,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Calderara di Reno",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.562,
+      "lon": 11.283,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bagno a Ripoli",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.741,
+      "lon": 11.322,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pula",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 38.983,
+      "lon": 9.0,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Villabate",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 38.083,
+      "lon": 13.45,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Borgaro Torinese",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.148,
+      "lon": 7.655,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cigliano",
+      "codice_istat": "999",
+      "regione": "Biella",
+      "lat": 45.317,
+      "lon": 8.033,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rodano",
+      "codice_istat": "999",
+      "regione": "Lodi",
+      "lat": 45.467,
+      "lon": 9.467,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Zone",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.733,
+      "lon": 10.117,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Lanuvio",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.683,
+      "lon": 12.683,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cambiago",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.567,
+      "lon": 9.433,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Thiene",
+      "codice_istat": "999",
+      "regione": "Vicenza",
+      "lat": 45.708,
+      "lon": 11.479,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ventimiglia",
+      "codice_istat": "999",
+      "regione": "Imperia",
+      "lat": 43.791,
+      "lon": 7.608,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pontassieve",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.774,
+      "lon": 11.437,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sezzadio",
+      "codice_istat": "999",
+      "regione": "Alessandria",
+      "lat": 44.817,
+      "lon": 8.583,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Nerviano",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.55,
+      "lon": 8.983,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Lodrino",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.717,
+      "lon": 10.25,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Montepulciano",
+      "codice_istat": "999",
+      "regione": "Siena",
+      "lat": 43.096,
+      "lon": 11.784,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ivrea",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.467,
+      "lon": 7.874,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Valperga",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.4,
+      "lon": 7.667,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rocca di Papa",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.767,
+      "lon": 12.7,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Darfo Boario Terme",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.883,
+      "lon": 10.183,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cerro Maggiore",
+      "codice_istat": "999",
+      "regione": "Como",
+      "lat": 45.583,
+      "lon": 8.95,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Secondigliano",
+      "codice_istat": "999",
+      "regione": "Napoli",
+      "lat": 40.903,
+      "lon": 14.238,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Capriate San Gervasio",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.7,
+      "lon": 9.517,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Curno",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.7,
+      "lon": 9.633,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Vinovo",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 44.95,
+      "lon": 7.633,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pernumia",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.283,
+      "lon": 11.95,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Calvizzano",
+      "codice_istat": "999",
+      "regione": "Giugliano in Campania",
+      "lat": 40.917,
+      "lon": 14.183,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cellamare",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 41.033,
+      "lon": 16.917,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Gratteri",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 37.983,
+      "lon": 13.967,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Carbonia",
+      "codice_istat": "999",
+      "regione": "Sud Sardegna",
+      "lat": 39.165,
+      "lon": 8.523,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sotto il Monte Giovanni XXIII",
+      "codice_istat": "999",
+      "regione": "Lecco",
+      "lat": 45.783,
+      "lon": 9.483,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Segni",
+      "codice_istat": "999",
+      "regione": "Latina",
+      "lat": 41.683,
+      "lon": 13.017,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Lugo",
+      "codice_istat": "999",
+      "regione": "Ravenna",
+      "lat": 44.421,
+      "lon": 11.909,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cecina",
+      "codice_istat": "999",
+      "regione": "Livorno",
+      "lat": 43.315,
+      "lon": 10.521,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Quinto di Treviso",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.65,
+      "lon": 12.183,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Col San Martino",
+      "codice_istat": "999",
+      "regione": "Belluno",
+      "lat": 45.9,
+      "lon": 12.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Collio",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.783,
+      "lon": 10.317,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Fidenza",
+      "codice_istat": "999",
+      "regione": "Parma",
+      "lat": 44.868,
+      "lon": 10.059,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Monticelli Brusati",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.65,
+      "lon": 10.067,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Atri",
+      "codice_istat": "999",
+      "regione": "Teramo",
+      "lat": 42.579,
+      "lon": 13.978,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "None",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 44.933,
+      "lon": 7.55,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Casamassima",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 40.95,
+      "lon": 16.917,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cambiano",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 44.967,
+      "lon": 7.75,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Settimo San Pietro",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.283,
+      "lon": 9.217,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Porto Torres",
+      "codice_istat": "999",
+      "regione": "Sassari",
+      "lat": 40.835,
+      "lon": 8.398,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pecetto Torinese",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.0,
+      "lon": 7.75,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Colonna",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.833,
+      "lon": 12.75,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Costa di Mezzate",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.633,
+      "lon": 9.767,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Alatri",
+      "codice_istat": "999",
+      "regione": "Frosinone",
+      "lat": 41.726,
+      "lon": 13.343,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Genazzano",
+      "codice_istat": "999",
+      "regione": "Latina",
+      "lat": 41.833,
+      "lon": 12.983,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Riccione",
+      "codice_istat": "999",
+      "regione": "Rimini",
+      "lat": 44.003,
+      "lon": 12.656,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cuorgne",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.391,
+      "lon": 7.651,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Provaglio d'Iseo",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.633,
+      "lon": 10.05,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Quargnento",
+      "codice_istat": "999",
+      "regione": "Alessandria",
+      "lat": 44.967,
+      "lon": 8.433,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Farra di Soligo",
+      "codice_istat": "999",
+      "regione": "Belluno",
+      "lat": 45.9,
+      "lon": 12.1,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sant'Agata sul Santerno",
+      "codice_istat": "999",
+      "regione": "Forlì-Cesena",
+      "lat": 44.433,
+      "lon": 11.867,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sinnai",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.301,
+      "lon": 9.209,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Solaro",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.617,
+      "lon": 9.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Calenzano",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.861,
+      "lon": 11.164,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Scarperia e San Piero",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.983,
+      "lon": 11.35,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Monsummano Terme",
+      "codice_istat": "999",
+      "regione": "Pistoia",
+      "lat": 43.871,
+      "lon": 10.813,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Donori",
+      "codice_istat": "999",
+      "regione": "Sud Sardegna",
+      "lat": 39.4,
+      "lon": 9.117,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rocca Priora",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.783,
+      "lon": 12.767,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Marigliano",
+      "codice_istat": "999",
+      "regione": "Napoli",
+      "lat": 40.929,
+      "lon": 14.453,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Varedo",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.6,
+      "lon": 9.183,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pezzaze",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.75,
+      "lon": 10.217,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rignano sull'Arno",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.717,
+      "lon": 11.45,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Decimomannu",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.315,
+      "lon": 8.973,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Paladina",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.733,
+      "lon": 9.617,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Serra San Bruno",
+      "codice_istat": "999",
+      "regione": "Vibo Valentia",
+      "lat": 38.573,
+      "lon": 16.326,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Villacidro",
+      "codice_istat": "999",
+      "regione": "Sud Sardegna",
+      "lat": 39.456,
+      "lon": 8.744,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Laterza",
+      "codice_istat": "999",
+      "regione": "Matera",
+      "lat": 40.617,
+      "lon": 16.8,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cortona",
+      "codice_istat": "999",
+      "regione": "Arezzo",
+      "lat": 43.276,
+      "lon": 11.986,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Gussago",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.583,
+      "lon": 10.167,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Busca",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.517,
+      "lon": 7.467,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Savigliano",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.65,
+      "lon": 7.66,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rondissone",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.2,
+      "lon": 7.95,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Selargius",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.256,
+      "lon": 9.163,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Gaggiano",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.4,
+      "lon": 9.033,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Maracalagonis",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.233,
+      "lon": 9.267,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Morgano",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.717,
+      "lon": 12.1,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Torrazza Piemonte",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.233,
+      "lon": 7.983,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Quattordio",
+      "codice_istat": "999",
+      "regione": "Asti",
+      "lat": 44.883,
+      "lon": 8.383,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ozieri",
+      "codice_istat": "999",
+      "regione": "Sassari",
+      "lat": 40.587,
+      "lon": 9.005,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pietraporzio",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.317,
+      "lon": 7.0,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rovolon",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.35,
+      "lon": 11.667,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sora",
+      "codice_istat": "999",
+      "regione": "Frosinone",
+      "lat": 41.719,
+      "lon": 13.612,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castel Guelfo di Bologna",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.433,
+      "lon": 11.683,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Greve in Chianti",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.583,
+      "lon": 11.317,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pescia",
+      "codice_istat": "999",
+      "regione": "Pistoia",
+      "lat": 43.903,
+      "lon": 10.69,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Opera",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.383,
+      "lon": 9.217,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ambivere",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.767,
+      "lon": 9.567,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Malalbergo",
+      "codice_istat": "999",
+      "regione": "Ferrara",
+      "lat": 44.717,
+      "lon": 11.533,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ponteranica",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.733,
+      "lon": 9.667,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Correzzola",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.3,
+      "lon": 12.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Brusaporto",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.65,
+      "lon": 9.767,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castelmagno",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.317,
+      "lon": 7.183,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Acqui Terme",
+      "codice_istat": "999",
+      "regione": "Alessandria",
+      "lat": 44.676,
+      "lon": 8.469,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Collebeato",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.6,
+      "lon": 10.217,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Capoterra",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.177,
+      "lon": 8.971,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Nizza Monferrato",
+      "codice_istat": "999",
+      "regione": "Asti",
+      "lat": 44.783,
+      "lon": 8.35,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rescaldina",
+      "codice_istat": "999",
+      "regione": "Como",
+      "lat": 45.6,
+      "lon": 8.95,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Palestrina",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.838,
+      "lon": 12.891,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Alpignano",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.099,
+      "lon": 7.527,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Osio Sotto",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.683,
+      "lon": 9.683,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Siniscola",
+      "codice_istat": "999",
+      "regione": "Nuoro",
+      "lat": 40.574,
+      "lon": 9.691,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Verolengo",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.183,
+      "lon": 7.967,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Terralba",
+      "codice_istat": "999",
+      "regione": "Oristano",
+      "lat": 39.72,
+      "lon": 8.636,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Marcheno",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.7,
+      "lon": 10.217,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Sperate",
+      "codice_istat": "999",
+      "regione": "Sud Sardegna",
+      "lat": 39.35,
+      "lon": 9.0,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Capranica Prenestina",
+      "codice_istat": "999",
+      "regione": "Frosinone",
+      "lat": 41.883,
+      "lon": 13.067,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cavernago",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.667,
+      "lon": 9.8,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Concorezzo",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.583,
+      "lon": 9.333,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Amelia",
+      "codice_istat": "999",
+      "regione": "Terni",
+      "lat": 42.558,
+      "lon": 12.418,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castel Gandolfo",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.75,
+      "lon": 12.65,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Robassomero",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.2,
+      "lon": 7.567,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Zagarolo",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.835,
+      "lon": 12.833,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Verbania",
+      "codice_istat": "999",
+      "regione": "Verbano-Cusio-Ossola",
+      "lat": 45.922,
+      "lon": 8.552,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Palo del Colle",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 41.05,
+      "lon": 16.683,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bellusco",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.65,
+      "lon": 9.417,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Conversano",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 40.976,
+      "lon": 17.118,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Miane",
+      "codice_istat": "999",
+      "regione": "Belluno",
+      "lat": 45.917,
+      "lon": 12.05,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Godenzo",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.933,
+      "lon": 11.617,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Grumo Appula",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 41.017,
+      "lon": 16.7,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Sebastiano da Po",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.167,
+      "lon": 7.933,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pieve di Cento",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.717,
+      "lon": 11.3,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Massa Marittima",
+      "codice_istat": "999",
+      "regione": "Grosseto",
+      "lat": 43.048,
+      "lon": 10.892,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bonate Sopra",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.717,
+      "lon": 9.55,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ginosa",
+      "codice_istat": "999",
+      "regione": "Matera",
+      "lat": 40.583,
+      "lon": 16.75,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Caponago",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.6,
+      "lon": 9.383,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Villa Carcina",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.65,
+      "lon": 10.217,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Acquaviva delle Fonti",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 40.883,
+      "lon": 16.85,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Quarto",
+      "codice_istat": "999",
+      "regione": "Giugliano in Campania",
+      "lat": 40.867,
+      "lon": 14.133,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Trofarello",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 44.983,
+      "lon": 7.733,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Fiesole",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.806,
+      "lon": 11.292,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Isnello",
+      "codice_istat": "999",
+      "regione": "Caltanissetta",
+      "lat": 37.95,
+      "lon": 14.0,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pieve di Soligo",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.883,
+      "lon": 12.183,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Giovinazzo",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 41.183,
+      "lon": 16.667,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bra",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.698,
+      "lon": 7.855,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Breno",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.95,
+      "lon": 10.3,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Frugarolo",
+      "codice_istat": "999",
+      "regione": "Alessandria",
+      "lat": 44.817,
+      "lon": 8.683,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Carignano",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 44.9,
+      "lon": 7.683,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castagnole delle Lanze",
+      "codice_istat": "999",
+      "regione": "Asti",
+      "lat": 44.767,
+      "lon": 8.233,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Fossano",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.553,
+      "lon": 7.723,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bagnatica",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.633,
+      "lon": 9.783,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Corigliano-Rossano",
+      "codice_istat": "999",
+      "regione": "Cosenza",
+      "lat": 39.599,
+      "lon": 16.524,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Nuraminis",
+      "codice_istat": "999",
+      "regione": "Sud Sardegna",
+      "lat": 39.433,
+      "lon": 9.0,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Teolo",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.367,
+      "lon": 11.7,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Tavernole sul Mella",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.733,
+      "lon": 10.25,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Caluso",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.3,
+      "lon": 7.883,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Gorle",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.683,
+      "lon": 9.733,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Villanova Mondovì",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.333,
+      "lon": 7.767,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Boves",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.333,
+      "lon": 7.55,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Vittorio Veneto",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.98,
+      "lon": 12.299,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pradleves",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.35,
+      "lon": 7.217,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Santa Flavia",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 38.083,
+      "lon": 13.533,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castiglione delle Stiviere",
+      "codice_istat": "999",
+      "regione": "Mantova",
+      "lat": 45.386,
+      "lon": 10.491,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Edolo",
+      "codice_istat": "999",
+      "regione": "Sondrio",
+      "lat": 46.183,
+      "lon": 10.333,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Giovanni in Persiceto",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.638,
+      "lon": 11.186,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Mombercelli",
+      "codice_istat": "999",
+      "regione": "Asti",
+      "lat": 44.767,
+      "lon": 8.267,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Felizzano",
+      "codice_istat": "999",
+      "regione": "Alessandria",
+      "lat": 44.9,
+      "lon": 8.433,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pino Torinese",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.05,
+      "lon": 7.817,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pontedera",
+      "codice_istat": "999",
+      "regione": "Pisa",
+      "lat": 43.662,
+      "lon": 10.634,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bressanone",
+      "codice_istat": "999",
+      "regione": "Bolzano",
+      "lat": 46.716,
+      "lon": 11.656,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Carvico",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.767,
+      "lon": 9.533,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Carnate",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.667,
+      "lon": 9.383,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Collesano",
+      "codice_istat": "999",
+      "regione": "Caltanissetta",
+      "lat": 37.917,
+      "lon": 13.933,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sant Angelo in Vado",
+      "codice_istat": "999",
+      "regione": "Pesaro e Urbino",
+      "lat": 43.671,
+      "lon": 12.407,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Santarcangelo di Romagna",
+      "codice_istat": "999",
+      "regione": "Rimini",
+      "lat": 44.065,
+      "lon": 12.448,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Paola",
+      "codice_istat": "999",
+      "regione": "Cosenza",
+      "lat": 39.36,
+      "lon": 16.045,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Maglie",
+      "codice_istat": "999",
+      "regione": "Lecce",
+      "lat": 40.123,
+      "lon": 18.299,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Vo'",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.317,
+      "lon": 11.667,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Lacchiarella",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.333,
+      "lon": 9.15,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Courmayeur",
+      "codice_istat": "999",
+      "regione": "Aosta",
+      "lat": 45.797,
+      "lon": 6.969,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Camparada",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.667,
+      "lon": 9.35,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cirie",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.235,
+      "lon": 7.601,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Dicomano",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.883,
+      "lon": 11.517,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sesto Calende",
+      "codice_istat": "999",
+      "regione": "Varese",
+      "lat": 45.726,
+      "lon": 8.634,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Robecco sul Naviglio",
+      "codice_istat": "999",
+      "regione": "Novara",
+      "lat": 45.433,
+      "lon": 8.883,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Montecompatri",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.8,
+      "lon": 12.733,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bubbiano",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.35,
+      "lon": 8.983,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Agna",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.217,
+      "lon": 11.983,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Giorgio Canavese",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.333,
+      "lon": 7.8,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Signa",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.777,
+      "lon": 11.102,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bruino",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 44.967,
+      "lon": 7.483,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Giarre",
+      "codice_istat": "999",
+      "regione": "Catania",
+      "lat": 37.728,
+      "lon": 15.179,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Montecatini Terme",
+      "codice_istat": "999",
+      "regione": "Pistoia",
+      "lat": 43.883,
+      "lon": 10.773,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Iseo",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.657,
+      "lon": 10.044,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pessano con Bornago",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.55,
+      "lon": 9.367,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Tropea",
+      "codice_istat": "999",
+      "regione": "Vibo Valentia",
+      "lat": 38.677,
+      "lon": 15.896,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Muravera",
+      "codice_istat": "999",
+      "regione": "Sud Sardegna",
+      "lat": 39.421,
+      "lon": 9.574,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Argentera",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.383,
+      "lon": 6.95,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Budrio",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.538,
+      "lon": 11.531,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Caccamo",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 37.933,
+      "lon": 13.667,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Iglesias",
+      "codice_istat": "999",
+      "regione": "Sud Sardegna",
+      "lat": 39.311,
+      "lon": 8.534,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rivalta di Torino",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 44.961,
+      "lon": 7.517,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Agliè",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.367,
+      "lon": 7.767,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Manduria",
+      "codice_istat": "999",
+      "regione": "Taranto",
+      "lat": 40.398,
+      "lon": 17.635,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bosco Marengo",
+      "codice_istat": "999",
+      "regione": "Alessandria",
+      "lat": 44.817,
+      "lon": 8.667,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bellegra",
+      "codice_istat": "999",
+      "regione": "Frosinone",
+      "lat": 41.9,
+      "lon": 13.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Dolianova",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.367,
+      "lon": 9.183,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Mesagne",
+      "codice_istat": "999",
+      "regione": "Brindisi",
+      "lat": 40.563,
+      "lon": 17.802,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Monte Porzio Catone",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.817,
+      "lon": 12.717,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Terlizzi",
+      "codice_istat": "999",
+      "regione": "Altamura",
+      "lat": 41.133,
+      "lon": 16.533,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Filago",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.683,
+      "lon": 9.583,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Nicosia",
+      "codice_istat": "999",
+      "regione": "Enna",
+      "lat": 37.747,
+      "lon": 14.396,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castel Maggiore",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.567,
+      "lon": 11.383,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Serrara Fontana",
+      "codice_istat": "999",
+      "regione": "Giugliano in Campania",
+      "lat": 40.717,
+      "lon": 13.883,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cassina de' Pecchi",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.5,
+      "lon": 9.367,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pineto",
+      "codice_istat": "999",
+      "regione": "Teramo",
+      "lat": 42.61,
+      "lon": 14.069,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Grottaferrata",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.783,
+      "lon": 12.667,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cittadella",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.645,
+      "lon": 11.787,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Corbetta",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.467,
+      "lon": 8.917,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Assemini",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.278,
+      "lon": 9.0,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Gallipoli",
+      "codice_istat": "999",
+      "regione": "Lecce",
+      "lat": 40.056,
+      "lon": 17.989,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Villaspeciosa",
+      "codice_istat": "999",
+      "regione": "Sud Sardegna",
+      "lat": 39.35,
+      "lon": 8.917,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cison di Valmarino",
+      "codice_istat": "999",
+      "regione": "Belluno",
+      "lat": 45.967,
+      "lon": 12.15,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Qualiano",
+      "codice_istat": "999",
+      "regione": "Napoli",
+      "lat": 40.918,
+      "lon": 14.149,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cefalù",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 38.033,
+      "lon": 14.017,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sclafani Bagni",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 37.883,
+      "lon": 13.867,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Este",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.228,
+      "lon": 11.657,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cuggiono",
+      "codice_istat": "999",
+      "regione": "Novara",
+      "lat": 45.5,
+      "lon": 8.817,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Centallo",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.5,
+      "lon": 7.583,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Grassobbio",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.65,
+      "lon": 9.75,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Orio al Serio",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.667,
+      "lon": 9.717,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Binasco",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.333,
+      "lon": 9.1,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Calusco d'Adda",
+      "codice_istat": "999",
+      "regione": "Lecco",
+      "lat": 45.783,
+      "lon": 9.467,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Spirano",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.633,
+      "lon": 9.733,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Lariano",
+      "codice_istat": "999",
+      "regione": "Latina",
+      "lat": 41.717,
+      "lon": 12.833,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sant Antimo",
+      "codice_istat": "999",
+      "regione": "Napoli",
+      "lat": 40.943,
+      "lon": 14.234,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rivarolo Canavese",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.333,
+      "lon": 7.717,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cesano Boscone",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.433,
+      "lon": 9.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Mirandola",
+      "codice_istat": "999",
+      "regione": "Modena",
+      "lat": 44.886,
+      "lon": 11.066,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Demonte",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.317,
+      "lon": 7.283,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Poggibonsi",
+      "codice_istat": "999",
+      "regione": "Siena",
+      "lat": 43.47,
+      "lon": 11.148,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cinto Euganeo",
+      "codice_istat": "999",
+      "regione": "Rovigo",
+      "lat": 45.25,
+      "lon": 11.65,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Baone",
+      "codice_istat": "999",
+      "regione": "Rovigo",
+      "lat": 45.217,
+      "lon": 11.683,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ornago",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.633,
+      "lon": 9.467,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Busto Garolfo",
+      "codice_istat": "999",
+      "regione": "Varese",
+      "lat": 45.55,
+      "lon": 8.883,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Milazzo",
+      "codice_istat": "999",
+      "regione": "Messina",
+      "lat": 38.223,
+      "lon": 15.24,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castiglione Torinese",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.117,
+      "lon": 7.8,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cesate",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.6,
+      "lon": 9.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Inveruno",
+      "codice_istat": "999",
+      "regione": "Novara",
+      "lat": 45.517,
+      "lon": 8.867,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castel di Sangro",
+      "codice_istat": "999",
+      "regione": "L'Aquila",
+      "lat": 41.784,
+      "lon": 14.102,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Guastalla",
+      "codice_istat": "999",
+      "regione": "Reggio Emilia",
+      "lat": 44.919,
+      "lon": 10.659,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Borgomanero",
+      "codice_istat": "999",
+      "regione": "Novara",
+      "lat": 45.696,
+      "lon": 8.465,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rosate",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.367,
+      "lon": 9.033,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Carate Brianza",
+      "codice_istat": "999",
+      "regione": "Monza e della Brianza",
+      "lat": 45.683,
+      "lon": 9.232,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Tortona",
+      "codice_istat": "999",
+      "regione": "Alessandria",
+      "lat": 44.896,
+      "lon": 8.866,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Lozzo Atestino",
+      "codice_istat": "999",
+      "regione": "Rovigo",
+      "lat": 45.283,
+      "lon": 11.633,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Arzignano",
+      "codice_istat": "999",
+      "regione": "Vicenza",
+      "lat": 45.514,
+      "lon": 11.336,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Minervino Murge",
+      "codice_istat": "999",
+      "regione": "Barletta-Andria-Trani",
+      "lat": 41.083,
+      "lon": 16.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bitritto",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 41.017,
+      "lon": 16.833,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Lodi Vecchio",
+      "codice_istat": "999",
+      "regione": "Lodi",
+      "lat": 45.3,
+      "lon": 9.421,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Colle di Val d'Elsa",
+      "codice_istat": "999",
+      "regione": "Siena",
+      "lat": 43.421,
+      "lon": 11.122,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Solza",
+      "codice_istat": "999",
+      "regione": "Lecco",
+      "lat": 45.783,
+      "lon": 9.45,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Godrano",
+      "codice_istat": "999",
+      "regione": "Bagheria",
+      "lat": 37.917,
+      "lon": 13.417,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Almè",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.75,
+      "lon": 9.617,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sestu",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.3,
+      "lon": 9.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sale Marasino",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.683,
+      "lon": 10.1,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Rutigliano",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 40.983,
+      "lon": 17.017,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Inzago",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.533,
+      "lon": 9.467,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Follonica",
+      "codice_istat": "999",
+      "regione": "Grosseto",
+      "lat": 42.924,
+      "lon": 10.76,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Capurso",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 41.05,
+      "lon": 16.917,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Porto Tolle",
+      "codice_istat": "999",
+      "regione": "Rovigo",
+      "lat": 44.951,
+      "lon": 12.326,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Villorba",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.717,
+      "lon": 12.233,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Garbagnate Milanese",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.583,
+      "lon": 9.067,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Monfalcone",
+      "codice_istat": "999",
+      "regione": "Gorizia",
+      "lat": 45.802,
+      "lon": 13.532,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Giovanni a Teduccio",
+      "codice_istat": "999",
+      "regione": "Napoli",
+      "lat": 40.833,
+      "lon": 14.3,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Maserà di Padova",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.317,
+      "lon": 11.867,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Vernante",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.25,
+      "lon": 7.533,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Montagnana",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.232,
+      "lon": 11.464,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ovada",
+      "codice_istat": "999",
+      "regione": "Alessandria",
+      "lat": 44.64,
+      "lon": 8.647,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Costigliole d'Asti",
+      "codice_istat": "999",
+      "regione": "Asti",
+      "lat": 44.783,
+      "lon": 8.167,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Borgo San Dalmazzo",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.333,
+      "lon": 7.483,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ruvo di Puglia",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 41.117,
+      "lon": 16.488,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Casalserugo",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.3,
+      "lon": 11.9,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Baldissero Torinese",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.033,
+      "lon": 7.8,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Burago di Molgora",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.633,
+      "lon": 9.383,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cavallermaggiore",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 44.717,
+      "lon": 7.683,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Olevano Romano",
+      "codice_istat": "999",
+      "regione": "Frosinone",
+      "lat": 41.867,
+      "lon": 13.033,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ostia",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.733,
+      "lon": 12.233,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Arona",
+      "codice_istat": "999",
+      "regione": "Novara",
+      "lat": 45.758,
+      "lon": 8.561,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Capri",
+      "codice_istat": "999",
+      "regione": "Torre del Greco",
+      "lat": 40.55,
+      "lon": 14.217,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Montalto di Castro",
+      "codice_istat": "999",
+      "regione": "Viterbo",
+      "lat": 42.353,
+      "lon": 11.607,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Valenzano",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 41.033,
+      "lon": 16.9,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Carbonera",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.7,
+      "lon": 12.283,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Adelfia",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 41.0,
+      "lon": 16.867,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Marradi",
+      "codice_istat": "999",
+      "regione": "Forlì-Cesena",
+      "lat": 44.067,
+      "lon": 11.617,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Locate di Triulzi",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.367,
+      "lon": 9.217,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Frascati",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.808,
+      "lon": 12.681,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ponte San Nicolò",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.35,
+      "lon": 11.933,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Suisio",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.7,
+      "lon": 9.533,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Giorgio su Legnano",
+      "codice_istat": "999",
+      "regione": "Varese",
+      "lat": 45.567,
+      "lon": 8.917,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Vito Romano",
+      "codice_istat": "999",
+      "regione": "Frosinone",
+      "lat": 41.883,
+      "lon": 13.017,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Bonifacio",
+      "codice_istat": "999",
+      "regione": "Verona",
+      "lat": 45.394,
+      "lon": 11.27,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cattolica",
+      "codice_istat": "999",
+      "regione": "Rimini",
+      "lat": 43.962,
+      "lon": 12.739,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Usmate Velate",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.65,
+      "lon": 9.367,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Noci",
+      "codice_istat": "999",
+      "regione": "Bari",
+      "lat": 40.794,
+      "lon": 17.13,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Polverara",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.317,
+      "lon": 11.983,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Pollina",
+      "codice_istat": "999",
+      "regione": "Enna",
+      "lat": 38.0,
+      "lon": 14.133,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bovegno",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.767,
+      "lon": 10.3,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Front",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.25,
+      "lon": 7.65,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Aicurzio",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.683,
+      "lon": 9.4,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Valdobbiadene",
+      "codice_istat": "999",
+      "regione": "Belluno",
+      "lat": 45.9,
+      "lon": 11.983,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Avigliana",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.077,
+      "lon": 7.391,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Anacapri",
+      "codice_istat": "999",
+      "regione": "Torre del Greco",
+      "lat": 40.567,
+      "lon": 14.217,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castelbuono",
+      "codice_istat": "999",
+      "regione": "Enna",
+      "lat": 37.933,
+      "lon": 14.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Casavatore",
+      "codice_istat": "999",
+      "regione": "Napoli",
+      "lat": 40.9,
+      "lon": 14.267,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cabras",
+      "codice_istat": "999",
+      "regione": "Oristano",
+      "lat": 39.933,
+      "lon": 8.534,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Carpineto Romano",
+      "codice_istat": "999",
+      "regione": "Latina",
+      "lat": 41.583,
+      "lon": 13.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Marzano Oliveto",
+      "codice_istat": "999",
+      "regione": "Asti",
+      "lat": 44.75,
+      "lon": 8.267,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sant'Angelo di Piove di Sacco",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.333,
+      "lon": 12.033,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Capo di Ponte",
+      "codice_istat": "999",
+      "regione": "Sondrio",
+      "lat": 46.033,
+      "lon": 10.333,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Livorno Ferraris",
+      "codice_istat": "999",
+      "regione": "Biella",
+      "lat": 45.3,
+      "lon": 8.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Vernate",
+      "codice_istat": "999",
+      "regione": "Pavia",
+      "lat": 45.3,
+      "lon": 9.067,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Piove di Sacco",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.296,
+      "lon": 12.035,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Orvieto",
+      "codice_istat": "999",
+      "regione": "Terni",
+      "lat": 42.719,
+      "lon": 12.111,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Adria",
+      "codice_istat": "999",
+      "regione": "Rovigo",
+      "lat": 45.056,
+      "lon": 12.054,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Giulianova",
+      "codice_istat": "999",
+      "regione": "Teramo",
+      "lat": 42.755,
+      "lon": 13.956,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Castelnuovo di Garfagnana",
+      "codice_istat": "999",
+      "regione": "Lucca",
+      "lat": 44.111,
+      "lon": 10.409,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Spinazzola",
+      "codice_istat": "999",
+      "regione": "Barletta-Andria-Trani",
+      "lat": 40.967,
+      "lon": 16.1,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Oderzo",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.779,
+      "lon": 12.494,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sant'Angelo d'Ischia",
+      "codice_istat": "999",
+      "regione": "Giugliano in Campania",
+      "lat": 40.7,
+      "lon": 13.883,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ariccia",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.717,
+      "lon": 12.667,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Beinasco",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.017,
+      "lon": 7.583,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Liscate",
+      "codice_istat": "999",
+      "regione": "Lodi",
+      "lat": 45.483,
+      "lon": 9.5,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Canelli",
+      "codice_istat": "999",
+      "regione": "Asti",
+      "lat": 44.717,
+      "lon": 8.283,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Gassino Torinese",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.133,
+      "lon": 7.833,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Melzo",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.498,
+      "lon": 9.421,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Due Carrare",
+      "codice_istat": "999",
+      "regione": "Padova",
+      "lat": 45.3,
+      "lon": 11.833,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Casciano in Val di Pesa",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.65,
+      "lon": 11.183,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Lainate",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.567,
+      "lon": 9.0,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Agrate Brianza",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.583,
+      "lon": 9.35,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Minerbio",
+      "codice_istat": "999",
+      "regione": "Bologna",
+      "lat": 44.617,
+      "lon": 11.483,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sulmona",
+      "codice_istat": "999",
+      "regione": "L'Aquila",
+      "lat": 42.05,
+      "lon": 13.927,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Lumezzane",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.65,
+      "lon": 10.253,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Isola d'Asti",
+      "codice_istat": "999",
+      "regione": "Asti",
+      "lat": 44.8,
+      "lon": 8.183,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Mapello",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.733,
+      "lon": 9.583,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Figline e Incisa Valdarno",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.633,
+      "lon": 11.467,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cave",
+      "codice_istat": "999",
+      "regione": "Latina",
+      "lat": 41.817,
+      "lon": 12.933,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Carugate",
+      "codice_istat": "999",
+      "regione": "Milano",
+      "lat": 45.542,
+      "lon": 9.336,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Dalmine",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.651,
+      "lon": 9.609,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Solero",
+      "codice_istat": "999",
+      "regione": "Alessandria",
+      "lat": 44.933,
+      "lon": 8.517,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Poggiorsini",
+      "codice_istat": "999",
+      "regione": "Altamura",
+      "lat": 40.917,
+      "lon": 16.267,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Osio Sopra",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.7,
+      "lon": 9.667,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ortona",
+      "codice_istat": "999",
+      "regione": "Chieti",
+      "lat": 42.352,
+      "lon": 14.403,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Monserrato",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.267,
+      "lon": 9.15,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Refrontolo",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.9,
+      "lon": 12.2,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Tortoli",
+      "codice_istat": "999",
+      "regione": "Nuoro",
+      "lat": 39.926,
+      "lon": 9.661,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Moriago della Battaglia",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.883,
+      "lon": 12.15,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Domodossola",
+      "codice_istat": "999",
+      "regione": "Verbano-Cusio-Ossola",
+      "lat": 46.113,
+      "lon": 8.293,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Samatzai",
+      "codice_istat": "999",
+      "regione": "Sud Sardegna",
+      "lat": 39.417,
+      "lon": 9.0,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Cesareo",
+      "codice_istat": "999",
+      "regione": "Roma",
+      "lat": 41.817,
+      "lon": 12.817,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Belmonte Mezzagno",
+      "codice_istat": "999",
+      "regione": "Palermo",
+      "lat": 38.05,
+      "lon": 13.383,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sambuco",
+      "codice_istat": "999",
+      "regione": "Cuneo",
+      "lat": 44.333,
+      "lon": 6.983,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Galliera",
+      "codice_istat": "999",
+      "regione": "Ferrara",
+      "lat": 44.75,
+      "lon": 11.417,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Agropoli",
+      "codice_istat": "999",
+      "regione": "Salerno",
+      "lat": 40.35,
+      "lon": 14.989,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Vaglia",
+      "codice_istat": "999",
+      "regione": "Firenze",
+      "lat": 43.917,
+      "lon": 11.283,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Binetto",
+      "codice_istat": "999",
+      "regione": "Altamura",
+      "lat": 41.0,
+      "lon": 16.683,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Marengo",
+      "codice_istat": "999",
+      "regione": "Alessandria",
+      "lat": 44.833,
+      "lon": 8.65,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Forio",
+      "codice_istat": "999",
+      "regione": "Giugliano in Campania",
+      "lat": 40.733,
+      "lon": 13.85,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Ponzano Veneto",
+      "codice_istat": "999",
+      "regione": "Treviso",
+      "lat": 45.7,
+      "lon": 12.2,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Assisi",
+      "codice_istat": "999",
+      "regione": "Perugia",
+      "lat": 43.071,
+      "lon": 12.62,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sant'Agata Bolognese",
+      "codice_istat": "999",
+      "regione": "Modena",
+      "lat": 44.667,
+      "lon": 11.133,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Langhirano",
+      "codice_istat": "999",
+      "regione": "Parma",
+      "lat": 44.622,
+      "lon": 10.266,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bernareggio",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.667,
+      "lon": 9.4,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Chatillon",
+      "codice_istat": "999",
+      "regione": "Aosta",
+      "lat": 45.747,
+      "lon": 7.618,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Bellinzago Lombardo",
+      "codice_istat": "999",
+      "regione": "Lodi",
+      "lat": 45.533,
+      "lon": 9.5,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Follina",
+      "codice_istat": "999",
+      "regione": "Belluno",
+      "lat": 45.95,
+      "lon": 12.117,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Santena",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 44.933,
+      "lon": 7.767,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Vimercate",
+      "codice_istat": "999",
+      "regione": "Monza e della Brianza",
+      "lat": 45.617,
+      "lon": 9.366,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sannicandro Garganico",
+      "codice_istat": "999",
+      "regione": "Foggia",
+      "lat": 41.834,
+      "lon": 15.567,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Riva del Garda",
+      "codice_istat": "999",
+      "regione": "Trento",
+      "lat": 45.886,
+      "lon": 10.841,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "San Mauro Torinese",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 45.1,
+      "lon": 7.767,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Sarroch",
+      "codice_istat": "999",
+      "regione": "Cagliari",
+      "lat": 39.067,
+      "lon": 9.017,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Racconigi",
+      "codice_istat": "999",
+      "regione": "Torino",
+      "lat": 44.767,
+      "lon": 7.683,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Marone",
+      "codice_istat": "999",
+      "regione": "Brescia",
+      "lat": 45.7,
+      "lon": 10.083,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Arcore",
+      "codice_istat": "999",
+      "regione": "Monza e Brianza",
+      "lat": 45.633,
+      "lon": 9.317,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Barberino di Mugello",
+      "codice_istat": "999",
+      "regione": "Prato",
+      "lat": 44.0,
+      "lon": 11.25,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Motta Visconti",
+      "codice_istat": "999",
+      "regione": "Pavia",
+      "lat": 45.317,
+      "lon": 8.967,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Monte di Procida",
+      "codice_istat": "999",
+      "regione": "Giugliano in Campania",
+      "lat": 40.783,
+      "lon": 14.05,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Gaeta",
+      "codice_istat": "999",
+      "regione": "Latina",
+      "lat": 41.213,
+      "lon": 13.572,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Cesenatico",
+      "codice_istat": "999",
+      "regione": "Forli-Cesena",
+      "lat": 44.198,
+      "lon": 12.396,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Scanzorosciate",
+      "codice_istat": "999",
+      "regione": "Bergamo",
+      "lat": 45.7,
+      "lon": 9.783,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Villasor",
+      "codice_istat": "999",
+      "regione": "Sud Sardegna",
+      "lat": 39.383,
+      "lon": 8.933,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
+    },
+    {
+      "nome": "Settala",
+      "codice_istat": "999",
+      "regione": "Lodi",
+      "lat": 45.45,
+      "lon": 9.5,
+      "popolazione": 0,
+      "cluster": "Auto_Extracted",
+      "country": "Italy"
     }
   ]
 }
