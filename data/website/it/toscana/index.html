@@ -33,6 +33,11 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   .chart-labels{display:flex;justify-content:space-between;margin-top:6px;font-size:9px;color:#4a5568}
   .chart-zero{position:absolute;bottom:50%;left:0;right:0;height:1px;background:rgba(255,255,255,.1)}
   .no-data{font-size:13px;color:#4a5568;text-align:center;padding:40px 0}
+
+  .faq-box{margin-top:32px;border-top:1px solid #e2e8f0;padding-top:24px}
+  .faq-item{margin-bottom:18px}
+  .faq-q{font-weight:700;font-size:15px;margin-bottom:6px}
+  .faq-a{font-size:14px;color:#4a5568;line-height:1.6}
 </style><link rel="alternate" hreflang="it" href="https://weatherarb.com/it/toscana/">
 <link rel="alternate" hreflang="x-default" href="https://weatherarb.com/it/toscana/">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
@@ -66,6 +71,38 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   }
 }
 </script>
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{
+      "@type": "Question",
+      "name": "Cos'è lo Z-Score climatico usato da WeatherArb?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "Lo Z-Score misura quante deviazioni standard la temperatura attuale di una città si allontana dalla media storica dello stesso mese. Un valore sopra +2σ indica un'anomalia di caldo statisticamente rara; sotto -2σ indica freddo anomalo."
+      }}
+    }},
+    {{
+      "@type": "Question",
+      "name": "Cosa sono HDD e CDD?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "HDD (Heating Degree Days) e CDD (Cooling Degree Days) sono indicatori standard EN ISO 15927 che misurano la domanda energetica per riscaldamento e raffrescamento, calcolati confrontando la temperatura giornaliera con una soglia di riferimento di 18°C."
+      }}
+    }},
+    {{
+      "@type": "Question",
+      "name": "Con quale frequenza si aggiornano i dati di Toscana?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "WeatherArb aggiorna i dati meteo per tutti i comuni di Toscana ogni ora, utilizzando fonti come MET Norway, NOAA NWS e WeatherAPI per le rilevazioni live."
+      }}
+    }}
+  ]
+}}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4D34P77" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
@@ -80,6 +117,22 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   <div class="stitle">Province — Nodi di rilevazione</div>
   <div class="grid"><a href="/it/arezzo/" class="nc"><span class="nn">Arezzo</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/firenze/" class="nc"><span class="nn">Firenze</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/grosseto/" class="nc"><span class="nn">Grosseto</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/livorno/" class="nc"><span class="nn">Livorno</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/lucca/" class="nc"><span class="nn">Lucca</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/massa-carrara/" class="nc"><span class="nn">Massa-Carrara</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/pisa/" class="nc"><span class="nn">Pisa</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/pistoia/" class="nc"><span class="nn">Pistoia</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/prato/" class="nc"><span class="nn">Prato</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/siena/" class="nc"><span class="nn">Siena</span><span class="ns">Provincia &middot; nodo dati</span></a></div>
   <div class="stitle">Comuni</div><div class="grid"><a href="/it/toscana/firenze/" class="nc nc-c"><span class="nn">Firenze</span><span class="ns">Firenze</span></a><a href="/it/toscana/prato/" class="nc nc-c"><span class="nn">Prato</span><span class="ns">Prato</span></a><a href="/it/toscana/livorno/" class="nc nc-c"><span class="nn">Livorno</span><span class="ns">Livorno</span></a><a href="/it/toscana/arezzo/" class="nc nc-c"><span class="nn">Arezzo</span><span class="ns">Arezzo</span></a><a href="/it/toscana/pisa/" class="nc nc-c"><span class="nn">Pisa</span><span class="ns">Pisa</span></a><a href="/it/toscana/pistoia/" class="nc nc-c"><span class="nn">Pistoia</span><span class="ns">Pistoia</span></a><a href="/it/toscana/lucca/" class="nc nc-c"><span class="nn">Lucca</span><span class="ns">Lucca</span></a><a href="/it/toscana/grosseto/" class="nc nc-c"><span class="nn">Grosseto</span><span class="ns">Grosseto</span></a><a href="/it/toscana/massa/" class="nc nc-c"><span class="nn">Massa</span><span class="ns">Massa-Carrara</span></a><a href="/it/toscana/carrara/" class="nc nc-c"><span class="nn">Carrara</span><span class="ns">Massa-Carrara</span></a><a href="/it/toscana/viareggio/" class="nc nc-c"><span class="nn">Viareggio</span><span class="ns">Lucca</span></a><a href="/it/toscana/siena/" class="nc nc-c"><span class="nn">Siena</span><span class="ns">Siena</span></a><a href="/it/toscana/scandicci/" class="nc nc-c"><span class="nn">Scandicci</span><span class="ns">Firenze</span></a><a href="/it/toscana/sesto-fiorentino/" class="nc nc-c"><span class="nn">Sesto Fiorentino</span><span class="ns">Firenze</span></a><a href="/it/toscana/empoli/" class="nc nc-c"><span class="nn">Empoli</span><span class="ns">Firenze</span></a><a href="/it/toscana/campi-bisenzio/" class="nc nc-c"><span class="nn">Campi Bisenzio</span><span class="ns">Firenze</span></a><a href="/it/toscana/cascina/" class="nc nc-c"><span class="nn">Cascina</span><span class="ns">Pisa</span></a><a href="/it/toscana/piombino/" class="nc nc-c"><span class="nn">Piombino</span><span class="ns">Livorno</span></a><a href="/it/toscana/pontedera/" class="nc nc-c"><span class="nn">Pontedera</span><span class="ns">Pisa</span></a><a href="/it/toscana/poggibonsi/" class="nc nc-c"><span class="nn">Poggibonsi</span><span class="ns">Siena</span></a><a href="/it/toscana/san-miniato/" class="nc nc-c"><span class="nn">San Miniato</span><span class="ns">Pisa</span></a><a href="/it/toscana/cecina/" class="nc nc-c"><span class="nn">Cecina</span><span class="ns">Livorno</span></a><a href="/it/toscana/bagno-a-ripoli/" class="nc nc-c"><span class="nn">Bagno a Ripoli</span><span class="ns">Firenze</span></a><a href="/it/toscana/cortona/" class="nc nc-c"><span class="nn">Cortona</span><span class="ns">Arezzo</span></a><a href="/it/toscana/colle-di-val-delsa/" class="nc nc-c"><span class="nn">Colle di Val d'Elsa</span><span class="ns">Siena</span></a><a href="/it/toscana/follonica/" class="nc nc-c"><span class="nn">Follonica</span><span class="ns">Grosseto</span></a><a href="/it/toscana/monsummano-terme/" class="nc nc-c"><span class="nn">Monsummano Terme</span><span class="ns">Pistoia</span></a><a href="/it/toscana/montecatini-terme/" class="nc nc-c"><span class="nn">Montecatini Terme</span><span class="ns">Pistoia</span></a><a href="/it/toscana/lastra-a-signa/" class="nc nc-c"><span class="nn">Lastra a Signa</span><span class="ns">Firenze</span></a><a href="/it/toscana/pontassieve/" class="nc nc-c"><span class="nn">Pontassieve</span><span class="ns">Firenze</span></a><a href="/it/toscana/pescia/" class="nc nc-c"><span class="nn">Pescia</span><span class="ns">Pistoia</span></a><a href="/it/toscana/signa/" class="nc nc-c"><span class="nn">Signa</span><span class="ns">Firenze</span></a><a href="/it/toscana/calenzano/" class="nc nc-c"><span class="nn">Calenzano</span><span class="ns">Firenze</span></a><a href="/it/toscana/fiesole/" class="nc nc-c"><span class="nn">Fiesole</span><span class="ns">Firenze</span></a><a href="/it/toscana/montepulciano/" class="nc nc-c"><span class="nn">Montepulciano</span><span class="ns">Siena</span></a><a href="/it/toscana/montelupo-fiorentino/" class="nc nc-c"><span class="nn">Montelupo Fiorentino</span><span class="ns">Firenze</span></a><a href="/it/toscana/massa-marittima/" class="nc nc-c"><span class="nn">Massa Marittima</span><span class="ns">Grosseto</span></a><a href="/it/toscana/castiglione-della-pescaia/" class="nc nc-c"><span class="nn">Castiglione della Pescaia</span><span class="ns">Grosseto</span></a><a href="/it/toscana/forte-dei-marmi/" class="nc nc-c"><span class="nn">Forte dei Marmi</span><span class="ns">Lucca</span></a><a href="/it/toscana/castelnuovo-di-garfagnana/" class="nc nc-c"><span class="nn">Castelnuovo di Garfagnana</span><span class="ns">Lucca</span></a><a href="/it/toscana/rufina/" class="nc nc-c"><span class="nn">Rufina</span><span class="ns">Firenze</span></a><a href="/it/toscana/pelago/" class="nc nc-c"><span class="nn">Pelago</span><span class="ns">Firenze</span></a><a href="/it/toscana/reggello/" class="nc nc-c"><span class="nn">Reggello</span><span class="ns">Firenze</span></a><a href="/it/toscana/figline-e-incisa-valdarno/" class="nc nc-c"><span class="nn">Figline e Incisa Valdarno</span><span class="ns">Firenze</span></a><a href="/it/toscana/rignano-sullarno/" class="nc nc-c"><span class="nn">Rignano sull'Arno</span><span class="ns">Firenze</span></a><a href="/it/toscana/greve-in-chianti/" class="nc nc-c"><span class="nn">Greve in Chianti</span><span class="ns">Firenze</span></a><a href="/it/toscana/barberino-tavarnelle/" class="nc nc-c"><span class="nn">Barberino Tavarnelle</span><span class="ns">Firenze</span></a><a href="/it/toscana/san-casciano-in-val-di-pesa/" class="nc nc-c"><span class="nn">San Casciano in Val di Pesa</span><span class="ns">Firenze</span></a><a href="/it/toscana/impruneta/" class="nc nc-c"><span class="nn">Impruneta</span><span class="ns">Firenze</span></a><a href="/it/toscana/vaglia/" class="nc nc-c"><span class="nn">Vaglia</span><span class="ns">Firenze</span></a><a href="/it/toscana/barberino-di-mugello/" class="nc nc-c"><span class="nn">Barberino di Mugello</span><span class="ns">Prato</span></a><a href="/it/toscana/scarperia-e-san-piero/" class="nc nc-c"><span class="nn">Scarperia e San Piero</span><span class="ns">Firenze</span></a><a href="/it/toscana/borgo-san-lorenzo/" class="nc nc-c"><span class="nn">Borgo San Lorenzo</span><span class="ns">Firenze</span></a><a href="/it/toscana/vicchio/" class="nc nc-c"><span class="nn">Vicchio</span><span class="ns">Firenze</span></a><a href="/it/toscana/dicomano/" class="nc nc-c"><span class="nn">Dicomano</span><span class="ns">Firenze</span></a><a href="/it/toscana/londa/" class="nc nc-c"><span class="nn">Londa</span><span class="ns">Firenze</span></a><a href="/it/toscana/san-godenzo/" class="nc nc-c"><span class="nn">San Godenzo</span><span class="ns">Firenze</span></a><a href="/it/toscana/marradi/" class="nc nc-c"><span class="nn">Marradi</span><span class="ns">Forlì-Cesena</span></a><a href="/it/toscana/palazzuolo-sul-senio/" class="nc nc-c"><span class="nn">Palazzuolo sul Senio</span><span class="ns">Bologna</span></a></div>
+
+  <div class="faq-box">
+    <div class="stitle">Domande Frequenti</div>
+    <div class="faq-item">
+      <div class="faq-q">Cos'è lo Z-Score climatico usato da WeatherArb?</div>
+      <div class="faq-a">Lo Z-Score misura quante deviazioni standard la temperatura attuale di una città si allontana dalla media storica dello stesso mese. Un valore sopra +2σ indica un'anomalia di caldo statisticamente rara; sotto -2σ indica freddo anomalo.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Cosa sono HDD e CDD?</div>
+      <div class="faq-a">HDD (Heating Degree Days) e CDD (Cooling Degree Days) sono indicatori standard EN ISO 15927 che misurano la domanda energetica per riscaldamento e raffrescamento, calcolati confrontando la temperatura giornaliera con una soglia di riferimento di 18°C.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Con quale frequenza si aggiornano i dati di Toscana?</div>
+      <div class="faq-a">WeatherArb aggiorna i dati meteo per tutti i comuni di Toscana ogni ora, utilizzando fonti come MET Norway, NOAA NWS e WeatherAPI per le rilevazioni live.</div>
+    </div>
+  </div>
 </div>
 <footer class="ftr">
   <a href="/">WeatherArb</a> &middot; <a href="/it/">Italia</a> &middot; <a href="/pricing/">API Pro</a>

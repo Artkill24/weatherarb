@@ -33,6 +33,11 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   .chart-labels{display:flex;justify-content:space-between;margin-top:6px;font-size:9px;color:#4a5568}
   .chart-zero{position:absolute;bottom:50%;left:0;right:0;height:1px;background:rgba(255,255,255,.1)}
   .no-data{font-size:13px;color:#4a5568;text-align:center;padding:40px 0}
+
+  .faq-box{margin-top:32px;border-top:1px solid #e2e8f0;padding-top:24px}
+  .faq-item{margin-bottom:18px}
+  .faq-q{font-weight:700;font-size:15px;margin-bottom:6px}
+  .faq-a{font-size:14px;color:#4a5568;line-height:1.6}
 </style><link rel="alternate" hreflang="it" href="https://weatherarb.com/it/sardegna/">
 <link rel="alternate" hreflang="x-default" href="https://weatherarb.com/it/sardegna/">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
@@ -66,6 +71,38 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   }
 }
 </script>
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{
+      "@type": "Question",
+      "name": "Cos'è lo Z-Score climatico usato da WeatherArb?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "Lo Z-Score misura quante deviazioni standard la temperatura attuale di una città si allontana dalla media storica dello stesso mese. Un valore sopra +2σ indica un'anomalia di caldo statisticamente rara; sotto -2σ indica freddo anomalo."
+      }}
+    }},
+    {{
+      "@type": "Question",
+      "name": "Cosa sono HDD e CDD?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "HDD (Heating Degree Days) e CDD (Cooling Degree Days) sono indicatori standard EN ISO 15927 che misurano la domanda energetica per riscaldamento e raffrescamento, calcolati confrontando la temperatura giornaliera con una soglia di riferimento di 18°C."
+      }}
+    }},
+    {{
+      "@type": "Question",
+      "name": "Con quale frequenza si aggiornano i dati di Sardegna?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "WeatherArb aggiorna i dati meteo per tutti i comuni di Sardegna ogni ora, utilizzando fonti come MET Norway, NOAA NWS e WeatherAPI per le rilevazioni live."
+      }}
+    }}
+  ]
+}}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4D34P77" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
@@ -80,6 +117,22 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   <div class="stitle">Province — Nodi di rilevazione</div>
   <div class="grid"><a href="/it/cagliari/" class="nc"><span class="nn">Cagliari</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/nuoro/" class="nc"><span class="nn">Nuoro</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/olbia/" class="nc"><span class="nn">Olbia</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/oristano/" class="nc"><span class="nn">Oristano</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/sassari/" class="nc"><span class="nn">Sassari</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/sud-sardegna/" class="nc"><span class="nn">Sud Sardegna</span><span class="ns">Provincia &middot; nodo dati</span></a></div>
   <div class="stitle">Comuni</div><div class="grid"><a href="/it/sardegna/cagliari/" class="nc nc-c"><span class="nn">Cagliari</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/sassari/" class="nc nc-c"><span class="nn">Sassari</span><span class="ns">Sassari</span></a><a href="/it/sardegna/quartu-sant-elena/" class="nc nc-c"><span class="nn">Quartu Sant Elena</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/olbia/" class="nc nc-c"><span class="nn">Olbia</span><span class="ns">Sassari</span></a><a href="/it/sardegna/alghero/" class="nc nc-c"><span class="nn">Alghero</span><span class="ns">Sassari</span></a><a href="/it/sardegna/nuoro/" class="nc nc-c"><span class="nn">Nuoro</span><span class="ns">Nuoro</span></a><a href="/it/sardegna/oristano/" class="nc nc-c"><span class="nn">Oristano</span><span class="ns">Oristano</span></a><a href="/it/sardegna/selargius/" class="nc nc-c"><span class="nn">Selargius</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/carbonia/" class="nc nc-c"><span class="nn">Carbonia</span><span class="ns">Sud Sardegna</span></a><a href="/it/sardegna/iglesias/" class="nc nc-c"><span class="nn">Iglesias</span><span class="ns">Sud Sardegna</span></a><a href="/it/sardegna/assemini/" class="nc nc-c"><span class="nn">Assemini</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/capoterra/" class="nc nc-c"><span class="nn">Capoterra</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/porto-torres/" class="nc nc-c"><span class="nn">Porto Torres</span><span class="ns">Sassari</span></a><a href="/it/sardegna/sinnai/" class="nc nc-c"><span class="nn">Sinnai</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/villacidro/" class="nc nc-c"><span class="nn">Villacidro</span><span class="ns">Sud Sardegna</span></a><a href="/it/sardegna/ozieri/" class="nc nc-c"><span class="nn">Ozieri</span><span class="ns">Sassari</span></a><a href="/it/sardegna/siniscola/" class="nc nc-c"><span class="nn">Siniscola</span><span class="ns">Nuoro</span></a><a href="/it/sardegna/tortoli/" class="nc nc-c"><span class="nn">Tortoli</span><span class="ns">Nuoro</span></a><a href="/it/sardegna/terralba/" class="nc nc-c"><span class="nn">Terralba</span><span class="ns">Oristano</span></a><a href="/it/sardegna/cabras/" class="nc nc-c"><span class="nn">Cabras</span><span class="ns">Oristano</span></a><a href="/it/sardegna/decimomannu/" class="nc nc-c"><span class="nn">Decimomannu</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/orosei/" class="nc nc-c"><span class="nn">Orosei</span><span class="ns">Nuoro</span></a><a href="/it/sardegna/muravera/" class="nc nc-c"><span class="nn">Muravera</span><span class="ns">Sud Sardegna</span></a><a href="/it/sardegna/elmas/" class="nc nc-c"><span class="nn">Elmas</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/monserrato/" class="nc nc-c"><span class="nn">Monserrato</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/settimo-san-pietro/" class="nc nc-c"><span class="nn">Settimo San Pietro</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/maracalagonis/" class="nc nc-c"><span class="nn">Maracalagonis</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/burcei/" class="nc nc-c"><span class="nn">Burcei</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/dolianova/" class="nc nc-c"><span class="nn">Dolianova</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/donori/" class="nc nc-c"><span class="nn">Donori</span><span class="ns">Sud Sardegna</span></a><a href="/it/sardegna/samatzai/" class="nc nc-c"><span class="nn">Samatzai</span><span class="ns">Sud Sardegna</span></a><a href="/it/sardegna/monastir/" class="nc nc-c"><span class="nn">Monastir</span><span class="ns">Sud Sardegna</span></a><a href="/it/sardegna/nuraminis/" class="nc nc-c"><span class="nn">Nuraminis</span><span class="ns">Sud Sardegna</span></a><a href="/it/sardegna/villasor/" class="nc nc-c"><span class="nn">Villasor</span><span class="ns">Sud Sardegna</span></a><a href="/it/sardegna/villaspeciosa/" class="nc nc-c"><span class="nn">Villaspeciosa</span><span class="ns">Sud Sardegna</span></a><a href="/it/sardegna/decimoputzu/" class="nc nc-c"><span class="nn">Decimoputzu</span><span class="ns">Sud Sardegna</span></a><a href="/it/sardegna/san-sperate/" class="nc nc-c"><span class="nn">San Sperate</span><span class="ns">Sud Sardegna</span></a><a href="/it/sardegna/sestu/" class="nc nc-c"><span class="nn">Sestu</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/uta/" class="nc nc-c"><span class="nn">Uta</span><span class="ns">Sud Sardegna</span></a><a href="/it/sardegna/sarroch/" class="nc nc-c"><span class="nn">Sarroch</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/villa-san-pietro/" class="nc nc-c"><span class="nn">Villa San Pietro</span><span class="ns">Cagliari</span></a><a href="/it/sardegna/pula/" class="nc nc-c"><span class="nn">Pula</span><span class="ns">Cagliari</span></a></div>
+
+  <div class="faq-box">
+    <div class="stitle">Domande Frequenti</div>
+    <div class="faq-item">
+      <div class="faq-q">Cos'è lo Z-Score climatico usato da WeatherArb?</div>
+      <div class="faq-a">Lo Z-Score misura quante deviazioni standard la temperatura attuale di una città si allontana dalla media storica dello stesso mese. Un valore sopra +2σ indica un'anomalia di caldo statisticamente rara; sotto -2σ indica freddo anomalo.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Cosa sono HDD e CDD?</div>
+      <div class="faq-a">HDD (Heating Degree Days) e CDD (Cooling Degree Days) sono indicatori standard EN ISO 15927 che misurano la domanda energetica per riscaldamento e raffrescamento, calcolati confrontando la temperatura giornaliera con una soglia di riferimento di 18°C.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Con quale frequenza si aggiornano i dati di Sardegna?</div>
+      <div class="faq-a">WeatherArb aggiorna i dati meteo per tutti i comuni di Sardegna ogni ora, utilizzando fonti come MET Norway, NOAA NWS e WeatherAPI per le rilevazioni live.</div>
+    </div>
+  </div>
 </div>
 <footer class="ftr">
   <a href="/">WeatherArb</a> &middot; <a href="/it/">Italia</a> &middot; <a href="/pricing/">API Pro</a>

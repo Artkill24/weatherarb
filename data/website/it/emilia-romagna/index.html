@@ -33,6 +33,11 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   .chart-labels{display:flex;justify-content:space-between;margin-top:6px;font-size:9px;color:#4a5568}
   .chart-zero{position:absolute;bottom:50%;left:0;right:0;height:1px;background:rgba(255,255,255,.1)}
   .no-data{font-size:13px;color:#4a5568;text-align:center;padding:40px 0}
+
+  .faq-box{margin-top:32px;border-top:1px solid #e2e8f0;padding-top:24px}
+  .faq-item{margin-bottom:18px}
+  .faq-q{font-weight:700;font-size:15px;margin-bottom:6px}
+  .faq-a{font-size:14px;color:#4a5568;line-height:1.6}
 </style><link rel="alternate" hreflang="it" href="https://weatherarb.com/it/emilia-romagna/">
 <link rel="alternate" hreflang="x-default" href="https://weatherarb.com/it/emilia-romagna/">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
@@ -66,6 +71,38 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   }
 }
 </script>
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{
+      "@type": "Question",
+      "name": "Cos'è lo Z-Score climatico usato da WeatherArb?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "Lo Z-Score misura quante deviazioni standard la temperatura attuale di una città si allontana dalla media storica dello stesso mese. Un valore sopra +2σ indica un'anomalia di caldo statisticamente rara; sotto -2σ indica freddo anomalo."
+      }}
+    }},
+    {{
+      "@type": "Question",
+      "name": "Cosa sono HDD e CDD?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "HDD (Heating Degree Days) e CDD (Cooling Degree Days) sono indicatori standard EN ISO 15927 che misurano la domanda energetica per riscaldamento e raffrescamento, calcolati confrontando la temperatura giornaliera con una soglia di riferimento di 18°C."
+      }}
+    }},
+    {{
+      "@type": "Question",
+      "name": "Con quale frequenza si aggiornano i dati di Emilia-Romagna?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "WeatherArb aggiorna i dati meteo per tutti i comuni di Emilia-Romagna ogni ora, utilizzando fonti come MET Norway, NOAA NWS e WeatherAPI per le rilevazioni live."
+      }}
+    }}
+  ]
+}}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4D34P77" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
@@ -80,6 +117,22 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   <div class="stitle">Province — Nodi di rilevazione</div>
   <div class="grid"><a href="/it/bologna/" class="nc"><span class="nn">Bologna</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/ferrara/" class="nc"><span class="nn">Ferrara</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/forli-cesena/" class="nc"><span class="nn">Forlì-Cesena</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/modena/" class="nc"><span class="nn">Modena</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/parma/" class="nc"><span class="nn">Parma</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/piacenza/" class="nc"><span class="nn">Piacenza</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/ravenna/" class="nc"><span class="nn">Ravenna</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/reggio-emilia/" class="nc"><span class="nn">Reggio Emilia</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/rimini/" class="nc"><span class="nn">Rimini</span><span class="ns">Provincia &middot; nodo dati</span></a></div>
   <div class="stitle">Comuni</div><div class="grid"><a href="/it/emilia-romagna/bologna/" class="nc nc-c"><span class="nn">Bologna</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/parma/" class="nc nc-c"><span class="nn">Parma</span><span class="ns">Parma</span></a><a href="/it/emilia-romagna/modena/" class="nc nc-c"><span class="nn">Modena</span><span class="ns">Modena</span></a><a href="/it/emilia-romagna/reggio-emilia/" class="nc nc-c"><span class="nn">Reggio Emilia</span><span class="ns">Reggio Emilia</span></a><a href="/it/emilia-romagna/ravenna/" class="nc nc-c"><span class="nn">Ravenna</span><span class="ns">Ravenna</span></a><a href="/it/emilia-romagna/rimini/" class="nc nc-c"><span class="nn">Rimini</span><span class="ns">Rimini</span></a><a href="/it/emilia-romagna/ferrara/" class="nc nc-c"><span class="nn">Ferrara</span><span class="ns">Ferrara</span></a><a href="/it/emilia-romagna/forli/" class="nc nc-c"><span class="nn">Forli</span><span class="ns">Forli-Cesena</span></a><a href="/it/emilia-romagna/piacenza/" class="nc nc-c"><span class="nn">Piacenza</span><span class="ns">Piacenza</span></a><a href="/it/emilia-romagna/cesena/" class="nc nc-c"><span class="nn">Cesena</span><span class="ns">Forli-Cesena</span></a><a href="/it/emilia-romagna/carpi/" class="nc nc-c"><span class="nn">Carpi</span><span class="ns">Modena</span></a><a href="/it/emilia-romagna/imola/" class="nc nc-c"><span class="nn">Imola</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/faenza/" class="nc nc-c"><span class="nn">Faenza</span><span class="ns">Ravenna</span></a><a href="/it/emilia-romagna/sassuolo/" class="nc nc-c"><span class="nn">Sassuolo</span><span class="ns">Modena</span></a><a href="/it/emilia-romagna/casalecchio-di-reno/" class="nc nc-c"><span class="nn">Casalecchio di Reno</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/riccione/" class="nc nc-c"><span class="nn">Riccione</span><span class="ns">Rimini</span></a><a href="/it/emilia-romagna/formigine/" class="nc nc-c"><span class="nn">Formigine</span><span class="ns">Modena</span></a><a href="/it/emilia-romagna/lugo/" class="nc nc-c"><span class="nn">Lugo</span><span class="ns">Ravenna</span></a><a href="/it/emilia-romagna/san-giovanni-in-persiceto/" class="nc nc-c"><span class="nn">San Giovanni in Persiceto</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/fidenza/" class="nc nc-c"><span class="nn">Fidenza</span><span class="ns">Parma</span></a><a href="/it/emilia-romagna/cesenatico/" class="nc nc-c"><span class="nn">Cesenatico</span><span class="ns">Forli-Cesena</span></a><a href="/it/emilia-romagna/vignola/" class="nc nc-c"><span class="nn">Vignola</span><span class="ns">Modena</span></a><a href="/it/emilia-romagna/correggio/" class="nc nc-c"><span class="nn">Correggio</span><span class="ns">Reggio Emilia</span></a><a href="/it/emilia-romagna/mirandola/" class="nc nc-c"><span class="nn">Mirandola</span><span class="ns">Modena</span></a><a href="/it/emilia-romagna/santarcangelo-di-romagna/" class="nc nc-c"><span class="nn">Santarcangelo di Romagna</span><span class="ns">Rimini</span></a><a href="/it/emilia-romagna/salsomaggiore-terme/" class="nc nc-c"><span class="nn">Salsomaggiore Terme</span><span class="ns">Parma</span></a><a href="/it/emilia-romagna/budrio/" class="nc nc-c"><span class="nn">Budrio</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/pavullo-nel-frignano/" class="nc nc-c"><span class="nn">Pavullo nel Frignano</span><span class="ns">Modena</span></a><a href="/it/emilia-romagna/cattolica/" class="nc nc-c"><span class="nn">Cattolica</span><span class="ns">Rimini</span></a><a href="/it/emilia-romagna/guastalla/" class="nc nc-c"><span class="nn">Guastalla</span><span class="ns">Reggio Emilia</span></a><a href="/it/emilia-romagna/sasso-marconi/" class="nc nc-c"><span class="nn">Sasso Marconi</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/calderara-di-reno/" class="nc nc-c"><span class="nn">Calderara di Reno</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/castel-san-giovanni/" class="nc nc-c"><span class="nn">Castel San Giovanni</span><span class="ns">Piacenza</span></a><a href="/it/emilia-romagna/russi/" class="nc nc-c"><span class="nn">Russi</span><span class="ns">Ravenna</span></a><a href="/it/emilia-romagna/langhirano/" class="nc nc-c"><span class="nn">Langhirano</span><span class="ns">Parma</span></a><a href="/it/emilia-romagna/castel-maggiore/" class="nc nc-c"><span class="nn">Castel Maggiore</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/argelato/" class="nc nc-c"><span class="nn">Argelato</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/bentivoglio/" class="nc nc-c"><span class="nn">Bentivoglio</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/san-pietro-in-casale/" class="nc nc-c"><span class="nn">San Pietro in Casale</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/galliera/" class="nc nc-c"><span class="nn">Galliera</span><span class="ns">Ferrara</span></a><a href="/it/emilia-romagna/pieve-di-cento/" class="nc nc-c"><span class="nn">Pieve di Cento</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/santagata-bolognese/" class="nc nc-c"><span class="nn">Sant'Agata Bolognese</span><span class="ns">Modena</span></a><a href="/it/emilia-romagna/crevalcore/" class="nc nc-c"><span class="nn">Crevalcore</span><span class="ns">Modena</span></a><a href="/it/emilia-romagna/santagata-sul-santerno/" class="nc nc-c"><span class="nn">Sant'Agata sul Santerno</span><span class="ns">Forlì-Cesena</span></a><a href="/it/emilia-romagna/castel-guelfo-di-bologna/" class="nc nc-c"><span class="nn">Castel Guelfo di Bologna</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/medicina/" class="nc nc-c"><span class="nn">Medicina</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/molinella/" class="nc nc-c"><span class="nn">Molinella</span><span class="ns">Ferrara</span></a><a href="/it/emilia-romagna/minerbio/" class="nc nc-c"><span class="nn">Minerbio</span><span class="ns">Bologna</span></a><a href="/it/emilia-romagna/malalbergo/" class="nc nc-c"><span class="nn">Malalbergo</span><span class="ns">Ferrara</span></a><a href="/it/emilia-romagna/baricella/" class="nc nc-c"><span class="nn">Baricella</span><span class="ns">Ferrara</span></a><a href="/it/emilia-romagna/granarolo-dellemilia/" class="nc nc-c"><span class="nn">Granarolo dell'Emilia</span><span class="ns">Bologna</span></a></div>
+
+  <div class="faq-box">
+    <div class="stitle">Domande Frequenti</div>
+    <div class="faq-item">
+      <div class="faq-q">Cos'è lo Z-Score climatico usato da WeatherArb?</div>
+      <div class="faq-a">Lo Z-Score misura quante deviazioni standard la temperatura attuale di una città si allontana dalla media storica dello stesso mese. Un valore sopra +2σ indica un'anomalia di caldo statisticamente rara; sotto -2σ indica freddo anomalo.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Cosa sono HDD e CDD?</div>
+      <div class="faq-a">HDD (Heating Degree Days) e CDD (Cooling Degree Days) sono indicatori standard EN ISO 15927 che misurano la domanda energetica per riscaldamento e raffrescamento, calcolati confrontando la temperatura giornaliera con una soglia di riferimento di 18°C.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Con quale frequenza si aggiornano i dati di Emilia-Romagna?</div>
+      <div class="faq-a">WeatherArb aggiorna i dati meteo per tutti i comuni di Emilia-Romagna ogni ora, utilizzando fonti come MET Norway, NOAA NWS e WeatherAPI per le rilevazioni live.</div>
+    </div>
+  </div>
 </div>
 <footer class="ftr">
   <a href="/">WeatherArb</a> &middot; <a href="/it/">Italia</a> &middot; <a href="/pricing/">API Pro</a>

@@ -49,6 +49,11 @@ h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;l
   .chart-labels{display:flex;justify-content:space-between;margin-top:6px;font-size:9px;color:#4a5568}
   .chart-zero{position:absolute;bottom:50%;left:0;right:0;height:1px;background:rgba(255,255,255,.1)}
   .no-data{font-size:13px;color:#4a5568;text-align:center;padding:40px 0}
+
+  .faq-box{margin-top:32px;border-top:1px solid #e2e8f0;padding-top:24px}
+  .faq-item{margin-bottom:18px}
+  .faq-q{font-weight:700;font-size:15px;margin-bottom:6px}
+  .faq-a{font-size:14px;color:#4a5568;line-height:1.6}
 </style>
 <script type="application/ld+json">
 {
@@ -79,6 +84,38 @@ h1{font-size:clamp(28px,5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;l
     }
   }
 }
+</script>
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{
+      "@type": "Question",
+      "name": "Cos'è lo Z-Score climatico usato da WeatherArb?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "Lo Z-Score misura quante deviazioni standard la temperatura attuale di una città si allontana dalla media storica dello stesso mese. Un valore sopra +2σ indica un'anomalia di caldo statisticamente rara; sotto -2σ indica freddo anomalo."
+      }}
+    }},
+    {{
+      "@type": "Question",
+      "name": "Cosa sono HDD e CDD?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "HDD (Heating Degree Days) e CDD (Cooling Degree Days) sono indicatori standard EN ISO 15927 che misurano la domanda energetica per riscaldamento e raffrescamento, calcolati confrontando la temperatura giornaliera con una soglia di riferimento di 18°C."
+      }}
+    }},
+    {{
+      "@type": "Question",
+      "name": "Con quale frequenza si aggiornano i dati di Valle d'Aosta?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "WeatherArb aggiorna i dati meteo per tutti i comuni di Valle d'Aosta ogni ora, utilizzando fonti come MET Norway, NOAA NWS e WeatherAPI per le rilevazioni live."
+      }}
+    }}
+  ]
+}}
 </script>
 </head>
 <body>

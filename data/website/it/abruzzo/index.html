@@ -33,6 +33,11 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   .chart-labels{display:flex;justify-content:space-between;margin-top:6px;font-size:9px;color:#4a5568}
   .chart-zero{position:absolute;bottom:50%;left:0;right:0;height:1px;background:rgba(255,255,255,.1)}
   .no-data{font-size:13px;color:#4a5568;text-align:center;padding:40px 0}
+
+  .faq-box{margin-top:32px;border-top:1px solid #e2e8f0;padding-top:24px}
+  .faq-item{margin-bottom:18px}
+  .faq-q{font-weight:700;font-size:15px;margin-bottom:6px}
+  .faq-a{font-size:14px;color:#4a5568;line-height:1.6}
 </style><link rel="alternate" hreflang="it" href="https://weatherarb.com/it/abruzzo/">
 <link rel="alternate" hreflang="x-default" href="https://weatherarb.com/it/abruzzo/">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
@@ -66,6 +71,38 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   }
 }
 </script>
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{
+      "@type": "Question",
+      "name": "Cos'è lo Z-Score climatico usato da WeatherArb?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "Lo Z-Score misura quante deviazioni standard la temperatura attuale di una città si allontana dalla media storica dello stesso mese. Un valore sopra +2σ indica un'anomalia di caldo statisticamente rara; sotto -2σ indica freddo anomalo."
+      }}
+    }},
+    {{
+      "@type": "Question",
+      "name": "Cosa sono HDD e CDD?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "HDD (Heating Degree Days) e CDD (Cooling Degree Days) sono indicatori standard EN ISO 15927 che misurano la domanda energetica per riscaldamento e raffrescamento, calcolati confrontando la temperatura giornaliera con una soglia di riferimento di 18°C."
+      }}
+    }},
+    {{
+      "@type": "Question",
+      "name": "Con quale frequenza si aggiornano i dati di Abruzzo?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "WeatherArb aggiorna i dati meteo per tutti i comuni di Abruzzo ogni ora, utilizzando fonti come MET Norway, NOAA NWS e WeatherAPI per le rilevazioni live."
+      }}
+    }}
+  ]
+}}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4D34P77" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
@@ -80,6 +117,22 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   <div class="stitle">Province — Nodi di rilevazione</div>
   <div class="grid"><a href="/it/chieti/" class="nc"><span class="nn">Chieti</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/laquila/" class="nc"><span class="nn">L'Aquila</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/lanciano/" class="nc"><span class="nn">Lanciano</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/pescara/" class="nc"><span class="nn">Pescara</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/teramo/" class="nc"><span class="nn">Teramo</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/vasto/" class="nc"><span class="nn">Vasto</span><span class="ns">Provincia &middot; nodo dati</span></a></div>
   <div class="stitle">Comuni</div><div class="grid"><a href="/it/abruzzo/pescara/" class="nc nc-c"><span class="nn">Pescara</span><span class="ns">Pescara</span></a><a href="/it/abruzzo/laquila/" class="nc nc-c"><span class="nn">L'Aquila</span><span class="ns">L'Aquila</span></a><a href="/it/abruzzo/teramo/" class="nc nc-c"><span class="nn">Teramo</span><span class="ns">Teramo</span></a><a href="/it/abruzzo/montesilvano/" class="nc nc-c"><span class="nn">Montesilvano</span><span class="ns">Pescara</span></a><a href="/it/abruzzo/chieti/" class="nc nc-c"><span class="nn">Chieti</span><span class="ns">Chieti</span></a><a href="/it/abruzzo/avezzano/" class="nc nc-c"><span class="nn">Avezzano</span><span class="ns">L'Aquila</span></a><a href="/it/abruzzo/vasto/" class="nc nc-c"><span class="nn">Vasto</span><span class="ns">Chieti</span></a><a href="/it/abruzzo/lanciano/" class="nc nc-c"><span class="nn">Lanciano</span><span class="ns">Chieti</span></a><a href="/it/abruzzo/sulmona/" class="nc nc-c"><span class="nn">Sulmona</span><span class="ns">L'Aquila</span></a><a href="/it/abruzzo/roseto-degli-abruzzi/" class="nc nc-c"><span class="nn">Roseto degli Abruzzi</span><span class="ns">Teramo</span></a><a href="/it/abruzzo/francavilla-al-mare/" class="nc nc-c"><span class="nn">Francavilla al Mare</span><span class="ns">Chieti</span></a><a href="/it/abruzzo/giulianova/" class="nc nc-c"><span class="nn">Giulianova</span><span class="ns">Teramo</span></a><a href="/it/abruzzo/ortona/" class="nc nc-c"><span class="nn">Ortona</span><span class="ns">Chieti</span></a><a href="/it/abruzzo/san-salvo/" class="nc nc-c"><span class="nn">San Salvo</span><span class="ns">Chieti</span></a><a href="/it/abruzzo/pineto/" class="nc nc-c"><span class="nn">Pineto</span><span class="ns">Teramo</span></a><a href="/it/abruzzo/atri/" class="nc nc-c"><span class="nn">Atri</span><span class="ns">Teramo</span></a><a href="/it/abruzzo/castel-di-sangro/" class="nc nc-c"><span class="nn">Castel di Sangro</span><span class="ns">L'Aquila</span></a></div>
+
+  <div class="faq-box">
+    <div class="stitle">Domande Frequenti</div>
+    <div class="faq-item">
+      <div class="faq-q">Cos'è lo Z-Score climatico usato da WeatherArb?</div>
+      <div class="faq-a">Lo Z-Score misura quante deviazioni standard la temperatura attuale di una città si allontana dalla media storica dello stesso mese. Un valore sopra +2σ indica un'anomalia di caldo statisticamente rara; sotto -2σ indica freddo anomalo.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Cosa sono HDD e CDD?</div>
+      <div class="faq-a">HDD (Heating Degree Days) e CDD (Cooling Degree Days) sono indicatori standard EN ISO 15927 che misurano la domanda energetica per riscaldamento e raffrescamento, calcolati confrontando la temperatura giornaliera con una soglia di riferimento di 18°C.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Con quale frequenza si aggiornano i dati di Abruzzo?</div>
+      <div class="faq-a">WeatherArb aggiorna i dati meteo per tutti i comuni di Abruzzo ogni ora, utilizzando fonti come MET Norway, NOAA NWS e WeatherAPI per le rilevazioni live.</div>
+    </div>
+  </div>
 </div>
 <footer class="ftr">
   <a href="/">WeatherArb</a> &middot; <a href="/it/">Italia</a> &middot; <a href="/pricing/">API Pro</a>

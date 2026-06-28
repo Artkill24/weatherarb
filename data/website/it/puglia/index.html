@@ -33,6 +33,11 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   .chart-labels{display:flex;justify-content:space-between;margin-top:6px;font-size:9px;color:#4a5568}
   .chart-zero{position:absolute;bottom:50%;left:0;right:0;height:1px;background:rgba(255,255,255,.1)}
   .no-data{font-size:13px;color:#4a5568;text-align:center;padding:40px 0}
+
+  .faq-box{margin-top:32px;border-top:1px solid #e2e8f0;padding-top:24px}
+  .faq-item{margin-bottom:18px}
+  .faq-q{font-weight:700;font-size:15px;margin-bottom:6px}
+  .faq-a{font-size:14px;color:#4a5568;line-height:1.6}
 </style><link rel="alternate" hreflang="it" href="https://weatherarb.com/it/puglia/">
 <link rel="alternate" hreflang="x-default" href="https://weatherarb.com/it/puglia/">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
@@ -66,6 +71,38 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   }
 }
 </script>
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{
+      "@type": "Question",
+      "name": "Cos'è lo Z-Score climatico usato da WeatherArb?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "Lo Z-Score misura quante deviazioni standard la temperatura attuale di una città si allontana dalla media storica dello stesso mese. Un valore sopra +2σ indica un'anomalia di caldo statisticamente rara; sotto -2σ indica freddo anomalo."
+      }}
+    }},
+    {{
+      "@type": "Question",
+      "name": "Cosa sono HDD e CDD?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "HDD (Heating Degree Days) e CDD (Cooling Degree Days) sono indicatori standard EN ISO 15927 che misurano la domanda energetica per riscaldamento e raffrescamento, calcolati confrontando la temperatura giornaliera con una soglia di riferimento di 18°C."
+      }}
+    }},
+    {{
+      "@type": "Question",
+      "name": "Con quale frequenza si aggiornano i dati di Puglia?",
+      "acceptedAnswer": {{
+        "@type": "Answer",
+        "text": "WeatherArb aggiorna i dati meteo per tutti i comuni di Puglia ogni ora, utilizzando fonti come MET Norway, NOAA NWS e WeatherAPI per le rilevazioni live."
+      }}
+    }}
+  ]
+}}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4D34P77" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
@@ -80,6 +117,22 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   <div class="stitle">Province — Nodi di rilevazione</div>
   <div class="grid"><a href="/it/altamura/" class="nc"><span class="nn">Altamura</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/bari/" class="nc"><span class="nn">Bari</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/barletta-andria-trani/" class="nc"><span class="nn">Barletta-Andria-Trani</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/brindisi/" class="nc"><span class="nn">Brindisi</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/foggia/" class="nc"><span class="nn">Foggia</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/lecce/" class="nc"><span class="nn">Lecce</span><span class="ns">Provincia &middot; nodo dati</span></a><a href="/it/taranto/" class="nc"><span class="nn">Taranto</span><span class="ns">Provincia &middot; nodo dati</span></a></div>
   <div class="stitle">Comuni</div><div class="grid"><a href="/it/puglia/bari/" class="nc nc-c"><span class="nn">Bari</span><span class="ns">Bari</span></a><a href="/it/puglia/taranto/" class="nc nc-c"><span class="nn">Taranto</span><span class="ns">Taranto</span></a><a href="/it/puglia/foggia/" class="nc nc-c"><span class="nn">Foggia</span><span class="ns">Foggia</span></a><a href="/it/puglia/andria/" class="nc nc-c"><span class="nn">Andria</span><span class="ns">Barletta-Andria</span></a><a href="/it/puglia/lecce/" class="nc nc-c"><span class="nn">Lecce</span><span class="ns">Lecce</span></a><a href="/it/puglia/barletta/" class="nc nc-c"><span class="nn">Barletta</span><span class="ns">Barletta-Andria</span></a><a href="/it/puglia/brindisi/" class="nc nc-c"><span class="nn">Brindisi</span><span class="ns">Brindisi</span></a><a href="/it/puglia/altamura/" class="nc nc-c"><span class="nn">Altamura</span><span class="ns">Bari</span></a><a href="/it/puglia/molfetta/" class="nc nc-c"><span class="nn">Molfetta</span><span class="ns">Bari</span></a><a href="/it/puglia/manfredonia/" class="nc nc-c"><span class="nn">Manfredonia</span><span class="ns">Foggia</span></a><a href="/it/puglia/cerignola/" class="nc nc-c"><span class="nn">Cerignola</span><span class="ns">Foggia</span></a><a href="/it/puglia/trani/" class="nc nc-c"><span class="nn">Trani</span><span class="ns">Barletta-Andria</span></a><a href="/it/puglia/bitonto/" class="nc nc-c"><span class="nn">Bitonto</span><span class="ns">Bari</span></a><a href="/it/puglia/san-severo/" class="nc nc-c"><span class="nn">San Severo</span><span class="ns">Foggia</span></a><a href="/it/puglia/martina-franca/" class="nc nc-c"><span class="nn">Martina Franca</span><span class="ns">Taranto</span></a><a href="/it/puglia/corato/" class="nc nc-c"><span class="nn">Corato</span><span class="ns">Bari</span></a><a href="/it/puglia/monopoli/" class="nc nc-c"><span class="nn">Monopoli</span><span class="ns">Bari</span></a><a href="/it/puglia/fasano/" class="nc nc-c"><span class="nn">Fasano</span><span class="ns">Brindisi</span></a><a href="/it/puglia/francavilla-fontana/" class="nc nc-c"><span class="nn">Francavilla Fontana</span><span class="ns">Brindisi</span></a><a href="/it/puglia/lucera/" class="nc nc-c"><span class="nn">Lucera</span><span class="ns">Foggia</span></a><a href="/it/puglia/grottaglie/" class="nc nc-c"><span class="nn">Grottaglie</span><span class="ns">Taranto</span></a><a href="/it/puglia/massafra/" class="nc nc-c"><span class="nn">Massafra</span><span class="ns">Taranto</span></a><a href="/it/puglia/manduria/" class="nc nc-c"><span class="nn">Manduria</span><span class="ns">Taranto</span></a><a href="/it/puglia/nardo/" class="nc nc-c"><span class="nn">Nardo</span><span class="ns">Lecce</span></a><a href="/it/puglia/ostuni/" class="nc nc-c"><span class="nn">Ostuni</span><span class="ns">Brindisi</span></a><a href="/it/puglia/mesagne/" class="nc nc-c"><span class="nn">Mesagne</span><span class="ns">Brindisi</span></a><a href="/it/puglia/conversano/" class="nc nc-c"><span class="nn">Conversano</span><span class="ns">Bari</span></a><a href="/it/puglia/ruvo-di-puglia/" class="nc nc-c"><span class="nn">Ruvo di Puglia</span><span class="ns">Bari</span></a><a href="/it/puglia/copertino/" class="nc nc-c"><span class="nn">Copertino</span><span class="ns">Lecce</span></a><a href="/it/puglia/gallipoli/" class="nc nc-c"><span class="nn">Gallipoli</span><span class="ns">Lecce</span></a><a href="/it/puglia/noci/" class="nc nc-c"><span class="nn">Noci</span><span class="ns">Bari</span></a><a href="/it/puglia/castellana-grotte/" class="nc nc-c"><span class="nn">Castellana Grotte</span><span class="ns">Bari</span></a><a href="/it/puglia/sannicandro-garganico/" class="nc nc-c"><span class="nn">Sannicandro Garganico</span><span class="ns">Foggia</span></a><a href="/it/puglia/maglie/" class="nc nc-c"><span class="nn">Maglie</span><span class="ns">Lecce</span></a><a href="/it/puglia/triggiano/" class="nc nc-c"><span class="nn">Triggiano</span><span class="ns">Bari</span></a><a href="/it/puglia/capurso/" class="nc nc-c"><span class="nn">Capurso</span><span class="ns">Bari</span></a><a href="/it/puglia/cellamare/" class="nc nc-c"><span class="nn">Cellamare</span><span class="ns">Bari</span></a><a href="/it/puglia/valenzano/" class="nc nc-c"><span class="nn">Valenzano</span><span class="ns">Bari</span></a><a href="/it/puglia/adelfia/" class="nc nc-c"><span class="nn">Adelfia</span><span class="ns">Bari</span></a><a href="/it/puglia/noicattaro/" class="nc nc-c"><span class="nn">Noicattaro</span><span class="ns">Bari</span></a><a href="/it/puglia/rutigliano/" class="nc nc-c"><span class="nn">Rutigliano</span><span class="ns">Bari</span></a><a href="/it/puglia/acquaviva-delle-fonti/" class="nc nc-c"><span class="nn">Acquaviva delle Fonti</span><span class="ns">Bari</span></a><a href="/it/puglia/sammichele-di-bari/" class="nc nc-c"><span class="nn">Sammichele di Bari</span><span class="ns">Bari</span></a><a href="/it/puglia/turi/" class="nc nc-c"><span class="nn">Turi</span><span class="ns">Bari</span></a><a href="/it/puglia/casamassima/" class="nc nc-c"><span class="nn">Casamassima</span><span class="ns">Bari</span></a><a href="/it/puglia/sannicandro-di-bari/" class="nc nc-c"><span class="nn">Sannicandro di Bari</span><span class="ns">Bari</span></a><a href="/it/puglia/grumo-appula/" class="nc nc-c"><span class="nn">Grumo Appula</span><span class="ns">Bari</span></a><a href="/it/puglia/binetto/" class="nc nc-c"><span class="nn">Binetto</span><span class="ns">Altamura</span></a><a href="/it/puglia/palo-del-colle/" class="nc nc-c"><span class="nn">Palo del Colle</span><span class="ns">Bari</span></a><a href="/it/puglia/bitetto/" class="nc nc-c"><span class="nn">Bitetto</span><span class="ns">Bari</span></a><a href="/it/puglia/bitritto/" class="nc nc-c"><span class="nn">Bitritto</span><span class="ns">Bari</span></a><a href="/it/puglia/modugno/" class="nc nc-c"><span class="nn">Modugno</span><span class="ns">Bari</span></a><a href="/it/puglia/giovinazzo/" class="nc nc-c"><span class="nn">Giovinazzo</span><span class="ns">Bari</span></a><a href="/it/puglia/terlizzi/" class="nc nc-c"><span class="nn">Terlizzi</span><span class="ns">Altamura</span></a><a href="/it/puglia/minervino-murge/" class="nc nc-c"><span class="nn">Minervino Murge</span><span class="ns">Barletta-Andria</span></a><a href="/it/puglia/spinazzola/" class="nc nc-c"><span class="nn">Spinazzola</span><span class="ns">Barletta-Andria</span></a><a href="/it/puglia/poggiorsini/" class="nc nc-c"><span class="nn">Poggiorsini</span><span class="ns">Altamura</span></a><a href="/it/puglia/gravina-in-puglia/" class="nc nc-c"><span class="nn">Gravina in Puglia</span><span class="ns">Altamura</span></a><a href="/it/puglia/laterza/" class="nc nc-c"><span class="nn">Laterza</span><span class="ns">Matera</span></a><a href="/it/puglia/ginosa/" class="nc nc-c"><span class="nn">Ginosa</span><span class="ns">Matera</span></a><a href="/it/puglia/castellaneta/" class="nc nc-c"><span class="nn">Castellaneta</span><span class="ns">Matera</span></a></div>
+
+  <div class="faq-box">
+    <div class="stitle">Domande Frequenti</div>
+    <div class="faq-item">
+      <div class="faq-q">Cos'è lo Z-Score climatico usato da WeatherArb?</div>
+      <div class="faq-a">Lo Z-Score misura quante deviazioni standard la temperatura attuale di una città si allontana dalla media storica dello stesso mese. Un valore sopra +2σ indica un'anomalia di caldo statisticamente rara; sotto -2σ indica freddo anomalo.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Cosa sono HDD e CDD?</div>
+      <div class="faq-a">HDD (Heating Degree Days) e CDD (Cooling Degree Days) sono indicatori standard EN ISO 15927 che misurano la domanda energetica per riscaldamento e raffrescamento, calcolati confrontando la temperatura giornaliera con una soglia di riferimento di 18°C.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Con quale frequenza si aggiornano i dati di Puglia?</div>
+      <div class="faq-a">WeatherArb aggiorna i dati meteo per tutti i comuni di Puglia ogni ora, utilizzando fonti come MET Norway, NOAA NWS e WeatherAPI per le rilevazioni live.</div>
+    </div>
+  </div>
 </div>
 <footer class="ftr">
   <a href="/">WeatherArb</a> &middot; <a href="/it/">Italia</a> &middot; <a href="/pricing/">API Pro</a>
