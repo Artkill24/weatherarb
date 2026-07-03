@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="it"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Meteo Valle Daosta Oggi — Z-Score Anomalia Climatica in Tempo Reale | WeatherArb</title>
-<meta name="description" content="Meteo Valle Daosta oggi in tempo reale. Anomalia climatica Z-Score vs baseline NASA POWER 25 anni. Temperatura attuale, umidità, vento e indici HDD/CDD aggiornati ogni ora.">
+<title>Meteo Valle d'Aosta Oggi Luglio — Temperatura, Pioggia e Anomalie Z-Score | WeatherArb</title>
+<meta name="description" content="Meteo Valle d'Aosta oggi in tempo reale: temperatura attuale, pioggia, umidità e vento. Anomalia climatica Z-Score vs baseline NASA POWER 25 anni. Ondata di calore, allerta meteo e dati storici luglio aggiornati ogni ora.">
 <link rel="canonical" href="https://weatherarb.com/it/valle-daosta/">
 <style>
 :root{--bg:#040608;--s:#0a0d12;--b:#141920;--t:#c8d6e5;--m:#4a5568;--bl:#3b82f6}
@@ -66,6 +66,7 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   }
 }
 </script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{"@type":"Question","name":"Cos'è lo Z-Score climatico?","acceptedAnswer":{{"@type":"Answer","text":"Misura quante deviazioni standard la temperatura attuale di Valle d'Aosta si allontana dalla media storica dello stesso mese. Sopra +2σ indica caldo anomalo raro; sotto -2σ indica freddo anomalo."}}}},{{"@type":"Question","name":"Cosa sono HDD e CDD?","acceptedAnswer":{{"@type":"Answer","text":"Heating e Cooling Degree Days, standard EN ISO 15927, misurano la domanda energetica per riscaldamento/raffrescamento confrontando la temperatura con una soglia di 18°C."}}}},{{"@type":"Question","name":"Con quale frequenza si aggiornano i dati di Valle d'Aosta?","acceptedAnswer":{{"@type":"Answer","text":"WeatherArb aggiorna i dati meteo di Valle d'Aosta ogni ora tramite MET Norway, NOAA NWS e WeatherAPI."}}}}]}}</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4D34P77" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
@@ -80,6 +81,22 @@ h1{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;margin-b
   <div class="stitle">Province — Nodi di rilevazione</div>
   <div class="grid"><a href="/it/aosta/" class="nc"><span class="nn">Aosta</span><span class="ns">Provincia &middot; nodo dati</span></a></div>
   <div class="stitle">Comuni</div><div class="grid"><a href="/it/valle-daosta/aosta/" class="nc nc-c"><span class="nn">Aosta</span><span class="ns">Aosta</span></a><a href="/it/valle-daosta/chatillon/" class="nc nc-c"><span class="nn">Chatillon</span><span class="ns">Aosta</span></a><a href="/it/valle-daosta/courmayeur/" class="nc nc-c"><span class="nn">Courmayeur</span><span class="ns">Aosta</span></a></div>
+</div>
+<div class="mbox" id="faq-box"><div class="stitle">Domande Frequenti</div><div style="font-size:13px;color:#4a5568;line-height:1.6"><p style="margin-bottom:14px"><strong style="color:#fff">Cos'è lo Z-Score climatico?</strong><br>Misura quante deviazioni standard la temperatura attuale di Valle d'Aosta si allontana dalla media storica dello stesso mese. Sopra +2σ indica caldo anomalo raro; sotto -2σ indica freddo anomalo.</p><p style="margin-bottom:14px"><strong style="color:#fff">Cosa sono HDD e CDD?</strong><br>Heating e Cooling Degree Days, standard EN ISO 15927, misurano la domanda energetica per riscaldamento/raffrescamento confrontando la temperatura con una soglia di 18°C.</p><p><strong style="color:#fff">Con quale frequenza si aggiornano i dati di Valle d'Aosta?</strong><br>WeatherArb aggiorna i dati meteo di Valle d'Aosta ogni ora tramite MET Norway, NOAA NWS e WeatherAPI.</p></div></div>
+
+<div style="background:#0a0d12;border:1px solid #141920;border-radius:14px;padding:24px;margin-bottom:20px">
+  <h2 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:12px">Meteo Valle d'Aosta Oggi — Temperatura e Anomalie Climatiche</h2>
+  <p style="font-size:13px;color:#4a5568;line-height:1.8">
+    WeatherArb monitora in tempo reale la <strong style="color:#c8d6e5">temperatura di Valle d'Aosta</strong> confrontandola con la baseline climatica NASA POWER degli ultimi 25 anni. 
+    Quando si registra una <strong style="color:#c8d6e5">temperatura anomala a Valle d'Aosta</strong> — come un'<strong style="color:#ef4444">ondata di calore</strong>, 
+    un periodo di <strong style="color:#c8d6e5">freddo insolito</strong> o un'anomalia di <strong style="color:#c8d6e5">pioggia e precipitazioni</strong> — 
+    il sistema calcola automaticamente lo Z-Score e aggiorna l'indice WWAI (World Weather Anomaly Index).
+    <br><br>
+    I dati di <strong style="color:#c8d6e5">umidità relativa</strong>, <strong style="color:#c8d6e5">vento</strong> e 
+    <strong style="color:#c8d6e5">temperatura percepita a Valle d'Aosta</strong> vengono aggiornati ogni ora. 
+    In caso di <strong style="color:#c8d6e5">allerta meteo</strong> o condizioni estreme (luglio: rischio <strong style="color:#f97316">caldo anomalo e afa</strong>), 
+    il livello di anomalia sale a EXTREME o CRITICAL, indicando un evento statisticamente raro rispetto alla storia climatica della città.
+  </p>
 </div>
 <footer class="ftr">
   <a href="/">WeatherArb</a> &middot; <a href="/it/">Italia</a> &middot; <a href="/pricing/">API Pro</a>
