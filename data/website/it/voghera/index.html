@@ -41,6 +41,12 @@ h1{font-size:clamp(28px,5vw,48px);font-weight:900;color:#fff;margin-bottom:8px;l
   .chart-labels{display:flex;justify-content:space-between;margin-top:6px;font-size:9px;color:#4a5568}
   .chart-zero{position:absolute;bottom:50%;left:0;right:0;height:1px;background:rgba(255,255,255,.1)}
   .no-data{font-size:13px;color:#4a5568;text-align:center;padding:40px 0}
+
+  .seismic-box{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:28px;margin-bottom:20px}
+  .eq-item{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #141920;font-size:13px}
+  .eq-item:last-child{border-bottom:none}
+  .eq-mag{font-weight:800;font-size:16px;min-width:48px}
+  .eq-place{color:#4a5568;font-size:12px;margin-top:2px}
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1729222411031234" crossorigin="anonymous"></script>
 <script type="application/ld+json">
@@ -148,6 +154,11 @@ h1{font-size:clamp(28px,5vw,48px);font-weight:900;color:#fff;margin-bottom:8px;l
   <h2 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:12px">Weather Voghera Today — Temperature and Climate Anomalies</h2>
   <p style="font-size:13px;color:#4a5568;line-height:1.8">WeatherArb monitors <strong style="color:#c8d6e5">current temperature in Voghera</strong> against the NASA POWER 25-year climate baseline. When an <strong style="color:#ef4444">extreme heat event</strong>, <strong style="color:#c8d6e5">unusual rainfall</strong> or <strong style="color:#3b82f6">cold snap</strong> occurs, the Z-Score is automatically updated. <br><br><strong style="color:#c8d6e5">Humidity</strong>, <strong style="color:#c8d6e5">wind speed</strong> and <strong style="color:#c8d6e5">feels-like temperature in Voghera</strong> are updated hourly. During <strong style="color:#f97316">heatwave conditions</strong> (July: elevated heat anomaly risk), the anomaly level rises to EXTREME or CRITICAL — a statistically rare climate event.</p>
 </div>
+
+<div class="seismic-box">
+  <div class="st">🌍 Terremoti Recenti nelle Vicinanze</div>
+  <div id="seismic-list"><div style="font-size:13px;color:#4a5568">Caricamento dati sismici...</div></div>
+</div>
 </main>
 <script>
 var API='https://artkill24-weatherarb-api.hf.space';
@@ -228,6 +239,35 @@ async function loadHistory() {
 }
 loadHistory();
 load();
+
+async function loadSeismic() {
+  try {
+    const r = await fetch(API + '/api/v1/seismic/' + slug + '?min_mag=2.0&days=30');
+    const d = await r.json();
+    const list = document.getElementById('seismic-list');
+    if (!list) return;
+    if (!d.earthquakes || !d.earthquakes.length) {
+      list.innerHTML = '<div style="font-size:13px;color:#4a5568">Nessun terremoto M2.0+ rilevato negli ultimi 30 giorni nel raggio di 500km.</div>';
+      return;
+    }
+    list.innerHTML = d.earthquakes.slice(0,5).map(e => {
+      const mag = e.magnitude || 0;
+      const col = mag >= 6 ? '#ef4444' : mag >= 5 ? '#f97316' : mag >= 4 ? '#eab308' : '#10b981';
+      const date = e.time ? new Date(e.time).toLocaleDateString('it-IT') : '—';
+      return `<div class="eq-item">
+        <div>
+          <div style="color:#c8d6e5;font-weight:600">${e.place || '—'}</div>
+          <div class="eq-place">${date}${e.depth_km ? ' · Profondità: ' + e.depth_km.toFixed(0) + ' km' : ''}</div>
+        </div>
+        <span class="eq-mag" style="color:${col}">M${mag.toFixed(1)}</span>
+      </div>`;
+    }).join('');
+  } catch(e) {
+    const list = document.getElementById('seismic-list');
+    if (list) list.innerHTML = '<div style="font-size:13px;color:#4a5568">Dati sismici non disponibili.</div>';
+  }
+}
+loadSeismic();
 </script>
 </body>
 </html>
