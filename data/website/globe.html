@@ -371,6 +371,7 @@ async function loadData() {
     updateStats();
     buildFeed();
     loadSpaceWeather();
+    loadSeismic();
     $('loader').classList.add('gone');
   } catch(e) {
     $('lmsg').textContent = 'Demo mode activated';
@@ -644,6 +645,60 @@ function tickClock() {
 tickClock(); setInterval(tickClock,1000);
 
 // Refresh data every 5 min
+
+var seismicData = [];
+async function loadSeismic() {
+  try {
+    const r = await fetch('https://artkill24-weatherarb-api.hf.space/api/v1/seismic/global?min_mag=4.5&days=7&limit=50');
+    const d = await r.json();
+    seismicData = d.earthquakes || [];
+    renderSeismic();
+  } catch(e) { console.warn('Seismic data unavailable'); }
+}
+
+function renderSeismic() {
+  if (!seismicData.length) return;
+  // Aggiungi terremoti come custom layer sopra il globo
+  const seismicPoints = seismicData
+    .filter(e => e.lat && e.lon && e.magnitude)
+    .map(e => ({
+      lat: e.lat, lon: e.lon,
+      mag: e.magnitude,
+      place: e.place || 'Unknown',
+      depth: e.depth_km || 0
+    }));
+
+  // Usa pointsData per mostrare terremoti come punti distinti
+  // Aggiungiamo ai rings esistenti
+  const seismicRings = seismicPoints.map(e => ({
+    lat: e.lat, lng: e.lon,
+    maxR: 2 + e.mag * 0.8,
+    propagationSpeed: 1.5 + e.mag * 0.3,
+    repeatPeriod: 1200 + e.mag * 100,
+    color: e.mag >= 6 ? '#FF0000' : e.mag >= 5 ? '#FF6600' : '#FFAA00',
+    _type: 'seismic',
+    _label: `M${e.mag.toFixed(1)} — ${e.place}`
+  }));
+
+  // Combina rings sismici con rings anomalie meteo
+  const criticals = nodesData.filter(d => Math.abs(d.z_score||0) >= 3);
+  const weatherRings = criticals.slice(0, 80).map(d => ({
+    lat: d.lat, lng: d.lon || d.lon,
+    maxR: 2, propagationSpeed: 2, repeatPeriod: 900,
+    color: zColor(d.z_score),
+    _type: 'weather'
+  }));
+
+  globe
+    .ringsData([...weatherRings, ...seismicRings])
+    .ringLat(d => d.lat)
+    .ringLng(d => d.lng)
+    .ringColor(d => d.color)
+    .ringMaxRadius(d => d.maxR)
+    .ringPropagationSpeed(d => d.propagationSpeed)
+    .ringRepeatPeriod(d => d.repeatPeriod);
+}
+
 setInterval(loadData, 300000);
 </script>
 </body>
