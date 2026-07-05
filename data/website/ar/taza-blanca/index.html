@@ -27,6 +27,37 @@
 <div class="ad-w"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1729222411031234" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 <div class="sec"><div class="st">Analysis</div><div id="an" style="font-size:14px;color:#4a5568;line-height:1.7">Loading...</div></div>
 <div class="sec"><div class="st">Nearby Cities</div><div id="nb" class="ng"></div></div>
+
+<div class="seismic-box">
+  <div class="st">🌍 Terremotos Recientes Cercanos</div>
+  <div id="seismic-list"><div style="font-size:13px;color:#4a5568">Loading...</div></div>
+</div>
+<style>.seismic-box{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:28px;margin-bottom:20px}.eq-item{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #141920;font-size:13px}.eq-item:last-child{border-bottom:none}.eq-mag{font-weight:800;font-size:16px;min-width:48px}.eq-place{color:#4a5568;font-size:12px;margin-top:2px}</style>
+<script>
+(function(){
+var API='https://artkill24-weatherarb-api.hf.space';
+var slug='taza-blanca';
+async function loadSeismic(){
+  try{
+    var r=await fetch(API+'/api/v1/seismic/'+slug+'?min_mag=2.0&days=30');
+    var d=await r.json();
+    var list=document.getElementById('seismic-list');
+    if(!list)return;
+    if(!d.earthquakes||!d.earthquakes.length){list.innerHTML='<div style="font-size:13px;color:#4a5568">No se detectaron terremotos M2.0+ en los últimos 30 días en un radio de 500km.</div>';return;}
+    list.innerHTML=d.earthquakes.slice(0,5).map(function(e){
+      var mag=e.magnitude||0;
+      var col=mag>=6?'#ef4444':mag>=5?'#f97316':mag>=4?'#eab308':'#10b981';
+      var date=e.time?new Date(e.time).toLocaleDateString():'—';
+      return '<div class="eq-item"><div><div style="color:#c8d6e5;font-weight:600">'+(e.place||'—')+'</div><div class="eq-place">'+date+(e.depth_km?' · Profundidad: '+e.depth_km.toFixed(0)+' km':'')+'</div></div><span class="eq-mag" style="color:'+col+'">M'+mag.toFixed(1)+'</span></div>';
+    }).join('');
+  }catch(e){
+    var list=document.getElementById('seismic-list');
+    if(list)list.innerHTML='<div style="font-size:13px;color:#4a5568">Datos sísmicos no disponibles.</div>';
+  }
+}
+loadSeismic();
+})();
+</script>
 </main>
 <script>
 var A='https://artkill24-weatherarb-api.hf.space',slug='taza-blanca',lat=-32.775,lon=-66.2653;

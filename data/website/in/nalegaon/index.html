@@ -28,4 +28,35 @@
   <h2 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:12px">Weather Nalegaon Today — Temperature and Climate Anomalies</h2>
   <p style="font-size:13px;color:#4a5568;line-height:1.8">WeatherArb monitors <strong style="color:#c8d6e5">current temperature in Nalegaon</strong> against the NASA POWER 25-year climate baseline. When an <strong style="color:#ef4444">extreme heat event</strong>, <strong style="color:#c8d6e5">unusual rainfall</strong> or <strong style="color:#3b82f6">cold snap</strong> occurs, the Z-Score is automatically updated. <br><br><strong style="color:#c8d6e5">Humidity</strong>, <strong style="color:#c8d6e5">wind speed</strong> and <strong style="color:#c8d6e5">feels-like temperature in Nalegaon</strong> are updated hourly. During <strong style="color:#f97316">heatwave conditions</strong> (July: elevated heat anomaly risk), the anomaly level rises to EXTREME or CRITICAL — a statistically rare climate event.</p>
 </div>
+
+<div class="seismic-box">
+  <div class="st">🌍 Recent Earthquakes Nearby</div>
+  <div id="seismic-list"><div style="font-size:13px;color:#4a5568">Loading...</div></div>
+</div>
+<style>.seismic-box{background:#0a0d12;border:1px solid #141920;border-radius:16px;padding:28px;margin-bottom:20px}.eq-item{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #141920;font-size:13px}.eq-item:last-child{border-bottom:none}.eq-mag{font-weight:800;font-size:16px;min-width:48px}.eq-place{color:#4a5568;font-size:12px;margin-top:2px}</style>
+<script>
+(function(){
+var API='https://artkill24-weatherarb-api.hf.space';
+var slug='nalegaon';
+async function loadSeismic(){
+  try{
+    var r=await fetch(API+'/api/v1/seismic/'+slug+'?min_mag=2.0&days=30');
+    var d=await r.json();
+    var list=document.getElementById('seismic-list');
+    if(!list)return;
+    if(!d.earthquakes||!d.earthquakes.length){list.innerHTML='<div style="font-size:13px;color:#4a5568">No earthquakes M2.0+ detected in the last 30 days within 500km.</div>';return;}
+    list.innerHTML=d.earthquakes.slice(0,5).map(function(e){
+      var mag=e.magnitude||0;
+      var col=mag>=6?'#ef4444':mag>=5?'#f97316':mag>=4?'#eab308':'#10b981';
+      var date=e.time?new Date(e.time).toLocaleDateString():'—';
+      return '<div class="eq-item"><div><div style="color:#c8d6e5;font-weight:600">'+(e.place||'—')+'</div><div class="eq-place">'+date+(e.depth_km?' · Depth: '+e.depth_km.toFixed(0)+' km':'')+'</div></div><span class="eq-mag" style="color:'+col+'">M'+mag.toFixed(1)+'</span></div>';
+    }).join('');
+  }catch(e){
+    var list=document.getElementById('seismic-list');
+    if(list)list.innerHTML='<div style="font-size:13px;color:#4a5568">Seismic data unavailable.</div>';
+  }
+}
+loadSeismic();
+})();
+</script>
 </main><footer class="ftr"><a href="/">WeatherArb</a> &middot; <a href="/about.html">Methodology</a> &middot; <a href="/pricing/">API Pro</a></footer><script>function nlsub(){var e=document.getElementById("nle").value.trim();var m=document.getElementById("nlm");if(!e||e.indexOf("@")<0){m.style.display="block";m.style.background="rgba(239,68,68,.1)";m.style.color="#ef4444";m.textContent="Error - try again";return;}fetch("https://artkill24-weatherarb-api.hf.space/api/newsletter/subscribe?email="+encodeURIComponent(e)+"&city=Nalegaon&country_code=in",{method:"POST"}).then(function(r){return r.json();}).then(function(d){document.getElementById("nl-row").style.display="none";m.style.display="block";m.style.background="rgba(16,185,129,.1)";m.style.color="#10b981";m.textContent=d.status==="already_subscribed"?"Already subscribed!":"Subscribed! Check your email.";}).catch(function(){m.style.display="block";m.style.background="rgba(239,68,68,.1)";m.style.color="#ef4444";m.textContent="Error - try again";});}function updateSectors(sc,hdd,cdd,wind,hum){var agr=document.getElementById("sector-agr");var log=document.getElementById("sector-log");var ene=document.getElementById("sector-ene");if(agr){agr.textContent=(hum>80||hum<30)?"High water stress risk":"Normal agronomic conditions";}if(log){log.textContent=(wind>50||sc>7)?"Adverse transport conditions":"Optimal logistics conditions";}if(ene){ene.textContent=(hdd>5)?"High heating demand":(cdd>5)?"High cooling demand":"Normal energy demand";}}async function loadPulse(){try{var r=await fetch("https://artkill24-weatherarb-api.hf.space/api/v1/pulse/nalegaon");var d=await r.json();var w=d.weather||{};var z=w.z_score||0;var sc=d.signal?d.signal.score:0;var t2=w.temperature_c;var hum=w.humidity_pct;var wind=w.wind_kmh;var hdd=w.hdd;var cdd=w.cdd;var hdd_delta=w.hdd_delta;var lbl=w.anomaly_label||w.anomaly_level||"";var col=sc>=7?"#ef4444":sc>=5?"#f97316":sc>=3?"#f59e0b":"#10b981";var pz=document.getElementById("pz");var psc=document.getElementById("psc");var pt=document.getElementById("pt");var phum=document.getElementById("phum");var pwind=document.getElementById("pwind");var phdd=document.getElementById("phdd");var pcdd=document.getElementById("pcdd");var phdd_delta=document.getElementById("phdd_delta");var plbl=document.getElementById("plbl");if(pz){pz.textContent=(z>=0?"+":"")+z.toFixed(2)+"s";pz.style.color=col;}if(psc){psc.textContent=sc.toFixed(1)+"/10";psc.style.color=col;}if(pt&&t2!=null){pt.textContent=t2.toFixed(1)+"C";}if(phum&&hum!=null){phum.textContent=hum+"%";}if(pwind&&wind!=null){pwind.textContent=wind+" kmh";}if(phdd&&hdd!=null){phdd.textContent=hdd.toFixed(1)+" GG";}if(pcdd&&cdd!=null){pcdd.textContent=cdd.toFixed(1)+" GG";}if(phdd_delta&&hdd_delta!=null){phdd_delta.textContent=(hdd_delta>=0?"+":"")+hdd_delta.toFixed(1)+" GG";phdd_delta.style.color=hdd_delta>2?"#ef4444":hdd_delta<-2?"#10b981":"#f59e0b";}if(plbl&&lbl){plbl.textContent=lbl;plbl.style.color=col;}updateSectors(sc,hdd||0,cdd||0,wind||0,hum||50);}catch(e){console.warn("pulse unavailable");}}loadPulse();setInterval(loadPulse,3600000);</script></body></html>
