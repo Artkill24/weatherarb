@@ -6,19 +6,19 @@
 <link rel="dns-prefetch" href="https://artkill24-weatherarb-api.hf.space">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Weather Anomaly Map 2026 — Heatwave Tracker for 18,742 Cities | WeatherArb</title>
-<meta name="description" content="Real-time weather anomaly map and heatwave tracker for 18,742 cities worldwide. Z-Score vs NASA POWER 25-year baseline. Free weather API. Europe heatwave 2026, cold snap alerts, energy HDD/CDD data.">
+<title>Weather Anomaly Map 2026 — Heatwave Tracker for 29,215 Cities | WeatherArb</title>
+<meta name="description" content="Real-time weather anomaly map and heatwave tracker for 29,215 cities worldwide. Z-Score vs NASA POWER 25-year baseline. Free weather API. Europe heatwave 2026, cold snap alerts, energy HDD/CDD data.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://weatherarb.com/">
 <meta property="og:title" content="WeatherArb — Anomalie Meteo Globali in Tempo Reale">
-<meta property="og:description" content="18,742 città monitorate in 100+ paesi. Z-Score NASA POWER 25 anni, HDD/CDD energy data, Space Weather e Grid Risk Intelligence.">
+<meta property="og:description" content="29,215 città monitorate in 160+ paesi. Z-Score NASA POWER 25 anni, HDD/CDD energy data, Space Weather e Grid Risk Intelligence.">
 <meta property="og:image" content="https://weatherarb.com/logo-192.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="WeatherArb — Anomalie Meteo Globali">
-<meta name="twitter:description" content="18,742 città monitorate. Z-Score NASA POWER 25 anni. HDD/CDD energy data.">
+<meta name="twitter:description" content="29,215 città monitorate. Z-Score NASA POWER 25 anni. HDD/CDD energy data.">
 <meta name="twitter:image" content="https://weatherarb.com/logo-192.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"WeatherArb","url":"https://weatherarb.com","description":"Real-time weather anomaly intelligence for 18,742 cities in 100+ countries","potentialAction":{"@type":"SearchAction","target":"https://weatherarb.com/map?q={search_term_string}","query-input":"required name=search_term_string"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"WeatherArb","url":"https://weatherarb.com","description":"Real-time weather anomaly intelligence for 29,215 cities in 160+ countries","potentialAction":{"@type":"SearchAction","target":"https://weatherarb.com/map?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
 <link rel="canonical" href="https://weatherarb.com/">
 <style>
@@ -235,7 +235,7 @@
 <section class="hero">
   <div class="hero-eyebrow"><span>●</span> Intelligence Agency — Live</div>
   <h1>Weather<em>Arb</em><br>Intelligence</h1>
-  <p class="hero-sub">Anomalie meteo in tempo reale per <strong>18,742 città</strong> in <strong>100+ paesi</strong>. Z-Score NASA POWER 25 anni. HDD/CDD energy data. Space Weather e Grid Risk.</p>
+  <p class="hero-sub">Anomalie meteo in tempo reale per <strong>29,215 città</strong> in <strong>160+ paesi</strong>. Z-Score NASA POWER 25 anni. HDD/CDD energy data. Space Weather e Grid Risk.</p>
   <div class="hero-search">
     <div class="search-wrap">
       <span class="search-icon">🔍</span>
@@ -251,7 +251,7 @@
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stat"><div class="stat-n" id="stat-nodes">18,742</div><div class="stat-l">Nodi Globali</div></div>
+  <div class="stat"><div class="stat-n" id="stat-nodes">29,215</div><div class="stat-l">Nodi Globali</div></div>
   <div class="stat"><div class="stat-n">100+</div><div class="stat-l">Paesi</div></div>
   <div class="stat"><div class="stat-n">25</div><div class="stat-l">Anni Baseline</div></div>
   <div class="stat"><div class="stat-n" id="wwai-score" style="color:var(--o)">—</div><div class="stat-l">WWAI Score</div></div>
@@ -335,8 +335,8 @@
     </div>
     <div class="seo-card">
       <div class="seo-icon">🌍</div>
-      <div class="seo-title">18,742 Nodi Globali</div>
-      <div class="seo-body">La rete WeatherArb monitora <strong>18,742 città in 100+ paesi</strong>, dall'Italia alla Mongolia, dal Brasile alla Nigeria. Ogni nodo aggiorna i propri dati ogni ora tramite MET Norway, NOAA NWS e WeatherAPI, garantendo un'intelligenza meteorologica globale in tempo reale.</div>
+      <div class="seo-title">29,215 Nodi Globali</div>
+      <div class="seo-body">La rete WeatherArb monitora <strong>29,215 città in 160+ paesi</strong>, dall'Italia alla Mongolia, dal Brasile alla Nigeria. Ogni nodo aggiorna i propri dati ogni ora tramite MET Norway, NOAA NWS e WeatherAPI, garantendo un'intelligenza meteorologica globale in tempo reale.</div>
     </div>
     <div class="seo-card">
       <div class="seo-icon">🔭</div>
@@ -400,6 +400,52 @@
 
 <!-- FORTUNE BANNER -->
 <div class="section-label">Fortune Meteo del Giorno</div>
+
+<!-- TERREMOTI GLOBALI -->
+<div class="section-label" style="margin-top:40px">
+  <span style="display:inline-block;width:7px;height:7px;background:#ef4444;border-radius:50%;box-shadow:0 0 8px #ef4444;animation:pulse 2s infinite"></span>
+  Terremoti Significativi — Ultimi 7 Giorni
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:0 24px 60px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px" id="seismic-global-grid">
+    <div style="font-size:13px;color:var(--m);padding:20px">Caricamento dati sismici USGS...</div>
+  </div>
+  <div style="text-align:center;margin-top:16px">
+    <a href="https://earthquake.usgs.gov/earthquakes/map/" target="_blank" rel="noopener"
+       style="font-size:12px;color:var(--m);text-decoration:none;border:1px solid var(--b);padding:8px 20px;border-radius:20px">
+      Fonte: USGS Earthquake Hazards Program →
+    </a>
+  </div>
+</div>
+<script>
+(function(){
+  fetch('https://arktill24-weatherarb-api.hf.space/api/v1/seismic/global?min_mag=4.5&days=7&limit=12')
+    .then(function(r){return r.json();})
+    .then(function(d){
+      var grid=document.getElementById('seismic-global-grid');
+      if(!grid)return;
+      var quakes=d.earthquakes||[];
+      if(!quakes.length){grid.innerHTML='<div style="font-size:13px;color:var(--m);padding:20px">Nessun terremoto M4.5+ negli ultimi 7 giorni.</div>';return;}
+      grid.innerHTML=quakes.map(function(e){
+        var mag=e.magnitude||0;
+        var col=mag>=7?'#ef4444':mag>=6?'#f97316':mag>=5?'#eab308':'#64748b';
+        var date=e.time?new Date(e.time).toLocaleDateString('it-IT',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'}):'—';
+        var depth=e.depth_km?e.depth_km.toFixed(0)+'km':'—';
+        return '<div style="background:var(--s);border:1px solid var(--b);border-radius:12px;padding:16px;display:flex;align-items:center;gap:14px">'
+          +'<div style="min-width:52px;text-align:center">'
+          +'<div style="font-size:24px;font-weight:900;color:'+col+'">M'+mag.toFixed(1)+'</div>'
+          +'<div style="font-size:9px;color:var(--m);margin-top:2px">'+depth+'</div>'
+          +'</div>'
+          +'<div style="flex:1;min-width:0">'
+          +'<div style="font-size:13px;font-weight:600;color:var(--t);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+(e.place||'Unknown')+'</div>'
+          +'<div style="font-size:11px;color:var(--m);margin-top:3px">'+date+'</div>'
+          +'</div>'
+          +'</div>';
+      }).join('');
+    })
+    .catch(function(){});
+})();
+</script>
 <div class="fortune-banner">
   <a href="/fortune" class="fortune-inner">
     <div class="fortune-row">
@@ -494,7 +540,7 @@
   <div class="nl-hero">
     <div class="nl-tag">📡 Newsletter</div>
     <h2>Ricevi le Anomalie Meteo<br>nella tua Inbox</h2>
-    <p>Z-Score, HDD/CDD, Space Weather e Grid Risk per 18,742 città globali. Ogni settimana, gratis. Usato da energy trader, agronomi e logistici.</p>
+    <p>Z-Score, HDD/CDD, Space Weather e Grid Risk per 29,215 città globali. Ogni settimana, gratis. Usato da energy trader, agronomi e logistici.</p>
     <div class="nl-form" id="nl-home-form">
       <input id="nl-home-email" class="nl-email" type="email" placeholder="La tua email" onkeydown="if(event.key==='Enter')nlHomeSubmit()">
       <button class="nl-submit" onclick="nlHomeSubmit()">Iscriviti →</button>
@@ -503,7 +549,7 @@
     <div class="nl-success" id="nl-home-success">✓ Iscritto! Il prossimo briefing arriva lunedì.</div>
     <p class="nl-note">Nessuno spam. Cancellazione con un click.</p>
     <div class="nl-stats">
-      <div><div class="nl-stat-n">18,742</div><div class="nl-stat-l">Nodi Globali</div></div>
+      <div><div class="nl-stat-n">29,215</div><div class="nl-stat-l">Nodi Globali</div></div>
       <div><div class="nl-stat-n">100+</div><div class="nl-stat-l">Paesi</div></div>
       <div><div class="nl-stat-n">4h</div><div class="nl-stat-l">Update</div></div>
     </div>
@@ -523,12 +569,12 @@
     <div class="seo-card">
       <div class="seo-icon">🌍</div>
       <div class="seo-title">Global Weather Anomaly Map</div>
-      <div class="seo-body">Interactive <strong>global weather anomaly map</strong> showing temperature deviations from 25-year NASA baseline. Find <strong>extreme weather events today</strong> across 18,742 cities in real time.</div>
+      <div class="seo-body">Interactive <strong>global weather anomaly map</strong> showing temperature deviations from 25-year NASA baseline. Find <strong>extreme weather events today</strong> across 29,215 cities in real time.</div>
     </div>
     <div class="seo-card">
       <div class="seo-icon">📊</div>
-      <div class="seo-title">Weather API Free — 18,742 Cities</div>
-      <div class="seo-body">Free <strong>weather anomaly API</strong> with Z-Score, HDD/CDD energy data for 18,742 cities globally. No API key required for basic access. Used by energy traders, agronomists and climate researchers.</div>
+      <div class="seo-title">Weather API Free — 29,215 Cities</div>
+      <div class="seo-body">Free <strong>weather anomaly API</strong> with Z-Score, HDD/CDD energy data for 29,215 cities globally. No API key required for basic access. Used by energy traders, agronomists and climate researchers.</div>
     </div>
     <div class="seo-card">
       <div class="seo-icon">🔥</div>
@@ -543,7 +589,7 @@
     <div class="seo-card">
       <div class="seo-icon">⚡</div>
       <div class="seo-title">Energy Demand Weather Intelligence</div>
-      <div class="seo-body"><strong>HDD/CDD energy data</strong> for 18,742 cities — Heating Degree Days and Cooling Degree Days vs NASA 25-year baseline. Essential for <strong>energy trading</strong>, grid operators and <strong>utility demand forecasting</strong>.</div>
+      <div class="seo-body"><strong>HDD/CDD energy data</strong> for 29,215 cities — Heating Degree Days and Cooling Degree Days vs NASA 25-year baseline. Essential for <strong>energy trading</strong>, grid operators and <strong>utility demand forecasting</strong>.</div>
     </div>
   </div>
 </div>
@@ -621,7 +667,7 @@ async function loadWWAI(){
     const anom=document.getElementById('live-anom');
     if(anom) anom.textContent=(d.breakdown?.critical_count||0)+(d.breakdown?.severe_count||0);
     const nodes=document.getElementById('stat-nodes');
-    if(nodes) nodes.textContent=(d.cities_monitored||18742).toLocaleString('it-IT');
+    if(nodes) nodes.textContent=(d.cities_monitored||29215).toLocaleString('it-IT');
   }catch(e){}
 }
 async function loadData(){
@@ -795,7 +841,7 @@ setTimeout(loadGeoAlert,2000);
   try{
     const r=await fetch('https://artkill24-weatherarb-api.hf.space/api/v1/europe/top?limit=1');
     const d=await r.json();
-    const total=d.count||18742;
+    const total=d.count||29215;
     const el=document.getElementById('stat-nodes');
     if(el)el.textContent=total.toLocaleString('it-IT');
   }catch(e){}
