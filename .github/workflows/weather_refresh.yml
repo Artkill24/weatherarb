@@ -3,7 +3,7 @@ name: WeatherArb — Hourly Refresh & Keep Alive
 on:
   schedule:
     - cron: '0 * * * *'   # ogni ora — refresh completo
-    - cron: '*/30 * * * *' # ogni 30 min — keep alive
+    - cron: '30 * * * *' # ogni 30 min — keep alive
   workflow_dispatch:
 
 jobs:
