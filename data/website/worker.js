@@ -141,6 +141,18 @@ async function trySlugRedirect(pathname, env) {
 
 export default {
   async fetch(request, env) {
+    // 301: /de/de/x/ -> /de/x/ (duplicati annidati rimossi)
+    {
+      const u = new URL(request.url);
+      const m = u.pathname.match(/^\/(de|ru|tr|id)\/\1\/(.*)$/);
+      if (m) return Response.redirect(`${u.origin}/${m[1]}/${m[2]}${u.search}`, 301);
+    }
+    // 301: /de/de/x/ -> /de/x/ (duplicati annidati rimossi)
+    {
+      const u = new URL(request.url);
+      const m = u.pathname.match(/^\/(de|ru|tr|id)\/\1\/(.*)$/);
+      if (m) return Response.redirect(`${u.origin}/${m[1]}/${m[2]}${u.search}`, 301);
+    }
     const url = new URL(request.url);
     const path = url.pathname;
     
