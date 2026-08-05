@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-08-05T13:59:39.746749+00:00",
+  "timestamp": "2026-08-05T16:38:30.164653+00:00",
   "space_weather": {
-    "timestamp": "2026-08-05T13:59:39.186341+00:00",
+    "timestamp": "2026-08-05T16:38:29.890724+00:00",
     "kp_current": 0.0,
     "kp_forecast_max_24h": 0,
-    "solar_flux": 0.0,
-    "flare_class": "A",
+    "solar_flux": 4.0192753658629954e-07,
+    "flare_class": "C",
     "storm_probability": {
       "G1": 0,
       "G2": 0,
