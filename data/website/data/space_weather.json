@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-09-19T07:55:44.850467+00:00",
-  "kp_current": 0.97,
+  "timestamp": "2026-09-19T12:50:45.755006+00:00",
+  "kp_current": 0.07,
   "kp_forecast_max_24h": 0,
-  "solar_flux": 3.3226419304810406e-07,
+  "solar_flux": 3.333020686113741e-07,
   "flare_class": "C",
   "storm_probability": {
     "G1": 0,
