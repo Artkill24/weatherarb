@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-10-14T08:20:46.129565+00:00",
+  "timestamp": "2026-10-14T14:18:26.156280+00:00",
   "space_weather": {
-    "timestamp": "2026-10-14T08:20:45.890428+00:00",
-    "kp_current": 1.0,
+    "timestamp": "2026-10-14T14:18:25.806903+00:00",
+    "kp_current": 1.77,
     "kp_forecast_max_24h": 0,
-    "solar_flux": 8.532603033017949e-07,
+    "solar_flux": 6.590101975234575e-07,
     "flare_class": "C",
     "storm_probability": {
       "G1": 0,
